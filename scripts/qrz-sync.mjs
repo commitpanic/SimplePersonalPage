@@ -212,26 +212,42 @@ async function fetchSessionKey() {
 function parseAdif(adifText) {
   const records = [];
   let current = {};
-  const regex = /<([^:>\s]+):([0-9]+)(?::[^>]+)?>/gi;
+  const regex = /<([^:>\s]+)(?::([0-9]+)(?::[^>]+)?)?>/gi;
   let cursor = 0;
   let match;
 
   while ((match = regex.exec(adifText)) !== null) {
     const tag = match[1].toLowerCase();
-    const length = Number(match[2]);
-    const valueStart = regex.lastIndex;
-    const valueEnd = valueStart + length;
-    const rawValue = adifText.slice(valueStart, valueEnd);
-    regex.lastIndex = valueEnd;
-    cursor = valueEnd;
+    const lengthRaw = match[2];
 
+    // ADIF record separator usually appears as <eor> (no length).
     if (tag === "eor") {
       if (Object.keys(current).length > 0) {
         records.push(current);
       }
       current = {};
+      cursor = regex.lastIndex;
       continue;
     }
+
+    // Header separator can appear as <eoh>; ignore it and continue.
+    if (tag === "eoh") {
+      cursor = regex.lastIndex;
+      continue;
+    }
+
+    if (!lengthRaw) {
+      // Unknown tag without explicit length; skip safely.
+      cursor = regex.lastIndex;
+      continue;
+    }
+
+    const length = Number(lengthRaw);
+    const valueStart = regex.lastIndex;
+    const valueEnd = valueStart + length;
+    const rawValue = adifText.slice(valueStart, valueEnd);
+    regex.lastIndex = valueEnd;
+    cursor = valueEnd;
 
     current[tag] = rawValue.trim();
   }
