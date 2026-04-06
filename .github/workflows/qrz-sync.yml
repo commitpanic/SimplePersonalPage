@@ -25,9 +25,9 @@ jobs:
 
       - name: Fetch and transform QRZ XML
         env:
-          QRZ_USERNAME: ${{ secrets.QRZ_USERNAME }}
-          QRZ_PASSWORD: ${{ secrets.QRZ_PASSWORD }}
-          QRZ_QSO_ENDPOINT: ${{ secrets.QRZ_QSO_ENDPOINT }}
+          QRZ_API_KEY: ${{ secrets.QRZ_API_KEY }}
+          QRZ_FETCH_OPTIONS: ${{ secrets.QRZ_FETCH_OPTIONS }}
+          QRZ_API_ENDPOINT: https://logbook.qrz.com/api
           QRZ_AGENT: ${{ secrets.QRZ_AGENT }}
           HOME_LOCATOR: JO72SG
         run: node scripts/qrz-sync.mjs

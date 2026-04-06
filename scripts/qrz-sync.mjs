@@ -2,45 +2,47 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { XMLParser } from "fast-xml-parser";
 
+const QRZ_API_ENDPOINT = process.env.QRZ_API_ENDPOINT || "https://logbook.qrz.com/api";
+const QRZ_API_KEY = process.env.QRZ_API_KEY;
+const QRZ_FETCH_OPTIONS = process.env.QRZ_FETCH_OPTIONS || "MAX:500,TYPE:ADIF";
+
 const QRZ_USERNAME = process.env.QRZ_USERNAME;
 const QRZ_PASSWORD = process.env.QRZ_PASSWORD;
 const QRZ_QSO_ENDPOINT = process.env.QRZ_QSO_ENDPOINT;
+
 const QRZ_AGENT = process.env.QRZ_AGENT || "sp3fck-ham-map/1.0";
 const HOME_LOCATOR = process.env.HOME_LOCATOR || "JO72SG";
 
-if (!QRZ_USERNAME || !QRZ_PASSWORD || !QRZ_QSO_ENDPOINT) {
-  console.error("Missing env vars: QRZ_USERNAME, QRZ_PASSWORD, QRZ_QSO_ENDPOINT");
-  process.exit(1);
-}
-
-const parser = new XMLParser({
+const xmlParser = new XMLParser({
   ignoreAttributes: false,
   parseTagValue: true,
   trimValues: true
 });
 
-const LOGIN_URL = `https://xmldata.qrz.com/xml/current/?username=${encodeURIComponent(QRZ_USERNAME)};password=${encodeURIComponent(QRZ_PASSWORD)};agent=${encodeURIComponent(QRZ_AGENT)}`;
-
 async function main() {
-  const key = await fetchSessionKey();
-  const qsoUrl = QRZ_QSO_ENDPOINT.replaceAll("{KEY}", key);
+  let normalized = [];
+  let source = "qrz-logbook-api";
 
-  const qsoXml = await fetchText(qsoUrl);
-  const qsoDoc = parser.parse(qsoXml);
-
-  const raw = collectQsoNodes(qsoDoc);
-  const normalized = raw
-    .map(normalizeQso)
-    .filter(Boolean)
-    .sort((a, b) => String(b.datetime).localeCompare(String(a.datetime)));
+  if (QRZ_API_KEY) {
+    normalized = await fetchViaLogbookApi();
+  } else if (QRZ_USERNAME && QRZ_PASSWORD && QRZ_QSO_ENDPOINT) {
+    source = "qrz-xml-legacy";
+    normalized = await fetchViaLegacyXml();
+  } else {
+    throw new Error(
+      "Missing credentials. Use QRZ_API_KEY (recommended) or legacy QRZ_USERNAME/QRZ_PASSWORD/QRZ_QSO_ENDPOINT"
+    );
+  }
 
   if (normalized.length === 0) {
-    throw new Error("No QSO records parsed. Check QRZ_QSO_ENDPOINT and XML format.");
+    throw new Error("No QSO records parsed. Check API credentials and fetch options.");
   }
+
+  normalized.sort((a, b) => String(b.datetime).localeCompare(String(a.datetime)));
 
   const payload = {
     updatedAt: new Date().toISOString(),
-    source: "qrz-xml",
+    source,
     homeLocator: HOME_LOCATOR,
     qsos: normalized
   };
@@ -50,9 +52,46 @@ async function main() {
   console.log(`Wrote ${normalized.length} QSO entries to ${outputPath}`);
 }
 
+async function fetchViaLogbookApi() {
+  const body = new URLSearchParams({
+    KEY: QRZ_API_KEY,
+    ACTION: "FETCH",
+    OPTION: QRZ_FETCH_OPTIONS
+  });
+
+  const responseText = await postForm(QRZ_API_ENDPOINT, body);
+  const response = Object.fromEntries(new URLSearchParams(responseText));
+
+  const result = (response.RESULT || "").toUpperCase();
+  if (result !== "OK") {
+    throw new Error(`QRZ Logbook API error: RESULT=${response.RESULT || ""} REASON=${response.REASON || ""}`);
+  }
+
+  const adif = response.ADIF || "";
+  if (!adif) {
+    return [];
+  }
+
+  return parseAdif(adif)
+    .map(normalizeQso)
+    .filter(Boolean);
+}
+
+async function fetchViaLegacyXml() {
+  const key = await fetchSessionKey();
+  const qsoUrl = QRZ_QSO_ENDPOINT.replaceAll("{KEY}", key);
+  const qsoXml = await fetchText(qsoUrl);
+  const qsoDoc = xmlParser.parse(qsoXml);
+
+  return collectQsoNodes(qsoDoc)
+    .map(normalizeQso)
+    .filter(Boolean);
+}
+
 async function fetchSessionKey() {
-  const loginXml = await fetchText(LOGIN_URL);
-  const loginDoc = parser.parse(loginXml);
+  const loginUrl = `https://xmldata.qrz.com/xml/current/?username=${encodeURIComponent(QRZ_USERNAME)};password=${encodeURIComponent(QRZ_PASSWORD)};agent=${encodeURIComponent(QRZ_AGENT)}`;
+  const loginXml = await fetchText(loginUrl);
+  const loginDoc = xmlParser.parse(loginXml);
 
   const session = loginDoc?.QRZDatabase?.Session;
   const error = valueAsString(session?.Error);
@@ -65,6 +104,58 @@ async function fetchSessionKey() {
     throw new Error("No session key returned by QRZ login.");
   }
   return key;
+}
+
+function parseAdif(adifText) {
+  const records = [];
+  let current = {};
+  const regex = /<([^:>\s]+):([0-9]+)(?::[^>]+)?>/gi;
+  let cursor = 0;
+  let match;
+
+  while ((match = regex.exec(adifText)) !== null) {
+    const tag = match[1].toLowerCase();
+    const length = Number(match[2]);
+    const valueStart = regex.lastIndex;
+    const valueEnd = valueStart + length;
+    const rawValue = adifText.slice(valueStart, valueEnd);
+    regex.lastIndex = valueEnd;
+    cursor = valueEnd;
+
+    if (tag === "eor") {
+      if (Object.keys(current).length > 0) {
+        records.push(current);
+      }
+      current = {};
+      continue;
+    }
+
+    current[tag] = rawValue.trim();
+  }
+
+  if (Object.keys(current).length > 0 || cursor > 0) {
+    records.push(current);
+  }
+
+  return records;
+}
+
+async function postForm(url, body) {
+  const res = await fetch(url, {
+    method: "POST",
+    headers: {
+      "User-Agent": QRZ_AGENT,
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`HTTP ${res.status} for ${url}\n${text.slice(0, 500)}`);
+  }
+
+  return res.text();
 }
 
 async function fetchText(url) {
@@ -85,22 +176,18 @@ async function fetchText(url) {
 
 function collectQsoNodes(root) {
   const out = [];
-
   walk(root, (node) => {
     if (!node || typeof node !== "object" || Array.isArray(node)) {
       return;
     }
-
     const lowerKeys = Object.keys(node).map((k) => k.toLowerCase());
     const hasCall = lowerKeys.includes("call") || lowerKeys.includes("callsign");
     const hasBand = lowerKeys.includes("band");
     const hasDateLike = lowerKeys.includes("date") || lowerKeys.includes("qso_date") || lowerKeys.includes("datetime") || lowerKeys.includes("time_on");
-
     if (hasCall && (hasBand || hasDateLike)) {
       out.push(node);
     }
   });
-
   return out;
 }
 
@@ -112,7 +199,6 @@ function walk(node, onNode) {
   if (!node || typeof node !== "object") {
     return;
   }
-
   onNode(node);
   for (const value of Object.values(node)) {
     walk(value, onNode);
@@ -125,9 +211,7 @@ function normalizeQso(item) {
     return null;
   }
 
-  const bandRaw = pick(item, ["band", "qrg"]);
-  const band = normalizeBand(bandRaw);
-
+  const band = normalizeBand(pick(item, ["band", "qrg", "freq"]));
   const mode = pick(item, ["mode", "submode"]);
   const country = pick(item, ["country", "dxcc_name", "entity"]);
   const grid = pick(item, ["grid", "gridsquare", "locator"]);
@@ -190,16 +274,13 @@ function normalizeBand(input) {
   if (!raw) {
     return "";
   }
-
   const cleaned = raw.toLowerCase().replace("meter", "m").replace("meters", "m").trim();
   if (/^\d+(\.\d+)?m$/.test(cleaned)) {
     return cleaned;
   }
-
   if (/^\d+(\.\d+)?$/.test(cleaned)) {
     return `${cleaned}m`;
   }
-
   return cleaned;
 }
 
@@ -244,14 +325,11 @@ function maidenheadToLatLon(locator) {
   if (!/^([A-R]{2})(\d{2})([A-X]{2})?$/.test(loc)) {
     throw new Error(`Invalid locator: ${locator}`);
   }
-
   const A = "A".charCodeAt(0);
   let lon = (loc.charCodeAt(0) - A) * 20 - 180;
   let lat = (loc.charCodeAt(1) - A) * 10 - 90;
-
   lon += Number(loc[2]) * 2;
   lat += Number(loc[3]);
-
   if (loc.length >= 6) {
     lon += (loc.charCodeAt(4) - A) * (5 / 60);
     lat += (loc.charCodeAt(5) - A) * (2.5 / 60);
@@ -261,7 +339,6 @@ function maidenheadToLatLon(locator) {
     lon += 1;
     lat += 0.5;
   }
-
   return { lat, lon };
 }
 

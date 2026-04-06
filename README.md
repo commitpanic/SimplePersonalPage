@@ -32,25 +32,25 @@ Nastepnie otworz:
 3. Ustaw Source: Deploy from a branch.
 4. Wybierz branch `main`, folder `/ (root)`.
 
-## Integracja QRZ XML (co godzine)
+## Integracja QRZ Logbook API (co godzine)
 
 Workflow: `.github/workflows/qrz-sync.yml`
 
 Sekrety repo do ustawienia:
-- `QRZ_USERNAME` - login QRZ
-- `QRZ_PASSWORD` - haslo QRZ
-- `QRZ_QSO_ENDPOINT` - URL endpointu XML z Twoimi QSO (moze zawierac placeholder `{KEY}` na session key)
+- `QRZ_API_KEY` - API Access Key do Twojego logbooka (z panelu QRZ)
+- `QRZ_FETCH_OPTIONS` - opcjonalnie, np. `MAX:500,TYPE:ADIF` albo `MAX:500,TYPE:ADIF,MODSINCE:2026-01-01`
 - `QRZ_AGENT` - opcjonalny user-agent klienta
 
-Przyklad endpointu:
+Endpoint API:
 
 ```text
-https://example.qrz.endpoint/xml/current/?s={KEY};action=YOUR_LOGBOOK_EXPORT
+https://logbook.qrz.com/api
 ```
 
 Uwaga:
-- endpoint z QSO zalezy od Twojego wariantu uslugi QRZ/XML,
-- skrypt automatycznie loguje sie do QRZ, podstawia key i normalizuje dane do `data/qso.latest.json`.
+- klucz API znajdziesz na stronie integracji API po zalogowaniu do QRZ,
+- skrypt wykonuje `ACTION=FETCH` i normalizuje wynik ADIF do `data/qso.latest.json`.
+- w razie potrzeby skrypt nadal obsluguje tryb legacy XML (login + haslo), ale rekomendowany jest API key.
 
 ## Ręczne odswiezanie danych
 
