@@ -22,39 +22,119 @@
   </header>
 
   <main class="wrap map-layout">
-    <section class="panel">
-      <h2>Filters</h2>
-      <label for="dateFrom">Date from</label>
-      <input id="dateFrom" type="date">
+    <section class="panel filter-panel">
+      <h2>Main filters</h2>
+      <div class="filter-grid">
+        <div>
+          <label for="dateFrom">Date from</label>
+          <input id="dateFrom" type="date">
+        </div>
 
-      <label for="dateTo">Date to</label>
-      <input id="dateTo" type="date">
+        <div>
+          <label for="dateTo">Date to</label>
+          <input id="dateTo" type="date">
+        </div>
 
-      <label for="bandFilter">Band</label>
-      <select id="bandFilter">
-        <option value="all">All</option>
-      </select>
+        <div>
+          <label for="bandFilter">Band</label>
+          <select id="bandFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
 
-      <div class="actions">
-        <button id="applyFilters" class="btn">Apply filters</button>
-        <button id="clearFilters" class="btn ghost">Reset</button>
-        <button id="refreshData" class="btn ghost">Refresh data</button>
+        <div class="actions">
+          <button id="applyFilters" class="btn">Apply filters</button>
+          <button id="clearFilters" class="btn ghost">Reset</button>
+          <button id="refreshData" class="btn ghost">Refresh data</button>
+        </div>
       </div>
 
       <p class="hint">Data is refreshed by GitHub Actions every hour. This button fetches the latest JSON file.</p>
-
-      <div class="stats">
-        <p><strong>QSO:</strong> <span id="statQso">0</span></p>
-        <p><strong>Countries:</strong> <span id="statCountries">0</span></p>
-        <p><strong>Top band:</strong> <span id="statTopBand">-</span></p>
-        <p><strong>Last update:</strong> <span id="statUpdated">-</span></p>
-      </div>
 
       <div id="status" class="status">Loading data...</div>
     </section>
 
     <section class="map-panel">
       <div id="map" aria-label="Contacts map"></div>
+    </section>
+
+    <section class="panel stats-panel">
+      <h2>Statistics</h2>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-label">QSO</p>
+          <p class="stat-value" id="statQso">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Countries</p>
+          <p class="stat-value" id="statCountries">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Top band</p>
+          <p class="stat-value" id="statTopBand">-</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Top mode</p>
+          <p class="stat-value" id="statTopMode">-</p>
+        </article>
+        <article class="stat-card wide">
+          <p class="stat-label">Last update</p>
+          <p class="stat-value" id="statUpdated">-</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <h2>QSO table</h2>
+
+      <div class="table-filters">
+        <div>
+          <label for="tableSearch">Search callsign/country</label>
+          <input id="tableSearch" type="search" placeholder="e.g. SQ7PRM or Poland">
+        </div>
+        <div>
+          <label for="tableModeFilter">Mode</label>
+          <select id="tableModeFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+        <div>
+          <label for="tableCountryFilter">Country</label>
+          <select id="tableCountryFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-meta">
+        <p>Rows shown: <span id="tableCount">0</span></p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="qso-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Callsign</th>
+              <th scope="col">Band</th>
+              <th scope="col">Mode</th>
+              <th scope="col">Country</th>
+              <th scope="col">Grid</th>
+            </tr>
+          </thead>
+          <tbody id="qsoTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel embed-panel">
+      <h2>Embed map as iframe</h2>
+      <p class="hint">Copy this code and paste it into any external page. The full map module (filters, stats, table) will be embedded.</p>
+      <textarea id="iframeCode" rows="4" readonly aria-label="Iframe embed code"></textarea>
+      <div class="actions">
+        <button id="copyIframeCode" class="btn">Copy iframe code</button>
+      </div>
+      <p id="iframeCopyStatus" class="status"></p>
     </section>
   </main>
 
