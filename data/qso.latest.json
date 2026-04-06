@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-04-06T18:46:06.693Z",
+  "updatedAt": "2026-04-06T18:56:54.187Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
-  "qsos": []
+  "qsos": [
+    {
+      "id": "2026-04-01T18:37:00.000Z-SP8RPA-80m-SSB",
+      "datetime": "2026-04-01T18:37:00.000Z",
+      "callsign": "SP8RPA",
+      "band": "80m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "KN09ww",
+      "lat": 49.9375,
+      "lon": 21.875
+    }
+  ]
 }
