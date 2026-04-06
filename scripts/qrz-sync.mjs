@@ -4,7 +4,7 @@ import { XMLParser } from "fast-xml-parser";
 
 const QRZ_API_ENDPOINT = process.env.QRZ_API_ENDPOINT || "https://logbook.qrz.com/api";
 const QRZ_API_KEY = process.env.QRZ_API_KEY;
-const QRZ_FETCH_OPTIONS = process.env.QRZ_FETCH_OPTIONS || "MAX:500,TYPE:ADIF";
+const QRZ_FETCH_OPTIONS = (process.env.QRZ_FETCH_OPTIONS || "").trim();
 
 const QRZ_USERNAME = process.env.QRZ_USERNAME;
 const QRZ_PASSWORD = process.env.QRZ_PASSWORD;
@@ -63,16 +63,30 @@ async function fetchViaLogbookApi() {
   const total = statusPairs.qsos || statusPairs.total || statusResponse.COUNT || "unknown";
   console.log(`QRZ STATUS: owner=${owner}, book=${bookName}, qsos=${total}`);
 
-  const fetchResponse = await requestLogbookApi({
+  const fetchParams = {
     KEY: QRZ_API_KEY,
-    ACTION: "FETCH",
-    OPTION: QRZ_FETCH_OPTIONS
-  });
+    ACTION: "FETCH"
+  };
+  if (QRZ_FETCH_OPTIONS) {
+    fetchParams.OPTION = QRZ_FETCH_OPTIONS;
+  }
 
-  const adif = fetchResponse.ADIF || "";
+  let fetchResponse = await requestLogbookApi(fetchParams);
+  let adif = pickAny(fetchResponse, ["ADIF", "adif", "AdiF"]);
+
+  // Some OPTION combinations return COUNT without ADIF. Retry plain FETCH once.
+  if (!adif && QRZ_FETCH_OPTIONS && Number(fetchResponse.COUNT || 0) > 0) {
+    console.warn(`QRZ FETCH with OPTION='${QRZ_FETCH_OPTIONS}' returned no ADIF. Retrying plain FETCH.`);
+    fetchResponse = await requestLogbookApi({
+      KEY: QRZ_API_KEY,
+      ACTION: "FETCH"
+    });
+    adif = pickAny(fetchResponse, ["ADIF", "adif", "AdiF"]);
+  }
+
   if (!adif) {
     const count = fetchResponse.COUNT || "0";
-    console.warn(`QRZ FETCH returned no ADIF payload (COUNT=${count}, OPTION=${QRZ_FETCH_OPTIONS}).`);
+    console.warn(`QRZ FETCH returned no ADIF payload (COUNT=${count}, OPTION=${QRZ_FETCH_OPTIONS || "<none>"}).`);
     return [];
   }
 
@@ -82,8 +96,7 @@ async function fetchViaLogbookApi() {
 }
 
 async function requestLogbookApi(params) {
-  const body = new URLSearchParams(params);
-  const responseText = await postForm(QRZ_API_ENDPOINT, body);
+  const responseText = await getQuery(`${QRZ_API_ENDPOINT}?${new URLSearchParams(params).toString()}`);
   const response = Object.fromEntries(new URLSearchParams(responseText));
 
   const result = (response.RESULT || "").toUpperCase();
@@ -94,6 +107,32 @@ async function requestLogbookApi(params) {
   }
 
   return response;
+}
+
+function pickAny(obj, keys) {
+  for (const key of keys) {
+    if (obj[key]) {
+      return obj[key];
+    }
+  }
+  return "";
+}
+
+async function getQuery(url) {
+  const res = await fetch(url, {
+    method: "GET",
+    headers: {
+      "User-Agent": QRZ_AGENT,
+      "Accept": "text/plain,*/*"
+    }
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`HTTP ${res.status} for ${url}\n${text.slice(0, 500)}`);
+  }
+
+  return res.text();
 }
 
 function parseNestedPairs(text) {

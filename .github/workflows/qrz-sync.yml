@@ -38,7 +38,6 @@ jobs:
       - name: Fetch and transform QRZ XML
         env:
           QRZ_API_KEY: ${{ secrets.QRZ_API_KEY }}
-          QRZ_FETCH_OPTIONS: ALL,TYPE:ADIF
           QRZ_API_ENDPOINT: https://logbook.qrz.com/api
           QRZ_AGENT: SP3FCK-HamMap/1.0
           HOME_LOCATOR: JO72SG
