@@ -1,0 +1,46 @@
+name: QRZ QSO Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install parser
+        run: npm install --no-save fast-xml-parser@4
+
+      - name: Fetch and transform QRZ XML
+        env:
+          QRZ_USERNAME: ${{ secrets.QRZ_USERNAME }}
+          QRZ_PASSWORD: ${{ secrets.QRZ_PASSWORD }}
+          QRZ_QSO_ENDPOINT: ${{ secrets.QRZ_QSO_ENDPOINT }}
+          QRZ_AGENT: ${{ secrets.QRZ_AGENT }}
+          HOME_LOCATOR: JO72SG
+        run: node scripts/qrz-sync.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet --exit-code data/qso.latest.json; then
+            echo "No changes in qso.latest.json"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/qso.latest.json
+          git commit -m "chore: update QSO data"
+          git push

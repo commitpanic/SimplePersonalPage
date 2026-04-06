@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SP3FCK ham radio photo gallery.">
+  <title>SP3FCK | Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header wrap compact">
+    <a class="back-link" href="index.html">Back</a>
+    <p class="eyebrow">SP3FCK</p>
+    <h1>Gallery</h1>
+    <p class="subtitle">Photos loaded from a JSON configuration file.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="gallery-controls">
+      <h2>Categories</h2>
+      <div id="categoryFilters" class="chip-row"></div>
+    </section>
+
+    <section>
+      <div id="galleryGrid" class="gallery-grid"></div>
+      <p id="galleryStatus" class="status">Loading gallery...</p>
+    </section>
+  </main>
+
+  <dialog id="lightbox" class="lightbox">
+    <form method="dialog">
+      <button class="close-btn" aria-label="Close">x</button>
+    </form>
+    <img id="lightboxImage" alt="Expanded image">
+    <h3 id="lightboxTitle"></h3>
+    <p id="lightboxDescription"></p>
+  </dialog>
+
+  <script src="assets/js/gallery.js" defer></script>
+</body>
+</html>

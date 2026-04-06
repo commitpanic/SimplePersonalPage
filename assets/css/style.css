@@ -1,0 +1,265 @@
+:root {
+  --bg: #0a0d10;
+  --bg-soft: #10161c;
+  --panel: #141d25;
+  --line: #2a3642;
+  --text: #e6edf3;
+  --muted: #9db0c1;
+  --accent: #4dd0b5;
+  --accent-2: #f1b24a;
+  --danger: #ff6f6f;
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(800px 500px at 85% -10%, rgba(77, 208, 181, 0.08), transparent 60%),
+    radial-gradient(700px 450px at 0% 0%, rgba(241, 178, 74, 0.08), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.4;
+}
+
+.noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+  opacity: 0.2;
+}
+
+.wrap {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 3.5rem 0 1.8rem;
+  animation: rise 460ms ease-out;
+}
+
+.site-header.compact {
+  padding-top: 2rem;
+}
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+.grid-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01)), var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: var(--shadow);
+}
+
+.card.accent {
+  border-color: rgba(77, 208, 181, 0.6);
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #08120f;
+  text-decoration: none;
+  padding: 0.55rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line);
+}
+
+.back-link {
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.site-footer {
+  padding: 1rem 0 3rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.status {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.gallery-controls {
+  margin-bottom: 1rem;
+}
+
+.chip-row {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: var(--accent-2);
+  color: #1a1203;
+  border-color: transparent;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.gallery-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-meta {
+  padding: 0.7rem;
+}
+
+.gallery-meta p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lightbox {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  color: var(--text);
+  width: min(90vw, 760px);
+  box-shadow: var(--shadow);
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.close-btn {
+  margin-left: auto;
+  display: block;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.2rem 0.45rem;
+}
+
+.lightbox img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.6rem;
+}
+
+.lightbox h3 {
+  margin-top: 0.8rem;
+}
+
+.lightbox p {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding-top: 2.4rem;
+  }
+}

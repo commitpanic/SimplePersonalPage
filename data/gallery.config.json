@@ -1,0 +1,25 @@
+{
+  "images": [
+    {
+      "file": "sample-1.svg",
+      "title": "Shack Night Session",
+      "description": "Evening HF session with a calm noise floor.",
+      "category": "Shack",
+      "order": 1
+    },
+    {
+      "file": "sample-2.svg",
+      "title": "Portable Setup",
+      "description": "Quick field setup with a wire antenna.",
+      "category": "Portable",
+      "order": 2
+    },
+    {
+      "file": "sample-3.svg",
+      "title": "QSL Wall",
+      "description": "Part of the QSL card collection.",
+      "category": "QSL",
+      "order": 3
+    }
+  ]
+}

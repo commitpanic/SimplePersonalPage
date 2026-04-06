@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2a18"/>
+      <stop offset="100%" stop-color="#0e1714"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g2)"/>
+  <path d="M0 620 L240 520 L430 600 L590 560 L760 640 L1200 520 L1200 900 L0 900 Z" fill="#22372a"/>
+  <line x1="820" y1="180" x2="650" y2="520" stroke="#f1b24a" stroke-width="10"/>
+  <line x1="820" y1="180" x2="970" y2="520" stroke="#f1b24a" stroke-width="10"/>
+  <rect x="700" y="520" width="220" height="90" rx="14" fill="#1a2520" stroke="#4d6c57"/>
+  <text x="120" y="760" fill="#dbe9df" font-size="56" font-family="sans-serif">Portable Setup</text>
+</svg>

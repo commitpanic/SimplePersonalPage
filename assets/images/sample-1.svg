@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1a1a"/>
+      <stop offset="100%" stop-color="#183a45"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="260" cy="280" r="160" fill="#4dd0b5" opacity="0.15"/>
+  <rect x="220" y="210" width="760" height="420" rx="28" fill="#111a22" stroke="#3f5a6c"/>
+  <rect x="280" y="290" width="300" height="190" rx="12" fill="#1d2d39"/>
+  <rect x="610" y="290" width="300" height="190" rx="12" fill="#122830"/>
+  <text x="300" y="380" fill="#9fd8cb" font-size="46" font-family="monospace">7.074 MHz</text>
+  <text x="300" y="430" fill="#d4ebff" font-size="30" font-family="monospace">FT8 RX/TX</text>
+  <text x="260" y="700" fill="#dceaf3" font-size="56" font-family="sans-serif">Shack Night Session</text>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "updatedAt": "2026-04-06T09:00:00Z",
+  "source": "sample",
+  "homeLocator": "JO72SG",
+  "qsos": [
+    {
+      "id": "2026-04-06T08:12:00Z-DL1ABC-10M-SSB",
+      "datetime": "2026-04-06T08:12:00Z",
+      "callsign": "DL1ABC",
+      "band": "10m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO50AK",
+      "lat": 50.4375,
+      "lon": 8.7083333333
+    },
+    {
+      "id": "2026-04-05T18:47:00Z-EA7XYZ-20M-FT8",
+      "datetime": "2026-04-05T18:47:00Z",
+      "callsign": "EA7XYZ",
+      "band": "20m",
+      "mode": "FT8",
+      "country": "Spain",
+      "grid": "IM76QK",
+      "lat": 36.4375,
+      "lon": -5.125
+    },
+    {
+      "id": "2026-04-03T21:05:00Z-K1ZZ-40M-CW",
+      "datetime": "2026-04-03T21:05:00Z",
+      "callsign": "K1ZZ",
+      "band": "40m",
+      "mode": "CW",
+      "country": "United States",
+      "grid": "FN42HM",
+      "lat": 42.5208333333,
+      "lon": -71.625
+    }
+  ]
+}
