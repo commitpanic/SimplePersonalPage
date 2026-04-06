@@ -12,6 +12,8 @@ const QRZ_QSO_ENDPOINT = process.env.QRZ_QSO_ENDPOINT;
 
 const QRZ_AGENT = process.env.QRZ_AGENT || "sp3fck-ham-map/1.0";
 const HOME_LOCATOR = process.env.HOME_LOCATOR || "JO72SG";
+const STATIC_BASEMAP_FILE = process.env.QRZ_STATIC_BASEMAP_FILE || path.join("assets", "maps", "world-basemap.svg");
+const NATURAL_EARTH_LAND_URL = process.env.NATURAL_EARTH_LAND_URL || "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson";
 
 const xmlParser = new XMLParser({
   ignoreAttributes: false,
@@ -46,20 +48,21 @@ async function main() {
   const outputPath = path.join(process.cwd(), "data", "qso.latest.json");
   const outputJsPath = path.join(process.cwd(), "data", "qso.latest.js");
   const outputQrzHtmlPath = path.join(process.cwd(), "ham-map-qrz.html");
+  const staticBasemapSvg = await ensureStaticBasemapSvg(STATIC_BASEMAP_FILE);
   await fs.writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   await fs.writeFile(
     outputJsPath,
     `window.__HAM_MAP_QSO_DATA__ = ${JSON.stringify(payload, null, 2)};\n`,
     "utf8"
   );
-  await fs.writeFile(outputQrzHtmlPath, renderQrzStaticPage(payload), "utf8");
+  await fs.writeFile(outputQrzHtmlPath, renderQrzStaticPage(payload, staticBasemapSvg), "utf8");
   if (normalized.length === 0) {
     console.warn("No QSO records returned by API for current fetch options. Wrote empty dataset.");
   }
   console.log(`Wrote ${normalized.length} QSO entries to ${outputPath}, ${outputJsPath} and ${outputQrzHtmlPath}`);
 }
 
-function renderQrzStaticPage(payload) {
+function renderQrzStaticPage(payload, staticBasemapSvg = "") {
   const width = 1200;
   const height = 620;
   const homePoint = maidenheadToLatLon(payload.homeLocator || HOME_LOCATOR);
@@ -164,7 +167,7 @@ function renderQrzStaticPage(payload) {
     <section class="panel map-wrap">
       <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Static map of SP3FCK contacts">
         <rect x="0" y="0" width="${width}" height="${height}" fill="#08121b" />
-        ${renderContinents(width, height)}
+        ${renderBasemapLayer(staticBasemapSvg, width, height)}
         ${renderGraticule(width, height)}
         ${lines}
         <circle cx="${home.x.toFixed(1)}" cy="${home.y.toFixed(1)}" r="5" fill="#f1b24a">
@@ -206,26 +209,109 @@ function renderGraticule(width, height) {
   return lines.join("\n");
 }
 
-function renderContinents(width, height) {
-  const continents = [
-    [[72, -168], [60, -150], [53, -132], [48, -124], [40, -123], [28, -111], [24, -97], [27, -82], [45, -66], [55, -60], [67, -76], [72, -95]],
-    [[12, -81], [8, -75], [2, -70], [-8, -66], [-15, -61], [-24, -58], [-33, -58], [-50, -69], [-55, -72], [-38, -56], [-20, -49], [-5, -52], [6, -60]],
-    [[71, -10], [63, 2], [57, 12], [51, 18], [46, 28], [42, 35], [45, 8], [52, -5], [60, -8]],
-    [[35, -17], [29, -10], [16, -1], [6, 8], [-7, 15], [-20, 18], [-35, 18], [-33, 30], [-20, 42], [0, 48], [19, 44], [30, 34], [35, 20]],
-    [[76, 35], [68, 60], [58, 85], [53, 108], [50, 126], [43, 142], [34, 142], [24, 121], [20, 105], [8, 95], [8, 77], [20, 67], [29, 60], [38, 48], [48, 40], [58, 35]],
-    [[-10, 112], [-17, 116], [-24, 122], [-31, 130], [-35, 138], [-32, 147], [-23, 152], [-15, 146], [-12, 136], [-13, 126]],
-    [[82, -74], [78, -56], [72, -44], [66, -40], [60, -46], [62, -58], [69, -66], [76, -73]],
-    [[45, 139], [41, 142], [36, 140], [33, 136], [37, 134], [42, 136]],
-    [[-13, 49], [-18, 48], [-23, 47], [-26, 45], [-21, 43], [-16, 45]]
-  ];
+function renderBasemapLayer(staticBasemapSvg, width, height) {
+  if (!staticBasemapSvg) {
+    return "";
+  }
+  const encoded = Buffer.from(staticBasemapSvg, "utf8").toString("base64");
+  return `<image href="data:image/svg+xml;base64,${encoded}" x="0" y="0" width="${width}" height="${height}" preserveAspectRatio="none" opacity="0.50" />`;
+}
 
-  return continents.map((poly) => {
-    const pts = poly.map(([lat, lon]) => {
-      const p = project(lat, lon, width, height);
-      return `${p.x.toFixed(1)},${p.y.toFixed(1)}`;
-    }).join(" ");
-    return `<polygon points="${pts}" fill="rgba(77,208,181,0.18)" stroke="rgba(77,208,181,0.35)" stroke-width="1" />`;
-  }).join("\n");
+async function ensureStaticBasemapSvg(relativeFilePath) {
+  const absoluteFilePath = path.resolve(process.cwd(), relativeFilePath);
+  try {
+    return await fs.readFile(absoluteFilePath, "utf8");
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      console.warn(`Unable to read static basemap SVG at ${relativeFilePath}: ${error.message}`);
+      return "";
+    }
+  }
+
+  try {
+    console.log(`Static basemap not found. Generating ${relativeFilePath} from Natural Earth land polygons.`);
+    const response = await fetch(NATURAL_EARTH_LAND_URL, {
+      headers: {
+        "User-Agent": QRZ_AGENT,
+        "Accept": "application/geo+json,application/json"
+      }
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const geojson = await response.json();
+    const svg = buildBasemapSvgFromGeoJson(geojson);
+    await fs.mkdir(path.dirname(absoluteFilePath), { recursive: true });
+    await fs.writeFile(absoluteFilePath, svg, "utf8");
+    console.log(`Created static basemap: ${relativeFilePath}`);
+    return svg;
+  } catch (error) {
+    console.warn(`Failed to generate static basemap from Natural Earth: ${error.message}`);
+    return "";
+  }
+}
+
+function buildBasemapSvgFromGeoJson(geojson) {
+  const width = 3600;
+  const height = 1800;
+  const features = Array.isArray(geojson?.features) ? geojson.features : [];
+  const dParts = [];
+
+  for (const feature of features) {
+    const geometry = feature?.geometry;
+    if (!geometry || !geometry.coordinates) {
+      continue;
+    }
+
+    if (geometry.type === "Polygon") {
+      for (const ring of geometry.coordinates) {
+        const segment = ringToSvgPath(ring, width, height);
+        if (segment) {
+          dParts.push(segment);
+        }
+      }
+    }
+
+    if (geometry.type === "MultiPolygon") {
+      for (const polygon of geometry.coordinates) {
+        for (const ring of polygon) {
+          const segment = ringToSvgPath(ring, width, height);
+          if (segment) {
+            dParts.push(segment);
+          }
+        }
+      }
+    }
+  }
+
+  const d = dParts.join(" ");
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="World land polygons">\n  <rect x="0" y="0" width="${width}" height="${height}" fill="#0c1823"/>\n  <path d="${d}" fill="#2f4b5c" stroke="#44657a" stroke-width="2" stroke-linejoin="round"/>\n</svg>\n`;
+}
+
+function ringToSvgPath(ring, width, height) {
+  if (!Array.isArray(ring) || ring.length < 3) {
+    return "";
+  }
+
+  let pathValue = "";
+  for (let i = 0; i < ring.length; i += 1) {
+    const point = ring[i];
+    if (!Array.isArray(point) || point.length < 2) {
+      continue;
+    }
+    const lon = Number(point[0]);
+    const lat = Number(point[1]);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+      continue;
+    }
+
+    const x = ((lon + 180) / 360) * width;
+    const y = ((90 - lat) / 180) * height;
+    pathValue += `${i === 0 ? "M" : "L"}${x.toFixed(2)} ${y.toFixed(2)} `;
+  }
+
+  return pathValue ? `${pathValue}Z` : "";
 }
 
 function project(lat, lon, width, height) {

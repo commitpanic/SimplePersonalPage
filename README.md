@@ -40,6 +40,7 @@ Sekrety repo do ustawienia:
 - `QRZ_API_KEY` - API Access Key do Twojego logbooka (z panelu QRZ)
 - `QRZ_FETCH_OPTIONS` - opcjonalnie, np. `MAX:500,TYPE:ADIF` albo `MAX:500,TYPE:ADIF,MODSINCE:2026-01-01`
 - `QRZ_AGENT` - opcjonalny user-agent klienta
+- `QRZ_STATIC_BASEMAP_FILE` - opcjonalna sciezka SVG tla mapy (domyslnie `assets/maps/world-basemap.svg`)
 
 Endpoint API:
 
@@ -50,6 +51,7 @@ https://logbook.qrz.com/api
 Uwaga:
 - klucz API znajdziesz na stronie integracji API po zalogowaniu do QRZ,
 - skrypt wykonuje `ACTION=FETCH` i normalizuje wynik ADIF do `data/qso.latest.json`.
+- jezeli plik `assets/maps/world-basemap.svg` nie istnieje, sync wygeneruje go automatycznie z Natural Earth i potem bedzie tylko dogrywal punkty/linie QSO.
 - w razie potrzeby skrypt nadal obsluguje tryb legacy XML (login + haslo), ale rekomendowany jest API key.
 
 ## Ręczne odswiezanie danych
