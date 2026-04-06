@@ -42,7 +42,9 @@ jobs:
           QRZ_API_ENDPOINT: https://logbook.qrz.com/api
           QRZ_AGENT: SP3FCK-HamMap/1.0
           HOME_LOCATOR: JO72SG
-        run: node scripts/qrz-sync.mjs
+        run: |
+          echo "Using QRZ_FETCH_OPTIONS=$QRZ_FETCH_OPTIONS"
+          node scripts/qrz-sync.mjs
 
       - name: Commit changes
         run: |

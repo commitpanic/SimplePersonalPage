@@ -52,28 +52,60 @@ async function main() {
 }
 
 async function fetchViaLogbookApi() {
-  const body = new URLSearchParams({
+  const statusResponse = await requestLogbookApi({
+    KEY: QRZ_API_KEY,
+    ACTION: "STATUS"
+  });
+
+  const statusPairs = parseNestedPairs(statusResponse.DATA || "");
+  const owner = statusPairs.owner || statusPairs.call || "unknown";
+  const bookName = statusPairs.bookname || statusPairs.name || "unknown";
+  const total = statusPairs.qsos || statusPairs.total || statusResponse.COUNT || "unknown";
+  console.log(`QRZ STATUS: owner=${owner}, book=${bookName}, qsos=${total}`);
+
+  const fetchResponse = await requestLogbookApi({
     KEY: QRZ_API_KEY,
     ACTION: "FETCH",
     OPTION: QRZ_FETCH_OPTIONS
   });
 
-  const responseText = await postForm(QRZ_API_ENDPOINT, body);
-  const response = Object.fromEntries(new URLSearchParams(responseText));
-
-  const result = (response.RESULT || "").toUpperCase();
-  if (result !== "OK") {
-    throw new Error(`QRZ Logbook API error: RESULT=${response.RESULT || ""} REASON=${response.REASON || ""}`);
-  }
-
-  const adif = response.ADIF || "";
+  const adif = fetchResponse.ADIF || "";
   if (!adif) {
+    const count = fetchResponse.COUNT || "0";
+    console.warn(`QRZ FETCH returned no ADIF payload (COUNT=${count}, OPTION=${QRZ_FETCH_OPTIONS}).`);
     return [];
   }
 
   return parseAdif(adif)
     .map(normalizeQso)
     .filter(Boolean);
+}
+
+async function requestLogbookApi(params) {
+  const body = new URLSearchParams(params);
+  const responseText = await postForm(QRZ_API_ENDPOINT, body);
+  const response = Object.fromEntries(new URLSearchParams(responseText));
+
+  const result = (response.RESULT || "").toUpperCase();
+  if (result !== "OK") {
+    throw new Error(
+      `QRZ Logbook API error: ACTION=${params.ACTION || ""} RESULT=${response.RESULT || ""} REASON=${response.REASON || ""}`
+    );
+  }
+
+  return response;
+}
+
+function parseNestedPairs(text) {
+  const out = {};
+  for (const pair of String(text).split("&")) {
+    const [k, v] = pair.split("=");
+    if (!k) {
+      continue;
+    }
+    out[k.trim().toLowerCase()] = decodeURIComponent((v || "").replaceAll("+", "%20")).trim();
+  }
+  return out;
 }
 
 async function fetchViaLegacyXml() {
