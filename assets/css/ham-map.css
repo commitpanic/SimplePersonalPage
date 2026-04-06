@@ -161,6 +161,10 @@ body.embed-mode .embed-panel {
   display: none;
 }
 
+body.embed-mode .table-panel {
+  display: none;
+}
+
 #map {
   width: 100%;
   min-height: 66vh;
