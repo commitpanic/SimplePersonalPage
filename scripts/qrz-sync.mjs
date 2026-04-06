@@ -220,6 +220,15 @@ function topEntry(values) {
   return top ? `${top[0]} (${top[1]})` : "-";
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 async function fetchViaLogbookApi() {
   const statusResponse = await requestLogbookApi({
     KEY: QRZ_API_KEY,
