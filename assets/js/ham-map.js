@@ -364,7 +364,7 @@ function initializeIframeSnippet() {
   }
 
   const url = new URL(window.location.href);
-  url.pathname = url.pathname.replace(/ham-map\.html$/i, "ham-map-embed.html");
+  url.pathname = url.pathname.replace(/ham-map\.html$/i, "ham-map-qrz.html");
   url.search = "";
   iframeCodeEl.value = `<iframe src="${url}" title="SP3FCK Ham Map" loading="lazy" style="width:100%;height:900px;border:0;border-radius:12px;overflow:hidden;"></iframe>`;
 }

@@ -45,16 +45,179 @@ async function main() {
 
   const outputPath = path.join(process.cwd(), "data", "qso.latest.json");
   const outputJsPath = path.join(process.cwd(), "data", "qso.latest.js");
+  const outputQrzHtmlPath = path.join(process.cwd(), "ham-map-qrz.html");
   await fs.writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
   await fs.writeFile(
     outputJsPath,
     `window.__HAM_MAP_QSO_DATA__ = ${JSON.stringify(payload, null, 2)};\n`,
     "utf8"
   );
+  await fs.writeFile(outputQrzHtmlPath, renderQrzStaticPage(payload), "utf8");
   if (normalized.length === 0) {
     console.warn("No QSO records returned by API for current fetch options. Wrote empty dataset.");
   }
-  console.log(`Wrote ${normalized.length} QSO entries to ${outputPath} and ${outputJsPath}`);
+  console.log(`Wrote ${normalized.length} QSO entries to ${outputPath}, ${outputJsPath} and ${outputQrzHtmlPath}`);
+}
+
+function renderQrzStaticPage(payload) {
+  const width = 1200;
+  const height = 620;
+  const homePoint = maidenheadToLatLon(payload.homeLocator || HOME_LOCATOR);
+  const qsos = Array.isArray(payload.qsos) ? payload.qsos : [];
+  const countries = new Set(qsos.map((qso) => qso.country).filter(Boolean));
+  const topBand = topEntry(qsos.map((qso) => qso.band || "unknown"));
+  const topMode = topEntry(qsos.map((qso) => qso.mode || "unknown"));
+  const visibleQsos = qsos.filter((qso) => Number.isFinite(qso.lat) && Number.isFinite(qso.lon));
+  const lines = visibleQsos.map((qso) => {
+    const from = project(homePoint.lat, homePoint.lon, width, height);
+    const to = project(qso.lat, qso.lon, width, height);
+    return `<line x1="${from.x.toFixed(1)}" y1="${from.y.toFixed(1)}" x2="${to.x.toFixed(1)}" y2="${to.y.toFixed(1)}" stroke="rgba(241,178,74,0.22)" stroke-width="1" />`;
+  }).join("\n");
+  const points = visibleQsos.map((qso) => {
+    const p = project(qso.lat, qso.lon, width, height);
+    const title = escapeHtml(`${qso.callsign || "N/A"} | ${qso.band || "-"} | ${qso.country || "-"}`);
+    return `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="2.6" fill="#4dd0b5"><title>${title}</title></circle>`;
+  }).join("\n");
+  const home = project(homePoint.lat, homePoint.lon, width, height);
+  const updated = payload.updatedAt ? new Date(payload.updatedAt).toLocaleString("en-GB") : "none";
+  const latest = qsos.slice(0, 8).map((qso) => `
+    <tr>
+      <td>${escapeHtml(qso.datetime ? new Date(qso.datetime).toLocaleString("en-GB") : "-")}</td>
+      <td>${escapeHtml(qso.callsign || "-")}</td>
+      <td>${escapeHtml(qso.band || "-")}</td>
+      <td>${escapeHtml(qso.mode || "-")}</td>
+      <td>${escapeHtml(qso.country || "-")}</td>
+    </tr>`).join("");
+
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SP3FCK | QRZ Map Embed</title>
+  <style>
+    :root {
+      --bg: #0a0d10;
+      --panel: #141d25;
+      --line: #2a3642;
+      --text: #e6edf3;
+      --muted: #9db0c1;
+      --accent: #4dd0b5;
+      --accent-2: #f1b24a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 12px;
+      background: radial-gradient(900px 400px at 100% 0, rgba(77,208,181,0.08), transparent 60%), var(--bg);
+      color: var(--text);
+      font: 14px/1.4 "Segoe UI", Arial, sans-serif;
+    }
+    .shell {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 12px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    h1,h2,p { margin: 0; }
+    .title { display: flex; justify-content: space-between; gap: 12px; align-items: end; }
+    .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .subtitle { margin-top: 6px; color: var(--muted); }
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(120px,1fr)); gap: 10px; }
+    .card { background: #0d1319; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+    .card .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+    .card .value { margin-top: 6px; font-weight: 700; font-size: 18px; }
+    .map-wrap { overflow: hidden; border-radius: 12px; border: 1px solid var(--line); background: linear-gradient(180deg, #0d1824, #0b1118); }
+    svg { display: block; width: 100%; height: auto; }
+    .table-wrap { overflow: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+    .foot { color: var(--muted); font-size: 12px; }
+    @media (max-width: 760px) { .stats { grid-template-columns: repeat(2, minmax(120px,1fr)); } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="panel title">
+      <div>
+        <p class="eyebrow">SP3FCK</p>
+        <h1>Ham Map</h1>
+        <p class="subtitle">Static QRZ-safe embed generated from the latest synced QSO data.</p>
+      </div>
+      <p class="foot">Updated: ${escapeHtml(updated)}</p>
+    </section>
+
+    <section class="stats">
+      <article class="card"><p class="label">QSO</p><p class="value">${qsos.length}</p></article>
+      <article class="card"><p class="label">Countries</p><p class="value">${countries.size}</p></article>
+      <article class="card"><p class="label">Top band</p><p class="value">${escapeHtml(topBand)}</p></article>
+      <article class="card"><p class="label">Top mode</p><p class="value">${escapeHtml(topMode)}</p></article>
+    </section>
+
+    <section class="panel map-wrap">
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Static map of SP3FCK contacts">
+        <rect x="0" y="0" width="${width}" height="${height}" fill="#08121b" />
+        ${renderGraticule(width, height)}
+        ${lines}
+        <circle cx="${home.x.toFixed(1)}" cy="${home.y.toFixed(1)}" r="5" fill="#f1b24a">
+          <title>Home locator ${escapeHtml(payload.homeLocator || HOME_LOCATOR)}</title>
+        </circle>
+        ${points}
+      </svg>
+    </section>
+
+    <section class="panel">
+      <h2>Latest contacts</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Callsign</th><th>Band</th><th>Mode</th><th>Country</th></tr>
+          </thead>
+          <tbody>${latest}</tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+`;
+}
+
+function renderGraticule(width, height) {
+  const lines = [];
+  for (let lon = -180; lon <= 180; lon += 30) {
+    const p1 = project(-85, lon, width, height);
+    const p2 = project(85, lon, width, height);
+    lines.push(`<line x1="${p1.x.toFixed(1)}" y1="${p1.y.toFixed(1)}" x2="${p2.x.toFixed(1)}" y2="${p2.y.toFixed(1)}" stroke="rgba(157,176,193,0.10)" stroke-width="1" />`);
+  }
+  for (let lat = -60; lat <= 60; lat += 30) {
+    const p1 = project(lat, -180, width, height);
+    const p2 = project(lat, 180, width, height);
+    lines.push(`<line x1="${p1.x.toFixed(1)}" y1="${p1.y.toFixed(1)}" x2="${p2.x.toFixed(1)}" y2="${p2.y.toFixed(1)}" stroke="rgba(157,176,193,0.10)" stroke-width="1" />`);
+  }
+  return lines.join("\n");
+}
+
+function project(lat, lon, width, height) {
+  const x = ((lon + 180) / 360) * width;
+  const y = ((90 - lat) / 180) * height;
+  return { x, y };
+}
+
+function topEntry(values) {
+  const counts = values.reduce((acc, value) => {
+    acc[value] = (acc[value] || 0) + 1;
+    return acc;
+  }, {});
+  const top = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+  return top ? `${top[0]} (${top[1]})` : "-";
 }
 
 async function fetchViaLogbookApi() {
