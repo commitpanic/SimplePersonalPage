@@ -164,6 +164,7 @@ function renderQrzStaticPage(payload) {
     <section class="panel map-wrap">
       <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Static map of SP3FCK contacts">
         <rect x="0" y="0" width="${width}" height="${height}" fill="#08121b" />
+        ${renderContinents(width, height)}
         ${renderGraticule(width, height)}
         ${lines}
         <circle cx="${home.x.toFixed(1)}" cy="${home.y.toFixed(1)}" r="5" fill="#f1b24a">
@@ -203,6 +204,28 @@ function renderGraticule(width, height) {
     lines.push(`<line x1="${p1.x.toFixed(1)}" y1="${p1.y.toFixed(1)}" x2="${p2.x.toFixed(1)}" y2="${p2.y.toFixed(1)}" stroke="rgba(157,176,193,0.10)" stroke-width="1" />`);
   }
   return lines.join("\n");
+}
+
+function renderContinents(width, height) {
+  const continents = [
+    [[72, -168], [60, -150], [53, -132], [48, -124], [40, -123], [28, -111], [24, -97], [27, -82], [45, -66], [55, -60], [67, -76], [72, -95]],
+    [[12, -81], [8, -75], [2, -70], [-8, -66], [-15, -61], [-24, -58], [-33, -58], [-50, -69], [-55, -72], [-38, -56], [-20, -49], [-5, -52], [6, -60]],
+    [[71, -10], [63, 2], [57, 12], [51, 18], [46, 28], [42, 35], [45, 8], [52, -5], [60, -8]],
+    [[35, -17], [29, -10], [16, -1], [6, 8], [-7, 15], [-20, 18], [-35, 18], [-33, 30], [-20, 42], [0, 48], [19, 44], [30, 34], [35, 20]],
+    [[76, 35], [68, 60], [58, 85], [53, 108], [50, 126], [43, 142], [34, 142], [24, 121], [20, 105], [8, 95], [8, 77], [20, 67], [29, 60], [38, 48], [48, 40], [58, 35]],
+    [[-10, 112], [-17, 116], [-24, 122], [-31, 130], [-35, 138], [-32, 147], [-23, 152], [-15, 146], [-12, 136], [-13, 126]],
+    [[82, -74], [78, -56], [72, -44], [66, -40], [60, -46], [62, -58], [69, -66], [76, -73]],
+    [[45, 139], [41, 142], [36, 140], [33, 136], [37, 134], [42, 136]],
+    [[-13, 49], [-18, 48], [-23, 47], [-26, 45], [-21, 43], [-16, 45]]
+  ];
+
+  return continents.map((poly) => {
+    const pts = poly.map(([lat, lon]) => {
+      const p = project(lat, lon, width, height);
+      return `${p.x.toFixed(1)},${p.y.toFixed(1)}`;
+    }).join(" ");
+    return `<polygon points="${pts}" fill="rgba(77,208,181,0.18)" stroke="rgba(77,208,181,0.35)" stroke-width="1" />`;
+  }).join("\n");
 }
 
 function project(lat, lon, width, height) {
@@ -260,7 +283,7 @@ async function fetchViaLogbookApi() {
       KEY: QRZ_API_KEY,
       ACTION: "FETCH"
     });
-    adif = pickAny(fetchResponse, ["ADIF", "adif", "AdiF"]);
+    adif = fetchResponse.ADIF || "";
   }
 
   if (!adif) {
