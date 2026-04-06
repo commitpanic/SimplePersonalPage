@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Embedded version of the SP3FCK ham radio map.">
+  <title>SP3FCK | Ham Map Embed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/ham-map.css">
+</head>
+<body class="embed-mode">
+  <div class="noise"></div>
+
+  <main class="wrap map-layout">
+    <section class="panel filter-panel">
+      <h2>Main filters</h2>
+      <div class="filter-grid">
+        <div>
+          <label for="dateFrom">Date from</label>
+          <input id="dateFrom" type="date">
+        </div>
+
+        <div>
+          <label for="dateTo">Date to</label>
+          <input id="dateTo" type="date">
+        </div>
+
+        <div>
+          <label for="bandFilter">Band</label>
+          <select id="bandFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="applyFilters" class="btn">Apply filters</button>
+          <button id="clearFilters" class="btn ghost">Reset</button>
+          <button id="refreshData" class="btn ghost">Refresh data</button>
+        </div>
+      </div>
+
+      <p class="hint">Data is refreshed by GitHub Actions every hour. This button fetches the latest JSON file.</p>
+      <div id="status" class="status">Loading data...</div>
+    </section>
+
+    <section class="map-panel">
+      <div id="map" aria-label="Contacts map"></div>
+    </section>
+
+    <section class="panel stats-panel">
+      <h2>Statistics</h2>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p class="stat-label">QSO</p>
+          <p class="stat-value" id="statQso">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Countries</p>
+          <p class="stat-value" id="statCountries">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Top band</p>
+          <p class="stat-value" id="statTopBand">-</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Top mode</p>
+          <p class="stat-value" id="statTopMode">-</p>
+        </article>
+        <article class="stat-card wide">
+          <p class="stat-label">Last update</p>
+          <p class="stat-value" id="statUpdated">-</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="assets/js/ham-map.js" defer></script>
+</body>
+</html>

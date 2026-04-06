@@ -23,7 +23,7 @@ const tableCountryFilterEl = document.getElementById("tableCountryFilter");
 const iframeCodeEl = document.getElementById("iframeCode");
 const copyIframeCodeBtn = document.getElementById("copyIframeCode");
 const iframeCopyStatusEl = document.getElementById("iframeCopyStatus");
-const isEmbedMode = new URLSearchParams(window.location.search).get("embed") === "1";
+const isEmbedMode = new URLSearchParams(window.location.search).get("embed") === "1" || window.self !== window.top;
 
 if (isEmbedMode) {
   document.body.classList.add("embed-mode");
@@ -55,9 +55,15 @@ clearBtn?.addEventListener("click", () => {
   fromEl.value = "";
   toEl.value = "";
   bandEl.value = "all";
-  tableSearchEl.value = "";
-  tableModeFilterEl.value = "all";
-  tableCountryFilterEl.value = "all";
+  if (tableSearchEl) {
+    tableSearchEl.value = "";
+  }
+  if (tableModeFilterEl) {
+    tableModeFilterEl.value = "all";
+  }
+  if (tableCountryFilterEl) {
+    tableCountryFilterEl.value = "all";
+  }
   applyFilters();
 });
 refreshBtn?.addEventListener("click", async () => {
@@ -210,6 +216,10 @@ function renderStats(qsos) {
 }
 
 function hydrateTableFilters(qsos) {
+  if (!tableModeFilterEl || !tableCountryFilterEl) {
+    return;
+  }
+
   const modes = [...new Set(qsos.map((qso) => qso.mode).filter(Boolean))].sort();
   const countries = [...new Set(qsos.map((qso) => qso.country).filter(Boolean))].sort();
 
@@ -223,6 +233,10 @@ function hydrateTableFilters(qsos) {
 }
 
 function renderTableFromMainFiltered() {
+  if (!tableSearchEl || !tableModeFilterEl || !tableCountryFilterEl || !tableBodyEl || !tableCountEl) {
+    return;
+  }
+
   const query = (tableSearchEl.value || "").trim().toLowerCase();
   const modeFilter = tableModeFilterEl.value || "all";
   const countryFilter = tableCountryFilterEl.value || "all";
@@ -246,6 +260,10 @@ function renderTableFromMainFiltered() {
 }
 
 function renderTable(qsos) {
+  if (!tableBodyEl || !tableCountEl) {
+    return;
+  }
+
   tableCountEl.textContent = String(qsos.length);
 
   if (qsos.length === 0) {
@@ -331,7 +349,8 @@ function initializeIframeSnippet() {
   }
 
   const url = new URL(window.location.href);
-  url.searchParams.set("embed", "1");
+  url.pathname = url.pathname.replace(/ham-map\.html$/i, "ham-map-embed.html");
+  url.search = "";
   iframeCodeEl.value = `<iframe src="${url}" title="SP3FCK Ham Map" loading="lazy" style="width:100%;height:900px;border:0;border-radius:12px;overflow:hidden;"></iframe>`;
 }
 

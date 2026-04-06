@@ -157,6 +157,10 @@ body.embed-mode .map-layout {
   margin-bottom: 1rem;
 }
 
+body.embed-mode .wrap {
+  width: min(1200px, 98vw);
+}
+
 body.embed-mode .embed-panel {
   display: none;
 }
