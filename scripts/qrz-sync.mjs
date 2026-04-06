@@ -65,14 +65,15 @@ async function fetchViaLogbookApi() {
 
   const fetchParams = {
     KEY: QRZ_API_KEY,
-    ACTION: "FETCH"
+    ACTION: "FETCH",
+    TYPE: "ADIF"
   };
   if (QRZ_FETCH_OPTIONS) {
     fetchParams.OPTION = QRZ_FETCH_OPTIONS;
   }
 
   let fetchResponse = await requestLogbookApi(fetchParams);
-  let adif = pickAny(fetchResponse, ["ADIF", "adif", "AdiF"]);
+  let adif = fetchResponse.ADIF || "";
 
   // Some OPTION combinations return COUNT without ADIF. Retry plain FETCH once.
   if (!adif && QRZ_FETCH_OPTIONS && Number(fetchResponse.COUNT || 0) > 0) {
@@ -97,7 +98,7 @@ async function fetchViaLogbookApi() {
 
 async function requestLogbookApi(params) {
   const responseText = await getQuery(`${QRZ_API_ENDPOINT}?${new URLSearchParams(params).toString()}`);
-  const response = Object.fromEntries(new URLSearchParams(responseText));
+  const response = parseApiResponse(responseText);
 
   const result = (response.RESULT || "").toUpperCase();
   if (result !== "OK") {
@@ -109,13 +110,45 @@ async function requestLogbookApi(params) {
   return response;
 }
 
-function pickAny(obj, keys) {
-  for (const key of keys) {
-    if (obj[key]) {
-      return obj[key];
-    }
+function parseApiResponse(responseText) {
+  const text = String(responseText || "").trim();
+  const out = {};
+
+  // QRZ often returns ADIF as raw text after ADIF=, which may contain '&lt;' entities.
+  // Split head from ADIF tail manually to avoid breaking on '&' inside entities.
+  const adifToken = "&ADIF=";
+  const idx = text.indexOf(adifToken);
+
+  let head = text;
+  let adifRaw = "";
+
+  if (idx >= 0) {
+    head = text.slice(0, idx);
+    adifRaw = text.slice(idx + adifToken.length);
+  } else if (text.startsWith("ADIF=")) {
+    head = "";
+    adifRaw = text.slice(5);
   }
-  return "";
+
+  for (const [k, v] of new URLSearchParams(head)) {
+    out[k.toUpperCase()] = v;
+  }
+
+  if (adifRaw) {
+    out.ADIF = decodeHtmlEntities(adifRaw);
+  }
+
+  return out;
+}
+
+function decodeHtmlEntities(text) {
+  return String(text)
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&#x27;", "'");
 }
 
 async function getQuery(url) {
