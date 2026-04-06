@@ -34,10 +34,6 @@ async function main() {
     );
   }
 
-  if (normalized.length === 0) {
-    throw new Error("No QSO records parsed. Check API credentials and fetch options.");
-  }
-
   normalized.sort((a, b) => String(b.datetime).localeCompare(String(a.datetime)));
 
   const payload = {
@@ -49,6 +45,9 @@ async function main() {
 
   const outputPath = path.join(process.cwd(), "data", "qso.latest.json");
   await fs.writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+  if (normalized.length === 0) {
+    console.warn("No QSO records returned by API for current fetch options. Wrote empty dataset.");
+  }
   console.log(`Wrote ${normalized.length} QSO entries to ${outputPath}`);
 }
 
