@@ -44,11 +44,17 @@ async function main() {
   };
 
   const outputPath = path.join(process.cwd(), "data", "qso.latest.json");
+  const outputJsPath = path.join(process.cwd(), "data", "qso.latest.js");
   await fs.writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+  await fs.writeFile(
+    outputJsPath,
+    `window.__HAM_MAP_QSO_DATA__ = ${JSON.stringify(payload, null, 2)};\n`,
+    "utf8"
+  );
   if (normalized.length === 0) {
     console.warn("No QSO records returned by API for current fetch options. Wrote empty dataset.");
   }
-  console.log(`Wrote ${normalized.length} QSO entries to ${outputPath}`);
+  console.log(`Wrote ${normalized.length} QSO entries to ${outputPath} and ${outputJsPath}`);
 }
 
 async function fetchViaLogbookApi() {

@@ -47,13 +47,13 @@ jobs:
 
       - name: Commit changes
         run: |
-          if git diff --quiet --exit-code data/qso.latest.json; then
-            echo "No changes in qso.latest.json"
+          if git diff --quiet --exit-code data/qso.latest.json data/qso.latest.js; then
+            echo "No changes in qso.latest data files"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/qso.latest.json
+          git add data/qso.latest.json data/qso.latest.js
           git commit -m "chore: update QSO data"
           git push

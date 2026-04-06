@@ -82,28 +82,43 @@ loadQsoData().then(() => applyFilters());
 async function loadQsoData() {
   setStatus("Loading data...");
   try {
+    const inlinePayload = window.__HAM_MAP_QSO_DATA__;
+    if (inlinePayload && Array.isArray(inlinePayload.qsos)) {
+      applyPayload(inlinePayload, false);
+      setStatus(`Data loaded: ${allQsos.length} QSO`);
+      return;
+    }
+
     const res = await fetch(`${DATA_URL}?ts=${Date.now()}`);
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
     }
 
     const payload = await res.json();
-    allQsos = Array.isArray(payload.qsos) ? payload.qsos : [];
-
-    const uniqueBands = [...new Set(allQsos.map((qso) => qso.band).filter(Boolean))].sort();
-    bandEl.innerHTML = `<option value="all">All</option>${uniqueBands
-      .map((band) => `<option value="${band}">${band}</option>`)
-      .join("")}`;
-
-    statUpdatedEl.textContent = payload.updatedAt
-      ? new Date(payload.updatedAt).toLocaleString("en-GB")
-      : "none";
+    applyPayload(payload, true);
 
     setStatus(`Data loaded: ${allQsos.length} QSO`);
   } catch (error) {
     console.error(error);
     allQsos = [];
     setStatus("Failed to load data.");
+  }
+}
+
+function applyPayload(payload, replaceInlineCache) {
+  allQsos = Array.isArray(payload.qsos) ? payload.qsos : [];
+
+  const uniqueBands = [...new Set(allQsos.map((qso) => qso.band).filter(Boolean))].sort();
+  bandEl.innerHTML = `<option value="all">All</option>${uniqueBands
+    .map((band) => `<option value="${band}">${band}</option>`)
+    .join("")}`;
+
+  statUpdatedEl.textContent = payload.updatedAt
+    ? new Date(payload.updatedAt).toLocaleString("en-GB")
+    : "none";
+
+  if (replaceInlineCache) {
+    window.__HAM_MAP_QSO_DATA__ = payload;
   }
 }
 
