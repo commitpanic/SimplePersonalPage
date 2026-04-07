@@ -1,5 +1,5 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-04-07T06:41:33.603Z",
+  "updatedAt": "2026-04-07T06:48:47.055Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
@@ -12067,9 +12067,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "LSB",
       "country": "Germany",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO31VG",
+      "lat": 51.270833333333336,
+      "lon": 7.791666666666667
     },
     {
       "id": "2025-11-16T16:27:00.000Z-SQ2PQ-40m-LSB",
@@ -14423,9 +14423,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "20m",
       "mode": "USB",
       "country": "Sweden",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO67GW",
+      "lat": 57.9375,
+      "lon": 12.541666666666666
     },
     {
       "id": "2025-10-26T11:33:00.000Z-EF8R-10m-USB",
@@ -16208,9 +16208,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "20m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "KO59DW",
+      "lat": 59.9375,
+      "lon": 30.291666666666668
     },
     {
       "id": "2025-10-25T09:22:00.000Z-RA6SD-20m-USB",
@@ -17254,9 +17254,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00aa",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO94GM",
+      "lat": 54.520833333333336,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-09-28T14:47:00.000Z-HF30PMW-40m-SSB",
@@ -17518,9 +17518,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00aa",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO82LJ",
+      "lat": 52.395833333333336,
+      "lon": 16.958333333333336
     },
     {
       "id": "2025-08-30T14:16:00.000Z-SP9AU-40m-SSB",
