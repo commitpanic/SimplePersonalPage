@@ -1,8 +1,19 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-04-13T17:40:43.823Z",
+  "updatedAt": "2026-04-13T18:45:04.362Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-04-13T18:20:00.000Z-SP3MSM-70cm-FM",
+      "datetime": "2026-04-13T18:20:00.000Z",
+      "callsign": "SP3MSM",
+      "band": "70cm",
+      "mode": "FM",
+      "country": "Poland",
+      "grid": "JO72xf",
+      "lat": 52.22916666666667,
+      "lon": 15.958333333333332
+    },
     {
       "id": "2026-04-09T19:11:00.000Z-OZ5MK-80m-LSB",
       "datetime": "2026-04-09T19:11:00.000Z",
