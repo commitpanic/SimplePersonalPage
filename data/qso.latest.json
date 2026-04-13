@@ -1,8 +1,17 @@
 {
-  "updatedAt": "2026-04-13T19:46:03.372Z",
+  "updatedAt": "2026-04-13T20:37:04.785Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-04-13T19:45:00.000Z-SQ5EG-70cm-FM",
+      "datetime": "2026-04-13T19:45:00.000Z",
+      "callsign": "SQ5EG",
+      "band": "70cm",
+      "mode": "FM",
+      "country": "Poland",
+      "grid": "KO02lf27"
+    },
     {
       "id": "2026-04-13T18:20:00.000Z-SP3MSM-70cm-FM",
       "datetime": "2026-04-13T18:20:00.000Z",
