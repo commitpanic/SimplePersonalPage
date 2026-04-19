@@ -1,8 +1,19 @@
 {
-  "updatedAt": "2026-04-19T16:30:48.837Z",
+  "updatedAt": "2026-04-19T17:30:32.952Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-04-19T16:35:00.000Z-HA235O-40m-LSB",
+      "datetime": "2026-04-19T16:35:00.000Z",
+      "callsign": "HA235O",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Hungary",
+      "grid": "JN97MN",
+      "lat": 47.5625,
+      "lon": 19.041666666666668
+    },
     {
       "id": "2026-04-16T19:15:00.000Z-SQ7SE-80m-LSB",
       "datetime": "2026-04-16T19:15:00.000Z",
