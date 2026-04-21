@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Gallery Manager – SP3FCK</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0b0d;
+            color: #e7e5df;
+            min-height: 100vh;
+        }
+
+        /* ── Login ─────────────────────────────────────── */
+        #login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0b0b0d 0%, #1a1a1f 100%);
+        }
+
+        .login-card {
+            background: #1c1c21;
+            border: 1px solid rgba(190, 149, 78, 0.3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-logo { font-size: 3rem; color: #ff0000; margin-bottom: 10px; }
+        .login-card h1 { font-size: 1.6rem; color: #fff; margin-bottom: 5px; }
+        .login-card .subtitle { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+
+        .login-card input[type="password"] {
+            width: 100%;
+            padding: 12px 16px;
+            background: #151518;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: border-color 0.2s;
+        }
+
+        .login-card input[type="password"]:focus {
+            outline: none;
+            border-color: #be954e;
+        }
+
+        .error-text { color: #ef4444; font-size: 0.88rem; margin-top: 10px; min-height: 20px; }
+
+        /* ── Buttons ────────────────────────────────────── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-primary   { background: #be954e; color: #fff; }
+        .btn-primary:hover   { background: #d4a85a; transform: translateY(-1px); }
+        .btn-success   { background: #166534; color: #fff; }
+        .btn-success:hover   { background: #16a34a; }
+        .btn-danger    { background: #7f1d1d; color: #fff; }
+        .btn-danger:hover    { background: #dc2626; }
+        .btn-secondary { background: #374151; color: #e5e7eb; }
+        .btn-secondary:hover { background: #4b5563; }
+        .btn-icon { padding: 7px 11px; }
+        .btn:disabled { opacity: 0.38; cursor: not-allowed; transform: none !important; }
+        .btn-wide { width: 100%; justify-content: center; padding: 12px; font-size: 1rem; }
+
+        /* ── App Layout ─────────────────────────────────── */
+        #app-screen {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .app-header {
+            background: #1c1c21;
+            border-bottom: 2px solid rgba(190, 149, 78, 0.35);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .app-title {
+            font-size: 1.2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .app-title i { color: #ff0000; font-size: 1.4rem; }
+
+        .toolbar-group { display: flex; align-items: center; gap: 10px; }
+
+        #file-label {
+            color: #777;
+            font-size: 0.82rem;
+            max-width: 220px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-style: italic;
+        }
+
+        /* ── Status Bar ─────────────────────────────────── */
+        #status-bar {
+            background: #111114;
+            padding: 7px 24px;
+            font-size: 0.8rem;
+            color: #555;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 34px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #status-bar.success { color: #4ade80; }
+        #status-bar.error   { color: #f87171; }
+        #status-bar.info    { color: #be954e; }
+
+        /* ── Main Grid ──────────────────────────────────── */
+        .app-main {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ── Slides Panel ───────────────────────────────── */
+        .slides-panel {
+            padding: 22px 24px;
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .panel-header h2 { font-size: 1.1rem; color: #fff; }
+
+        .count-badge {
+            background: #be954e;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .drag-hint { font-size: 0.75rem; color: #444; }
+
+        /* ── Slide Card ─────────────────────────────────── */
+        .slide-card {
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 22px 95px 1fr auto;
+            gap: 13px;
+            align-items: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .slide-card:hover { border-color: rgba(190, 149, 78, 0.35); }
+        .slide-card.dragging { opacity: 0.45; border-style: dashed; }
+        .slide-card.drag-over { border-color: #be954e; background: rgba(190, 149, 78, 0.08); }
+
+        .drag-handle {
+            color: #444;
+            cursor: grab;
+            font-size: 1.1rem;
+            text-align: center;
+            user-select: none;
+        }
+
+        .drag-handle:active { cursor: grabbing; color: #be954e; }
+
+        .slide-thumb {
+            width: 95px;
+            height: 54px;
+            object-fit: cover;
+            border-radius: 6px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: block;
+        }
+
+        .slide-info { min-width: 0; }
+
+        .slide-pos  { font-size: 0.72rem; color: #be954e; font-weight: 700; margin-bottom: 2px; }
+        .slide-info h3 {
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slide-info p {
+            font-size: 0.78rem;
+            color: #777;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .url-tag {
+            font-size: 0.72rem;
+            color: #ff5555;
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slide-actions { display: flex; flex-direction: column; gap: 5px; flex-shrink: 0; }
+        .actions-row   { display: flex; gap: 5px; }
+
+        /* ── Empty State ────────────────────────────────── */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #444;
+        }
+
+        .empty-state i { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+
+        /* ── Add Panel ──────────────────────────────────── */
+        .add-panel {
+            padding: 22px 24px;
+            background: #111114;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+            border-left: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .add-panel h2 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── Form ───────────────────────────────────────── */
+        .form-group { margin-bottom: 14px; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 9px 13px;
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 8px;
+            color: #e7e5df;
+            font-size: 0.88rem;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group textarea { resize: vertical; min-height: 58px; }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #be954e;
+        }
+
+        .url-row { display: flex; gap: 8px; }
+        .url-row input { flex: 1; }
+
+        .preview-img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #1a1a1f;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        .notice {
+            background: rgba(190, 149, 78, 0.09);
+            border: 1px solid rgba(190, 149, 78, 0.25);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.8rem;
+            color: #be954e;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        /* ── Modal ──────────────────────────────────────── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal-card {
+            background: #1c1c21;
+            border: 1px solid rgba(190, 149, 78, 0.4);
+            border-radius: 16px;
+            padding: 28px 32px;
+            width: 500px;
+            max-width: 96vw;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-card h2 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        /* ── Responsive ─────────────────────────────────── */
+        @media (max-width: 860px) {
+            .app-main { grid-template-columns: 1fr; }
+            .add-panel {
+                max-height: none;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.07);
+            }
+            .slides-panel { max-height: none; border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     LOGIN SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="login-screen">
+    <div class="login-card">
+        <div class="login-logo"><i class="fab fa-youtube"></i></div>
+        <h1>YouTube Manager</h1>
+        <p class="subtitle">SP3FCK · QRZ Page Editor</p>
+        <input type="password" id="pwd-input" placeholder="Password"
+               onkeydown="if(event.key==='Enter') doLogin()">
+        <button class="btn btn-primary btn-wide" onclick="doLogin()">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <p class="error-text" id="login-error"></p>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     APP SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="app-screen">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="app-title">
+            <i class="fab fa-youtube"></i>
+            YouTube Gallery Manager
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-secondary" onclick="openFile()">
+                <i class="fas fa-folder-open"></i> Open qrz_bio.html
+            </button>
+            <span id="file-label">No file loaded</span>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-success" id="btn-save" onclick="saveFile()" disabled>
+                <i class="fas fa-save"></i> Save to File
+            </button>
+            <button class="btn btn-secondary" onclick="doLogout()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Status Bar -->
+    <div id="status-bar">
+        <i class="fas fa-circle-info"></i>
+        Open qrz_bio.html to begin. Requires Chrome or Edge (File System Access API).
+    </div>
+
+    <!-- Main -->
+    <div class="app-main">
+
+        <!-- Left: Slide List -->
+        <div class="slides-panel">
+            <div class="panel-header">
+                <h2>
+                    Slides &nbsp;<span class="count-badge" id="slide-count">0</span>
+                </h2>
+                <span class="drag-hint"><i class="fas fa-grip-vertical"></i> drag to reorder</span>
+            </div>
+            <div id="slide-list">
+                <div class="empty-state">
+                    <i class="fab fa-youtube"></i>
+                    <p>Open qrz_bio.html to load slides</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Add New Slide -->
+        <div class="add-panel">
+            <h2>
+                <i class="fas fa-plus-circle" style="color:#be954e;"></i>
+                Add New Slide
+            </h2>
+
+            <div class="notice">
+                <i class="fas fa-info-circle" style="margin-top:2px;flex-shrink:0;"></i>
+                <span>Paste a YouTube URL (any format: shorts, youtu.be, watch) and click
+                <i class="fas fa-search"></i> to detect the video ID and preview.</span>
+            </div>
+
+            <img id="add-preview" class="preview-img" alt="Preview">
+
+            <div class="form-group">
+                <label>YouTube URL <span style="color:#ef4444;">*</span></label>
+                <div class="url-row">
+                    <input type="url" id="add-url" placeholder="https://youtube.com/shorts/..."
+                           oninput="onUrlInput('add')">
+                    <button class="btn btn-secondary btn-icon" onclick="detectUrl('add')" title="Detect video ID">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Title <span style="color:#ef4444;">*</span></label>
+                <input type="text" id="add-title" placeholder="Video title">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="add-desc" placeholder="Short description shown under the title"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Year</label>
+                <input type="text" id="add-year" value="2026" placeholder="2026">
+            </div>
+
+            <button class="btn btn-primary btn-wide" onclick="addSlide()">
+                <i class="fas fa-plus"></i> Add Slide
+            </button>
+        </div>
+
+    </div><!-- .app-main -->
+</div><!-- #app-screen -->
+
+<!-- ══════════════════════════════════════════════════════
+     EDIT MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="edit-modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-card">
+        <h2><i class="fas fa-film" style="color:#be954e;"></i> Edit Slide</h2>
+
+        <img id="edit-preview" class="preview-img" alt="Preview" style="display:block; height:150px;">
+
+        <div class="form-group">
+            <label>YouTube URL <span style="color:#ef4444;">*</span></label>
+            <div class="url-row">
+                <input type="url" id="edit-url" placeholder="https://youtube.com/..."
+                       oninput="onUrlInput('edit')">
+                <button class="btn btn-secondary btn-icon" onclick="detectUrl('edit')" title="Detect video ID">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Title <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="edit-title" placeholder="Video title">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="edit-desc" placeholder="Short description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <input type="text" id="edit-year" placeholder="2026">
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            <button class="btn btn-primary" onclick="saveEdit()">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPT
+══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+// ── Config ───────────────────────────────────────────────────────────────────
+const PASSWORD       = 'sp3fck';           // Change to your desired password
+const MARKER_START   = '<!-- YT-MANAGER-START -->';
+const MARKER_END     = '<!-- YT-MANAGER-END -->';
+const MARKER_DATA_RE = /<!-- YT-DATA:([\s\S]*?) -->/;
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let slides       = [];
+let fileHandle   = null;
+let rawHtml      = '';
+let editingIndex = -1;
+let dragSrcIndex = -1;
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+function doLogin() {
+    const val = document.getElementById('pwd-input').value;
+    if (val === PASSWORD) {
+        sessionStorage.setItem('yt-mgr-auth', '1');
+        showApp();
+    } else {
+        document.getElementById('login-error').textContent = 'Incorrect password.';
+    }
+}
+
+function doLogout() {
+    sessionStorage.removeItem('yt-mgr-auth');
+    location.reload();
+}
+
+function showApp() {
+    document.getElementById('login-screen').style.display = 'none';
+    const app = document.getElementById('app-screen');
+    app.style.display = 'flex';
+    app.style.flexDirection = 'column';
+}
+
+// Auto-login if session active
+if (sessionStorage.getItem('yt-mgr-auth') === '1') showApp();
+
+// ── File Operations ───────────────────────────────────────────────────────────
+async function openFile() {
+    if (!window.showOpenFilePicker) {
+        setStatus('File System Access API not supported. Please use Chrome or Edge.', 'error');
+        return;
+    }
+    try {
+        const [handle] = await window.showOpenFilePicker({
+            types: [{ description: 'HTML Files', accept: { 'text/html': ['.html', '.htm'] } }],
+            multiple: false
+        });
+        fileHandle = handle;
+        const file = await handle.getFile();
+        rawHtml = await file.text();
+
+        document.getElementById('file-label').textContent = file.name;
+        document.getElementById('btn-save').disabled = false;
+
+        slides = parseSlides(rawHtml);
+        renderSlides();
+        setStatus(`Loaded "${file.name}" — ${slides.length} slide(s) found.`, 'success');
+    } catch (e) {
+        if (e.name !== 'AbortError') {
+            setStatus('Error opening file: ' + e.message, 'error');
+        }
+    }
+}
+
+async function saveFile() {
+    if (!fileHandle) { setStatus('No file open.', 'error'); return; }
+    if (slides.length === 0) { setStatus('Cannot save: no slides defined.', 'error'); return; }
+
+    try {
+        const newSection = generateYouTubeSection(slides);
+        const newHtml    = replaceSection(rawHtml, newSection);
+        if (!newHtml) return; // replaceSection already showed an error
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(newHtml);
+        await writable.close();
+
+        rawHtml = newHtml;
+        setStatus(`Saved successfully! ${slides.length} slides written to file.`, 'success');
+    } catch (e) {
+        if (e.name === 'NotAllowedError') {
+            setStatus('Permission denied. Re-open the file to grant write access.', 'error');
+        } else {
+            setStatus('Error saving: ' + e.message, 'error');
+        }
+    }
+}
+
+// ── Parsing ───────────────────────────────────────────────────────────────────
+function parseSlides(html) {
+    // Fast path: JSON data comment embedded by this manager
+    const m = html.match(MARKER_DATA_RE);
+    if (m) {
+        try { return JSON.parse(m[1]); } catch (e) { /* fall through */ }
+    }
+
+    // Fallback: parse from existing HTML structure (first-time migration)
+    return parseSlidesFromHtml(html);
+}
+
+function parseSlidesFromHtml(html) {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    // Build display order from navigation counters
+    const navSets   = doc.querySelectorAll('.youtube-nav-set');
+    const orderMap  = {};   // position (0-indexed) -> slide ID suffix
+    const total     = navSets.length;
+
+    navSets.forEach(nav => {
+        const clsMatch = nav.className.match(/ytnav-(\w+)/);
+        const counter  = nav.querySelector('.youtube-slide-counter');
+        if (clsMatch && counter) {
+            const pos = parseInt(counter.textContent.split('/')[0].trim(), 10) - 1;
+            orderMap[pos] = clsMatch[1];
+        }
+    });
+
+    const result = [];
+
+    for (let i = 0; i < total; i++) {
+        const id = orderMap[i];
+        if (id === undefined) continue;
+
+        // Match both old style (youtube-slide101) and new style (youtube-slide-1)
+        const slideDiv = doc.querySelector(`.youtube-slide${id}, .youtube-slide-${id}`);
+        if (!slideDiv) continue;
+
+        const linkEl  = slideDiv.querySelector('a.youtube-thumbnail-container');
+        const titleEl = slideDiv.querySelector('.youtube-info h3');
+        const descEl  = slideDiv.querySelector('.youtube-info p');
+        const yearEl  = slideDiv.querySelector('.youtube-date');
+
+        result.push({
+            url:         linkEl  ? linkEl.getAttribute('href')       : '',
+            title:       titleEl ? titleEl.textContent.trim()        : '',
+            description: descEl  ? descEl.textContent.trim()         : '',
+            year:        yearEl  ? yearEl.textContent.trim()         : '2026'
+        });
+    }
+
+    // Last-resort: just grab slide divs in DOM order
+    if (result.length === 0) {
+        doc.querySelectorAll('[class*="youtube-slide"]').forEach(div => {
+            if (!div.classList.contains('youtube-gallery-slides') &&
+                !div.classList.contains('youtube-slide')) {
+                const linkEl  = div.querySelector('a.youtube-thumbnail-container');
+                const titleEl = div.querySelector('.youtube-info h3');
+                const descEl  = div.querySelector('.youtube-info p');
+                const yearEl  = div.querySelector('.youtube-date');
+                if (titleEl) {
+                    result.push({
+                        url:         linkEl  ? linkEl.getAttribute('href') : '',
+                        title:       titleEl.textContent.trim(),
+                        description: descEl  ? descEl.textContent.trim()   : '',
+                        year:        yearEl  ? yearEl.textContent.trim()   : '2026'
+                    });
+                }
+            }
+        });
+    }
+
+    return result;
+}
+
+// ── Section Replacement ───────────────────────────────────────────────────────
+function replaceSection(html, newSection) {
+    const si = html.indexOf(MARKER_START);
+    const ei = html.indexOf(MARKER_END);
+
+    if (si !== -1 && ei !== -1) {
+        // Normal path: markers already present
+        return html.substring(0, si) + newSection + html.substring(ei + MARKER_END.length);
+    }
+
+    // First-time: find old YouTube section by comment and replace it
+    const ytStart   = html.indexOf('<!-- YouTube Videos Section -->');
+    const widgetMk  = html.indexOf('<!-- Widgets Section -->');
+
+    if (ytStart !== -1 && widgetMk !== -1) {
+        setStatus('Markers not found — migrating to managed format for the first time.', 'info');
+        return html.substring(0, ytStart) + newSection + '\n\n        ' + html.substring(widgetMk);
+    }
+
+    setStatus('ERROR: Could not locate the YouTube section in this file. Is it the right file?', 'error');
+    return null;
+}
+
+// ── HTML Generator ────────────────────────────────────────────────────────────
+function extractVideoId(url) {
+    if (!url) return null;
+    const patterns = [
+        /youtu\.be\/([a-zA-Z0-9_-]+)/,
+        /youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/,
+        /[?&]v=([a-zA-Z0-9_-]{11})/,
+        /youtube\.com\/embed\/([a-zA-Z0-9_-]+)/,
+        /youtube\.com\/v\/([a-zA-Z0-9_-]+)/,
+    ];
+    for (const p of patterns) {
+        const m = url.match(p);
+        if (m) return m[1];
+    }
+    return null;
+}
+
+function esc(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+function generateYouTubeSection(slides) {
+    const n = slides.length;
+
+    // Dynamic CSS selectors
+    const slideSelectors = slides.map((_, i) =>
+        `        #yts${i+1}:checked ~ .youtube-gallery-slides .youtube-slide-${i+1}`
+    ).join(',\n');
+
+    const navSelectors = slides.map((_, i) =>
+        `        #yts${i+1}:checked ~ .youtube-gallery-navigation .ytnav-${i+1}`
+    ).join(',\n');
+
+    // Radio inputs
+    const radioHtml = slides.map((_, i) =>
+        `                        <input type="radio" name="ytslide" id="yts${i+1}"${i === 0 ? ' checked' : ''} style="display: none;">`
+    ).join('\n');
+
+    // Slide divs
+    const slidesHtml = slides.map((slide, i) => {
+        const vid = extractVideoId(slide.url) || '';
+        const pos = i + 1;
+        return `
+                            <!-- Slide ${pos}: ${esc(slide.title)} -->
+                            <div class="youtube-slide youtube-slide-${pos}">
+                                <div class="youtube-card">
+                                    <a href="${esc(slide.url)}" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
+                                        <img src="https://img.youtube.com/vi/${vid}/maxresdefault.jpg" alt="${esc(slide.title)}" class="youtube-thumbnail">
+                                        <div class="play-overlay">
+                                            <i class="fab fa-youtube"></i>
+                                        </div>
+                                    </a>
+                                    <div class="youtube-info">
+                                        <h3>${esc(slide.title)}</h3>
+                                        <p>${esc(slide.description)}</p>
+                                        <a href="${esc(slide.url)}" target="_blank" rel="noopener noreferrer" class="watch-btn">
+                                            <i class="fab fa-youtube"></i>Watch on YouTube
+                                        </a>
+                                        <br><br>
+                                        <span class="youtube-date">${esc(slide.year || '2026')}</span>
+                                    </div>
+                                </div>
+                            </div>`;
+    }).join('\n');
+
+    // Navigation sets (circular)
+    const navHtml = slides.map((_, i) => {
+        const pos  = i + 1;
+        const prev = i === 0     ? n     : i;
+        const next = i === n - 1 ? 1     : i + 2;
+        return `
+                            <!-- Nav ${pos}/${n} -->
+                            <div class="youtube-nav-set ytnav-${pos}">
+                                <label for="yts${prev}" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
+                                <div class="youtube-slide-counter">${pos} / ${n}</div>
+                                <label for="yts${next}" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
+                            </div>`;
+    }).join('\n');
+
+    const dataComment = `<!-- YT-DATA:${JSON.stringify(slides)} -->`;
+
+    return `<!-- YT-MANAGER-START -->
+${dataComment}
+<style>
+/* YouTube gallery CSS — auto-generated by youtube-manager.html — do not edit manually */
+${slideSelectors} {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+${navSelectors} {
+    display: flex;
+}
+</style>
+        <!-- YouTube Videos Section -->
+        <section class="youtube-section">
+            <div class="container">
+                <div class="youtube-header">
+                    <h2><i class="fab fa-youtube"></i>My Amateur Radio Videos</h2>
+                    <p>Check out my latest ham radio activities and adventures</p>
+                </div>
+                <div class="youtube-gallery-container">
+                    <div class="youtube-gallery-wrapper">
+                        <!-- Hidden radio buttons for CSS-only navigation -->
+${radioHtml}
+                        <div class="youtube-gallery-slides">
+${slidesHtml}
+                        </div>
+                        <!-- YouTube Gallery Navigation with Arrows -->
+                        <div class="youtube-gallery-navigation">
+${navHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- YT-MANAGER-END -->`;
+}
+
+// ── Slide Operations ──────────────────────────────────────────────────────────
+function addSlide() {
+    const url   = document.getElementById('add-url').value.trim();
+    const title = document.getElementById('add-title').value.trim();
+    const desc  = document.getElementById('add-desc').value.trim();
+    const year  = document.getElementById('add-year').value.trim() || '2026';
+
+    if (!url)   { setStatus('URL is required.', 'error');   return; }
+    if (!title) { setStatus('Title is required.', 'error'); return; }
+    if (!extractVideoId(url)) {
+        setStatus('Could not extract a video ID from that URL. Check the format.', 'error');
+        return;
+    }
+
+    slides.push({ url, title, description: desc, year });
+    renderSlides();
+
+    // Clear form
+    document.getElementById('add-url').value   = '';
+    document.getElementById('add-title').value = '';
+    document.getElementById('add-desc').value  = '';
+    document.getElementById('add-year').value  = '2026';
+    document.getElementById('add-preview').style.display = 'none';
+
+    setStatus(`Added "${title}" as slide ${slides.length}. Don't forget to Save!`, 'success');
+}
+
+function deleteSlide(i) {
+    if (!confirm(`Delete slide "${slides[i].title}"?\n\nThis cannot be undone until you re-open the file.`)) return;
+    slides.splice(i, 1);
+    renderSlides();
+    setStatus('Slide deleted. Don\'t forget to Save!', 'info');
+}
+
+function openEdit(i) {
+    editingIndex = i;
+    const s = slides[i];
+    document.getElementById('edit-url').value   = s.url;
+    document.getElementById('edit-title').value = s.title;
+    document.getElementById('edit-desc').value  = s.description || '';
+    document.getElementById('edit-year').value  = s.year || '2026';
+
+    const vid     = extractVideoId(s.url);
+    const preview = document.getElementById('edit-preview');
+    if (vid) {
+        preview.src              = `https://img.youtube.com/vi/${vid}/mqdefault.jpg`;
+        preview.style.display    = 'block';
+    } else {
+        preview.style.display    = 'none';
+    }
+
+    document.getElementById('edit-modal').classList.add('open');
+}
+
+function closeModal() {
+    document.getElementById('edit-modal').classList.remove('open');
+    editingIndex = -1;
+}
+
+function saveEdit() {
+    if (editingIndex < 0) return;
+
+    const url   = document.getElementById('edit-url').value.trim();
+    const title = document.getElementById('edit-title').value.trim();
+    const desc  = document.getElementById('edit-desc').value.trim();
+    const year  = document.getElementById('edit-year').value.trim() || '2026';
+
+    if (!url)   { setStatus('URL is required.', 'error');   return; }
+    if (!title) { setStatus('Title is required.', 'error'); return; }
+    if (!extractVideoId(url)) { setStatus('Invalid YouTube URL.', 'error'); return; }
+
+    slides[editingIndex] = { url, title, description: desc, year };
+    renderSlides();
+    closeModal();
+    setStatus(`Updated "${title}". Don't forget to Save!`, 'success');
+}
+
+function moveSlide(i, dir) {
+    const j = i + dir;
+    if (j < 0 || j >= slides.length) return;
+    [slides[i], slides[j]] = [slides[j], slides[i]];
+    renderSlides();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function renderSlides() {
+    const list = document.getElementById('slide-list');
+    document.getElementById('slide-count').textContent = slides.length;
+
+    if (slides.length === 0) {
+        list.innerHTML = `<div class="empty-state">
+            <i class="fab fa-youtube"></i>
+            <p>No slides yet. Add one using the form →</p>
+        </div>`;
+        return;
+    }
+
+    list.innerHTML = slides.map((s, i) => {
+        const vid   = extractVideoId(s.url) || '';
+        const thumb = vid ? `https://img.youtube.com/vi/${vid}/mqdefault.jpg` : '';
+        return `
+        <div class="slide-card" draggable="true"
+             id="sc-${i}"
+             ondragstart="onDragStart(${i})"
+             ondragover="onDragOver(event,${i})"
+             ondragleave="onDragLeave(${i})"
+             ondrop="onDrop(event,${i})"
+             ondragend="onDragEnd()">
+            <div class="drag-handle" title="Drag to reorder">
+                <i class="fas fa-grip-vertical"></i>
+            </div>
+            <img class="slide-thumb" src="${thumb}" alt="${esc(s.title)}"
+                 onerror="this.style.display='none'">
+            <div class="slide-info">
+                <div class="slide-pos"># ${i + 1}</div>
+                <h3 title="${esc(s.title)}">${esc(s.title)}</h3>
+                <p title="${esc(s.description || '')}">${esc(s.description || '—')}</p>
+                <div class="url-tag" title="${esc(s.url)}">${esc(s.url)}</div>
+            </div>
+            <div class="slide-actions">
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="openEdit(${i})" title="Edit slide">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger btn-icon" onclick="deleteSlide(${i})" title="Delete slide">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="moveSlide(${i},-1)"
+                            title="Move up" ${i === 0 ? 'disabled' : ''}>
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-icon" onclick="moveSlide(${i},1)"
+                            title="Move down" ${i === slides.length - 1 ? 'disabled' : ''}>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ── Drag & Drop ───────────────────────────────────────────────────────────────
+function onDragStart(i) {
+    dragSrcIndex = i;
+    setTimeout(() => {
+        const el = document.getElementById(`sc-${i}`);
+        if (el) el.classList.add('dragging');
+    }, 0);
+}
+
+function onDragOver(e, i) {
+    e.preventDefault();
+    if (i === dragSrcIndex) return;
+    document.querySelectorAll('.slide-card').forEach(c => c.classList.remove('drag-over'));
+    const el = document.getElementById(`sc-${i}`);
+    if (el) el.classList.add('drag-over');
+}
+
+function onDragLeave(i) {
+    const el = document.getElementById(`sc-${i}`);
+    if (el) el.classList.remove('drag-over');
+}
+
+function onDrop(e, i) {
+    e.preventDefault();
+    if (dragSrcIndex === -1 || dragSrcIndex === i) return;
+    const moved = slides.splice(dragSrcIndex, 1)[0];
+    slides.splice(i, 0, moved);
+    dragSrcIndex = -1;
+    renderSlides();
+    setStatus(`Moved slide to position ${i + 1}.`, 'info');
+}
+
+function onDragEnd() {
+    document.querySelectorAll('.slide-card').forEach(c => {
+        c.classList.remove('dragging', 'drag-over');
+    });
+    dragSrcIndex = -1;
+}
+
+// ── URL Preview ───────────────────────────────────────────────────────────────
+function onUrlInput(prefix) {
+    const url     = document.getElementById(`${prefix}-url`).value;
+    const vid     = extractVideoId(url);
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (vid) {
+        preview.src           = `https://img.youtube.com/vi/${vid}/mqdefault.jpg`;
+        preview.style.display = 'block';
+    } else {
+        preview.style.display = 'none';
+    }
+}
+
+function detectUrl(prefix) {
+    onUrlInput(prefix);
+    const url = document.getElementById(`${prefix}-url`).value;
+    const vid = extractVideoId(url);
+    if (vid) {
+        setStatus(`Video ID detected: ${vid}`, 'success');
+    } else {
+        setStatus('Could not detect video ID. Supported: youtu.be, youtube.com/shorts, youtube.com/watch?v=', 'error');
+    }
+}
+
+// ── Status Bar ────────────────────────────────────────────────────────────────
+let statusTimer;
+
+function setStatus(msg, type = '') {
+    const bar = document.getElementById('status-bar');
+    const icon = type === 'success' ? 'fas fa-check-circle'
+               : type === 'error'   ? 'fas fa-circle-exclamation'
+               : type === 'info'    ? 'fas fa-circle-info'
+               :                      'fas fa-circle-info';
+    bar.innerHTML = `<i class="${icon}"></i> ${msg}`;
+    bar.className = type;
+    clearTimeout(statusTimer);
+    if (type === 'success' || type === 'info') {
+        statusTimer = setTimeout(() => {
+            bar.innerHTML = '<i class="fas fa-circle-info"></i> Ready.';
+            bar.className = '';
+        }, 5000);
+    }
+}
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRZ Page Manager – SP3FCK</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0b0d;
+            color: #e7e5df;
+            min-height: 100vh;
+        }
+
+        /* ── Login ─────────────────────────────────────── */
+        #login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0b0b0d 0%, #111520 100%);
+        }
+
+        .login-card {
+            background: #1c1c21;
+            border: 1px solid rgba(190, 149, 78, 0.3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-logo { font-size: 2.5rem; margin-bottom: 12px; display: flex; justify-content: center; gap: 12px; }
+        .login-logo .fa-youtube { color: #ff4444; }
+        .login-logo .fa-trophy  { color: #3b82f6; }
+        .login-card h1 { font-size: 1.6rem; color: #fff; margin-bottom: 5px; }
+        .login-card .subtitle { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+
+        .login-card input[type="password"] {
+            width: 100%;
+            padding: 12px 16px;
+            background: #151518;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: border-color 0.2s;
+        }
+
+        .login-card input[type="password"]:focus {
+            outline: none;
+            border-color: #be954e;
+        }
+
+        .error-text { color: #ef4444; font-size: 0.88rem; margin-top: 10px; min-height: 20px; }
+
+        /* ── Buttons ────────────────────────────────────── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-gold      { background: #be954e; color: #fff; }
+        .btn-gold:hover      { background: #d4a85a; transform: translateY(-1px); }
+        .btn-yt        { background: #c0392b; color: #fff; }
+        .btn-yt:hover        { background: #e74c3c; transform: translateY(-1px); }
+        .btn-gal       { background: #2563eb; color: #fff; }
+        .btn-gal:hover       { background: #3b82f6; transform: translateY(-1px); }
+        .btn-success   { background: #166534; color: #fff; }
+        .btn-success:hover   { background: #16a34a; }
+        .btn-danger    { background: #7f1d1d; color: #fff; }
+        .btn-danger:hover    { background: #dc2626; }
+        .btn-secondary { background: #374151; color: #e5e7eb; }
+        .btn-secondary:hover { background: #4b5563; }
+        .btn-icon { padding: 7px 11px; }
+        .btn:disabled { opacity: 0.38; cursor: not-allowed; transform: none !important; }
+        .btn-wide { width: 100%; justify-content: center; padding: 12px; font-size: 1rem; }
+
+        /* ── App Layout ─────────────────────────────────── */
+        #app-screen {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .app-header {
+            background: #1c1c21;
+            border-bottom: 2px solid rgba(190, 149, 78, 0.35);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .app-title {
+            font-size: 1.2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .app-title-icons { display: flex; gap: 6px; font-size: 1.35rem; }
+        .app-title-icons .fa-youtube { color: #ff4444; }
+        .app-title-icons .fa-trophy  { color: #3b82f6; }
+
+        .toolbar-group { display: flex; align-items: center; gap: 10px; }
+
+        #file-label {
+            color: #777;
+            font-size: 0.82rem;
+            max-width: 240px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-style: italic;
+        }
+
+        /* ── Status Bar ─────────────────────────────────── */
+        #status-bar {
+            background: #111114;
+            padding: 7px 24px;
+            font-size: 0.8rem;
+            color: #555;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 34px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #status-bar.success { color: #4ade80; }
+        #status-bar.error   { color: #f87171; }
+        #status-bar.info    { color: #be954e; }
+
+        /* ── Tab Bar ─────────────────────────────────────── */
+        .tab-bar {
+            display: flex;
+            background: #161619;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 0 24px;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border: none;
+            background: none;
+            color: #555;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .tab-btn:hover { color: #aaa; }
+        .tab-btn.active-yt  { color: #ff5555; border-bottom-color: #ff5555; }
+        .tab-btn.active-gal { color: #3b82f6; border-bottom-color: #3b82f6; }
+
+        .tab-count {
+            font-size: 0.72rem;
+            padding: 1px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+            background: #2a2a30;
+            color: #666;
+        }
+
+        .tab-btn.active-yt  .tab-count { background: #c0392b; color: #fff; }
+        .tab-btn.active-gal .tab-count { background: #2563eb; color: #fff; }
+
+        /* ── Tab Content ─────────────────────────────────── */
+        .tab-content         { display: none; flex-direction: column; flex: 1; overflow: hidden; }
+        .tab-content.active  { display: flex; }
+
+        /* ── Main Grid ──────────────────────────────────── */
+        .app-main {
+            display: grid;
+            grid-template-columns: 1fr 370px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ── Slides Panel ───────────────────────────────── */
+        .slides-panel {
+            padding: 22px 24px;
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
+            overflow-y: auto;
+            max-height: calc(100vh - 188px);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .panel-header h2 { font-size: 1.1rem; color: #fff; }
+
+        .count-badge-yt  { background: #c0392b; color: #fff; padding: 2px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+        .count-badge-gal { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
+
+        .drag-hint { font-size: 0.75rem; color: #444; }
+
+        /* ── Slide Card ─────────────────────────────────── */
+        .slide-card {
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 22px 95px 1fr auto;
+            gap: 13px;
+            align-items: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .slide-card.yt:hover  { border-color: rgba(255, 68, 68, 0.4); }
+        .slide-card.gal:hover { border-color: rgba(59, 130, 246, 0.4); }
+        .slide-card.dragging  { opacity: 0.45; border-style: dashed; }
+        .slide-card.yt.drag-over  { border-color: #ff5555; background: rgba(255, 68, 68, 0.08); }
+        .slide-card.gal.drag-over { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); }
+
+        .drag-handle {
+            color: #444;
+            cursor: grab;
+            font-size: 1.1rem;
+            text-align: center;
+            user-select: none;
+        }
+
+        .drag-handle:active { cursor: grabbing; }
+
+        .slide-thumb {
+            width: 95px;
+            height: 58px;
+            object-fit: cover;
+            border-radius: 6px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: block;
+        }
+
+        .slide-thumb.gal-thumb { object-fit: contain; }
+
+        .slide-info { min-width: 0; }
+
+        .slide-pos-yt  { font-size: 0.72rem; color: #e53030; font-weight: 700; margin-bottom: 2px; }
+        .slide-pos-gal { font-size: 0.72rem; color: #3b82f6; font-weight: 700; margin-bottom: 2px; }
+
+        .slide-info h3 {
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slide-info p {
+            font-size: 0.78rem;
+            color: #777;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .url-tag-yt  { font-size: 0.72rem; color: #ff6e6e; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .url-tag-gal { font-size: 0.72rem; color: #6b99e8; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        .slide-actions { display: flex; flex-direction: column; gap: 5px; flex-shrink: 0; }
+        .actions-row   { display: flex; gap: 5px; }
+
+        /* ── Empty State ────────────────────────────────── */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #444;
+        }
+
+        .empty-state i { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+
+        /* ── Add Panel ──────────────────────────────────── */
+        .add-panel {
+            padding: 22px 24px;
+            background: #111114;
+            overflow-y: auto;
+            max-height: calc(100vh - 188px);
+            border-left: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .add-panel h2 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── Form ───────────────────────────────────────── */
+        .form-group { margin-bottom: 14px; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 9px 13px;
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 8px;
+            color: #e7e5df;
+            font-size: 0.88rem;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group textarea { resize: vertical; min-height: 58px; }
+
+        /* focus ring per-tab */
+        #content-yt  .form-group input:focus,
+        #content-yt  .form-group textarea:focus,
+        .yt-modal    .form-group input:focus,
+        .yt-modal    .form-group textarea:focus  { outline: none; border-color: #ff5555; }
+
+        #content-gal .form-group input:focus,
+        #content-gal .form-group textarea:focus,
+        .gal-modal   .form-group input:focus,
+        .gal-modal   .form-group textarea:focus  { outline: none; border-color: #3b82f6; }
+
+        .url-row { display: flex; gap: 8px; }
+        .url-row input { flex: 1; }
+
+        .preview-img {
+            width: 100%;
+            height: 130px;
+            border-radius: 8px;
+            background: #1a1a1f;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        .yt-preview  { object-fit: cover; }
+        .gal-preview { object-fit: contain; background: #ececec; }
+
+        .notice-yt {
+            background: rgba(255, 68, 68, 0.08);
+            border: 1px solid rgba(255, 68, 68, 0.25);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.8rem;
+            color: #ff9999;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .notice-gal {
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.8rem;
+            color: #93c5fd;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        /* ── Modal ──────────────────────────────────────── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal-card {
+            background: #1c1c21;
+            border-radius: 16px;
+            padding: 28px 32px;
+            width: 520px;
+            max-width: 96vw;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .yt-modal  { border: 1px solid rgba(255, 68, 68, 0.4); }
+        .gal-modal { border: 1px solid rgba(59, 130, 246, 0.4); }
+
+        .modal-card h2 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        /* ── Responsive ─────────────────────────────────── */
+        @media (max-width: 860px) {
+            .app-main { grid-template-columns: 1fr; }
+            .add-panel {
+                max-height: none;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.07);
+            }
+            .slides-panel { max-height: none; border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     LOGIN SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="login-screen">
+    <div class="login-card">
+        <div class="login-logo">
+            <i class="fab fa-youtube"></i>
+            <i class="fas fa-trophy"></i>
+        </div>
+        <h1>QRZ Page Manager</h1>
+        <p class="subtitle">SP3FCK · YouTube &amp; Awards Gallery</p>
+        <input type="password" id="pwd-input" placeholder="Password"
+               onkeydown="if(event.key==='Enter') doLogin()">
+        <button class="btn btn-gold btn-wide" onclick="doLogin()">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <p class="error-text" id="login-error"></p>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     APP SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="app-screen">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="app-title">
+            <div class="app-title-icons">
+                <i class="fab fa-youtube"></i>
+                <i class="fas fa-trophy"></i>
+            </div>
+            QRZ Page Manager
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-secondary" onclick="openFile()">
+                <i class="fas fa-folder-open"></i> Open qrz_bio.html
+            </button>
+            <span id="file-label">No file loaded</span>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-success" id="btn-save" onclick="saveFile()" disabled>
+                <i class="fas fa-save"></i> Save All
+            </button>
+            <button class="btn btn-secondary" onclick="doLogout()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Status Bar -->
+    <div id="status-bar">
+        <i class="fas fa-circle-info"></i>
+        Open qrz_bio.html to begin. Requires Chrome or Edge (File System Access API).
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <button class="tab-btn active-yt" id="tab-yt" onclick="switchTab('yt')">
+            <i class="fab fa-youtube"></i>
+            YouTube
+            <span class="tab-count" id="yt-tab-count">0</span>
+        </button>
+        <button class="tab-btn" id="tab-gal" onclick="switchTab('gal')">
+            <i class="fas fa-trophy"></i>
+            Awards Gallery
+            <span class="tab-count" id="gal-tab-count">0</span>
+        </button>
+    </div>
+
+    <!-- ── YouTube Tab ─────────────────────────────────── -->
+    <div class="tab-content active" id="content-yt">
+        <div class="app-main">
+
+            <!-- Left: Slide List -->
+            <div class="slides-panel">
+                <div class="panel-header">
+                    <h2>YouTube Slides &nbsp;<span class="count-badge-yt" id="yt-slide-count">0</span></h2>
+                    <span class="drag-hint"><i class="fas fa-grip-vertical"></i> drag to reorder</span>
+                </div>
+                <div id="yt-slide-list">
+                    <div class="empty-state">
+                        <i class="fab fa-youtube"></i>
+                        <p>Open qrz_bio.html to load slides</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Add Form -->
+            <div class="add-panel">
+                <h2>
+                    <i class="fas fa-plus-circle" style="color:#e53030;"></i>
+                    Add YouTube Slide
+                </h2>
+
+                <div class="notice-yt">
+                    <i class="fas fa-info-circle" style="margin-top:2px;flex-shrink:0;"></i>
+                    <span>Paste a YouTube URL (shorts, youtu.be, watch) and click
+                    <i class="fas fa-search"></i> to detect the video ID and preview.</span>
+                </div>
+
+                <img id="yt-add-preview" class="preview-img yt-preview" alt="Preview">
+
+                <div class="form-group">
+                    <label>YouTube URL <span style="color:#ef4444;">*</span></label>
+                    <div class="url-row">
+                        <input type="url" id="yt-add-url" placeholder="https://youtube.com/shorts/..."
+                               oninput="ytOnUrlInput('yt-add')">
+                        <button class="btn btn-secondary btn-icon" onclick="ytDetectUrl('yt-add')" title="Detect video ID">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Title <span style="color:#ef4444;">*</span></label>
+                    <input type="text" id="yt-add-title" placeholder="Video title">
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="yt-add-desc" placeholder="Short description shown under the title"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="text" id="yt-add-year" value="2026" placeholder="2026">
+                </div>
+
+                <button class="btn btn-yt btn-wide" onclick="ytAddSlide()">
+                    <i class="fas fa-plus"></i> Add Slide
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── Awards Gallery Tab ──────────────────────────── -->
+    <div class="tab-content" id="content-gal">
+        <div class="app-main">
+
+            <!-- Left: Slide List -->
+            <div class="slides-panel">
+                <div class="panel-header">
+                    <h2>Award Slides &nbsp;<span class="count-badge-gal" id="gal-slide-count">0</span></h2>
+                    <span class="drag-hint"><i class="fas fa-grip-vertical"></i> drag to reorder</span>
+                </div>
+                <div id="gal-slide-list">
+                    <div class="empty-state">
+                        <i class="fas fa-trophy"></i>
+                        <p>Open qrz_bio.html to load slides</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Add Form -->
+            <div class="add-panel">
+                <h2>
+                    <i class="fas fa-plus-circle" style="color:#3b82f6;"></i>
+                    Add Award Slide
+                </h2>
+
+                <div class="notice-gal">
+                    <i class="fas fa-info-circle" style="margin-top:2px;flex-shrink:0;"></i>
+                    <span>Paste the image URL (from static.qrz.com or any public host) and click
+                    <i class="fas fa-search"></i> to preview. Fill in title and description, then click Add.</span>
+                </div>
+
+                <img id="gal-add-preview" class="preview-img gal-preview" alt="Preview">
+
+                <div class="form-group">
+                    <label>Image URL <span style="color:#ef4444;">*</span></label>
+                    <div class="url-row">
+                        <input type="url" id="gal-add-imageUrl" placeholder="https://static.qrz.com/k/sp3fck/..."
+                               oninput="galOnImageUrlInput('gal-add')">
+                        <button class="btn btn-secondary btn-icon" onclick="galPreviewImage('gal-add')" title="Preview image">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Alt Text</label>
+                    <input type="text" id="gal-add-alt" placeholder="Award name (for accessibility)">
+                </div>
+
+                <div class="form-group">
+                    <label>Title <span style="color:#ef4444;">*</span></label>
+                    <input type="text" id="gal-add-title" placeholder="Award title shown below the image">
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="gal-add-desc" placeholder="Short description of the award"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Year</label>
+                    <input type="text" id="gal-add-year" value="2026" placeholder="2026">
+                </div>
+
+                <button class="btn btn-gal btn-wide" onclick="galAddSlide()">
+                    <i class="fas fa-plus"></i> Add Slide
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div><!-- #app-screen -->
+
+<!-- ══════════════════════════════════════════════════════
+     YOUTUBE EDIT MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="yt-edit-modal" onclick="if(event.target===this)ytCloseModal()">
+    <div class="modal-card yt-modal">
+        <h2><i class="fas fa-film" style="color:#e53030;"></i> Edit YouTube Slide</h2>
+
+        <img id="yt-edit-preview" class="preview-img yt-preview" alt="Preview" style="display:block; height:150px;">
+
+        <div class="form-group">
+            <label>YouTube URL <span style="color:#ef4444;">*</span></label>
+            <div class="url-row">
+                <input type="url" id="yt-edit-url" placeholder="https://youtube.com/..."
+                       oninput="ytOnUrlInput('yt-edit')">
+                <button class="btn btn-secondary btn-icon" onclick="ytDetectUrl('yt-edit')" title="Detect video ID">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Title <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="yt-edit-title" placeholder="Video title">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="yt-edit-desc" placeholder="Short description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <input type="text" id="yt-edit-year" placeholder="2026">
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="ytCloseModal()">Cancel</button>
+            <button class="btn btn-yt" onclick="ytSaveEdit()">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     GALLERY EDIT MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="gal-edit-modal" onclick="if(event.target===this)galCloseModal()">
+    <div class="modal-card gal-modal">
+        <h2><i class="fas fa-image" style="color:#3b82f6;"></i> Edit Award Slide</h2>
+
+        <img id="gal-edit-preview" class="preview-img gal-preview" alt="Preview" style="display:block; height:150px;">
+
+        <div class="form-group">
+            <label>Image URL <span style="color:#ef4444;">*</span></label>
+            <div class="url-row">
+                <input type="url" id="gal-edit-imageUrl" placeholder="https://static.qrz.com/..."
+                       oninput="galOnImageUrlInput('gal-edit')">
+                <button class="btn btn-secondary btn-icon" onclick="galPreviewImage('gal-edit')" title="Preview image">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Alt Text</label>
+            <input type="text" id="gal-edit-alt" placeholder="Award name (accessibility)">
+        </div>
+
+        <div class="form-group">
+            <label>Title <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="gal-edit-title" placeholder="Award title">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="gal-edit-desc" placeholder="Short description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <input type="text" id="gal-edit-year" placeholder="2026">
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="galCloseModal()">Cancel</button>
+            <button class="btn btn-gal" onclick="galSaveEdit()">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPT
+══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+// ── Config ────────────────────────────────────────────────────────────────────
+const PASSWORD = 'sp3fck';
+
+// YouTube markers
+const YT_START   = '<!-- YT-MANAGER-START -->';
+const YT_END     = '<!-- YT-MANAGER-END -->';
+const YT_DATA_RE = /<!-- YT-DATA:([\s\S]*?) -->/;
+
+// Gallery markers
+const GAL_START   = '<!-- GAL-MANAGER-START -->';
+const GAL_END     = '<!-- GAL-MANAGER-END -->';
+const GAL_DATA_RE = /<!-- GAL-DATA:([\s\S]*?) -->/;
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let ytSlides  = [];
+let galSlides = [];
+let fileHandle = null;
+let rawHtml    = '';
+let activeTab  = 'yt';
+
+let ytEditingIndex  = -1;
+let galEditingIndex = -1;
+let ytDragSrc  = -1;
+let galDragSrc = -1;
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+function doLogin() {
+    const val = document.getElementById('pwd-input').value;
+    if (val === PASSWORD) {
+        sessionStorage.setItem('qrz-mgr-auth', '1');
+        showApp();
+    } else {
+        document.getElementById('login-error').textContent = 'Incorrect password.';
+    }
+}
+
+function doLogout() {
+    sessionStorage.removeItem('qrz-mgr-auth');
+    location.reload();
+}
+
+function showApp() {
+    document.getElementById('login-screen').style.display = 'none';
+    const app = document.getElementById('app-screen');
+    app.style.display = 'flex';
+    app.style.flexDirection = 'column';
+}
+
+if (sessionStorage.getItem('qrz-mgr-auth') === '1') showApp();
+
+// ── Tab Switching ─────────────────────────────────────────────────────────────
+function switchTab(tab) {
+    activeTab = tab;
+
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.className = 'tab-btn');
+    document.getElementById(`tab-${tab}`).classList.add(`active-${tab}`);
+
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(`content-${tab}`).classList.add('active');
+}
+
+// ── File Operations ───────────────────────────────────────────────────────────
+async function openFile() {
+    if (!window.showOpenFilePicker) {
+        setStatus('File System Access API not supported. Use Chrome or Edge.', 'error');
+        return;
+    }
+    try {
+        const [handle] = await window.showOpenFilePicker({
+            types: [{ description: 'HTML Files', accept: { 'text/html': ['.html', '.htm'] } }],
+            multiple: false
+        });
+        fileHandle = handle;
+        const file = await handle.getFile();
+        rawHtml = await file.text();
+
+        document.getElementById('file-label').textContent = file.name;
+        document.getElementById('btn-save').disabled = false;
+
+        ytSlides  = parseYtSlides(rawHtml);
+        galSlides = parseGalSlides(rawHtml);
+        renderYtSlides();
+        renderGalSlides();
+        setStatus(
+            `Loaded "${file.name}" — ${ytSlides.length} YouTube slide(s), ${galSlides.length} award slide(s).`,
+            'success'
+        );
+    } catch (e) {
+        if (e.name !== 'AbortError') setStatus('Error opening file: ' + e.message, 'error');
+    }
+}
+
+async function saveFile() {
+    if (!fileHandle) { setStatus('No file open.', 'error'); return; }
+    if (ytSlides.length === 0 && galSlides.length === 0) {
+        setStatus('Cannot save: no slides defined in either section.', 'error');
+        return;
+    }
+
+    try {
+        let newHtml = rawHtml;
+
+        if (ytSlides.length > 0) {
+            newHtml = replaceYtSection(newHtml, generateYtSection(ytSlides));
+            if (!newHtml) return;
+        }
+
+        if (galSlides.length > 0) {
+            newHtml = replaceGalSection(newHtml, generateGalSection(galSlides));
+            if (!newHtml) return;
+        }
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(newHtml);
+        await writable.close();
+
+        rawHtml = newHtml;
+        setStatus(
+            `Saved! ${ytSlides.length} YouTube slide(s) + ${galSlides.length} award slide(s) written.`,
+            'success'
+        );
+    } catch (e) {
+        if (e.name === 'NotAllowedError') {
+            setStatus('Permission denied. Re-open the file to grant write access.', 'error');
+        } else {
+            setStatus('Error saving: ' + e.message, 'error');
+        }
+    }
+}
+
+// ── Section Replacement ───────────────────────────────────────────────────────
+function replaceYtSection(html, newSection) {
+    const si = html.indexOf(YT_START);
+    const ei = html.indexOf(YT_END);
+    if (si !== -1 && ei !== -1) {
+        return html.substring(0, si) + newSection + html.substring(ei + YT_END.length);
+    }
+    // Fallback: first-time migration
+    const ytStart  = html.indexOf('<!-- YouTube Videos Section -->');
+    const widgetMk = html.indexOf('<!-- Widgets Section -->');
+    if (ytStart !== -1 && widgetMk !== -1) {
+        setStatus('Migrating YouTube section to managed format.', 'info');
+        return html.substring(0, ytStart) + newSection + '\n\n        ' + html.substring(widgetMk);
+    }
+    setStatus('ERROR: Could not locate the YouTube section in this file.', 'error');
+    return null;
+}
+
+function replaceGalSection(html, newSection) {
+    const si = html.indexOf(GAL_START);
+    const ei = html.indexOf(GAL_END);
+    if (si !== -1 && ei !== -1) {
+        return html.substring(0, si) + newSection + html.substring(ei + GAL_END.length);
+    }
+    // Fallback: first-time migration
+    const galStart = html.indexOf('<!-- Ham Awards Gallery Section -->');
+    const ytStart  = html.indexOf(YT_START);
+    if (galStart !== -1 && ytStart !== -1) {
+        let insertAt = galStart;
+        while (insertAt > 0 && (html[insertAt - 1] === ' ' || html[insertAt - 1] === '\n')) insertAt--;
+        insertAt++;
+        setStatus('Migrating gallery section to managed format.', 'info');
+        return html.substring(0, insertAt) + '\n' + newSection + '\n\n' + html.substring(ytStart);
+    }
+    setStatus('ERROR: Could not locate the gallery section in this file.', 'error');
+    return null;
+}
+
+// ── Parsing ───────────────────────────────────────────────────────────────────
+function parseYtSlides(html) {
+    const m = html.match(YT_DATA_RE);
+    if (m) { try { return JSON.parse(m[1]); } catch (e) {} }
+    return parseYtFromHtml(html);
+}
+
+function parseGalSlides(html) {
+    const m = html.match(GAL_DATA_RE);
+    if (m) { try { return JSON.parse(m[1]); } catch (e) {} }
+    return parseGalFromHtml(html);
+}
+
+function parseYtFromHtml(html) {
+    const doc     = new DOMParser().parseFromString(html, 'text/html');
+    const navSets = doc.querySelectorAll('.youtube-nav-set');
+    const orderMap = {};
+    navSets.forEach(nav => {
+        const clsMatch = nav.className.match(/ytnav-(\w+)/);
+        const counter  = nav.querySelector('.youtube-slide-counter');
+        if (clsMatch && counter)
+            orderMap[parseInt(counter.textContent.split('/')[0].trim(), 10) - 1] = clsMatch[1];
+    });
+    const result = [];
+    for (let i = 0; i < navSets.length; i++) {
+        const id  = orderMap[i];
+        if (id === undefined) continue;
+        const div = doc.querySelector(`.youtube-slide${id}, .youtube-slide-${id}`);
+        if (!div) continue;
+        const linkEl = div.querySelector('a.youtube-thumbnail-container');
+        result.push({
+            url:         linkEl?.getAttribute('href') || '',
+            title:       div.querySelector('.youtube-info h3')?.textContent.trim() || '',
+            description: div.querySelector('.youtube-info p')?.textContent.trim() || '',
+            year:        div.querySelector('.youtube-date')?.textContent.trim() || '2026'
+        });
+    }
+    return result;
+}
+
+function parseGalFromHtml(html) {
+    const doc     = new DOMParser().parseFromString(html, 'text/html');
+    const navSets = doc.querySelectorAll('.gallery-nav-set');
+    const orderMap = {};
+    navSets.forEach(nav => {
+        const clsMatch = nav.className.match(/gnav-(\d+)|nav-(\d+)/);
+        const counter  = nav.querySelector('.slide-counter');
+        if (clsMatch && counter) {
+            const pos = parseInt(counter.textContent.split('/')[0].trim(), 10) - 1;
+            orderMap[pos] = clsMatch[1] || clsMatch[2];
+        }
+    });
+    const result = [];
+    for (let i = 0; i < navSets.length; i++) {
+        const id  = orderMap[i];
+        if (id === undefined) continue;
+        const div = doc.querySelector(`.gslide-${id}, .slide${id}`);
+        if (!div) continue;
+        const img = div.querySelector('img');
+        result.push({
+            imageUrl:    img?.getAttribute('src') || '',
+            alt:         img?.getAttribute('alt') || '',
+            title:       div.querySelector('.award-info h3')?.textContent.trim() || '',
+            description: div.querySelector('.award-info p')?.textContent.trim() || '',
+            year:        div.querySelector('.award-date')?.textContent.replace(/Year:\s*/i, '').trim() || '2025'
+        });
+    }
+    return result;
+}
+
+// ── Escape Helper ─────────────────────────────────────────────────────────────
+function esc(str) {
+    return String(str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ── YouTube Section Generator ─────────────────────────────────────────────────
+function extractVideoId(url) {
+    if (!url) return null;
+    for (const p of [
+        /youtu\.be\/([a-zA-Z0-9_-]+)/,
+        /youtube\.com\/shorts\/([a-zA-Z0-9_-]+)/,
+        /[?&]v=([a-zA-Z0-9_-]{11})/,
+        /youtube\.com\/embed\/([a-zA-Z0-9_-]+)/,
+        /youtube\.com\/v\/([a-zA-Z0-9_-]+)/,
+    ]) {
+        const m = url.match(p);
+        if (m) return m[1];
+    }
+    return null;
+}
+
+function generateYtSection(slides) {
+    const n = slides.length;
+
+    const slideSelectors = slides.map((_, i) =>
+        `        #yts${i+1}:checked ~ .youtube-gallery-slides .youtube-slide-${i+1}`
+    ).join(',\n');
+
+    const navSelectors = slides.map((_, i) =>
+        `        #yts${i+1}:checked ~ .youtube-gallery-navigation .ytnav-${i+1}`
+    ).join(',\n');
+
+    const radioHtml = slides.map((_, i) =>
+        `                        <input type="radio" name="ytslide" id="yts${i+1}"${i === 0 ? ' checked' : ''} style="display: none;">`
+    ).join('\n');
+
+    const slidesHtml = slides.map((s, i) => {
+        const vid = extractVideoId(s.url) || '';
+        const pos = i + 1;
+        return `
+                            <!-- Slide ${pos}: ${esc(s.title)} -->
+                            <div class="youtube-slide youtube-slide-${pos}">
+                                <div class="youtube-card">
+                                    <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
+                                        <img src="https://img.youtube.com/vi/${vid}/maxresdefault.jpg" alt="${esc(s.title)}" class="youtube-thumbnail">
+                                        <div class="play-overlay">
+                                            <i class="fab fa-youtube"></i>
+                                        </div>
+                                    </a>
+                                    <div class="youtube-info">
+                                        <h3>${esc(s.title)}</h3>
+                                        <p>${esc(s.description)}</p>
+                                        <a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" class="watch-btn">
+                                            <i class="fab fa-youtube"></i>Watch on YouTube
+                                        </a>
+                                        <br><br>
+                                        <span class="youtube-date">${esc(s.year || '2026')}</span>
+                                    </div>
+                                </div>
+                            </div>`;
+    }).join('\n');
+
+    const navHtml = slides.map((_, i) => {
+        const pos = i + 1, prev = i === 0 ? n : i, next = i === n - 1 ? 1 : i + 2;
+        return `
+                            <!-- Nav ${pos}/${n} -->
+                            <div class="youtube-nav-set ytnav-${pos}">
+                                <label for="yts${prev}" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
+                                <div class="youtube-slide-counter">${pos} / ${n}</div>
+                                <label for="yts${next}" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
+                            </div>`;
+    }).join('\n');
+
+    return `<!-- YT-MANAGER-START -->
+<!-- YT-DATA:${JSON.stringify(slides)} -->
+<style>
+/* YouTube gallery CSS — auto-generated by qrz-manager.html — do not edit manually */
+${slideSelectors} {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+${navSelectors} {
+    display: flex;
+}
+</style>
+        <!-- YouTube Videos Section -->
+        <section class="youtube-section">
+            <div class="container">
+                <div class="youtube-header">
+                    <h2><i class="fab fa-youtube"></i>My Amateur Radio Videos</h2>
+                    <p>Check out my latest ham radio activities and adventures</p>
+                </div>
+                <div class="youtube-gallery-container">
+                    <div class="youtube-gallery-wrapper">
+                        <!-- Hidden radio buttons for CSS-only navigation -->
+${radioHtml}
+                        <div class="youtube-gallery-slides">
+${slidesHtml}
+                        </div>
+                        <!-- YouTube Gallery Navigation with Arrows -->
+                        <div class="youtube-gallery-navigation">
+${navHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- YT-MANAGER-END -->`;
+}
+
+// ── Gallery Section Generator ─────────────────────────────────────────────────
+function generateGalSection(slides) {
+    const n = slides.length;
+
+    const slideSelectors = slides.map((_, i) =>
+        `        #gls${i+1}:checked ~ .gallery-slides .gslide-${i+1}`
+    ).join(',\n');
+
+    const navSelectors = slides.map((_, i) =>
+        `        #gls${i+1}:checked ~ .gallery-navigation .gnav-${i+1}`
+    ).join(',\n');
+
+    const radioHtml = slides.map((_, i) =>
+        `                    <input type="radio" name="gslide" id="gls${i+1}"${i === 0 ? ' checked' : ''} style="display: none;">`
+    ).join('\n');
+
+    const slidesHtml = slides.map((s, i) => {
+        const pos = i + 1;
+        return `
+                        <!-- Slide ${pos}: ${esc(s.title)} -->
+                        <div class="slide gslide-${pos}">
+                            <div class="award-card">
+                                <img src="${esc(s.imageUrl)}" alt="${esc(s.alt || s.title)}">
+                                <div class="award-info">
+                                    <h3>${esc(s.title)}</h3>
+                                    <p>${esc(s.description)}</p>
+                                    <span class="award-date">Year: ${esc(s.year || '2025')}</span>
+                                </div>
+                            </div>
+                        </div>`;
+    }).join('\n');
+
+    const navHtml = slides.map((_, i) => {
+        const pos = i + 1, prev = i === 0 ? n : i, next = i === n - 1 ? 1 : i + 2;
+        return `
+                        <!-- Nav ${pos}/${n} -->
+                        <div class="gallery-nav-set gnav-${pos}">
+                            <label for="gls${prev}" class="gallery-arrow"><i class="fas fa-chevron-left"></i></label>
+                            <div class="slide-counter">${pos} / ${n}</div>
+                            <label for="gls${next}" class="gallery-arrow"><i class="fas fa-chevron-right"></i></label>
+                        </div>`;
+    }).join('\n');
+
+    return `<!-- GAL-MANAGER-START -->
+<!-- GAL-DATA:${JSON.stringify(slides)} -->
+<style>
+/* Gallery CSS — auto-generated by qrz-manager.html — do not edit manually */
+${slideSelectors} {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+${navSelectors} {
+    display: flex;
+}
+</style>
+        <!-- Ham Awards Gallery Section -->
+        <section class="awards-section">
+            <div class="awards-header">
+                <h2><i class="fas fa-trophy"></i> Ham Radio Awards Gallery</h2>
+                <p>A collection of my amateur radio achievements and awards</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-wrapper">
+                    <!-- Hidden radio buttons for CSS-only navigation -->
+${radioHtml}
+                    <div class="gallery-slides">
+${slidesHtml}
+                    </div>
+                    <!-- Gallery Navigation with Arrows -->
+                    <div class="gallery-navigation">
+${navHtml}
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- GAL-MANAGER-END -->`;
+}
+
+// ── YouTube Slide Operations ──────────────────────────────────────────────────
+function ytAddSlide() {
+    const url   = document.getElementById('yt-add-url').value.trim();
+    const title = document.getElementById('yt-add-title').value.trim();
+    const desc  = document.getElementById('yt-add-desc').value.trim();
+    const year  = document.getElementById('yt-add-year').value.trim() || '2026';
+
+    if (!url)                    { setStatus('URL is required.', 'error');                    return; }
+    if (!title)                  { setStatus('Title is required.', 'error');                  return; }
+    if (!extractVideoId(url))    { setStatus('Could not extract a video ID from that URL.', 'error'); return; }
+
+    ytSlides.push({ url, title, description: desc, year });
+    renderYtSlides();
+    document.getElementById('yt-add-url').value   = '';
+    document.getElementById('yt-add-title').value = '';
+    document.getElementById('yt-add-desc').value  = '';
+    document.getElementById('yt-add-year').value  = '2026';
+    document.getElementById('yt-add-preview').style.display = 'none';
+    setStatus(`Added "${title}" as YouTube slide ${ytSlides.length}. Don't forget to Save!`, 'success');
+}
+
+function ytDeleteSlide(i) {
+    if (!confirm(`Delete YouTube slide "${ytSlides[i].title}"?\n\nThis cannot be undone until you re-open the file.`)) return;
+    ytSlides.splice(i, 1);
+    renderYtSlides();
+    setStatus("Slide deleted. Don't forget to Save!", 'info');
+}
+
+function ytOpenEdit(i) {
+    ytEditingIndex = i;
+    const s = ytSlides[i];
+    document.getElementById('yt-edit-url').value   = s.url;
+    document.getElementById('yt-edit-title').value = s.title;
+    document.getElementById('yt-edit-desc').value  = s.description || '';
+    document.getElementById('yt-edit-year').value  = s.year || '2026';
+    const vid = extractVideoId(s.url);
+    const preview = document.getElementById('yt-edit-preview');
+    if (vid) { preview.src = `https://img.youtube.com/vi/${vid}/mqdefault.jpg`; preview.style.display = 'block'; }
+    else     { preview.style.display = 'none'; }
+    document.getElementById('yt-edit-modal').classList.add('open');
+}
+
+function ytCloseModal() {
+    document.getElementById('yt-edit-modal').classList.remove('open');
+    ytEditingIndex = -1;
+}
+
+function ytSaveEdit() {
+    if (ytEditingIndex < 0) return;
+    const url   = document.getElementById('yt-edit-url').value.trim();
+    const title = document.getElementById('yt-edit-title').value.trim();
+    const desc  = document.getElementById('yt-edit-desc').value.trim();
+    const year  = document.getElementById('yt-edit-year').value.trim() || '2026';
+    if (!url)               { setStatus('URL is required.', 'error');   return; }
+    if (!title)             { setStatus('Title is required.', 'error'); return; }
+    if (!extractVideoId(url)) { setStatus('Invalid YouTube URL.', 'error'); return; }
+    ytSlides[ytEditingIndex] = { url, title, description: desc, year };
+    renderYtSlides();
+    ytCloseModal();
+    setStatus(`Updated "${title}". Don't forget to Save!`, 'success');
+}
+
+function ytMoveSlide(i, dir) {
+    const j = i + dir;
+    if (j < 0 || j >= ytSlides.length) return;
+    [ytSlides[i], ytSlides[j]] = [ytSlides[j], ytSlides[i]];
+    renderYtSlides();
+}
+
+// ── Gallery Slide Operations ──────────────────────────────────────────────────
+function galAddSlide() {
+    const imageUrl = document.getElementById('gal-add-imageUrl').value.trim();
+    const alt      = document.getElementById('gal-add-alt').value.trim();
+    const title    = document.getElementById('gal-add-title').value.trim();
+    const desc     = document.getElementById('gal-add-desc').value.trim();
+    const year     = document.getElementById('gal-add-year').value.trim() || '2025';
+
+    if (!imageUrl) { setStatus('Image URL is required.', 'error'); return; }
+    if (!title)    { setStatus('Title is required.', 'error');     return; }
+
+    galSlides.push({ imageUrl, alt, title, description: desc, year });
+    renderGalSlides();
+    document.getElementById('gal-add-imageUrl').value = '';
+    document.getElementById('gal-add-alt').value      = '';
+    document.getElementById('gal-add-title').value    = '';
+    document.getElementById('gal-add-desc').value     = '';
+    document.getElementById('gal-add-year').value     = '2026';
+    document.getElementById('gal-add-preview').style.display = 'none';
+    setStatus(`Added "${title}" as award slide ${galSlides.length}. Don't forget to Save!`, 'success');
+}
+
+function galDeleteSlide(i) {
+    if (!confirm(`Delete award slide "${galSlides[i].title}"?\n\nThis cannot be undone until you re-open the file.`)) return;
+    galSlides.splice(i, 1);
+    renderGalSlides();
+    setStatus("Slide deleted. Don't forget to Save!", 'info');
+}
+
+function galOpenEdit(i) {
+    galEditingIndex = i;
+    const s = galSlides[i];
+    document.getElementById('gal-edit-imageUrl').value = s.imageUrl;
+    document.getElementById('gal-edit-alt').value      = s.alt || '';
+    document.getElementById('gal-edit-title').value    = s.title;
+    document.getElementById('gal-edit-desc').value     = s.description || '';
+    document.getElementById('gal-edit-year').value     = s.year || '2025';
+    const preview = document.getElementById('gal-edit-preview');
+    if (s.imageUrl) { preview.src = s.imageUrl; preview.style.display = 'block'; }
+    else            { preview.style.display = 'none'; }
+    document.getElementById('gal-edit-modal').classList.add('open');
+}
+
+function galCloseModal() {
+    document.getElementById('gal-edit-modal').classList.remove('open');
+    galEditingIndex = -1;
+}
+
+function galSaveEdit() {
+    if (galEditingIndex < 0) return;
+    const imageUrl = document.getElementById('gal-edit-imageUrl').value.trim();
+    const alt      = document.getElementById('gal-edit-alt').value.trim();
+    const title    = document.getElementById('gal-edit-title').value.trim();
+    const desc     = document.getElementById('gal-edit-desc').value.trim();
+    const year     = document.getElementById('gal-edit-year').value.trim() || '2025';
+    if (!imageUrl) { setStatus('Image URL is required.', 'error'); return; }
+    if (!title)    { setStatus('Title is required.', 'error');     return; }
+    galSlides[galEditingIndex] = { imageUrl, alt, title, description: desc, year };
+    renderGalSlides();
+    galCloseModal();
+    setStatus(`Updated "${title}". Don't forget to Save!`, 'success');
+}
+
+function galMoveSlide(i, dir) {
+    const j = i + dir;
+    if (j < 0 || j >= galSlides.length) return;
+    [galSlides[i], galSlides[j]] = [galSlides[j], galSlides[i]];
+    renderGalSlides();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function renderYtSlides() {
+    const list = document.getElementById('yt-slide-list');
+    document.getElementById('yt-slide-count').textContent = ytSlides.length;
+    document.getElementById('yt-tab-count').textContent   = ytSlides.length;
+
+    if (ytSlides.length === 0) {
+        list.innerHTML = `<div class="empty-state"><i class="fab fa-youtube"></i><p>No slides yet. Add one using the form →</p></div>`;
+        return;
+    }
+
+    list.innerHTML = ytSlides.map((s, i) => {
+        const vid   = extractVideoId(s.url) || '';
+        const thumb = vid ? `https://img.youtube.com/vi/${vid}/mqdefault.jpg` : '';
+        return `
+        <div class="slide-card yt" draggable="true" id="yt-sc-${i}"
+             ondragstart="ytDragStart(${i})" ondragover="ytDragOver(event,${i})"
+             ondragleave="ytDragLeave(${i})" ondrop="ytDrop(event,${i})" ondragend="ytDragEnd()">
+            <div class="drag-handle" title="Drag to reorder"><i class="fas fa-grip-vertical"></i></div>
+            <img class="slide-thumb" src="${thumb}" alt="${esc(s.title)}" onerror="this.style.display='none'">
+            <div class="slide-info">
+                <div class="slide-pos-yt"># ${i + 1}</div>
+                <h3 title="${esc(s.title)}">${esc(s.title)}</h3>
+                <p title="${esc(s.description || '')}">${esc(s.description || '—')}</p>
+                <div class="url-tag-yt" title="${esc(s.url)}">${esc(s.url)}</div>
+            </div>
+            <div class="slide-actions">
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="ytOpenEdit(${i})" title="Edit"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-danger btn-icon" onclick="ytDeleteSlide(${i})" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="ytMoveSlide(${i},-1)" title="Move up" ${i === 0 ? 'disabled' : ''}><i class="fas fa-arrow-up"></i></button>
+                    <button class="btn btn-secondary btn-icon" onclick="ytMoveSlide(${i},1)" title="Move down" ${i === ytSlides.length - 1 ? 'disabled' : ''}><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function renderGalSlides() {
+    const list = document.getElementById('gal-slide-list');
+    document.getElementById('gal-slide-count').textContent = galSlides.length;
+    document.getElementById('gal-tab-count').textContent   = galSlides.length;
+
+    if (galSlides.length === 0) {
+        list.innerHTML = `<div class="empty-state"><i class="fas fa-trophy"></i><p>No slides yet. Add one using the form →</p></div>`;
+        return;
+    }
+
+    list.innerHTML = galSlides.map((s, i) => `
+        <div class="slide-card gal" draggable="true" id="gal-sc-${i}"
+             ondragstart="galDragStart(${i})" ondragover="galDragOver(event,${i})"
+             ondragleave="galDragLeave(${i})" ondrop="galDrop(event,${i})" ondragend="galDragEnd()">
+            <div class="drag-handle" title="Drag to reorder"><i class="fas fa-grip-vertical"></i></div>
+            <img class="slide-thumb gal-thumb" src="${esc(s.imageUrl)}" alt="${esc(s.alt || s.title)}" onerror="this.style.display='none'">
+            <div class="slide-info">
+                <div class="slide-pos-gal"># ${i + 1}</div>
+                <h3 title="${esc(s.title)}">${esc(s.title)}</h3>
+                <p title="${esc(s.description || '')}">${esc(s.description || '—')}</p>
+                <div class="url-tag-gal" title="${esc(s.imageUrl)}">${esc(s.imageUrl)}</div>
+            </div>
+            <div class="slide-actions">
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="galOpenEdit(${i})" title="Edit"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-danger btn-icon" onclick="galDeleteSlide(${i})" title="Delete"><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="galMoveSlide(${i},-1)" title="Move up" ${i === 0 ? 'disabled' : ''}><i class="fas fa-arrow-up"></i></button>
+                    <button class="btn btn-secondary btn-icon" onclick="galMoveSlide(${i},1)" title="Move down" ${i === galSlides.length - 1 ? 'disabled' : ''}><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>`
+    ).join('');
+}
+
+// ── YouTube Drag & Drop ───────────────────────────────────────────────────────
+function ytDragStart(i) {
+    ytDragSrc = i;
+    setTimeout(() => document.getElementById(`yt-sc-${i}`)?.classList.add('dragging'), 0);
+}
+function ytDragOver(e, i) {
+    e.preventDefault();
+    if (i === ytDragSrc) return;
+    document.querySelectorAll('#yt-slide-list .slide-card').forEach(c => c.classList.remove('drag-over'));
+    document.getElementById(`yt-sc-${i}`)?.classList.add('drag-over');
+}
+function ytDragLeave(i)  { document.getElementById(`yt-sc-${i}`)?.classList.remove('drag-over'); }
+function ytDrop(e, i) {
+    e.preventDefault();
+    if (ytDragSrc === -1 || ytDragSrc === i) return;
+    const moved = ytSlides.splice(ytDragSrc, 1)[0];
+    ytSlides.splice(i, 0, moved);
+    ytDragSrc = -1;
+    renderYtSlides();
+    setStatus(`Moved YouTube slide to position ${i + 1}.`, 'info');
+}
+function ytDragEnd() {
+    document.querySelectorAll('#yt-slide-list .slide-card').forEach(c => c.classList.remove('dragging', 'drag-over'));
+    ytDragSrc = -1;
+}
+
+// ── Gallery Drag & Drop ───────────────────────────────────────────────────────
+function galDragStart(i) {
+    galDragSrc = i;
+    setTimeout(() => document.getElementById(`gal-sc-${i}`)?.classList.add('dragging'), 0);
+}
+function galDragOver(e, i) {
+    e.preventDefault();
+    if (i === galDragSrc) return;
+    document.querySelectorAll('#gal-slide-list .slide-card').forEach(c => c.classList.remove('drag-over'));
+    document.getElementById(`gal-sc-${i}`)?.classList.add('drag-over');
+}
+function galDragLeave(i)  { document.getElementById(`gal-sc-${i}`)?.classList.remove('drag-over'); }
+function galDrop(e, i) {
+    e.preventDefault();
+    if (galDragSrc === -1 || galDragSrc === i) return;
+    const moved = galSlides.splice(galDragSrc, 1)[0];
+    galSlides.splice(i, 0, moved);
+    galDragSrc = -1;
+    renderGalSlides();
+    setStatus(`Moved award slide to position ${i + 1}.`, 'info');
+}
+function galDragEnd() {
+    document.querySelectorAll('#gal-slide-list .slide-card').forEach(c => c.classList.remove('dragging', 'drag-over'));
+    galDragSrc = -1;
+}
+
+// ── URL / Image Preview ───────────────────────────────────────────────────────
+function ytOnUrlInput(prefix) {
+    // prefix: 'yt-add' or 'yt-edit'
+    const vid     = extractVideoId(document.getElementById(`${prefix}-url`).value);
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (vid) { preview.src = `https://img.youtube.com/vi/${vid}/mqdefault.jpg`; preview.style.display = 'block'; }
+    else     { preview.style.display = 'none'; }
+}
+
+function ytDetectUrl(prefix) {
+    ytOnUrlInput(prefix);
+    const vid = extractVideoId(document.getElementById(`${prefix}-url`).value);
+    if (vid) setStatus(`Video ID detected: ${vid}`, 'success');
+    else     setStatus('Could not detect video ID. Supported: youtu.be, youtube.com/shorts, youtube.com/watch?v=', 'error');
+}
+
+function galOnImageUrlInput(prefix) {
+    // prefix: 'gal-add' or 'gal-edit'
+    const url     = document.getElementById(`${prefix}-imageUrl`).value;
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (url) { preview.src = url; preview.style.display = 'block'; }
+    else     { preview.style.display = 'none'; }
+}
+
+function galPreviewImage(prefix) {
+    const url     = document.getElementById(`${prefix}-imageUrl`).value.trim();
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (url) { preview.src = url; preview.style.display = 'block'; setStatus('Image URL set. Check preview above.', 'info'); }
+    else     { setStatus('Enter an image URL first.', 'error'); }
+}
+
+// ── Status Bar ────────────────────────────────────────────────────────────────
+let statusTimer;
+function setStatus(msg, type = '') {
+    const bar  = document.getElementById('status-bar');
+    const icon = type === 'success' ? 'fas fa-check-circle'
+               : type === 'error'   ? 'fas fa-circle-exclamation'
+               :                      'fas fa-circle-info';
+    bar.innerHTML = `<i class="${icon}"></i> ${msg}`;
+    bar.className = type;
+    clearTimeout(statusTimer);
+    if (type === 'success' || type === 'info') {
+        statusTimer = setTimeout(() => {
+            bar.innerHTML = '<i class="fas fa-circle-info"></i> Ready.';
+            bar.className = '';
+        }, 5000);
+    }
+}
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { ytCloseModal(); galCloseModal(); }
+});
+</script>
+</body>
+</html>

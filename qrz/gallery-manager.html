@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards Gallery Manager – SP3FCK</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0b0d;
+            color: #e7e5df;
+            min-height: 100vh;
+        }
+
+        /* ── Login ─────────────────────────────────────── */
+        #login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0b0b0d 0%, #0f1a2e 100%);
+        }
+
+        .login-card {
+            background: #1c1c21;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-logo { font-size: 3rem; color: #3b82f6; margin-bottom: 10px; }
+        .login-card h1 { font-size: 1.6rem; color: #fff; margin-bottom: 5px; }
+        .login-card .subtitle { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+
+        .login-card input[type="password"] {
+            width: 100%;
+            padding: 12px 16px;
+            background: #151518;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            transition: border-color 0.2s;
+        }
+
+        .login-card input[type="password"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .error-text { color: #ef4444; font-size: 0.88rem; margin-top: 10px; min-height: 20px; }
+
+        /* ── Buttons ────────────────────────────────────── */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-primary   { background: #2563eb; color: #fff; }
+        .btn-primary:hover   { background: #3b82f6; transform: translateY(-1px); }
+        .btn-success   { background: #166534; color: #fff; }
+        .btn-success:hover   { background: #16a34a; }
+        .btn-danger    { background: #7f1d1d; color: #fff; }
+        .btn-danger:hover    { background: #dc2626; }
+        .btn-secondary { background: #374151; color: #e5e7eb; }
+        .btn-secondary:hover { background: #4b5563; }
+        .btn-icon { padding: 7px 11px; }
+        .btn:disabled { opacity: 0.38; cursor: not-allowed; transform: none !important; }
+        .btn-wide { width: 100%; justify-content: center; padding: 12px; font-size: 1rem; }
+
+        /* ── App Layout ─────────────────────────────────── */
+        #app-screen {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .app-header {
+            background: #1c1c21;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.35);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .app-title {
+            font-size: 1.2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .app-title i { color: #3b82f6; font-size: 1.4rem; }
+
+        .toolbar-group { display: flex; align-items: center; gap: 10px; }
+
+        #file-label {
+            color: #777;
+            font-size: 0.82rem;
+            max-width: 220px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-style: italic;
+        }
+
+        /* ── Status Bar ─────────────────────────────────── */
+        #status-bar {
+            background: #111114;
+            padding: 7px 24px;
+            font-size: 0.8rem;
+            color: #555;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 34px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #status-bar.success { color: #4ade80; }
+        #status-bar.error   { color: #f87171; }
+        #status-bar.info    { color: #3b82f6; }
+
+        /* ── Main Grid ──────────────────────────────────── */
+        .app-main {
+            display: grid;
+            grid-template-columns: 1fr 370px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* ── Slides Panel ───────────────────────────────── */
+        .slides-panel {
+            padding: 22px 24px;
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .panel-header h2 { font-size: 1.1rem; color: #fff; }
+
+        .count-badge {
+            background: #2563eb;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .drag-hint { font-size: 0.75rem; color: #444; }
+
+        /* ── Slide Card ─────────────────────────────────── */
+        .slide-card {
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 22px 95px 1fr auto;
+            gap: 13px;
+            align-items: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .slide-card:hover { border-color: rgba(59, 130, 246, 0.4); }
+        .slide-card.dragging { opacity: 0.45; border-style: dashed; }
+        .slide-card.drag-over { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); }
+
+        .drag-handle {
+            color: #444;
+            cursor: grab;
+            font-size: 1.1rem;
+            text-align: center;
+            user-select: none;
+        }
+
+        .drag-handle:active { cursor: grabbing; color: #3b82f6; }
+
+        .slide-thumb {
+            width: 95px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: block;
+        }
+
+        .slide-info { min-width: 0; }
+
+        .slide-pos  { font-size: 0.72rem; color: #3b82f6; font-weight: 700; margin-bottom: 2px; }
+        .slide-info h3 {
+            font-size: 0.9rem;
+            color: #fff;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slide-info p {
+            font-size: 0.78rem;
+            color: #777;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .url-tag {
+            font-size: 0.72rem;
+            color: #6b99e8;
+            margin-top: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slide-actions { display: flex; flex-direction: column; gap: 5px; flex-shrink: 0; }
+        .actions-row   { display: flex; gap: 5px; }
+
+        /* ── Empty State ────────────────────────────────── */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #444;
+        }
+
+        .empty-state i { font-size: 2.8rem; margin-bottom: 14px; display: block; }
+
+        /* ── Add Panel ──────────────────────────────────── */
+        .add-panel {
+            padding: 22px 24px;
+            background: #111114;
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+            border-left: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .add-panel h2 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── Form ───────────────────────────────────────── */
+        .form-group { margin-bottom: 14px; }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 9px 13px;
+            background: #1c1c21;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 8px;
+            color: #e7e5df;
+            font-size: 0.88rem;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        .form-group textarea { resize: vertical; min-height: 58px; }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .url-row { display: flex; gap: 8px; }
+        .url-row input { flex: 1; }
+
+        .preview-img {
+            width: 100%;
+            height: 130px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        .notice {
+            background: rgba(59, 130, 246, 0.09);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.8rem;
+            color: #93c5fd;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        /* ── Modal ──────────────────────────────────────── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.open { display: flex; }
+
+        .modal-card {
+            background: #1c1c21;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 16px;
+            padding: 28px 32px;
+            width: 520px;
+            max-width: 96vw;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-card h2 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        /* ── Responsive ─────────────────────────────────── */
+        @media (max-width: 860px) {
+            .app-main { grid-template-columns: 1fr; }
+            .add-panel {
+                max-height: none;
+                border-left: none;
+                border-top: 1px solid rgba(255,255,255,0.07);
+            }
+            .slides-panel { max-height: none; border-right: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     LOGIN SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="login-screen">
+    <div class="login-card">
+        <div class="login-logo"><i class="fas fa-trophy"></i></div>
+        <h1>Gallery Manager</h1>
+        <p class="subtitle">SP3FCK · Awards Gallery Editor</p>
+        <input type="password" id="pwd-input" placeholder="Password"
+               onkeydown="if(event.key==='Enter') doLogin()">
+        <button class="btn btn-primary btn-wide" onclick="doLogin()">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+        <p class="error-text" id="login-error"></p>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     APP SCREEN
+══════════════════════════════════════════════════════════ -->
+<div id="app-screen">
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="app-title">
+            <i class="fas fa-trophy"></i>
+            Awards Gallery Manager
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-secondary" onclick="openFile()">
+                <i class="fas fa-folder-open"></i> Open qrz_bio.html
+            </button>
+            <span id="file-label">No file loaded</span>
+        </div>
+
+        <div class="toolbar-group">
+            <button class="btn btn-success" id="btn-save" onclick="saveFile()" disabled>
+                <i class="fas fa-save"></i> Save to File
+            </button>
+            <button class="btn btn-secondary" onclick="doLogout()">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Status Bar -->
+    <div id="status-bar">
+        <i class="fas fa-circle-info"></i>
+        Open qrz_bio.html to begin. Requires Chrome or Edge (File System Access API).
+    </div>
+
+    <!-- Main -->
+    <div class="app-main">
+
+        <!-- Left: Slide List -->
+        <div class="slides-panel">
+            <div class="panel-header">
+                <h2>
+                    Award Slides &nbsp;<span class="count-badge" id="slide-count">0</span>
+                </h2>
+                <span class="drag-hint"><i class="fas fa-grip-vertical"></i> drag to reorder</span>
+            </div>
+            <div id="slide-list">
+                <div class="empty-state">
+                    <i class="fas fa-trophy"></i>
+                    <p>Open qrz_bio.html to load slides</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Add New Slide -->
+        <div class="add-panel">
+            <h2>
+                <i class="fas fa-plus-circle" style="color:#3b82f6;"></i>
+                Add New Slide
+            </h2>
+
+            <div class="notice">
+                <i class="fas fa-info-circle" style="margin-top:2px;flex-shrink:0;"></i>
+                <span>Paste the image URL (from static.qrz.com or any public host) and click
+                <i class="fas fa-search"></i> to preview it. Fill in title and description, then click Add.</span>
+            </div>
+
+            <img id="add-preview" class="preview-img" alt="Preview">
+
+            <div class="form-group">
+                <label>Image URL <span style="color:#ef4444;">*</span></label>
+                <div class="url-row">
+                    <input type="url" id="add-imageUrl" placeholder="https://static.qrz.com/k/sp3fck/..."
+                           oninput="onImageUrlInput('add')">
+                    <button class="btn btn-secondary btn-icon" onclick="previewImage('add')" title="Preview image">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Alt Text</label>
+                <input type="text" id="add-alt" placeholder="Award name (for accessibility)">
+            </div>
+
+            <div class="form-group">
+                <label>Title <span style="color:#ef4444;">*</span></label>
+                <input type="text" id="add-title" placeholder="Award title shown below the image">
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="add-desc" placeholder="Short description of the award"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Year</label>
+                <input type="text" id="add-year" value="2026" placeholder="2026">
+            </div>
+
+            <button class="btn btn-primary btn-wide" onclick="addSlide()">
+                <i class="fas fa-plus"></i> Add Slide
+            </button>
+        </div>
+
+    </div><!-- .app-main -->
+</div><!-- #app-screen -->
+
+<!-- ══════════════════════════════════════════════════════
+     EDIT MODAL
+══════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="edit-modal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-card">
+        <h2><i class="fas fa-image" style="color:#3b82f6;"></i> Edit Award Slide</h2>
+
+        <img id="edit-preview" class="preview-img" alt="Preview" style="display:block; height:150px;">
+
+        <div class="form-group">
+            <label>Image URL <span style="color:#ef4444;">*</span></label>
+            <div class="url-row">
+                <input type="url" id="edit-imageUrl" placeholder="https://static.qrz.com/..."
+                       oninput="onImageUrlInput('edit')">
+                <button class="btn btn-secondary btn-icon" onclick="previewImage('edit')" title="Preview image">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Alt Text</label>
+            <input type="text" id="edit-alt" placeholder="Award name (accessibility)">
+        </div>
+
+        <div class="form-group">
+            <label>Title <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="edit-title" placeholder="Award title">
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea id="edit-desc" placeholder="Short description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Year</label>
+            <input type="text" id="edit-year" placeholder="2026">
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            <button class="btn btn-primary" onclick="saveEdit()">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     SCRIPT
+══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+// ── Config ───────────────────────────────────────────────────────────────────
+const PASSWORD       = 'sp3fck';
+const MARKER_START   = '<!-- GAL-MANAGER-START -->';
+const MARKER_END     = '<!-- GAL-MANAGER-END -->';
+const MARKER_DATA_RE = /<!-- GAL-DATA:([\s\S]*?) -->/;
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let slides       = [];
+let fileHandle   = null;
+let rawHtml      = '';
+let editingIndex = -1;
+let dragSrcIndex = -1;
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+function doLogin() {
+    const val = document.getElementById('pwd-input').value;
+    if (val === PASSWORD) {
+        sessionStorage.setItem('gal-mgr-auth', '1');
+        showApp();
+    } else {
+        document.getElementById('login-error').textContent = 'Incorrect password.';
+    }
+}
+
+function doLogout() {
+    sessionStorage.removeItem('gal-mgr-auth');
+    location.reload();
+}
+
+function showApp() {
+    document.getElementById('login-screen').style.display = 'none';
+    const app = document.getElementById('app-screen');
+    app.style.display = 'flex';
+    app.style.flexDirection = 'column';
+}
+
+if (sessionStorage.getItem('gal-mgr-auth') === '1') showApp();
+
+// ── File Operations ───────────────────────────────────────────────────────────
+async function openFile() {
+    if (!window.showOpenFilePicker) {
+        setStatus('File System Access API not supported. Please use Chrome or Edge.', 'error');
+        return;
+    }
+    try {
+        const [handle] = await window.showOpenFilePicker({
+            types: [{ description: 'HTML Files', accept: { 'text/html': ['.html', '.htm'] } }],
+            multiple: false
+        });
+        fileHandle = handle;
+        const file = await handle.getFile();
+        rawHtml = await file.text();
+
+        document.getElementById('file-label').textContent = file.name;
+        document.getElementById('btn-save').disabled = false;
+
+        slides = parseSlides(rawHtml);
+        renderSlides();
+        setStatus(`Loaded "${file.name}" — ${slides.length} award slide(s) found.`, 'success');
+    } catch (e) {
+        if (e.name !== 'AbortError') {
+            setStatus('Error opening file: ' + e.message, 'error');
+        }
+    }
+}
+
+async function saveFile() {
+    if (!fileHandle) { setStatus('No file open.', 'error'); return; }
+    if (slides.length === 0) { setStatus('Cannot save: no slides defined.', 'error'); return; }
+
+    try {
+        const newSection = generateGallerySection(slides);
+        const newHtml    = replaceSection(rawHtml, newSection);
+        if (!newHtml) return;
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(newHtml);
+        await writable.close();
+
+        rawHtml = newHtml;
+        setStatus(`Saved successfully! ${slides.length} award slides written to file.`, 'success');
+    } catch (e) {
+        if (e.name === 'NotAllowedError') {
+            setStatus('Permission denied. Re-open the file to grant write access.', 'error');
+        } else {
+            setStatus('Error saving: ' + e.message, 'error');
+        }
+    }
+}
+
+// ── Parsing ───────────────────────────────────────────────────────────────────
+function parseSlides(html) {
+    // Fast path: JSON data comment embedded by this manager
+    const m = html.match(MARKER_DATA_RE);
+    if (m) {
+        try { return JSON.parse(m[1]); } catch (e) { /* fall through */ }
+    }
+    return parseSlidesFromHtml(html);
+}
+
+function parseSlidesFromHtml(html) {
+    const parser = new DOMParser();
+    const doc    = parser.parseFromString(html, 'text/html');
+
+    // Determine display order from navigation counters
+    const navSets  = doc.querySelectorAll('.gallery-nav-set');
+    const orderMap = {};
+    const total    = navSets.length;
+
+    navSets.forEach(nav => {
+        // Matches both old-style class (nav-101) and new managed class (gnav-1)
+        const clsMatch = nav.className.match(/gnav-(\d+)|nav-(\d+)/);
+        const counter  = nav.querySelector('.slide-counter');
+        if (clsMatch && counter) {
+            const pos = parseInt(counter.textContent.split('/')[0].trim(), 10) - 1;
+            const id  = clsMatch[1] || clsMatch[2];
+            orderMap[pos] = id;
+        }
+    });
+
+    const result = [];
+
+    for (let i = 0; i < total; i++) {
+        const id = orderMap[i];
+        if (id === undefined) continue;
+
+        // Match both old (.slide101) and new (.gslide-1) formats
+        const slideDiv = doc.querySelector(`.gslide-${id}, .slide${id}`);
+        if (!slideDiv) continue;
+
+        const imgEl   = slideDiv.querySelector('img');
+        const titleEl = slideDiv.querySelector('.award-info h3');
+        const descEl  = slideDiv.querySelector('.award-info p');
+        const yearEl  = slideDiv.querySelector('.award-date');
+
+        result.push({
+            imageUrl:    imgEl    ? imgEl.getAttribute('src')            : '',
+            alt:         imgEl    ? (imgEl.getAttribute('alt') || '')    : '',
+            title:       titleEl  ? titleEl.textContent.trim()           : '',
+            description: descEl   ? descEl.textContent.trim()            : '',
+            year:        yearEl   ? yearEl.textContent.replace(/Year:\s*/i, '').trim() : '2025'
+        });
+    }
+
+    return result;
+}
+
+// ── Section Replacement ───────────────────────────────────────────────────────
+function replaceSection(html, newSection) {
+    const si = html.indexOf(MARKER_START);
+    const ei = html.indexOf(MARKER_END);
+
+    if (si !== -1 && ei !== -1) {
+        return html.substring(0, si) + newSection + html.substring(ei + MARKER_END.length);
+    }
+
+    // First-time: find awards section by its header comment and replace up to YT-MANAGER-START
+    const galStart = html.indexOf('<!-- Ham Awards Gallery Section -->');
+    const ytStart  = html.indexOf('<!-- YT-MANAGER-START -->');
+
+    if (galStart !== -1 && ytStart !== -1) {
+        // Walk backwards from galStart to pick up any preceding whitespace
+        let insertAt = galStart;
+        while (insertAt > 0 && (html[insertAt - 1] === ' ' || html[insertAt - 1] === '\n')) {
+            insertAt--;
+        }
+        insertAt++; // keep one newline
+        setStatus('Migrating gallery section to managed format for the first time.', 'info');
+        return html.substring(0, insertAt) + '\n' + newSection + '\n\n' + html.substring(ytStart);
+    }
+
+    setStatus('ERROR: Could not locate the gallery section. Is this the right file?', 'error');
+    return null;
+}
+
+// ── HTML Generator ────────────────────────────────────────────────────────────
+function esc(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+function generateGallerySection(slides) {
+    const n = slides.length;
+
+    // Dynamic CSS selectors
+    const slideSelectors = slides.map((_, i) =>
+        `        #gls${i+1}:checked ~ .gallery-slides .gslide-${i+1}`
+    ).join(',\n');
+
+    const navSelectors = slides.map((_, i) =>
+        `        #gls${i+1}:checked ~ .gallery-navigation .gnav-${i+1}`
+    ).join(',\n');
+
+    // Radio inputs
+    const radioHtml = slides.map((_, i) =>
+        `                    <input type="radio" name="gslide" id="gls${i+1}"${i === 0 ? ' checked' : ''} style="display: none;">`
+    ).join('\n');
+
+    // Slide divs
+    const slidesHtml = slides.map((slide, i) => {
+        const pos = i + 1;
+        return `
+                        <!-- Slide ${pos}: ${esc(slide.title)} -->
+                        <div class="slide gslide-${pos}">
+                            <div class="award-card">
+                                <img src="${esc(slide.imageUrl)}" alt="${esc(slide.alt || slide.title)}">
+                                <div class="award-info">
+                                    <h3>${esc(slide.title)}</h3>
+                                    <p>${esc(slide.description)}</p>
+                                    <span class="award-date">Year: ${esc(slide.year || '2025')}</span>
+                                </div>
+                            </div>
+                        </div>`;
+    }).join('\n');
+
+    // Navigation sets (circular)
+    const navHtml = slides.map((_, i) => {
+        const pos  = i + 1;
+        const prev = i === 0     ? n     : i;
+        const next = i === n - 1 ? 1     : i + 2;
+        return `
+                        <!-- Nav ${pos}/${n} -->
+                        <div class="gallery-nav-set gnav-${pos}">
+                            <label for="gls${prev}" class="gallery-arrow"><i class="fas fa-chevron-left"></i></label>
+                            <div class="slide-counter">${pos} / ${n}</div>
+                            <label for="gls${next}" class="gallery-arrow"><i class="fas fa-chevron-right"></i></label>
+                        </div>`;
+    }).join('\n');
+
+    const dataComment = `<!-- GAL-DATA:${JSON.stringify(slides)} -->`;
+
+    return `<!-- GAL-MANAGER-START -->
+${dataComment}
+<style>
+/* Gallery CSS — auto-generated by gallery-manager.html — do not edit manually */
+${slideSelectors} {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+${navSelectors} {
+    display: flex;
+}
+</style>
+        <!-- Ham Awards Gallery Section -->
+        <section class="awards-section">
+            <div class="awards-header">
+                <h2><i class="fas fa-trophy"></i> Ham Radio Awards Gallery</h2>
+                <p>A collection of my amateur radio achievements and awards</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-wrapper">
+                    <!-- Hidden radio buttons for CSS-only navigation -->
+${radioHtml}
+                    <div class="gallery-slides">
+${slidesHtml}
+                    </div>
+                    <!-- Gallery Navigation with Arrows -->
+                    <div class="gallery-navigation">
+${navHtml}
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- GAL-MANAGER-END -->`;
+}
+
+// ── Slide Operations ──────────────────────────────────────────────────────────
+function addSlide() {
+    const imageUrl = document.getElementById('add-imageUrl').value.trim();
+    const alt      = document.getElementById('add-alt').value.trim();
+    const title    = document.getElementById('add-title').value.trim();
+    const desc     = document.getElementById('add-desc').value.trim();
+    const year     = document.getElementById('add-year').value.trim() || '2025';
+
+    if (!imageUrl) { setStatus('Image URL is required.', 'error');   return; }
+    if (!title)    { setStatus('Title is required.', 'error');        return; }
+
+    slides.push({ imageUrl, alt, title, description: desc, year });
+    renderSlides();
+
+    document.getElementById('add-imageUrl').value = '';
+    document.getElementById('add-alt').value      = '';
+    document.getElementById('add-title').value    = '';
+    document.getElementById('add-desc').value     = '';
+    document.getElementById('add-year').value     = '2026';
+    document.getElementById('add-preview').style.display = 'none';
+
+    setStatus(`Added "${title}" as slide ${slides.length}. Don't forget to Save!`, 'success');
+}
+
+function deleteSlide(i) {
+    if (!confirm(`Delete slide "${slides[i].title}"?\n\nThis cannot be undone until you re-open the file.`)) return;
+    slides.splice(i, 1);
+    renderSlides();
+    setStatus('Slide deleted. Don\'t forget to Save!', 'info');
+}
+
+function openEdit(i) {
+    editingIndex = i;
+    const s = slides[i];
+    document.getElementById('edit-imageUrl').value = s.imageUrl;
+    document.getElementById('edit-alt').value      = s.alt || '';
+    document.getElementById('edit-title').value    = s.title;
+    document.getElementById('edit-desc').value     = s.description || '';
+    document.getElementById('edit-year').value     = s.year || '2025';
+
+    const preview = document.getElementById('edit-preview');
+    if (s.imageUrl) {
+        preview.src           = s.imageUrl;
+        preview.style.display = 'block';
+    } else {
+        preview.style.display = 'none';
+    }
+
+    document.getElementById('edit-modal').classList.add('open');
+}
+
+function closeModal() {
+    document.getElementById('edit-modal').classList.remove('open');
+    editingIndex = -1;
+}
+
+function saveEdit() {
+    if (editingIndex < 0) return;
+
+    const imageUrl = document.getElementById('edit-imageUrl').value.trim();
+    const alt      = document.getElementById('edit-alt').value.trim();
+    const title    = document.getElementById('edit-title').value.trim();
+    const desc     = document.getElementById('edit-desc').value.trim();
+    const year     = document.getElementById('edit-year').value.trim() || '2025';
+
+    if (!imageUrl) { setStatus('Image URL is required.', 'error'); return; }
+    if (!title)    { setStatus('Title is required.', 'error');     return; }
+
+    slides[editingIndex] = { imageUrl, alt, title, description: desc, year };
+    renderSlides();
+    closeModal();
+    setStatus(`Updated "${title}". Don't forget to Save!`, 'success');
+}
+
+function moveSlide(i, dir) {
+    const j = i + dir;
+    if (j < 0 || j >= slides.length) return;
+    [slides[i], slides[j]] = [slides[j], slides[i]];
+    renderSlides();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function renderSlides() {
+    const list = document.getElementById('slide-list');
+    document.getElementById('slide-count').textContent = slides.length;
+
+    if (slides.length === 0) {
+        list.innerHTML = `<div class="empty-state">
+            <i class="fas fa-trophy"></i>
+            <p>No slides yet. Add one using the form →</p>
+        </div>`;
+        return;
+    }
+
+    list.innerHTML = slides.map((s, i) => `
+        <div class="slide-card" draggable="true"
+             id="sc-${i}"
+             ondragstart="onDragStart(${i})"
+             ondragover="onDragOver(event,${i})"
+             ondragleave="onDragLeave(${i})"
+             ondrop="onDrop(event,${i})"
+             ondragend="onDragEnd()">
+            <div class="drag-handle" title="Drag to reorder">
+                <i class="fas fa-grip-vertical"></i>
+            </div>
+            <img class="slide-thumb" src="${esc(s.imageUrl)}" alt="${esc(s.alt || s.title)}"
+                 onerror="this.style.display='none'">
+            <div class="slide-info">
+                <div class="slide-pos"># ${i + 1}</div>
+                <h3 title="${esc(s.title)}">${esc(s.title)}</h3>
+                <p title="${esc(s.description || '')}">${esc(s.description || '—')}</p>
+                <div class="url-tag" title="${esc(s.imageUrl)}">${esc(s.imageUrl)}</div>
+            </div>
+            <div class="slide-actions">
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="openEdit(${i})" title="Edit slide">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn btn-danger btn-icon" onclick="deleteSlide(${i})" title="Delete slide">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="actions-row">
+                    <button class="btn btn-secondary btn-icon" onclick="moveSlide(${i},-1)"
+                            title="Move up" ${i === 0 ? 'disabled' : ''}>
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-icon" onclick="moveSlide(${i},1)"
+                            title="Move down" ${i === slides.length - 1 ? 'disabled' : ''}>
+                        <i class="fas fa-arrow-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>`
+    ).join('');
+}
+
+// ── Drag & Drop ───────────────────────────────────────────────────────────────
+function onDragStart(i) {
+    dragSrcIndex = i;
+    setTimeout(() => {
+        const el = document.getElementById(`sc-${i}`);
+        if (el) el.classList.add('dragging');
+    }, 0);
+}
+
+function onDragOver(e, i) {
+    e.preventDefault();
+    if (i === dragSrcIndex) return;
+    document.querySelectorAll('.slide-card').forEach(c => c.classList.remove('drag-over'));
+    const el = document.getElementById(`sc-${i}`);
+    if (el) el.classList.add('drag-over');
+}
+
+function onDragLeave(i) {
+    const el = document.getElementById(`sc-${i}`);
+    if (el) el.classList.remove('drag-over');
+}
+
+function onDrop(e, i) {
+    e.preventDefault();
+    if (dragSrcIndex === -1 || dragSrcIndex === i) return;
+    const moved = slides.splice(dragSrcIndex, 1)[0];
+    slides.splice(i, 0, moved);
+    dragSrcIndex = -1;
+    renderSlides();
+    setStatus(`Moved slide to position ${i + 1}.`, 'info');
+}
+
+function onDragEnd() {
+    document.querySelectorAll('.slide-card').forEach(c => {
+        c.classList.remove('dragging', 'drag-over');
+    });
+    dragSrcIndex = -1;
+}
+
+// ── Image Preview ─────────────────────────────────────────────────────────────
+function onImageUrlInput(prefix) {
+    const url     = document.getElementById(`${prefix}-imageUrl`).value;
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (url) {
+        preview.src           = url;
+        preview.style.display = 'block';
+    } else {
+        preview.style.display = 'none';
+    }
+}
+
+function previewImage(prefix) {
+    const url     = document.getElementById(`${prefix}-imageUrl`).value.trim();
+    const preview = document.getElementById(`${prefix}-preview`);
+    if (url) {
+        preview.src           = url;
+        preview.style.display = 'block';
+        setStatus('Image URL set. Check preview above.', 'info');
+    } else {
+        setStatus('Enter an image URL first.', 'error');
+    }
+}
+
+// ── Status Bar ────────────────────────────────────────────────────────────────
+let statusTimer;
+
+function setStatus(msg, type = '') {
+    const bar  = document.getElementById('status-bar');
+    const icon = type === 'success' ? 'fas fa-check-circle'
+               : type === 'error'   ? 'fas fa-circle-exclamation'
+               : type === 'info'    ? 'fas fa-circle-info'
+               :                      'fas fa-circle-info';
+    bar.innerHTML = `<i class="${icon}"></i> ${msg}`;
+    bar.className = type;
+    clearTimeout(statusTimer);
+    if (type === 'success' || type === 'info') {
+        statusTimer = setTimeout(() => {
+            bar.innerHTML = '<i class="fas fa-circle-info"></i> Ready.';
+            bar.className = '';
+        }, 5000);
+    }
+}
+
+// ── Keyboard shortcuts ────────────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRZ Page Builder</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/builder.css">
+</head>
+<body>
+
+<!-- ── Top Bar ──────────────────────────────────────────────────────────────── -->
+<header class="topbar">
+    <div class="topbar-left">
+        <i class="fas fa-broadcast-tower topbar-logo"></i>
+        <span class="topbar-title">QRZ Page Builder</span>
+        <span class="topbar-project" id="topbar-project"></span>
+    </div>
+
+    <div class="topbar-right">
+        <span class="topbar-file-label" id="topbar-file-label"></span>
+
+        <button class="btn btn-secondary btn-sm" id="btn-import-file" title="Import existing qrz_bio.html">
+            <i class="fas fa-file-import"></i> Import
+        </button>
+        <button class="btn btn-primary btn-sm" id="btn-export-file" disabled title="Save / export qrz_bio.html">
+            <i class="fas fa-file-export"></i> Export
+        </button>
+
+        <div class="topbar-divider"></div>
+
+        <button class="btn btn-ghost btn-sm" id="btn-theme" title="Edit theme / colours">
+            <i class="fas fa-palette"></i> Theme
+        </button>
+        <button class="btn btn-ghost btn-sm" id="btn-preview" title="Toggle live preview panel">
+            <i class="fas fa-eye"></i> Preview
+        </button>
+
+        <div class="topbar-divider"></div>
+
+        <span class="topbar-user">
+            <i class="fas fa-user-circle"></i>
+            <span id="topbar-user"></span>
+        </span>
+        <button class="btn btn-danger btn-sm" id="btn-logout" title="Logout">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+</header>
+
+<!-- ── Main Layout ──────────────────────────────────────────────────────────── -->
+<div class="layout">
+
+    <!-- ── Sidebar ────────────────────────────────────────────────────────── -->
+    <aside class="sidebar">
+
+        <!-- View: Project List -->
+        <div class="sidebar-view active" id="view-projects">
+            <div class="sidebar-header">
+                <span class="sidebar-title"><i class="fas fa-folder-open"></i> Projects</span>
+                <button class="btn btn-primary btn-icon btn-sm" id="btn-new-project" title="New project">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div class="project-list" id="project-list"></div>
+        </div>
+
+        <!-- View: Sections List (within a project) -->
+        <div class="sidebar-view" id="view-sections">
+            <div class="sidebar-header">
+                <button class="btn btn-ghost btn-icon btn-sm" id="btn-back-projects" title="Back to projects">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <span class="sidebar-title sidebar-project-name" id="sidebar-project-name"></span>
+                <div class="sidebar-header-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" id="btn-rename-project" title="Rename project">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button class="btn btn-primary btn-icon btn-sm" id="btn-add-section" title="Add section">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="section-list" id="section-list"></div>
+        </div>
+
+    </aside>
+
+    <!-- ── Canvas (editor area) ───────────────────────────────────────────── -->
+    <main class="canvas" id="canvas">
+        <div class="welcome-canvas">
+            <i class="fas fa-broadcast-tower"></i>
+            <h2>QRZ Page Builder</h2>
+            <p>Create or open a project from the left sidebar to get started.</p>
+        </div>
+    </main>
+
+    <!-- ── Right Panel (live preview) ────────────────────────────────────── -->
+    <aside class="right-panel" id="right-panel" style="display:none;">
+        <div class="right-panel-header">
+            <span><i class="fas fa-eye"></i> Live Preview</span>
+            <button class="btn btn-ghost btn-icon btn-sm" id="btn-close-preview" title="Close preview"
+                    onclick="document.getElementById('right-panel').style.display='none'">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <iframe class="preview-frame" id="preview-frame" sandbox="allow-same-origin allow-scripts" title="Live preview"></iframe>
+    </aside>
+
+</div>
+
+<!-- ── Section Type Modal ─────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-section-type">
+    <div class="modal-card">
+        <div class="modal-header">
+            <h2><i class="fas fa-layer-group"></i> Add Section</h2>
+            <button class="btn btn-ghost btn-icon" id="btn-close-section-modal" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p style="color:var(--text-muted);margin-bottom:18px;">Choose the type of section to add:</p>
+            <div class="section-type-grid">
+
+                <button class="section-type-btn" data-section-type="header">
+                    <i class="fas fa-heading"></i>
+                    <span>Header</span>
+                    <small>Callsign, location &amp; links</small>
+                </button>
+
+                <button class="section-type-btn" data-section-type="text">
+                    <i class="fas fa-align-left"></i>
+                    <span>Text / Bio</span>
+                    <small>Rich-text content block</small>
+                </button>
+
+                <button class="section-type-btn" data-section-type="gallery">
+                    <i class="fas fa-trophy"></i>
+                    <span>Gallery</span>
+                    <small>CSS-only image slideshow</small>
+                </button>
+
+                <button class="section-type-btn" data-section-type="youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube Videos</span>
+                    <small>Video gallery with thumbnails</small>
+                </button>
+
+                <button class="section-type-btn" data-section-type="station">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>Station Info</span>
+                    <small>Equipment &amp; key-value grid</small>
+                </button>
+
+                <button class="section-type-btn" data-section-type="iframe">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Embedded Gadget</span>
+                    <small>Map, propagation, any iframe</small>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── Status Bar ─────────────────────────────────────────────────────────── -->
+<div class="statusbar" id="statusbar">Loading…</div>
+
+<!-- sql.js must be a global script, loaded BEFORE any ES module -->
+<script src="https://cdn.jsdelivr.net/npm/sql.js@1.12.0/dist/sql-wasm.js"></script>
+<!-- Main app module -->
+<script type="module" src="js/builder.js"></script>
+
+</body>
+</html>
