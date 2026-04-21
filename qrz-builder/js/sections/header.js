@@ -12,11 +12,11 @@ const ICON_ANIMATIONS = ['pulse', 'glow', 'bounce', 'rotate', 'none'];
 
 const ICON_SUGGESTIONS = [
     { cls: 'fas fa-broadcast-tower', label: 'Broadcast Tower' },
-    { cls: 'fas fa-radio',           label: 'Radio' },
+    { cls: 'fa-solid fa-radio',      label: 'Radio' },
     { cls: 'fas fa-satellite-dish',  label: 'Satellite Dish' },
     { cls: 'fas fa-signal',          label: 'Signal' },
     { cls: 'fas fa-wifi',            label: 'WiFi' },
-    { cls: 'fas fa-tower-broadcast', label: 'Tower' },
+    { cls: 'fa-solid fa-tower-cell', label: 'Tower Cell' },
 ];
 
 export function renderHeaderEditor(container, section, onSaved) {
@@ -66,7 +66,12 @@ export function renderHeaderEditor(container, section, onSaved) {
 
     <div class="field-row">
         <div class="field-group">
-            <label for="h-icon-class">Radio Icon (Font Awesome class)</label>
+            <label for="h-icon-class">Radio Icon (Font Awesome class)
+                <a href="https://fontawesome.com/search" target="_blank" rel="noopener noreferrer"
+                   style="font-weight:400;text-transform:none;font-size:0.78rem;margin-left:8px;color:var(--accent);">
+                    <i class="fas fa-external-link-alt" style="font-size:0.7rem;"></i> Browse icons
+                </a>
+            </label>
             <input type="text" id="h-icon-class" value="${_esc(d.icon_class || 'fas fa-broadcast-tower')}" placeholder="fas fa-broadcast-tower">
             <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;" id="icon-suggestions"></div>
         </div>
@@ -134,7 +139,7 @@ export function renderHeaderEditor(container, section, onSaved) {
     _renderLinks(container, linksData);
 
     container.querySelector('#btn-add-link').addEventListener('click', () => {
-        linksData.push({ icon: 'fas fa-link', label: '', url: '' });
+        linksData.push({ icon: 'fas fa-link', icon_color: '', label: '', url: '' });
         _renderLinks(container, linksData);
     });
 
@@ -169,9 +174,10 @@ function _renderLinks(container, linksData) {
         const row = document.createElement('div');
         row.className = 'link-row';
         row.innerHTML = `
-            <input type="text"  data-i="${i}" data-f="icon"  placeholder="fas fa-link"  value="${_esc(link.icon  || '')}">
-            <input type="text"  data-i="${i}" data-f="label" placeholder="Label"        value="${_esc(link.label || '')}">
-            <input type="url"   data-i="${i}" data-f="url"   placeholder="https://…"   value="${_esc(link.url   || '')}">
+            <input type="text"  data-i="${i}" data-f="icon"       placeholder="fas fa-link"  value="${_esc(link.icon  || '')}" style="flex:1.2;" title="Font Awesome class, e.g. fas fa-link">
+            <input type="color" data-i="${i}" data-f="icon_color" value="${link.icon_color || '#6a92e9'}" title="Icon colour" style="width:36px;height:36px;padding:2px;border-radius:6px;cursor:pointer;flex:none;">
+            <input type="text"  data-i="${i}" data-f="label"      placeholder="Label"        value="${_esc(link.label || '')}" style="flex:1.5;">
+            <input type="url"   data-i="${i}" data-f="url"        placeholder="https://…"   value="${_esc(link.url   || '')}" style="flex:2;">
             <button class="btn btn-danger btn-icon btn-sm" data-rm="${i}" title="Remove"><i class="fas fa-trash"></i></button>`;
         row.querySelector(`[data-rm="${i}"]`).addEventListener('click', () => {
             linksData.splice(i, 1);
@@ -179,6 +185,9 @@ function _renderLinks(container, linksData) {
         });
         for (const input of row.querySelectorAll('input')) {
             input.addEventListener('input', () => {
+                linksData[parseInt(input.dataset.i)][input.dataset.f] = input.value;
+            });
+            input.addEventListener('change', () => {
                 linksData[parseInt(input.dataset.i)][input.dataset.f] = input.value;
             });
         }
@@ -189,9 +198,10 @@ function _renderLinks(container, linksData) {
 function _collectLinks(container) {
     const rows = container.querySelectorAll('.link-row');
     return Array.from(rows).map(row => ({
-        icon:  row.querySelector('[data-f="icon"]')?.value.trim()  || '',
-        label: row.querySelector('[data-f="label"]')?.value.trim() || '',
-        url:   row.querySelector('[data-f="url"]')?.value.trim()   || '',
+        icon:       row.querySelector('[data-f="icon"]')?.value.trim()       || '',
+        icon_color: row.querySelector('[data-f="icon_color"]')?.value        || '',
+        label:      row.querySelector('[data-f="label"]')?.value.trim()      || '',
+        url:        row.querySelector('[data-f="url"]')?.value.trim()        || '',
     })).filter(l => l.label || l.url);
 }
 
