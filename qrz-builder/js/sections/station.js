@@ -64,14 +64,14 @@ export function renderStationEditor(container, section, onSaved) {
             row.draggable = true;
             row.innerHTML = `
                 <input type="text" data-i="${i}" data-f="key"   placeholder="e.g. Primary Rig"   value="${_esc(item.key   || '')}">
-                <input type="text" data-i="${i}" data-f="value" placeholder="e.g. Yaesu FT-710"  value="${_esc(item.value || '')}">
+                <textarea data-i="${i}" data-f="value" placeholder="e.g. Yaesu FT-710&#10;(Enter = new line)" rows="2" style="resize:vertical;">${_esc(item.value || '')}</textarea>
                 <button class="btn btn-danger btn-icon btn-sm" data-rm="${i}" title="Remove"><i class="fas fa-trash"></i></button>`;
 
             row.querySelector(`[data-rm="${i}"]`).addEventListener('click', () => {
                 items.splice(i, 1);
                 renderGrid();
             });
-            for (const input of row.querySelectorAll('input')) {
+            for (const input of row.querySelectorAll('input, textarea')) {
                 input.addEventListener('input', () => {
                     items[parseInt(input.dataset.i)][input.dataset.f] = input.value;
                 });
@@ -99,7 +99,7 @@ export function renderStationEditor(container, section, onSaved) {
         const rows = container.querySelectorAll('.kv-row');
         items = Array.from(rows).map(row => ({
             key:   row.querySelector('[data-f="key"]')?.value.trim()   || '',
-            value: row.querySelector('[data-f="value"]')?.value.trim() || '',
+            value: row.querySelector('[data-f="value"]')?.value || '',
         })).filter(r => r.key || r.value);
     }
 }

@@ -119,7 +119,7 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .station-item { background: var(--section-bg); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid rgba(245,158,11,0.2); transition: transform .3s; flex: 0 1 calc(33.333% - 17px); min-width: 220px; max-width: 340px; }
 .station-item:hover { transform: translateY(-3px); border-color: rgba(245,158,11,0.4); }
 .station-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.3rem; }
-.station-item p  { color: var(--text); font-size: 1.1rem; }
+.station-item p  { color: var(--text); font-size: 1.1rem; white-space: pre-wrap; }
 
 /* ── Map Section ────────────────────────────────────────── */
 .map-section { padding: 60px 0; background: var(--bg); color: var(--text); }
@@ -260,7 +260,7 @@ function genHeader(sec, t) {
                               onmouseout="this.style.color=''">${esc(l.label)}</a>`).join('');
 
     const logoHtml = logoUrl
-        ? `<img src="${esc(logoUrl)}" alt="Logo" style="height:80px;width:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);">`
+        ? `<img src="${esc(logoUrl)}" alt="Logo" style="height:80px;width:auto;border-radius:8px;">`
         : '';
 
     return `<!-- Header Section -->
@@ -313,7 +313,7 @@ function genStationSection(sec, t) {
     const cardsHtml = items.map(item => `
                 <div class="station-item">
                     <h3>${esc(item.key)}</h3>
-                    <p>${esc(item.value)}</p>
+                    <p>${esc(item.value).replace(/\n/g, '<br>')}</p>
                 </div>`).join('');
 
     return `
