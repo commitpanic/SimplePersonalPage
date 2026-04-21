@@ -39,6 +39,9 @@
         <button class="btn btn-ghost btn-sm" id="btn-preview" title="Toggle live preview panel">
             <i class="fas fa-eye"></i> Preview
         </button>
+        <button class="btn btn-ghost btn-sm" id="btn-qrz-instructions" title="How to copy generated HTML to QRZ.com">
+            <i class="fas fa-circle-info"></i> Instructions
+        </button>
 
         <div class="topbar-divider"></div>
 
@@ -111,6 +114,40 @@
         <iframe class="preview-frame" id="preview-frame" sandbox="allow-same-origin allow-scripts" title="Live preview"></iframe>
     </aside>
 
+</div>
+
+<!-- ── QRZ Copy Instructions Modal ────────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-qrz-instructions">
+    <div class="modal-card" style="max-width:720px;">
+        <div class="modal-header">
+            <h2><i class="fas fa-circle-info"></i> How To Publish To QRZ.com</h2>
+            <button class="btn btn-ghost btn-icon" id="btn-close-qrz-instructions" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p style="color:var(--text-muted);margin-bottom:14px;">
+                Follow these steps after exporting your page from the builder.
+            </p>
+            <ol class="instruction-steps">
+                <li>Open your exported <strong>qrz_bio.html</strong> in a plain text editor (for example VS Code or Notepad++).</li>
+                <li>Copy everything between:
+                    <div class="instruction-code">&lt;!-- QRZ.com Bio Page Content - Copy everything between these comments --&gt;</div>
+                    and the final closing comment at the end of the generated block.
+                </li>
+                <li>Log in to <strong>qrz.com</strong> and open your profile <strong>Edit</strong> page.</li>
+                <li>Go to the section where your bio HTML is edited and paste the copied content.</li>
+                <li>Save changes on QRZ, then refresh your public profile page to verify layout and links.</li>
+            </ol>
+            <div class="notice info" style="margin-top:14px;">
+                <i class="fas fa-lightbulb"></i>
+                <span>
+                    If QRZ strips or alters formatting, export again and paste only the generated content block,
+                    without any extra HTML from outside that block.
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- ── Section Type Modal ─────────────────────────────────────────────────── -->

@@ -87,11 +87,18 @@ async function init() {
         if (!visible) refreshPreview();
     });
 
+    document.getElementById('btn-qrz-instructions').addEventListener('click', openQrzInstructionsModal);
+
     // Modal close
     document.getElementById('modal-section-type').addEventListener('click', e => {
         if (e.target === document.getElementById('modal-section-type')) closeSectionTypeModal();
     });
     document.getElementById('btn-close-section-modal').addEventListener('click', closeSectionTypeModal);
+
+    document.getElementById('modal-qrz-instructions').addEventListener('click', e => {
+        if (e.target === document.getElementById('modal-qrz-instructions')) closeQrzInstructionsModal();
+    });
+    document.getElementById('btn-close-qrz-instructions').addEventListener('click', closeQrzInstructionsModal);
 
     // Section type buttons
     document.querySelectorAll('[data-section-type]').forEach(btn => {
@@ -301,6 +308,14 @@ function closeSectionTypeModal() {
     document.getElementById('modal-section-type').classList.remove('open');
 }
 
+function openQrzInstructionsModal() {
+    document.getElementById('modal-qrz-instructions').classList.add('open');
+}
+
+function closeQrzInstructionsModal() {
+    document.getElementById('modal-qrz-instructions').classList.remove('open');
+}
+
 function createSection(type) {
     const defaultTitle = SECTION_LABELS[type] || type;
     const id = addSection(activeProjectId, type, defaultTitle, {});
@@ -380,16 +395,19 @@ function openThemeEditor() {
     renderThemeEditor(canvas, activeProjectId, () => {
         setStatus('Theme saved.', 'success');
         refreshPreview();
+    }, (liveTheme) => {
+        refreshPreview(liveTheme);
     });
 }
 
 // ── Preview ────────────────────────────────────────────────────────────────────
-function refreshPreview() {
+function refreshPreview(themeOverride = null) {
     const frame = document.getElementById('preview-frame');
     if (!frame || !activeProjectId) return;
     try {
-        const html = generateQrzBio(activeProjectId);
+        const html = generateQrzBio(activeProjectId, themeOverride);
         frame.srcdoc = html;
+        frame._refresh = () => refreshPreview();
     } catch (e) {
         console.warn('Preview error:', e);
     }

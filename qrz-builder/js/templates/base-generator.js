@@ -104,8 +104,12 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .welcome-section2 { padding: 40px 0; text-align: center; background: var(--section-bg); border-radius: 20px; }
 .welcome-section h2, .welcome-section2 h2 { font-size: 2.5rem; color: var(--h2-color); margin-bottom: 20px; position: relative; }
 .welcome-section h2::after, .welcome-section2 h2::after { content:''; width:100px; height:4px; background:var(--primary); position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); border-radius:2px; }
-.bio-text { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #ccc; }
-.bio-text p { margin-bottom: 15px; }
+.bio-text { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text); }
+.bio-text p,
+.welcome-section p,
+.welcome-section2 p,
+.youtube-header p,
+.awards-header p { color: var(--text) !important; margin-bottom: 15px; }
 
 /* ── Station Section ────────────────────────────────────── */
 .station-section { padding: 60px 0; background: var(--bg); }
@@ -115,17 +119,17 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .station-item { background: var(--section-bg); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid rgba(245,158,11,0.2); transition: transform .3s; flex: 0 1 calc(33.333% - 17px); min-width: 220px; max-width: 340px; }
 .station-item:hover { transform: translateY(-3px); border-color: rgba(245,158,11,0.4); }
 .station-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.3rem; }
-.station-item p  { color: #ccc; font-size: 1.1rem; }
+.station-item p  { color: var(--text); font-size: 1.1rem; }
 
 /* ── Map Section ────────────────────────────────────────── */
-.map-section { padding: 60px 0; background: var(--bg); color: white; }
+.map-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .map-header { text-align: center; margin-bottom: 30px; }
 .map-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
 .map-header h2 i { margin-right: 15px; color: var(--accent); }
 .map-embed { max-width: var(--box-width); margin: 0 auto; padding: 20px; background: var(--section-bg); border-radius: 20px; }
 
 /* ── Embedded Gadget Section ────────────────────────────── */
-.embed-section { padding: 60px 0; background: var(--bg); color: white; }
+.embed-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .embed-header { text-align: center; margin-bottom: 30px; }
 .embed-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
 .embed-header h2 i { margin-right: 15px; color: var(--primary); }
@@ -133,7 +137,7 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .embed-frame-wrap iframe { display: block; margin: 0 auto; max-width: 100%; border-radius: 12px; }
 
 /* ── Quick Links Section ────────────────────────────────── */
-.quick-links-section { padding: 60px 0; background: var(--bg); color: white; }
+.quick-links-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .quick-links-header { text-align: center; margin-bottom: 40px; }
 .quick-links-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color, #fff); }
 .quick-links-header h2 i { margin-right: 15px; }
@@ -142,9 +146,9 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .quick-link-btn:hover { opacity: .88; transform: translateY(-2px); }
 
 /* ── YouTube Section ────────────────────────────────────── */
-.youtube-section { padding: 60px 0; background: var(--bg); color: white; }
+.youtube-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .youtube-header { text-align: center; margin-bottom: 50px; }
-.youtube-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.youtube-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
 .youtube-header h2 i { margin-right: 15px; color: #ff0000; }
 .youtube-gallery-container { max-width: var(--box-width); margin: 0 auto; }
 .youtube-gallery-wrapper { position: relative; background: rgba(255,0,0,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 30px; border: 1px solid rgba(255,0,0,0.25); }
@@ -156,9 +160,9 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .play-overlay { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:80px; height:80px; background:rgba(255,0,0,0.9); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none; transition:transform .3s; }
 .youtube-thumbnail-container:hover .play-overlay { transform:translate(-50%,-50%) scale(1.1); }
 .play-overlay i { color:white; font-size:2.5rem; margin-left:5px; }
-.youtube-info { padding:20px 25px; text-align:center; color:#fff; flex-shrink:0; background:#2a2a2a; }
-.youtube-info h3 { font-size:1.4rem; margin-bottom:10px; }
-.youtube-info p  { color:#ccc; margin-bottom:15px; }
+.youtube-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; background:var(--section-bg); }
+.youtube-info h3 { font-size:1.4rem; margin-bottom:10px; color:var(--text); }
+.youtube-info p  { color:var(--text); margin-bottom:15px; }
 .watch-btn { display:inline-block; background:var(--accent); color:white; padding:10px 25px; border-radius:25px; font-size:1rem; font-weight:600; text-decoration:none; }
 .youtube-date { display:inline-block; background:var(--accent); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; font-weight:500; }
 .youtube-gallery-navigation { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:25px; }
@@ -168,19 +172,19 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .youtube-slide-counter { color:white; font-size:1.1rem; font-weight:600; min-width:80px; text-align:center; }
 
 /* ── Gallery / Awards Section ───────────────────────────── */
-.awards-section { padding: 60px 0; background: var(--bg); color: white; }
+.awards-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .awards-header { text-align: center; margin-bottom: 50px; }
-.awards-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.awards-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
 .awards-header h2 i { margin-right: 15px; color: var(--secondary); }
 .gallery-container { max-width: var(--box-width); margin: 0 auto; }
 .gallery-wrapper { position:relative; background:rgba(59,130,246,0.12); backdrop-filter:blur(10px); border-radius:20px; padding:30px; border:1px solid rgba(59,130,246,0.24); }
 .gallery-slides { position:relative; height:700px; overflow:hidden; border-radius:15px; }
 .slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transform:translateX(100%); transition:all .5s ease-in-out; display:flex; justify-content:center; align-items:center; }
-.award-card { background:white; border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.2); overflow:hidden; max-width:85%; width:100%; max-height:90%; display:flex; flex-direction:column; }
+.award-card { background:var(--section-bg); border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.2); overflow:hidden; max-width:85%; width:100%; max-height:90%; display:flex; flex-direction:column; }
 .award-card img { width:100%; height:auto; max-height:480px; object-fit:contain; border-bottom:3px solid var(--secondary); background:#f8f9fa; }
-.award-info { padding:20px 25px; text-align:center; color:#333; flex-shrink:0; }
-.award-info h3 { font-size:1.5rem; margin-bottom:10px; color:#2c3e50; }
-.award-info p  { color:#666; margin-bottom:15px; }
+.award-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; }
+.award-info h3 { font-size:1.5rem; margin-bottom:10px; color:var(--text); }
+.award-info p  { color:var(--text); margin-bottom:15px; }
 .award-date { display:inline-block; background:var(--secondary); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; }
 .gallery-navigation { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:25px; }
 .gallery-nav-set { display:none; align-items:center; gap:30px; }
@@ -197,7 +201,7 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .propagation-banner { display:flex; flex-direction:column; align-items:center; gap:15px; padding:20px; }
 .propagation-banner > a { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:0 auto; text-align:center; }
 .propagation-img { max-width:100%; height:auto; border-radius:8px; }
-.propagation-credit { text-align:center; color:#ccc; margin:0; }
+.propagation-credit { text-align:center; color:var(--text); margin:0; }
 .propagation-credit a { color:var(--primary); text-decoration:none; font-weight:500; }
 
 /* ── Footer ─────────────────────────────────────────────── */
@@ -251,9 +255,9 @@ function genHeader(sec, t) {
     const linksHtml = links.map(l => `
                     <i class="${esc(l.icon || 'fas fa-link')}" style="margin-left: 8px; color: var(--secondary);"></i>
                     <a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer"
-                       style="color:#ccc;text-decoration:none;font-size:1rem;"
+                              style="color:var(--text);text-decoration:none;font-size:1rem;"
                        onmouseover="this.style.color='${t.primary_color}'"
-                       onmouseout="this.style.color='#ccc'">${esc(l.label)}</a>`).join('');
+                              onmouseout="this.style.color=''">${esc(l.label)}</a>`).join('');
 
     const logoHtml = logoUrl
         ? `<img src="${esc(logoUrl)}" alt="Logo" style="height:80px;width:auto;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);">`
@@ -267,10 +271,10 @@ function genHeader(sec, t) {
                 <h1 class="callsign">${esc(callsign)}</h1>
                 <div class="location">
                     <i class="fas fa-map-marker-alt"></i>${mapsUrl
-                        ? `<a href="${esc(mapsUrl)}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.35);" onmouseover="this.style.borderBottomColor='${t.primary_color}'" onmouseout="this.style.borderBottomColor='rgba(255,255,255,0.35)'">${esc(location)}</a>`
+                        ? `<a href="${esc(mapsUrl)}" target="_blank" rel="noopener noreferrer" style="color:var(--text);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.35);" onmouseover="this.style.borderBottomColor='${t.primary_color}'" onmouseout="this.style.borderBottomColor='rgba(255,255,255,0.35)'">${esc(location)}</a>`
                         : esc(location)}
                     ${email ? `<i class="fas fa-mail-bulk" style="margin-left:8px;color:var(--secondary);"></i>
-                    <span style="color:#ccc;font-size:1rem;">${esc(email)}</span>` : ''}
+                    <span style="color:var(--text);font-size:1rem;">${esc(email)}</span>` : ''}
                 </div>
             </div>
             ${logoHtml ? `<div style="margin-left:auto;">${logoHtml}</div>` : ''}

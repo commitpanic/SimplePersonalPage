@@ -13,8 +13,8 @@
 import { getSections, getTheme } from './db.js';
 import { generateFullHtml }     from './templates/base-generator.js';
 
-export function generateQrzBio(projectId) {
+export function generateQrzBio(projectId, themeOverride = null) {
     const sections = getSections(projectId);
-    const theme    = getTheme(projectId) || {};
+    const theme    = themeOverride || getTheme(projectId) || {};
     return generateFullHtml(sections, theme);
 }

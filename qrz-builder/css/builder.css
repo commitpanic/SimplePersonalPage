@@ -747,6 +747,30 @@ body {
     justify-content: flex-end;
 }
 
+.instruction-steps {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.instruction-steps li {
+    margin-bottom: 10px;
+}
+
+.instruction-code {
+    margin-top: 8px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    color: #93c5fd;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.78rem;
+    word-break: break-word;
+}
+
 /* Section type picker grid */
 .section-type-grid {
     display: grid;

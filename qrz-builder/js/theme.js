@@ -191,7 +191,7 @@ const FONT_OPTIONS = [
  * Render the theme editor into `container` for `projectId`.
  * `onSaved(theme)` is called after saving.
  */
-export function renderThemeEditor(container, projectId, onSaved) {
+export function renderThemeEditor(container, projectId, onSaved, onLivePreview) {
     const theme = getTheme(projectId) || THEME_PRESETS.amber;
 
     container.innerHTML = `
@@ -327,6 +327,10 @@ export function renderThemeEditor(container, projectId, onSaved) {
         document.documentElement.style.setProperty('--preview-text',      data.text_color);
         document.documentElement.style.setProperty('--preview-accent',    data.accent_color);
         // Refresh preview iframe if present
+        if (typeof onLivePreview === 'function') {
+            onLivePreview(data);
+            return;
+        }
         const frame = document.getElementById('preview-frame');
         if (frame && frame._refresh) frame._refresh();
     }
