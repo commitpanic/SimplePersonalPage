@@ -39,6 +39,7 @@ export async function initDb() {
     _db = saved ? new SQL.Database(saved) : new SQL.Database();
 
     _applySchema(_db);
+    _applyMigrations();
     return _db;
 }
 
@@ -92,6 +93,19 @@ function _applySchema(db) {
             data_json  TEXT    NOT NULL DEFAULT '{}'
         );
     `);
+}
+
+// ── Schema migrations (ALTER TABLE – safe to run on existing DBs) ─────────────
+function _applyMigrations() {
+    const migrations = [
+        `ALTER TABLE theme ADD COLUMN h2_color          TEXT NOT NULL DEFAULT '#ffffff'`,
+        `ALTER TABLE theme ADD COLUMN section_bg        TEXT NOT NULL DEFAULT '#151518'`,
+        `ALTER TABLE theme ADD COLUMN header_bg         TEXT NOT NULL DEFAULT 'rgba(0,0,0,0.8)'`,
+        `ALTER TABLE theme ADD COLUMN header_text_color TEXT NOT NULL DEFAULT '#ffffff'`,
+    ];
+    for (const sql of migrations) {
+        try { _db.run(sql); } catch (_) { /* column already exists – ignore */ }
+    }
 }
 
 // ── User helpers ───────────────────────────────────────────────────────────────
@@ -227,12 +241,16 @@ export function saveTheme(projectId, themeData) {
     if (!_db) throw new Error('DB not initialized');
     _db.run(
         `UPDATE theme SET
-            primary_color   = ?,
-            secondary_color = ?,
-            bg_color        = ?,
-            text_color      = ?,
-            accent_color    = ?,
-            font_family     = ?
+            primary_color        = ?,
+            secondary_color      = ?,
+            bg_color             = ?,
+            text_color           = ?,
+            accent_color         = ?,
+            font_family          = ?,
+            h2_color             = ?,
+            section_bg           = ?,
+            header_bg            = ?,
+            header_text_color    = ?
          WHERE project_id = ?`,
         [
             themeData.primary_color,
@@ -241,6 +259,10 @@ export function saveTheme(projectId, themeData) {
             themeData.text_color,
             themeData.accent_color,
             themeData.font_family,
+            themeData.h2_color          || '#ffffff',
+            themeData.section_bg        || '#151518',
+            themeData.header_bg         || 'rgba(0,0,0,0.8)',
+            themeData.header_text_color || '#ffffff',
             projectId
         ]
     );

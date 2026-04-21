@@ -1,6 +1,6 @@
 /**
  * sections/iframe.js – Generic iframe embed editor
- * data: { src, title, width, height }
+ * data: { src, title, width, height, icon_class, icon_color }
  */
 
 'use strict';
@@ -32,6 +32,20 @@ export function renderIframeEditor(container, section, onSaved) {
 
     <div class="field-row">
         <div class="field-group">
+            <label for="ifr-icon-class">Header Icon (Font Awesome class)</label>
+            <input type="text" id="ifr-icon-class" value="${_esc(d.icon_class || 'fas fa-puzzle-piece')}" placeholder="fas fa-puzzle-piece">
+            <small style="color:var(--text-muted);margin-top:6px;display:block;">
+                Find icon classes at <a href="https://fontawesome.com/search" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Font Awesome Search</a>
+            </small>
+        </div>
+        <div class="field-group">
+            <label for="ifr-icon-color">Header Icon Color</label>
+            <input type="color" id="ifr-icon-color" value="${_esc(d.icon_color || '#be954e')}">
+        </div>
+    </div>
+
+    <div class="field-row">
+        <div class="field-group">
             <label for="ifr-width">Width</label>
             <input type="text" id="ifr-width" value="${_esc(d.width || '100%')}" placeholder="100%">
         </div>
@@ -57,10 +71,12 @@ export function renderIframeEditor(container, section, onSaved) {
     container.querySelector('#btn-save-iframe').addEventListener('click', () => {
         const title = container.querySelector('#ifr-sec-title').value.trim();
         const data  = {
-            src:    container.querySelector('#ifr-src').value.trim(),
-            title:  container.querySelector('#ifr-title').value.trim(),
-            width:  container.querySelector('#ifr-width').value.trim()  || '100%',
-            height: container.querySelector('#ifr-height').value.trim() || '400px',
+            src:        container.querySelector('#ifr-src').value.trim(),
+            title:      container.querySelector('#ifr-title').value.trim(),
+            icon_class: container.querySelector('#ifr-icon-class').value.trim() || 'fas fa-puzzle-piece',
+            icon_color: container.querySelector('#ifr-icon-color').value.trim() || '#be954e',
+            width:      container.querySelector('#ifr-width').value.trim()  || '100%',
+            height:     container.querySelector('#ifr-height').value.trim() || '400px',
         };
         updateSection(section.id, title || section.title, data, section.visible);
         const fb = container.querySelector('#ifr-feedback');

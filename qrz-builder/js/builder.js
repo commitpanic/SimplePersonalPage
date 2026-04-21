@@ -18,6 +18,7 @@ import { renderStationEditor }                from './sections/station.js';
 import { renderMapEditor }                    from './sections/map.js';
 import { renderIframeEditor }                 from './sections/iframe.js';
 import { renderPropagationEditor }            from './sections/propagation.js';
+import { renderLinksEditor }                  from './sections/links.js';
 import { generateQrzBio }                     from './exporter.js';
 import { importFromHtml }                     from './importer.js';
 
@@ -34,6 +35,7 @@ const SECTION_ICONS = {
     youtube: 'fab fa-youtube',
     station: 'fas fa-broadcast-tower',
     iframe:  'fas fa-puzzle-piece',
+    links:   'fas fa-link',
     // legacy (imported pages)
     map:         'fas fa-map-marked-alt',
     propagation: 'fas fa-wave-square',
@@ -46,9 +48,10 @@ const SECTION_LABELS = {
     youtube: 'YouTube Videos',
     station: 'Station Info',
     iframe:  'Embedded Gadget',
+    links:   'Quick Links',
     // legacy
     map:         'Ham Map',
-    propagation: 'Propagation',
+    propagation: 'Embedded Img',
 };
 
 // ── Boot ───────────────────────────────────────────────────────────────────────
@@ -228,9 +231,14 @@ function renderSectionList() {
         item.dataset.id = sec.id;
         item.draggable = true;
 
+        const sidebarIcon = (() => {
+            const customIcon = sec.data?.icon_class;
+            if (customIcon && ['gallery','iframe','propagation','links'].includes(sec.type)) return customIcon;
+            return SECTION_ICONS[sec.type] || 'fas fa-layer-group';
+        })();
         item.innerHTML = `
             <span class="drag-handle" title="Drag to reorder"><i class="fas fa-grip-vertical"></i></span>
-            <span class="section-type-icon"><i class="${SECTION_ICONS[sec.type] || 'fas fa-layer-group'}"></i></span>
+            <span class="section-type-icon"><i class="${sidebarIcon}"></i></span>
             <span class="section-label">${_esc(sec.title || SECTION_LABELS[sec.type] || sec.type)}</span>
             <div class="section-actions">
                 <button class="vis-toggle ${!sec.visible ? 'hidden' : ''}" data-vis="${sec.id}" title="${sec.visible ? 'Hide' : 'Show'}">
@@ -331,6 +339,7 @@ function openSectionEditor(sectionId) {
         case 'map':         renderMapEditor(canvas, section, onSaved);    break;
         case 'iframe':      renderIframeEditor(canvas, section, onSaved); break;
         case 'propagation': renderPropagationEditor(canvas, section, onSaved); break;
+        case 'links':      renderLinksEditor(canvas, section, onSaved);       break;
         default: canvas.innerHTML = `<div class="welcome-canvas"><i class="fas fa-question-circle"></i><h2>Unknown section type: ${_esc(section.type)}</h2></div>`;
     }
 }

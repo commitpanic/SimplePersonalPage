@@ -33,7 +33,6 @@ body {
     background: var(--bg-deep);
     color: var(--text);
     min-height: 100vh;
-    overflow: hidden;
 }
 
 /* ── App Shell ────────────────────────────────────────────── */
@@ -389,8 +388,8 @@ body {
 
 .field-group select { cursor: pointer; }
 
-.field-row { display: flex; gap: 12px; }
-.field-row .field-group { flex: 1; }
+.field-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.field-row .field-group { flex: 1; min-width: 200px; }
 
 /* Color picker special */
 .field-group input[type="color"] {

@@ -1,6 +1,6 @@
 /**
- * sections/propagation.js – HF Propagation widget editor
- * data: { img_url, credit_text, credit_url }
+ * sections/propagation.js – Embedded image widget editor
+ * data: { img_url, img2_url, credit_text, credit_url, icon_class, icon_color }
  */
 
 'use strict';
@@ -12,19 +12,40 @@ export function renderPropagationEditor(container, section, onSaved) {
 
     container.innerHTML = `
 <div class="editor-panel active">
-    <div class="panel-title"><i class="fas fa-wave-square"></i> HF Propagation Widget</div>
-    <div class="panel-subtitle">Display a propagation forecast image with a credit link</div>
+    <div class="panel-title"><i class="fas fa-image"></i> Embedded Img</div>
+    <div class="panel-subtitle">Display one or two linked images with an optional credit line</div>
 
     <div class="field-group">
         <label for="prop-sec-title">Section Title</label>
-        <input type="text" id="prop-sec-title" value="${_esc(section.title || 'HF Propagation')}" placeholder="HF Propagation">
+        <input type="text" id="prop-sec-title" value="${_esc(section.title || 'Embedded Img')}" placeholder="Embedded Img">
+    </div>
+
+    <div class="field-row">
+        <div class="field-group">
+            <label for="prop-icon-class">Header Icon (Font Awesome class)</label>
+            <input type="text" id="prop-icon-class" value="${_esc(d.icon_class || 'fas fa-image')}" placeholder="fas fa-image">
+            <small style="color:var(--text-muted);margin-top:6px;display:block;">
+                Find icon classes at <a href="https://fontawesome.com/search" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Font Awesome Search</a>
+            </small>
+        </div>
+        <div class="field-group">
+            <label for="prop-icon-color">Header Icon Color</label>
+            <input type="color" id="prop-icon-color" value="${_esc(d.icon_color || '#be954e')}">
+        </div>
     </div>
 
     <div class="field-group">
-        <label for="prop-img-url">Propagation Image URL</label>
+        <label for="prop-img-url">Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(primary)</span></label>
         <input type="url" id="prop-img-url"
                value="${_esc(d.img_url || 'https://www.hamqsl.com/solar101vhf.php')}"
                placeholder="https://www.hamqsl.com/solar101vhf.php">
+    </div>
+
+    <div class="field-group">
+        <label for="prop-img2-url">Second Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(optional — e.g. solar map)</span></label>
+        <input type="url" id="prop-img2-url"
+               value="${_esc(d.img2_url || '')}"
+               placeholder="https://www.hamqsl.com/solarmap.php">
     </div>
 
     <div class="field-row">
@@ -44,7 +65,7 @@ export function renderPropagationEditor(container, section, onSaved) {
 
     <div class="notice info">
         <i class="fas fa-info-circle" style="margin-top:2px;flex-shrink:0;"></i>
-        <span>The default URL uses the N0NBH HF Propagation banner — a widely used widget in the ham radio community.</span>
+        <span>You can use this for propagation banners, flag counters, badges, or any other embedded image block.</span>
     </div>
 
     <div class="panel-save-bar">
@@ -58,10 +79,13 @@ export function renderPropagationEditor(container, section, onSaved) {
     container.querySelector('#btn-save-prop').addEventListener('click', () => {
         const data = {
             img_url:     container.querySelector('#prop-img-url').value.trim(),
+            img2_url:    container.querySelector('#prop-img2-url').value.trim(),
+            icon_class:  container.querySelector('#prop-icon-class').value.trim() || 'fas fa-image',
+            icon_color:  container.querySelector('#prop-icon-color').value.trim() || '#be954e',
             credit_text: container.querySelector('#prop-credit-text').value.trim(),
             credit_url:  container.querySelector('#prop-credit-url').value.trim(),
         };
-        const newTitle = container.querySelector('#prop-sec-title').value.trim() || 'HF Propagation';
+        const newTitle = container.querySelector('#prop-sec-title').value.trim() || 'Embedded Img';
         updateSection(section.id, newTitle, data, section.visible);
         const fb = container.querySelector('#prop-feedback');
         fb.textContent = 'Saved!';

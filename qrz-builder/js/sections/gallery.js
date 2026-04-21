@@ -1,7 +1,7 @@
 /**
  * sections/gallery.js – Awards Gallery section editor
  * Ported from gallery-manager.html logic.
- * data: { slides: [ { imageUrl, alt, title, description, year } ] }
+ * data: { icon_class, icon_color, theme_color, slides: [ { imageUrl, alt, title, description, year } ] }
  */
 
 'use strict';
@@ -22,6 +22,25 @@ export function renderGalleryEditor(container, section, onSaved) {
     <div class="field-group">
         <label for="gal-section-title">Section Title</label>
         <input type="text" id="gal-section-title" value="${_esc(section.title || 'Gallery')}" placeholder="e.g. Awards Gallery, Ham Awards, My Gallery…">
+    </div>
+
+    <div class="field-row">
+        <div class="field-group">
+            <label for="gal-icon-class">Header Icon (Font Awesome class)</label>
+            <input type="text" id="gal-icon-class" value="${_esc(d.icon_class || 'fas fa-trophy')}" placeholder="fas fa-trophy">
+            <small style="color:var(--text-muted);margin-top:6px;display:block;">
+                Find icon classes at <a href="https://fontawesome.com/search" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Font Awesome Search</a>
+            </small>
+        </div>
+        <div class="field-group">
+            <label for="gal-icon-color">Header Icon Color</label>
+            <input type="color" id="gal-icon-color" value="${_esc(d.icon_color || '#be954e')}">
+        </div>
+    </div>
+
+    <div class="field-group">
+        <label for="gal-theme-color">Gallery Theme Color</label>
+        <input type="color" id="gal-theme-color" value="${_esc(d.theme_color || '#3b82f6')}">
     </div>
 
     <div class="items-grid" id="gallery-list"></div>
@@ -162,7 +181,12 @@ export function renderGalleryEditor(container, section, onSaved) {
     // ── Save ───────────────────────────────────────────────
     container.querySelector('#btn-save-gallery').addEventListener('click', () => {
         const newTitle = container.querySelector('#gal-section-title').value.trim() || 'Gallery';
-        updateSection(section.id, newTitle, { slides }, section.visible);
+        updateSection(section.id, newTitle, {
+            icon_class: container.querySelector('#gal-icon-class').value.trim() || 'fas fa-trophy',
+            icon_color: container.querySelector('#gal-icon-color').value.trim() || '#be954e',
+            theme_color: container.querySelector('#gal-theme-color').value.trim() || '#3b82f6',
+            slides,
+        }, section.visible);
         const fb = container.querySelector('#gal-feedback');
         fb.textContent = `Saved! (${slides.length} slides)`;
         setTimeout(() => { fb.textContent = ''; }, 2000);
