@@ -12,11 +12,11 @@ const ICON_ANIMATIONS = ['pulse', 'glow', 'bounce', 'rotate', 'none'];
 
 const ICON_SUGGESTIONS = [
     { cls: 'fas fa-broadcast-tower', label: 'Broadcast Tower' },
-    { cls: 'fa-solid fa-radio',      label: 'Radio' },
+    { cls: 'fa-solid fa-meteor',      label: 'Meteor' },
     { cls: 'fas fa-satellite-dish',  label: 'Satellite Dish' },
     { cls: 'fas fa-signal',          label: 'Signal' },
     { cls: 'fas fa-wifi',            label: 'WiFi' },
-    { cls: 'fa-solid fa-tower-cell', label: 'Tower Cell' },
+    { cls: 'fa-solid fa-podcast',    label: 'Podcast' },
 ];
 
 export function renderHeaderEditor(container, section, onSaved) {
