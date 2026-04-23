@@ -1,8 +1,85 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-04-23T17:49:31.123Z",
+  "updatedAt": "2026-04-23T18:43:07.721Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-04-23T18:14:00.000Z-PD3RL-40m-LSB",
+      "datetime": "2026-04-23T18:14:00.000Z",
+      "callsign": "PD3RL",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Netherlands",
+      "grid": "JO33GA",
+      "lat": 53.020833333333336,
+      "lon": 6.541666666666667
+    },
+    {
+      "id": "2026-04-23T17:18:00.000Z-PH9OY-40m-FT8",
+      "datetime": "2026-04-23T17:18:00.000Z",
+      "callsign": "PH9OY",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Netherlands",
+      "grid": "JO22mq",
+      "lat": 52.6875,
+      "lon": 5.041666666666667
+    },
+    {
+      "id": "2026-04-23T17:16:00.000Z-PA2KV-40m-FT8",
+      "datetime": "2026-04-23T17:16:00.000Z",
+      "callsign": "PA2KV",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Netherlands",
+      "grid": "JO33HA",
+      "lat": 53.020833333333336,
+      "lon": 6.625
+    },
+    {
+      "id": "2026-04-23T17:14:00.000Z-UA4FEN-40m-FT8",
+      "datetime": "2026-04-23T17:14:00.000Z",
+      "callsign": "UA4FEN",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Russia",
+      "grid": "LO23mf",
+      "lat": 53.22916666666667,
+      "lon": 45.041666666666664
+    },
+    {
+      "id": "2026-04-23T17:11:00.000Z-PE9JAN-40m-FT8",
+      "datetime": "2026-04-23T17:11:00.000Z",
+      "callsign": "PE9JAN",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Netherlands",
+      "grid": "JO22OP",
+      "lat": 52.645833333333336,
+      "lon": 5.208333333333333
+    },
+    {
+      "id": "2026-04-23T17:10:00.000Z-LZ2VQ-40m-FT8",
+      "datetime": "2026-04-23T17:10:00.000Z",
+      "callsign": "LZ2VQ",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Bulgaria",
+      "grid": "KN23IF",
+      "lat": 43.22916666666667,
+      "lon": 24.708333333333336
+    },
+    {
+      "id": "2026-04-23T17:07:00.000Z-DD1OO-40m-FT8",
+      "datetime": "2026-04-23T17:07:00.000Z",
+      "callsign": "DD1OO",
+      "band": "40m",
+      "mode": "FT8",
+      "country": "Germany",
+      "grid": "JN49CW",
+      "lat": 49.9375,
+      "lon": 8.208333333333332
+    },
     {
       "id": "2026-04-22T16:41:00.000Z-SQ3TKZ-70cm-FM",
       "datetime": "2026-04-22T16:41:00.000Z",
