@@ -1,691 +1,547 @@
-<!-- QRZ.com Bio Page Content - Copy everything between these comments -->
+<!-- QRZ.com Bio Page Content - Copy everything between these comments --><!-- QRZ Bio Content Wrapper -->
+<div style="background:linear-gradient(135deg, #0b0b0d 0%, #151518 100%); color:#e7e5df; font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif; line-height:1.6; overflow:hidden"><!-- Header Section -->
+<div class="container">
+<div class="header-content">
+<div class="callsign-section">
+<h1>SP3FCK</h1>
 
-<style>
-/* ── Reset & Base ───────────────────────────────────────── */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+<div class="location"><a eventsnotallowed="this.style.borderBottomColor='rgba(255,255,255,0.35)'" href="https://maps.google.com/?q=Swiebodzin,Poland" rel="noopener noreferrer" style="color:var(--text);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.35);" target="_blank">Poland Swiebodzin</a> <span style="color:var(--text); font-size:1rem">sp3fck@gmail.com</span></div>
+</div>
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+<div style="margin-left:auto; margin-right:15px"><img alt="Logo" src="https://static.qrz.com/k/sp3fck/Logo_PZK_h_40_96dpi_.png" style="border-radius:8px; height:80px; width:auto" /></div>
 
-/* ── Theme Variables ────────────────────────────────────── */
-:root {
-    --primary:     #f59e0b;
-    --secondary:   #fb923c;
-    --bg:          #fefce8;
-    --text:        #292524;
-    --accent:      #fbbf24;
-    --h2-color:    #92400e;
-    --section-bg:  #fffbeb;
-    --header-bg:   #fef3c7;
-    --header-text: #292524;
-    --box-width:   900px;
-}
+<div class="radio-icon">&nbsp;</div>
+</div>
 
-/* ── Header ─────────────────────────────────────────────── */
-.header { background: var(--header-bg); padding: 20px 0; position: relative; z-index: 100; }
-.header-content { display: flex; justify-content: space-between; align-items: center; }
-.callsign { font-size: 3rem; font-weight: bold; color: var(--header-text); text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 5px; }
-.location { color: var(--header-text); opacity: 0.8; font-size: 1.1rem; }
-.location i { margin-right: 8px; color: var(--accent); }
-.radio-icon { font-size: 4rem; color: var(--primary); }
-@keyframes glow   { 0%,100%{text-shadow:0 0 5px var(--primary);} 50%{text-shadow:0 0 20px var(--primary),0 0 40px var(--primary);} }
-.radio-icon i{animation:glow 2s infinite;}
-
-/* ── Main Content ───────────────────────────────────────── */
-.main-content { background: var(--bg); padding-top: 20px; overflow: hidden; }
-
-/* ── Welcome / Text Section ─────────────────────────────── */
-.welcome-section  { padding: 40px 0; text-align: center; background: var(--section-bg); border-radius: 20px 20px 0 0; }
-.welcome-section2 { padding: 40px 0; text-align: center; background: var(--section-bg); border-radius: 20px; }
-.welcome-section h2, .welcome-section2 h2 { font-size: 2.5rem; color: var(--h2-color); margin-bottom: 20px; position: relative; }
-.welcome-section h2::after, .welcome-section2 h2::after { content:''; width:100px; height:4px; background:var(--primary); position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); border-radius:2px; }
-.bio-text { max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: var(--text); }
-.bio-text p,
-.welcome-section p,
-.welcome-section2 p,
-.youtube-header p,
-.awards-header p { color: var(--text) !important; margin-bottom: 15px; }
-
-/* ── Station Section ────────────────────────────────────── */
-.station-section { padding: 60px 0; background: var(--bg); }
-.station-section h2 { text-align: center; font-size: 2.2rem; color: var(--h2-color); margin-bottom: 40px; }
-.station-section h2 i { margin-right: 15px; color: var(--primary); }
-.station-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-.station-item { background: var(--section-bg); padding: 25px; border-radius: 15px; text-align: center; border: 1px solid rgba(245,158,11,0.2); transition: transform .3s; flex: 0 1 calc(33.333% - 17px); min-width: 220px; max-width: 340px; }
-.station-item:hover { transform: translateY(-3px); border-color: rgba(245,158,11,0.4); }
-.station-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.3rem; }
-.station-item p  { color: var(--text); font-size: 1.1rem; white-space: pre-wrap; }
-
-/* ── Map Section ────────────────────────────────────────── */
-.map-section { padding: 60px 0; background: var(--bg); color: var(--text); }
-.map-header { text-align: center; margin-bottom: 30px; }
-.map-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
-.map-header h2 i { margin-right: 15px; color: var(--accent); }
-.map-embed { max-width: var(--box-width); margin: 0 auto; padding: 20px; background: var(--section-bg); border-radius: 20px; }
-
-/* ── Embedded Gadget Section ────────────────────────────── */
-.embed-section { padding: 60px 0; background: var(--bg); color: var(--text); }
-.embed-header { text-align: center; margin-bottom: 30px; }
-.embed-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
-.embed-header h2 i { margin-right: 15px; color: var(--primary); }
-.embed-frame-wrap { max-width: var(--box-width); margin: 0 auto; padding: 20px; background: var(--section-bg); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
-.embed-frame-wrap iframe { display: block; margin: 0 auto; max-width: 100%; border-radius: 12px; }
-
-/* ── Quick Links Section ────────────────────────────────── */
-.quick-links-section { padding: 60px 0; background: var(--bg); color: var(--text); }
-.quick-links-header { text-align: center; margin-bottom: 40px; }
-.quick-links-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color, #fff); }
-.quick-links-header h2 i { margin-right: 15px; }
-.quick-links-list { max-width: var(--box-width); margin: 0 auto; }
-.quick-link-btn { display: block; width: 100%; padding: 16px 24px; border-radius: 10px; text-align: center; font-size: 1.1rem; font-weight: 600; color: #fff; text-decoration: none; margin-bottom: 12px; transition: opacity .2s, transform .2s; }
-.quick-link-btn:hover { opacity: .88; transform: translateY(-2px); }
-
-/* ── YouTube Section ────────────────────────────────────── */
-.youtube-section { padding: 60px 0; background: var(--bg); color: var(--text); }
-.youtube-header { text-align: center; margin-bottom: 50px; }
-.youtube-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
-.youtube-header h2 i { margin-right: 15px; color: #ff0000; }
-.youtube-gallery-container { max-width: var(--box-width); margin: 0 auto; }
-.youtube-gallery-wrapper { position: relative; background: rgba(255,0,0,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 30px; border: 1px solid rgba(255,0,0,0.25); }
-.youtube-gallery-slides { position: relative; height: 600px; overflow: hidden; border-radius: 15px; }
-.youtube-slide { position: absolute; top:0; left:0; width:100%; height:100%; opacity:0; transform:translateX(100%); transition:all .5s ease-in-out; display:flex; justify-content:center; align-items:center; }
-.youtube-card { background:#1a1a1a; border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.3); overflow:hidden; max-width:90%; width:100%; max-height:95%; display:flex; flex-direction:column; border:1px solid rgba(255,0,0,0.25); }
-.youtube-thumbnail-container { position:relative; width:100%; height:480px; overflow:hidden; background:#000; border-bottom:3px solid var(--accent); cursor:pointer; }
-.youtube-thumbnail { width:100%; height:100%; object-fit:cover; }
-.play-overlay { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:80px; height:80px; background:rgba(255,0,0,0.9); border-radius:50%; display:flex; align-items:center; justify-content:center; pointer-events:none; transition:transform .3s; }
-.youtube-thumbnail-container:hover .play-overlay { transform:translate(-50%,-50%) scale(1.1); }
-.play-overlay i { color:white; font-size:2.5rem; margin-left:5px; }
-.youtube-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; background:var(--section-bg); }
-.youtube-info h3 { font-size:1.4rem; margin-bottom:10px; color:var(--text); }
-.youtube-info p  { color:var(--text); margin-bottom:15px; }
-.watch-btn { display:inline-block; background:var(--accent); color:white; padding:10px 25px; border-radius:25px; font-size:1rem; font-weight:600; text-decoration:none; }
-.youtube-date { display:inline-block; background:var(--accent); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; font-weight:500; }
-.youtube-gallery-navigation { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:25px; }
-.youtube-nav-set { display:none; align-items:center; gap:30px; }
-.youtube-arrow { width:50px; height:50px; border-radius:50%; background:rgba(255,0,0,0.8); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1.5rem; border:2px solid rgba(255,255,255,0.3); transition:all .3s; }
-.youtube-arrow:hover { background:rgba(255,0,0,1); transform:scale(1.1); }
-.youtube-slide-counter { color:var(--text); font-size:1.1rem; font-weight:600; min-width:80px; text-align:center; }
-
-/* ── Gallery / Awards Section ───────────────────────────── */
-.awards-section { padding: 60px 0; background: var(--bg); color: var(--text); }
-.awards-header { text-align: center; margin-bottom: 50px; }
-.awards-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
-.awards-header h2 i { margin-right: 15px; color: var(--secondary); }
-.gallery-container { max-width: var(--box-width); margin: 0 auto; }
-.gallery-wrapper { position:relative; background:rgba(59,130,246,0.12); backdrop-filter:blur(10px); border-radius:20px; padding:30px; border:1px solid rgba(59,130,246,0.24); }
-.gallery-slides { position:relative; height:700px; overflow:hidden; border-radius:15px; }
-.slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transform:translateX(100%); transition:all .5s ease-in-out; display:flex; justify-content:center; align-items:center; }
-.award-card { background:var(--section-bg); border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.2); overflow:hidden; max-width:85%; width:100%; max-height:90%; display:flex; flex-direction:column; }
-.award-card img { width:100%; height:auto; max-height:480px; object-fit:contain; border-bottom:3px solid var(--secondary); background:#f8f9fa; }
-.award-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; }
-.award-info h3 { font-size:1.5rem; margin-bottom:10px; color:var(--text); }
-.award-info p  { color:var(--text); margin-bottom:15px; }
-.award-date { display:inline-block; background:var(--secondary); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; }
-.gallery-navigation { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:25px; }
-.gallery-nav-set { display:none; align-items:center; gap:30px; }
-.gallery-arrow { width:50px; height:50px; border-radius:50%; background:rgba(37,99,235,0.82); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1.5rem; border:2px solid rgba(255,255,255,0.3); transition:all .3s; }
-.gallery-arrow:hover { background:rgba(37,99,235,1); transform:scale(1.1); }
-.slide-counter { color:var(--text); font-size:1.1rem; font-weight:600; min-width:80px; text-align:center; }
-
-/* ── Propagation Section ────────────────────────────────── */
-.propagation-section { padding: 40px 0; background: var(--bg); }
-.propagation-header { text-align: center; margin-bottom: 30px; }
-.propagation-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color); }
-.propagation-header h2 i { margin-right: 15px; }
-.propagation-widget { background: var(--section-bg); border-radius:15px; overflow:hidden; max-width: var(--box-width); margin:0 auto; }
-.propagation-banner { display:flex; flex-direction:column; align-items:center; gap:15px; padding:20px; }
-.propagation-banner > a { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; margin:0 auto; text-align:center; }
-.propagation-img { max-width:100%; height:auto; border-radius:8px; }
-.propagation-credit { text-align:center; color:var(--text); margin:0; }
-.propagation-credit a { color:var(--primary); text-decoration:none; font-weight:500; }
-
-/* ── Footer ─────────────────────────────────────────────── */
-.footer { background: #1c1c21; color: white; text-align: center; padding: 30px 0; }
-
-/* ── Responsive ──────────────────────────────────────────── */
-@media (max-width: 768px) {
-    .callsign { font-size: 2rem; }
-    .header-content { flex-direction: column; gap: 15px; text-align: center; }
-    .gallery-slides { height: 550px; }
-    .youtube-gallery-slides { height: 450px; }
-    .station-grid { grid-template-columns: 1fr; }
-}
-</style>
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-<!-- QRZ Bio Content Wrapper -->
-<div style="font-family: Courier New, Courier, monospace; line-height: 1.6; color: #292524; background: linear-gradient(135deg, #0b0b0d 0%, #fefce8 100%); overflow: hidden;">
-
-<!-- Header Section -->
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <div class="callsign-section">
-                <h1 class="callsign">SP3FCK</h1>
-                <div class="location">
-                    <i class="fas fa-map-marker-alt"></i><a href="https://maps.google.com/?q=Poland%2C%20%C5%9Awiebodzin" target="_blank" rel="noopener noreferrer" style="color:var(--text);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,0.35);" onmouseover="this.style.borderBottomColor='#f59e0b'" onmouseout="this.style.borderBottomColor='rgba(255,255,255,0.35)'">Poland, Świebodzin</a>
-                    
-                </div>
-            </div>
-            <div style="margin-left:auto;margin-right:15px;"><img src="https://static.qrz.com/k/sp3fck/Logo_PZK_h_40_96dpi_.png" alt="Logo" style="height:80px;width:auto;border-radius:8px;"></div>
-            <div class="radio-icon">
-                <i class="fa-solid fa-power-off"></i>
-            </div>
-        </div>
-        <div>
-                    <i class="fas fa-link" style="margin-left: 8px; color: #6a92e9;"></i>
-                    <a href="https://maps.google.com/?q=Poland%2C%20%C5%9Awiebodzin" target="_blank" rel="noopener noreferrer"
-                              style="color:var(--text);text-decoration:none;font-size:1rem;"
-                       onmouseover="this.style.color='#f59e0b'"
-                              onmouseout="this.style.color=''">Poland, Świebodzin</a>
-                    <i class="fas fa-link" style="margin-left: 8px; color: #6a92e9;"></i>
-                    <a href="https://commitpanic.github.io/SimplePersonalPage/index.html" target="_blank" rel="noopener noreferrer"
-                              style="color:var(--text);text-decoration:none;font-size:1rem;"
-                       onmouseover="this.style.color='#f59e0b'"
-                              onmouseout="this.style.color=''">My Personal Page</a>
-                    <i class="fas fa-link" style="margin-left: 8px; color: #6a92e9;"></i>
-                    <a href="https://discord.com/invite/Xvn57vA6FC" target="_blank" rel="noopener noreferrer"
-                              style="color:var(--text);text-decoration:none;font-size:1rem;"
-                       onmouseover="this.style.color='#f59e0b'"
-                              onmouseout="this.style.color=''">You can find me on Discord - Radio W Plecaku</a></div>
-    </div>
-</header>
-
+<div><a eventsnotallowed="this.style.color=''" href="https://commitpanic.github.io/SimplePersonalPage/index.html" rel="noopener noreferrer" style="color:var(--text);text-decoration:none;font-size:1rem;" target="_blank">My simple personal page</a> <a eventsnotallowed="this.style.color=''" href="https://discord.com/invite/Xvn57vA6FC" rel="noopener noreferrer" style="color:var(--text);text-decoration:none;font-size:1rem;" target="_blank">You can find me on Discord - Radio W Plecaku</a></div>
+</div>
 <!-- Main Content -->
-<main class="main-content">
-    <div class="container">
 
-        <!-- Text Section: Welcome to my QRZ Page! -->
-        <section class="welcome-section2">
-            <h2>Welcome to my QRZ Page!</h2>
-            <div class="bio-text"><div>Greetings fellow hams! I'm a passionate amateur radio operator from Poland, operating under the callsign SP3FCK. I got my license in May 2025 and since then I have been actively exploring the world of ham radio. I enjoy exploring various aspects of our wonderful hobby, from HF DXing to Parks on the Air (POTA) activations.</div><div><br></div><div>I'm learning and experimenting with antennas construction and design.</div><div><br></div><div>I enjoy every new QSO and the opportunity to meet people from all over the world.</div><div><br></div><div>Feel free to browse through my station details, check out my recent POTA activities, and explore my ham radio awards gallery below. 73 and hope to work you on the bands!</div></div>
-        </section>
+<div class="container"><!-- Text Section: Welcome to my QRZ Page! -->
+<h2>Welcome to my QRZ Page!</h2>
 
+<div class="bio-text">
+<p>Greetings fellow hams! I&#39;m a passionate amateur radio operator from Poland, operating under the callsign SP3FCK. I got my license in May 2025 and since then I have been actively exploring the world of ham radio. I enjoy many aspects of this wonderful hobby, from HF DXing to Parks on the Air (POTA) activations.</p>
 
-        <!-- Station Info Section -->
-        <section class="station-section">
-            <h2><i class="fas fa-radio"></i> Station Information</h2>
-            <div class="station-grid">
+<p>I&#39;m constantly learning and experimenting with antenna construction and design, always looking to improve my station and expand my knowledge.</p>
 
-                <div class="station-item">
-                    <h3>QTH Locator</h3>
-                    <p>JO72SG</p>
-                </div>
-                <div class="station-item">
-                    <h3>Primary Rig</h3>
-                    <p>Yaesu FT-710 AESS</p>
-                </div>
-                <div class="station-item">
-                    <h3>Antennas</h3>
-                    <p>80m-40m-20m-15m Inverted V Dipol, 10m Hex Loop, 40m-20m-15m-10m Vertical by SP3BKR</p>
-                </div>
-                <div class="station-item">
-                    <h3>2m/70cm Home Station</h3>
-                    <p>CRT Micron + Radiora X50</p>
-                </div>
-                <div class="station-item">
-                    <h3>Portable/QRP Rig</h3>
-                    <p>Xiegu G90, uSDX+ Plus V2</p>
-                </div>
-                <div class="station-item">
-                    <h3>Portable Antenna</h3>
-                    <p>End Fed Antenna HF8022 Hallo Field Day</p>
-                </div>
-            </div>
-        </section>
+<p>Professionally, I&rsquo;m a software developer, and in my free time I enjoy creating tools and software that can be useful for the amateur radio community.</p>
 
+<p>I truly enjoy every new QSO and the opportunity to meet people from all over the world.</p>
 
-        <!-- Map Section -->
-        <section class="map-section">
-            <div class="map-header">
-                <h2><i class="fas fa-map-marked-alt"></i> Ham Map</h2>
-            </div>
-            <div class="map-embed">
-                <iframe src="https://commitpanic.github.io/SimplePersonalPage/ham-map-qrz.html" title="SP3FCK Ham Map"
-                        loading="lazy"
-                        style="width:100%;height:1075px;border:0;border-radius:12px;overflow:hidden;"></iframe>
-            </div>
-        </section>
+<p>&nbsp;</p>
 
-<!-- YT-MANAGER-START -->
-<!-- YT-DATA:[{"url":"https://youtu.be/WUyYdHnW5oQ","title":"Radio Shack Story","description":"My tiny RadioShack in short clip","year":"2026"},{"url":"https://youtube.com/shorts/YGAWHB2TigA","title":"CQ CONTEST","description":"CQ WPX SSB 2026","year":"2026"},{"url":"https://www.youtube.com/shorts/XVWW8PlgofA","title":"Hex Loop - finally done","description":"First test of new antena - 10m band","year":"2026"},{"url":"https://youtube.com/shorts/At5M2ervnq0","title":"POTA and LLOTA activations","description":"Nieslysz Lake and POTA activation 01-03-2026","year":"2026"},{"url":"https://youtube.com/shorts/eikp9xD0rrA","title":"POTA and LLOTA activations","description":"My first Lake activation - Dziarg Lake 07-02-2026","year":"2026"},{"url":"https://youtube.com/shorts/b0X2-WQF0-8","title":"POTA activation","description":"POTA and SOTA activation 17-01-2026 Bukowiec Hill - Poland","year":"2026"},{"url":"https://youtube.com/shorts/eg8lsKyZFNs","title":"Making new antenna","description":"Hex Loop Antena in progress","year":"2026"}] -->
-<style>
-/* YouTube gallery CSS — auto-generated by qrz-builder */
-        #yts1:checked ~ .youtube-gallery-slides .youtube-slide-1,
-        #yts2:checked ~ .youtube-gallery-slides .youtube-slide-2,
-        #yts3:checked ~ .youtube-gallery-slides .youtube-slide-3,
-        #yts4:checked ~ .youtube-gallery-slides .youtube-slide-4,
-        #yts5:checked ~ .youtube-gallery-slides .youtube-slide-5,
-        #yts6:checked ~ .youtube-gallery-slides .youtube-slide-6,
-        #yts7:checked ~ .youtube-gallery-slides .youtube-slide-7 { opacity:1; transform:translateX(0); }
-        #yts1:checked ~ .youtube-gallery-navigation .ytnav-1,
-        #yts2:checked ~ .youtube-gallery-navigation .ytnav-2,
-        #yts3:checked ~ .youtube-gallery-navigation .ytnav-3,
-        #yts4:checked ~ .youtube-gallery-navigation .ytnav-4,
-        #yts5:checked ~ .youtube-gallery-navigation .ytnav-5,
-        #yts6:checked ~ .youtube-gallery-navigation .ytnav-6,
-        #yts7:checked ~ .youtube-gallery-navigation .ytnav-7 { display:flex; }
-</style>
-        <!-- YouTube Videos Section -->
-        <section class="youtube-section">
-            <div class="container">
-                <div class="youtube-header">
-                    <h2><i class="fab fa-youtube"></i> YouTube Videos</h2>
-                </div>
-                <div class="youtube-gallery-container">
-                    <div class="youtube-gallery-wrapper">
-                        <input type="radio" name="ytslide" id="yts1" checked style="display:none;">
-                        <input type="radio" name="ytslide" id="yts2" style="display:none;">
-                        <input type="radio" name="ytslide" id="yts3" style="display:none;">
-                        <input type="radio" name="ytslide" id="yts4" style="display:none;">
-                        <input type="radio" name="ytslide" id="yts5" style="display:none;">
-                        <input type="radio" name="ytslide" id="yts6" style="display:none;">
-                        <input type="radio" name="ytslide" id="yts7" style="display:none;">
-                        <div class="youtube-gallery-slides">
+<p>Feel free to browse through my station details, check out my recent POTA activities, and explore my ham radio awards gallery below. 73 and hope to work you on the bands!</p>
+</div>
+<!-- Station Info Section -->
 
-                            <!-- Slide 1: Radio Shack Story -->
-                            <div class="youtube-slide youtube-slide-1">
-                                <div class="youtube-card">
-                                    <a href="https://youtu.be/WUyYdHnW5oQ" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/WUyYdHnW5oQ/maxresdefault.jpg" alt="Radio Shack Story" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>Radio Shack Story</h3>
-                                        <p>My tiny RadioShack in short clip</p>
-                                        <a href="https://youtu.be/WUyYdHnW5oQ" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<h2>Station Information</h2>
 
-                            <!-- Slide 2: CQ CONTEST -->
-                            <div class="youtube-slide youtube-slide-2">
-                                <div class="youtube-card">
-                                    <a href="https://youtube.com/shorts/YGAWHB2TigA" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/YGAWHB2TigA/maxresdefault.jpg" alt="CQ CONTEST" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>CQ CONTEST</h3>
-                                        <p>CQ WPX SSB 2026</p>
-                                        <a href="https://youtube.com/shorts/YGAWHB2TigA" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<div class="station-grid">
+<div class="station-item">
+<h3>QTH Locator</h3>
 
-                            <!-- Slide 3: Hex Loop - finally done -->
-                            <div class="youtube-slide youtube-slide-3">
-                                <div class="youtube-card">
-                                    <a href="https://www.youtube.com/shorts/XVWW8PlgofA" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/XVWW8PlgofA/maxresdefault.jpg" alt="Hex Loop - finally done" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>Hex Loop - finally done</h3>
-                                        <p>First test of new antena - 10m band</p>
-                                        <a href="https://www.youtube.com/shorts/XVWW8PlgofA" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<p>JO72SG</p>
+</div>
 
-                            <!-- Slide 4: POTA and LLOTA activations -->
-                            <div class="youtube-slide youtube-slide-4">
-                                <div class="youtube-card">
-                                    <a href="https://youtube.com/shorts/At5M2ervnq0" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/At5M2ervnq0/maxresdefault.jpg" alt="POTA and LLOTA activations" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>POTA and LLOTA activations</h3>
-                                        <p>Nieslysz Lake and POTA activation 01-03-2026</p>
-                                        <a href="https://youtube.com/shorts/At5M2ervnq0" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<div class="station-item">
+<h3>Primary Rig</h3>
 
-                            <!-- Slide 5: POTA and LLOTA activations -->
-                            <div class="youtube-slide youtube-slide-5">
-                                <div class="youtube-card">
-                                    <a href="https://youtube.com/shorts/eikp9xD0rrA" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/eikp9xD0rrA/maxresdefault.jpg" alt="POTA and LLOTA activations" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>POTA and LLOTA activations</h3>
-                                        <p>My first Lake activation - Dziarg Lake 07-02-2026</p>
-                                        <a href="https://youtube.com/shorts/eikp9xD0rrA" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<p>Yaesu FT-710 AESS</p>
+</div>
 
-                            <!-- Slide 6: POTA activation -->
-                            <div class="youtube-slide youtube-slide-6">
-                                <div class="youtube-card">
-                                    <a href="https://youtube.com/shorts/b0X2-WQF0-8" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/b0X2-WQF0-8/maxresdefault.jpg" alt="POTA activation" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>POTA activation</h3>
-                                        <p>POTA and SOTA activation 17-01-2026 Bukowiec Hill - Poland</p>
-                                        <a href="https://youtube.com/shorts/b0X2-WQF0-8" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
+<div class="station-item">
+<h3>Antennas</h3>
 
-                            <!-- Slide 7: Making new antenna -->
-                            <div class="youtube-slide youtube-slide-7">
-                                <div class="youtube-card">
-                                    <a href="https://youtube.com/shorts/eg8lsKyZFNs" target="_blank" rel="noopener noreferrer" class="youtube-thumbnail-container">
-                                        <img src="https://img.youtube.com/vi/eg8lsKyZFNs/maxresdefault.jpg" alt="Making new antenna" class="youtube-thumbnail">
-                                        <div class="play-overlay"><i class="fab fa-youtube"></i></div>
-                                    </a>
-                                    <div class="youtube-info">
-                                        <h3>Making new antenna</h3>
-                                        <p>Hex Loop Antena in progress</p>
-                                        <a href="https://youtube.com/shorts/eg8lsKyZFNs" target="_blank" rel="noopener noreferrer" class="watch-btn">
-                                            <i class="fab fa-youtube"></i> Watch on YouTube
-                                        </a><br><br>
-                                        <span class="youtube-date">2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="youtube-gallery-navigation">
+<p>80m-40m-20m-15m<br />
+Inverted V Dipol, 10m Hex Loop,<br />
+40m-20m-15m-10m Vertical by SP3BKR,</p>
+</div>
 
-                            <div class="youtube-nav-set ytnav-1">
-                                <label for="yts7" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">1 / 7</div>
-                                <label for="yts2" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<div class="station-item">
+<h3>2m/70cm Home Station</h3>
 
-                            <div class="youtube-nav-set ytnav-2">
-                                <label for="yts1" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">2 / 7</div>
-                                <label for="yts3" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<p>CRT Micron + Radiora X50</p>
+</div>
 
-                            <div class="youtube-nav-set ytnav-3">
-                                <label for="yts2" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">3 / 7</div>
-                                <label for="yts4" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<div class="station-item">
+<h3>Portable/QRP Rig</h3>
 
-                            <div class="youtube-nav-set ytnav-4">
-                                <label for="yts3" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">4 / 7</div>
-                                <label for="yts5" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<p>Xiegu G90, uSDX+ Plus V2</p>
+</div>
 
-                            <div class="youtube-nav-set ytnav-5">
-                                <label for="yts4" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">5 / 7</div>
-                                <label for="yts6" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<div class="station-item">
+<h3>Portable Antenna</h3>
 
-                            <div class="youtube-nav-set ytnav-6">
-                                <label for="yts5" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">6 / 7</div>
-                                <label for="yts7" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
+<p>End Fed Antenna HF8022 Hallo Field Day</p>
+</div>
+</div>
+<!-- iFrame Section: Ham Map -->
 
-                            <div class="youtube-nav-set ytnav-7">
-                                <label for="yts6" class="youtube-arrow"><i class="fas fa-chevron-left"></i></label>
-                                <div class="youtube-slide-counter">7 / 7</div>
-                                <label for="yts1" class="youtube-arrow"><i class="fas fa-chevron-right"></i></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- YT-MANAGER-END -->
+<div class="container">
+<div class="embed-header">
+<h2>Ham Map</h2>
+</div>
 
-<!-- GAL-MANAGER-START -->
-<!-- GAL-DATA:[{"imageUrl":"https://static.qrz.com/k/sp3fck/CQWW_2025_SSB_certificate_rookie.png","alt":"CQ WW SSB Certificate Rookie\"","title":"CQ WW SSB 2025 - Rookie","description":"My result in Rookie category - 20W XieguG90","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/LLOTA_Award_LLOTA_1257_2026.jpg","alt":"LLOTA Award","title":"LLOTA Award","description":"Lakes and Lagoons On The Air","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/sp3fck.jpg","alt":"POTA Award","title":"POTA Award","description":"Polish POTA Award for activities in 2025","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/Support_Your_Parks_Activator_jpg.jpg","alt":"POTA Award","title":"POTA Award","description":"Support Your Parks Activator Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_New_Years_Activator.jpg","alt":"POTA Activator Award","title":"POTA Activator Award","description":"New Years Activator Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/_SP3FCK_POTA_New_Years_Hunter.jpg","alt":"POTA Hunter Award","title":"POTA Hunter Award","description":"New Years Hunter Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Arizona_Agave_Hunter.jpg","alt":"POTA Hunter Award","title":"POTA Hunter Award","description":"Arizona Agave Hunter - Working 100 different units","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/award_327_SP3FCK.jpg","alt":"SES Award","title":"Special Event Activator Award","description":"Thanks to all participants, 73!","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/QSL_Jimmy14_png.jpg","alt":"SES Activator Diploma","title":"Special Event Activator Diploma","description":"Confirmed activations during special events","year":"2025"}] -->
-<style>
-/* Gallery CSS — auto-generated by qrz-builder */
-        #gl-52-s1:checked ~ .gallery-slides .gslide-1,
-        #gl-52-s2:checked ~ .gallery-slides .gslide-2,
-        #gl-52-s3:checked ~ .gallery-slides .gslide-3,
-        #gl-52-s4:checked ~ .gallery-slides .gslide-4,
-        #gl-52-s5:checked ~ .gallery-slides .gslide-5,
-        #gl-52-s6:checked ~ .gallery-slides .gslide-6,
-        #gl-52-s7:checked ~ .gallery-slides .gslide-7,
-        #gl-52-s8:checked ~ .gallery-slides .gslide-8,
-        #gl-52-s9:checked ~ .gallery-slides .gslide-9 { opacity:1; transform:translateX(0); }
-        #gl-52-s1:checked ~ .gallery-navigation .gnav-1,
-        #gl-52-s2:checked ~ .gallery-navigation .gnav-2,
-        #gl-52-s3:checked ~ .gallery-navigation .gnav-3,
-        #gl-52-s4:checked ~ .gallery-navigation .gnav-4,
-        #gl-52-s5:checked ~ .gallery-navigation .gnav-5,
-        #gl-52-s6:checked ~ .gallery-navigation .gnav-6,
-        #gl-52-s7:checked ~ .gallery-navigation .gnav-7,
-        #gl-52-s8:checked ~ .gallery-navigation .gnav-8,
-        #gl-52-s9:checked ~ .gallery-navigation .gnav-9 { display:flex; }
-</style>
-        <!-- Ham Awards Gallery Section -->
-        <section class="awards-section">
-            <div class="awards-header">
-                <h2><i class="fas fa-trophy" style="color:#f59e0b;"></i> Ham Radio Awards Gallery</h2>
-            </div>
-            <div class="gallery-container">
-                <div class="gallery-wrapper" style="background:rgba(251,146,60,0.12);border:1px solid rgba(251,146,60,0.24);">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s1" checked style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s2" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s3" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s4" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s5" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s6" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s7" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s8" style="display:none;">
-                    <input type="radio" name="gl-52-slide" id="gl-52-s9" style="display:none;">
-                    <div class="gallery-slides">
+<div class="embed-frame-wrap"><iframe src="https://commitpanic.github.io/SimplePersonalPage/ham-map-qrz.html" style="width:100%;height:1071px;border:0;" title="Ham Map"></iframe></div>
+</div>
+<!-- YT-MANAGER-START --><!-- YT-DATA:[{"url":"https://youtu.be/WUyYdHnW5oQ","title":"Radio Shack Story","description":"My tiny RadioShack in short clip","year":"2026"},{"url":"https://youtube.com/shorts/YGAWHB2TigA","title":"CQ CONTEST","description":"CQ WPX SSB 2026","year":"2026"},{"url":"https://www.youtube.com/shorts/XVWW8PlgofA","title":"Hex Loop - finally done","description":"First test of new antena - 10m band","year":"2026"},{"url":"https://youtube.com/shorts/At5M2ervnq0","title":"POTA and LLOTA activations","description":"Nieslysz Lake and POTA activation 01-03-2026","year":"2026"},{"url":"https://youtube.com/shorts/eikp9xD0rrA","title":"POTA and LLOTA activations","description":"My first Lake activation - Dziarg Lake 07-02-2026","year":"2026"},{"url":"https://youtube.com/shorts/b0X2-WQF0-8","title":"POTA activation","description":"POTA and SOTA activation 17-01-2026 Bukowiec Hill - Poland","year":"2026"},{"url":"https://youtube.com/shorts/eg8lsKyZFNs","title":"Making new antenna","description":"Hex Loop Antena in progress","year":"2026"}] --><!-- YouTube Videos Section -->
 
-                        <div class="slide gslide-1">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/CQWW_2025_SSB_certificate_rookie.png" alt="CQ WW SSB Certificate Rookie&quot;" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>CQ WW SSB 2025 - Rookie</h3>
-                                    <p>My result in Rookie category - 20W XieguG90</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="container">
+<div class="youtube-header">
+<h2>YouTube Videos</h2>
+</div>
 
-                        <div class="slide gslide-2">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/LLOTA_Award_LLOTA_1257_2026.jpg" alt="LLOTA Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>LLOTA Award</h3>
-                                    <p>Lakes and Lagoons On The Air</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="youtube-gallery-container">
+<div class="youtube-gallery-wrapper"><input name="ytslide" type="radio" /> <input name="ytslide" type="radio" /> <input name="ytslide" type="radio" /> <input name="ytslide" type="radio" /> <input name="ytslide" type="radio" /> <input name="ytslide" type="radio" /> <input name="ytslide" type="radio" />
+<div class="youtube-gallery-slides"><!-- Slide 1: Radio Shack Story -->
+<div class="youtube-slide youtube-slide-1">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtu.be/WUyYdHnW5oQ" rel="noopener noreferrer" target="_blank"><img alt="Radio Shack Story" class="youtube-thumbnail" src="https://img.youtube.com/vi/WUyYdHnW5oQ/maxresdefault.jpg" /> </a>
 
-                        <div class="slide gslide-3">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/sp3fck.jpg" alt="POTA Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>POTA Award</h3>
-                                    <p>Polish POTA Award for activities in 2025</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtu.be/WUyYdHnW5oQ" rel="noopener noreferrer" target="_blank"> </a>
 
-                        <div class="slide gslide-4">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/Support_Your_Parks_Activator_jpg.jpg" alt="POTA Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>POTA Award</h3>
-                                    <p>Support Your Parks Activator Award</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="youtube-info">
+<h3>Radio Shack Story</h3>
 
-                        <div class="slide gslide-5">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_New_Years_Activator.jpg" alt="POTA Activator Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>POTA Activator Award</h3>
-                                    <p>New Years Activator Award</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<p>My tiny RadioShack in short clip</p>
+<a class="watch-btn" href="https://youtu.be/WUyYdHnW5oQ" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 2: CQ CONTEST -->
 
-                        <div class="slide gslide-6">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/_SP3FCK_POTA_New_Years_Hunter.jpg" alt="POTA Hunter Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>POTA Hunter Award</h3>
-                                    <p>New Years Hunter Award</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="youtube-slide youtube-slide-2">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtube.com/shorts/YGAWHB2TigA" rel="noopener noreferrer" target="_blank"><img alt="CQ CONTEST" class="youtube-thumbnail" src="https://img.youtube.com/vi/YGAWHB2TigA/maxresdefault.jpg" /> </a>
 
-                        <div class="slide gslide-7">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Arizona_Agave_Hunter.jpg" alt="POTA Hunter Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>POTA Hunter Award</h3>
-                                    <p>Arizona Agave Hunter - Working 100 different units</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2026</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtube.com/shorts/YGAWHB2TigA" rel="noopener noreferrer" target="_blank"> </a>
 
-                        <div class="slide gslide-8">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/award_327_SP3FCK.jpg" alt="SES Award" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>Special Event Activator Award</h3>
-                                    <p>Thanks to all participants, 73!</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2025</span>
-                                </div>
-                            </div>
-                        </div>
+<div class="youtube-info">
+<h3>CQ CONTEST</h3>
 
-                        <div class="slide gslide-9">
-                            <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/QSL_Jimmy14_png.jpg" alt="SES Activator Diploma" style="border-bottom:3px solid #fb923c;">
-                                <div class="award-info">
-                                    <h3>Special Event Activator Diploma</h3>
-                                    <p>Confirmed activations during special events</p>
-                                    <span class="award-date" style="background:#fb923c;">Year: 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-navigation">
+<p>CQ WPX SSB 2026</p>
+<a class="watch-btn" href="https://youtube.com/shorts/YGAWHB2TigA" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 3: Hex Loop - finally done -->
 
-                        <div class="gallery-nav-set gnav-1">
-                            <label for="gl-52-s9" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">1 / 9</div>
-                            <label for="gl-52-s2" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="youtube-slide youtube-slide-3">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://www.youtube.com/shorts/XVWW8PlgofA" rel="noopener noreferrer" target="_blank"><img alt="Hex Loop - finally done" class="youtube-thumbnail" src="https://img.youtube.com/vi/XVWW8PlgofA/maxresdefault.jpg" /> </a>
 
-                        <div class="gallery-nav-set gnav-2">
-                            <label for="gl-52-s1" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">2 / 9</div>
-                            <label for="gl-52-s3" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://www.youtube.com/shorts/XVWW8PlgofA" rel="noopener noreferrer" target="_blank"> </a>
 
-                        <div class="gallery-nav-set gnav-3">
-                            <label for="gl-52-s2" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">3 / 9</div>
-                            <label for="gl-52-s4" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="youtube-info">
+<h3>Hex Loop - finally done</h3>
 
-                        <div class="gallery-nav-set gnav-4">
-                            <label for="gl-52-s3" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">4 / 9</div>
-                            <label for="gl-52-s5" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<p>First test of new antena - 10m band</p>
+<a class="watch-btn" href="https://www.youtube.com/shorts/XVWW8PlgofA" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 4: POTA and LLOTA activations -->
 
-                        <div class="gallery-nav-set gnav-5">
-                            <label for="gl-52-s4" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">5 / 9</div>
-                            <label for="gl-52-s6" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="youtube-slide youtube-slide-4">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtube.com/shorts/At5M2ervnq0" rel="noopener noreferrer" target="_blank"><img alt="POTA and LLOTA activations" class="youtube-thumbnail" src="https://img.youtube.com/vi/At5M2ervnq0/maxresdefault.jpg" /> </a>
 
-                        <div class="gallery-nav-set gnav-6">
-                            <label for="gl-52-s5" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">6 / 9</div>
-                            <label for="gl-52-s7" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtube.com/shorts/At5M2ervnq0" rel="noopener noreferrer" target="_blank"> </a>
 
-                        <div class="gallery-nav-set gnav-7">
-                            <label for="gl-52-s6" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">7 / 9</div>
-                            <label for="gl-52-s8" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<div class="youtube-info">
+<h3>POTA and LLOTA activations</h3>
 
-                        <div class="gallery-nav-set gnav-8">
-                            <label for="gl-52-s7" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">8 / 9</div>
-                            <label for="gl-52-s9" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
+<p>Nieslysz Lake and POTA activation 01-03-2026</p>
+<a class="watch-btn" href="https://youtube.com/shorts/At5M2ervnq0" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 5: POTA and LLOTA activations -->
 
-                        <div class="gallery-nav-set gnav-9">
-                            <label for="gl-52-s8" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-left"></i></label>
-                            <div class="slide-counter">9 / 9</div>
-                            <label for="gl-52-s1" class="gallery-arrow" style="background:rgba(251,146,60,0.82);"><i class="fas fa-chevron-right"></i></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- GAL-MANAGER-END -->
+<div class="youtube-slide youtube-slide-5">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtube.com/shorts/eikp9xD0rrA" rel="noopener noreferrer" target="_blank"><img alt="POTA and LLOTA activations" class="youtube-thumbnail" src="https://img.youtube.com/vi/eikp9xD0rrA/maxresdefault.jpg" /> </a>
 
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtube.com/shorts/eikp9xD0rrA" rel="noopener noreferrer" target="_blank"> </a>
 
-        <!-- Propagation Section -->
-        <section class="propagation-section">
-            <div class="propagation-header">
-                <h2><i class="fas fa-image" style="color:#f59e0b;"></i>HF Propagation</h2>
-            </div>
-            <div class="propagation-widget">
-                <div class="propagation-banner">
-                    <a href="https://www.hamqsl.com/solar.html" target="_blank" rel="noopener noreferrer">
-                        <img src="https://www.hamqsl.com/solar101vhf.php" alt="HF Propagation" class="propagation-img">
-                    </a>
-                    <p class="propagation-credit">
-                        <a href="https://www.hamqsl.com/solar.html" target="_blank" rel="noopener noreferrer">
-                            HF Propagation by N0NBH
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
-</main>
+<div class="youtube-info">
+<h3>POTA and LLOTA activations</h3>
 
+<p>My first Lake activation - Dziarg Lake 07-02-2026</p>
+<a class="watch-btn" href="https://youtube.com/shorts/eikp9xD0rrA" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 6: POTA activation -->
+
+<div class="youtube-slide youtube-slide-6">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtube.com/shorts/b0X2-WQF0-8" rel="noopener noreferrer" target="_blank"><img alt="POTA activation" class="youtube-thumbnail" src="https://img.youtube.com/vi/b0X2-WQF0-8/maxresdefault.jpg" /> </a>
+
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtube.com/shorts/b0X2-WQF0-8" rel="noopener noreferrer" target="_blank"> </a>
+
+<div class="youtube-info">
+<h3>POTA activation</h3>
+
+<p>POTA and SOTA activation 17-01-2026 Bukowiec Hill - Poland</p>
+<a class="watch-btn" href="https://youtube.com/shorts/b0X2-WQF0-8" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+<!-- Slide 7: Making new antenna -->
+
+<div class="youtube-slide youtube-slide-7">
+<div class="youtube-card"><a class="youtube-thumbnail-container" href="https://youtube.com/shorts/eg8lsKyZFNs" rel="noopener noreferrer" target="_blank"><img alt="Making new antenna" class="youtube-thumbnail" src="https://img.youtube.com/vi/eg8lsKyZFNs/maxresdefault.jpg" /> </a>
+
+<div class="play-overlay">&nbsp;</div>
+<a class="youtube-thumbnail-container" href="https://youtube.com/shorts/eg8lsKyZFNs" rel="noopener noreferrer" target="_blank"> </a>
+
+<div class="youtube-info">
+<h3>Making new antenna</h3>
+
+<p>Hex Loop Antena in progress</p>
+<a class="watch-btn" href="https://youtube.com/shorts/eg8lsKyZFNs" rel="noopener noreferrer" target="_blank">Watch on YouTube </a><br />
+<br />
+<span class="youtube-date">2026</span></div>
+</div>
+</div>
+</div>
+
+<div class="youtube-gallery-navigation">
+<div class="youtube-nav-set ytnav-1">
+<div class="youtube-slide-counter">1 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-2">
+<div class="youtube-slide-counter">2 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-3">
+<div class="youtube-slide-counter">3 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-4">
+<div class="youtube-slide-counter">4 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-5">
+<div class="youtube-slide-counter">5 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-6">
+<div class="youtube-slide-counter">6 / 7</div>
+</div>
+
+<div class="youtube-nav-set ytnav-7">
+<div class="youtube-slide-counter">7 / 7</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- YT-MANAGER-END --><!-- GAL-MANAGER-START --><!-- GAL-DATA:[{"imageUrl":"https://static.qrz.com/k/sp3fck/CQWW_2025_SSB_certificate_rookie.png","alt":"CQ WW SSB Certificate Rookie","title":"CQ WW SSB 2025 - Rookie","description":"My result in Rookie category - 20W XieguG90","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_CQWW_2025_SSB_certificate.png","alt":"CQ WW SSB Certificate","title":"CQ WW SSB 2025","description":"My first attempt at the CQ contest - 20W XieguG90","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/LLOTA_Award_LLOTA_1257_2026.jpg","alt":"LLOTA Award","title":"LLOTA Award","description":"Lakes and Lagoons On The Air","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/sp3fck.jpg","alt":"POTA Award","title":"POTA Award","description":"Polish POTA Award for activities in 2025","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/Support_Your_Parks_Activator_jpg.jpg","alt":"POTA Award","title":"POTA Award","description":"Support Your Parks Activator Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_New_Years_Activator.jpg","alt":"POTA Activator Award","title":"POTA Activator Award","description":"New Years Activator Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/_SP3FCK_POTA_New_Years_Hunter.jpg","alt":"POTA Hunter Award","title":"POTA Hunter Award","description":"New Years Hunter Award","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Park_to_Park.jpg","alt":"POTA Park to Park Award","title":"POTA Park to Park Award","description":"25 Park To Park QSO's","year":"2026"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Arizona_Agave_Hunter.jpg","alt":"POTA Hunter Award","title":"POTA Hunter Award","description":"Arizona Agave Hunter - Working 100 different units","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/award_327_SP3FCK.jpg","alt":"SES Award","title":"Special Event Activator Award","description":"Thanks to all participants, 73!","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/award_210_SP3FCK.jpg","alt":"SES Award","title":"Special Event Award","description":"Confirmed contacts during special events","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Diamond_Hunter_1.jpg","alt":"POTA Hunter Award","title":"POTA Hunter Award","description":"Working 50 different units","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/SP3FCK_POTA_DX_Hunter_1.jpg","alt":"POTA DX Hunter Award","title":"POTA DX Hunter Award","description":"Hunting 5 different DX Entities","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/POTA_Support_Your_Parks_Hunter_1.jpg","alt":"POTA Award","title":"POTA Award","description":"Making Any Contacts as a Hunter During a Support Your Parks Event","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/award_116_SP3FCK_1.jpg","alt":"SES Award","title":"Special Event Award","description":"Confirmed contacts during special events","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/award_164_SP3FCK_1.jpg","alt":"SES Award","title":"Special Event Award","description":"Confirmed contacts during special events","year":"2025"},{"imageUrl":"https://static.qrz.com/k/sp3fck/QSL_Jimmy14_png.jpg","alt":"SES Activator Diploma","title":"Special Event Activator Diploma","description":"Confirmed activations during special events","year":"2025"}] --><!-- Ham Awards Gallery Section -->
+
+<div class="awards-header">
+<h2>Ham Radio Awards Gallery</h2>
+</div>
+
+<div class="gallery-container">
+<div class="gallery-wrapper" style="background:rgba(37,99,235,0.12); border:1px solid rgba(37,99,235,0.24)"><input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" /> <input name="gl-13-slide" type="radio" />
+<div class="gallery-slides">
+<div class="gslide-1 slide">
+<div class="award-card"><img alt="CQ WW SSB Certificate Rookie" src="https://static.qrz.com/k/sp3fck/CQWW_2025_SSB_certificate_rookie.png" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>CQ WW SSB 2025 - Rookie</h3>
+
+<p>My result in Rookie category - 20W XieguG90</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-2 slide">
+<div class="award-card"><img alt="CQ WW SSB Certificate" src="https://static.qrz.com/k/sp3fck/SP3FCK_CQWW_2025_SSB_certificate.png" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>CQ WW SSB 2025</h3>
+
+<p>My first attempt at the CQ contest - 20W XieguG90</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-3 slide">
+<div class="award-card"><img alt="LLOTA Award" src="https://static.qrz.com/k/sp3fck/LLOTA_Award_LLOTA_1257_2026.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>LLOTA Award</h3>
+
+<p>Lakes and Lagoons On The Air</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-4 slide">
+<div class="award-card"><img alt="POTA Award" src="https://static.qrz.com/k/sp3fck/sp3fck.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Award</h3>
+
+<p>Polish POTA Award for activities in 2025</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-5 slide">
+<div class="award-card"><img alt="POTA Award" src="https://static.qrz.com/k/sp3fck/Support_Your_Parks_Activator_jpg.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Award</h3>
+
+<p>Support Your Parks Activator Award</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-6 slide">
+<div class="award-card"><img alt="POTA Activator Award" src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_New_Years_Activator.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Activator Award</h3>
+
+<p>New Years Activator Award</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-7 slide">
+<div class="award-card"><img alt="POTA Hunter Award" src="https://static.qrz.com/k/sp3fck/_SP3FCK_POTA_New_Years_Hunter.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Hunter Award</h3>
+
+<p>New Years Hunter Award</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-8 slide">
+<div class="award-card"><img alt="POTA Park to Park Award" src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Park_to_Park.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Park to Park Award</h3>
+
+<p>25 Park To Park QSO&#39;s</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2026</span></div>
+</div>
+</div>
+
+<div class="gslide-9 slide">
+<div class="award-card"><img alt="POTA Hunter Award" src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Arizona_Agave_Hunter.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Hunter Award</h3>
+
+<p>Arizona Agave Hunter - Working 100 different units</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-10 slide">
+<div class="award-card"><img alt="SES Award" src="https://static.qrz.com/k/sp3fck/award_327_SP3FCK.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>Special Event Activator Award</h3>
+
+<p>Thanks to all participants, 73!</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-11 slide">
+<div class="award-card"><img alt="SES Award" src="https://static.qrz.com/k/sp3fck/award_210_SP3FCK.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>Special Event Award</h3>
+
+<p>Confirmed contacts during special events</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-12 slide">
+<div class="award-card"><img alt="POTA Hunter Award" src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_Diamond_Hunter_1.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Hunter Award</h3>
+
+<p>Working 50 different units</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-13 slide">
+<div class="award-card"><img alt="POTA DX Hunter Award" src="https://static.qrz.com/k/sp3fck/SP3FCK_POTA_DX_Hunter_1.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA DX Hunter Award</h3>
+
+<p>Hunting 5 different DX Entities</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-14 slide">
+<div class="award-card"><img alt="POTA Award" src="https://static.qrz.com/k/sp3fck/POTA_Support_Your_Parks_Hunter_1.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>POTA Award</h3>
+
+<p>Making Any Contacts as a Hunter During a Support Your Parks Event</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-15 slide">
+<div class="award-card"><img alt="SES Award" src="https://static.qrz.com/k/sp3fck/award_116_SP3FCK_1.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>Special Event Award</h3>
+
+<p>Confirmed contacts during special events</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-16 slide">
+<div class="award-card"><img alt="SES Award" src="https://static.qrz.com/k/sp3fck/award_164_SP3FCK_1.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>Special Event Award</h3>
+
+<p>Confirmed contacts during special events</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+
+<div class="gslide-17 slide">
+<div class="award-card"><img alt="SES Activator Diploma" src="https://static.qrz.com/k/sp3fck/QSL_Jimmy14_png.jpg" style="border-bottom:3px solid #2563eb" />
+<div class="award-info">
+<h3>Special Event Activator Diploma</h3>
+
+<p>Confirmed activations during special events</p>
+<span class="award-date" style="background-color:#2563eb">Year: 2025</span></div>
+</div>
+</div>
+</div>
+
+<div class="gallery-navigation">
+<div class="gallery-nav-set gnav-1">
+<div class="slide-counter">1 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-2">
+<div class="slide-counter">2 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-3">
+<div class="slide-counter">3 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-4">
+<div class="slide-counter">4 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-5">
+<div class="slide-counter">5 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-6">
+<div class="slide-counter">6 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-7">
+<div class="slide-counter">7 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-8">
+<div class="slide-counter">8 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-9">
+<div class="slide-counter">9 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-10">
+<div class="slide-counter">10 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-11">
+<div class="slide-counter">11 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-12">
+<div class="slide-counter">12 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-13">
+<div class="slide-counter">13 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-14">
+<div class="slide-counter">14 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-15">
+<div class="slide-counter">15 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-16">
+<div class="slide-counter">16 / 17</div>
+</div>
+
+<div class="gallery-nav-set gnav-17">
+<div class="slide-counter">17 / 17</div>
+</div>
+</div>
+</div>
+</div>
+<!-- GAL-MANAGER-END --><!-- iFrame Section: POTA -->
+
+<div class="container">
+<div class="embed-header">
+<h2>POTA</h2>
+</div>
+
+<div class="embed-frame-wrap"><iframe src="https://pota-stats.wd4dan.net/?call=SP3FCK" style="width:85%;height:1220px;border:0;" title="POTA"></iframe></div>
+</div>
+<!-- Quick Links Section -->
+
+<div class="container">
+<div class="quick-links-header">
+<h2>Quick Links</h2>
+</div>
+
+<div class="quick-links-list"><a class="quick-link-btn" href="https://commitpanic.github.io/SimplePersonalPage/qrz-builder" rel="noopener noreferrer" style="background:#403e3b;" target="_blank">Like my QRZ bio page? Create your own using my custom builder! </a> <a class="quick-link-btn" href="https://radiodyplom.pl" rel="noopener noreferrer" style="background:#576fb7;" target="_blank"> RadioDyplom.pl - best SES manager </a></div>
+</div>
+<!-- Propagation Section -->
+
+<div class="propagation-header">
+<h2>Propagation</h2>
+</div>
+
+<div class="propagation-widget">
+<div class="propagation-banner"><a href="https://www.hamqsl.com/solar.html" rel="noopener noreferrer" target="_blank"><img alt="Propagation" class="propagation-img" src="https://www.hamqsl.com/solar101vhf.php" /> <img alt="Solar Map" class="propagation-img" src="https://www.hamqsl.com/solarmap.php" style="margin-top:15px" /> </a>
+
+<p class="propagation-credit"><a href="https://www.hamqsl.com/solar.html" rel="noopener noreferrer" target="_blank">HF Propagation by N0NBH </a></p>
+</div>
+</div>
+<!-- Propagation Section -->
+
+<div class="propagation-header">
+<h2>Visitors</h2>
+</div>
+
+<div class="propagation-widget">
+<div class="propagation-banner"><a href="https://info.flagcounter.com/WIzJ" rel="noopener noreferrer" target="_blank"><img alt="Visitors" class="propagation-img" src="https://s01.flagcounter.com/count2/WIzJ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_100/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" /> </a>
+
+<p class="propagation-credit"><a href="https://info.flagcounter.com/WIzJ" rel="noopener noreferrer" target="_blank">Flag Counter </a></p>
+</div>
+</div>
+</div>
 <!-- Footer -->
-<footer class="footer">
-    <p>Generated by QRZ Page Builder &bull; 73 de SP3FCK</p>
-</footer>
 
-</div><!-- end wrapper -->
-<!-- End QRZ.com Bio Page Content -->
+<p>Generated by QRZ Page Builder &bull; 73 de SP3FCK</p>
+</div>
+<!-- end wrapper --><!-- End QRZ.com Bio Page Content -->
