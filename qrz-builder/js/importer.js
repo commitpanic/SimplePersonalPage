@@ -110,7 +110,10 @@ export function importFromHtml(htmlText, projectId) {
         '.propagation-widget',
     ].join(', ');
 
-    root.querySelectorAll(ORDER_SELECTOR).forEach(el => {
+    const _orderedEls = Array.from(root.querySelectorAll(ORDER_SELECTOR));
+    console.log('[importer] DOM order:', _orderedEls.map(e => e.className.split(' ')[0] + (e.querySelector('h2') ? ':"' + e.querySelector('h2').textContent.trim().slice(0,30) + '"' : '')));
+
+    _orderedEls.forEach(el => {
 
         // ── Text / Bio ──────────────────────────────────────────────────────
         if (el.matches('.welcome-section, .welcome-section2')) {
