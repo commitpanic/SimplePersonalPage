@@ -455,16 +455,19 @@ async function exportFile() {
         return;
     }
 
+    // Always prompt for save location so user always knows where the file goes.
+    // Use the current filename (if known) as the suggested name.
+    const suggestedName = fileHandle ? fileHandle.name : 'qrz_bio.html';
     try {
-        if (fileHandle) {
-            await writeToHandle(fileHandle, html);
-            setStatus('File saved successfully.', 'success');
+        const result = await saveAsHtmlFile(html, suggestedName);
+        if (!result) { setStatus('Export cancelled.', ''); return; }
+        fileHandle = result.handle; // null for Firefox (Blob download)
+        const label = document.getElementById('topbar-file-label');
+        if (label) label.textContent = result.name;
+        if (result.handle) {
+            setStatus('Saved: ' + result.name, 'success');
         } else {
-            const handle = await saveAsHtmlFile(html, 'qrz_bio.html');
-            if (handle) {
-                fileHandle = handle;
-                setStatus('File saved successfully.', 'success');
-            }
+            setStatus('Downloaded: ' + result.name + ' (check your Downloads folder)', 'success');
         }
     } catch (e) {
         setStatus('Save error: ' + e.message, 'error');

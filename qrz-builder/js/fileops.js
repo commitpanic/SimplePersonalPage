@@ -100,7 +100,7 @@ export async function saveAsHtmlFile(text, suggestedName = 'qrz_bio.html') {
                 types: FILE_TYPES
             });
             await writeToHandle(handle, text);
-            return handle;
+            return { handle, name: handle.name };
         } catch (e) {
             if (e.name === 'AbortError') return null;
             throw e;
@@ -117,6 +117,6 @@ export async function saveAsHtmlFile(text, suggestedName = 'qrz_bio.html') {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    // No writable handle available via download – return null
-    return null;
+    // No writable handle via download – return object with name so caller can display it
+    return { handle: null, name: suggestedName };
 }
