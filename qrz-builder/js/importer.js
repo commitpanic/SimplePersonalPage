@@ -90,186 +90,170 @@ export function importFromHtml(htmlText, projectId) {
         });
     }
 
-    // 2. Text / Bio ──────────────────────────────────────────────────────────
-    const welcomeEl = root.querySelector('.welcome-section, .welcome-section2');
-    if (welcomeEl) {
-        const heading = welcomeEl.querySelector('h2')?.textContent.trim() || 'Welcome';
-        const bioEl   = welcomeEl.querySelector('.bio-text, .special-text');
-        const content = bioEl ? bioEl.innerHTML.trim() : welcomeEl.innerHTML;
-        sections.push({
-            type:  'text',
-            title: heading,
-            data:  { content },
-        });
-    }
-
-    // 3. Station Info ────────────────────────────────────────────────────────
-    const stationEl = root.querySelector('.station-section');
-    if (stationEl) {
-        const items = [];
-        stationEl.querySelectorAll('.station-item').forEach(item => {
-            const key   = item.querySelector('h3')?.textContent.trim() || '';
-            const value = item.querySelector('p')?.textContent.trim()  || '';
-            if (key) items.push({ key, value });
-        });
-        sections.push({
-            type:  'station',
-            title: 'Station Information',
-            data:  { items },
-        });
-    }
-
-    // 4. Embedded iframes (.embed-section) ────────────────────────────────────
-    root.querySelectorAll('.embed-section').forEach(embedEl => {
-        const iframeEl   = embedEl.querySelector('iframe');
-        const titleH2    = embedEl.querySelector('.embed-header h2');
-        const iconEl     = titleH2?.querySelector('i');
-        const icon_class = iconEl ? iconEl.className : 'fas fa-puzzle-piece';
-        const iconStyle  = iconEl?.getAttribute('style') || '';
-        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
-        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
-        // title = h2 text nodes only (skip icon text)
-        const sectionTitle = titleH2
-            ? Array.from(titleH2.childNodes)
-                .filter(n => n.nodeType === 3)
-                .map(n => n.textContent.trim())
-                .join('').trim() || section_title_from_iframe(iframeEl)
-            : section_title_from_iframe(iframeEl);
-        const iframeStyle = iframeEl?.getAttribute('style') || '';
-        const heightMatch = iframeStyle.match(/height\s*:\s*([^;]+)/);
-        const widthMatch  = iframeStyle.match(/width\s*:\s*([^;]+)/);
-        sections.push({
-            type:  'iframe',
-            title: sectionTitle,
-            data:  {
-                src:        iframeEl?.getAttribute('src')   || '',
-                title:      iframeEl?.getAttribute('title') || '',
-                icon_class,
-                icon_color,
-                width:      (widthMatch  ? widthMatch[1].trim()  : null) || '100%',
-                height:     (heightMatch ? heightMatch[1].trim() : null) || '400px',
-            },
-        });
-    });
-
-    // 4b. Legacy Ham Map (.map-section) ────────────────────────────────────── 
-    const mapEl = root.querySelector('.map-section');
-    if (mapEl) {
-        const iframeEl    = mapEl.querySelector('iframe');
-        const iframe_src  = iframeEl?.getAttribute('src')   || '';
-        const iframe_title = iframeEl?.getAttribute('title') || '';
-        const heightAttr  = iframeEl?.style?.height || iframeEl?.getAttribute('height') || '';
-        const height      = parseInt(heightAttr, 10) || 1125;
-        sections.push({
-            type:  'map',
-            title: 'Ham Map',
-            data:  { iframe_src, iframe_title, height },
-        });
-    }
-
-    // 5. YouTube Gallery ─────────────────────────────────────────────────────
-    const ytDataMatch = htmlText.match(YT_DATA_RE);
-    const ytSlides    = ytDataMatch ? _parseJson(ytDataMatch[1], []) : _parseYtFromDom(root);
-    if (ytSlides.length > 0 || root.querySelector('.youtube-section')) {
-        sections.push({
-            type:  'youtube',
-            title: 'YouTube Videos',
-            data:  { slides: ytSlides },
-        });
-    }
-
-    // 6. Awards Gallery ──────────────────────────────────────────────────────
+    // Pre-parse YouTube / Gallery data from JSON comments (for fast-path)
+    const ytDataMatch  = htmlText.match(YT_DATA_RE);
     const galDataMatch = htmlText.match(GAL_DATA_RE);
-    const galSlides    = galDataMatch ? _parseJson(galDataMatch[1], []) : _parseGalFromDom(root);
-    if (galSlides.length > 0 || root.querySelector('.awards-section')) {
-        sections.push({
-            type:  'gallery',
-            title: 'Ham Radio Awards Gallery',
-            data:  { slides: galSlides },
-        });
-    }
+    const ytSlidesData  = ytDataMatch  ? _parseJson(ytDataMatch[1],  []) : null; // null → parse from DOM
+    const galSlidesData = galDataMatch ? _parseJson(galDataMatch[1], []) : null;
 
-    // 7. Quick Links ──────────────────────────────────────────────────────────
-    const linksEl = root.querySelector('.quick-links-section');
-    if (linksEl) {
-        const titleH2    = linksEl.querySelector('.quick-links-header h2');
-        const iconEl     = titleH2?.querySelector('i');
-        const icon_class = iconEl ? iconEl.className : 'fas fa-link';
-        const iconStyle  = iconEl?.getAttribute('style') || '';
-        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
-        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
-        const sectionTitle = titleH2
-            ? Array.from(titleH2.childNodes)
-                .filter(n => n.nodeType === 3)
-                .map(n => n.textContent.trim())
-                .join('').trim() || 'Quick Links'
-            : 'Quick Links';
-        const links = [];
-        linksEl.querySelectorAll('.quick-link-btn').forEach(btn => {
-            const label    = btn.textContent.trim();
-            const url      = btn.getAttribute('href') || '';
-            const bgMatch  = (btn.getAttribute('style') || '').match(/background\s*:\s*([^;]+)/);
-            const btn_color = bgMatch ? bgMatch[1].trim() : '#2563eb';
-            if (label && url) links.push({ label, url, btn_color });
-        });
-        sections.push({
-            type:  'links',
-            title: sectionTitle,
-            data:  { icon_class, icon_color, links },
-        });
-    }
+    // Walk all content sections in document order so the imported list
+    // matches the visual order in the original file.
+    const ORDER_SELECTOR = [
+        '.welcome-section', '.welcome-section2',
+        '.station-section',
+        '.embed-section',
+        '.map-section',
+        '.youtube-section',
+        '.awards-section',
+        '.quick-links-section',
+        '.propagation-section',
+        '.propagation-widget',
+    ].join(', ');
 
-    // 8. Propagation / Embedded Img (all instances) ─────────────────────────
-    root.querySelectorAll('.propagation-section').forEach(propEl => {
-        const imgs       = propEl.querySelectorAll('.propagation-img, img');
-        const imgEl      = imgs[0] || null;
-        const img2El     = imgs[1] || null;
-        const creditEl   = propEl.querySelector('.propagation-credit');
-        const creditLink = creditEl?.querySelector('a');
-        const titleH2    = propEl.querySelector('.propagation-header h2');
-        const iconEl     = titleH2?.querySelector('i');
-        const iconStyle  = iconEl?.getAttribute('style') || '';
-        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
-        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
-        const propTitle  = titleH2
-            ? Array.from(titleH2.childNodes)
-                .filter(n => n.nodeType === 3)
-                .map(n => n.textContent.trim())
-                .join('').trim() || 'Embedded Img'
-            : 'Embedded Img';
-        sections.push({
-            type:  'propagation',
-            title: propTitle,
-            data:  {
-                icon_class:  iconEl ? iconEl.className : 'fas fa-image',
-                icon_color,
-                img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
-                img2_url:    img2El?.getAttribute('src') || '',
-                credit_text: creditEl?.textContent.trim() || '',
-                credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
-            },
-        });
-    });
-    // Legacy: standalone .propagation-widget not wrapped in .propagation-section
-    root.querySelectorAll('.propagation-widget').forEach(widgetEl => {
-        if (widgetEl.closest('.propagation-section')) return; // already handled above
-        const imgs       = widgetEl.querySelectorAll('.propagation-img, img');
-        const imgEl      = imgs[0] || null;
-        const img2El     = imgs[1] || null;
-        const creditEl   = widgetEl.querySelector('.propagation-credit');
-        const creditLink = creditEl?.querySelector('a');
-        sections.push({
-            type:  'propagation',
-            title: 'Embedded Img',
-            data:  {
-                icon_class:  'fas fa-image',
-                icon_color:  '#be954e',
-                img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
-                img2_url:    img2El?.getAttribute('src') || '',
-                credit_text: creditEl?.textContent.trim() || '',
-                credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
-            },
-        });
+    root.querySelectorAll(ORDER_SELECTOR).forEach(el => {
+
+        // ── Text / Bio ──────────────────────────────────────────────────────
+        if (el.matches('.welcome-section, .welcome-section2')) {
+            const heading = el.querySelector('h2')?.textContent.trim() || 'Welcome';
+            const bioEl   = el.querySelector('.bio-text, .special-text');
+            const content = bioEl ? bioEl.innerHTML.trim() : el.innerHTML;
+            sections.push({ type: 'text', title: heading, data: { content } });
+
+        // ── Station Info ────────────────────────────────────────────────────
+        } else if (el.matches('.station-section')) {
+            const items = [];
+            el.querySelectorAll('.station-item').forEach(item => {
+                const key   = item.querySelector('h3')?.textContent.trim() || '';
+                const value = item.querySelector('p')?.textContent.trim()  || '';
+                if (key) items.push({ key, value });
+            });
+            sections.push({ type: 'station', title: 'Station Information', data: { items } });
+
+        // ── Embedded iframe (.embed-section) ───────────────────────────────
+        } else if (el.matches('.embed-section')) {
+            const iframeEl   = el.querySelector('iframe');
+            const titleH2    = el.querySelector('.embed-header h2');
+            const iconEl     = titleH2?.querySelector('i');
+            const icon_class = iconEl ? iconEl.className : 'fas fa-puzzle-piece';
+            const iconStyle  = iconEl?.getAttribute('style') || '';
+            const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+            const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const sectionTitle = titleH2
+                ? Array.from(titleH2.childNodes)
+                    .filter(n => n.nodeType === 3)
+                    .map(n => n.textContent.trim())
+                    .join('').trim() || section_title_from_iframe(iframeEl)
+                : section_title_from_iframe(iframeEl);
+            const iframeStyle = iframeEl?.getAttribute('style') || '';
+            const heightMatch = iframeStyle.match(/height\s*:\s*([^;]+)/);
+            const widthMatch  = iframeStyle.match(/width\s*:\s*([^;]+)/);
+            sections.push({
+                type:  'iframe',
+                title: sectionTitle,
+                data:  {
+                    src:        iframeEl?.getAttribute('src')   || '',
+                    title:      iframeEl?.getAttribute('title') || '',
+                    icon_class,
+                    icon_color,
+                    width:      (widthMatch  ? widthMatch[1].trim()  : null) || '100%',
+                    height:     (heightMatch ? heightMatch[1].trim() : null) || '400px',
+                },
+            });
+
+        // ── Legacy Ham Map (.map-section) ───────────────────────────────────
+        } else if (el.matches('.map-section')) {
+            const iframeEl     = el.querySelector('iframe');
+            const iframe_src   = iframeEl?.getAttribute('src')   || '';
+            const iframe_title = iframeEl?.getAttribute('title') || '';
+            const heightAttr   = iframeEl?.style?.height || iframeEl?.getAttribute('height') || '';
+            const height       = parseInt(heightAttr, 10) || 1125;
+            sections.push({ type: 'map', title: 'Ham Map', data: { iframe_src, iframe_title, height } });
+
+        // ── YouTube Gallery ─────────────────────────────────────────────────
+        } else if (el.matches('.youtube-section')) {
+            const slides = ytSlidesData !== null ? ytSlidesData : _parseYtFromDom(root);
+            sections.push({ type: 'youtube', title: 'YouTube Videos', data: { slides } });
+
+        // ── Awards Gallery ──────────────────────────────────────────────────
+        } else if (el.matches('.awards-section')) {
+            const slides = galSlidesData !== null ? galSlidesData : _parseGalFromDom(root);
+            sections.push({ type: 'gallery', title: 'Ham Radio Awards Gallery', data: { slides } });
+
+        // ── Quick Links ─────────────────────────────────────────────────────
+        } else if (el.matches('.quick-links-section')) {
+            const titleH2    = el.querySelector('.quick-links-header h2');
+            const iconEl     = titleH2?.querySelector('i');
+            const icon_class = iconEl ? iconEl.className : 'fas fa-link';
+            const iconStyle  = iconEl?.getAttribute('style') || '';
+            const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+            const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const sectionTitle = titleH2
+                ? Array.from(titleH2.childNodes)
+                    .filter(n => n.nodeType === 3)
+                    .map(n => n.textContent.trim())
+                    .join('').trim() || 'Quick Links'
+                : 'Quick Links';
+            const links = [];
+            el.querySelectorAll('.quick-link-btn').forEach(btn => {
+                const label     = btn.textContent.trim();
+                const url       = btn.getAttribute('href') || '';
+                const bgMatch   = (btn.getAttribute('style') || '').match(/background\s*:\s*([^;]+)/);
+                const btn_color = bgMatch ? bgMatch[1].trim() : '#2563eb';
+                if (label && url) links.push({ label, url, btn_color });
+            });
+            sections.push({ type: 'links', title: sectionTitle, data: { icon_class, icon_color, links } });
+
+        // ── Propagation / Embedded Img (.propagation-section) ──────────────
+        } else if (el.matches('.propagation-section')) {
+            const imgs       = el.querySelectorAll('.propagation-img, img');
+            const imgEl      = imgs[0] || null;
+            const img2El     = imgs[1] || null;
+            const creditEl   = el.querySelector('.propagation-credit');
+            const creditLink = creditEl?.querySelector('a');
+            const titleH2    = el.querySelector('.propagation-header h2');
+            const iconEl     = titleH2?.querySelector('i');
+            const iconStyle  = iconEl?.getAttribute('style') || '';
+            const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+            const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const propTitle  = titleH2
+                ? Array.from(titleH2.childNodes)
+                    .filter(n => n.nodeType === 3)
+                    .map(n => n.textContent.trim())
+                    .join('').trim() || 'Embedded Img'
+                : 'Embedded Img';
+            sections.push({
+                type:  'propagation',
+                title: propTitle,
+                data:  {
+                    icon_class:  iconEl ? iconEl.className : 'fas fa-image',
+                    icon_color,
+                    img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
+                    img2_url:    img2El?.getAttribute('src') || '',
+                    credit_text: creditEl?.textContent.trim() || '',
+                    credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
+                },
+            });
+
+        // ── Legacy .propagation-widget not wrapped in .propagation-section ──
+        } else if (el.matches('.propagation-widget') && !el.closest('.propagation-section')) {
+            const imgs       = el.querySelectorAll('.propagation-img, img');
+            const imgEl      = imgs[0] || null;
+            const img2El     = imgs[1] || null;
+            const creditEl   = el.querySelector('.propagation-credit');
+            const creditLink = creditEl?.querySelector('a');
+            sections.push({
+                type:  'propagation',
+                title: 'Embedded Img',
+                data:  {
+                    icon_class:  'fas fa-image',
+                    icon_color:  '#be954e',
+                    img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
+                    img2_url:    img2El?.getAttribute('src') || '',
+                    credit_text: creditEl?.textContent.trim() || '',
+                    credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
+                },
+            });
+        }
     });
 
     // Write to DB
