@@ -416,7 +416,6 @@ function refreshPreview(themeOverride = null) {
 // ── Import ─────────────────────────────────────────────────────────────────────
 async function importFile() {
     if (!activeProjectId) { alert('Open or create a project first.'); return; }
-    if (!isFileApiSupported()) { alert('File System Access API requires Chrome or Edge.'); return; }
 
     setStatus('Opening file picker…', 'info');
     let result;
@@ -446,7 +445,6 @@ async function importFile() {
 // ── Export ─────────────────────────────────────────────────────────────────────
 async function exportFile() {
     if (!activeProjectId) return;
-    if (!isFileApiSupported()) { alert('File System Access API requires Chrome or Edge.'); return; }
 
     setStatus('Generating HTML…', 'info');
     let html;
