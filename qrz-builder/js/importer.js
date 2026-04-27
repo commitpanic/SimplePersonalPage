@@ -43,9 +43,34 @@ export function importFromHtml(htmlText, projectId) {
         headerEl.querySelectorAll('a').forEach(a => {
             const href = a.getAttribute('href') || '';
             if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+            // Skip location/maps links and links containing images (logo)
+            if (a.closest('.location') || a.querySelector('img')) return;
             const label = a.textContent.trim();
-            const iconEl2 = a.querySelector('i');
-            if (label) links.push({ icon: iconEl2 ? iconEl2.className : 'fas fa-link', label, url: href });
+            if (!label) return;
+
+            // Icon can be inside <a> OR as a preceding sibling <i>
+            let iconEl2    = a.querySelector('i');
+            let icon_color = '';
+            if (!iconEl2) {
+                let prev = a.previousSibling;
+                while (prev) {
+                    if (prev.nodeType === 1 /* Element */) {
+                        if (prev.tagName === 'I') iconEl2 = prev;
+                        break;
+                    }
+                    prev = prev.previousSibling;
+                }
+            }
+            if (iconEl2) {
+                const cm = (iconEl2.getAttribute('style') || '').match(/color\s*:\s*([^;]+)/);
+                icon_color = cm ? cm[1].trim() : '';
+            }
+            links.push({
+                icon:       iconEl2 ? iconEl2.className : 'fas fa-link',
+                icon_color,
+                label,
+                url: href,
+            });
         });
 
         sections.push({
@@ -227,6 +252,13 @@ export function importFromHtml(htmlText, projectId) {
 
     // Write to DB
     replaceSections(projectId, sections);
+
+    // Parse :root CSS variables → theme
+    const theme = _parseThemeFromCss(htmlText);
+    if (Object.keys(theme).length > 0) {
+        replaceTheme(projectId, theme);
+    }
+
     return sections.length;
 }
 
@@ -312,4 +344,39 @@ function _textContent(parent, selectors) {
 
 function _parseJson(str, fallback) {
     try { return JSON.parse(str); } catch { return fallback; }
+}
+
+function _parseThemeFromCss(htmlText) {
+    // Extract the first :root { … } block from inline <style> tags
+    const rootMatch = htmlText.match(/:root\s*\{([^}]+)\}/);
+    if (!rootMatch) return {};
+
+    const block = rootMatch[1];
+    const get = (varName) => {
+        const m = block.match(new RegExp(varName + '\\s*:\\s*([^;]+)'));
+        return m ? m[1].trim() : null;
+    };
+
+    const theme = {};
+    const primary   = get('--primary');
+    const secondary = get('--secondary');
+    const bg        = get('--bg');
+    const text      = get('--text');
+    const accent    = get('--accent');
+    const h2Color   = get('--h2-color');
+    const sectionBg = get('--section-bg');
+    const headerBg  = get('--header-bg');
+    const headerTxt = get('--header-text');
+
+    if (primary)   theme.primary_color   = primary;
+    if (secondary) theme.secondary_color = secondary;
+    if (bg)        theme.bg_color        = bg;
+    if (text)      theme.text_color      = text;
+    if (accent)    theme.accent_color    = accent;
+    if (h2Color)   theme.h2_color        = h2Color;
+    if (sectionBg) theme.section_bg      = sectionBg;
+    if (headerBg)  theme.header_bg       = headerBg;
+    if (headerTxt) theme.header_text_color = headerTxt;
+
+    return theme;
 }
