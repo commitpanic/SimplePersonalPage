@@ -436,8 +436,11 @@ async function importFile() {
         renderSectionList();
         showWelcomeCanvas();
         refreshPreview();
+        saveDb();
         setStatus(`Imported "${result.name}" — ${count} sections loaded.`, 'success');
     } catch (e) {
+        // Even if import partially failed, refresh the list so any saved sections are visible
+        renderSectionList();
         setStatus('Import error: ' + e.message, 'error');
     }
 }

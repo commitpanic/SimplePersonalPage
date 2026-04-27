@@ -20,6 +20,10 @@ export function importFromHtml(htmlText, projectId) {
     const parser = new DOMParser();
     const doc    = parser.parseFromString(htmlText, 'text/html');
 
+    // Scope searches to <main class="main-content"> to avoid the QRZ
+    // double-render copy that appears at the bottom of uploaded files.
+    const root = doc.querySelector('main.main-content') || doc;
+
     const sections = [];
 
     // 1. Header ─────────────────────────────────────────────────────────────
@@ -29,9 +33,15 @@ export function importFromHtml(htmlText, projectId) {
         const locEl     = headerEl.querySelector('.location');
         const location  = locEl  ? _textContent(locEl, ['.location a', '.location span']) : '';
         const mapsLinkEl = locEl  ? locEl.querySelector('a[href*="maps.google"], a[href*="google.com/maps"]') : null;
-        const maps_url  = mapsLinkEl ? mapsLinkEl.href : (location ? 'https://maps.google.com/?q=' + encodeURIComponent(location) : '');
+        const maps_url  = mapsLinkEl ? (mapsLinkEl.getAttribute('href') || '') : (location ? 'https://maps.google.com/?q=' + encodeURIComponent(location) : '');
+        // Email: look for mailto: link first, then fall back to span text containing '@'
         const emailEl   = headerEl.querySelector('[href^="mailto:"]');
-        const email     = emailEl ? emailEl.href.replace('mailto:', '') : '';
+        let   email     = emailEl ? emailEl.getAttribute('href').replace('mailto:', '') : '';
+        if (!email && locEl) {
+            locEl.querySelectorAll('span').forEach(span => {
+                if (!email && span.textContent.includes('@')) email = span.textContent.trim();
+            });
+        }
         const logoEl    = headerEl.querySelector('img');
         const logo_url  = logoEl  ? logoEl.getAttribute('src') || '' : '';
         const iconEl    = headerEl.querySelector('.radio-icon i');
@@ -81,7 +91,7 @@ export function importFromHtml(htmlText, projectId) {
     }
 
     // 2. Text / Bio ──────────────────────────────────────────────────────────
-    const welcomeEl = doc.querySelector('.welcome-section, .welcome-section2');
+    const welcomeEl = root.querySelector('.welcome-section, .welcome-section2');
     if (welcomeEl) {
         const heading = welcomeEl.querySelector('h2')?.textContent.trim() || 'Welcome';
         const bioEl   = welcomeEl.querySelector('.bio-text, .special-text');
@@ -94,7 +104,7 @@ export function importFromHtml(htmlText, projectId) {
     }
 
     // 3. Station Info ────────────────────────────────────────────────────────
-    const stationEl = doc.querySelector('.station-section');
+    const stationEl = root.querySelector('.station-section');
     if (stationEl) {
         const items = [];
         stationEl.querySelectorAll('.station-item').forEach(item => {
@@ -110,7 +120,7 @@ export function importFromHtml(htmlText, projectId) {
     }
 
     // 4. Embedded iframes (.embed-section) ────────────────────────────────────
-    doc.querySelectorAll('.embed-section').forEach(embedEl => {
+    root.querySelectorAll('.embed-section').forEach(embedEl => {
         const iframeEl   = embedEl.querySelector('iframe');
         const titleH2    = embedEl.querySelector('.embed-header h2');
         const iconEl     = titleH2?.querySelector('i');
@@ -143,7 +153,7 @@ export function importFromHtml(htmlText, projectId) {
     });
 
     // 4b. Legacy Ham Map (.map-section) ────────────────────────────────────── 
-    const mapEl = doc.querySelector('.map-section');
+    const mapEl = root.querySelector('.map-section');
     if (mapEl) {
         const iframeEl    = mapEl.querySelector('iframe');
         const iframe_src  = iframeEl?.getAttribute('src')   || '';
@@ -159,8 +169,8 @@ export function importFromHtml(htmlText, projectId) {
 
     // 5. YouTube Gallery ─────────────────────────────────────────────────────
     const ytDataMatch = htmlText.match(YT_DATA_RE);
-    const ytSlides    = ytDataMatch ? _parseJson(ytDataMatch[1], []) : _parseYtFromDom(doc);
-    if (ytSlides.length > 0 || doc.querySelector('.youtube-section')) {
+    const ytSlides    = ytDataMatch ? _parseJson(ytDataMatch[1], []) : _parseYtFromDom(root);
+    if (ytSlides.length > 0 || root.querySelector('.youtube-section')) {
         sections.push({
             type:  'youtube',
             title: 'YouTube Videos',
@@ -170,8 +180,8 @@ export function importFromHtml(htmlText, projectId) {
 
     // 6. Awards Gallery ──────────────────────────────────────────────────────
     const galDataMatch = htmlText.match(GAL_DATA_RE);
-    const galSlides    = galDataMatch ? _parseJson(galDataMatch[1], []) : _parseGalFromDom(doc);
-    if (galSlides.length > 0 || doc.querySelector('.awards-section')) {
+    const galSlides    = galDataMatch ? _parseJson(galDataMatch[1], []) : _parseGalFromDom(root);
+    if (galSlides.length > 0 || root.querySelector('.awards-section')) {
         sections.push({
             type:  'gallery',
             title: 'Ham Radio Awards Gallery',
@@ -180,7 +190,7 @@ export function importFromHtml(htmlText, projectId) {
     }
 
     // 7. Quick Links ──────────────────────────────────────────────────────────
-    const linksEl = doc.querySelector('.quick-links-section');
+    const linksEl = root.querySelector('.quick-links-section');
     if (linksEl) {
         const titleH2    = linksEl.querySelector('.quick-links-header h2');
         const iconEl     = titleH2?.querySelector('i');
@@ -209,42 +219,54 @@ export function importFromHtml(htmlText, projectId) {
         });
     }
 
-    // 8. Propagation (all instances) ─────────────────────────────────────────
-    doc.querySelectorAll('.propagation-section').forEach(propEl => {
-        // Standalone .propagation-widget not inside a .propagation-section
-        const imgEl      = propEl.querySelector('.propagation-img, img');
+    // 8. Propagation / Embedded Img (all instances) ─────────────────────────
+    root.querySelectorAll('.propagation-section').forEach(propEl => {
+        const imgs       = propEl.querySelectorAll('.propagation-img, img');
+        const imgEl      = imgs[0] || null;
+        const img2El     = imgs[1] || null;
         const creditEl   = propEl.querySelector('.propagation-credit');
         const creditLink = creditEl?.querySelector('a');
         const titleH2    = propEl.querySelector('.propagation-header h2');
         const iconEl     = titleH2?.querySelector('i');
+        const iconStyle  = iconEl?.getAttribute('style') || '';
+        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
         const propTitle  = titleH2
             ? Array.from(titleH2.childNodes)
                 .filter(n => n.nodeType === 3)
                 .map(n => n.textContent.trim())
-                .join('').trim() || 'HF Propagation'
-            : 'HF Propagation';
+                .join('').trim() || 'Embedded Img'
+            : 'Embedded Img';
         sections.push({
             type:  'propagation',
             title: propTitle,
             data:  {
-                img_url:     imgEl?.getAttribute('src') || 'https://www.hamqsl.com/solar101vhf.php',
-                credit_text: creditEl?.textContent.trim() || 'HF Propagation by N0NBH',
+                icon_class:  iconEl ? iconEl.className : 'fas fa-image',
+                icon_color,
+                img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
+                img2_url:    img2El?.getAttribute('src') || '',
+                credit_text: creditEl?.textContent.trim() || '',
                 credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
             },
         });
     });
     // Legacy: standalone .propagation-widget not wrapped in .propagation-section
-    doc.querySelectorAll('.propagation-widget').forEach(widgetEl => {
+    root.querySelectorAll('.propagation-widget').forEach(widgetEl => {
         if (widgetEl.closest('.propagation-section')) return; // already handled above
-        const imgEl      = widgetEl.querySelector('.propagation-img, img');
+        const imgs       = widgetEl.querySelectorAll('.propagation-img, img');
+        const imgEl      = imgs[0] || null;
+        const img2El     = imgs[1] || null;
         const creditEl   = widgetEl.querySelector('.propagation-credit');
         const creditLink = creditEl?.querySelector('a');
         sections.push({
             type:  'propagation',
-            title: 'HF Propagation',
+            title: 'Embedded Img',
             data:  {
-                img_url:     imgEl?.getAttribute('src') || 'https://www.hamqsl.com/solar101vhf.php',
-                credit_text: creditEl?.textContent.trim() || 'HF Propagation by N0NBH',
+                icon_class:  'fas fa-image',
+                icon_color:  '#be954e',
+                img_url:     imgEl?.getAttribute('src')  || 'https://www.hamqsl.com/solar101vhf.php',
+                img2_url:    img2El?.getAttribute('src') || '',
+                credit_text: creditEl?.textContent.trim() || '',
                 credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
             },
         });
@@ -253,10 +275,14 @@ export function importFromHtml(htmlText, projectId) {
     // Write to DB
     replaceSections(projectId, sections);
 
-    // Parse :root CSS variables → theme
-    const theme = _parseThemeFromCss(htmlText);
-    if (Object.keys(theme).length > 0) {
-        replaceTheme(projectId, theme);
+    // Parse :root CSS variables → theme (best-effort – never blocks section import)
+    try {
+        const theme = _parseThemeFromCss(htmlText);
+        if (Object.keys(theme).length > 0) {
+            replaceTheme(projectId, theme);
+        }
+    } catch (e) {
+        console.warn('Theme import failed (non-fatal):', e);
     }
 
     return sections.length;

@@ -239,6 +239,20 @@ export function getTheme(projectId) {
 
 export function saveTheme(projectId, themeData) {
     if (!_db) throw new Error('DB not initialized');
+    // Merge with current theme so partial updates don't overwrite existing values with NULL
+    const current = getTheme(projectId) || {};
+    const t = {
+        primary_color:      themeData.primary_color      || current.primary_color      || '#be954e',
+        secondary_color:    themeData.secondary_color    || current.secondary_color    || '#2563eb',
+        bg_color:           themeData.bg_color           || current.bg_color           || '#151518',
+        text_color:         themeData.text_color         || current.text_color         || '#e7e5df',
+        accent_color:       themeData.accent_color       || current.accent_color       || '#ff0000',
+        font_family:        themeData.font_family        || current.font_family        || 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif',
+        h2_color:           themeData.h2_color           || current.h2_color           || '#ffffff',
+        section_bg:         themeData.section_bg         || current.section_bg         || '#151518',
+        header_bg:          themeData.header_bg          || current.header_bg          || 'rgba(0,0,0,0.8)',
+        header_text_color:  themeData.header_text_color  || current.header_text_color  || '#ffffff',
+    };
     _db.run(
         `UPDATE theme SET
             primary_color        = ?,
@@ -253,16 +267,16 @@ export function saveTheme(projectId, themeData) {
             header_text_color    = ?
          WHERE project_id = ?`,
         [
-            themeData.primary_color,
-            themeData.secondary_color,
-            themeData.bg_color,
-            themeData.text_color,
-            themeData.accent_color,
-            themeData.font_family,
-            themeData.h2_color          || '#ffffff',
-            themeData.section_bg        || '#151518',
-            themeData.header_bg         || 'rgba(0,0,0,0.8)',
-            themeData.header_text_color || '#ffffff',
+            t.primary_color,
+            t.secondary_color,
+            t.bg_color,
+            t.text_color,
+            t.accent_color,
+            t.font_family,
+            t.h2_color,
+            t.section_bg,
+            t.header_bg,
+            t.header_text_color,
             projectId
         ]
     );
