@@ -84,7 +84,40 @@ export function importFromHtml(htmlText, projectId) {
         });
     }
 
-    // 4. Ham Map ─────────────────────────────────────────────────────────────
+    // 4. Embedded iframes (.embed-section) ────────────────────────────────────
+    doc.querySelectorAll('.embed-section').forEach(embedEl => {
+        const iframeEl   = embedEl.querySelector('iframe');
+        const titleH2    = embedEl.querySelector('.embed-header h2');
+        const iconEl     = titleH2?.querySelector('i');
+        const icon_class = iconEl ? iconEl.className : 'fas fa-puzzle-piece';
+        const iconStyle  = iconEl?.getAttribute('style') || '';
+        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+        // title = h2 text nodes only (skip icon text)
+        const sectionTitle = titleH2
+            ? Array.from(titleH2.childNodes)
+                .filter(n => n.nodeType === 3)
+                .map(n => n.textContent.trim())
+                .join('').trim() || section_title_from_iframe(iframeEl)
+            : section_title_from_iframe(iframeEl);
+        const iframeStyle = iframeEl?.getAttribute('style') || '';
+        const heightMatch = iframeStyle.match(/height\s*:\s*([^;]+)/);
+        const widthMatch  = iframeStyle.match(/width\s*:\s*([^;]+)/);
+        sections.push({
+            type:  'iframe',
+            title: sectionTitle,
+            data:  {
+                src:        iframeEl?.getAttribute('src')   || '',
+                title:      iframeEl?.getAttribute('title') || '',
+                icon_class,
+                icon_color,
+                width:      (widthMatch  ? widthMatch[1].trim()  : null) || '100%',
+                height:     (heightMatch ? heightMatch[1].trim() : null) || '400px',
+            },
+        });
+    });
+
+    // 4b. Legacy Ham Map (.map-section) ────────────────────────────────────── 
     const mapEl = doc.querySelector('.map-section');
     if (mapEl) {
         const iframeEl    = mapEl.querySelector('iframe');
@@ -121,11 +154,65 @@ export function importFromHtml(htmlText, projectId) {
         });
     }
 
-    // 7. Propagation ─────────────────────────────────────────────────────────
-    const propEl = doc.querySelector('.propagation-section, .propagation-widget');
-    if (propEl) {
+    // 7. Quick Links ──────────────────────────────────────────────────────────
+    const linksEl = doc.querySelector('.quick-links-section');
+    if (linksEl) {
+        const titleH2    = linksEl.querySelector('.quick-links-header h2');
+        const iconEl     = titleH2?.querySelector('i');
+        const icon_class = iconEl ? iconEl.className : 'fas fa-link';
+        const iconStyle  = iconEl?.getAttribute('style') || '';
+        const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+        const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+        const sectionTitle = titleH2
+            ? Array.from(titleH2.childNodes)
+                .filter(n => n.nodeType === 3)
+                .map(n => n.textContent.trim())
+                .join('').trim() || 'Quick Links'
+            : 'Quick Links';
+        const links = [];
+        linksEl.querySelectorAll('.quick-link-btn').forEach(btn => {
+            const label    = btn.textContent.trim();
+            const url      = btn.getAttribute('href') || '';
+            const bgMatch  = (btn.getAttribute('style') || '').match(/background\s*:\s*([^;]+)/);
+            const btn_color = bgMatch ? bgMatch[1].trim() : '#2563eb';
+            if (label && url) links.push({ label, url, btn_color });
+        });
+        sections.push({
+            type:  'links',
+            title: sectionTitle,
+            data:  { icon_class, icon_color, links },
+        });
+    }
+
+    // 8. Propagation (all instances) ─────────────────────────────────────────
+    doc.querySelectorAll('.propagation-section').forEach(propEl => {
+        // Standalone .propagation-widget not inside a .propagation-section
         const imgEl      = propEl.querySelector('.propagation-img, img');
         const creditEl   = propEl.querySelector('.propagation-credit');
+        const creditLink = creditEl?.querySelector('a');
+        const titleH2    = propEl.querySelector('.propagation-header h2');
+        const iconEl     = titleH2?.querySelector('i');
+        const propTitle  = titleH2
+            ? Array.from(titleH2.childNodes)
+                .filter(n => n.nodeType === 3)
+                .map(n => n.textContent.trim())
+                .join('').trim() || 'HF Propagation'
+            : 'HF Propagation';
+        sections.push({
+            type:  'propagation',
+            title: propTitle,
+            data:  {
+                img_url:     imgEl?.getAttribute('src') || 'https://www.hamqsl.com/solar101vhf.php',
+                credit_text: creditEl?.textContent.trim() || 'HF Propagation by N0NBH',
+                credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
+            },
+        });
+    });
+    // Legacy: standalone .propagation-widget not wrapped in .propagation-section
+    doc.querySelectorAll('.propagation-widget').forEach(widgetEl => {
+        if (widgetEl.closest('.propagation-section')) return; // already handled above
+        const imgEl      = widgetEl.querySelector('.propagation-img, img');
+        const creditEl   = widgetEl.querySelector('.propagation-credit');
         const creditLink = creditEl?.querySelector('a');
         sections.push({
             type:  'propagation',
@@ -133,10 +220,10 @@ export function importFromHtml(htmlText, projectId) {
             data:  {
                 img_url:     imgEl?.getAttribute('src') || 'https://www.hamqsl.com/solar101vhf.php',
                 credit_text: creditEl?.textContent.trim() || 'HF Propagation by N0NBH',
-                credit_url:  creditLink?.href || 'https://www.hamqsl.com/solar.html',
+                credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
             },
         });
-    }
+    });
 
     // Write to DB
     replaceSections(projectId, sections);
@@ -144,6 +231,10 @@ export function importFromHtml(htmlText, projectId) {
 }
 
 // ── DOM parse helpers ──────────────────────────────────────────────────────────
+
+function section_title_from_iframe(iframeEl) {
+    return iframeEl?.getAttribute('title') || 'Embedded Widget';
+}
 
 function _parseYtFromDom(doc) {
     const slides = [];
