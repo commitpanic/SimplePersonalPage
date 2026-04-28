@@ -1,57 +1,92 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="forest">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kuba site: links, ham radio contacts map, and photo gallery.">
-  <title>Kuba | Home</title>
+  <meta name="description" content="Kuba – software developer and ham radio operator.">
+  <title>Kuba | SP3FCK</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
   <div class="noise"></div>
-  <header class="site-header wrap">
-    <p class="eyebrow">Kuba - sp3fck</p>
-    <h1>Personal Page</h1>
-    <p class="subtitle"></p>
-  </header>
 
-  <main class="wrap grid-cards">
-    <article class="card">
-      <h2>BDDAPP</h2>
-      <p>Application for visualizing BDD diagrams.</p>
-      <a class="btn" href="https://commitpanic.github.io/BDDAPP/" target="_blank" rel="noreferrer">Open</a>
-    </article>
+  <main class="wrap">
 
-    <article class="card">
-      <h2>QRZ Profile</h2>
-      <p>Public ham radio profile on qrz.com.</p>
-      <a class="btn" href="https://www.qrz.com/db/SP3FCK" target="_blank" rel="noreferrer">View profile</a>
-    </article>
+    <section class="hero">
+      <p class="eyebrow">SP3FCK</p>
+      <h1>Hey, I'm <span class="name-highlight">Kuba</span></h1>
+      <p class="bio">Software developer and ham radio operator based in Poland. I build tools, chase DX, and write code that occasionally works on the first try.</p>
 
-    <article class="card accent">
-      <h2>My Ham Map</h2>
-      <p>Map of your contacts with date and band filtering.</p>
-      <a class="btn" href="ham-map.html">Go to map</a>
-    </article>
+      <div class="social-links">
+        <a class="social-link" data-brand="linkedin" href="https://www.linkedin.com/in/jakub-b%C5%82aszyk-487266156/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+        <a class="social-link" data-brand="github" href="https://github.com/commitpanic" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+        <a class="social-link" data-brand="qrz" href="https://www.qrz.com/db/SP3FCK" target="_blank" rel="noreferrer">
+          <i class="fa-solid fa-tower-broadcast"></i>
+          QRZ.com
+        </a>
+        <a class="social-link" data-brand="youtube" href="https://www.youtube.com/@sp3fck_kuba/shorts" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-youtube"></i>
+          YouTube
+        </a>
+      </div>
+    </section>
 
-    <article class="card">
-      <h2>Ham Gallery</h2>
-      <p>Gallery of ham radio related photos.</p>
-      <a class="btn" href="gallery.html">Go to gallery</a>
-    </article>
+    <section class="projects-section">
+      <h2 class="section-heading">Projects &amp; Tools</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>BDDAPP</h3>
+          <p>Application for visualizing BDD diagrams.</p>
+          <a class="btn" href="https://commitpanic.github.io/BDDAPP/" target="_blank" rel="noreferrer">Open</a>
+        </article>
 
-    <article class="card accent">
-      <h2>QRZ Page Builder</h2>
-      <p>Build and manage your QRZ.com bio page with a visual editor.</p>
-      <a class="btn" href="qrz-builder/index.html">Open builder</a>
-    </article>
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>My Ham Map</h3>
+          <p>Map of contacts with date and band filtering.</p>
+          <a class="btn" href="ham-map.html">Go to map</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-images"></i></div>
+          <h3>Ham Gallery</h3>
+          <p>Gallery of ham radio related photos.</p>
+          <a class="btn" href="gallery.html">Go to gallery</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>QRZ Page Builder</h3>
+          <p>Build and manage your QRZ.com bio page with a visual editor.</p>
+          <a class="btn" href="qrz-builder/index.html">Open builder</a>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer wrap">
-    <p><span id="year"></span> SP3FCK</p>
+    <div class="footer-row">
+      <p><span id="year"></span> KUBA - sp3fck@gmail.com</p>
+      <div class="theme-picker">
+        <button class="theme-btn" id="theme-btn" aria-label="Change theme" title="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" id="theme-menu"></div>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/js/main.js" defer></script>
