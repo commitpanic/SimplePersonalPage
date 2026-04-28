@@ -9,6 +9,9 @@ import { updateSection } from '../db.js';
 
 export function renderPropagationEditor(container, section, onSaved) {
     const d = section.data || {};
+    const img2Value = Object.prototype.hasOwnProperty.call(d, 'img2_url')
+        ? d.img2_url
+        : 'https://www.hamqsl.com/solarmap.php';
 
     container.innerHTML = `
 <div class="editor-panel active">
@@ -51,7 +54,7 @@ export function renderPropagationEditor(container, section, onSaved) {
     <div class="field-group">
         <label for="prop-img2-url">Second Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(optional — e.g. solar map)</span></label>
         <input type="url" id="prop-img2-url"
-               value="${_esc(d.img2_url || 'https://www.hamqsl.com/solarmap.php')}"
+               value="${_esc(img2Value)}"
                placeholder="https://www.hamqsl.com/solarmap.php">
     </div>
 
