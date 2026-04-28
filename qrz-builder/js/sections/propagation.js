@@ -9,9 +9,6 @@ import { updateSection } from '../db.js';
 
 export function renderPropagationEditor(container, section, onSaved) {
     const d = section.data || {};
-    const img2Value = Object.prototype.hasOwnProperty.call(d, 'img2_url')
-        ? d.img2_url
-        : 'https://www.hamqsl.com/solarmap.php';
 
     container.innerHTML = `
 <div class="editor-panel active">
@@ -47,14 +44,14 @@ export function renderPropagationEditor(container, section, onSaved) {
     <div class="field-group">
         <label for="prop-img-url">Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(primary)</span></label>
         <input type="url" id="prop-img-url"
-               value="${_esc(d.img_url || 'https://www.hamqsl.com/solar101vhf.php')}"
+               value="${_esc(d.img_url ?? '')}"
                placeholder="https://www.hamqsl.com/solar101vhf.php">
     </div>
 
     <div class="field-group">
         <label for="prop-img2-url">Second Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(optional — e.g. solar map)</span></label>
         <input type="url" id="prop-img2-url"
-               value="${_esc(img2Value)}"
+               value="${_esc(d.img2_url ?? '')}"
                placeholder="https://www.hamqsl.com/solarmap.php">
     </div>
 
@@ -62,13 +59,13 @@ export function renderPropagationEditor(container, section, onSaved) {
         <div class="field-group">
             <label for="prop-credit-text">Credit Text</label>
             <input type="text" id="prop-credit-text"
-                   value="${_esc(d.credit_text || 'HF Propagation by N0NBH')}"
+                   value="${_esc(d.credit_text ?? '')}"
                    placeholder="HF Propagation by N0NBH">
         </div>
         <div class="field-group">
             <label for="prop-credit-url">Credit Link URL</label>
             <input type="url" id="prop-credit-url"
-                   value="${_esc(d.credit_url || 'https://www.hamqsl.com/solar.html')}"
+                   value="${_esc(d.credit_url ?? '')}"
                    placeholder="https://www.hamqsl.com/solar.html">
         </div>
     </div>

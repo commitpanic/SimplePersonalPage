@@ -321,7 +321,18 @@ function closeQrzInstructionsModal() {
 
 function createSection(type) {
     const defaultTitle = SECTION_LABELS[type] || type;
-    const id = addSection(activeProjectId, type, defaultTitle, {});
+    const defaultData = type === 'propagation'
+        ? {
+            img_url: 'https://www.hamqsl.com/solar101vhf.php',
+            img2_url: 'https://www.hamqsl.com/solarmap.php',
+            credit_text: 'HF Propagation by N0NBH',
+            credit_url: 'https://www.hamqsl.com/solar.html',
+            icon_class: 'fas fa-image',
+            icon_color: '#be954e',
+            hide_title: false,
+        }
+        : {};
+    const id = addSection(activeProjectId, type, defaultTitle, defaultData);
     renderSectionList();
     openSectionEditor(id);
     setStatus(`Section "${defaultTitle}" added.`, 'success');
