@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QRZ Page Builder – Login</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css?v=20260428-1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- sql.js WASM – must be loaded before ES modules -->
     <script src="https://cdn.jsdelivr.net/npm/sql.js@1.12.0/dist/sql-wasm.js"></script>
@@ -76,8 +76,8 @@
 </div>
 
 <script type="module">
-import { initDb }      from './js/db.js';
-import { login, register, getSession } from './js/auth.js';
+import { initDb }      from './js/db.js?v=20260428-1';
+import { login, register, getSession } from './js/auth.js?v=20260428-1';
 
 // Auto-redirect if already logged in
 if (getSession()) {
