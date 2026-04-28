@@ -10,18 +10,18 @@ import { initDb, saveDb,
 import { requireAuth, logout }                from './auth.js';
 import { openHtmlFile, writeToHandle, saveAsHtmlFile, isFileApiSupported } from './fileops.js';
 import { renderThemeEditor }                  from './theme.js';
-import { renderHeaderEditor }                 from './sections/header.js';
-import { renderTextEditor }                   from './sections/text.js';
-import { renderGalleryEditor }                from './sections/gallery.js';
-import { renderYouTubeEditor }                from './sections/youtube.js';
-import { renderStationEditor }                from './sections/station.js';
-import { renderMapEditor }                    from './sections/map.js';
-import { renderIframeEditor }                 from './sections/iframe.js';
-import { renderPropagationEditor }            from './sections/propagation.js';
-import { renderLinksEditor }                  from './sections/links.js';
-import { renderGridImgEditor }                from './sections/gridimg.js';
-import { generateQrzBio }                     from './exporter.js';
-import { importFromHtml }                     from './importer.js';
+import { renderHeaderEditor }                 from './sections/header.js?v=20260428';
+import { renderTextEditor }                   from './sections/text.js?v=20260428';
+import { renderGalleryEditor }                from './sections/gallery.js?v=20260428';
+import { renderYouTubeEditor }                from './sections/youtube.js?v=20260428';
+import { renderStationEditor }                from './sections/station.js?v=20260428';
+import { renderMapEditor }                    from './sections/map.js?v=20260428';
+import { renderIframeEditor }                 from './sections/iframe.js?v=20260428';
+import { renderPropagationEditor }            from './sections/propagation.js?v=20260428';
+import { renderLinksEditor }                  from './sections/links.js?v=20260428';
+import { renderGridImgEditor }                from './sections/gridimg.js?v=20260428';
+import { generateQrzBio }                     from './exporter.js?v=20260428';
+import { importFromHtml }                     from './importer.js?v=20260428';
 
 // ── State ──────────────────────────────────────────────────────────────────────
 let session        = null;
