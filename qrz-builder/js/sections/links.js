@@ -25,6 +25,13 @@ export function renderLinksEditor(container, section, onSaved) {
         <input type="text" id="links-section-title" value="${_esc(section.title || 'Quick Links')}" placeholder="e.g. Important Links, My Activities…">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="links-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="field-row">
         <div class="field-group">
             <label for="links-icon-class">Header Icon (Font Awesome class)</label>
@@ -92,6 +99,7 @@ export function renderLinksEditor(container, section, onSaved) {
         updateSection(section.id, newTitle, {
             icon_class: container.querySelector('#links-icon-class').value.trim() || 'fas fa-link',
             icon_color: container.querySelector('#links-icon-color').value.trim() || '#be954e',
+            hide_title: container.querySelector('#links-hide-title').checked,
             links,
         }, section.visible);
         const fb = container.querySelector('#links-feedback');

@@ -19,6 +19,7 @@ import { renderMapEditor }                    from './sections/map.js';
 import { renderIframeEditor }                 from './sections/iframe.js';
 import { renderPropagationEditor }            from './sections/propagation.js';
 import { renderLinksEditor }                  from './sections/links.js';
+import { renderGridImgEditor }                from './sections/gridimg.js';
 import { generateQrzBio }                     from './exporter.js';
 import { importFromHtml }                     from './importer.js';
 
@@ -32,6 +33,7 @@ const SECTION_ICONS = {
     header:  'fas fa-heading',
     text:    'fas fa-align-left',
     gallery: 'fas fa-trophy',
+    gridimg: 'fas fa-images',
     youtube: 'fab fa-youtube',
     station: 'fas fa-broadcast-tower',
     iframe:  'fas fa-puzzle-piece',
@@ -45,6 +47,7 @@ const SECTION_LABELS = {
     header:  'Header',
     text:    'Text / Bio',
     gallery: 'Gallery',
+    gridimg: 'Grid IMG',
     youtube: 'YouTube Videos',
     station: 'Station Info',
     iframe:  'Embedded Gadget',
@@ -240,7 +243,7 @@ function renderSectionList() {
 
         const sidebarIcon = (() => {
             const customIcon = sec.data?.icon_class;
-            if (customIcon && ['gallery','iframe','propagation','links'].includes(sec.type)) return customIcon;
+            if (customIcon && ['gallery','iframe','propagation','links','gridimg'].includes(sec.type)) return customIcon;
             return SECTION_ICONS[sec.type] || 'fas fa-layer-group';
         })();
         item.innerHTML = `
@@ -349,6 +352,7 @@ function openSectionEditor(sectionId) {
         case 'header':      renderHeaderEditor(canvas, section, onSaved); break;
         case 'text':        renderTextEditor(canvas, section, onSaved);   break;
         case 'gallery':     renderGalleryEditor(canvas, section, onSaved); break;
+        case 'gridimg':     renderGridImgEditor(canvas, section, onSaved); break;
         case 'youtube':     renderYouTubeEditor(canvas, section, onSaved); break;
         case 'station':     renderStationEditor(canvas, section, onSaved); break;
         case 'map':         renderMapEditor(canvas, section, onSaved);    break;

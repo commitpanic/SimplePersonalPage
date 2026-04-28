@@ -21,6 +21,13 @@ export function renderStationEditor(container, section, onSaved) {
         <input type="text" id="sta-title" value="${_esc(section.title || '')}" placeholder="Station Information">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="sta-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="field-group">
         <label>Station Details <span style="color:var(--text-muted);font-weight:400;text-transform:none;font-size:0.78rem;">— drag to reorder</span></label>
         <div class="kv-grid" id="kv-grid"></div>
@@ -48,7 +55,8 @@ export function renderStationEditor(container, section, onSaved) {
     container.querySelector('#btn-save-station').addEventListener('click', () => {
         const title = container.querySelector('#sta-title').value.trim();
         collectGrid();
-        updateSection(section.id, title || section.title, { items }, section.visible);
+        const data = { items, hide_title: container.querySelector('#sta-hide-title').checked };
+        updateSection(section.id, title, data, section.visible);
         const fb = container.querySelector('#sta-feedback');
         fb.textContent = 'Saved!';
         setTimeout(() => { fb.textContent = ''; }, 2000);

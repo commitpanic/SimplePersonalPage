@@ -59,6 +59,7 @@ export function generateFullHtml(sections, theme) {
             case 'map':         sectionBlocks.push(genMapSection(sec, t));      break;
             case 'youtube':     sectionBlocks.push(genYouTubeSection(sec, t));  break;
             case 'gallery':     sectionBlocks.push(genGallerySection(sec, t));  break;
+            case 'gridimg':     sectionBlocks.push(genGridImgSection(sec, t));   break;
             case 'propagation': sectionBlocks.push(genPropagationSection(sec, t)); break;
             case 'iframe':      sectionBlocks.push(genIframeSection(sec, t));   break;
             case 'links':       sectionBlocks.push(genLinksSection(sec, t));    break;
@@ -145,6 +146,19 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .quick-link-btn { display: block; width: 100%; padding: 16px 24px; border-radius: 10px; text-align: center; font-size: 1.1rem; font-weight: 600; color: #fff; text-decoration: none; margin-bottom: 12px; transition: opacity .2s, transform .2s; }
 .quick-link-btn:hover { opacity: .88; transform: translateY(-2px); }
 
+/* ── Grid IMG Section ───────────────────────────────────── */
+.image-grid-section { padding: 60px 0; background: var(--bg); color: var(--text); }
+.image-grid-header { text-align: center; margin-bottom: 40px; }
+.image-grid-header h2 { font-size: 2.5rem; margin-bottom: 15px; color: var(--h2-color, #fff); }
+.image-grid-header h2 i { margin-right: 15px; }
+.image-grid-wrap { max-width: var(--box-width); margin: 0 auto; }
+.image-grid { --img-grid-columns: 3; --img-box-height: 240px; display: grid; grid-template-columns: repeat(var(--img-grid-columns), minmax(0, 1fr)); gap: 16px; }
+.image-grid-item { display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden; background: var(--section-bg); border: 1px solid rgba(255,255,255,0.08); text-decoration: none; min-height: var(--img-box-height); }
+.image-grid-item img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform .25s ease; }
+.image-grid.is-single-column { --img-box-height: 320px; }
+.image-grid-item:hover img { transform: scale(1.02); }
+.image-grid-caption { display: block; padding: 10px 12px; font-size: 0.9rem; color: var(--text); border-top: 1px solid rgba(255,255,255,0.06); }
+
 /* ── YouTube Section ────────────────────────────────────── */
 .youtube-section { padding: 60px 0; background: var(--bg); color: var(--text); }
 .youtube-header { text-align: center; margin-bottom: 50px; }
@@ -213,6 +227,7 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
     .header-content { flex-direction: column; gap: 15px; text-align: center; }
     .gallery-slides { height: 550px; }
     .youtube-gallery-slides { height: 450px; }
+    .image-grid { --img-grid-columns: 1 !important; }
     .station-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -309,6 +324,7 @@ function genTextSection(sec, t) {
 
 function genStationSection(sec, t) {
     const d = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const items = d.items || [];
     const cardsHtml = items.map(item => `
                 <div class="station-item">
@@ -319,7 +335,7 @@ function genStationSection(sec, t) {
     return `
         <!-- Station Info Section -->
         <section class="station-section">
-            <h2><i class="fas fa-radio"></i> ${esc(sec.title)}</h2>
+            ${hideTitle ? '' : `<h2><i class="fas fa-radio"></i> ${esc(sec.title)}</h2>`}
             <div class="station-grid">
 ${cardsHtml}
             </div>
@@ -328,12 +344,13 @@ ${cardsHtml}
 
 function genMapSection(sec, t) {
     const d = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     return `
         <!-- Map Section -->
         <section class="map-section">
-            <div class="map-header">
+            ${hideTitle ? '' : `<div class="map-header">
                 <h2><i class="fas fa-map-marked-alt"></i> ${esc(sec.title)}</h2>
-            </div>
+            </div>`}
             <div class="map-embed">
                 <iframe src="${esc(d.iframe_src || '')}" title="${esc(d.iframe_title || sec.title)}"
                         loading="lazy"
@@ -344,6 +361,7 @@ function genMapSection(sec, t) {
 
 function genYouTubeSection(sec, t) {
     const d      = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const slides = d.slides || [];
     const n = slides.length;
 
@@ -416,9 +434,9 @@ ${navSelectors ? `${navSelectors} { display:flex; }` : ''}
         <!-- YouTube Videos Section -->
         <section class="youtube-section">
             <div class="container">
-                <div class="youtube-header">
+                ${hideTitle ? '' : `<div class="youtube-header">
                     <h2><i class="fab fa-youtube"></i> ${esc(sec.title)}</h2>
-                </div>
+                </div>`}
                 <div class="youtube-gallery-container">
                     <div class="youtube-gallery-wrapper">
 ${radioHtml}
@@ -437,6 +455,7 @@ ${navHtml}
 
 function genGallerySection(sec, t) {
     const d      = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const iconClass = d.icon_class || 'fas fa-trophy';
     const iconColor = d.icon_color || t.primary_color;
     const themeColor = d.theme_color || t.secondary_color;
@@ -507,9 +526,9 @@ ${navSelectors ? `${navSelectors} { display:flex; }` : ''}
 </style>
         <!-- Ham Awards Gallery Section -->
         <section class="awards-section">
-            <div class="awards-header">
+            ${hideTitle ? '' : `<div class="awards-header">
                 <h2><i class="${esc(iconClass)}" style="color:${esc(iconColor)};"></i> ${esc(sec.title)}</h2>
-            </div>
+            </div>`}
             <div class="gallery-container">
                 <div class="gallery-wrapper" style="background:${esc(themeBg)};border:1px solid ${esc(themeBorder)};">
 ${radioHtml}
@@ -525,8 +544,63 @@ ${navHtml}
 <!-- GAL-MANAGER-END -->`;
 }
 
+function genGridImgSection(sec, t) {
+    const d = sec.data || {};
+    const iconClass = d.icon_class || 'fas fa-images';
+    const iconColor = d.icon_color || t.primary_color;
+    const columns = [1, 2, 3].includes(Number(d.columns)) ? Number(d.columns) : 3;
+    const hideTitle = Boolean(d.hide_title);
+    const items = d.items || [];
+
+    const payload = {
+        title: sec.title || 'Grid IMG',
+        icon_class: iconClass,
+        icon_color: iconColor,
+        columns,
+        hide_title: hideTitle,
+        items,
+    };
+
+    const tilesHtml = items.length
+        ? items.map((item, idx) => {
+            const img = `<img src="${esc(item.imageUrl || '')}" alt="${esc(item.alt || item.caption || `Grid image ${idx + 1}`)}">`;
+            const caption = item.caption ? `<span class="image-grid-caption">${esc(item.caption)}</span>` : '';
+            if (item.linkUrl) {
+                return `
+                        <a class="image-grid-item" href="${esc(item.linkUrl)}" target="_blank" rel="noopener noreferrer">
+                            ${img}
+                            ${caption}
+                        </a>`;
+            }
+            return `
+                        <div class="image-grid-item">
+                            ${img}
+                            ${caption}
+                        </div>`;
+        }).join('\n')
+        : `<p style="color:#888;text-align:center;grid-column:1 / -1;">No images added yet.</p>`;
+
+    return `<!-- GRIDIMG-MANAGER-START -->
+<!-- GRIDIMG-DATA:${JSON.stringify(payload)} -->
+        <!-- Grid IMG Section -->
+        <section class="image-grid-section">
+            <div class="container">
+                ${hideTitle ? '' : `<div class="image-grid-header">
+                    <h2><i class="${esc(iconClass)}" style="color:${esc(iconColor)};"></i>${esc(sec.title || 'Grid IMG')}</h2>
+                </div>`}
+                <div class="image-grid-wrap">
+                    <div class="image-grid${columns === 1 ? ' is-single-column' : ''}" style="--img-grid-columns:${columns};">
+${tilesHtml}
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- GRIDIMG-MANAGER-END -->`;
+}
+
 function genPropagationSection(sec, t) {
     const d = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const iconClass = d.icon_class || 'fas fa-image';
     const iconColor = d.icon_color || t.primary_color;
     const img2 = d.img2_url ? `
@@ -534,9 +608,9 @@ function genPropagationSection(sec, t) {
     return `
         <!-- Propagation Section -->
         <section class="propagation-section">
-            <div class="propagation-header">
+            ${hideTitle ? '' : `<div class="propagation-header">
                 <h2><i class="${esc(iconClass)}" style="color:${esc(iconColor)};"></i>${esc(sec.title || 'Embedded Img')}</h2>
-            </div>
+            </div>`}
             <div class="propagation-widget">
                 <div class="propagation-banner">
                     <a href="${esc(d.credit_url || '#')}" target="_blank" rel="noopener noreferrer">
@@ -554,15 +628,16 @@ function genPropagationSection(sec, t) {
 
 function genIframeSection(sec, t) {
     const d = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const iconClass = d.icon_class || 'fas fa-puzzle-piece';
     const iconColor = d.icon_color || t.primary_color;
     return `
         <!-- iFrame Section: ${esc(sec.title)} -->
         <section class="embed-section">
             <div class="container">
-                <div class="embed-header">
+                ${hideTitle ? '' : `<div class="embed-header">
                     <h2><i class="${esc(iconClass)}" style="color:${esc(iconColor)};"></i>${esc(sec.title || 'Embedded Gadget')}</h2>
-                </div>
+                </div>`}
                 <div class="embed-frame-wrap">
                     <iframe src="${esc(d.src || '')}"
                             title="${esc(d.title || sec.title)}"
@@ -575,6 +650,7 @@ function genIframeSection(sec, t) {
 
 function genLinksSection(sec, t) {
     const d = sec.data || {};
+    const hideTitle = Boolean(d.hide_title);
     const iconClass = d.icon_class || 'fas fa-link';
     const iconColor = d.icon_color || t.primary_color;
     const items = d.links || [];
@@ -590,9 +666,9 @@ function genLinksSection(sec, t) {
         <!-- Quick Links Section -->
         <section class="quick-links-section">
             <div class="container">
-                <div class="quick-links-header">
+                ${hideTitle ? '' : `<div class="quick-links-header">
                     <h2><i class="${esc(iconClass)}" style="color:${esc(iconColor)};"></i>${esc(sec.title || 'Quick Links')}</h2>
-                </div>
+                </div>`}
                 <div class="quick-links-list">
 ${btnHtml}
                 </div>

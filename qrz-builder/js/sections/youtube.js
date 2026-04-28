@@ -19,6 +19,13 @@ export function renderYouTubeEditor(container, section, onSaved) {
     <div class="panel-title"><i class="fab fa-youtube" style="color:#ff0000;"></i> YouTube Gallery</div>
     <div class="panel-subtitle">Manage YouTube video slides shown in the CSS-only carousel</div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;margin-bottom:15px;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="yt-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="items-grid" id="yt-list"></div>
 
     <!-- Add form -->
@@ -144,7 +151,7 @@ export function renderYouTubeEditor(container, section, onSaved) {
 
     // ── Save ──────────────────────────────────────────────
     container.querySelector('#btn-save-yt').addEventListener('click', () => {
-        updateSection(section.id, section.title, { slides }, section.visible);
+        updateSection(section.id, section.title, { slides, hide_title: container.querySelector('#yt-hide-title').checked }, section.visible);
         const fb = container.querySelector('#yt-feedback');
         fb.textContent = `Saved! (${slides.length} slides)`;
         setTimeout(() => { fb.textContent = ''; }, 2000);

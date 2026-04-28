@@ -11,6 +11,7 @@ import { replaceSections, replaceTheme, getSections } from './db.js';
 
 const GAL_DATA_RE = /<!-- GAL-DATA:([\s\S]*?) -->/;
 const YT_DATA_RE  = /<!-- YT-DATA:([\s\S]*?) -->/;
+const GRIDIMG_DATA_RE = /<!-- GRIDIMG-DATA:([\s\S]*?) -->/;
 
 /**
  * Parse qrz_bio.html and write sections + theme into the project.
@@ -93,8 +94,10 @@ export function importFromHtml(htmlText, projectId) {
     // Pre-parse YouTube / Gallery data from JSON comments (for fast-path)
     const ytDataMatch  = htmlText.match(YT_DATA_RE);
     const galDataMatch = htmlText.match(GAL_DATA_RE);
+    const gridImgDataMatch = htmlText.match(GRIDIMG_DATA_RE);
     const ytSlidesData  = ytDataMatch  ? _parseJson(ytDataMatch[1],  []) : null; // null → parse from DOM
     const galSlidesData = galDataMatch ? _parseJson(galDataMatch[1], []) : null;
+    const gridImgData   = gridImgDataMatch ? _parseJson(gridImgDataMatch[1], null) : null;
 
     // Walk all content sections in document order so the imported list
     // matches the visual order in the original file.
@@ -105,6 +108,7 @@ export function importFromHtml(htmlText, projectId) {
         '.map-section',
         '.youtube-section',
         '.awards-section',
+        '.image-grid-section',
         '.quick-links-section',
         '.propagation-section',
         '.propagation-widget',
@@ -117,20 +121,36 @@ export function importFromHtml(htmlText, projectId) {
 
         // ── Text / Bio ──────────────────────────────────────────────────────
         if (el.matches('.welcome-section, .welcome-section2')) {
-            const heading = el.querySelector('h2')?.textContent.trim() || 'Welcome';
+            const heading = el.querySelector('h2');
+            const hide_title = !heading;
             const bioEl   = el.querySelector('.bio-text, .special-text');
             const content = bioEl ? bioEl.innerHTML.trim() : el.innerHTML;
-            sections.push({ type: 'text', title: heading, data: { content } });
+            sections.push({ 
+                type: 'text', 
+                title: heading?.textContent?.trim() || 'Welcome', 
+                data: { content, hide_title } 
+            });
 
         // ── Station Info ────────────────────────────────────────────────────
         } else if (el.matches('.station-section')) {
+            const heading = el.querySelector('h2');
             const items = [];
             el.querySelectorAll('.station-item').forEach(item => {
                 const key   = item.querySelector('h3')?.textContent.trim() || '';
                 const value = item.querySelector('p')?.textContent.trim()  || '';
                 if (key) items.push({ key, value });
             });
-            sections.push({ type: 'station', title: 'Station Information', data: { items } });
+            const hide_title = !heading;
+            sections.push({ 
+                type: 'station', 
+                title: heading 
+                    ? Array.from(heading.childNodes)
+                        .filter(n => n.nodeType === 3)
+                        .map(n => n.textContent.trim())
+                        .join('').trim() || 'Station Information'
+                    : 'Station Information', 
+                data: { items, hide_title } 
+            });
 
         // ── Embedded iframe (.embed-section) ───────────────────────────────
         } else if (el.matches('.embed-section')) {
@@ -141,6 +161,7 @@ export function importFromHtml(htmlText, projectId) {
             const iconStyle  = iconEl?.getAttribute('style') || '';
             const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const hide_title = !titleH2;
             const sectionTitle = titleH2
                 ? Array.from(titleH2.childNodes)
                     .filter(n => n.nodeType === 3)
@@ -160,27 +181,130 @@ export function importFromHtml(htmlText, projectId) {
                     icon_color,
                     width:      (widthMatch  ? widthMatch[1].trim()  : null) || '100%',
                     height:     (heightMatch ? heightMatch[1].trim() : null) || '400px',
+                    hide_title,
                 },
             });
 
+
         // ── Legacy Ham Map (.map-section) ───────────────────────────────────
         } else if (el.matches('.map-section')) {
+            const heading = el.querySelector('.map-header h2');
+            const iconEl = heading?.querySelector('i');
+            const iconStyle = iconEl?.getAttribute('style') || '';
+            const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const iframeEl     = el.querySelector('iframe');
             const iframe_src   = iframeEl?.getAttribute('src')   || '';
             const iframe_title = iframeEl?.getAttribute('title') || '';
             const heightAttr   = iframeEl?.style?.height || iframeEl?.getAttribute('height') || '';
             const height       = parseInt(heightAttr, 10) || 1125;
-            sections.push({ type: 'map', title: 'Ham Map', data: { iframe_src, iframe_title, height } });
+            const hide_title = !heading;
+            sections.push({ 
+                type: 'map', 
+                title: heading 
+                    ? Array.from(heading.childNodes)
+                        .filter(n => n.nodeType === 3)
+                        .map(n => n.textContent.trim())
+                        .join('').trim() || 'Ham Map'
+                    : 'Ham Map', 
+                data: { iframe_src, iframe_title, height, hide_title } 
+            });
 
         // ── YouTube Gallery ─────────────────────────────────────────────────
         } else if (el.matches('.youtube-section')) {
+            const heading = el.querySelector('.youtube-header h2');
+            const hide_title = !heading;
             const slides = ytSlidesData !== null ? ytSlidesData : _parseYtFromDom(root);
-            sections.push({ type: 'youtube', title: 'YouTube Videos', data: { slides } });
+            sections.push({ 
+                type: 'youtube', 
+                title: heading 
+                    ? Array.from(heading.childNodes)
+                        .filter(n => n.nodeType === 3)
+                        .map(n => n.textContent.trim())
+                        .join('').trim() || 'YouTube Videos'
+                    : 'YouTube Videos', 
+                data: { slides, hide_title } 
+            });
 
         // ── Awards Gallery ──────────────────────────────────────────────────
         } else if (el.matches('.awards-section')) {
+            const heading = el.querySelector('.awards-header h2');
+            const iconEl = heading?.querySelector('i');
+            const iconStyle = iconEl?.getAttribute('style') || '';
+            const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+            const hide_title = !heading;
             const slides = galSlidesData !== null ? galSlidesData : _parseGalFromDom(root);
-            sections.push({ type: 'gallery', title: 'Ham Radio Awards Gallery', data: { slides } });
+            sections.push({ 
+                type: 'gallery', 
+                title: heading 
+                    ? Array.from(heading.childNodes)
+                        .filter(n => n.nodeType === 3)
+                        .map(n => n.textContent.trim())
+                        .join('').trim() || 'Ham Radio Awards Gallery'
+                    : 'Ham Radio Awards Gallery', 
+                data: { 
+                    slides, 
+                    hide_title,
+                    icon_class: iconEl ? iconEl.className : 'fas fa-trophy',
+                    icon_color: colorMatch ? colorMatch[1].trim() : '#be954e',
+                } 
+            });
+
+        // ── Grid IMG ───────────────────────────────────────────────────────
+        } else if (el.matches('.image-grid-section')) {
+            if (gridImgData && typeof gridImgData === 'object') {
+                sections.push({
+                    type: 'gridimg',
+                    title: gridImgData.title || 'Grid IMG',
+                    data: {
+                        icon_class: gridImgData.icon_class || 'fas fa-images',
+                        icon_color: gridImgData.icon_color || '#be954e',
+                        columns: [1, 2, 3].includes(Number(gridImgData.columns)) ? Number(gridImgData.columns) : 3,
+                        hide_title: Boolean(gridImgData.hide_title),
+                        items: Array.isArray(gridImgData.items) ? gridImgData.items : [],
+                    },
+                });
+            } else {
+                const heading = el.querySelector('.image-grid-header h2');
+                const iconEl = heading?.querySelector('i');
+                const iconStyle = iconEl?.getAttribute('style') || '';
+                const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
+                const gridEl = el.querySelector('.image-grid');
+                const styleAttr = gridEl?.getAttribute('style') || '';
+                const colMatch = styleAttr.match(/--img-grid-columns\s*:\s*([123])/i);
+                const columns = colMatch ? Number(colMatch[1]) : 3;
+                const hide_title = !heading;
+
+                const items = [];
+                el.querySelectorAll('.image-grid-item').forEach(tile => {
+                    const imgEl = tile.querySelector('img');
+                    if (!imgEl) return;
+                    const capEl = tile.querySelector('.image-grid-caption');
+                    const linkEl = tile.matches('a') ? tile : tile.querySelector('a');
+                    items.push({
+                        imageUrl: imgEl.getAttribute('src') || '',
+                        alt: imgEl.getAttribute('alt') || '',
+                        caption: capEl?.textContent.trim() || '',
+                        linkUrl: linkEl?.getAttribute('href') || '',
+                    });
+                });
+
+                sections.push({
+                    type: 'gridimg',
+                    title: heading
+                        ? Array.from(heading.childNodes)
+                            .filter(n => n.nodeType === 3)
+                            .map(n => n.textContent.trim())
+                            .join('').trim() || 'Grid IMG'
+                        : 'Grid IMG',
+                    data: {
+                        icon_class: iconEl ? iconEl.className : 'fas fa-images',
+                        icon_color: colorMatch ? colorMatch[1].trim() : '#be954e',
+                        columns,
+                        hide_title,
+                        items,
+                    },
+                });
+            }
 
         // ── Quick Links ─────────────────────────────────────────────────────
         } else if (el.matches('.quick-links-section')) {
@@ -190,6 +314,7 @@ export function importFromHtml(htmlText, projectId) {
             const iconStyle  = iconEl?.getAttribute('style') || '';
             const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const hide_title = !titleH2;
             const sectionTitle = titleH2
                 ? Array.from(titleH2.childNodes)
                     .filter(n => n.nodeType === 3)
@@ -204,7 +329,7 @@ export function importFromHtml(htmlText, projectId) {
                 const btn_color = bgMatch ? bgMatch[1].trim() : '#2563eb';
                 if (label && url) links.push({ label, url, btn_color });
             });
-            sections.push({ type: 'links', title: sectionTitle, data: { icon_class, icon_color, links } });
+            sections.push({ type: 'links', title: sectionTitle, data: { icon_class, icon_color, links, hide_title } });
 
         // ── Propagation / Embedded Img (.propagation-section) ──────────────
         } else if (el.matches('.propagation-section')) {
@@ -218,6 +343,7 @@ export function importFromHtml(htmlText, projectId) {
             const iconStyle  = iconEl?.getAttribute('style') || '';
             const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const icon_color = colorMatch ? colorMatch[1].trim() : '#be954e';
+            const hide_title = !titleH2;
             const propTitle  = titleH2
                 ? Array.from(titleH2.childNodes)
                     .filter(n => n.nodeType === 3)
@@ -234,6 +360,7 @@ export function importFromHtml(htmlText, projectId) {
                     img2_url:    img2El?.getAttribute('src') || '',
                     credit_text: creditEl?.textContent.trim() || '',
                     credit_url:  creditLink?.getAttribute('href') || 'https://www.hamqsl.com/solar.html',
+                    hide_title,
                 },
             });
 

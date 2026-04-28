@@ -20,6 +20,13 @@ export function renderIframeEditor(container, section, onSaved) {
         <input type="text" id="ifr-sec-title" value="${_esc(section.title || '')}" placeholder="Embedded Widget">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="ifr-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="field-group">
         <label for="ifr-src">Source URL <span style="color:#ef4444;">*</span></label>
         <input type="url" id="ifr-src" value="${_esc(d.src || '')}" placeholder="https://example.com/widget">
@@ -77,6 +84,7 @@ export function renderIframeEditor(container, section, onSaved) {
             icon_color: container.querySelector('#ifr-icon-color').value.trim() || '#be954e',
             width:      container.querySelector('#ifr-width').value.trim()  || '100%',
             height:     container.querySelector('#ifr-height').value.trim() || '400px',
+            hide_title: container.querySelector('#ifr-hide-title').checked,
         };
         updateSection(section.id, title || section.title, data, section.visible);
         const fb = container.querySelector('#ifr-feedback');

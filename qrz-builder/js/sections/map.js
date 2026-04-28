@@ -20,6 +20,13 @@ export function renderMapEditor(container, section, onSaved) {
         <input type="text" id="map-sec-title" value="${_esc(section.title || '')}" placeholder="Ham Map">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="map-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="field-group">
         <label for="map-iframe-src">Map iframe URL <span style="color:#ef4444;">*</span></label>
         <input type="url" id="map-iframe-src"
@@ -56,6 +63,7 @@ export function renderMapEditor(container, section, onSaved) {
             iframe_src:   container.querySelector('#map-iframe-src').value.trim(),
             iframe_title: container.querySelector('#map-iframe-title').value.trim(),
             height:       parseInt(container.querySelector('#map-height').value, 10) || 1125,
+            hide_title:   container.querySelector('#map-hide-title').checked,
         };
         updateSection(section.id, title || section.title, data, section.visible);
         const fb = container.querySelector('#map-feedback');

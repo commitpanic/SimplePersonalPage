@@ -20,6 +20,13 @@ export function renderPropagationEditor(container, section, onSaved) {
         <input type="text" id="prop-sec-title" value="${_esc(section.title || 'Embedded Img')}" placeholder="Embedded Img">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="prop-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="field-row">
         <div class="field-group">
             <label for="prop-icon-class">Header Icon (Font Awesome class)</label>
@@ -44,7 +51,7 @@ export function renderPropagationEditor(container, section, onSaved) {
     <div class="field-group">
         <label for="prop-img2-url">Second Image URL <span style="color:var(--text-muted);font-weight:400;text-transform:none;">(optional — e.g. solar map)</span></label>
         <input type="url" id="prop-img2-url"
-               value="${_esc(d.img2_url || '')}"
+               value="${_esc(d.img2_url || 'https://www.hamqsl.com/solarmap.php')}"
                placeholder="https://www.hamqsl.com/solarmap.php">
     </div>
 
@@ -84,6 +91,7 @@ export function renderPropagationEditor(container, section, onSaved) {
             icon_color:  container.querySelector('#prop-icon-color').value.trim() || '#be954e',
             credit_text: container.querySelector('#prop-credit-text').value.trim(),
             credit_url:  container.querySelector('#prop-credit-url').value.trim(),
+            hide_title:  container.querySelector('#prop-hide-title').checked,
         };
         const newTitle = container.querySelector('#prop-sec-title').value.trim() || 'Embedded Img';
         updateSection(section.id, newTitle, data, section.visible);

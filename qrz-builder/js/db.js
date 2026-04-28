@@ -155,8 +155,9 @@ export function createProject(userId, name) {
         { type: 'station',     title: 'Station Info',     pos: 2 },
         { type: 'map',         title: 'Ham Map',          pos: 3 },
         { type: 'youtube',     title: 'YouTube Videos',   pos: 4 },
-        { type: 'gallery',     title: 'Gallery',        pos: 5 },
-        { type: 'propagation', title: 'Propagation',      pos: 6 },
+        { type: 'gallery',     title: 'Gallery',          pos: 5 },
+        { type: 'gridimg',     title: 'Grid IMG',         pos: 6 },
+        { type: 'propagation', title: 'Propagation',      pos: 7 },
     ];
     for (const s of defaults) {
         _db.run(

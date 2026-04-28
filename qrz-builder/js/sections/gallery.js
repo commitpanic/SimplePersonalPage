@@ -43,6 +43,13 @@ export function renderGalleryEditor(container, section, onSaved) {
         <input type="color" id="gal-theme-color" value="${_esc(d.theme_color || '#3b82f6')}">
     </div>
 
+    <div class="field-group" style="display:flex;align-items:flex-end;">
+        <label style="display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:normal;font-weight:600;color:var(--text);cursor:pointer;margin:0;">
+            <input type="checkbox" id="gal-hide-title" ${(d.hide_title ? 'checked' : '')} style="width:auto;">
+            Hide title on generated page
+        </label>
+    </div>
+
     <div class="items-grid" id="gallery-list"></div>
 
     <!-- Add form -->
@@ -185,6 +192,7 @@ export function renderGalleryEditor(container, section, onSaved) {
             icon_class: container.querySelector('#gal-icon-class').value.trim() || 'fas fa-trophy',
             icon_color: container.querySelector('#gal-icon-color').value.trim() || '#be954e',
             theme_color: container.querySelector('#gal-theme-color').value.trim() || '#3b82f6',
+            hide_title: container.querySelector('#gal-hide-title').checked,
             slides,
         }, section.visible);
         const fb = container.querySelector('#gal-feedback');
