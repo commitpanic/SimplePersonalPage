@@ -416,7 +416,6 @@ function refreshPreview(themeOverride = null) {
 // ── Import ─────────────────────────────────────────────────────────────────────
 async function importFile() {
     if (!activeProjectId) { alert('Open or create a project first.'); return; }
-    if (!isFileApiSupported()) { alert('File System Access API requires Chrome or Edge.'); return; }
 
     setStatus('Opening file picker…', 'info');
     let result;
@@ -437,8 +436,11 @@ async function importFile() {
         renderSectionList();
         showWelcomeCanvas();
         refreshPreview();
+        saveDb();
         setStatus(`Imported "${result.name}" — ${count} sections loaded.`, 'success');
     } catch (e) {
+        // Even if import partially failed, refresh the list so any saved sections are visible
+        renderSectionList();
         setStatus('Import error: ' + e.message, 'error');
     }
 }
@@ -446,7 +448,6 @@ async function importFile() {
 // ── Export ─────────────────────────────────────────────────────────────────────
 async function exportFile() {
     if (!activeProjectId) return;
-    if (!isFileApiSupported()) { alert('File System Access API requires Chrome or Edge.'); return; }
 
     setStatus('Generating HTML…', 'info');
     let html;
@@ -457,16 +458,19 @@ async function exportFile() {
         return;
     }
 
+    // Always prompt for save location so user always knows where the file goes.
+    // Use the current filename (if known) as the suggested name.
+    const suggestedName = fileHandle ? fileHandle.name : 'qrz_bio.html';
     try {
-        if (fileHandle) {
-            await writeToHandle(fileHandle, html);
-            setStatus('File saved successfully.', 'success');
+        const result = await saveAsHtmlFile(html, suggestedName);
+        if (!result) { setStatus('Export cancelled.', ''); return; }
+        fileHandle = result.handle; // null for Firefox (Blob download)
+        const label = document.getElementById('topbar-file-label');
+        if (label) label.textContent = result.name;
+        if (result.handle) {
+            setStatus('Saved: ' + result.name, 'success');
         } else {
-            const handle = await saveAsHtmlFile(html, 'qrz_bio.html');
-            if (handle) {
-                fileHandle = handle;
-                setStatus('File saved successfully.', 'success');
-            }
+            setStatus('Downloaded: ' + result.name + ' (check your Downloads folder)', 'success');
         }
     } catch (e) {
         setStatus('Save error: ' + e.message, 'error');
