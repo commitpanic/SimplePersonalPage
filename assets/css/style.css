@@ -384,7 +384,7 @@ h1 {
 
 .bio {
   margin-top: 1rem;
-  max-width: 560px;
+  max-width: 600px;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.65;
