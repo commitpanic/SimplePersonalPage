@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris | Kuba SP3FCK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    .game-wrap {
+      padding: 2rem 0 4rem;
+    }
+    .game-header {
+      margin-bottom: 1.25rem;
+    }
+    .game-header h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+    .game-header p {
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+
+    /* ── Layout ─────────────────────────────────── */
+    .tetris-layout {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    /* ── Board ──────────────────────────────────── */
+    .board-wrap {
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      line-height: 0;
+    }
+    #board { display: block; }
+
+    /* ── Side panel ─────────────────────────────── */
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 120px;
+    }
+    .panel-box {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+    }
+    .panel-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .panel-val {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    #next-canvas { display: block; margin-top: 0.5rem; }
+
+    /* ── Controls hint ──────────────────────────── */
+    .controls-hint {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .controls-hint span {
+      color: var(--text);
+    }
+
+    /* ── Mobile touch buttons ───────────────────── */
+    .touch-controls {
+      display: none;
+      gap: 6px;
+      margin-top: 1rem;
+    }
+    .tc-row {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+    .tc-btn {
+      width: 52px;
+      height: 52px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 100ms ease;
+    }
+    .tc-btn:active { background: var(--card-icon-bg); border-color: var(--accent); }
+    .tc-btn.wide { width: 112px; }
+
+    @media (max-width: 599px) {
+      .touch-controls { display: flex; flex-direction: column; align-items: center; }
+      .controls-hint  { display: none; }
+    }
+    @media (max-width: 480px) {
+      .tetris-layout { flex-direction: column; }
+      .side-panel { flex-direction: row; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="wrap">
+    <div class="game-wrap">
+      <a href="../index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to home
+      </a>
+      <div class="game-header">
+        <h2>Tetris</h2>
+        <p>Classic block stacker. Clear lines, survive. Space or tap to start.</p>
+      </div>
+
+      <div class="tetris-layout">
+        <!-- Board -->
+        <div class="board-wrap">
+          <canvas id="board" width="240" height="480"></canvas>
+        </div>
+
+        <!-- Side panel -->
+        <div class="side-panel">
+          <div class="panel-box">
+            <div class="panel-label">Score</div>
+            <div class="panel-val" id="score">0</div>
+          </div>
+          <div class="panel-box">
+            <div class="panel-label">Level</div>
+            <div class="panel-val" id="level">1</div>
+          </div>
+          <div class="panel-box">
+            <div class="panel-label">Lines</div>
+            <div class="panel-val" id="lines">0</div>
+          </div>
+          <div class="panel-box">
+            <div class="panel-label">Best</div>
+            <div class="panel-val" id="best">0</div>
+          </div>
+          <div class="panel-box">
+            <div class="panel-label">Next</div>
+            <canvas id="next-canvas" width="80" height="80"></canvas>
+          </div>
+          <div class="panel-box controls-hint">
+            <div class="panel-label">Controls</div>
+            <span>← →</span> move<br>
+            <span>↑</span> rotate<br>
+            <span>↓</span> soft drop<br>
+            <span>Space</span> hard drop<br>
+            <span>P</span> pause
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile touch controls -->
+      <div class="touch-controls" id="touch-controls">
+        <div class="tc-row">
+          <button class="tc-btn" id="tc-rotate" aria-label="Rotate">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+        <div class="tc-row">
+          <button class="tc-btn" id="tc-left"  aria-label="Left"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="tc-btn" id="tc-drop"  aria-label="Hard Drop"><i class="fa-solid fa-angles-down"></i></button>
+          <button class="tc-btn" id="tc-right" aria-label="Right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <div class="tc-row">
+          <button class="tc-btn wide" id="tc-soft" aria-label="Soft Drop">
+            <i class="fa-solid fa-chevron-down"></i> soft
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script>
+// ── Constants ──────────────────────────────────────────
+const COLS  = 10;
+const ROWS  = 20;
+const SZ    = 24; // cell size px (board = 240×480)
+const NEXT_SZ = 20;
+
+// Tetrominoes: each shape is a set of [row,col] cells at origin
+const SHAPES = [
+  // I
+  [[0,0],[0,1],[0,2],[0,3]],
+  // O
+  [[0,0],[0,1],[1,0],[1,1]],
+  // T
+  [[0,1],[1,0],[1,1],[1,2]],
+  // S
+  [[0,1],[0,2],[1,0],[1,1]],
+  // Z
+  [[0,0],[0,1],[1,1],[1,2]],
+  // J
+  [[0,0],[1,0],[1,1],[1,2]],
+  // L
+  [[0,2],[1,0],[1,1],[1,2]],
+];
+
+// Colours for each piece type (index matches SHAPES)
+const PIECE_COLORS = [
+  '#3ecfcf', // I – cyan
+  '#f7d84b', // O – yellow
+  '#a855f7', // T – purple
+  '#4ade80', // S – green
+  '#f87171', // Z – red
+  '#60a5fa', // J – blue
+  '#fb923c', // L – orange
+];
+
+// ── Canvas / context ───────────────────────────────────
+const board     = document.getElementById('board');
+const ctx       = board.getContext('2d');
+const nextCv    = document.getElementById('next-canvas');
+const nctx      = nextCv.getContext('2d');
+
+// ── State ──────────────────────────────────────────────
+let grid, piece, nextPiece, score, level, lines, bestScore;
+let state = 'idle'; // idle | running | paused | over
+let dropTimer = 0, lastTime = 0, lockDelay = 0, lockPending = false;
+let autoRepeatDir = 0, autoRepeatTimer = 0;
+
+// ── Init helpers ───────────────────────────────────────
+function emptyGrid() {
+  return Array.from({ length: ROWS }, () => Array(COLS).fill(0));
+}
+
+function css(prop) {
+  return getComputedStyle(document.documentElement).getPropertyValue(prop).trim() || '#888';
+}
+
+function randomPiece() {
+  const idx   = Math.floor(Math.random() * SHAPES.length);
+  const cells = SHAPES[idx].map(([r, c]) => [r, c]);
+  // spawn centred
+  const col = Math.floor((COLS - 4) / 2);
+  return { cells, colorIdx: idx, ox: col, oy: 0 };
+}
+
+function absoluteCells(p) {
+  return p.cells.map(([r, c]) => [r + p.oy, c + p.ox]);
+}
+
+function collides(p, grid) {
+  for (const [r, c] of absoluteCells(p)) {
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS) return true;
+    if (grid[r][c]) return true;
+  }
+  return false;
+}
+
+function rotate(cells) {
+  // 90° clockwise: [r,c] → [c, maxR - r]
+  const maxR = Math.max(...cells.map(([r]) => r));
+  return cells.map(([r, c]) => [c, maxR - r]);
+}
+
+function tryRotate(p, grid) {
+  const rotated = { ...p, cells: rotate(p.cells) };
+  if (!collides(rotated, grid)) return rotated;
+  // wall kicks: try ±1, ±2 horizontal
+  for (const dx of [-1, 1, -2, 2]) {
+    const kicked = { ...rotated, ox: rotated.ox + dx };
+    if (!collides(kicked, grid)) return kicked;
+  }
+  return p; // no rotation possible
+}
+
+function lockPiece() {
+  for (const [r, c] of absoluteCells(piece)) {
+    if (r < 0) { endGame(); return; }
+    grid[r][c] = piece.colorIdx + 1; // store 1-indexed colour
+  }
+  clearLines();
+  piece     = nextPiece;
+  nextPiece = randomPiece();
+  lockPending = false;
+  lockDelay   = 0;
+  if (collides(piece, grid)) { endGame(); return; }
+  drawNext();
+}
+
+function clearLines() {
+  let cleared = 0;
+  for (let r = ROWS - 1; r >= 0; r--) {
+    if (grid[r].every(c => c !== 0)) {
+      grid.splice(r, 1);
+      grid.unshift(Array(COLS).fill(0));
+      cleared++;
+      r++; // re-check same row index
+    }
+  }
+  if (!cleared) return;
+  const pts = [0, 100, 300, 500, 800];
+  score += (pts[cleared] || 800) * level;
+  lines += cleared;
+  level  = Math.floor(lines / 10) + 1;
+  updateHUD();
+}
+
+function dropInterval() {
+  // ms per row: starts at 800, halves every 5 levels, floor 50
+  return Math.max(50, 800 - (level - 1) * 60);
+}
+
+// ── Drawing ────────────────────────────────────────────
+function drawCell(context, r, c, colorIdx, size, alpha = 1) {
+  const colors = [
+    '#3ecfcf','#f7d84b','#a855f7','#4ade80','#f87171','#60a5fa','#fb923c'
+  ];
+  const base = colors[(colorIdx - 1) % colors.length];
+  context.globalAlpha = alpha;
+  context.fillStyle   = base;
+  context.fillRect(c * size + 1, r * size + 1, size - 2, size - 2);
+  // highlight
+  context.fillStyle = 'rgba(255,255,255,0.18)';
+  context.fillRect(c * size + 1, r * size + 1, size - 2, 4);
+  context.globalAlpha = 1;
+}
+
+function ghostRow() {
+  // find lowest valid position for current piece
+  let g = { ...piece };
+  while (!collides({ ...g, oy: g.oy + 1 }, grid)) g = { ...g, oy: g.oy + 1 };
+  return g.oy - piece.oy; // distance dropped
+}
+
+function draw() {
+  const panelColor = css('--panel') || '#1e1e1e';
+  const lineColor  = css('--line')  || '#333';
+
+  // background
+  ctx.fillStyle = panelColor;
+  ctx.fillRect(0, 0, board.width, board.height);
+
+  // grid lines
+  ctx.strokeStyle = lineColor;
+  ctx.lineWidth   = 0.5;
+  for (let r = 0; r <= ROWS; r++) {
+    ctx.beginPath(); ctx.moveTo(0, r * SZ); ctx.lineTo(board.width, r * SZ); ctx.stroke();
+  }
+  for (let c = 0; c <= COLS; c++) {
+    ctx.beginPath(); ctx.moveTo(c * SZ, 0); ctx.lineTo(c * SZ, board.height); ctx.stroke();
+  }
+
+  // locked cells
+  for (let r = 0; r < ROWS; r++) {
+    for (let c = 0; c < COLS; c++) {
+      if (grid[r][c]) drawCell(ctx, r, c, grid[r][c], SZ);
+    }
+  }
+
+  if (state === 'running' || state === 'paused') {
+    // ghost piece
+    const ghostDrop = ghostRow();
+    const ghost     = { ...piece, oy: piece.oy + ghostDrop };
+    for (const [r, c] of absoluteCells(ghost)) {
+      if (r >= 0) drawCell(ctx, r, c, piece.colorIdx + 1, SZ, 0.18);
+    }
+
+    // active piece
+    for (const [r, c] of absoluteCells(piece)) {
+      if (r >= 0) drawCell(ctx, r, c, piece.colorIdx + 1, SZ);
+    }
+  }
+
+  // overlay
+  const accentColor = css('--accent') || '#3ecfcf';
+  const mutedColor  = css('--muted')  || '#888';
+  const textColor   = css('--text')   || '#eee';
+
+  if (state === 'idle') {
+    drawOverlay('TETRIS', 'press space or tap to start', accentColor, mutedColor);
+  } else if (state === 'paused') {
+    drawOverlay('PAUSED', 'press P or tap to resume', accentColor, mutedColor);
+  } else if (state === 'over') {
+    drawOverlay('GAME OVER', `score: ${score}`, '#f87171', mutedColor, true);
+  }
+}
+
+function drawOverlay(title, sub, titleColor, subColor, showRestart = false) {
+  ctx.fillStyle = 'rgba(0,0,0,0.65)';
+  ctx.fillRect(0, 0, board.width, board.height);
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.font      = 'bold 22px "Space Grotesk", sans-serif';
+  ctx.fillStyle = titleColor;
+  ctx.fillText(title, board.width / 2, board.height / 2 - 22);
+  ctx.font      = '12px "IBM Plex Mono", monospace';
+  ctx.fillStyle = subColor;
+  ctx.fillText(sub, board.width / 2, board.height / 2 + 6);
+  if (showRestart) {
+    ctx.fillText('press space or tap to play again', board.width / 2, board.height / 2 + 26);
+  }
+}
+
+function drawNext() {
+  const panelColor = css('--panel') || '#1e1e1e';
+  nctx.fillStyle   = panelColor;
+  nctx.fillRect(0, 0, nextCv.width, nextCv.height);
+  if (!nextPiece) return;
+  // centre in 4×4 bounding preview
+  const minC = Math.min(...nextPiece.cells.map(([,c]) => c));
+  const minR = Math.min(...nextPiece.cells.map(([r]) => r));
+  const maxC = Math.max(...nextPiece.cells.map(([,c]) => c));
+  const maxR = Math.max(...nextPiece.cells.map(([r]) => r));
+  const pw   = (maxC - minC + 1) * NEXT_SZ;
+  const ph   = (maxR - minR + 1) * NEXT_SZ;
+  const offC = Math.floor((nextCv.width  - pw) / 2) / NEXT_SZ - minC;
+  const offR = Math.floor((nextCv.height - ph) / 2) / NEXT_SZ - minR;
+  for (const [r, c] of nextPiece.cells) {
+    drawCell(nctx, r + offR, c + offC, nextPiece.colorIdx + 1, NEXT_SZ);
+  }
+}
+
+// ── HUD ────────────────────────────────────────────────
+function updateHUD() {
+  document.getElementById('score').textContent = score;
+  document.getElementById('level').textContent = level;
+  document.getElementById('lines').textContent = lines;
+  if (score > bestScore) {
+    bestScore = score;
+    localStorage.setItem('tetris-best', bestScore);
+    document.getElementById('best').textContent = bestScore;
+  }
+}
+
+// ── Game lifecycle ────────────────────────────────────
+function startGame() {
+  grid        = emptyGrid();
+  score       = 0;
+  level       = 1;
+  lines       = 0;
+  piece       = randomPiece();
+  nextPiece   = randomPiece();
+  state       = 'running';
+  dropTimer   = 0;
+  lockPending = false;
+  lockDelay   = 0;
+  lastTime    = performance.now();
+  updateHUD();
+  drawNext();
+  requestAnimationFrame(loop);
+}
+
+function endGame() {
+  state = 'over';
+  if (score > bestScore) {
+    bestScore = score;
+    localStorage.setItem('tetris-best', bestScore);
+    document.getElementById('best').textContent = bestScore;
+  }
+  draw();
+}
+
+function togglePause() {
+  if (state === 'running') {
+    state = 'paused';
+    draw();
+  } else if (state === 'paused') {
+    state    = 'running';
+    lastTime = performance.now();
+    requestAnimationFrame(loop);
+  }
+}
+
+function hardDrop() {
+  if (state !== 'running') return;
+  const dropped = ghostRow();
+  piece = { ...piece, oy: piece.oy + dropped };
+  score += dropped * 2;
+  updateHUD();
+  lockPiece();
+  draw();
+}
+
+function movePiece(dc) {
+  if (state !== 'running') return;
+  const moved = { ...piece, ox: piece.ox + dc };
+  if (!collides(moved, grid)) {
+    piece = moved;
+    if (lockPending) lockDelay = 0; // reset lock delay on lateral move
+  }
+}
+
+function softDrop() {
+  if (state !== 'running') return;
+  const moved = { ...piece, oy: piece.oy + 1 };
+  if (!collides(moved, grid)) {
+    piece = moved;
+    score++;
+    dropTimer = 0;
+    updateHUD();
+  }
+}
+
+// ── Game loop ─────────────────────────────────────────
+function loop(now) {
+  if (state !== 'running') return;
+  const dt = now - lastTime;
+  lastTime = now;
+
+  // Auto-repeat for held keys
+  if (autoRepeatDir !== 0) {
+    autoRepeatTimer -= dt;
+    if (autoRepeatTimer <= 0) {
+      movePiece(autoRepeatDir);
+      autoRepeatTimer = 50;
+    }
+  }
+
+  // Gravity
+  dropTimer += dt;
+  if (dropTimer >= dropInterval()) {
+    dropTimer = 0;
+    const moved = { ...piece, oy: piece.oy + 1 };
+    if (!collides(moved, grid)) {
+      piece       = moved;
+      lockPending = false;
+      lockDelay   = 0;
+    } else {
+      lockPending = true;
+    }
+  }
+
+  // Lock delay (500 ms after landing)
+  if (lockPending) {
+    lockDelay += dt;
+    if (lockDelay >= 500) lockPiece();
+  }
+
+  draw();
+  requestAnimationFrame(loop);
+}
+
+// ── Keyboard ──────────────────────────────────────────
+const held = {};
+document.addEventListener('keydown', e => {
+  if (held[e.code]) return; // ignore auto-repeat
+  held[e.code] = true;
+
+  if (e.code === 'Space') {
+    e.preventDefault();
+    if (state === 'idle' || state === 'over') { startGame(); return; }
+    hardDrop(); return;
+  }
+  if (e.code === 'KeyP') { if (state === 'running' || state === 'paused') togglePause(); return; }
+  if (state !== 'running') return;
+
+  switch (e.code) {
+    case 'ArrowLeft':
+      e.preventDefault();
+      movePiece(-1);
+      autoRepeatDir   = -1;
+      autoRepeatTimer = 160;
+      break;
+    case 'ArrowRight':
+      e.preventDefault();
+      movePiece(1);
+      autoRepeatDir   = 1;
+      autoRepeatTimer = 160;
+      break;
+    case 'ArrowUp':
+      e.preventDefault();
+      piece = tryRotate(piece, grid);
+      break;
+    case 'ArrowDown':
+      e.preventDefault();
+      softDrop();
+      break;
+  }
+});
+document.addEventListener('keyup', e => {
+  delete held[e.code];
+  if (e.code === 'ArrowLeft' || e.code === 'ArrowRight') {
+    autoRepeatDir = 0;
+  }
+});
+
+// ── Board click / tap ─────────────────────────────────
+board.addEventListener('click', () => {
+  if (state === 'idle' || state === 'over') { startGame(); return; }
+  if (state === 'paused') { togglePause(); return; }
+  hardDrop();
+});
+
+// ── Touch swipe on board ──────────────────────────────
+let touchStartX = 0, touchStartY = 0, touchMoved = false;
+board.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  touchMoved  = false;
+  e.preventDefault();
+}, { passive: false });
+board.addEventListener('touchmove', e => {
+  touchMoved = true;
+  e.preventDefault();
+}, { passive: false });
+board.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (!touchMoved && Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+    // tap = rotate if running, else start
+    if (state === 'idle' || state === 'over') { startGame(); return; }
+    if (state === 'paused') { togglePause(); return; }
+    piece = tryRotate(piece, grid);
+    return;
+  }
+  if (state !== 'running') return;
+  if (Math.abs(dx) > Math.abs(dy)) {
+    movePiece(dx > 0 ? 1 : -1);
+  } else if (dy > 30) {
+    hardDrop();
+  }
+  e.preventDefault();
+}, { passive: false });
+
+// ── Touch control buttons ─────────────────────────────
+document.getElementById('tc-left').addEventListener('click',   () => movePiece(-1));
+document.getElementById('tc-right').addEventListener('click',  () => movePiece(1));
+document.getElementById('tc-rotate').addEventListener('click', () => {
+  if (state !== 'running') return;
+  piece = tryRotate(piece, grid);
+});
+document.getElementById('tc-soft').addEventListener('click', softDrop);
+document.getElementById('tc-drop').addEventListener('click', hardDrop);
+
+// ── Boot ──────────────────────────────────────────────
+bestScore = parseInt(localStorage.getItem('tetris-best') || '0');
+document.getElementById('best').textContent = bestScore;
+grid      = emptyGrid();
+piece     = randomPiece();
+nextPiece = randomPiece();
+drawNext();
+draw(); // show idle overlay
+</script>
+</body>
+</html>

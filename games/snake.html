@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake | Kuba SP3FCK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    .game-wrap {
+      padding: 2rem 0 4rem;
+    }
+    .game-header {
+      margin-bottom: 1.5rem;
+    }
+    .game-header h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+    .game-header p {
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+    .score-bar {
+      display: flex;
+      gap: 2rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .score-bar .val {
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 0.4em;
+    }
+    .canvas-wrap {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      line-height: 0;
+      cursor: pointer;
+      max-width: 100%;
+    }
+    canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .hint {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    /* D-pad – shown only on small screens */
+    .dpad {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      margin-top: 1.5rem;
+    }
+    .dpad-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .dpad-center {
+      width: 48px;
+      height: 48px;
+    }
+    .dpad-btn {
+      width: 48px;
+      height: 48px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 120ms ease, border-color 120ms ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .dpad-btn:active {
+      background: var(--card-icon-bg);
+      border-color: var(--accent);
+    }
+    @media (max-width: 599px) {
+      .dpad { display: flex; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="wrap">
+    <div class="game-wrap">
+      <a href="../index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to home
+      </a>
+      <div class="game-header">
+        <h2>Snake</h2>
+        <p>Classic snake. Don't hit the walls. Don't eat yourself. Easy.</p>
+      </div>
+
+      <div class="score-bar">
+        <span>Score<span class="val" id="score">0</span></span>
+        <span>Best<span class="val" id="high-score">0</span></span>
+      </div>
+
+      <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+      </div>
+
+      <p class="hint">[ space ] or click canvas to start &nbsp;·&nbsp; arrow keys to steer</p>
+
+      <!-- Mobile D-pad -->
+      <div class="dpad">
+        <button class="dpad-btn" id="btn-up" aria-label="Up">
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+        <div class="dpad-row">
+          <button class="dpad-btn" id="btn-left" aria-label="Left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="dpad-center"></div>
+          <button class="dpad-btn" id="btn-right" aria-label="Right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <button class="dpad-btn" id="btn-down" aria-label="Down">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const canvas = document.getElementById('game-canvas');
+    const ctx    = canvas.getContext('2d');
+
+    const CELL = 20;
+    const COLS = canvas.width  / CELL; // 20
+    const ROWS = canvas.height / CELL; // 20
+
+    let snake, dir, nextDir, food, score, gameLoop;
+    let state = 'idle'; // 'idle' | 'running' | 'over'
+    let highScore = parseInt(localStorage.getItem('snake-hs') || '0');
+
+    // Read a CSS custom property from the root element
+    function css(prop) {
+      return getComputedStyle(document.documentElement).getPropertyValue(prop).trim();
+    }
+
+    // Draw a rounded rectangle with fallback
+    function roundRect(x, y, w, h, r) {
+      if (ctx.roundRect) {
+        ctx.beginPath();
+        ctx.roundRect(x, y, w, h, r);
+        ctx.fill();
+      } else {
+        ctx.fillRect(x, y, w, h);
+      }
+    }
+
+    function placeFood() {
+      let pos;
+      do {
+        pos = {
+          x: Math.floor(Math.random() * COLS),
+          y: Math.floor(Math.random() * ROWS),
+        };
+      } while (snake.some(s => s.x === pos.x && s.y === pos.y));
+      food = pos;
+    }
+
+    function updateScoreDisplay() {
+      document.getElementById('score').textContent = score;
+      document.getElementById('high-score').textContent = highScore;
+    }
+
+    function draw() {
+      const panelColor  = css('--panel');
+      const accentColor = css('--accent');
+      const acc2Color   = css('--accent-2');
+      const lineColor   = css('--line');
+      const textColor   = css('--text');
+      const mutedColor  = css('--muted');
+      const dangerColor = css('--danger') || '#f87171';
+
+      // Background
+      ctx.fillStyle = panelColor;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Subtle grid dots
+      ctx.fillStyle = lineColor;
+      for (let x = 0; x < COLS; x++) {
+        for (let y = 0; y < ROWS; y++) {
+          ctx.fillRect(x * CELL + CELL / 2 - 1, y * CELL + CELL / 2 - 1, 2, 2);
+        }
+      }
+
+      // Food (with subtle glow)
+      ctx.shadowColor = accentColor;
+      ctx.shadowBlur  = 10;
+      ctx.fillStyle   = accentColor;
+      roundRect(food.x * CELL + 4, food.y * CELL + 4, CELL - 8, CELL - 8, 4);
+      ctx.shadowBlur = 0;
+
+      // Snake segments
+      snake.forEach((seg, i) => {
+        ctx.globalAlpha = i === 0 ? 1 : Math.max(0.35, 1 - i * 0.018);
+        ctx.fillStyle   = i === 0 ? accentColor : acc2Color;
+        roundRect(seg.x * CELL + 1, seg.y * CELL + 1, CELL - 2, CELL - 2, i === 0 ? 7 : 4);
+      });
+      ctx.globalAlpha = 1;
+
+      // Overlays
+      if (state === 'idle') {
+        drawOverlay(
+          'SNAKE',
+          'press space or tap to start',
+          accentColor, mutedColor, false
+        );
+      } else if (state === 'over') {
+        drawOverlay(
+          'GAME OVER',
+          `score: ${score}   best: ${highScore}`,
+          dangerColor, mutedColor, true
+        );
+      }
+    }
+
+    function drawOverlay(title, subtitle, titleColor, subColor, showRestart) {
+      ctx.fillStyle = 'rgba(0,0,0,0.62)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.textAlign    = 'center';
+      ctx.textBaseline = 'middle';
+
+      ctx.font      = 'bold 26px "Space Grotesk", sans-serif';
+      ctx.fillStyle = titleColor;
+      ctx.fillText(title, canvas.width / 2, canvas.height / 2 - 24);
+
+      ctx.font      = '13px "IBM Plex Mono", monospace';
+      ctx.fillStyle = subColor;
+      ctx.fillText(subtitle, canvas.width / 2, canvas.height / 2 + 8);
+
+      if (showRestart) {
+        ctx.fillText('press space or tap to play again', canvas.width / 2, canvas.height / 2 + 34);
+      }
+    }
+
+    function step() {
+      dir = nextDir;
+      const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+
+      // Wall or self collision
+      if (
+        head.x < 0 || head.x >= COLS ||
+        head.y < 0 || head.y >= ROWS ||
+        snake.some(s => s.x === head.x && s.y === head.y)
+      ) {
+        endGame();
+        return;
+      }
+
+      snake.unshift(head);
+
+      if (head.x === food.x && head.y === food.y) {
+        score++;
+        updateScoreDisplay();
+        placeFood();
+      } else {
+        snake.pop();
+      }
+
+      draw();
+    }
+
+    function startGame() {
+      clearInterval(gameLoop);
+      snake    = [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }];
+      dir      = { x: 1, y: 0 };
+      nextDir  = { x: 1, y: 0 };
+      score    = 0;
+      state    = 'running';
+      placeFood();
+      updateScoreDisplay();
+      draw();
+      gameLoop = setInterval(step, 130);
+    }
+
+    function endGame() {
+      clearInterval(gameLoop);
+      state = 'over';
+      if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('snake-hs', highScore);
+        updateScoreDisplay();
+      }
+      draw();
+    }
+
+    function handleAction() {
+      if (state !== 'running') startGame();
+    }
+
+    // ── Keyboard ──────────────────────────────────────────
+    document.addEventListener('keydown', e => {
+      if (e.key === ' ') {
+        e.preventDefault();
+        handleAction();
+        return;
+      }
+      if (state !== 'running') return;
+      switch (e.key) {
+        case 'ArrowUp':    if (dir.y !== 1)  nextDir = { x: 0, y: -1 }; e.preventDefault(); break;
+        case 'ArrowDown':  if (dir.y !== -1) nextDir = { x: 0, y:  1 }; e.preventDefault(); break;
+        case 'ArrowLeft':  if (dir.x !== 1)  nextDir = { x: -1, y: 0 }; e.preventDefault(); break;
+        case 'ArrowRight': if (dir.x !== -1) nextDir = { x:  1, y: 0 }; e.preventDefault(); break;
+      }
+    });
+
+    // ── Canvas click / tap ────────────────────────────────
+    canvas.addEventListener('click', handleAction);
+
+    // ── Touch swipe on canvas ─────────────────────────────
+    let touchX = 0, touchY = 0;
+    canvas.addEventListener('touchstart', e => {
+      touchX = e.touches[0].clientX;
+      touchY = e.touches[0].clientY;
+      e.preventDefault();
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', e => {
+      if (state !== 'running') { handleAction(); return; }
+      const dx = e.changedTouches[0].clientX - touchX;
+      const dy = e.changedTouches[0].clientY - touchY;
+      if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return; // tap, not swipe
+      if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > 0 && dir.x !== -1) nextDir = { x:  1, y: 0 };
+        else if (dx < 0 && dir.x !== 1) nextDir = { x: -1, y: 0 };
+      } else {
+        if (dy > 0 && dir.y !== -1) nextDir = { x: 0, y:  1 };
+        else if (dy < 0 && dir.y !== 1) nextDir = { x: 0, y: -1 };
+      }
+      e.preventDefault();
+    }, { passive: false });
+
+    // ── D-pad buttons ─────────────────────────────────────
+    const dpad = {
+      'btn-up':    () => { if (dir.y !== 1)  nextDir = { x: 0, y: -1 }; },
+      'btn-down':  () => { if (dir.y !== -1) nextDir = { x: 0, y:  1 }; },
+      'btn-left':  () => { if (dir.x !== 1)  nextDir = { x: -1, y: 0 }; },
+      'btn-right': () => { if (dir.x !== -1) nextDir = { x:  1, y: 0 }; },
+    };
+    Object.entries(dpad).forEach(([id, fn]) => {
+      document.getElementById(id).addEventListener('click', () => {
+        if (state !== 'running') { handleAction(); return; }
+        fn();
+      });
+    });
+
+    // ── Boot ──────────────────────────────────────────────
+    updateScoreDisplay();
+    // Initial idle draw
+    snake = [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }];
+    dir   = { x: 1, y: 0 };
+    food  = { x: 15, y: 10 };
+    score = 0;
+    draw();
+  </script>
+</body>
+</html>

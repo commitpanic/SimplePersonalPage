@@ -439,6 +439,11 @@ h1 {
   margin-bottom: 3rem;
 }
 
+/* ── Games section ──────────────────────────────────── */
+.games-section {
+  margin-bottom: 3rem;
+}
+
 .section-heading {
   font-size: 0.78rem;
   font-family: "IBM Plex Mono", monospace;

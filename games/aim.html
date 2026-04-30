@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aim Trainer | Kuba SP3FCK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    .game-wrap {
+      padding: 2rem 0 4rem;
+    }
+    .game-header {
+      margin-bottom: 1.5rem;
+    }
+    .game-header h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+    .game-header p {
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+    .stat-bar {
+      display: flex;
+      gap: 2rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .stat-bar .val {
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 0.4em;
+    }
+    .arena-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 7 / 4;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      cursor: crosshair;
+      user-select: none;
+    }
+    /* Overlay shown when idle / game over */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: rgba(0,0,0,0.6);
+      z-index: 5;
+      border-radius: 12px;
+    }
+    .overlay h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .overlay p {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    /* The target circle */
+    .target {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 80ms ease;
+      cursor: crosshair;
+      z-index: 3;
+    }
+    .target:active {
+      transform: translate(-50%, -50%) scale(0.85);
+    }
+    /* Miss flash */
+    .arena-wrap.miss-flash {
+      border-color: var(--danger);
+    }
+    /* Hit burst animation */
+    @keyframes burst {
+      from { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      to   { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+    }
+    .burst {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      pointer-events: none;
+      z-index: 4;
+      animation: burst 300ms ease-out forwards;
+    }
+    /* Progress dots */
+    .progress-dots {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 0.75rem;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--line);
+      transition: background 200ms ease;
+    }
+    .dot.hit  { background: var(--accent); }
+    .dot.miss { background: var(--danger); }
+    /* Results table */
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      width: 100%;
+      max-width: 560px;
+      margin-top: 1.25rem;
+    }
+    .result-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.45rem 0.75rem;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+      gap: 1rem;
+    }
+    .result-row .rtime {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .result-row.miss-row { opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="wrap">
+    <div class="game-wrap">
+      <a href="../index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to home
+      </a>
+      <div class="game-header">
+        <h2>Aim Trainer</h2>
+        <p>Click the circle as fast as you can. 10 rounds. Don't miss.</p>
+      </div>
+
+      <div class="stat-bar">
+        <span>Round<span class="val" id="stat-round">0/10</span></span>
+        <span>Avg<span class="val" id="stat-avg">—</span></span>
+        <span>Best<span class="val" id="stat-best">—</span></span>
+      </div>
+
+      <div class="progress-dots" id="progress-dots"></div>
+
+      <div class="arena-wrap" id="arena">
+        <div class="overlay" id="overlay">
+          <h3>Aim Trainer</h3>
+          <p>Click anywhere to start</p>
+        </div>
+      </div>
+
+      <div class="results-list" id="results-list"></div>
+    </div>
+  </main>
+
+  <script>
+    const ROUNDS      = 10;
+    const MIN_SIZE    = 28;
+    const MAX_SIZE    = 64;
+    const APPEAR_MIN  = 600;
+    const APPEAR_MAX  = 1800;
+
+    const arena       = document.getElementById('arena');
+    const overlay     = document.getElementById('overlay');
+    const dotsEl      = document.getElementById('progress-dots');
+    const resultsList = document.getElementById('results-list');
+
+    let state       = 'idle';  // 'idle' | 'waiting' | 'showing' | 'done'
+    let round       = 0;
+    let results     = [];      // { time: number|null, hit: boolean }
+    let targetEl    = null;
+    let appearTimer = null;
+    let shownAt     = 0;
+
+    // ── Helpers ──────────────────────────────────────────
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+
+    function buildDots() {
+      dotsEl.innerHTML = '';
+      for (let i = 0; i < ROUNDS; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot';
+        d.id = `dot-${i}`;
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function setDot(i, cls) {
+      const d = document.getElementById(`dot-${i}`);
+      if (d) d.className = `dot ${cls}`;
+    }
+
+    function updateStats() {
+      const hits = results.filter(r => r.hit);
+      document.getElementById('stat-round').textContent =
+        `${Math.min(round, ROUNDS)}/${ROUNDS}`;
+      if (hits.length) {
+        const avg  = Math.round(hits.reduce((s, r) => s + r.time, 0) / hits.length);
+        const best = Math.min(...hits.map(r => r.time));
+        document.getElementById('stat-avg').textContent  = `${avg} ms`;
+        document.getElementById('stat-best').textContent = `${best} ms`;
+      }
+    }
+
+    function appendResult(idx, result) {
+      const row = document.createElement('div');
+      row.className = result.hit ? 'result-row' : 'result-row miss-row';
+      row.innerHTML = `
+        <span>Round ${idx + 1}</span>
+        <span>${result.hit ? `<span class="rtime">${result.time} ms</span>` : '<span style="color:var(--danger)">MISS</span>'}</span>
+      `;
+      resultsList.appendChild(row);
+    }
+
+    function spawnBurst(x, y, size) {
+      const b = document.createElement('div');
+      b.className = 'burst';
+      b.style.left   = `${x}px`;
+      b.style.top    = `${y}px`;
+      b.style.width  = `${size}px`;
+      b.style.height = `${size}px`;
+      arena.appendChild(b);
+      b.addEventListener('animationend', () => b.remove());
+    }
+
+    function removeTarget() {
+      if (targetEl) {
+        targetEl.remove();
+        targetEl = null;
+      }
+    }
+
+    // ── Game flow ─────────────────────────────────────────
+    function startGame() {
+      state   = 'waiting';
+      round   = 0;
+      results = [];
+      resultsList.innerHTML = '';
+      buildDots();
+      overlay.style.display = 'none';
+      updateStats();
+      scheduleTarget();
+    }
+
+    function scheduleTarget() {
+      if (round >= ROUNDS) { endGame(); return; }
+      state = 'waiting';
+      const delay = rand(APPEAR_MIN, APPEAR_MAX);
+      appearTimer = setTimeout(showTarget, delay);
+    }
+
+    function showTarget() {
+      state = 'showing';
+
+      const aW  = arena.clientWidth;
+      const aH  = arena.clientHeight;
+      const sz  = Math.round(rand(MIN_SIZE, MAX_SIZE));
+      const pad = sz / 2 + 6;
+      const x   = rand(pad, aW - pad);
+      const y   = rand(pad, aH - pad);
+
+      targetEl = document.createElement('div');
+      targetEl.className = 'target';
+      targetEl.style.width  = `${sz}px`;
+      targetEl.style.height = `${sz}px`;
+      targetEl.style.left   = `${x}px`;
+      targetEl.style.top    = `${y}px`;
+      arena.appendChild(targetEl);
+
+      shownAt = performance.now();
+
+      targetEl.addEventListener('click', e => {
+        e.stopPropagation();
+        if (state !== 'showing') return;
+        const reactionTime = Math.round(performance.now() - shownAt);
+        const result = { time: reactionTime, hit: true };
+        results.push(result);
+        setDot(round, 'hit');
+        spawnBurst(x, y, sz);
+        removeTarget();
+        appendResult(round, result);
+        round++;
+        updateStats();
+        scheduleTarget();
+      });
+    }
+
+    function missClick() {
+      if (state !== 'showing' && state !== 'waiting') return;
+      clearTimeout(appearTimer);
+
+      if (state === 'showing') {
+        removeTarget();
+        const result = { time: null, hit: false };
+        results.push(result);
+        setDot(round, 'miss');
+        appendResult(round, result);
+        round++;
+        updateStats();
+        // Flash border red briefly
+        arena.classList.add('miss-flash');
+        setTimeout(() => arena.classList.remove('miss-flash'), 250);
+        scheduleTarget();
+      }
+    }
+
+    function endGame() {
+      state = 'done';
+      const hits  = results.filter(r => r.hit);
+      const avg   = hits.length
+        ? Math.round(hits.reduce((s, r) => s + r.time, 0) / hits.length)
+        : null;
+
+      overlay.style.display = 'flex';
+      overlay.innerHTML = `
+        <h3>Done!</h3>
+        <p>${hits.length}/${ROUNDS} hits &nbsp;·&nbsp; avg ${avg !== null ? avg + ' ms' : '—'}</p>
+        <p style="margin-top:0.4rem">Click to play again</p>
+      `;
+    }
+
+    // ── Events ────────────────────────────────────────────
+    // Click on arena background = miss (if showing) or start
+    arena.addEventListener('click', e => {
+      if (state === 'idle' || state === 'done') {
+        startGame();
+        return;
+      }
+      if (e.target === arena || e.target === dotsEl) {
+        missClick();
+      }
+    });
+
+    overlay.addEventListener('click', e => {
+      e.stopPropagation();
+      startGame();
+    });
+
+    // ── Boot ──────────────────────────────────────────────
+    buildDots();
+  </script>
+</body>
+</html>
