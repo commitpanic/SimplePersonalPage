@@ -1,8 +1,371 @@
 {
-  "updatedAt": "2026-05-21T19:58:36.706Z",
+  "updatedAt": "2026-05-21T20:55:34.106Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-05-21T18:05:00.000Z-OZ8IE-40m-SSB",
+      "datetime": "2026-05-21T18:05:00.000Z",
+      "callsign": "OZ8IE",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Denmark",
+      "grid": "JO75JG",
+      "lat": 55.270833333333336,
+      "lon": 14.791666666666666
+    },
+    {
+      "id": "2026-05-21T16:36:00.000Z-DL2CI-40m-SSB",
+      "datetime": "2026-05-21T16:36:00.000Z",
+      "callsign": "DL2CI",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO54JE",
+      "lat": 54.1875,
+      "lon": 10.791666666666666
+    },
+    {
+      "id": "2026-05-21T16:35:00.000Z-SP9XG-40m-SSB",
+      "datetime": "2026-05-21T16:35:00.000Z",
+      "callsign": "SP9XG",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO90hg",
+      "lat": 50.270833333333336,
+      "lon": 18.625
+    },
+    {
+      "id": "2026-05-21T16:34:00.000Z-ON2OY-40m-SSB",
+      "datetime": "2026-05-21T16:34:00.000Z",
+      "callsign": "ON2OY",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO20kw",
+      "lat": 50.9375,
+      "lon": 4.875
+    },
+    {
+      "id": "2026-05-21T16:31:00.000Z-I4RHP-40m-SSB",
+      "datetime": "2026-05-21T16:31:00.000Z",
+      "callsign": "I4RHP",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Italy",
+      "grid": "JN54QL",
+      "lat": 44.47916666666667,
+      "lon": 11.375
+    },
+    {
+      "id": "2026-05-21T16:31:00.000Z-DJ1SD-40m-SSB",
+      "datetime": "2026-05-21T16:31:00.000Z",
+      "callsign": "DJ1SD",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO53CT",
+      "lat": 53.8125,
+      "lon": 10.208333333333332
+    },
+    {
+      "id": "2026-05-21T16:30:00.000Z-HB9FUX-40m-SSB",
+      "datetime": "2026-05-21T16:30:00.000Z",
+      "callsign": "HB9FUX",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Switzerland",
+      "grid": "JN47bk",
+      "lat": 47.4375,
+      "lon": 8.125
+    },
+    {
+      "id": "2026-05-21T16:30:00.000Z-ON2MD-40m-SSB",
+      "datetime": "2026-05-21T16:30:00.000Z",
+      "callsign": "ON2MD",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO10tv",
+      "lat": 50.895833333333336,
+      "lon": 3.6249999999999996
+    },
+    {
+      "id": "2026-05-21T16:28:00.000Z-SP9UNW-40m-SSB",
+      "datetime": "2026-05-21T16:28:00.000Z",
+      "callsign": "SP9UNW",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO90oi",
+      "lat": 50.35416666666667,
+      "lon": 19.208333333333336
+    },
+    {
+      "id": "2026-05-21T16:28:00.000Z-ON6LX-40m-SSB",
+      "datetime": "2026-05-21T16:28:00.000Z",
+      "callsign": "ON6LX",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO11wc",
+      "lat": 51.10416666666667,
+      "lon": 3.8749999999999996
+    },
+    {
+      "id": "2026-05-21T16:27:00.000Z-SP3JSD-40m-SSB",
+      "datetime": "2026-05-21T16:27:00.000Z",
+      "callsign": "SP3JSD",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO92DF",
+      "lat": 52.22916666666667,
+      "lon": 18.291666666666668
+    },
+    {
+      "id": "2026-05-21T16:26:00.000Z-F4ABI-40m-SSB",
+      "datetime": "2026-05-21T16:26:00.000Z",
+      "callsign": "F4ABI",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "France",
+      "grid": "JN25ja",
+      "lat": 45.020833333333336,
+      "lon": 4.791666666666667
+    },
+    {
+      "id": "2026-05-21T16:26:00.000Z-DL2MOS-40m-SSB",
+      "datetime": "2026-05-21T16:26:00.000Z",
+      "callsign": "DL2MOS",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO31JG",
+      "lat": 51.270833333333336,
+      "lon": 6.791666666666667
+    },
+    {
+      "id": "2026-05-21T16:25:00.000Z-SP8RC-40m-SSB",
+      "datetime": "2026-05-21T16:25:00.000Z",
+      "callsign": "SP8RC",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "KO10DV",
+      "lat": 50.895833333333336,
+      "lon": 22.291666666666668
+    },
+    {
+      "id": "2026-05-21T16:25:00.000Z-SP4MOB-40m-SSB",
+      "datetime": "2026-05-21T16:25:00.000Z",
+      "callsign": "SP4MOB",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "KO03gs",
+      "lat": 53.770833333333336,
+      "lon": 20.541666666666668
+    },
+    {
+      "id": "2026-05-21T16:24:00.000Z-SQ7JZO-40m-SSB",
+      "datetime": "2026-05-21T16:24:00.000Z",
+      "callsign": "SQ7JZO",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "KO01BX",
+      "lat": 51.97916666666667,
+      "lon": 20.125
+    },
+    {
+      "id": "2026-05-21T16:24:00.000Z-DF8FL-40m-SSB",
+      "datetime": "2026-05-21T16:24:00.000Z",
+      "callsign": "DF8FL",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO53HU",
+      "lat": 53.85416666666667,
+      "lon": 10.625
+    },
+    {
+      "id": "2026-05-21T16:23:00.000Z-EI6IF-40m-SSB",
+      "datetime": "2026-05-21T16:23:00.000Z",
+      "callsign": "EI6IF",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Ireland",
+      "grid": "IO63dl",
+      "lat": 53.47916666666667,
+      "lon": -7.708333333333333
+    },
+    {
+      "id": "2026-05-21T16:22:00.000Z-PA7AM-40m-SSB",
+      "datetime": "2026-05-21T16:22:00.000Z",
+      "callsign": "PA7AM",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Netherlands",
+      "grid": "Jo21ew",
+      "lat": 51.9375,
+      "lon": 4.375
+    },
+    {
+      "id": "2026-05-21T16:21:00.000Z-M7KEO-40m-SSB",
+      "datetime": "2026-05-21T16:21:00.000Z",
+      "callsign": "M7KEO",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "England",
+      "grid": "IO92UX",
+      "lat": 52.97916666666667,
+      "lon": -0.2916666666666668
+    },
+    {
+      "id": "2026-05-21T16:20:00.000Z-YO6CFB-40m-SSB",
+      "datetime": "2026-05-21T16:20:00.000Z",
+      "callsign": "YO6CFB",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Romania",
+      "grid": "KN26VI",
+      "lat": 46.35416666666667,
+      "lon": 25.791666666666668
+    },
+    {
+      "id": "2026-05-21T16:18:00.000Z-PD1WGL-40m-SSB",
+      "datetime": "2026-05-21T16:18:00.000Z",
+      "callsign": "PD1WGL",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Netherlands",
+      "grid": "JO22fb",
+      "lat": 52.0625,
+      "lon": 4.458333333333334
+    },
+    {
+      "id": "2026-05-21T16:17:00.000Z-DL2EF-40m-SSB",
+      "datetime": "2026-05-21T16:17:00.000Z",
+      "callsign": "DL2EF",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO31HI",
+      "lat": 51.35416666666667,
+      "lon": 6.625
+    },
+    {
+      "id": "2026-05-21T16:16:00.000Z-SQ7EKO-40m-SSB",
+      "datetime": "2026-05-21T16:16:00.000Z",
+      "callsign": "SQ7EKO",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO91qt",
+      "lat": 51.8125,
+      "lon": 19.375
+    },
+    {
+      "id": "2026-05-21T16:15:00.000Z-ON7RN-40m-SSB",
+      "datetime": "2026-05-21T16:15:00.000Z",
+      "callsign": "ON7RN",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO20EV",
+      "lat": 50.895833333333336,
+      "lon": 4.375
+    },
+    {
+      "id": "2026-05-21T16:14:00.000Z-G4FKA-40m-SSB",
+      "datetime": "2026-05-21T16:14:00.000Z",
+      "callsign": "G4FKA",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "England",
+      "grid": "IO81SM",
+      "lat": 51.520833333333336,
+      "lon": -2.4583333333333335
+    },
+    {
+      "id": "2026-05-21T16:13:00.000Z-SP7QAA-40m-SSB",
+      "datetime": "2026-05-21T16:13:00.000Z",
+      "callsign": "SP7QAA",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO91vt",
+      "lat": 51.8125,
+      "lon": 19.791666666666668
+    },
+    {
+      "id": "2026-05-21T16:12:00.000Z-DL1AX-40m-SSB",
+      "datetime": "2026-05-21T16:12:00.000Z",
+      "callsign": "DL1AX",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JO41XM",
+      "lat": 51.520833333333336,
+      "lon": 9.958333333333332
+    },
+    {
+      "id": "2026-05-21T16:12:00.000Z-SP4KVA-40m-SSB",
+      "datetime": "2026-05-21T16:12:00.000Z",
+      "callsign": "SP4KVA",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO93SO",
+      "lat": 53.60416666666667,
+      "lon": 19.541666666666668
+    },
+    {
+      "id": "2026-05-21T16:11:00.000Z-ON8DX-40m-SSB",
+      "datetime": "2026-05-21T16:11:00.000Z",
+      "callsign": "ON8DX",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JN29vq",
+      "lat": 49.6875,
+      "lon": 5.791666666666667
+    },
+    {
+      "id": "2026-05-21T16:11:00.000Z-ON8LX-40m-SSB",
+      "datetime": "2026-05-21T16:11:00.000Z",
+      "callsign": "ON8LX",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JN29wn",
+      "lat": 49.5625,
+      "lon": 5.875
+    },
+    {
+      "id": "2026-05-21T16:10:00.000Z-ON3DWG-40m-SSB",
+      "datetime": "2026-05-21T16:10:00.000Z",
+      "callsign": "ON3DWG",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO10uu",
+      "lat": 50.85416666666667,
+      "lon": 3.708333333333333
+    },
+    {
+      "id": "2026-05-21T16:10:00.000Z-SP4VIT-40m-SSB",
+      "datetime": "2026-05-21T16:10:00.000Z",
+      "callsign": "SP4VIT",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO93xq",
+      "lat": 53.6875,
+      "lon": 19.958333333333336
+    },
     {
       "id": "2026-05-03T15:54:00.000Z-SQ6OWM/P-40m-LSB",
       "datetime": "2026-05-03T15:54:00.000Z",
@@ -142,7 +505,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94og",
+      "grid": "JO94OG",
       "lat": 54.270833333333336,
       "lon": 19.208333333333336
     },
@@ -164,9 +527,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02qf",
-      "lat": 52.22916666666667,
-      "lon": 21.375
+      "grid": "JO92QU",
+      "lat": 52.85416666666667,
+      "lon": 19.375
     },
     {
       "id": "2026-05-01T08:06:00.000Z-SP5WPM-40m-SSB",
@@ -197,7 +560,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10ha",
+      "grid": "KO10HA",
       "lat": 50.020833333333336,
       "lon": 22.625
     },
@@ -219,7 +582,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90of",
+      "grid": "JO90OF",
       "lat": 50.22916666666667,
       "lon": 19.208333333333336
     },
@@ -270,7 +633,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO70ju",
+      "grid": "JO70JU",
       "lat": 50.85416666666667,
       "lon": 14.791666666666666
     },
@@ -299,7 +662,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KN19et",
+      "grid": "KN19ET",
       "lat": 49.8125,
       "lon": 22.375
     },
@@ -321,7 +684,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11hk",
+      "grid": "KO11HK",
       "lat": 51.4375,
       "lon": 22.625
     },
@@ -343,7 +706,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Scotland",
-      "grid": "IO77sl",
+      "grid": "IO77SL",
       "lat": 57.47916666666667,
       "lon": -4.458333333333333
     },
@@ -354,7 +717,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO83wx",
+      "grid": "IO83WX",
       "lat": 53.97916666666667,
       "lon": -2.1250000000000004
     },
@@ -409,7 +772,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80vq",
+      "grid": "JO80VQ",
       "lat": 50.6875,
       "lon": 17.791666666666668
     },
@@ -440,7 +803,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02lg",
+      "grid": "KO02LG",
       "lat": 52.270833333333336,
       "lon": 20.958333333333336
     },
@@ -493,7 +856,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80pw",
+      "grid": "JO80PW",
       "lat": 50.9375,
       "lon": 17.291666666666668
     },
@@ -504,7 +867,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -515,7 +878,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -592,7 +955,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO04fg",
+      "grid": "KO04FG",
       "lat": 54.270833333333336,
       "lon": 20.458333333333336
     },
@@ -636,7 +999,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO81wg",
+      "grid": "IO81WG",
       "lat": 51.270833333333336,
       "lon": -2.1250000000000004
     },
@@ -647,7 +1010,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11hf",
+      "grid": "KO11HF",
       "lat": 51.22916666666667,
       "lon": 22.625
     },
@@ -669,7 +1032,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -680,7 +1043,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00iv",
+      "grid": "KO00IV",
       "lat": 50.895833333333336,
       "lon": 20.708333333333336
     },
@@ -691,7 +1054,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -713,7 +1076,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91he",
+      "grid": "JO91HE",
       "lat": 51.1875,
       "lon": 18.625
     },
@@ -746,7 +1109,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91gf",
+      "grid": "JO91GF",
       "lat": 51.22916666666667,
       "lon": 18.541666666666668
     },
@@ -766,7 +1129,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90pn",
+      "grid": "JO90PN",
       "lat": 50.5625,
       "lon": 19.291666666666668
     },
@@ -777,7 +1140,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -788,7 +1151,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90rl",
+      "grid": "JO90RL",
       "lat": 50.47916666666667,
       "lon": 19.458333333333336
     },
@@ -799,7 +1162,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82lk",
+      "grid": "JO82LK",
       "lat": 52.4375,
       "lon": 16.958333333333336
     },
@@ -819,7 +1182,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Austria",
-      "grid": "JN88de",
+      "grid": "JN88DE",
       "lat": 48.1875,
       "lon": 16.291666666666668
     },
@@ -852,7 +1215,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Belgium",
-      "grid": "JO11wa",
+      "grid": "JO11WA",
       "lat": 51.020833333333336,
       "lon": 3.8749999999999996
     },
@@ -863,7 +1226,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO70uv",
+      "grid": "JO70UV",
       "lat": 50.895833333333336,
       "lon": 15.708333333333332
     },
@@ -874,7 +1237,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13od",
+      "grid": "KO13OD",
       "lat": 53.145833333333336,
       "lon": 23.208333333333336
     },
@@ -940,7 +1303,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO83sq",
+      "grid": "JO83SQ",
       "lat": 53.6875,
       "lon": 17.541666666666668
     },
@@ -951,7 +1314,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO83sq",
+      "grid": "JO83SQ",
       "lat": 53.6875,
       "lon": 17.541666666666668
     },
@@ -984,7 +1347,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Switzerland",
-      "grid": "JN47fq",
+      "grid": "JN47FQ",
       "lat": 47.6875,
       "lon": 8.458333333333332
     },
@@ -1006,7 +1369,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KN19et",
+      "grid": "KN19ET",
       "lat": 49.8125,
       "lon": 22.375
     },
@@ -1039,7 +1402,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90kj",
+      "grid": "JO90KJ",
       "lat": 50.395833333333336,
       "lon": 18.875
     },
@@ -1050,7 +1413,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11ew",
+      "grid": "KO11EW",
       "lat": 51.9375,
       "lon": 22.375
     },
@@ -1083,7 +1446,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02kf",
+      "grid": "KO02KF",
       "lat": 52.22916666666667,
       "lon": 20.875
     },
@@ -1094,7 +1457,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90mt",
+      "grid": "JO90MT",
       "lat": 50.8125,
       "lon": 19.041666666666668
     },
@@ -1105,7 +1468,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80pw",
+      "grid": "JO80PW",
       "lat": 50.9375,
       "lon": 17.291666666666668
     },
@@ -1116,9 +1479,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82",
-      "lat": 52.5,
-      "lon": 17
+      "grid": "AA00AA",
+      "lat": -89.97916666666667,
+      "lon": -179.95833333333334
     },
     {
       "id": "2026-04-26T16:52:00.000Z-SP7LIK-40m-SSB",
@@ -1169,7 +1532,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10bo",
+      "grid": "KO10BO",
       "lat": 50.60416666666667,
       "lon": 22.125
     },
@@ -1180,7 +1543,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02jo",
+      "grid": "KO02JO",
       "lat": 52.60416666666667,
       "lon": 20.791666666666668
     },
@@ -1202,7 +1565,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93so",
+      "grid": "JO93SO",
       "lat": 53.60416666666667,
       "lon": 19.541666666666668
     },
@@ -1517,7 +1880,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO72xf",
+      "grid": "JO72XF",
       "lat": 52.22916666666667,
       "lon": 15.958333333333332
     },
@@ -1759,7 +2122,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01xh",
+      "grid": "KO01XH",
       "lat": 51.3125,
       "lon": 21.958333333333336
     },
@@ -1770,7 +2133,9 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10AA36"
+      "grid": "KO10AA",
+      "lat": 50.020833333333336,
+      "lon": 22.041666666666668
     },
     {
       "id": "2026-04-01T18:34:00.000Z-SQ8JLE-80m-SSB",
@@ -1801,7 +2166,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71vr",
+      "grid": "JO71VR",
       "lat": 51.72916666666667,
       "lon": 15.791666666666666
     },
@@ -1812,7 +2177,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO52ao",
+      "grid": "JO52AO",
       "lat": 52.60416666666667,
       "lon": 10.041666666666666
     },
@@ -1823,7 +2188,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -1878,7 +2243,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90lh",
+      "grid": "JO90LH",
       "lat": 50.3125,
       "lon": 18.958333333333336
     },
@@ -1900,7 +2265,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO14dh",
+      "grid": "KO14DH",
       "lat": 54.3125,
       "lon": 22.291666666666668
     },
@@ -1911,7 +2276,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72sf",
+      "grid": "JO72SF",
       "lat": 52.22916666666667,
       "lon": 15.541666666666666
     },
@@ -1922,7 +2287,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02xf",
+      "grid": "KO02XF",
       "lat": 52.22916666666667,
       "lon": 21.958333333333336
     },
@@ -1933,7 +2298,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90jh",
+      "grid": "JO90JH",
       "lat": 50.3125,
       "lon": 18.791666666666668
     },
@@ -1944,7 +2309,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71po",
+      "grid": "JO71PO",
       "lat": 51.60416666666667,
       "lon": 15.291666666666666
     },
@@ -1955,7 +2320,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -1966,7 +2331,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -1977,8 +2342,8 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO70np",
-      "lat": 50.645833333333336,
+      "grid": "JO71NP",
+      "lat": 51.645833333333336,
       "lon": 15.125
     },
     {
@@ -1999,7 +2364,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91sg",
+      "grid": "JO91SG",
       "lat": 51.270833333333336,
       "lon": 19.541666666666668
     },
@@ -2010,8 +2375,8 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10aa",
-      "lat": 50.020833333333336,
+      "grid": "KO10AB",
+      "lat": 50.0625,
       "lon": 22.041666666666668
     },
     {
@@ -2021,9 +2386,9 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90lg",
+      "grid": "JO90KG",
       "lat": 50.270833333333336,
-      "lon": 18.958333333333336
+      "lon": 18.875
     },
     {
       "id": "2026-04-01T17:55:00.000Z-SP7ENB-80m-SSB",
@@ -2032,7 +2397,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01bx",
+      "grid": "KO01BX",
       "lat": 51.97916666666667,
       "lon": 20.125
     },
@@ -2054,7 +2419,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99ov",
+      "grid": "JN99OV",
       "lat": 49.895833333333336,
       "lon": 19.208333333333336
     },
@@ -2131,9 +2496,9 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
-      "lat": 52.270833333333336,
-      "lon": 21.041666666666668
+      "grid": "KO01UH",
+      "lat": 51.3125,
+      "lon": 21.708333333333336
     },
     {
       "id": "2026-04-01T17:48:00.000Z-SP4LO-80m-SSB",
@@ -2153,7 +2518,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00hv",
+      "grid": "KO00HV",
       "lat": 50.895833333333336,
       "lon": 20.625
     },
@@ -2164,7 +2529,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99hw",
+      "grid": "JN99HW",
       "lat": 49.9375,
       "lon": 18.625
     },
@@ -2175,7 +2540,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00hu",
+      "grid": "KO00HU",
       "lat": 50.85416666666667,
       "lon": 20.625
     },
@@ -2197,7 +2562,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO73gk",
+      "grid": "JO73GK",
       "lat": 53.4375,
       "lon": 14.541666666666666
     },
@@ -2208,7 +2573,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81gt",
+      "grid": "JO81GT",
       "lat": 51.8125,
       "lon": 16.541666666666668
     },
@@ -2230,7 +2595,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00rx",
+      "grid": "KO00RX",
       "lat": 50.97916666666667,
       "lon": 21.458333333333336
     },
@@ -2252,7 +2617,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99lx",
+      "grid": "JN99LX",
       "lat": 49.97916666666667,
       "lon": 18.958333333333336
     },
@@ -2263,7 +2628,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO03xt",
+      "grid": "KO03XT",
       "lat": 53.8125,
       "lon": 21.958333333333336
     },
@@ -2274,7 +2639,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JO80cl",
+      "grid": "JO80CL",
       "lat": 50.47916666666667,
       "lon": 16.208333333333336
     },
@@ -2296,7 +2661,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82gb",
+      "grid": "JO82GB",
       "lat": 52.0625,
       "lon": 16.541666666666668
     },
@@ -2318,7 +2683,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JN69bq",
+      "grid": "JN69BQ",
       "lat": 49.6875,
       "lon": 12.125
     },
@@ -2340,7 +2705,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91sg",
+      "grid": "JO91SG",
       "lat": 51.270833333333336,
       "lon": 19.541666666666668
     },
@@ -2351,7 +2716,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13ph",
+      "grid": "KO13PH",
       "lat": 53.3125,
       "lon": 23.291666666666668
     },
@@ -2373,7 +2738,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71po",
+      "grid": "JO71PO",
       "lat": 51.60416666666667,
       "lon": 15.291666666666666
     },
@@ -2384,7 +2749,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72sf",
+      "grid": "JO72SF",
       "lat": 52.22916666666667,
       "lon": 15.541666666666666
     },
@@ -2395,7 +2760,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91gf",
+      "grid": "JO91GF",
       "lat": 51.22916666666667,
       "lon": 18.541666666666668
     },
@@ -2406,7 +2771,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91he",
+      "grid": "JO91HE",
       "lat": 51.1875,
       "lon": 18.625
     },
@@ -2417,7 +2782,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO03ex",
+      "grid": "KO03EX",
       "lat": 53.97916666666667,
       "lon": 20.375
     },
@@ -2428,7 +2793,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11dg",
+      "grid": "KO11DG",
       "lat": 51.270833333333336,
       "lon": 22.291666666666668
     },
@@ -2439,7 +2804,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02ke",
+      "grid": "KO02KE",
       "lat": 52.1875,
       "lon": 20.875
     },
@@ -2461,7 +2826,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -2472,7 +2837,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11eg",
+      "grid": "KO11EG",
       "lat": 51.270833333333336,
       "lon": 22.375
     },
@@ -2494,7 +2859,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11gf",
+      "grid": "KO11GF",
       "lat": 51.22916666666667,
       "lon": 22.541666666666668
     },
@@ -2505,7 +2870,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -2527,7 +2892,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90rb",
+      "grid": "JO90RB",
       "lat": 50.0625,
       "lon": 19.458333333333336
     },
@@ -2547,7 +2912,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90gc",
+      "grid": "JO90GC",
       "lat": 50.10416666666667,
       "lon": 18.541666666666668
     },
@@ -2569,7 +2934,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90as",
+      "grid": "JO90AS",
       "lat": 50.770833333333336,
       "lon": 18.041666666666668
     },
@@ -2580,7 +2945,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00vf",
+      "grid": "KO00VF",
       "lat": 50.22916666666667,
       "lon": 21.791666666666668
     },
@@ -2602,7 +2967,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02xf",
+      "grid": "KO02XF",
       "lat": 52.22916666666667,
       "lon": 21.958333333333336
     },
@@ -2633,9 +2998,9 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94",
-      "lat": 54.5,
-      "lon": 19
+      "grid": "KO02MG",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2026-04-01T17:15:00.000Z-US1MM-80m-SSB",
@@ -2644,7 +3009,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Ukraine",
-      "grid": "KN59rb",
+      "grid": "KN59RB",
       "lat": 49.0625,
       "lon": 31.458333333333336
     },
@@ -2655,7 +3020,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00rx",
+      "grid": "KO00RX",
       "lat": 50.97916666666667,
       "lon": 21.458333333333336
     },
@@ -2666,7 +3031,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02qd",
+      "grid": "KO02QD",
       "lat": 52.145833333333336,
       "lon": 21.375
     },
@@ -2677,7 +3042,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -2688,7 +3053,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -2732,7 +3097,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02ke",
+      "grid": "KO02KE",
       "lat": 52.1875,
       "lon": 20.875
     },
@@ -2754,7 +3119,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99hw",
+      "grid": "JN99HW",
       "lat": 49.9375,
       "lon": 18.625
     },
@@ -2787,7 +3152,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11dg",
+      "grid": "KO11DG",
       "lat": 51.270833333333336,
       "lon": 22.291666666666668
     },
@@ -2798,7 +3163,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13ph",
+      "grid": "KO13PH",
       "lat": 53.3125,
       "lon": 23.291666666666668
     },
@@ -2809,8 +3174,8 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
-      "lat": 52.270833333333336,
+      "grid": "KO02ME",
+      "lat": 52.1875,
       "lon": 21.041666666666668
     },
     {
@@ -2820,7 +3185,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81ic",
+      "grid": "JO81IC",
       "lat": 51.10416666666667,
       "lon": 16.708333333333336
     },
@@ -2831,7 +3196,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -2842,7 +3207,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91rr",
+      "grid": "JO91RR",
       "lat": 51.72916666666667,
       "lon": 19.458333333333336
     },
@@ -2862,7 +3227,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91vt",
+      "grid": "JO91VT",
       "lat": 51.8125,
       "lon": 19.791666666666668
     },
@@ -2895,7 +3260,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90ep",
+      "grid": "JO90EP",
       "lat": 50.645833333333336,
       "lon": 18.375
     },
@@ -2917,7 +3282,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO03xt",
+      "grid": "KO03XT",
       "lat": 53.8125,
       "lon": 21.958333333333336
     },
@@ -2939,7 +3304,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72sf",
+      "grid": "JO72SF",
       "lat": 52.22916666666667,
       "lon": 15.541666666666666
     },
@@ -3038,9 +3403,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71rw",
-      "lat": 51.9375,
-      "lon": 15.458333333333332
+      "grid": "AA00aa",
+      "lat": -89.97916666666667,
+      "lon": -179.95833333333334
     },
     {
       "id": "2026-04-01T15:38:00.000Z-SQ9CWT-40m-SSB",
@@ -3192,7 +3557,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -3203,7 +3568,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -3236,7 +3601,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -3247,7 +3612,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82jm",
+      "grid": "JO82JM",
       "lat": 52.520833333333336,
       "lon": 16.791666666666668
     },
@@ -3278,7 +3643,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82jk",
+      "grid": "JO82JK",
       "lat": 52.4375,
       "lon": 16.791666666666668
     },
@@ -3289,7 +3654,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13nd",
+      "grid": "KO13ND",
       "lat": 53.145833333333336,
       "lon": 23.125
     },
@@ -3300,7 +3665,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90dm",
+      "grid": "JO90DM",
       "lat": 50.520833333333336,
       "lon": 18.291666666666668
     },
@@ -3311,7 +3676,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90dm",
+      "grid": "JO90DM",
       "lat": 50.520833333333336,
       "lon": 18.291666666666668
     },
@@ -3344,7 +3709,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KN09wu",
+      "grid": "KN09WU",
       "lat": 49.85416666666667,
       "lon": 21.875
     },
@@ -3366,9 +3731,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
-      "lat": 52.270833333333336,
-      "lon": 21.041666666666668
+      "grid": "KO01QS",
+      "lat": 51.770833333333336,
+      "lon": 21.375
     },
     {
       "id": "2026-04-01T15:20:00.000Z-SQ5ABW-40m-SSB",
@@ -3377,7 +3742,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02lk",
+      "grid": "KO02LK",
       "lat": 52.4375,
       "lon": 20.958333333333336
     },
@@ -3388,7 +3753,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90as",
+      "grid": "JO90AS",
       "lat": 50.770833333333336,
       "lon": 18.041666666666668
     },
@@ -3399,9 +3764,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91qi",
-      "lat": 51.35416666666667,
-      "lon": 19.375
+      "grid": "JO91PG",
+      "lat": 51.270833333333336,
+      "lon": 19.291666666666668
     },
     {
       "id": "2026-04-01T15:18:00.000Z-SP2IO-40m-SSB",
@@ -3419,7 +3784,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90jh",
+      "grid": "JO90JH",
       "lat": 50.3125,
       "lon": 18.791666666666668
     },
@@ -3430,7 +3795,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02ke",
+      "grid": "KO02KE",
       "lat": 52.1875,
       "lon": 20.875
     },
@@ -3441,7 +3806,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO73gk",
+      "grid": "JO73GK",
       "lat": 53.4375,
       "lon": 14.541666666666666
     },
@@ -3452,9 +3817,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
-      "lat": 52.270833333333336,
-      "lon": 21.041666666666668
+      "grid": "JO93NJ",
+      "lat": 53.395833333333336,
+      "lon": 19.125
     },
     {
       "id": "2026-04-01T15:11:00.000Z-SP9ZBW-40m-SSB",
@@ -3463,7 +3828,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99WX42"
+      "grid": "JN99WX",
+      "lat": 49.97916666666667,
+      "lon": 19.875
     },
     {
       "id": "2026-03-29T22:12:00.000Z-CQ7X-40m-LSB",
@@ -7615,9 +7982,18 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
+    },
+    {
+      "id": "2026-03-05T16:54:00.000Z-SP0YL-40m-LSB",
+      "datetime": "2026-03-05T16:54:00.000Z",
+      "callsign": "SP0YL",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": ""
     },
     {
       "id": "2026-03-05T16:53:00.000Z-SQ8KJC-40m-LSB",
@@ -7670,7 +8046,7 @@
       "band": "10m",
       "mode": "SSB",
       "country": "Spain",
-      "grid": "IN80dj",
+      "grid": "IN80DJ",
       "lat": 40.395833333333336,
       "lon": -3.7083333333333335
     },
@@ -7681,7 +8057,7 @@
       "band": "10m",
       "mode": "SSB",
       "country": "Suriname",
-      "grid": "GJ25jq",
+      "grid": "GJ25JQ",
       "lat": 5.6875,
       "lon": -55.208333333333336
     },
@@ -7780,7 +8156,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93ul",
+      "grid": "JO93UL",
       "lat": 53.47916666666667,
       "lon": 19.708333333333336
     },
@@ -7791,7 +8167,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00ma",
+      "grid": "KO00MA",
       "lat": 50.020833333333336,
       "lon": 21.041666666666668
     },
@@ -7802,7 +8178,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11eg",
+      "grid": "KO11EG",
       "lat": 51.270833333333336,
       "lon": 22.375
     },
@@ -7813,7 +8189,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02jo",
+      "grid": "KO02JO",
       "lat": 52.60416666666667,
       "lon": 20.791666666666668
     },
@@ -7824,7 +8200,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01bx",
+      "grid": "KO01BX",
       "lat": 51.97916666666667,
       "lon": 20.125
     },
@@ -7846,7 +8222,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01bx",
+      "grid": "KO01BX",
       "lat": 51.97916666666667,
       "lon": 20.125
     },
@@ -7857,7 +8233,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO32kc",
+      "grid": "JO32KC",
       "lat": 52.10416666666667,
       "lon": 6.875
     },
@@ -7868,7 +8244,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90jh",
+      "grid": "JO90JH",
       "lat": 50.3125,
       "lon": 18.791666666666668
     },
@@ -7912,7 +8288,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92df",
+      "grid": "JO92DF",
       "lat": 52.22916666666667,
       "lon": 18.291666666666668
     },
@@ -7945,7 +8321,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10ff",
+      "grid": "KO10FF",
       "lat": 50.22916666666667,
       "lon": 22.458333333333336
     },
@@ -7967,7 +8343,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02jf",
+      "grid": "KO02JF",
       "lat": 52.22916666666667,
       "lon": 20.791666666666668
     },
@@ -7989,7 +8365,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JN68lv",
+      "grid": "JN68LV",
       "lat": 48.895833333333336,
       "lon": 12.958333333333332
     },
@@ -8000,7 +8376,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JN89hj",
+      "grid": "JN89HJ",
       "lat": 49.395833333333336,
       "lon": 16.625
     },
@@ -8011,7 +8387,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO83oe",
+      "grid": "JO83OE",
       "lat": 53.1875,
       "lon": 17.208333333333336
     },
@@ -8022,7 +8398,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10pr",
+      "grid": "KO10PR",
       "lat": 50.72916666666667,
       "lon": 23.291666666666668
     },
@@ -8055,7 +8431,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11gg",
+      "grid": "KO11GG",
       "lat": 51.270833333333336,
       "lon": 22.541666666666668
     },
@@ -8066,7 +8442,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00xm",
+      "grid": "KO00XM",
       "lat": 50.520833333333336,
       "lon": 21.958333333333336
     },
@@ -8099,7 +8475,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO83xc",
+      "grid": "JO83XC",
       "lat": 53.10416666666667,
       "lon": 17.958333333333336
     },
@@ -8121,7 +8497,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO53ct",
+      "grid": "JO53CT",
       "lat": 53.8125,
       "lon": 10.208333333333332
     },
@@ -8154,7 +8530,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO41xm",
+      "grid": "JO41XM",
       "lat": 51.520833333333336,
       "lon": 9.958333333333332
     },
@@ -8187,7 +8563,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -8207,7 +8583,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11gf",
+      "grid": "KO11GF",
       "lat": 51.22916666666667,
       "lon": 22.541666666666668
     },
@@ -8218,7 +8594,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO73fk",
+      "grid": "JO73FK",
       "lat": 53.4375,
       "lon": 14.458333333333332
     },
@@ -8229,7 +8605,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94nh",
+      "grid": "JO94NH",
       "lat": 54.3125,
       "lon": 19.125
     },
@@ -8240,7 +8616,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94nh",
+      "grid": "JO94NH",
       "lat": 54.3125,
       "lon": 19.125
     },
@@ -8251,7 +8627,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90cq",
+      "grid": "JO90CQ",
       "lat": 50.6875,
       "lon": 18.208333333333336
     },
@@ -8262,7 +8638,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11dg",
+      "grid": "KO11DG",
       "lat": 51.270833333333336,
       "lon": 22.291666666666668
     },
@@ -8284,7 +8660,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93fi",
+      "grid": "JO93FI",
       "lat": 53.35416666666667,
       "lon": 18.458333333333336
     },
@@ -8295,7 +8671,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11ew",
+      "grid": "KO11EW",
       "lat": 51.9375,
       "lon": 22.375
     },
@@ -8317,7 +8693,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01bx",
+      "grid": "KO01BX",
       "lat": 51.97916666666667,
       "lon": 20.125
     },
@@ -8328,7 +8704,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71np",
+      "grid": "JO71NP",
       "lat": 51.645833333333336,
       "lon": 15.125
     },
@@ -8350,7 +8726,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mj",
+      "grid": "KO02MJ",
       "lat": 52.395833333333336,
       "lon": 21.041666666666668
     },
@@ -8372,7 +8748,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94gm",
+      "grid": "JO94GM",
       "lat": 54.520833333333336,
       "lon": 18.541666666666668
     },
@@ -8482,9 +8858,9 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "JO72UG",
       "lat": 52.270833333333336,
-      "lon": 21.041666666666668
+      "lon": 15.708333333333332
     },
     {
       "id": "2026-01-17T12:42:00.000Z-SQ3BMJ-2m-FM",
@@ -8493,7 +8869,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO72vf",
+      "grid": "JO72VF",
       "lat": 52.22916666666667,
       "lon": 15.791666666666666
     },
@@ -8504,7 +8880,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO70vt",
+      "grid": "IO70VT",
       "lat": 50.8125,
       "lon": -4.208333333333333
     },
@@ -8515,7 +8891,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "France",
-      "grid": "JN18ft",
+      "grid": "JN18FT",
       "lat": 48.8125,
       "lon": 2.458333333333333
     },
@@ -8526,7 +8902,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Spain",
-      "grid": "IN82pu",
+      "grid": "IN82PU",
       "lat": 42.85416666666667,
       "lon": -2.7083333333333335
     },
@@ -8559,7 +8935,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN62aw",
+      "grid": "JN62AW",
       "lat": 42.9375,
       "lon": 12.041666666666666
     },
@@ -8592,7 +8968,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Greece",
-      "grid": "KM19fp",
+      "grid": "KM19FP",
       "lat": 39.645833333333336,
       "lon": 22.458333333333336
     },
@@ -8634,7 +9010,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Romania",
-      "grid": "KN34bj",
+      "grid": "KN34BJ",
       "lat": 44.395833333333336,
       "lon": 26.125
     },
@@ -8678,7 +9054,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO91xn",
+      "grid": "IO91XN",
       "lat": 51.5625,
       "lon": -0.04166666666666682
     },
@@ -8689,7 +9065,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN61sq",
+      "grid": "JN61SQ",
       "lat": 41.6875,
       "lon": 13.541666666666666
     },
@@ -8722,7 +9098,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM77bw",
+      "grid": "JM77BW",
       "lat": 37.9375,
       "lon": 14.125
     },
@@ -8744,7 +9120,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Romania",
-      "grid": "KN34bj",
+      "grid": "KN34BJ",
       "lat": 44.395833333333336,
       "lon": 26.125
     },
@@ -8832,7 +9208,9 @@
       "band": "2m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JO72ri",
+      "lat": 52.35416666666667,
+      "lon": 15.458333333333332
     },
     {
       "id": "2026-01-05T19:01:00.000Z-SP3KB-70cm-LSB",
@@ -8863,7 +9241,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN65ep",
+      "grid": "JN65EP",
       "lat": 45.645833333333336,
       "lon": 12.375
     },
@@ -8874,7 +9252,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN45mq",
+      "grid": "JN45MQ",
       "lat": 45.6875,
       "lon": 9.041666666666666
     },
@@ -8918,7 +9296,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Switzerland",
-      "grid": "JN47gi",
+      "grid": "JN47GI",
       "lat": 47.35416666666667,
       "lon": 8.541666666666666
     },
@@ -8940,7 +9318,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Serbia",
-      "grid": "JN95vg",
+      "grid": "JN95VG",
       "lat": 45.270833333333336,
       "lon": 19.791666666666668
     },
@@ -8982,7 +9360,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Greece",
-      "grid": "KN10lp",
+      "grid": "KN10LP",
       "lat": 40.645833333333336,
       "lon": 22.958333333333336
     },
@@ -9004,7 +9382,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM76nv",
+      "grid": "JM76NV",
       "lat": 36.895833333333336,
       "lon": 15.125
     },
@@ -9015,7 +9393,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Spain",
-      "grid": "IN92et",
+      "grid": "IN92ET",
       "lat": 42.8125,
       "lon": -1.625
     },
@@ -9026,7 +9404,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN62ks",
+      "grid": "JN62KS",
       "lat": 42.770833333333336,
       "lon": 12.875
     },
@@ -9059,7 +9437,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Spain",
-      "grid": "IN70xk",
+      "grid": "IN70XK",
       "lat": 40.4375,
       "lon": -4.041666666666667
     },
@@ -9596,7 +9974,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90ot",
+      "grid": "JO90OT",
       "lat": 50.8125,
       "lon": 19.208333333333336
     },
@@ -9607,7 +9985,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90ot",
+      "grid": "JO90OT",
       "lat": 50.8125,
       "lon": 19.208333333333336
     },
@@ -9618,7 +9996,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO42vh",
+      "grid": "JO42VH",
       "lat": 52.3125,
       "lon": 9.791666666666666
     },
@@ -9629,7 +10007,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Slovenia",
-      "grid": "JN76gb",
+      "grid": "JN76GB",
       "lat": 46.0625,
       "lon": 14.541666666666666
     },
@@ -9662,7 +10040,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO40ic",
+      "grid": "JO40IC",
       "lat": 50.10416666666667,
       "lon": 8.708333333333332
     },
@@ -9673,7 +10051,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90rl",
+      "grid": "JO90RL",
       "lat": 50.47916666666667,
       "lon": 19.458333333333336
     },
@@ -10047,7 +10425,9 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO02mg",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2025-11-22T15:03:00.000Z-SP3DVO-40m-LSB",
@@ -10554,7 +10934,9 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JN99gw",
+      "lat": 49.9375,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-11-22T12:12:00.000Z-SP7CAC-40m-LSB",
@@ -11602,7 +11984,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JN99gw",
+      "lat": 49.9375,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-11-20T18:58:00.000Z-SP9MBR-80m-LSB",
@@ -11684,7 +12068,9 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JN99gw",
+      "lat": 49.9375,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-11-20T17:33:00.000Z-SQ6ILG-40m-LSB",
@@ -12030,7 +12416,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JN99gw",
+      "lat": 49.9375,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-11-17T18:01:00.000Z-SP50KRF-80m-LSB",
@@ -12050,7 +12438,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO02mg",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2025-11-17T17:59:00.000Z-SQ6JFJ-80m-LSB",
@@ -12763,7 +13153,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JO82jm",
+      "lat": 52.520833333333336,
+      "lon": 16.791666666666668
     },
     {
       "id": "2025-11-16T18:31:00.000Z-SP9QMN-80m-LSB",
@@ -13131,7 +13523,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO02mg",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2025-11-16T18:13:00.000Z-SP3IPA-80m-LSB",
@@ -13327,7 +13721,9 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO00rx",
+      "lat": 50.97916666666667,
+      "lon": 21.458333333333336
     },
     {
       "id": "2025-11-16T16:49:00.000Z-SP9HAL-40m-LSB",
@@ -14798,7 +15194,9 @@
       "band": "80m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO02mg",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2025-11-15T17:45:00.000Z-SP6FLI-80m-LSB",
@@ -15318,7 +15716,9 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "KO02mg",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
     },
     {
       "id": "2025-11-15T15:19:00.000Z-SQ7OBB-40m-LSB",
@@ -16128,9 +16528,9 @@
       "band": "20m",
       "mode": "USB",
       "country": "Sweden",
-      "grid": "JO67GW",
-      "lat": 57.9375,
-      "lon": 12.541666666666666
+      "grid": "AA00AA",
+      "lat": -89.97916666666667,
+      "lon": -179.95833333333334
     },
     {
       "id": "2025-10-26T11:33:00.000Z-EF8R-10m-USB",
@@ -17204,7 +17604,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Lithuania",
-      "grid": "KO14xu",
+      "grid": "KO14XU",
       "lat": 54.85416666666667,
       "lon": 23.958333333333336
     },
@@ -17248,7 +17648,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Belgium",
-      "grid": "JO21hc",
+      "grid": "JO21HC",
       "lat": 51.10416666666667,
       "lon": 4.625
     },
@@ -17281,7 +17681,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Spain",
-      "grid": "IM76ur",
+      "grid": "IM76UR",
       "lat": 36.72916666666667,
       "lon": -4.291666666666667
     },
@@ -17380,7 +17780,7 @@
       "band": "20m",
       "mode": "USB",
       "country": "Serbia",
-      "grid": "JN93wt",
+      "grid": "JN93WT",
       "lat": 43.8125,
       "lon": 19.875
     },
@@ -17391,8 +17791,8 @@
       "band": "20m",
       "mode": "USB",
       "country": "England",
-      "grid": "io96gx",
-      "lat": 56.97916666666667,
+      "grid": "IO94GX",
+      "lat": 54.97916666666667,
       "lon": -1.4583333333333333
     },
     {
@@ -17457,7 +17857,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "United States",
-      "grid": "EL87vi",
+      "grid": "EL87VI",
       "lat": 27.354166666666664,
       "lon": -82.20833333333333
     },
@@ -17468,9 +17868,9 @@
       "band": "10m",
       "mode": "USB",
       "country": "Portugal",
-      "grid": "IN51om",
-      "lat": 41.520833333333336,
-      "lon": -8.791666666666668
+      "grid": "IN51PX",
+      "lat": 41.97916666666667,
+      "lon": -8.708333333333334
     },
     {
       "id": "2025-10-25T14:47:00.000Z-M4A-20m-USB",
@@ -17543,7 +17943,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Portugal",
-      "grid": "IN50ru",
+      "grid": "IN50RU",
       "lat": 40.85416666666667,
       "lon": -8.541666666666668
     },
@@ -17587,7 +17987,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "LO44wi",
+      "grid": "LO44WI",
       "lat": 54.35416666666667,
       "lon": 49.875
     },
@@ -17618,7 +18018,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "KO85pl",
+      "grid": "KO85PL",
       "lat": 55.47916666666667,
       "lon": 37.291666666666664
     },
@@ -17629,7 +18029,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Brazil",
-      "grid": "GH49eq",
+      "grid": "GH49EQ",
       "lat": -10.3125,
       "lon": -51.625
     },
@@ -17662,7 +18062,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Asiatic Russia",
-      "grid": "NO26mo",
+      "grid": "NO26MO",
       "lat": 56.60416666666667,
       "lon": 85.04166666666667
     },
@@ -17673,7 +18073,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "LO26ah",
+      "grid": "LO26AH",
       "lat": 56.3125,
       "lon": 44.041666666666664
     },
@@ -17695,7 +18095,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "KO95kr",
+      "grid": "KO95KR",
       "lat": 55.72916666666667,
       "lon": 38.875
     },
@@ -17706,7 +18106,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Czech Republic",
-      "grid": "JO70gh",
+      "grid": "JO70GH",
       "lat": 50.3125,
       "lon": 14.541666666666666
     },
@@ -17748,7 +18148,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "France",
-      "grid": "JN18eu",
+      "grid": "JN18EU",
       "lat": 48.85416666666667,
       "lon": 2.375
     },
@@ -17759,7 +18159,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Germany",
-      "grid": "JO50lq",
+      "grid": "JO50LQ",
       "lat": 50.6875,
       "lon": 10.958333333333332
     },
@@ -17770,7 +18170,7 @@
       "band": "40m",
       "mode": "LSB",
       "country": "Denmark",
-      "grid": "JO55tn",
+      "grid": "JO55TN",
       "lat": 55.5625,
       "lon": 11.625
     },
@@ -17814,7 +18214,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Spain",
-      "grid": "IM99tl",
+      "grid": "IM99TL",
       "lat": 39.47916666666667,
       "lon": -0.37500000000000006
     },
@@ -17825,7 +18225,7 @@
       "band": "10m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "KN85ec",
+      "grid": "KN85EC",
       "lat": 45.10416666666667,
       "lon": 36.375
     },
@@ -17869,7 +18269,7 @@
       "band": "20m",
       "mode": "USB",
       "country": "Scotland",
-      "grid": "IO87ik",
+      "grid": "IO87IK",
       "lat": 57.4375,
       "lon": -3.291666666666667
     },
@@ -17902,7 +18302,7 @@
       "band": "20m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "KN85ec",
+      "grid": "KN85EC",
       "lat": 45.10416666666667,
       "lon": 36.375
     },
@@ -17913,9 +18313,9 @@
       "band": "20m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "KO59DW",
-      "lat": 59.9375,
-      "lon": 30.291666666666668
+      "grid": "AA00AA",
+      "lat": -89.97916666666667,
+      "lon": -179.95833333333334
     },
     {
       "id": "2025-10-25T09:22:00.000Z-RA6SD-20m-USB",
@@ -17999,7 +18399,7 @@
       "band": "20m",
       "mode": "USB",
       "country": "Serbia",
-      "grid": "KN05ei",
+      "grid": "KN05EI",
       "lat": 45.35416666666667,
       "lon": 20.375
     },
@@ -18206,7 +18606,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99hw",
+      "grid": "JN99HW",
       "lat": 49.9375,
       "lon": 18.625
     },
@@ -18217,7 +18617,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -18314,7 +18714,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92bf",
+      "grid": "JO92BF",
       "lat": 52.22916666666667,
       "lon": 18.125
     },
@@ -18325,7 +18725,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -18358,7 +18758,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN54do",
+      "grid": "JN54DO",
       "lat": 44.60416666666667,
       "lon": 10.291666666666666
     },
@@ -18369,7 +18769,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92af",
+      "grid": "JO92AF",
       "lat": 52.22916666666667,
       "lon": 18.041666666666668
     },
@@ -18402,7 +18802,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Slovenia",
-      "grid": "JN65uv",
+      "grid": "JN65UV",
       "lat": 45.895833333333336,
       "lon": 13.708333333333332
     },
@@ -18413,7 +18813,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99hw",
+      "grid": "JN99HW",
       "lat": 49.9375,
       "lon": 18.625
     },
@@ -18424,7 +18824,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -18534,7 +18934,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM89ch",
+      "grid": "JM89CH",
       "lat": 39.3125,
       "lon": 16.208333333333336
     },
@@ -18545,7 +18945,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN62ks",
+      "grid": "JN62KS",
       "lat": 42.770833333333336,
       "lon": 12.875
     },
@@ -18556,7 +18956,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN46we",
+      "grid": "JN46WE",
       "lat": 46.1875,
       "lon": 9.875
     },
@@ -18578,7 +18978,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN55mk",
+      "grid": "JN55MK",
       "lat": 45.4375,
       "lon": 11.041666666666666
     },
@@ -18589,7 +18989,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM89ch",
+      "grid": "JM89CH",
       "lat": 39.3125,
       "lon": 16.208333333333336
     },
@@ -18611,7 +19011,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN45kh",
+      "grid": "JN45KH",
       "lat": 45.3125,
       "lon": 8.875
     },
@@ -18633,7 +19033,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM77no",
+      "grid": "JM77NO",
       "lat": 37.60416666666667,
       "lon": 15.125
     },
@@ -18644,7 +19044,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN61gw",
+      "grid": "JN61GW",
       "lat": 41.9375,
       "lon": 12.541666666666666
     },
@@ -18655,7 +19055,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN62ks",
+      "grid": "JN62KS",
       "lat": 42.770833333333336,
       "lon": 12.875
     },
@@ -18666,7 +19066,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO50no",
+      "grid": "JO50NO",
       "lat": 50.60416666666667,
       "lon": 11.125
     },
@@ -18677,7 +19077,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Slovenia",
-      "grid": "JN76tm",
+      "grid": "JN76TM",
       "lat": 46.520833333333336,
       "lon": 15.625
     },
@@ -18688,7 +19088,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN44fh",
+      "grid": "JN44FH",
       "lat": 44.3125,
       "lon": 8.458333333333332
     },
@@ -18710,7 +19110,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Scotland",
-      "grid": "IO85hr",
+      "grid": "IO85HR",
       "lat": 55.72916666666667,
       "lon": -3.3750000000000004
     },
@@ -18721,7 +19121,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80wp",
+      "grid": "JO80WP",
       "lat": 50.645833333333336,
       "lon": 17.875
     },
@@ -18743,7 +19143,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93um",
+      "grid": "JO93UM",
       "lat": 53.520833333333336,
       "lon": 19.708333333333336
     },
@@ -18754,7 +19154,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN45hq",
+      "grid": "JN45HQ",
       "lat": 45.6875,
       "lon": 8.625
     },
@@ -18809,7 +19209,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM68rc",
+      "grid": "JM68RC",
       "lat": 38.10416666666667,
       "lon": 13.458333333333332
     },
@@ -18831,7 +19231,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN62ks",
+      "grid": "JN62KS",
       "lat": 42.770833333333336,
       "lon": 12.875
     },
@@ -18842,7 +19242,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93um",
+      "grid": "JO93UM",
       "lat": 53.520833333333336,
       "lon": 19.708333333333336
     },
@@ -18853,7 +19253,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN44fh",
+      "grid": "JN44FH",
       "lat": 44.3125,
       "lon": 8.458333333333332
     },
@@ -18864,7 +19264,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN66op",
+      "grid": "JN66OP",
       "lat": 46.645833333333336,
       "lon": 13.208333333333332
     },
@@ -18875,7 +19275,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN45on",
+      "grid": "JN45ON",
       "lat": 45.5625,
       "lon": 9.208333333333332
     },
@@ -18906,7 +19306,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90nf",
+      "grid": "JO90NF",
       "lat": 50.22916666666667,
       "lon": 19.125
     },
@@ -18937,7 +19337,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -19003,7 +19403,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "Greece",
-      "grid": "KM08uf",
+      "grid": "KM08UF",
       "lat": 38.22916666666667,
       "lon": 21.708333333333336
     },
@@ -19014,7 +19414,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO91vl",
+      "grid": "IO91VL",
       "lat": 51.47916666666667,
       "lon": -0.20833333333333334
     },
@@ -19025,7 +19425,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90lh",
+      "grid": "JO90LH",
       "lat": 50.3125,
       "lon": 18.958333333333336
     },
@@ -19036,7 +19436,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91gf",
+      "grid": "JO91GF",
       "lat": 51.22916666666667,
       "lon": 18.541666666666668
     },
@@ -19047,7 +19447,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91he",
+      "grid": "JO91HE",
       "lat": 51.1875,
       "lon": 18.625
     },
@@ -19069,7 +19469,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02ke",
+      "grid": "KO02KE",
       "lat": 52.1875,
       "lon": 20.875
     },
@@ -19080,7 +19480,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02lg",
+      "grid": "KO02LG",
       "lat": 52.270833333333336,
       "lon": 20.958333333333336
     },
@@ -19124,7 +19524,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80hk",
+      "grid": "JO80HK",
       "lat": 50.4375,
       "lon": 16.625
     },
@@ -19135,7 +19535,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10oq",
+      "grid": "KO10OQ",
       "lat": 50.6875,
       "lon": 23.208333333333336
     },
@@ -19157,7 +19557,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO03ip",
+      "grid": "KO03IP",
       "lat": 53.645833333333336,
       "lon": 20.708333333333336
     },
@@ -19179,7 +19579,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO53kw",
+      "grid": "JO53KW",
       "lat": 53.9375,
       "lon": 10.875
     },
@@ -19201,7 +19601,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO53an",
+      "grid": "JO53AN",
       "lat": 53.5625,
       "lon": 10.041666666666666
     },
@@ -19212,7 +19612,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10ia",
+      "grid": "KO10IA",
       "lat": 50.020833333333336,
       "lon": 22.708333333333336
     },
@@ -19234,7 +19634,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90ki",
+      "grid": "JO90KI",
       "lat": 50.35416666666667,
       "lon": 18.875
     },
@@ -19278,7 +19678,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11dg",
+      "grid": "KO11DG",
       "lat": 51.270833333333336,
       "lon": 22.291666666666668
     },
@@ -19289,7 +19689,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92df",
+      "grid": "JO92DF",
       "lat": 52.22916666666667,
       "lon": 18.291666666666668
     },
@@ -19322,7 +19722,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99mt",
+      "grid": "JN99MT",
       "lat": 49.8125,
       "lon": 19.041666666666668
     },
@@ -19344,7 +19744,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO03ia",
+      "grid": "KO03IA",
       "lat": 53.020833333333336,
       "lon": 20.708333333333336
     },
@@ -19355,7 +19755,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90bh",
+      "grid": "JO90BH",
       "lat": 50.3125,
       "lon": 18.125
     },
@@ -19408,7 +19808,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Croatia",
-      "grid": "JN95eq",
+      "grid": "JN95EQ",
       "lat": 45.6875,
       "lon": 18.375
     },
@@ -19419,7 +19819,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90xb",
+      "grid": "JO90XB",
       "lat": 50.0625,
       "lon": 19.958333333333336
     },
@@ -19452,7 +19852,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02jo",
+      "grid": "KO02JO",
       "lat": 52.60416666666667,
       "lon": 20.791666666666668
     },
@@ -19474,7 +19874,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02lg",
+      "grid": "KO02LG",
       "lat": 52.270833333333336,
       "lon": 20.958333333333336
     },
@@ -19485,7 +19885,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10aa",
+      "grid": "KO10AA",
       "lat": 50.020833333333336,
       "lon": 22.041666666666668
     },
@@ -19529,7 +19929,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82gb",
+      "grid": "JO82GB",
       "lat": 52.0625,
       "lon": 16.541666666666668
     },
@@ -19540,7 +19940,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Austria",
-      "grid": "JN78nu",
+      "grid": "JN78NU",
       "lat": 48.85416666666667,
       "lon": 15.125
     },
@@ -19551,7 +19951,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Austria",
-      "grid": "JN78nu",
+      "grid": "JN78NU",
       "lat": 48.85416666666667,
       "lon": 15.125
     },
@@ -19595,7 +19995,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO41xm",
+      "grid": "JO41XM",
       "lat": 51.520833333333336,
       "lon": 9.958333333333332
     },
@@ -19606,7 +20006,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94nh",
+      "grid": "JO94NH",
       "lat": 54.3125,
       "lon": 19.125
     },
@@ -19617,7 +20017,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94nh",
+      "grid": "JO94NH",
       "lat": 54.3125,
       "lon": 19.125
     },
@@ -19628,7 +20028,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90cq",
+      "grid": "JO90CQ",
       "lat": 50.6875,
       "lon": 18.208333333333336
     },
@@ -19639,7 +20039,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93ja",
+      "grid": "JO93JA",
       "lat": 53.020833333333336,
       "lon": 18.791666666666668
     },
@@ -19661,7 +20061,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80pw",
+      "grid": "JO80PW",
       "lat": 50.9375,
       "lon": 17.291666666666668
     },
@@ -19672,7 +20072,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -19683,7 +20083,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92hx",
+      "grid": "JO92HX",
       "lat": 52.97916666666667,
       "lon": 18.625
     },
@@ -19705,7 +20105,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80pw",
+      "grid": "JO80PW",
       "lat": 50.9375,
       "lon": 17.291666666666668
     },
@@ -19736,7 +20136,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO11gf",
+      "grid": "KO11GF",
       "lat": 51.22916666666667,
       "lon": 22.541666666666668
     },
@@ -19747,7 +20147,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99mt",
+      "grid": "JN99MT",
       "lat": 49.8125,
       "lon": 19.041666666666668
     },
@@ -19758,7 +20158,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10bo",
+      "grid": "KO10BO",
       "lat": 50.60416666666667,
       "lon": 22.125
     },
@@ -19780,7 +20180,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00qw",
+      "grid": "KO00QW",
       "lat": 50.9375,
       "lon": 21.375
     },
@@ -19791,7 +20191,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80gp",
+      "grid": "JO80GP",
       "lat": 50.645833333333336,
       "lon": 16.541666666666668
     },
@@ -19846,7 +20246,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99ju",
+      "grid": "JN99JU",
       "lat": 49.85416666666667,
       "lon": 18.791666666666668
     },
@@ -19868,7 +20268,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -19879,7 +20279,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90jd",
+      "grid": "JO90JD",
       "lat": 50.145833333333336,
       "lon": 18.791666666666668
     },
@@ -19891,6 +20291,17 @@
       "mode": "FM",
       "country": "Poland",
       "grid": "JO72vf",
+      "lat": 52.22916666666667,
+      "lon": 15.791666666666666
+    },
+    {
+      "id": "2025-08-28T13:35:00.000Z-SQ3BMJ-2m-SSB",
+      "datetime": "2025-08-28T13:35:00.000Z",
+      "callsign": "SQ3BMJ",
+      "band": "2m",
+      "mode": "SSB",
+      "country": "Poland",
+      "grid": "JO72VF",
       "lat": 52.22916666666667,
       "lon": 15.791666666666666
     },
@@ -19956,7 +20367,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Lithuania",
-      "grid": "KO35fo",
+      "grid": "KO35FO",
       "lat": 55.60416666666667,
       "lon": 26.458333333333336
     },
@@ -19967,7 +20378,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90bh",
+      "grid": "JO90BH",
       "lat": 50.3125,
       "lon": 18.125
     },
@@ -19989,7 +20400,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80fn",
+      "grid": "JO80FN",
       "lat": 50.5625,
       "lon": 16.458333333333336
     },
@@ -20000,7 +20411,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO70xw",
+      "grid": "JO70XW",
       "lat": 50.9375,
       "lon": 15.958333333333332
     },
@@ -20011,7 +20422,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -20044,7 +20455,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JN58lt",
+      "grid": "JN58LT",
       "lat": 48.8125,
       "lon": 10.958333333333332
     },
@@ -20088,7 +20499,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO90cr",
+      "grid": "IO90CR",
       "lat": 50.72916666666667,
       "lon": -1.7916666666666665
     },
@@ -20099,7 +20510,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "England",
-      "grid": "IO93jf",
+      "grid": "IO93JF",
       "lat": 53.22916666666667,
       "lon": -1.2083333333333333
     },
@@ -20121,7 +20532,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO62rm",
+      "grid": "JO62RM",
       "lat": 52.520833333333336,
       "lon": 13.458333333333332
     },
@@ -20154,7 +20565,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81hv",
+      "grid": "JO81HV",
       "lat": 51.895833333333336,
       "lon": 16.625
     },
@@ -20165,7 +20576,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -20176,7 +20587,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99hw",
+      "grid": "JN99HW",
       "lat": 49.9375,
       "lon": 18.625
     },
@@ -20198,7 +20609,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -20240,7 +20651,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80cu",
+      "grid": "JO80CU",
       "lat": 50.85416666666667,
       "lon": 16.208333333333336
     },
@@ -20262,7 +20673,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90bh",
+      "grid": "JO90BH",
       "lat": 50.3125,
       "lon": 18.125
     },
@@ -20304,7 +20715,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94gm",
+      "grid": "JO94GM",
       "lat": 54.520833333333336,
       "lon": 18.541666666666668
     },
@@ -20315,7 +20726,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JM77of",
+      "grid": "JM77OF",
       "lat": 37.22916666666667,
       "lon": 15.208333333333332
     },
@@ -20326,7 +20737,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02le",
+      "grid": "KO02LE",
       "lat": 52.1875,
       "lon": 20.958333333333336
     },
@@ -20370,7 +20781,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KN09bu",
+      "grid": "KN09BU",
       "lat": 49.85416666666667,
       "lon": 20.125
     },
@@ -20403,9 +20814,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94GM",
-      "lat": 54.520833333333336,
-      "lon": 18.541666666666668
+      "grid": "AA00AA",
+      "lat": -89.97916666666667,
+      "lon": -179.95833333333334
     },
     {
       "id": "2025-08-21T17:22:00.000Z-SP9HDF-40m-SSB",
@@ -20425,7 +20836,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO60mv",
+      "grid": "JO60MV",
       "lat": 50.895833333333336,
       "lon": 13.041666666666666
     },
@@ -20436,7 +20847,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90hd",
+      "grid": "JO90HD",
       "lat": 50.145833333333336,
       "lon": 18.625
     },
@@ -20447,7 +20858,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81be",
+      "grid": "JO81BE",
       "lat": 51.1875,
       "lon": 16.125
     },
@@ -20458,7 +20869,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13od",
+      "grid": "KO13OD",
       "lat": 53.145833333333336,
       "lon": 23.208333333333336
     },
@@ -20524,7 +20935,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99qu",
+      "grid": "JN99QU",
       "lat": 49.85416666666667,
       "lon": 19.375
     },
@@ -20546,7 +20957,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90bh",
+      "grid": "JO90BH",
       "lat": 50.3125,
       "lon": 18.125
     },
@@ -20557,7 +20968,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -20568,7 +20979,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90xc",
+      "grid": "JO90XC",
       "lat": 50.10416666666667,
       "lon": 19.958333333333336
     },
@@ -20612,7 +21023,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -20623,7 +21034,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94fn",
+      "grid": "JO94FN",
       "lat": 54.5625,
       "lon": 18.458333333333336
     },
@@ -20645,7 +21056,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81ko",
+      "grid": "JO81KO",
       "lat": 51.60416666666667,
       "lon": 16.875
     },
@@ -20678,7 +21089,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91hf",
+      "grid": "JO91HF",
       "lat": 51.22916666666667,
       "lon": 18.625
     },
@@ -20711,7 +21122,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JO80cl",
+      "grid": "JO80CL",
       "lat": 50.47916666666667,
       "lon": 16.208333333333336
     },
@@ -20744,7 +21155,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -20755,7 +21166,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90us",
+      "grid": "JO90US",
       "lat": 50.770833333333336,
       "lon": 19.708333333333336
     },
@@ -20799,7 +21210,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81tu",
+      "grid": "JO81TU",
       "lat": 51.85416666666667,
       "lon": 17.625
     },
@@ -20810,7 +21221,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO73qg",
+      "grid": "JO73QG",
       "lat": 53.270833333333336,
       "lon": 15.375
     },
@@ -20821,7 +21232,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO71im",
+      "grid": "JO71IM",
       "lat": 51.520833333333336,
       "lon": 14.708333333333332
     },
@@ -20832,7 +21243,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO82gb",
+      "grid": "JO82GB",
       "lat": 52.0625,
       "lon": 16.541666666666668
     },
@@ -20852,7 +21263,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -20863,7 +21274,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO81bb",
+      "grid": "JO81BB",
       "lat": 51.0625,
       "lon": 16.125
     },
@@ -20907,7 +21318,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72sf",
+      "grid": "JO72SF",
       "lat": 52.22916666666667,
       "lon": 15.541666666666666
     },
@@ -20984,7 +21395,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO61eb",
+      "grid": "JO61EB",
       "lat": 51.0625,
       "lon": 12.375
     },
@@ -21037,7 +21448,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Slovak Republic",
-      "grid": "kn09nb",
+      "grid": "KN09NB",
       "lat": 49.0625,
       "lon": 21.125
     },
@@ -21081,7 +21492,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JN99nr",
+      "grid": "JN99NR",
       "lat": 49.72916666666667,
       "lon": 19.125
     },
@@ -21125,7 +21536,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90hv",
+      "grid": "JO90HV",
       "lat": 50.895833333333336,
       "lon": 18.625
     },
@@ -21136,7 +21547,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JN58ij",
+      "grid": "JN58IJ",
       "lat": 48.395833333333336,
       "lon": 10.708333333333332
     },
@@ -21169,7 +21580,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JO80cl",
+      "grid": "JO80CL",
       "lat": 50.47916666666667,
       "lon": 16.208333333333336
     },
@@ -21268,7 +21679,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -21279,7 +21690,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "KO13nc",
+      "grid": "KO13NC",
       "lat": 53.10416666666667,
       "lon": 23.125
     },
@@ -21290,7 +21701,7 @@
       "band": "80m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO94gk",
+      "grid": "JO94GK",
       "lat": 54.4375,
       "lon": 18.541666666666668
     },
@@ -21301,7 +21712,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO72ug",
+      "grid": "JO72UG",
       "lat": 52.270833333333336,
       "lon": 15.708333333333332
     },
@@ -21343,7 +21754,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO71rw",
+      "grid": "JO71RW",
       "lat": 51.9375,
       "lon": 15.458333333333332
     },
@@ -21365,7 +21776,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO71sn",
+      "grid": "JO71SN",
       "lat": 51.5625,
       "lon": 15.541666666666666
     },
@@ -21409,7 +21820,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Canada",
-      "grid": "DO21xa",
+      "grid": "DO21XA",
       "lat": 51.020833333333336,
       "lon": -114.04166666666666
     },
@@ -21420,7 +21831,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO71sv",
+      "grid": "JO71SV",
       "lat": 51.895833333333336,
       "lon": 15.541666666666666
     },
@@ -21431,7 +21842,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO81bu",
+      "grid": "JO81BU",
       "lat": 51.85416666666667,
       "lon": 16.125
     },
@@ -21464,7 +21875,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO71rw",
+      "grid": "JO71RW",
       "lat": 51.9375,
       "lon": 15.458333333333332
     },
@@ -21475,7 +21886,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90mg",
+      "grid": "JO90MG",
       "lat": 50.270833333333336,
       "lon": 19.041666666666668
     },
@@ -21497,7 +21908,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92mp",
+      "grid": "JO92MP",
       "lat": 52.645833333333336,
       "lon": 19.041666666666668
     },
@@ -21517,7 +21928,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JO80cl",
+      "grid": "JO80CL",
       "lat": 50.47916666666667,
       "lon": 16.208333333333336
     },
@@ -21572,7 +21983,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00iv",
+      "grid": "KO00IV",
       "lat": 50.895833333333336,
       "lon": 20.708333333333336
     },
@@ -21583,7 +21994,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72vf",
+      "grid": "JO72VF",
       "lat": 52.22916666666667,
       "lon": 15.791666666666666
     },
@@ -21605,7 +22016,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO72sf",
+      "grid": "JO72SF",
       "lat": 52.22916666666667,
       "lon": 15.541666666666666
     },
@@ -21636,7 +22047,7 @@
       "band": "2m",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO72ug",
+      "grid": "JO72UG",
       "lat": 52.270833333333336,
       "lon": 15.708333333333332
     },
@@ -21669,7 +22080,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO90vd",
+      "grid": "JO90VD",
       "lat": 50.145833333333336,
       "lon": 19.791666666666668
     },
@@ -21702,7 +22113,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO13mj",
+      "grid": "KO13MJ",
       "lat": 53.395833333333336,
       "lon": 23.041666666666668
     },
@@ -21768,7 +22179,7 @@
       "band": "20m",
       "mode": "SSB",
       "country": "France",
-      "grid": "JN16qc",
+      "grid": "JN16QC",
       "lat": 46.10416666666667,
       "lon": 3.3749999999999996
     },
@@ -21843,7 +22254,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "JO82kf",
+      "grid": "JO82KF",
       "lat": 52.22916666666667,
       "lon": 16.875
     },
@@ -21865,7 +22276,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00rg",
+      "grid": "KO00RG",
       "lat": 50.270833333333336,
       "lon": 21.458333333333336
     },
@@ -21885,7 +22296,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02og",
+      "grid": "KO02OG",
       "lat": 52.270833333333336,
       "lon": 21.208333333333336
     },
@@ -21896,7 +22307,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92df",
+      "grid": "JO92DF",
       "lat": 52.22916666666667,
       "lon": 18.291666666666668
     },
@@ -21907,7 +22318,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JO53ct",
+      "grid": "JO53CT",
       "lat": 53.8125,
       "lon": 10.208333333333332
     },
@@ -21918,7 +22329,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02me",
+      "grid": "KO02ME",
       "lat": 52.1875,
       "lon": 21.041666666666668
     },
@@ -21929,7 +22340,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO01ni",
+      "grid": "KO01NI",
       "lat": 51.35416666666667,
       "lon": 21.125
     },
@@ -21969,7 +22380,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91he",
+      "grid": "JO91HE",
       "lat": 51.1875,
       "lon": 18.625
     },
@@ -21980,7 +22391,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Serbia",
-      "grid": "KN04ev",
+      "grid": "KN04EV",
       "lat": 44.895833333333336,
       "lon": 20.375
     },
@@ -21991,7 +22402,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO70wt",
+      "grid": "JO70WT",
       "lat": 50.8125,
       "lon": 15.875
     },
@@ -22002,7 +22413,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO91gf",
+      "grid": "JO91GF",
       "lat": 51.22916666666667,
       "lon": 18.541666666666668
     },
@@ -22022,7 +22433,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO92uj",
+      "grid": "JO92UJ",
       "lat": 52.395833333333336,
       "lon": 19.708333333333336
     },
@@ -22042,7 +22453,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO73tp",
+      "grid": "JO73TP",
       "lat": 53.645833333333336,
       "lon": 15.625
     },
@@ -22073,7 +22484,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -22095,7 +22506,9 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": ""
+      "grid": "JO82lj",
+      "lat": 52.395833333333336,
+      "lon": 16.958333333333336
     },
     {
       "id": "2025-06-08T16:11:00.000Z-SQ9FSH-40m-SSB",
@@ -22135,7 +22548,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10cw",
+      "grid": "KO10CW",
       "lat": 50.9375,
       "lon": 22.208333333333336
     },
@@ -22146,7 +22559,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -22157,7 +22570,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Netherlands",
-      "grid": "JO32fl",
+      "grid": "JO32FL",
       "lat": 52.47916666666667,
       "lon": 6.458333333333334
     },
@@ -22168,7 +22581,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80ds",
+      "grid": "JO80DS",
       "lat": 50.770833333333336,
       "lon": 16.291666666666668
     },
@@ -22188,7 +22601,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN45mq",
+      "grid": "JN45MQ",
       "lat": 45.6875,
       "lon": 9.041666666666666
     },
@@ -22210,7 +22623,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN55wr",
+      "grid": "JN55WR",
       "lat": 45.72916666666667,
       "lon": 11.875
     },
@@ -22221,7 +22634,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10nd",
+      "grid": "KO10ND",
       "lat": 50.145833333333336,
       "lon": 23.125
     },
@@ -22232,7 +22645,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO80ds",
+      "grid": "JO80DS",
       "lat": 50.770833333333336,
       "lon": 16.291666666666668
     },
@@ -22243,7 +22656,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO10pr",
+      "grid": "KO10PR",
       "lat": 50.72916666666667,
       "lon": 23.291666666666668
     },
@@ -22254,7 +22667,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00xm",
+      "grid": "KO00XM",
       "lat": 50.520833333333336,
       "lon": 21.958333333333336
     },
@@ -22276,7 +22689,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Germany",
-      "grid": "JN49hq",
+      "grid": "JN49HQ",
       "lat": 49.6875,
       "lon": 8.625
     },
@@ -22298,7 +22711,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     },
@@ -22309,7 +22722,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Norway",
-      "grid": "JO48ef",
+      "grid": "JO48EF",
       "lat": 58.22916666666667,
       "lon": 8.375
     },
@@ -22331,7 +22744,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Italy",
-      "grid": "JN56mp",
+      "grid": "JN56MP",
       "lat": 46.645833333333336,
       "lon": 11.041666666666666
     },
@@ -22342,7 +22755,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Czech Republic",
-      "grid": "JN89hf",
+      "grid": "JN89HF",
       "lat": 49.22916666666667,
       "lon": 16.625
     },
@@ -22362,7 +22775,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "KO00qb",
+      "grid": "KO00QB",
       "lat": 50.0625,
       "lon": 21.375
     },
@@ -22373,7 +22786,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Norway",
-      "grid": "JO59kl",
+      "grid": "JO59KL",
       "lat": 59.47916666666667,
       "lon": 10.875
     },
@@ -22384,7 +22797,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "France",
-      "grid": "JN25ii",
+      "grid": "JN25II",
       "lat": 45.35416666666667,
       "lon": 4.708333333333334
     },
@@ -22415,7 +22828,7 @@
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "JO93um",
+      "grid": "JO93UM",
       "lat": 53.520833333333336,
       "lon": 19.708333333333336
     },
@@ -22446,7 +22859,7 @@
       "band": "70cm",
       "mode": "FM",
       "country": "Poland",
-      "grid": "KO02mg",
+      "grid": "KO02MG",
       "lat": 52.270833333333336,
       "lon": 21.041666666666668
     }
