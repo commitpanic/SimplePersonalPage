@@ -1,5 +1,5 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-05-25T07:55:47.161Z",
+  "updatedAt": "2026-05-25T09:39:02.517Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
@@ -1479,9 +1479,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO82",
+      "lat": 52.5,
+      "lon": 17
     },
     {
       "id": "2026-04-26T16:52:00.000Z-SP7LIK-40m-SSB",
@@ -3403,9 +3403,7 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00aa",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO71RW45"
     },
     {
       "id": "2026-04-01T15:38:00.000Z-SQ9CWT-40m-SSB",
@@ -16528,9 +16526,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "20m",
       "mode": "USB",
       "country": "Sweden",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO67GW",
+      "lat": 57.9375,
+      "lon": 12.541666666666666
     },
     {
       "id": "2025-10-26T11:33:00.000Z-EF8R-10m-USB",
@@ -18313,9 +18311,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "20m",
       "mode": "USB",
       "country": "Russia",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "KO59EW",
+      "lat": 59.9375,
+      "lon": 30.375
     },
     {
       "id": "2025-10-25T09:22:00.000Z-RA6SD-20m-USB",
@@ -20814,9 +20812,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO94GM",
+      "lat": 54.520833333333336,
+      "lon": 18.541666666666668
     },
     {
       "id": "2025-08-21T17:22:00.000Z-SP9HDF-40m-SSB",
