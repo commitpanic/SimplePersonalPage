@@ -1,11 +1,8 @@
 /**
  * exporter.js – Generate complete qrz_bio.html from project data
  *
- * Produces the same format as the original qrz_bio.html with:
- * - GAL-MANAGER-START/END markers
- * - GAL-DATA: JSON comment
- * - YT-MANAGER-START/END markers
- * - YT-DATA: JSON comment
+ * Produces QRZ-ready HTML optimized for direct paste/upload.
+ * Manager metadata comments are intentionally omitted from export.
  */
 
 'use strict';
