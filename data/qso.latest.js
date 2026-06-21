@@ -1,8 +1,72 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-06-21T17:52:00.190Z",
+  "updatedAt": "2026-06-21T18:51:20.990Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-06-21T17:53:00.000Z-SP9ITA-40m-LSB",
+      "datetime": "2026-06-21T17:53:00.000Z",
+      "callsign": "SP9ITA",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO90XA",
+      "lat": 50.020833333333336,
+      "lon": 19.958333333333336
+    },
+    {
+      "id": "2026-06-21T17:53:00.000Z-SP9ARX-40m-LSB",
+      "datetime": "2026-06-21T17:53:00.000Z",
+      "callsign": "SP9ARX",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO90XA",
+      "lat": 50.020833333333336,
+      "lon": 19.958333333333336
+    },
+    {
+      "id": "2026-06-21T17:52:00.000Z-SP6VWX-40m-LSB",
+      "datetime": "2026-06-21T17:52:00.000Z",
+      "callsign": "SP6VWX",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO81IF",
+      "lat": 51.22916666666667,
+      "lon": 16.708333333333336
+    },
+    {
+      "id": "2026-06-21T17:47:00.000Z-YO3BEL/P-20m-USB",
+      "datetime": "2026-06-21T17:47:00.000Z",
+      "callsign": "YO3BEL/P",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Romania",
+      "grid": ""
+    },
+    {
+      "id": "2026-06-21T17:46:00.000Z-YO3WZS-20m-USB",
+      "datetime": "2026-06-21T17:46:00.000Z",
+      "callsign": "YO3WZS",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Romania",
+      "grid": "KN34AK",
+      "lat": 44.4375,
+      "lon": 26.041666666666668
+    },
+    {
+      "id": "2026-06-21T17:45:00.000Z-YO3BEE-20m-USB",
+      "datetime": "2026-06-21T17:45:00.000Z",
+      "callsign": "YO3BEE",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Romania",
+      "grid": "KN34AL",
+      "lat": 44.47916666666667,
+      "lon": 26.041666666666668
+    },
     {
       "id": "2026-06-18T18:12:00.000Z-SM5ELV-40m-SSB",
       "datetime": "2026-06-18T18:12:00.000Z",
