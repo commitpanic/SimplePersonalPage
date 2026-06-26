@@ -1,5 +1,5 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-06-26T11:17:54.701Z",
+  "updatedAt": "2026-06-26T13:01:14.201Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
@@ -1093,9 +1093,9 @@ window.__HAM_MAP_QSO_DATA__ = {
       "band": "40m",
       "mode": "SSB",
       "country": "Poland",
-      "grid": "AA00aa",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "JO82",
+      "lat": 52.5,
+      "lon": 17
     },
     {
       "id": "2026-06-18T17:12:00.000Z-SQ5TOM-40m-SSB",
