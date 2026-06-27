@@ -1,8 +1,39 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-06-27T17:41:01.129Z",
+  "updatedAt": "2026-06-27T18:43:59.492Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-06-27T18:07:00.000Z-PE1OUW/P-20m-USB",
+      "datetime": "2026-06-27T18:07:00.000Z",
+      "callsign": "PE1OUW/P",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Netherlands",
+      "grid": ""
+    },
+    {
+      "id": "2026-06-27T16:47:00.000Z-OE1GAQ-20m-USB",
+      "datetime": "2026-06-27T16:47:00.000Z",
+      "callsign": "OE1GAQ",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Austria",
+      "grid": "JN88EE",
+      "lat": 48.1875,
+      "lon": 16.375
+    },
+    {
+      "id": "2026-06-27T16:44:00.000Z-SM/DC6ST-20m-USB",
+      "datetime": "2026-06-27T16:44:00.000Z",
+      "callsign": "SM/DC6ST",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Sweden",
+      "grid": "JO67DD",
+      "lat": 57.145833333333336,
+      "lon": 12.291666666666666
+    },
     {
       "id": "2026-06-24T17:23:00.000Z-YU2GO-20m-LSB",
       "datetime": "2026-06-24T17:23:00.000Z",
@@ -13,6 +44,50 @@ window.__HAM_MAP_QSO_DATA__ = {
       "grid": "KN03wh",
       "lat": 43.3125,
       "lon": 21.875
+    },
+    {
+      "id": "2026-06-21T18:14:00.000Z-4X6HU-15m-USB",
+      "datetime": "2026-06-21T18:14:00.000Z",
+      "callsign": "4X6HU",
+      "band": "15m",
+      "mode": "USB",
+      "country": "Israel",
+      "grid": "KM72JA",
+      "lat": 32.020833333333336,
+      "lon": 34.791666666666664
+    },
+    {
+      "id": "2026-06-21T18:09:00.000Z-IQ0VT-15m-USB",
+      "datetime": "2026-06-21T18:09:00.000Z",
+      "callsign": "IQ0VT",
+      "band": "15m",
+      "mode": "USB",
+      "country": "Italy",
+      "grid": "JN62BJ",
+      "lat": 42.395833333333336,
+      "lon": 12.125
+    },
+    {
+      "id": "2026-06-21T18:06:00.000Z-M5YDX-15m-USB",
+      "datetime": "2026-06-21T18:06:00.000Z",
+      "callsign": "M5YDX",
+      "band": "15m",
+      "mode": "USB",
+      "country": "England",
+      "grid": "JO01BV",
+      "lat": 51.895833333333336,
+      "lon": 0.125
+    },
+    {
+      "id": "2026-06-21T17:57:00.000Z-DL/SP1FM-20m-USB",
+      "datetime": "2026-06-21T17:57:00.000Z",
+      "callsign": "DL/SP1FM",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Germany",
+      "grid": "JN57VT",
+      "lat": 47.8125,
+      "lon": 11.791666666666666
     },
     {
       "id": "2026-06-21T17:53:00.000Z-SP9ITA-40m-LSB",
