@@ -1,8 +1,151 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-07-05T19:47:17.647Z",
+  "updatedAt": "2026-07-05T20:38:43.661Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-07-05T17:22:00.000Z-IV3LKS-20m-SSB",
+      "datetime": "2026-07-05T17:22:00.000Z",
+      "callsign": "IV3LKS",
+      "band": "20m",
+      "mode": "SSB",
+      "country": "Italy",
+      "grid": "JN66ne",
+      "lat": 46.1875,
+      "lon": 13.125
+    },
+    {
+      "id": "2026-07-05T17:20:00.000Z-EA8DQP-20m-SSB",
+      "datetime": "2026-07-05T17:20:00.000Z",
+      "callsign": "EA8DQP",
+      "band": "20m",
+      "mode": "SSB",
+      "country": "Canary Islands",
+      "grid": "IL28fc",
+      "lat": 28.104166666666664,
+      "lon": -15.541666666666668
+    },
+    {
+      "id": "2026-07-05T17:17:00.000Z-LA/DC6ST-40m-SSB",
+      "datetime": "2026-07-05T17:17:00.000Z",
+      "callsign": "LA/DC6ST",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Norway",
+      "grid": "JP61gl",
+      "lat": 61.47916666666667,
+      "lon": 12.541666666666666
+    },
+    {
+      "id": "2026-07-05T17:12:00.000Z-DL1MDU-40m-SSB",
+      "datetime": "2026-07-05T17:12:00.000Z",
+      "callsign": "DL1MDU",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Germany",
+      "grid": "JN58fo",
+      "lat": 48.60416666666667,
+      "lon": 10.458333333333332
+    },
+    {
+      "id": "2026-07-05T17:08:00.000Z-IU1HJF-40m-SSB",
+      "datetime": "2026-07-05T17:08:00.000Z",
+      "callsign": "IU1HJF",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Italy",
+      "grid": "JN45hn",
+      "lat": 45.5625,
+      "lon": 8.625
+    },
+    {
+      "id": "2026-07-05T17:06:00.000Z-YO6CFB-40m-SSB",
+      "datetime": "2026-07-05T17:06:00.000Z",
+      "callsign": "YO6CFB",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Romania",
+      "grid": "KN26vi",
+      "lat": 46.35416666666667,
+      "lon": 25.791666666666668
+    },
+    {
+      "id": "2026-07-05T17:05:00.000Z-PA7RA-40m-SSB",
+      "datetime": "2026-07-05T17:05:00.000Z",
+      "callsign": "PA7RA",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Netherlands",
+      "grid": "JO21dl",
+      "lat": 51.47916666666667,
+      "lon": 4.291666666666667
+    },
+    {
+      "id": "2026-07-05T17:03:00.000Z-EG4WWA-20m-SSB",
+      "datetime": "2026-07-05T17:03:00.000Z",
+      "callsign": "EG4WWA",
+      "band": "20m",
+      "mode": "SSB",
+      "country": "Spain",
+      "grid": "IN80dj",
+      "lat": 40.395833333333336,
+      "lon": -3.7083333333333335
+    },
+    {
+      "id": "2026-07-05T17:00:00.000Z-II5WWA-20m-SSB",
+      "datetime": "2026-07-05T17:00:00.000Z",
+      "callsign": "II5WWA",
+      "band": "20m",
+      "mode": "SSB",
+      "country": "Italy",
+      "grid": "JN62ks",
+      "lat": 42.770833333333336,
+      "lon": 12.875
+    },
+    {
+      "id": "2026-07-05T16:37:00.000Z-M0ICR-40m-SSB",
+      "datetime": "2026-07-05T16:37:00.000Z",
+      "callsign": "M0ICR",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "England",
+      "grid": "IO91so",
+      "lat": 51.60416666666667,
+      "lon": -0.4583333333333333
+    },
+    {
+      "id": "2026-07-05T16:31:00.000Z-S57NPM-40m-SSB",
+      "datetime": "2026-07-05T16:31:00.000Z",
+      "callsign": "S57NPM",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Slovenia",
+      "grid": "JN76ga",
+      "lat": 46.020833333333336,
+      "lon": 14.541666666666666
+    },
+    {
+      "id": "2026-07-05T16:30:00.000Z-PD1CW-40m-SSB",
+      "datetime": "2026-07-05T16:30:00.000Z",
+      "callsign": "PD1CW",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Netherlands",
+      "grid": "JO21ag",
+      "lat": 51.270833333333336,
+      "lon": 4.041666666666667
+    },
+    {
+      "id": "2026-07-05T16:20:00.000Z-OP0WWA-40m-SSB",
+      "datetime": "2026-07-05T16:20:00.000Z",
+      "callsign": "OP0WWA",
+      "band": "40m",
+      "mode": "SSB",
+      "country": "Belgium",
+      "grid": "JO20ip",
+      "lat": 50.645833333333336,
+      "lon": 4.708333333333334
+    },
     {
       "id": "2026-07-02T16:29:00.000Z-II9WWA-20m-USB",
       "datetime": "2026-07-02T16:29:00.000Z",
