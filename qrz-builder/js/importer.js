@@ -249,6 +249,16 @@ export function importFromHtml(htmlText, projectId) {
             const iconStyle = iconEl?.getAttribute('style') || '';
             const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const hide_title = !heading;
+            const themeColor =
+                el.querySelector('.award-date')?.style?.backgroundColor ||
+                _extractStyleColor(el.querySelector('.award-date')?.getAttribute('style') || '', 'background') ||
+                _extractStyleColor(el.querySelector('.award-card img')?.getAttribute('style') || '', 'border-bottom') ||
+                _extractStyleColor(el.querySelector('.gallery-wrapper')?.getAttribute('style') || '', 'border') ||
+                '#3b82f6';
+            const imageBgColor =
+                el.querySelector('.award-card img')?.style?.backgroundColor ||
+                _extractStyleColor(el.querySelector('.award-card img')?.getAttribute('style') || '', 'background') ||
+                '#000000';
             const slides = galSlidesData !== null
                 ? normalizeGallerySlides(galSlidesData)
                 : _parseGalFromDom(el);
@@ -265,6 +275,8 @@ export function importFromHtml(htmlText, projectId) {
                     hide_title,
                     icon_class: iconEl ? iconEl.className : 'fas fa-trophy',
                     icon_color: colorMatch ? colorMatch[1].trim() : '#be954e',
+                    theme_color: themeColor,
+                    image_bg_color: imageBgColor,
                 } 
             });
 
@@ -503,6 +515,19 @@ function _textContent(parent, selectors) {
 
 function _parseJson(str, fallback) {
     try { return JSON.parse(str); } catch { return fallback; }
+}
+
+function _extractStyleColor(styleText, propertyName) {
+    if (!styleText) return '';
+    const re = new RegExp(propertyName + '\\s*:\\s*([^;]+)', 'i');
+    const match = String(styleText).match(re);
+    if (!match) return '';
+    const value = match[1].trim();
+
+    // border/border-bottom can include width and style before color
+    const tokens = value.split(/\s+/).filter(Boolean);
+    const colorToken = tokens.find(tok => /^#|^rgb\(|^rgba\(|^[a-z]+$/i.test(tok));
+    return colorToken || value;
 }
 
 function _parseThemeFromCss(htmlText) {
