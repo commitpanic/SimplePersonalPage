@@ -10,7 +10,7 @@ import { updateSection } from '../db.js';
 
 export function renderGalleryEditor(container, section, onSaved) {
     const d      = section.data || {};
-    let slides   = (d.slides || []).map(s => ({ ...s }));
+    let slides   = (d.slides || []).map(normalizeGallerySlide);
     let editIdx  = -1;
     let dragSrc  = -1;
 
@@ -41,6 +41,11 @@ export function renderGalleryEditor(container, section, onSaved) {
     <div class="field-group">
         <label for="gal-theme-color">Gallery Theme Color</label>
         <input type="color" id="gal-theme-color" value="${_esc(d.theme_color || '#3b82f6')}">
+    </div>
+
+    <div class="field-group">
+        <label for="gal-image-bg-color">Image Background (letterbox)</label>
+        <input type="color" id="gal-image-bg-color" value="${_esc(d.image_bg_color || '#000000')}">
     </div>
 
     <div class="field-group" style="display:flex;align-items:flex-end;">
@@ -192,6 +197,7 @@ export function renderGalleryEditor(container, section, onSaved) {
             icon_class: container.querySelector('#gal-icon-class').value.trim() || 'fas fa-trophy',
             icon_color: container.querySelector('#gal-icon-color').value.trim() || '#be954e',
             theme_color: container.querySelector('#gal-theme-color').value.trim() || '#3b82f6',
+            image_bg_color: container.querySelector('#gal-image-bg-color').value.trim() || '#000000',
             hide_title: container.querySelector('#gal-hide-title').checked,
             slides,
         }, section.visible);
@@ -279,6 +285,20 @@ export function renderGalleryEditor(container, section, onSaved) {
         prev.src = '';
         prev.style.display = 'none';
     }
+}
+
+function normalizeGallerySlide(slide) {
+    const s = slide || {};
+    const title = String(s.title || s.name || s.caption || s.label || '').trim();
+    const description = String(s.description || s.desc || s.text || s.details || '').trim();
+    const year = String(s.year || s.date || '').replace(/^\s*Year:\s*/i, '').trim();
+    return {
+        imageUrl: String(s.imageUrl || s.image_url || s.url || '').trim(),
+        alt: String(s.alt || s.altText || s.alt_text || title).trim(),
+        title,
+        description,
+        year,
+    };
 }
 
 function _esc(str) {

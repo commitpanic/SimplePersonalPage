@@ -13,6 +13,23 @@ const GAL_DATA_RE = /<!-- GAL-DATA:([\s\S]*?) -->/;
 const YT_DATA_RE  = /<!-- YT-DATA:([\s\S]*?) -->/;
 const GRIDIMG_DATA_RE = /<!-- GRIDIMG-DATA:([\s\S]*?) -->/;
 
+function normalizeGallerySlides(slides) {
+    if (!Array.isArray(slides)) return [];
+    return slides.map((slide, idx) => {
+        const s = slide || {};
+        const title = String(s.title || s.name || s.caption || s.label || '').trim();
+        const description = String(s.description || s.desc || s.text || s.details || '').trim();
+        const year = String(s.year || s.date || '').replace(/^\s*Year:\s*/i, '').trim();
+        return {
+            imageUrl: String(s.imageUrl || s.image_url || s.url || '').trim(),
+            alt: String(s.alt || s.altText || s.alt_text || title || `Slide ${idx + 1}`).trim(),
+            title: title || `Slide ${idx + 1}`,
+            description,
+            year,
+        };
+    });
+}
+
 /**
  * Parse qrz_bio.html and write sections + theme into the project.
  * Returns the number of sections imported.
@@ -232,7 +249,9 @@ export function importFromHtml(htmlText, projectId) {
             const iconStyle = iconEl?.getAttribute('style') || '';
             const colorMatch = iconStyle.match(/color\s*:\s*([^;]+)/);
             const hide_title = !heading;
-            const slides = galSlidesData !== null ? galSlidesData : _parseGalFromDom(root);
+            const slides = galSlidesData !== null
+                ? normalizeGallerySlides(galSlidesData)
+                : _parseGalFromDom(el);
             sections.push({ 
                 type: 'gallery', 
                 title: heading 

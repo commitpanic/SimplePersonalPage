@@ -12,7 +12,7 @@ import { openHtmlFile, writeToHandle, saveAsHtmlFile, isFileApiSupported } from 
 import { renderThemeEditor }                  from './theme.js';
 import { renderHeaderEditor }                 from './sections/header.js?v=20260428';
 import { renderTextEditor }                   from './sections/text.js?v=20260428';
-import { renderGalleryEditor }                from './sections/gallery.js?v=20260428';
+import { renderGalleryEditor }                from './sections/gallery.js?v=20260711';
 import { renderYouTubeEditor }                from './sections/youtube.js?v=20260428';
 import { renderStationEditor }                from './sections/station.js?v=20260428';
 import { renderMapEditor }                    from './sections/map.js?v=20260428';

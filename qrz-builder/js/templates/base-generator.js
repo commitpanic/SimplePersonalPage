@@ -196,7 +196,7 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .gallery-slides { position:relative; height:700px; overflow:hidden; border-radius:15px; }
 .slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transform:translateX(100%); transition:all .5s ease-in-out; display:flex; justify-content:center; align-items:center; }
 .award-card { background:var(--section-bg); border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.2); overflow:hidden; max-width:85%; width:100%; max-height:90%; display:flex; flex-direction:column; }
-.award-card img { width:100%; height:auto; max-height:480px; object-fit:contain; border-bottom:3px solid var(--secondary); background:#f8f9fa; }
+.award-card img { width:100%; height:auto; max-height:480px; object-fit:contain; border-bottom:3px solid var(--secondary); background:#000; }
 .award-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; }
 .award-info h3 { font-size:1.5rem; margin-bottom:10px; color:var(--text); }
 .award-info p  { color:var(--text); margin-bottom:15px; }
@@ -456,10 +456,11 @@ function genGallerySection(sec, t) {
     const iconClass = d.icon_class || 'fas fa-trophy';
     const iconColor = d.icon_color || t.primary_color;
     const themeColor = d.theme_color || t.secondary_color;
+    const imageBgColor = d.image_bg_color || '#000000';
     const themeBg = hexToRgba(themeColor, 0.12);
     const themeBorder = hexToRgba(themeColor, 0.24);
     const themeArrow = hexToRgba(themeColor, 0.82);
-    const slides = d.slides || [];
+    const slides = (d.slides || []).map((slide, idx) => normalizeGallerySlide(slide, idx));
     const galleryKey = `gl-${String(sec.id ?? sec.position ?? sec.title ?? 'gallery').replace(/[^a-z0-9_-]/gi, '') || 'gallery'}`;
     const n = slides.length;
 
@@ -481,7 +482,7 @@ function genGallerySection(sec, t) {
             return `
                         <div class="slide gslide-${pos}">
                             <div class="award-card">
-                                <img src="${esc(s.imageUrl)}" alt="${esc(s.alt || s.title)}" style="border-bottom:3px solid ${esc(themeColor)};">
+                                <img src="${esc(s.imageUrl)}" alt="${esc(s.alt || s.title)}" style="border-bottom:3px solid ${esc(themeColor)};background:${esc(imageBgColor)};">
                                 <div class="award-info">
                                     <h3>${esc(s.title)}</h3>
                                     <p>${esc(s.description || '')}</p>
@@ -686,4 +687,19 @@ function hexToRgba(hex, alpha) {
     const green = parseInt(value.slice(2, 4), 16);
     const blue = parseInt(value.slice(4, 6), 16);
     return `rgba(${red},${green},${blue},${alpha})`;
+}
+
+function normalizeGallerySlide(slide, index) {
+    const s = slide || {};
+    const title = String(s.title || s.name || s.caption || s.label || '').trim();
+    const description = String(s.description || s.desc || s.text || s.details || '').trim();
+    const year = String(s.year || s.date || '').replace(/^\s*Year:\s*/i, '').trim();
+
+    return {
+        imageUrl: String(s.imageUrl || s.image_url || s.url || '').trim(),
+        alt: String(s.alt || s.altText || s.alt_text || title || `Slide ${index + 1}`).trim(),
+        title: title || `Slide ${index + 1}`,
+        description,
+        year,
+    };
 }
