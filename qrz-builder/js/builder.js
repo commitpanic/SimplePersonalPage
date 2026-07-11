@@ -20,8 +20,8 @@ import { renderIframeEditor }                 from './sections/iframe.js?v=20260
 import { renderPropagationEditor }            from './sections/propagation.js?v=20260428';
 import { renderLinksEditor }                  from './sections/links.js?v=20260428';
 import { renderGridImgEditor }                from './sections/gridimg.js?v=20260428';
-import { generateQrzBio }                     from './exporter.js?v=20260428';
-import { importFromHtml }                     from './importer.js?v=20260428';
+import { generateQrzBio }                     from './exporter.js?v=20260711';
+import { importFromHtml }                     from './importer.js?v=20260711';
 
 // ── State ──────────────────────────────────────────────────────────────────────
 let session        = null;

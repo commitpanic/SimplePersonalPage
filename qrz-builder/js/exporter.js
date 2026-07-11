@@ -8,7 +8,7 @@
 'use strict';
 
 import { getSections, getTheme } from './db.js';
-import { generateFullHtml }     from './templates/base-generator.js';
+import { generateFullHtml }     from './templates/base-generator.js?v=20260711-2';
 
 export function generateQrzBio(projectId, themeOverride = null) {
     const sections = getSections(projectId);

@@ -197,10 +197,10 @@ ${genIconAnimation(headerSec?.data?.icon_animation || 'pulse')}
 .slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transform:translateX(100%); transition:all .5s ease-in-out; display:flex; justify-content:center; align-items:center; }
 .award-card { background:var(--section-bg); border-radius:15px; box-shadow:0 15px 35px rgba(0,0,0,0.2); overflow:hidden; max-width:85%; width:100%; max-height:90%; display:flex; flex-direction:column; }
 .award-card img { width:100%; height:auto; max-height:480px; object-fit:contain; border-bottom:3px solid var(--secondary); background:#000; }
-.award-info { padding:20px 25px; text-align:center; color:var(--text); flex-shrink:0; }
+.award-info { padding:20px 25px 30px; text-align:center; color:var(--text); flex-shrink:0; display:flex; flex-direction:column; gap:10px; }
 .award-info h3 { font-size:1.5rem; margin-bottom:10px; color:var(--text); }
-.award-info p  { color:var(--text); margin-bottom:15px; }
-.award-date { display:inline-block; background:var(--secondary); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; }
+.award-info p  { color:var(--text); margin-bottom:0; display:-webkit-box; line-clamp:5; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
+.award-date { display:inline-block; background:var(--secondary); color:white; padding:5px 15px; border-radius:20px; font-size:0.9rem; margin-top:auto; align-self:center; }
 .gallery-navigation { display:flex; justify-content:center; align-items:center; gap:30px; margin-top:25px; }
 .gallery-nav-set { display:none; align-items:center; gap:30px; }
 .gallery-arrow { width:50px; height:50px; border-radius:50%; background:rgba(37,99,235,0.82); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1.5rem; border:2px solid rgba(255,255,255,0.3); transition:all .3s; }
