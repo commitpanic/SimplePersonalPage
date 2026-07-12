@@ -1,8 +1,118 @@
 {
-  "updatedAt": "2026-07-12T17:39:10.420Z",
+  "updatedAt": "2026-07-12T18:36:57.720Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-07-12T18:24:00.000Z-DL/SQ8NOD-40m-LSB",
+      "datetime": "2026-07-12T18:24:00.000Z",
+      "callsign": "DL/SQ8NOD",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Germany",
+      "grid": "JN48OH",
+      "lat": 48.3125,
+      "lon": 9.208333333333332
+    },
+    {
+      "id": "2026-07-12T18:16:00.000Z-SP9ZHC-80m-LSB",
+      "datetime": "2026-07-12T18:16:00.000Z",
+      "callsign": "SP9ZHC",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO02MG",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
+    },
+    {
+      "id": "2026-07-12T17:46:00.000Z-SQ8DSN-40m-LSB",
+      "datetime": "2026-07-12T17:46:00.000Z",
+      "callsign": "SQ8DSN",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO11HF",
+      "lat": 51.22916666666667,
+      "lon": 22.625
+    },
+    {
+      "id": "2026-07-12T17:40:00.000Z-SP8SAN-40m-LSB",
+      "datetime": "2026-07-12T17:40:00.000Z",
+      "callsign": "SP8SAN",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KN19EV",
+      "lat": 49.895833333333336,
+      "lon": 22.375
+    },
+    {
+      "id": "2026-07-12T17:00:00.000Z-SQ8KJC-40m-LSB",
+      "datetime": "2026-07-12T17:00:00.000Z",
+      "callsign": "SQ8KJC",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO11DG",
+      "lat": 51.270833333333336,
+      "lon": 22.291666666666668
+    },
+    {
+      "id": "2026-07-12T16:49:00.000Z-AO26FIFA-20m-USB",
+      "datetime": "2026-07-12T16:49:00.000Z",
+      "callsign": "AO26FIFA",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Spain",
+      "grid": "IN80DJ",
+      "lat": 40.395833333333336,
+      "lon": -3.7083333333333335
+    },
+    {
+      "id": "2026-07-12T16:23:00.000Z-3Z4MEK-40m-LSB",
+      "datetime": "2026-07-12T16:23:00.000Z",
+      "callsign": "3Z4MEK",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO02MG",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
+    },
+    {
+      "id": "2026-07-12T16:23:00.000Z-SP8X-40m-LSB",
+      "datetime": "2026-07-12T16:23:00.000Z",
+      "callsign": "SP8X",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO01XJ",
+      "lat": 51.395833333333336,
+      "lon": 21.958333333333336
+    },
+    {
+      "id": "2026-07-12T16:19:00.000Z-SQ9OKI/P-40m-LSB",
+      "datetime": "2026-07-12T16:19:00.000Z",
+      "callsign": "SQ9OKI/P",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO94BT",
+      "lat": 54.8125,
+      "lon": 18.125
+    },
+    {
+      "id": "2026-07-12T16:13:00.000Z-SP9AQQ-40m-LSB",
+      "datetime": "2026-07-12T16:13:00.000Z",
+      "callsign": "SP9AQQ",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KN09KI",
+      "lat": 49.35416666666667,
+      "lon": 20.875
+    },
     {
       "id": "2026-07-09T18:25:00.000Z-IU2SLH-40m-LSB",
       "datetime": "2026-07-09T18:25:00.000Z",
