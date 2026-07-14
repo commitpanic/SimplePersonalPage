@@ -1,5 +1,5 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-07-14T21:36:53.439Z",
+  "updatedAt": "2026-07-14T22:37:48.758Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
