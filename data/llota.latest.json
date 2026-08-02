@@ -1,51 +1,21 @@
 [
   {
-    "id": 3173,
-    "callsign": "SP9SIR",
-    "frequency": "7.1760",
+    "id": 3174,
+    "callsign": "CD5BMB",
+    "frequency": "28.5000",
     "mode": "SSB",
-    "reference": "LLPL-0740",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-02T17:26:41.000Z",
-    "updated_at": "2026-08-02T17:28:50.000Z",
-    "reference_name": "Jezioro Długie",
-    "country_name": "Poland",
+    "reference": "LLCL-0121",
+    "spotted_by_app": null,
+    "created_at": "2026-08-02T17:48:15.000Z",
+    "updated_at": "2026-08-02T17:48:15.000Z",
+    "reference_name": "Laguna Redonda",
+    "country_name": "Chile",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-02 17:26:41.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-02 17:26:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-02 17:27:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-02 17:27:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-02 17:27:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Tnx 73",
-        "timestamp": "2026-08-02 17:28:50.000000",
-        "spotter_callsign": "SP8QC",
-        "spotter_display_name": "Andrzej Jurek"
+        "comment": "pota y llota",
+        "timestamp": "2026-08-02 17:48:15.000000",
+        "spotter_callsign": "CA4FTK",
+        "spotter_display_name": "Oscar López"
       }
     ]
   }
