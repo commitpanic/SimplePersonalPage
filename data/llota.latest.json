@@ -7,7 +7,7 @@
     "reference": "LLPR-0060",
     "spotted_by_app": null,
     "created_at": "2026-08-02T22:20:15.000Z",
-    "updated_at": "2026-08-02T22:28:20.000Z",
+    "updated_at": "2026-08-02T22:35:10.000Z",
     "reference_name": "Laguna El Mani",
     "country_name": "Puerto Rico",
     "history": [
@@ -22,44 +22,12 @@
         "timestamp": "2026-08-02 22:28:20.000000",
         "spotter_callsign": "HI5PPH",
         "spotter_display_name": "PEDRO ANTONIO PÉREZ HEREDIA"
-      }
-    ]
-  },
-  {
-    "id": 3186,
-    "callsign": "CD5BMB",
-    "frequency": "7.1650",
-    "mode": "SSB",
-    "reference": "LLCL-0122",
-    "spotted_by_app": null,
-    "created_at": "2026-08-02T21:35:44.000Z",
-    "updated_at": "2026-08-02T22:17:17.000Z",
-    "reference_name": "Laguna Las Tres Pascualas",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "59 gracias por activar 73",
-        "timestamp": "2026-08-02 21:35:44.000000",
-        "spotter_callsign": "CE3KTE",
-        "spotter_display_name": "Víctor Münzenmayer A."
       },
       {
-        "comment": "RS 55 via GF11fw - 73!",
-        "timestamp": "2026-08-02 21:38:39.000000",
-        "spotter_callsign": "LU1EAF",
-        "spotter_display_name": "Marcos Alvarez  - LU1EAF"
-      },
-      {
-        "comment": "59 por Macul, Stgo, 73 Gracias",
-        "timestamp": "2026-08-02 21:57:59.000000",
-        "spotter_callsign": "CE3HXY",
-        "spotter_display_name": "Enrique Hernandez Araya"
-      },
-      {
-        "comment": "51",
-        "timestamp": "2026-08-02 22:17:17.000000",
-        "spotter_callsign": "HI5PPH",
-        "spotter_display_name": "PEDRO ANTONIO PÉREZ HEREDIA"
+        "comment": "59 Caguas!",
+        "timestamp": "2026-08-02 22:35:10.000000",
+        "spotter_callsign": "WP4LG",
+        "spotter_display_name": "L. Gomez"
       }
     ]
   }
