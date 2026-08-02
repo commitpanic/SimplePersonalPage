@@ -37,6 +37,11 @@ const regionNames = typeof Intl !== "undefined" && typeof Intl.DisplayNames === 
   ? new Intl.DisplayNames(["en"], { type: "region" })
   : null;
 
+function isLocalDevHost() {
+  const host = String(globalThis.location?.hostname || "").toLowerCase();
+  return host === "localhost" || host === "127.0.0.1" || host === "::1";
+}
+
 const els = {
   time: document.getElementById("time-filter"),
   search: document.getElementById("search-filter"),
@@ -640,9 +645,13 @@ async function fetchArrayJsonFromAny(urls, label) {
 }
 
 async function fetchSpots() {
+  const llotaUrls = isLocalDevHost()
+    ? [LLOTA_PROXY_URL, LLOTA_API_URL]
+    : [LLOTA_API_URL];
+
   const sources = [
     { key: "POTA", urls: [POTA_API_URL], mapper: mapPotaRow },
-    { key: "LLOTA", urls: [LLOTA_API_URL, LLOTA_PROXY_URL], mapper: mapLlotaRow },
+    { key: "LLOTA", urls: llotaUrls, mapper: mapLlotaRow },
     { key: "BOTA", urls: [BOTA_API_URL], mapper: mapBotaRow },
   ];
 
@@ -661,7 +670,7 @@ async function fetchSpots() {
     }
 
     const reason = result.reason instanceof Error ? result.reason.message : String(result.reason);
-    const llotaHint = src.key === "LLOTA"
+    const llotaHint = src.key === "LLOTA" && isLocalDevHost()
       ? " (CORS on direct API; run local proxy endpoint /api/llota-spots)"
       : "";
     failures.push(`${src.key}: ${reason}${llotaHint}`);
