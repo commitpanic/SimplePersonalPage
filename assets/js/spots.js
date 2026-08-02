@@ -1,6 +1,7 @@
 const POTA_API_URL = "https://api.pota.app/spot/activator";
 const LLOTA_API_URL = "https://llota.app/api/public/spots";
 const LLOTA_PROXY_URL = "/api/llota-spots";
+const LLOTA_CACHE_URL = "data/llota.latest.json";
 const BOTA_API_URL = "https://api.wwbota.org/spots/";
 const STORAGE_DONE_KEY = "sp3fck-spots-qso-done";
 const REFRESH_MS = 30_000;
@@ -646,8 +647,8 @@ async function fetchArrayJsonFromAny(urls, label) {
 
 async function fetchSpots() {
   const llotaUrls = isLocalDevHost()
-    ? [LLOTA_PROXY_URL, LLOTA_API_URL]
-    : [LLOTA_API_URL];
+    ? [LLOTA_PROXY_URL, LLOTA_CACHE_URL, LLOTA_API_URL]
+    : [LLOTA_CACHE_URL, LLOTA_API_URL];
 
   const sources = [
     { key: "POTA", urls: [POTA_API_URL], mapper: mapPotaRow },

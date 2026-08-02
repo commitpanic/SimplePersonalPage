@@ -1,0 +1,42 @@
+name: LLOTA Spots Sync
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Fetch and cache LLOTA spots
+        run: node scripts/llota-sync.mjs
+
+      - name: Commit cached LLOTA data
+        run: |
+          if git diff --quiet --exit-code data/llota.latest.json; then
+            echo "No LLOTA data changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/llota.latest.json
+          git commit -m "chore: update LLOTA cached spots"
+          git push
