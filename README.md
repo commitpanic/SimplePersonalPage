@@ -22,6 +22,13 @@ Najprosciej uruchomic lokalny serwer statyczny, np. z rozszerzenia VS Code Live 
 python -m http.server 8080
 ```
 
+Dla strony `spots.html` (POTA + LLOTA) zalecany jest lokalny serwer z proxy LLOTA,
+bo API LLOTA ma ograniczenia CORS dla innych domen:
+
+```powershell
+python scripts/dev_server.py --port 8080
+```
+
 Nastepnie otworz:
 - `http://localhost:8080/`
 

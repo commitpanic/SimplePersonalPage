@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="POTA spots with filters and worked status.">
+  <title>Spots | SP3FCK</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/spots.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="wrap">
+    <header class="site-header compact">
+      <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+      <p class="eyebrow">SP3FCK</p>
+      <h1>Spots</h1>
+      <p class="subtitle">Live spots from POTA with quick filters and a local worked checklist.</p>
+    </header>
+
+    <section class="spots-panel">
+      <div class="spots-controls" role="group" aria-label="Spots filters">
+        <label class="field">
+          <span>Time</span>
+          <select id="time-filter">
+            <option value="all">All</option>
+            <option value="15">Last 15 min</option>
+            <option value="30">Last 30 min</option>
+            <option value="60" selected>Last 60 min</option>
+            <option value="180">Last 3 h</option>
+            <option value="360">Last 6 h</option>
+            <option value="720">Last 12 h</option>
+            <option value="1440">Last 24 h</option>
+          </select>
+        </label>
+
+        <label class="field search-field">
+          <span>Search</span>
+          <input id="search-filter" type="text" placeholder="Call, park, ref, comment">
+        </label>
+
+        <div class="field action-field">
+          <span>Advanced</span>
+          <button id="open-filters-btn" class="btn ghost" type="button">
+            <i class="fa-solid fa-sliders"></i> Filters
+          </button>
+        </div>
+      </div>
+
+      <div class="active-filters" id="active-filters"></div>
+
+      <div class="spots-toolbar">
+        <p id="spots-meta" class="status">Loading spots...</p>
+        <div class="toolbar-controls">
+          <label class="toggle-inline toolbar-toggle" for="pause-refresh-toggle">
+            <input id="pause-refresh-toggle" type="checkbox">
+            Pause refresh
+          </label>
+          <button id="refresh-btn" class="btn ghost" type="button">
+            <i class="fa-solid fa-rotate"></i> Refresh
+          </button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="spots-table" aria-describedby="spots-meta">
+          <thead>
+            <tr>
+              <th>QSO</th>
+              <th>Time (UTC)</th>
+              <th>Activator</th>
+              <th>Ref</th>
+              <th>Park</th>
+              <th>Country</th>
+              <th>Band</th>
+              <th>Freq (kHz)</th>
+              <th>Mode</th>
+              <th>Spotter</th>
+              <th>Spot Source</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody id="spots-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div id="filters-modal" class="filters-modal" hidden>
+      <div class="filters-backdrop" id="filters-backdrop"></div>
+      <section class="filters-dialog" role="dialog" aria-modal="true" aria-labelledby="filters-title">
+        <header class="filters-header">
+          <h2 id="filters-title">Spot Filters</h2>
+          <button id="close-filters-btn" class="icon-btn" type="button" aria-label="Close filters">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </header>
+
+        <div class="filters-body">
+          <section class="filter-card">
+            <h3>Source</h3>
+            <div id="source-options" class="check-grid"></div>
+          </section>
+
+          <section class="filter-card">
+            <h3>Band</h3>
+            <div id="band-options" class="check-grid"></div>
+          </section>
+
+          <section class="filter-card">
+            <h3>Country</h3>
+            <input id="country-search" class="country-search" type="text" placeholder="Find country code (e.g. US, PL)">
+            <label class="toggle-inline" for="country-exclude-toggle">
+              <input id="country-exclude-toggle" type="checkbox">
+              Exclude selected countries
+            </label>
+            <div id="country-options" class="check-grid scroll-grid"></div>
+          </section>
+
+          <section class="filter-card">
+            <h3>Mode</h3>
+            <div id="mode-options" class="check-grid"></div>
+          </section>
+        </div>
+
+        <footer class="filters-footer">
+          <button id="select-all-filters-btn" class="btn ghost" type="button">Select all</button>
+          <button id="clear-filters-btn" class="btn ghost" type="button">Clear all</button>
+          <button id="apply-filters-btn" class="btn" type="button">Apply</button>
+        </footer>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-row">
+      <p><span id="year"></span> KUBA - kuba@kubabuba.com</p>
+      <div class="theme-picker">
+        <button class="theme-btn" id="theme-btn" aria-label="Change theme" title="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" id="theme-menu"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/spots.js?v=20260802-bota" defer></script>
+</body>
+</html>
