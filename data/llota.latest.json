@@ -1,13 +1,71 @@
 [
   {
+    "id": 3178,
+    "callsign": "SP9SIR",
+    "frequency": "3.7130",
+    "mode": "SSB",
+    "reference": "LLPL-0740",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-02T18:50:41.000Z",
+    "updated_at": "2026-08-02T19:16:37.000Z",
+    "reference_name": "Jezioro Długie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-02 18:50:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-02 18:50:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-02 19:16:37.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tomasz"
+      }
+    ]
+  },
+  {
+    "id": 3177,
+    "callsign": "SP9JZ",
+    "frequency": "7129.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0284",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-02T18:50:08.000Z",
+    "updated_at": "2026-08-02T19:09:32.000Z",
+    "reference_name": "Zbiornik Kozłowa Góra",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRP",
+        "timestamp": "2026-08-02 18:50:08.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-02 19:09:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3176,
     "callsign": "EA1FOX",
-    "frequency": "7180.0000",
+    "frequency": "7199.0000",
     "mode": "SSB",
     "reference": "LLES-0303",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-02T18:19:00.000Z",
-    "updated_at": "2026-08-02T18:39:37.000Z",
+    "updated_at": "2026-08-02T19:06:00.000Z",
     "reference_name": "Lagunas de Cospeito",
     "country_name": "España",
     "history": [
@@ -40,24 +98,66 @@
         "timestamp": "2026-08-02 18:39:37.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-02 18:47:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-02 18:48:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-02 18:55:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-02 18:58:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-02 18:58:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last call",
+        "timestamp": "2026-08-02 19:02:27.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-02 19:06:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3175,
-    "callsign": "SP9JZ",
-    "frequency": "14206.0000",
+    "id": 3179,
+    "callsign": "HK4X",
+    "frequency": "28415.0000",
     "mode": "SSB",
-    "reference": "LLPL-0284",
+    "reference": "LLCO-0046",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-02T18:14:55.000Z",
-    "updated_at": "2026-08-02T18:14:55.000Z",
-    "reference_name": "Zbiornik Kozłowa Góra",
-    "country_name": "Poland",
+    "created_at": "2026-08-02T19:01:30.000Z",
+    "updated_at": "2026-08-02T19:01:30.000Z",
+    "reference_name": "Lago Parque Simon Bolivar",
+    "country_name": "Colombia",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-02 18:14:55.000000",
+        "timestamp": "2026-08-02 19:01:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
