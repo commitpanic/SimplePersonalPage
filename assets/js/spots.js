@@ -670,10 +670,7 @@ async function fetchSpots() {
     }
 
     const reason = result.reason instanceof Error ? result.reason.message : String(result.reason);
-    const llotaHint = src.key === "LLOTA" && isLocalDevHost()
-      ? " (CORS on direct API; run local proxy endpoint /api/llota-spots)"
-      : "";
-    failures.push(`${src.key}: ${reason}${llotaHint}`);
+    failures.push(`${src.key}: ${reason}`);
   });
 
   if (!rows.length) {
