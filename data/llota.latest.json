@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3189,
+    "callsign": "K5CB",
+    "frequency": "14228.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0811",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-02T23:33:21.000Z",
+    "updated_at": "2026-08-02T23:33:21.000Z",
+    "reference_name": "Lake Arrowhead",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-02 23:33:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
