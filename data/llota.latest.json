@@ -1,1 +1,60 @@
-[]
+[
+  {
+    "id": 3203,
+    "callsign": "LU2LAR",
+    "frequency": "146.5200",
+    "mode": "FM",
+    "reference": "LLAR-0224",
+    "spotted_by_app": null,
+    "created_at": "2026-08-03T17:01:10.000Z",
+    "updated_at": "2026-08-03T17:02:45.000Z",
+    "reference_name": "Lago Soldati",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "Llamando cq con handy",
+        "timestamp": "2026-08-03 17:01:10.000000",
+        "spotter_callsign": "LU2LAR",
+        "spotter_display_name": "LU2LAR LU2LAR"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-03 17:02:45.000000",
+        "spotter_callsign": "LU2LAR",
+        "spotter_display_name": "LU2LAR LU2LAR"
+      }
+    ]
+  },
+  {
+    "id": 3202,
+    "callsign": "XE1EE",
+    "frequency": "21.0160",
+    "mode": "CW",
+    "reference": "LLMX-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-03T16:46:21.000Z",
+    "updated_at": "2026-08-03T17:01:48.000Z",
+    "reference_name": "Zona de preservación ecologica  Bordo Benito Juárez",
+    "country_name": "Mexico",
+    "history": [
+      {
+        "comment": "QRV 21016",
+        "timestamp": "2026-08-03 16:46:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 21016",
+        "timestamp": "2026-08-03 16:56:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-03 17:01:48.000000",
+        "spotter_callsign": "LU2LAR",
+        "spotter_display_name": "LU2LAR LU2LAR"
+      }
+    ]
+  }
+]
