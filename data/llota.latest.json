@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3196,
+    "callsign": "SP6WLZ",
+    "frequency": "14.1910",
+    "mode": "SSB",
+    "reference": "LLPL-0075",
+    "spotted_by_app": null,
+    "created_at": "2026-08-03T11:53:14.000Z",
+    "updated_at": "2026-08-03T11:53:14.000Z",
+    "reference_name": "Jezioro Narie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-03 11:53:14.000000",
+        "spotter_callsign": "SP6WLZ",
+        "spotter_display_name": "Wojtek Walczak"
+      }
+    ]
+  }
+]
