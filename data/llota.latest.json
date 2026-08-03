@@ -1,21 +1,45 @@
 [
   {
-    "id": 3196,
-    "callsign": "SP6WLZ",
-    "frequency": "14.1910",
+    "id": 3197,
+    "callsign": "SP9SIR",
+    "frequency": "7.1730",
     "mode": "SSB",
-    "reference": "LLPL-0075",
-    "spotted_by_app": null,
-    "created_at": "2026-08-03T11:53:14.000Z",
-    "updated_at": "2026-08-03T11:53:14.000Z",
-    "reference_name": "Jezioro Narie",
+    "reference": "LLPL-0062",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-03T12:04:51.000Z",
+    "updated_at": "2026-08-03T13:14:06.000Z",
+    "reference_name": "Jezioro Gopło",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-03 11:53:14.000000",
-        "spotter_callsign": "SP6WLZ",
-        "spotter_display_name": "Wojtek Walczak"
+        "comment": "QRV",
+        "timestamp": "2026-08-03 12:04:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 12:31:29.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 12:53:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 13:06:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-03 13:14:06.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tomasz"
       }
     ]
   }
