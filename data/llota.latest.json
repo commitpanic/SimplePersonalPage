@@ -1,47 +1,45 @@
 [
   {
-    "id": 3200,
-    "callsign": "SP6WLZ",
-    "frequency": "7.1650",
+    "id": 3201,
+    "callsign": "SP9SIR",
+    "frequency": "3712.0000",
     "mode": "SSB",
-    "reference": "LLPL-0075",
-    "spotted_by_app": null,
-    "created_at": "2026-08-03T13:51:53.000Z",
-    "updated_at": "2026-08-03T13:51:53.000Z",
-    "reference_name": "Jezioro Narie",
+    "reference": "LLPL-0062",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-03T14:41:50.000Z",
+    "updated_at": "2026-08-03T15:14:14.000Z",
+    "reference_name": "Jezioro Gopło",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-03 13:51:53.000000",
-        "spotter_callsign": "SP6WLZ",
-        "spotter_display_name": "Wojtek Walczak"
-      }
-    ]
-  },
-  {
-    "id": 3199,
-    "callsign": "SQ9SZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLPL-0724",
-    "spotted_by_app": null,
-    "created_at": "2026-08-03T13:20:23.000Z",
-    "updated_at": "2026-08-03T13:42:47.000Z",
-    "reference_name": "Stawy Olza",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-03 13:20:23.000000",
-        "spotter_callsign": "SP8ME",
-        "spotter_display_name": "Tomasz"
+        "comment": "QRV",
+        "timestamp": "2026-08-03 14:41:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-03 13:42:47.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
+        "comment": "QSY",
+        "timestamp": "2026-08-03 14:48:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 14:52:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 15:08:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-03 15:14:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
