@@ -1,13 +1,53 @@
 [
   {
+    "id": 3232,
+    "callsign": "EA7HZ",
+    "frequency": "7.1000",
+    "mode": "SSB",
+    "reference": "LLES-0456",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T17:47:25.000Z",
+    "updated_at": "2026-08-04T17:47:25.000Z",
+    "reference_name": "Pantano del Conde de Guadalhorce (o del Chorro)",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "DME-29018",
+        "timestamp": "2026-08-04 17:47:25.000000",
+        "spotter_callsign": "EA5UI",
+        "spotter_display_name": "Jose Luis Hernández"
+      }
+    ]
+  },
+  {
+    "id": 3231,
+    "callsign": "EA7HZ",
+    "frequency": "7117.0000",
+    "mode": "SSB",
+    "reference": "LLES-0456",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T17:46:56.000Z",
+    "updated_at": "2026-08-04T17:46:56.000Z",
+    "reference_name": "Pantano del Conde de Guadalhorce (o del Chorro)",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-04 17:46:56.000000",
+        "spotter_callsign": "EA4HVN",
+        "spotter_display_name": "EA4HVN Jose"
+      }
+    ]
+  },
+  {
     "id": 3225,
     "callsign": "EA2WX/P",
-    "frequency": "14.0460",
+    "frequency": "14046.0000",
     "mode": "CW",
     "reference": "LLES-0523",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-04T14:56:39.000Z",
-    "updated_at": "2026-08-04T16:58:07.000Z",
+    "updated_at": "2026-08-04T17:43:36.000Z",
     "reference_name": "Pantano de Valparaíso",
     "country_name": "España",
     "history": [
@@ -118,44 +158,56 @@
         "timestamp": "2026-08-04 16:58:07.000000",
         "spotter_callsign": "EA2WX",
         "spotter_display_name": "Marcial"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 17:18:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 17:19:34.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 17:21:17.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: ES-0442 ES-2071 EAFF-1421 LLES-0523",
+        "timestamp": "2026-08-04 17:34:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: ES-0442 ES-2071 EAFF-1421 LLES-0523",
+        "timestamp": "2026-08-04 17:43:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3227,
-    "callsign": "EC2AG",
-    "frequency": "7.1000",
+    "id": 3230,
+    "callsign": "K5CB",
+    "frequency": "14341.0000",
     "mode": "SSB",
-    "reference": "LLES-0009",
-    "spotted_by_app": null,
-    "created_at": "2026-08-04T16:10:50.000Z",
-    "updated_at": "2026-08-04T16:45:09.000Z",
-    "reference_name": "Embalse del Ebro",
-    "country_name": "España",
+    "reference": "LLUS-0812",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-04T17:37:22.000Z",
+    "updated_at": "2026-08-04T17:37:22.000Z",
+    "reference_name": "Lost Creek Reservoir",
+    "country_name": "Estados Unidos",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-04 16:10:50.000000",
-        "spotter_callsign": "EC2AG",
-        "spotter_display_name": "Antonio Garcia"
-      },
-      {
-        "comment": "U Llamadas",
-        "timestamp": "2026-08-04 16:33:15.000000",
-        "spotter_callsign": "EC2AG",
-        "spotter_display_name": "Antonio Garcia"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-04 16:41:02.000000",
-        "spotter_callsign": "F4ILK",
-        "spotter_display_name": "Bruno"
-      },
-      {
-        "comment": "Off batery...",
-        "timestamp": "2026-08-04 16:45:09.000000",
-        "spotter_callsign": "EC2AG",
-        "spotter_display_name": "Antonio Garcia"
+        "comment": "QRV",
+        "timestamp": "2026-08-04 17:37:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
