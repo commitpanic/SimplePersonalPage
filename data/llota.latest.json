@@ -2,12 +2,12 @@
   {
     "id": 3225,
     "callsign": "EA2WX/P",
-    "frequency": "14045.0000",
+    "frequency": "14046.0000",
     "mode": "CW",
     "reference": "LLES-0523",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-04T14:56:39.000Z",
-    "updated_at": "2026-08-04T15:29:43.000Z",
+    "updated_at": "2026-08-04T16:19:50.000Z",
     "reference_name": "Pantano de Valparaíso",
     "country_name": "España",
     "history": [
@@ -34,26 +34,106 @@
         "timestamp": "2026-08-04 15:29:43.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: ES-0442 ES-2071 EAFF-1421 LLES-0523",
+        "timestamp": "2026-08-04 15:33:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY 2-fer: ES-0442 ES-2071 EAFF-1421 LLES-0523",
+        "timestamp": "2026-08-04 15:38:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: ES-0442 ES-2071 EAFF-1421 LLES-0523",
+        "timestamp": "2026-08-04 15:39:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 15:40:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 15:49:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 16:00:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 16:01:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 16:09:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 16:15:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 16:19:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3226,
-    "callsign": "TA1EDG",
-    "frequency": "18.1000",
-    "mode": "FT8",
-    "reference": "LLTR-0001",
+    "id": 3228,
+    "callsign": "SP6WLZ/P",
+    "frequency": "14.1910",
+    "mode": "SSB",
+    "reference": "LLPL-0075",
     "spotted_by_app": null,
-    "created_at": "2026-08-04T15:10:31.000Z",
-    "updated_at": "2026-08-04T15:10:31.000Z",
-    "reference_name": "Kucukcekmece Lake",
-    "country_name": "Turkey",
+    "created_at": "2026-08-04T16:17:44.000Z",
+    "updated_at": "2026-08-04T16:17:44.000Z",
+    "reference_name": "Jezioro Narie",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-04 15:10:31.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN HEKIM"
+        "comment": "",
+        "timestamp": "2026-08-04 16:17:44.000000",
+        "spotter_callsign": "SP6WLZ",
+        "spotter_display_name": "Wojtek Walczak"
+      }
+    ]
+  },
+  {
+    "id": 3227,
+    "callsign": "EC2AG",
+    "frequency": "7.1000",
+    "mode": "SSB",
+    "reference": "LLES-0009",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T16:10:50.000Z",
+    "updated_at": "2026-08-04T16:10:50.000Z",
+    "reference_name": "Embalse del Ebro",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-04 16:10:50.000000",
+        "spotter_callsign": "EC2AG",
+        "spotter_display_name": "Antonio Garcia"
       }
     ]
   }
