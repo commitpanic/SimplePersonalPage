@@ -1,13 +1,53 @@
 [
   {
+    "id": 3222,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0004",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T12:48:24.000Z",
+    "updated_at": "2026-08-04T12:48:24.000Z",
+    "reference_name": "Alibey Reservoir",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-04 12:48:24.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "Erdag 0lçer"
+      }
+    ]
+  },
+  {
+    "id": 3221,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0004",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T12:48:23.000Z",
+    "updated_at": "2026-08-04T12:48:23.000Z",
+    "reference_name": "Alibey Reservoir",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-04 12:48:23.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "Erdag 0lçer"
+      }
+    ]
+  },
+  {
     "id": 3219,
     "callsign": "SQ9AIG",
-    "frequency": "14315.0000",
+    "frequency": "14323.0000",
     "mode": "SSB",
     "reference": "LLPL-0003",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-04T11:36:38.000Z",
-    "updated_at": "2026-08-04T11:58:56.000Z",
+    "updated_at": "2026-08-04T12:43:23.000Z",
     "reference_name": "Zatoka Pucka",
     "country_name": "Poland",
     "history": [
@@ -28,6 +68,38 @@
         "timestamp": "2026-08-04 11:58:56.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 12:16:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-04 12:43:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3220,
+    "callsign": "F1LPT/P",
+    "frequency": "7074.0000",
+    "mode": "FT8",
+    "reference": "LLFR-0045",
+    "spotted_by_app": null,
+    "created_at": "2026-08-04T12:40:57.000Z",
+    "updated_at": "2026-08-04T12:40:57.000Z",
+    "reference_name": "Etang de la Folie",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "and 3 POTA",
+        "timestamp": "2026-08-04 12:40:57.000000",
+        "spotter_callsign": "F1LPT",
+        "spotter_display_name": "Patrick Skibinski"
       }
     ]
   }
