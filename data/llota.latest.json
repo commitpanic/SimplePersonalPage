@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "id": 3251,
+    "callsign": "W5USN",
+    "frequency": "7183.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-05T20:03:48.000Z",
+    "updated_at": "2026-08-05T20:03:48.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Ssb",
+        "timestamp": "2026-08-05 20:03:48.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3250,
+    "callsign": "EG1NSN",
+    "frequency": "14250.0000",
+    "mode": "SSB",
+    "reference": "LLES-0077",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-05T19:30:56.000Z",
+    "updated_at": "2026-08-05T19:59:08.000Z",
+    "reference_name": "Presa de Acea",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-05 19:30:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-05 19:33:13.000000",
+        "spotter_callsign": "EA4HVN",
+        "spotter_display_name": "EA4HVN Jose"
+      },
+      {
+        "comment": "Lsst calls on 40",
+        "timestamp": "2026-08-05 19:37:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-05 19:45:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-05 19:45:53.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-05 19:46:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-05 19:49:34.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-05 19:49:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-05 19:59:08.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
