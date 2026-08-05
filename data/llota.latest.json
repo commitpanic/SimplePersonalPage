@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 3239,
+    "callsign": "EC2AFE",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLES-0523",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-05T12:15:28.000Z",
+    "updated_at": "2026-08-05T12:16:13.000Z",
+    "reference_name": "Pantano de Valparaíso",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "qrp...hasta las 14:30\na la tarde otra llota",
+        "timestamp": "2026-08-05 12:15:28.000000",
+        "spotter_callsign": "EC2AFE",
+        "spotter_display_name": "Pplu H M"
+      },
+      {
+        "comment": "QRX",
+        "timestamp": "2026-08-05 12:16:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
