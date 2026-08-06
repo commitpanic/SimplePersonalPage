@@ -1,13 +1,33 @@
 [
   {
+    "id": 3253,
+    "callsign": "EC2AFE",
+    "frequency": "7190.0000",
+    "mode": "SSB",
+    "reference": "LLES-0089",
+    "spotted_by_app": null,
+    "created_at": "2026-08-06T11:05:34.000Z",
+    "updated_at": "2026-08-06T11:05:34.000Z",
+    "reference_name": "Embalse de As Portas",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Eg1NSN..activadores EA1FOX y ec2AFE",
+        "timestamp": "2026-08-06 11:05:34.000000",
+        "spotter_callsign": "EC2AFE",
+        "spotter_display_name": "Pplu H M"
+      }
+    ]
+  },
+  {
     "id": 3252,
     "callsign": "EG1NSN",
-    "frequency": "7190.0000",
+    "frequency": "7.1900",
     "mode": "SSB",
     "reference": "LLES-0089",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-06T10:03:10.000Z",
-    "updated_at": "2026-08-06T10:03:10.000Z",
+    "updated_at": "2026-08-06T11:03:11.000Z",
     "reference_name": "Embalse de As Portas",
     "country_name": "España",
     "history": [
@@ -16,6 +36,66 @@
         "timestamp": "2026-08-06 10:03:10.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "2 CALL  EG1NSN & EA1FOX",
+        "timestamp": "2026-08-06 10:14:07.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-06 10:19:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-06 10:20:19.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-06 10:32:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-06 10:32:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-06 10:47:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls in 20",
+        "timestamp": "2026-08-06 10:47:53.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2 Ops.",
+        "timestamp": "2026-08-06 10:58:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-06 11:02:48.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2 OP  EC2AFE & EA1FOX",
+        "timestamp": "2026-08-06 11:03:11.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
       }
     ]
   }
