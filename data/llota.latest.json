@@ -1,39 +1,97 @@
 [
   {
-    "id": 3254,
-    "callsign": "SP9SIR",
-    "frequency": "7167.0000",
+    "id": 3256,
+    "callsign": "EG1NSN",
+    "frequency": "7.1800",
     "mode": "SSB",
-    "reference": "LLPL-0747",
+    "reference": "LLES-0057",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-06T13:01:36.000Z",
-    "updated_at": "2026-08-06T14:16:05.000Z",
-    "reference_name": "Jezioro Piasecznik Wielki",
-    "country_name": "Poland",
+    "created_at": "2026-08-06T14:59:22.000Z",
+    "updated_at": "2026-08-06T15:05:48.000Z",
+    "reference_name": "Embalse de Cenza",
+    "country_name": "España",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-06 13:01:36.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-06 14:59:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-06 14:59:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": null,
-        "timestamp": "2026-08-06 13:23:14.000000",
-        "spotter_callsign": "SP8ME",
-        "spotter_display_name": "Tom Wo"
-      },
+        "timestamp": "2026-08-06 15:05:48.000000",
+        "spotter_callsign": "EA4IFN",
+        "spotter_display_name": "Jesus DTT"
+      }
+    ]
+  },
+  {
+    "id": 3257,
+    "callsign": "EA1FOX",
+    "frequency": "7.1800",
+    "mode": "SSB",
+    "reference": "LLES-0057",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-06T14:59:22.000Z",
+    "updated_at": "2026-08-06T15:05:38.000Z",
+    "reference_name": "Embalse de Cenza",
+    "country_name": "España",
+    "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-06 13:50:32.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-06 14:59:22.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QRT",
-        "timestamp": "2026-08-06 14:16:05.000000",
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-06 14:59:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-06 15:05:38.000000",
+        "spotter_callsign": "EA4IFN",
+        "spotter_display_name": "Jesus DTT"
+      }
+    ]
+  },
+  {
+    "id": 3255,
+    "callsign": "EC2AFE",
+    "frequency": "7.1800",
+    "mode": "SSB",
+    "reference": "LLES-0057",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-06T14:59:22.000Z",
+    "updated_at": "2026-08-06T15:05:12.000Z",
+    "reference_name": "Embalse de Cenza",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-06 14:59:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-06 14:59:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-06 15:05:12.000000",
+        "spotter_callsign": "EA4IFN",
+        "spotter_display_name": "Jesus DTT"
       }
     ]
   }
