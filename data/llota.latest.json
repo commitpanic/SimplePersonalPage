@@ -2,12 +2,12 @@
   {
     "id": 3298,
     "callsign": "EA1FOX",
-    "frequency": "7175.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T16:23:46.000Z",
+    "updated_at": "2026-08-07T17:00:31.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -26,6 +26,42 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-07 16:23:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Ladt calls on 20",
+        "timestamp": "2026-08-07 16:30:55.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-07 16:45:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 16:45:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QST to 20",
+        "timestamp": "2026-08-07 16:59:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 17:00:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 17:00:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -34,12 +70,12 @@
   {
     "id": 3299,
     "callsign": "EC2AFE",
-    "frequency": "7175.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T16:23:46.000Z",
+    "updated_at": "2026-08-07T17:00:31.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -60,18 +96,54 @@
         "timestamp": "2026-08-07 16:23:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Ladt calls on 20",
+        "timestamp": "2026-08-07 16:30:55.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-07 16:45:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 16:45:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QST to 20",
+        "timestamp": "2026-08-07 16:59:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 17:00:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 17:00:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3300,
     "callsign": "EG1NSN",
-    "frequency": "7175.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T16:23:45.000Z",
+    "updated_at": "2026-08-07T17:00:31.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -92,122 +164,40 @@
         "timestamp": "2026-08-07 16:23:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3301,
-    "callsign": "TA1EDG",
-    "frequency": "18.1000",
-    "mode": "FT8",
-    "reference": "LLTR-0149",
-    "spotted_by_app": null,
-    "created_at": "2026-08-07T16:23:22.000Z",
-    "updated_at": "2026-08-07T16:23:22.000Z",
-    "reference_name": "Mavi  Lake",
-    "country_name": "Turkey",
-    "history": [
+      },
       {
-        "comment": "Qrv",
-        "timestamp": "2026-08-07 16:23:22.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
-      }
-    ]
-  },
-  {
-    "id": 3294,
-    "callsign": "W5USN",
-    "frequency": "18114.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0014",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-07T14:28:42.000Z",
-    "updated_at": "2026-08-07T16:02:38.000Z",
-    "reference_name": "Lake Champlain",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-07 14:28:42.000000",
+        "comment": "Ladt calls on 20",
+        "timestamp": "2026-08-07 16:30:55.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "Qrt",
-        "timestamp": "2026-08-07 14:30:24.000000",
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-07 16:45:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "SSB",
-        "timestamp": "2026-08-07 14:33:42.000000",
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 16:45:36.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "SSB",
-        "timestamp": "2026-08-07 14:44:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Please 10 meters!",
-        "timestamp": "2026-08-07 14:44:34.000000",
-        "spotter_callsign": "CA3LVK",
-        "spotter_display_name": "Nelson Lopez V."
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 14:52:49.000000",
+        "comment": "QST to 20",
+        "timestamp": "2026-08-07 16:59:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 15:03:00.000000",
+        "timestamp": "2026-08-07 17:00:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 15:13:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-07 15:19:07.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-07 15:25:49.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-07 15:36:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "SSB",
-        "timestamp": "2026-08-07 15:46:50.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "SSB",
-        "timestamp": "2026-08-07 15:57:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-07 16:02:38.000000",
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 17:00:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
