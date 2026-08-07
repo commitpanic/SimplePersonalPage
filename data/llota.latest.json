@@ -1,5 +1,185 @@
 [
   {
+    "id": 3276,
+    "callsign": "EG1NSN",
+    "frequency": "7117.0000",
+    "mode": "SSB",
+    "reference": "LLES-0092",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T08:14:07.000Z",
+    "updated_at": "2026-08-07T08:28:33.000Z",
+    "reference_name": "Embalse de San Martiño - A Rúa",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:14:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:14:20.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:16:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:16:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:20:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:21:29.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:23:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 08:26:24.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:28:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3277,
+    "callsign": "EA1FOX",
+    "frequency": "7117.0000",
+    "mode": "SSB",
+    "reference": "LLES-0092",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T08:14:07.000Z",
+    "updated_at": "2026-08-07T08:28:33.000Z",
+    "reference_name": "Embalse de San Martiño - A Rúa",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:14:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:14:20.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:16:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:16:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:20:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:21:29.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:23:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 08:26:29.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:28:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3279,
+    "callsign": "EC2AFE",
+    "frequency": "7117.0000",
+    "mode": "SSB",
+    "reference": "LLES-0092",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T08:21:29.000Z",
+    "updated_at": "2026-08-07T08:28:33.000Z",
+    "reference_name": "Embalse de San Martiño - A Rúa",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:21:29.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:23:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 08:26:33.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 08:26:49.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:28:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3274,
     "callsign": "YO3RAM",
     "frequency": "14325.0000",
@@ -7,7 +187,7 @@
     "reference": "LLRO-0024",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T07:36:34.000Z",
-    "updated_at": "2026-08-07T07:50:01.000Z",
+    "updated_at": "2026-08-07T08:17:38.000Z",
     "reference_name": "Lacul (Barajul) Râușor",
     "country_name": "Romania",
     "history": [
@@ -28,18 +208,42 @@
         "timestamp": "2026-08-07 07:50:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "CQ LLOTA, CQ LLOTA",
+        "timestamp": "2026-08-07 07:55:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 08:04:55.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "CQLLOTA, CQ LLOTA",
+        "timestamp": "2026-08-07 08:07:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-07 08:17:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3275,
     "callsign": "EA1FMF",
-    "frequency": "7094.0000",
+    "frequency": "7.0940",
     "mode": "SSB",
     "reference": "LLES-0619",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T07:41:40.000Z",
-    "updated_at": "2026-08-07T07:41:40.000Z",
+    "updated_at": "2026-08-07T08:09:10.000Z",
     "reference_name": "Pozo de las Sanguijuelas",
     "country_name": "España",
     "history": [
@@ -48,6 +252,12 @@
         "timestamp": "2026-08-07 07:41:40.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 08:09:10.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
       }
     ]
   }
