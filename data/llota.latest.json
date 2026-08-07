@@ -2,12 +2,12 @@
   {
     "id": 3284,
     "callsign": "SP9SIR",
-    "frequency": "21344.0000",
+    "frequency": "7.1410",
     "mode": "SSB",
     "reference": "LLPL-0747",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T12:24:30.000Z",
-    "updated_at": "2026-08-07T13:40:01.000Z",
+    "updated_at": "2026-08-07T14:09:21.000Z",
     "reference_name": "Jezioro Piasecznik Wielki",
     "country_name": "Poland",
     "history": [
@@ -40,64 +40,162 @@
         "timestamp": "2026-08-07 13:40:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-07 14:00:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 14:09:21.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
       }
     ]
   },
   {
-    "id": 3286,
-    "callsign": "W5USN",
-    "frequency": "7178.0000",
+    "id": 3288,
+    "callsign": "EC2AFE",
+    "frequency": "7100.0000",
     "mode": "SSB",
-    "reference": "LLUS-0014",
+    "reference": "LLES-0018",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-07T13:14:52.000Z",
-    "updated_at": "2026-08-07T13:36:18.000Z",
-    "reference_name": "Lake Champlain",
-    "country_name": "Estados Unidos",
+    "created_at": "2026-08-07T14:00:21.000Z",
+    "updated_at": "2026-08-07T14:06:19.000Z",
+    "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
+    "country_name": "España",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 13:14:52.000000",
+        "timestamp": "2026-08-07 14:00:21.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 13:25:00.000000",
+        "timestamp": "2026-08-07 14:02:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:02:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:03:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:05:41.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 13:35:32.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-07 13:36:18.000000",
+        "timestamp": "2026-08-07 14:06:19.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3287,
-    "callsign": "SP6WLZ",
-    "frequency": "14.2870",
+    "id": 3290,
+    "callsign": "EG1NSN",
+    "frequency": "7100.0000",
     "mode": "SSB",
-    "reference": "LLPL-0560",
-    "spotted_by_app": null,
-    "created_at": "2026-08-07T13:36:10.000Z",
-    "updated_at": "2026-08-07T13:36:10.000Z",
-    "reference_name": "Jezioro Tabórz",
-    "country_name": "Poland",
+    "reference": "LLES-0018",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T14:00:22.000Z",
+    "updated_at": "2026-08-07T14:06:19.000Z",
+    "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
+    "country_name": "España",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-07 13:36:10.000000",
-        "spotter_callsign": "SP6WLZ",
-        "spotter_display_name": "Wojtek Walczak"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 14:00:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 14:02:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:02:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:03:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:05:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 14:06:19.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3291,
+    "callsign": "EA1FOX",
+    "frequency": "7100.0000",
+    "mode": "SSB",
+    "reference": "LLES-0018",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T14:02:06.000Z",
+    "updated_at": "2026-08-07T14:06:19.000Z",
+    "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 14:02:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:02:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:03:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 14:05:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 14:06:19.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
