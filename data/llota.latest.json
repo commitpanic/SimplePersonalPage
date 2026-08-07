@@ -1,5 +1,25 @@
 [
   {
+    "id": 3313,
+    "callsign": "ZL2NEB",
+    "frequency": "7100.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0755",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-07T22:21:32.000Z",
+    "updated_at": "2026-08-07T22:21:32.000Z",
+    "reference_name": "Lake Tennyson",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 22:21:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3312,
     "callsign": "LU8SAM/S",
     "frequency": "7138.0000",
