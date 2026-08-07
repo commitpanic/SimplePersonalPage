@@ -2,12 +2,12 @@
   {
     "id": 3294,
     "callsign": "W5USN",
-    "frequency": "14335.0000",
+    "frequency": "21313.0000",
     "mode": "SSB",
     "reference": "LLUS-0014",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T14:28:42.000Z",
-    "updated_at": "2026-08-07T15:03:00.000Z",
+    "updated_at": "2026-08-07T15:36:00.000Z",
     "reference_name": "Lake Champlain",
     "country_name": "Estados Unidos",
     "history": [
@@ -52,56 +52,82 @@
         "timestamp": "2026-08-07 15:03:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3293,
-    "callsign": "SQ9SZ",
-    "frequency": "7.0740",
-    "mode": "FT8",
-    "reference": "LLPL-0724",
-    "spotted_by_app": "POTACAT",
-    "created_at": "2026-08-07T14:19:33.000Z",
-    "updated_at": "2026-08-07T15:02:08.000Z",
-    "reference_name": "Stawy Olza",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-07 14:19:33.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
       },
       {
-        "comment": "59 in JO92to via POTACAT",
-        "timestamp": "2026-08-07 14:23:18.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 15:13:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-07 14:47:49.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
+        "comment": "QRT",
+        "timestamp": "2026-08-07 15:19:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       },
       {
-        "comment": "QRP",
-        "timestamp": "2026-08-07 15:02:08.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
+        "comment": "QRV",
+        "timestamp": "2026-08-07 15:25:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-07 15:36:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3296,
+    "callsign": "SP6WLZ/P",
+    "frequency": "7.1660",
+    "mode": "SSB",
+    "reference": "LLPL-0560",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T15:34:32.000Z",
+    "updated_at": "2026-08-07T15:34:32.000Z",
+    "reference_name": "Jezioro Tabórz",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-07 15:34:32.000000",
+        "spotter_callsign": "SP6WLZ",
+        "spotter_display_name": "Wojtek Walczak"
+      }
+    ]
+  },
+  {
+    "id": 3295,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0149",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T15:27:00.000Z",
+    "updated_at": "2026-08-07T15:27:00.000Z",
+    "reference_name": "Safaalan Lake N2",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-07 15:27:00.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "Erdağ Ölçer"
       }
     ]
   },
   {
     "id": 3288,
     "callsign": "EC2AFE",
-    "frequency": "7100.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0018",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T14:00:21.000Z",
-    "updated_at": "2026-08-07T14:54:08.000Z",
+    "updated_at": "2026-08-07T15:24:49.000Z",
     "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
     "country_name": "España",
     "history": [
@@ -170,18 +196,48 @@
         "timestamp": "2026-08-07 14:54:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 15:12:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:12:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 15:18:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:18:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. To the next",
+        "timestamp": "2026-08-07 15:24:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3290,
     "callsign": "EG1NSN",
-    "frequency": "7100.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0018",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T14:00:22.000Z",
-    "updated_at": "2026-08-07T14:54:08.000Z",
+    "updated_at": "2026-08-07T15:24:49.000Z",
     "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
     "country_name": "España",
     "history": [
@@ -250,18 +306,48 @@
         "timestamp": "2026-08-07 14:54:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 15:12:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:12:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 15:18:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:18:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. To the next",
+        "timestamp": "2026-08-07 15:24:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3291,
     "callsign": "EA1FOX",
-    "frequency": "7100.0000",
+    "frequency": "14240.0000",
     "mode": "SSB",
     "reference": "LLES-0018",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T14:02:06.000Z",
-    "updated_at": "2026-08-07T14:54:08.000Z",
+    "updated_at": "2026-08-07T15:24:49.000Z",
     "reference_name": "Embalse de Santo Estevo (San Esteban) de Ribas de Sil ",
     "country_name": "España",
     "history": [
@@ -324,38 +410,36 @@
         "timestamp": "2026-08-07 14:54:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3292,
-    "callsign": "EA1FMF",
-    "frequency": "7.1200",
-    "mode": "SSB",
-    "reference": "LLES-0033",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-07T14:18:17.000Z",
-    "updated_at": "2026-08-07T14:51:47.000Z",
-    "reference_name": "Pozón de la Yesera",
-    "country_name": "España",
-    "history": [
+      },
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-07 14:18:17.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 15:12:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-07 14:32:19.000000",
-        "spotter_callsign": "EA4IFN",
-        "spotter_display_name": "Jesus DTT"
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:12:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-07 14:51:47.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 15:18:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 15:18:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. To the next",
+        "timestamp": "2026-08-07 15:24:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
