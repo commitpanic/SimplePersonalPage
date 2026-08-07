@@ -7,7 +7,7 @@
     "reference": "LLES-0092",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T08:14:07.000Z",
-    "updated_at": "2026-08-07T08:28:33.000Z",
+    "updated_at": "2026-08-07T08:59:24.000Z",
     "reference_name": "Embalse de San Martiño - A Rúa",
     "country_name": "España",
     "history": [
@@ -64,6 +64,30 @@
         "timestamp": "2026-08-07 08:28:33.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "CQ CQ",
+        "timestamp": "2026-08-07 08:34:46.000000",
+        "spotter_callsign": "EA1JW",
+        "spotter_display_name": "EA1JW Alberto"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:38:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 0",
+        "timestamp": "2026-08-07 08:40:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-07 08:59:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -75,7 +99,7 @@
     "reference": "LLES-0092",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T08:14:07.000Z",
-    "updated_at": "2026-08-07T08:28:33.000Z",
+    "updated_at": "2026-08-07T08:59:24.000Z",
     "reference_name": "Embalse de San Martiño - A Rúa",
     "country_name": "España",
     "history": [
@@ -132,6 +156,30 @@
         "timestamp": "2026-08-07 08:28:33.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "CQ CQ",
+        "timestamp": "2026-08-07 08:34:52.000000",
+        "spotter_callsign": "EA1JW",
+        "spotter_display_name": "EA1JW Alberto"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:38:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 0",
+        "timestamp": "2026-08-07 08:40:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-07 08:59:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -143,7 +191,7 @@
     "reference": "LLES-0092",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T08:21:29.000Z",
-    "updated_at": "2026-08-07T08:28:33.000Z",
+    "updated_at": "2026-08-07T08:59:24.000Z",
     "reference_name": "Embalse de San Martiño - A Rúa",
     "country_name": "España",
     "history": [
@@ -176,60 +224,28 @@
         "timestamp": "2026-08-07 08:28:33.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3274,
-    "callsign": "YO3RAM",
-    "frequency": "14325.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0024",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-07T07:36:34.000Z",
-    "updated_at": "2026-08-07T08:17:38.000Z",
-    "reference_name": "Lacul (Barajul) Râușor",
-    "country_name": "Romania",
-    "history": [
+      },
       {
-        "comment": "CQ LLOTA LLRO-0024",
-        "timestamp": "2026-08-07 07:36:34.000000",
+        "comment": "CQ CQ",
+        "timestamp": "2026-08-07 08:35:00.000000",
+        "spotter_callsign": "EA1JW",
+        "spotter_display_name": "EA1JW Alberto"
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 08:38:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "CQ LLOTA RO-0024",
-        "timestamp": "2026-08-07 07:44:56.000000",
+        "comment": "Last calls on 0",
+        "timestamp": "2026-08-07 08:40:18.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "CQ LLOTA RO-0024 ",
-        "timestamp": "2026-08-07 07:50:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "CQ LLOTA, CQ LLOTA",
-        "timestamp": "2026-08-07 07:55:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-07 08:04:55.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "CQLLOTA, CQ LLOTA",
-        "timestamp": "2026-08-07 08:07:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-07 08:17:38.000000",
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-07 08:59:24.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -238,12 +254,12 @@
   {
     "id": 3275,
     "callsign": "EA1FMF",
-    "frequency": "7.0940",
+    "frequency": "7094.0000",
     "mode": "SSB",
     "reference": "LLES-0619",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T07:41:40.000Z",
-    "updated_at": "2026-08-07T08:09:10.000Z",
+    "updated_at": "2026-08-07T08:50:40.000Z",
     "reference_name": "Pozo de las Sanguijuelas",
     "country_name": "España",
     "history": [
@@ -258,6 +274,18 @@
         "timestamp": "2026-08-07 08:09:10.000000",
         "spotter_callsign": "EA2EZ",
         "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "CQ CQ",
+        "timestamp": "2026-08-07 08:35:09.000000",
+        "spotter_callsign": "EA1JW",
+        "spotter_display_name": "EA1JW Alberto"
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-07 08:50:40.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
