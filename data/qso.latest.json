@@ -1,8 +1,149 @@
 {
-  "updatedAt": "2026-08-07T18:32:37.606Z",
+  "updatedAt": "2026-08-07T19:37:24.340Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-08-07T18:27:00.000Z-SP5AKX-80m-LSB",
+      "datetime": "2026-08-07T18:27:00.000Z",
+      "callsign": "SP5AKX",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO01NL",
+      "lat": 51.47916666666667,
+      "lon": 21.125
+    },
+    {
+      "id": "2026-08-07T18:20:00.000Z-SP5HUBA-80m-LSB",
+      "datetime": "2026-08-07T18:20:00.000Z",
+      "callsign": "SP5HUBA",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO02MG",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
+    },
+    {
+      "id": "2026-08-07T18:15:00.000Z-PD3RL/P-40m-LSB",
+      "datetime": "2026-08-07T18:15:00.000Z",
+      "callsign": "PD3RL/P",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Netherlands",
+      "grid": "JO33FJ",
+      "lat": 53.395833333333336,
+      "lon": 6.458333333333334
+    },
+    {
+      "id": "2026-08-07T18:06:00.000Z-ON4AEO-40m-LSB",
+      "datetime": "2026-08-07T18:06:00.000Z",
+      "callsign": "ON4AEO",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Belgium",
+      "grid": "JO10PX",
+      "lat": 50.97916666666667,
+      "lon": 3.2916666666666665
+    },
+    {
+      "id": "2026-08-07T17:58:00.000Z-CR60A-20m-USB",
+      "datetime": "2026-08-07T17:58:00.000Z",
+      "callsign": "CR60A",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Portugal",
+      "grid": "IM58JS",
+      "lat": 38.770833333333336,
+      "lon": -9.208333333333334
+    },
+    {
+      "id": "2026-08-07T17:34:00.000Z-SM/LB9EH-40m-LSB",
+      "datetime": "2026-08-07T17:34:00.000Z",
+      "callsign": "SM/LB9EH",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Sweden",
+      "grid": "JO67BU",
+      "lat": 57.85416666666667,
+      "lon": 12.125
+    },
+    {
+      "id": "2026-08-07T16:51:00.000Z-HG25CCS-40m-LSB",
+      "datetime": "2026-08-07T16:51:00.000Z",
+      "callsign": "HG25CCS",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Hungary",
+      "grid": "JN87GF",
+      "lat": 47.22916666666667,
+      "lon": 16.541666666666668
+    },
+    {
+      "id": "2026-08-07T16:47:00.000Z-EI6IF-20m-USB",
+      "datetime": "2026-08-07T16:47:00.000Z",
+      "callsign": "EI6IF",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Ireland",
+      "grid": "IO63DL",
+      "lat": 53.47916666666667,
+      "lon": -7.708333333333333
+    },
+    {
+      "id": "2026-08-07T14:50:00.000Z-SN0GIP-40m-LSB",
+      "datetime": "2026-08-07T14:50:00.000Z",
+      "callsign": "SN0GIP",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO83GN",
+      "lat": 53.5625,
+      "lon": 16.541666666666668
+    },
+    {
+      "id": "2026-08-07T14:47:00.000Z-SQ3WL-40m-LSB",
+      "datetime": "2026-08-07T14:47:00.000Z",
+      "callsign": "SQ3WL",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO71PO",
+      "lat": 51.60416666666667,
+      "lon": 15.291666666666666
+    },
+    {
+      "id": "2026-08-07T14:41:00.000Z-SP9TEX-40m-LSB",
+      "datetime": "2026-08-07T14:41:00.000Z",
+      "callsign": "SP9TEX",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO90OD",
+      "lat": 50.145833333333336,
+      "lon": 19.208333333333336
+    },
+    {
+      "id": "2026-08-07T14:34:00.000Z-PA6DOG-15m-USB",
+      "datetime": "2026-08-07T14:34:00.000Z",
+      "callsign": "PA6DOG",
+      "band": "15m",
+      "mode": "USB",
+      "country": "Netherlands",
+      "grid": "JO21JO",
+      "lat": 51.60416666666667,
+      "lon": 4.791666666666667
+    },
+    {
+      "id": "2026-08-07T13:52:00.000Z-F/DL2TTA-15m-USB",
+      "datetime": "2026-08-07T13:52:00.000Z",
+      "callsign": "F/DL2TTA",
+      "band": "15m",
+      "mode": "USB",
+      "country": "France",
+      "grid": ""
+    },
     {
       "id": "2026-07-29T17:41:00.000Z-SP5XTY-40m-LSB",
       "datetime": "2026-07-29T17:41:00.000Z",
