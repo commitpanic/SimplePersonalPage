@@ -1,19 +1,19 @@
 [
   {
-    "id": 3272,
+    "id": 3273,
     "callsign": "ER1SKI/QRP",
-    "frequency": "14080.0000",
-    "mode": "FT4",
+    "frequency": "10136.0000",
+    "mode": "FT8",
     "reference": "LLMD-0800",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-07T06:00:25.000Z",
-    "updated_at": "2026-08-07T06:00:25.000Z",
+    "created_at": "2026-08-07T06:31:21.000Z",
+    "updated_at": "2026-08-07T06:31:21.000Z",
     "reference_name": "Lacul din Grădina Botanică N2",
     "country_name": "Moldova",
     "history": [
       {
         "comment": "4-fer: LLMD-0800 LLMD-0803 LLMD-0802 LLMD-0742",
-        "timestamp": "2026-08-07 06:00:25.000000",
+        "timestamp": "2026-08-07 06:31:21.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
