@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "id": 3303,
+    "callsign": "SQ9SZ",
+    "frequency": "7074.0000",
+    "mode": "FT8",
+    "reference": "LLPL-0724",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T18:02:35.000Z",
+    "updated_at": "2026-08-07T18:20:19.000Z",
+    "reference_name": "Stawy Olza",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRP",
+        "timestamp": "2026-08-07 18:02:35.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-07 18:20:19.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      }
+    ]
+  },
+  {
+    "id": 3304,
+    "callsign": "TA1EDG",
+    "frequency": "18.1000",
+    "mode": "FT8",
+    "reference": "LLTR-0136",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T18:04:45.000Z",
+    "updated_at": "2026-08-07T18:04:45.000Z",
+    "reference_name": "Çayırdere Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-07 18:04:45.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
+      }
+    ]
+  }
+]
