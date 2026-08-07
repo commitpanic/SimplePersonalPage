@@ -1,5 +1,25 @@
 [
   {
+    "id": 3302,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0136",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T17:23:29.000Z",
+    "updated_at": "2026-08-07T17:23:29.000Z",
+    "reference_name": "Çayırdere Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-07 17:23:29.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "Erdağ Ölçer"
+      }
+    ]
+  },
+  {
     "id": 3298,
     "callsign": "EA1FOX",
     "frequency": "14240.0000",
@@ -7,7 +27,7 @@
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T17:00:31.000Z",
+    "updated_at": "2026-08-07T17:06:58.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -62,6 +82,18 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-07 17:00:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 17:03:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all. In a few, another one",
+        "timestamp": "2026-08-07 17:06:58.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -75,7 +107,7 @@
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T17:00:31.000Z",
+    "updated_at": "2026-08-07T17:06:58.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -132,6 +164,18 @@
         "timestamp": "2026-08-07 17:00:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 17:03:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all. In a few, another one",
+        "timestamp": "2026-08-07 17:06:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -143,7 +187,7 @@
     "reference": "LLES-0515",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T16:13:53.000Z",
-    "updated_at": "2026-08-07T17:00:31.000Z",
+    "updated_at": "2026-08-07T17:06:58.000Z",
     "reference_name": "Pantano de Sequeiros",
     "country_name": "España",
     "history": [
@@ -198,6 +242,18 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-07 17:00:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-07 17:03:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all. In a few, another one",
+        "timestamp": "2026-08-07 17:06:58.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
