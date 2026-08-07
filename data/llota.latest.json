@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": 3274,
+    "callsign": "YO3RAM",
+    "frequency": "14325.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0024",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T07:36:34.000Z",
+    "updated_at": "2026-08-07T07:50:01.000Z",
+    "reference_name": "Lacul (Barajul) Râușor",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "CQ LLOTA LLRO-0024",
+        "timestamp": "2026-08-07 07:36:34.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "CQ LLOTA RO-0024",
+        "timestamp": "2026-08-07 07:44:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "CQ LLOTA RO-0024 ",
+        "timestamp": "2026-08-07 07:50:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3275,
+    "callsign": "EA1FMF",
+    "frequency": "7094.0000",
+    "mode": "SSB",
+    "reference": "LLES-0619",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T07:41:40.000Z",
+    "updated_at": "2026-08-07T07:41:40.000Z",
+    "reference_name": "Pozo de las Sanguijuelas",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-07 07:41:40.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
