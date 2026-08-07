@@ -7,7 +7,7 @@
     "reference": "LLES-0404",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T10:03:09.000Z",
-    "updated_at": "2026-08-07T10:22:08.000Z",
+    "updated_at": "2026-08-07T10:55:57.000Z",
     "reference_name": "Embalse de Montefurado",
     "country_name": "España",
     "history": [
@@ -40,6 +40,36 @@
         "timestamp": "2026-08-07 10:22:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 10:35:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:36:11.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls before 20",
+        "timestamp": "2026-08-07 10:50:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:50:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:55:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -51,7 +81,7 @@
     "reference": "LLES-0404",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T10:03:09.000Z",
-    "updated_at": "2026-08-07T10:22:08.000Z",
+    "updated_at": "2026-08-07T10:55:57.000Z",
     "reference_name": "Embalse de Montefurado",
     "country_name": "España",
     "history": [
@@ -84,6 +114,36 @@
         "timestamp": "2026-08-07 10:22:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 10:36:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:36:11.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls before 20",
+        "timestamp": "2026-08-07 10:50:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:50:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:55:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -95,7 +155,7 @@
     "reference": "LLES-0404",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T10:03:09.000Z",
-    "updated_at": "2026-08-07T10:22:08.000Z",
+    "updated_at": "2026-08-07T10:55:57.000Z",
     "reference_name": "Embalse de Montefurado",
     "country_name": "España",
     "history": [
@@ -128,26 +188,36 @@
         "timestamp": "2026-08-07 10:22:08.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3283,
-    "callsign": "F4ANS/P",
-    "frequency": "7.1780",
-    "mode": "SSB",
-    "reference": "LLFR-0016",
-    "spotted_by_app": null,
-    "created_at": "2026-08-07T10:13:38.000Z",
-    "updated_at": "2026-08-07T10:13:38.000Z",
-    "reference_name": "Étang de Bolmon et Paluns",
-    "country_name": "Francia",
-    "history": [
+      },
       {
-        "comment": "+pota fr-16759 , fr-7021",
-        "timestamp": "2026-08-07 10:13:38.000000",
-        "spotter_callsign": "F4ANS",
-        "spotter_display_name": "Aurélien Barrau"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 10:35:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:36:11.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls before 20",
+        "timestamp": "2026-08-07 10:50:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:50:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-07 10:55:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
