@@ -2,12 +2,12 @@
   {
     "id": 3284,
     "callsign": "SP9SIR",
-    "frequency": "7.1670",
+    "frequency": "21344.0000",
     "mode": "SSB",
     "reference": "LLPL-0747",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-07T12:24:30.000Z",
-    "updated_at": "2026-08-07T12:48:39.000Z",
+    "updated_at": "2026-08-07T13:40:01.000Z",
     "reference_name": "Jezioro Piasecznik Wielki",
     "country_name": "Poland",
     "history": [
@@ -22,26 +22,82 @@
         "timestamp": "2026-08-07 12:48:39.000000",
         "spotter_callsign": "SP9JKL",
         "spotter_display_name": "Jurek Szustak"
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-07 13:07:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 13:23:08.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-07 13:40:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3285,
-    "callsign": "TA1EDG",
-    "frequency": "18100.0000",
-    "mode": "FT8",
-    "reference": "LLTR-0148",
-    "spotted_by_app": null,
-    "created_at": "2026-08-07T12:38:24.000Z",
-    "updated_at": "2026-08-07T12:38:24.000Z",
-    "reference_name": "Safaalan Lake N1",
-    "country_name": "Turkey",
+    "id": 3286,
+    "callsign": "W5USN",
+    "frequency": "7178.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-07T13:14:52.000Z",
+    "updated_at": "2026-08-07T13:36:18.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
     "history": [
       {
-        "comment": "Qrv",
-        "timestamp": "2026-08-07 12:38:24.000000",
-        "spotter_callsign": "TA1EDG",
-        "spotter_display_name": "Erdağ Ölçer"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 13:14:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 13:25:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-07 13:35:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-07 13:36:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3287,
+    "callsign": "SP6WLZ",
+    "frequency": "14.2870",
+    "mode": "SSB",
+    "reference": "LLPL-0560",
+    "spotted_by_app": null,
+    "created_at": "2026-08-07T13:36:10.000Z",
+    "updated_at": "2026-08-07T13:36:10.000Z",
+    "reference_name": "Jezioro Tabórz",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-07 13:36:10.000000",
+        "spotter_callsign": "SP6WLZ",
+        "spotter_display_name": "Wojtek Walczak"
       }
     ]
   }
