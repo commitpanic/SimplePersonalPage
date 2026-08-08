@@ -1,5 +1,25 @@
 [
   {
+    "id": 3352,
+    "callsign": "CA3LVK",
+    "frequency": "7145.0000",
+    "mode": "SSB",
+    "reference": "LLCL-0037",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T16:32:59.000Z",
+    "updated_at": "2026-08-08T16:32:59.000Z",
+    "reference_name": "Laguna de Aculeo",
+    "country_name": "Chile",
+    "history": [
+      {
+        "comment": "QRV CQ CQ!",
+        "timestamp": "2026-08-08 16:32:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3349,
     "callsign": "EG1NSN",
     "frequency": "14260.0000",
