@@ -1,21 +1,61 @@
 [
   {
-    "id": 3329,
-    "callsign": "ON4AEO",
-    "frequency": "7.1600",
+    "id": 3332,
+    "callsign": "SP6GT",
+    "frequency": "14320.0000",
     "mode": "SSB",
-    "reference": "LLBE-0011",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T10:24:25.000Z",
-    "updated_at": "2026-08-08T10:24:25.000Z",
-    "reference_name": "Freux",
-    "country_name": "Bélgica",
+    "reference": "LLPL-0207",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:02:50.000Z",
+    "updated_at": "2026-08-08T11:02:50.000Z",
+    "reference_name": "Jezioro Boguszyckie",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "CQ",
-        "timestamp": "2026-08-08 10:24:25.000000",
-        "spotter_callsign": "ON4AEO",
-        "spotter_display_name": "Filip"
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 11:02:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3331,
+    "callsign": "SP6VZ",
+    "frequency": "14320.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0207",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:02:46.000Z",
+    "updated_at": "2026-08-08T11:02:46.000Z",
+    "reference_name": "Jezioro Boguszyckie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 11:02:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3330,
+    "callsign": "TA1EDG",
+    "frequency": "14.0740",
+    "mode": "FT8",
+    "reference": "LLTR-0141",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T11:01:21.000Z",
+    "updated_at": "2026-08-08T11:01:21.000Z",
+    "reference_name": "Muhlis Yunus Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-08 11:01:21.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
       }
     ]
   }
