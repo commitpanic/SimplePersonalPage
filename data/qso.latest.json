@@ -1,8 +1,30 @@
 {
-  "updatedAt": "2026-08-08T09:29:57.741Z",
+  "updatedAt": "2026-08-08T10:29:08.601Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-08-08T09:53:00.000Z-SP9TEX-40m-LSB",
+      "datetime": "2026-08-08T09:53:00.000Z",
+      "callsign": "SP9TEX",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO90OD",
+      "lat": 50.145833333333336,
+      "lon": 19.208333333333336
+    },
+    {
+      "id": "2026-08-08T09:19:00.000Z-IZ2FOS-20m-USB",
+      "datetime": "2026-08-08T09:19:00.000Z",
+      "callsign": "IZ2FOS",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Italy",
+      "grid": "JN55FK",
+      "lat": 45.4375,
+      "lon": 10.458333333333332
+    },
     {
       "id": "2026-08-08T09:09:00.000Z-F/PF1SCT-20m-USB",
       "datetime": "2026-08-08T09:09:00.000Z",
