@@ -2,12 +2,12 @@
   {
     "id": 3325,
     "callsign": "SQ9SZ",
-    "frequency": "7152.0000",
+    "frequency": "7.1520",
     "mode": "SSB",
     "reference": "LLPL-0724",
     "spotted_by_app": null,
     "created_at": "2026-08-08T09:47:05.000Z",
-    "updated_at": "2026-08-08T09:47:05.000Z",
+    "updated_at": "2026-08-08T10:04:03.000Z",
     "reference_name": "Stawy Olza",
     "country_name": "Poland",
     "history": [
@@ -16,6 +16,58 @@
         "timestamp": "2026-08-08 09:47:05.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-08 09:50:06.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-08 10:04:03.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      }
+    ]
+  },
+  {
+    "id": 3327,
+    "callsign": "SP8BBK",
+    "frequency": "7157.5000",
+    "mode": "SSB",
+    "reference": "LLPL-0749",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T09:57:06.000Z",
+    "updated_at": "2026-08-08T09:57:06.000Z",
+    "reference_name": "Zalew Niedźwiadek",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-08 09:57:06.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
+      }
+    ]
+  },
+  {
+    "id": 3326,
+    "callsign": "ON4AEO",
+    "frequency": "14.2080",
+    "mode": "SSB",
+    "reference": "LLBE-0011",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T09:50:29.000Z",
+    "updated_at": "2026-08-08T09:50:29.000Z",
+    "reference_name": "Freux",
+    "country_name": "Bélgica",
+    "history": [
+      {
+        "comment": "CQ",
+        "timestamp": "2026-08-08 09:50:29.000000",
+        "spotter_callsign": "ON4AEO",
+        "spotter_display_name": "Filip"
       }
     ]
   },
@@ -36,26 +88,6 @@
         "timestamp": "2026-08-08 09:42:59.000000",
         "spotter_callsign": "TA1EDG",
         "spotter_display_name": "Erdağ Ölçer"
-      }
-    ]
-  },
-  {
-    "id": 3323,
-    "callsign": "TA1EDG",
-    "frequency": "18.1000",
-    "mode": "FT8",
-    "reference": "LLTR-0151",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T09:35:02.000Z",
-    "updated_at": "2026-08-08T09:35:02.000Z",
-    "reference_name": "Armutlar Lake",
-    "country_name": "Turkey",
-    "history": [
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-08 09:35:02.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
       }
     ]
   }
