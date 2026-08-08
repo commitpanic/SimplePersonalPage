@@ -1,21 +1,73 @@
 [
   {
-    "id": 3340,
-    "callsign": "SP9SIR",
-    "frequency": "7164.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0763",
+    "id": 3341,
+    "callsign": "EI3LH",
+    "frequency": "14067.0000",
+    "mode": "CW",
+    "reference": "LLIE-10182",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T13:02:10.000Z",
-    "updated_at": "2026-08-08T13:02:10.000Z",
-    "reference_name": "Jezioro Dołgie",
-    "country_name": "Poland",
+    "created_at": "2026-08-08T13:08:13.000Z",
+    "updated_at": "2026-08-08T13:29:13.000Z",
+    "reference_name": "Rogerstown Estuary",
+    "country_name": "Irlanda",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-08 13:02:10.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 13:08:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 13:19:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 13:29:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3343,
+    "callsign": "PY2MP",
+    "frequency": "18082.0000",
+    "mode": "CW",
+    "reference": "LLBR-0054",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T13:24:18.000Z",
+    "updated_at": "2026-08-08T13:24:18.000Z",
+    "reference_name": "Represa do Estreito",
+    "country_name": "Brasil",
+    "history": [
+      {
+        "comment": "QRV qrp",
+        "timestamp": "2026-08-08 13:24:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3342,
+    "callsign": "TA1EDG",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0139",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T13:18:13.000Z",
+    "updated_at": "2026-08-08T13:18:13.000Z",
+    "reference_name": "Ikiz Lakes N2",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-08 13:18:13.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "Erdağ Ölçer"
       }
     ]
   },
@@ -27,7 +79,7 @@
     "reference": "LLUS-0014",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T11:57:47.000Z",
-    "updated_at": "2026-08-08T12:54:09.000Z",
+    "updated_at": "2026-08-08T13:04:31.000Z",
     "reference_name": "Lake Champlain",
     "country_name": "Estados Unidos",
     "history": [
@@ -60,104 +112,30 @@
         "timestamp": "2026-08-08 12:54:09.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3339,
-    "callsign": "SP6GT",
-    "frequency": "14302.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0207",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T12:53:32.000Z",
-    "updated_at": "2026-08-08T12:53:32.000Z",
-    "reference_name": "Jezioro Boguszyckie",
-    "country_name": "Poland",
-    "history": [
+      },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 12:53:32.000000",
+        "timestamp": "2026-08-08 13:04:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3331,
-    "callsign": "SP6VZ",
-    "frequency": "14302.0000",
+    "id": 3340,
+    "callsign": "SP9SIR",
+    "frequency": "7164.0000",
     "mode": "SSB",
-    "reference": "LLPL-0207",
+    "reference": "LLPL-0763",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T11:02:46.000Z",
-    "updated_at": "2026-08-08T12:53:31.000Z",
-    "reference_name": "Jezioro Boguszyckie",
+    "created_at": "2026-08-08T13:02:10.000Z",
+    "updated_at": "2026-08-08T13:02:10.000Z",
+    "reference_name": "Jezioro Dołgie",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "PL-2098, LLPL-0207",
-        "timestamp": "2026-08-08 11:02:46.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:04:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:15:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:25:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:36:17.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:53:13.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207 ",
-        "timestamp": "2026-08-08 11:58:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 12:18:24.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207",
-        "timestamp": "2026-08-08 12:19:29.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207 ",
-        "timestamp": "2026-08-08 12:43:26.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207 ",
-        "timestamp": "2026-08-08 12:53:31.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-08 13:02:10.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
