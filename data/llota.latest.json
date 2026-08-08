@@ -2,12 +2,12 @@
   {
     "id": 3352,
     "callsign": "CA3LVK",
-    "frequency": "28350.0000",
+    "frequency": "7130.0000",
     "mode": "SSB",
     "reference": "LLCL-0037",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T16:32:59.000Z",
-    "updated_at": "2026-08-08T17:23:32.000Z",
+    "updated_at": "2026-08-08T17:47:24.000Z",
     "reference_name": "Laguna de Aculeo",
     "country_name": "Chile",
     "history": [
@@ -40,18 +40,140 @@
         "timestamp": "2026-08-08 17:23:32.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QSY cq cq",
+        "timestamp": "2026-08-08 17:36:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY cq cq",
+        "timestamp": "2026-08-08 17:36:45.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY cq cq",
+        "timestamp": "2026-08-08 17:47:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3355,
+    "callsign": "EA2WX/P",
+    "frequency": "14296.0000",
+    "mode": "SSB",
+    "reference": "LLES-0020",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T17:18:21.000Z",
+    "updated_at": "2026-08-08T17:46:57.000Z",
+    "reference_name": "Lagunas de Villafáfila",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 17:18:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 17:46:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3360,
+    "callsign": "TA1EDG",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0136",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T17:46:13.000Z",
+    "updated_at": "2026-08-08T17:46:13.000Z",
+    "reference_name": "Çayırdere Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-08 17:46:13.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "ERDAG OLCER"
+      }
+    ]
+  },
+  {
+    "id": 3359,
+    "callsign": "TA1EDG",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0136",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T17:46:12.000Z",
+    "updated_at": "2026-08-08T17:46:12.000Z",
+    "reference_name": "Çayırdere Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-08 17:46:12.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "ERDAG OLCER"
+      }
+    ]
+  },
+  {
+    "id": 3357,
+    "callsign": "EC2AFE",
+    "frequency": "14.3050",
+    "mode": "SSB",
+    "reference": "LLES-0420",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T17:21:33.000Z",
+    "updated_at": "2026-08-08T17:35:41.000Z",
+    "reference_name": "Pantano de Guístolas",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 17:21:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 17:22:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 17:34:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "59 disfrutar 73",
+        "timestamp": "2026-08-08 17:35:41.000000",
+        "spotter_callsign": "EB1FE",
+        "spotter_display_name": "JOSE"
       }
     ]
   },
   {
     "id": 3358,
     "callsign": "EA1FOX",
-    "frequency": "7095.0000",
+    "frequency": "7.0950",
     "mode": "SSB",
     "reference": "LLES-0420",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T17:21:34.000Z",
-    "updated_at": "2026-08-08T17:22:06.000Z",
+    "updated_at": "2026-08-08T17:35:14.000Z",
     "reference_name": "Pantano de Guístolas",
     "country_name": "España",
     "history": [
@@ -66,18 +188,36 @@
         "timestamp": "2026-08-08 17:22:06.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 17:34:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "59 gracias 73 a disfrutar",
+        "timestamp": "2026-08-08 17:34:49.000000",
+        "spotter_callsign": "EB1FE",
+        "spotter_display_name": "JOSE"
+      },
+      {
+        "comment": "59 73",
+        "timestamp": "2026-08-08 17:35:14.000000",
+        "spotter_callsign": "EB1FE",
+        "spotter_display_name": "JOSE"
       }
     ]
   },
   {
     "id": 3356,
     "callsign": "EG1NSN",
-    "frequency": "7095.0000",
+    "frequency": "14305.0000",
     "mode": "SSB",
     "reference": "LLES-0420",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T17:21:33.000Z",
-    "updated_at": "2026-08-08T17:22:05.000Z",
+    "updated_at": "2026-08-08T17:34:23.000Z",
     "reference_name": "Pantano de Guístolas",
     "country_name": "España",
     "history": [
@@ -92,50 +232,10 @@
         "timestamp": "2026-08-08 17:22:05.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3357,
-    "callsign": "EC2AFE",
-    "frequency": "7095.0000",
-    "mode": "SSB",
-    "reference": "LLES-0420",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T17:21:33.000Z",
-    "updated_at": "2026-08-08T17:22:05.000Z",
-    "reference_name": "Pantano de Guístolas",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 17:21:33.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 17:22:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3355,
-    "callsign": "EA2WX/P",
-    "frequency": "14296.0000",
-    "mode": "SSB",
-    "reference": "LLES-0020",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T17:18:21.000Z",
-    "updated_at": "2026-08-08T17:18:21.000Z",
-    "reference_name": "Lagunas de Villafáfila",
-    "country_name": "España",
-    "history": [
-      {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 17:18:21.000000",
+        "timestamp": "2026-08-08 17:34:23.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
