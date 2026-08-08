@@ -7,7 +7,7 @@
     "reference": "LLES-0415",
     "spotted_by_app": null,
     "created_at": "2026-08-08T07:57:37.000Z",
-    "updated_at": "2026-08-08T07:57:37.000Z",
+    "updated_at": "2026-08-08T08:07:26.000Z",
     "reference_name": "Lagunas de Belvís",
     "country_name": "España",
     "history": [
@@ -16,26 +16,32 @@
         "timestamp": "2026-08-08 07:57:37.000000",
         "spotter_callsign": "EA5UI",
         "spotter_display_name": "Jose Luis Hernández"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-08 08:07:26.000000",
+        "spotter_callsign": "EA2CPG",
+        "spotter_display_name": "Pedro Chico"
       }
     ]
   },
   {
-    "id": 3320,
-    "callsign": "EA4HUK",
-    "frequency": "7.1860",
+    "id": 3322,
+    "callsign": "SP9SIR",
+    "frequency": "7175.0000",
     "mode": "SSB",
-    "reference": "LLES-0415",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T07:52:32.000Z",
-    "updated_at": "2026-08-08T07:52:32.000Z",
-    "reference_name": "Lagunas de Belvís",
-    "country_name": "España",
+    "reference": "LLPL-0747",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T08:03:56.000Z",
+    "updated_at": "2026-08-08T08:03:56.000Z",
+    "reference_name": "Jezioro Piasecznik Wielki",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-08 07:52:32.000000",
-        "spotter_callsign": "EA4IFN",
-        "spotter_display_name": "Jesus DTT"
+        "comment": "QRV",
+        "timestamp": "2026-08-08 08:03:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
