@@ -1,8 +1,85 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-08-08T05:31:39.747Z",
+  "updatedAt": "2026-08-08T06:30:49.566Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-08-08T05:48:00.000Z-VK2SR-20m-USB",
+      "datetime": "2026-08-08T05:48:00.000Z",
+      "callsign": "VK2SR",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Australia",
+      "grid": "QF44NM",
+      "lat": -35.479166666666664,
+      "lon": 149.125
+    },
+    {
+      "id": "2026-08-08T05:30:00.000Z-SP9SIR-40m-LSB",
+      "datetime": "2026-08-08T05:30:00.000Z",
+      "callsign": "SP9SIR",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JO90XA",
+      "lat": 50.020833333333336,
+      "lon": 19.958333333333336
+    },
+    {
+      "id": "2026-08-07T21:25:00.000Z-EH2BV-20m-USB",
+      "datetime": "2026-08-07T21:25:00.000Z",
+      "callsign": "EH2BV",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Spain",
+      "grid": "IN80DJ",
+      "lat": 40.395833333333336,
+      "lon": -3.7083333333333335
+    },
+    {
+      "id": "2026-08-07T20:54:00.000Z-CT3MD-20m-USB",
+      "datetime": "2026-08-07T20:54:00.000Z",
+      "callsign": "CT3MD",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Madeira Island",
+      "grid": "IM13TB",
+      "lat": 33.0625,
+      "lon": -16.375
+    },
+    {
+      "id": "2026-08-07T20:34:00.000Z-CU3HN-20m-USB",
+      "datetime": "2026-08-07T20:34:00.000Z",
+      "callsign": "CU3HN",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Azores",
+      "grid": "HM68JP",
+      "lat": 38.645833333333336,
+      "lon": -27.208333333333332
+    },
+    {
+      "id": "2026-08-07T20:32:00.000Z-JJ0PKS-20m-USB",
+      "datetime": "2026-08-07T20:32:00.000Z",
+      "callsign": "JJ0PKS",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Japan",
+      "grid": "PM97CD",
+      "lat": 37.145833333333336,
+      "lon": 138.20833333333331
+    },
+    {
+      "id": "2026-08-07T20:22:00.000Z-VE9FI-20m-USB",
+      "datetime": "2026-08-07T20:22:00.000Z",
+      "callsign": "VE9FI",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Canada",
+      "grid": "FN75CM",
+      "lat": 45.520833333333336,
+      "lon": -65.79166666666666
+    },
     {
       "id": "2026-08-07T20:17:00.000Z-S51DX-20m-USB",
       "datetime": "2026-08-07T20:17:00.000Z",
