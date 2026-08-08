@@ -2,12 +2,12 @@
   {
     "id": 3318,
     "callsign": "SP9SIR",
-    "frequency": "3688.0000",
+    "frequency": "7.1730",
     "mode": "SSB",
     "reference": "LLPL-0747",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T04:40:28.000Z",
-    "updated_at": "2026-08-08T05:06:26.000Z",
+    "updated_at": "2026-08-08T05:33:09.000Z",
     "reference_name": "Jezioro Piasecznik Wielki",
     "country_name": "Poland",
     "history": [
@@ -22,6 +22,18 @@
         "timestamp": "2026-08-08 05:06:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-08 05:23:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-08 05:33:09.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
       }
     ]
   }
