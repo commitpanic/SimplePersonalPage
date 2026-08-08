@@ -7,7 +7,7 @@
     "reference": "LLPL-0724",
     "spotted_by_app": null,
     "created_at": "2026-08-08T09:47:05.000Z",
-    "updated_at": "2026-08-08T10:04:03.000Z",
+    "updated_at": "2026-08-08T10:10:49.000Z",
     "reference_name": "Stawy Olza",
     "country_name": "Poland",
     "history": [
@@ -28,6 +28,32 @@
         "timestamp": "2026-08-08 10:04:03.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-08 10:10:49.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      }
+    ]
+  },
+  {
+    "id": 3328,
+    "callsign": "EA4IYL",
+    "frequency": "7190.0000",
+    "mode": "SSB",
+    "reference": "LLES-0384",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T10:08:35.000Z",
+    "updated_at": "2026-08-08T10:08:35.000Z",
+    "reference_name": "Las Lagunas de Las Madres",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-08 10:08:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -48,46 +74,6 @@
         "timestamp": "2026-08-08 09:57:06.000000",
         "spotter_callsign": "SP8ME",
         "spotter_display_name": "Tom Wo"
-      }
-    ]
-  },
-  {
-    "id": 3326,
-    "callsign": "ON4AEO",
-    "frequency": "14.2080",
-    "mode": "SSB",
-    "reference": "LLBE-0011",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T09:50:29.000Z",
-    "updated_at": "2026-08-08T09:50:29.000Z",
-    "reference_name": "Freux",
-    "country_name": "Bélgica",
-    "history": [
-      {
-        "comment": "CQ",
-        "timestamp": "2026-08-08 09:50:29.000000",
-        "spotter_callsign": "ON4AEO",
-        "spotter_display_name": "Filip"
-      }
-    ]
-  },
-  {
-    "id": 3324,
-    "callsign": "TA1EDG",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLTR-0151",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T09:42:59.000Z",
-    "updated_at": "2026-08-08T09:42:59.000Z",
-    "reference_name": "Armutlar Lake",
-    "country_name": "Turkey",
-    "history": [
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-08 09:42:59.000000",
-        "spotter_callsign": "TA1EDG",
-        "spotter_display_name": "Erdağ Ölçer"
       }
     ]
   }
