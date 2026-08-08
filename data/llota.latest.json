@@ -1,13 +1,173 @@
 [
   {
+    "id": 3335,
+    "callsign": "W5USN",
+    "frequency": "14344.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:57:47.000Z",
+    "updated_at": "2026-08-08T12:34:28.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:57:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY 40m",
+        "timestamp": "2026-08-08 12:06:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "SSB",
+        "timestamp": "2026-08-08 12:34:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3338,
+    "callsign": "KP4CRC",
+    "frequency": "146.5200",
+    "mode": "FM",
+    "reference": "LLPR-0095",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T12:31:49.000Z",
+    "updated_at": "2026-08-08T12:31:49.000Z",
+    "reference_name": "Lago Rio Grande de Loiza",
+    "country_name": "Puerto Rico",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-08 12:31:49.000000",
+        "spotter_callsign": "WP4RF",
+        "spotter_display_name": "Rey Carro"
+      }
+    ]
+  },
+  {
+    "id": 3337,
+    "callsign": "TA1EDG",
+    "frequency": "14.0740",
+    "mode": "FT8",
+    "reference": "LLTR-0138",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T12:27:25.000Z",
+    "updated_at": "2026-08-08T12:27:25.000Z",
+    "reference_name": "Ikiz Lakes N1",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-08 12:27:25.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
+      }
+    ]
+  },
+  {
+    "id": 3336,
+    "callsign": "KP4CRC",
+    "frequency": "146.5200",
+    "mode": "FM",
+    "reference": "LLPR-0095",
+    "spotted_by_app": null,
+    "created_at": "2026-08-08T12:25:19.000Z",
+    "updated_at": "2026-08-08T12:25:19.000Z",
+    "reference_name": "Lago Rio Grande de Loiza",
+    "country_name": "Puerto Rico",
+    "history": [
+      {
+        "comment": "CQ- Lagos y lagunas en el aire",
+        "timestamp": "2026-08-08 12:25:19.000000",
+        "spotter_callsign": "WP4LG",
+        "spotter_display_name": "L Gomez"
+      }
+    ]
+  },
+  {
+    "id": 3331,
+    "callsign": "SP6VZ",
+    "frequency": "14305.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0207",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:02:46.000Z",
+    "updated_at": "2026-08-08T12:19:29.000Z",
+    "reference_name": "Jezioro Boguszyckie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 11:02:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098 LLPL-0207",
+        "timestamp": "2026-08-08 11:04:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098 LLPL-0207",
+        "timestamp": "2026-08-08 11:15:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098 LLPL-0207",
+        "timestamp": "2026-08-08 11:25:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098 LLPL-0207",
+        "timestamp": "2026-08-08 11:36:17.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:53:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098, LLPL-0207 ",
+        "timestamp": "2026-08-08 11:58:20.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 12:18:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 12:19:29.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3332,
     "callsign": "SP6GT",
-    "frequency": "14318.0000",
+    "frequency": "14305.0000",
     "mode": "SSB",
     "reference": "LLPL-0207",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T11:02:50.000Z",
-    "updated_at": "2026-08-08T12:14:01.000Z",
+    "updated_at": "2026-08-08T12:18:26.000Z",
     "reference_name": "Jezioro Boguszyckie",
     "country_name": "Poland",
     "history": [
@@ -56,6 +216,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-08 12:14:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 12:18:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -118,88 +284,6 @@
       {
         "comment": "QRT",
         "timestamp": "2026-08-08 12:08:13.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3335,
-    "callsign": "W5USN",
-    "frequency": "3805.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0014",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T11:57:47.000Z",
-    "updated_at": "2026-08-08T12:06:51.000Z",
-    "reference_name": "Lake Champlain",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:57:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY 40m",
-        "timestamp": "2026-08-08 12:06:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3331,
-    "callsign": "SP6VZ",
-    "frequency": "14318.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0207",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T11:02:46.000Z",
-    "updated_at": "2026-08-08T11:58:20.000Z",
-    "reference_name": "Jezioro Boguszyckie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "PL-2098, LLPL-0207",
-        "timestamp": "2026-08-08 11:02:46.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:04:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:15:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:25:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098 LLPL-0207",
-        "timestamp": "2026-08-08 11:36:17.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:53:13.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207 ",
-        "timestamp": "2026-08-08 11:58:20.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
