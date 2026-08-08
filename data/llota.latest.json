@@ -1,89 +1,13 @@
 [
   {
-    "id": 3332,
-    "callsign": "SP6GT",
-    "frequency": "14321.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0207",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T11:02:50.000Z",
-    "updated_at": "2026-08-08T11:41:49.000Z",
-    "reference_name": "Jezioro Boguszyckie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "PL-2098, LLPL-0207",
-        "timestamp": "2026-08-08 11:02:50.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "PL-2098, LLPL-0207",
-        "timestamp": "2026-08-08 11:04:58.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:29:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:41:49.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3334,
-    "callsign": "MM7JNT",
-    "frequency": "14244.0000",
-    "mode": "SSB",
-    "reference": "LLGB-0085",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T11:16:31.000Z",
-    "updated_at": "2026-08-08T11:37:18.000Z",
-    "reference_name": "Carlingwark Loch",
-    "country_name": "Scotland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:16:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:28:03.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:30:13.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 11:37:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3331,
     "callsign": "SP6VZ",
-    "frequency": "14321.0000",
+    "frequency": "14318.0000",
     "mode": "SSB",
     "reference": "LLPL-0207",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T11:02:46.000Z",
-    "updated_at": "2026-08-08T11:36:17.000Z",
+    "updated_at": "2026-08-08T11:58:20.000Z",
     "reference_name": "Jezioro Boguszyckie",
     "country_name": "Poland",
     "history": [
@@ -114,6 +38,138 @@
       {
         "comment": "PL-2098 LLPL-0207",
         "timestamp": "2026-08-08 11:36:17.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:53:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098, LLPL-0207 ",
+        "timestamp": "2026-08-08 11:58:20.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3335,
+    "callsign": "W5USN",
+    "frequency": "3805.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:57:47.000Z",
+    "updated_at": "2026-08-08T11:57:47.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:57:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3332,
+    "callsign": "SP6GT",
+    "frequency": "14318.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0207",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:02:50.000Z",
+    "updated_at": "2026-08-08T11:53:14.000Z",
+    "reference_name": "Jezioro Boguszyckie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 11:02:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "PL-2098, LLPL-0207",
+        "timestamp": "2026-08-08 11:04:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:29:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:41:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:52:02.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:53:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3334,
+    "callsign": "MM7JNT",
+    "frequency": "7156.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0085",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T11:16:31.000Z",
+    "updated_at": "2026-08-08T11:49:35.000Z",
+    "reference_name": "Carlingwark Loch",
+    "country_name": "Scotland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:16:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:28:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:30:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:37:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:43:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 11:49:35.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
