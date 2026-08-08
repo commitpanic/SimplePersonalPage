@@ -7,7 +7,7 @@
     "reference": "LLCL-0037",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T16:32:59.000Z",
-    "updated_at": "2026-08-08T16:32:59.000Z",
+    "updated_at": "2026-08-08T16:54:01.000Z",
     "reference_name": "Laguna de Aculeo",
     "country_name": "Chile",
     "history": [
@@ -16,280 +16,36 @@
         "timestamp": "2026-08-08 16:32:59.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3349,
-    "callsign": "EG1NSN",
-    "frequency": "14260.0000",
-    "mode": "SSB",
-    "reference": "LLES-0076",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T16:04:26.000Z",
-    "reference_name": "Embalse de Chandrexa de Queixa",
-    "country_name": "España",
-    "history": [
+      },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:11:12.000000",
+        "comment": "QRV CQ CQ!",
+        "timestamp": "2026-08-08 16:43:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:11:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:16:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:21:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:34:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:47:37.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:49:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:49:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:53:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:53:39.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:00:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:03:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT. Tnx to all",
-        "timestamp": "2026-08-08 16:04:26.000000",
+        "comment": "QRV CQ CQ!",
+        "timestamp": "2026-08-08 16:54:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3350,
-    "callsign": "EC2AFE",
-    "frequency": "14260.0000",
-    "mode": "SSB",
-    "reference": "LLES-0076",
+    "id": 3353,
+    "callsign": "EA2WX/P",
+    "frequency": "14048.0000",
+    "mode": "CW",
+    "reference": "LLES-0020",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T16:04:26.000Z",
-    "reference_name": "Embalse de Chandrexa de Queixa",
+    "created_at": "2026-08-08T16:36:13.000Z",
+    "updated_at": "2026-08-08T16:36:13.000Z",
+    "reference_name": "Lagunas de Villafáfila",
     "country_name": "España",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:11:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:11:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:16:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:21:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:34:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:47:37.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:49:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:49:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:53:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:53:39.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:00:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:03:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT. Tnx to all",
-        "timestamp": "2026-08-08 16:04:26.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3351,
-    "callsign": "EA1FOX",
-    "frequency": "14260.0000",
-    "mode": "SSB",
-    "reference": "LLES-0076",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T16:04:26.000Z",
-    "reference_name": "Embalse de Chandrexa de Queixa",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:11:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:11:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:16:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:21:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:34:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:47:37.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls on 40",
-        "timestamp": "2026-08-08 15:49:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:49:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 15:53:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV (3 ops)",
-        "timestamp": "2026-08-08 15:53:39.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:00:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Last calls",
-        "timestamp": "2026-08-08 16:03:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT. Tnx to all",
-        "timestamp": "2026-08-08 16:04:26.000000",
+        "timestamp": "2026-08-08 16:36:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
