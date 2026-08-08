@@ -1,39 +1,25 @@
 [
   {
-    "id": 3373,
-    "callsign": "AD8BU",
-    "frequency": "14.0800",
-    "mode": "FT8",
-    "reference": "LLUS-0194",
-    "spotted_by_app": null,
-    "created_at": "2026-08-08T23:22:30.000Z",
-    "updated_at": "2026-08-08T23:22:30.000Z",
-    "reference_name": "Mill Pond",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Working FT4",
-        "timestamp": "2026-08-08 23:22:30.000000",
-        "spotter_callsign": "AD8BU",
-        "spotter_display_name": "Frank Lemanski"
-      }
-    ]
-  },
-  {
-    "id": 3372,
-    "callsign": "ZL2NEB",
-    "frequency": "7085.0000",
+    "id": 3374,
+    "callsign": "CA3LVK",
+    "frequency": "7155.0000",
     "mode": "SSB",
-    "reference": "LLNZ-0895",
-    "spotted_by_app": "ONTHEAIRNZ",
-    "created_at": "2026-08-08T23:13:22.000Z",
-    "updated_at": "2026-08-08T23:13:22.000Z",
-    "reference_name": "Mata Kopae",
-    "country_name": "New Zealand",
+    "reference": "LLCL-0037",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-08T23:46:28.000Z",
+    "updated_at": "2026-08-08T23:52:23.000Z",
+    "reference_name": "Laguna de Aculeo",
+    "country_name": "Chile",
     "history": [
       {
-        "comment": "Calling now ",
-        "timestamp": "2026-08-08 23:13:22.000000",
+        "comment": "Qrv",
+        "timestamp": "2026-08-08 23:46:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-08 23:52:23.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
