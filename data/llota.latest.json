@@ -1,75 +1,57 @@
 [
   {
-    "id": 3346,
-    "callsign": "ER1SKI/QRP",
-    "frequency": "14080.0000",
-    "mode": "FT4",
-    "reference": "LLMD-0753",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T13:51:17.000Z",
-    "updated_at": "2026-08-08T13:51:17.000Z",
-    "reference_name": "Lacul Râșcani N4",
-    "country_name": "Moldova",
+    "id": 3348,
+    "callsign": "SP9SIR",
+    "frequency": "7157.0000",
+    "mode": "LSB",
+    "reference": "LLPL-0763",
+    "spotted_by_app": "POTACAT",
+    "created_at": "2026-08-08T14:25:40.000Z",
+    "updated_at": "2026-08-08T14:32:04.000Z",
+    "reference_name": "Jezioro Dołgie",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:51:17.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-08 14:25:40.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-08 14:26:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "59 in JO92to via POTACAT",
+        "timestamp": "2026-08-08 14:32:04.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3344,
+    "id": 3347,
     "callsign": "HB9ISN/P",
-    "frequency": "14074.0000",
+    "frequency": "28074.0000",
     "mode": "FT8",
     "reference": "LLCH-0001",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T13:37:57.000Z",
-    "updated_at": "2026-08-08T13:50:37.000Z",
+    "created_at": "2026-08-08T14:20:55.000Z",
+    "updated_at": "2026-08-08T14:23:55.000Z",
     "reference_name": "Lake Morat",
     "country_name": "Switzerland",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:37:57.000000",
+        "timestamp": "2026-08-08 14:20:55.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:37:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:38:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:43:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:46:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:50:27.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 13:50:37.000000",
+        "timestamp": "2026-08-08 14:23:55.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
