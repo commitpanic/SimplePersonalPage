@@ -7,7 +7,7 @@
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:21:12.000Z",
+    "updated_at": "2026-08-08T15:49:51.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -32,6 +32,30 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-08 15:21:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:34:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 15:47:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:49:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:49:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -45,7 +69,7 @@
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:21:12.000Z",
+    "updated_at": "2026-08-08T15:49:51.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -70,6 +94,30 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-08 15:21:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:34:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 15:47:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:49:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:49:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -83,7 +131,7 @@
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:21:12.000Z",
+    "updated_at": "2026-08-08T15:49:51.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -110,92 +158,28 @@
         "timestamp": "2026-08-08 15:21:12.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3348,
-    "callsign": "SP9SIR",
-    "frequency": "21344.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0763",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T14:25:40.000Z",
-    "updated_at": "2026-08-08T15:21:09.000Z",
-    "reference_name": "Jezioro Dołgie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-08 14:25:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-08 14:26:03.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "59 in JO92to via POTACAT",
-        "timestamp": "2026-08-08 14:32:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY",
-        "timestamp": "2026-08-08 14:40:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY",
-        "timestamp": "2026-08-08 15:00:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY",
-        "timestamp": "2026-08-08 15:21:09.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3347,
-    "callsign": "HB9ISN/P",
-    "frequency": "7145.0000",
-    "mode": "SSB",
-    "reference": "LLCH-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-08T14:20:55.000Z",
-    "updated_at": "2026-08-08T15:05:22.000Z",
-    "reference_name": "Lake Morat",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 14:20:55.000000",
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:34:18.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 14:23:55.000000",
+        "timestamp": "2026-08-08 15:47:37.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-08 14:47:08.000000",
+        "comment": "Last calls on 40",
+        "timestamp": "2026-08-08 15:49:05.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QRT",
-        "timestamp": "2026-08-08 15:05:22.000000",
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:49:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
