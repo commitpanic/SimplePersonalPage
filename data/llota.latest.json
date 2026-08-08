@@ -2,12 +2,12 @@
   {
     "id": 3349,
     "callsign": "EG1NSN",
-    "frequency": "7092.0000",
+    "frequency": "14260.0000",
     "mode": "SSB",
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:49:51.000Z",
+    "updated_at": "2026-08-08T16:04:26.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -56,6 +56,36 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-08 15:49:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 15:53:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:53:39.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:00:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:03:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-08 16:04:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -64,12 +94,12 @@
   {
     "id": 3350,
     "callsign": "EC2AFE",
-    "frequency": "7092.0000",
+    "frequency": "14260.0000",
     "mode": "SSB",
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:49:51.000Z",
+    "updated_at": "2026-08-08T16:04:26.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -118,6 +148,36 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-08 15:49:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 15:53:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:53:39.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:00:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:03:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-08 16:04:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -126,12 +186,12 @@
   {
     "id": 3351,
     "callsign": "EA1FOX",
-    "frequency": "7092.0000",
+    "frequency": "14260.0000",
     "mode": "SSB",
     "reference": "LLES-0076",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-08T15:11:12.000Z",
-    "updated_at": "2026-08-08T15:49:51.000Z",
+    "updated_at": "2026-08-08T16:04:26.000Z",
     "reference_name": "Embalse de Chandrexa de Queixa",
     "country_name": "España",
     "history": [
@@ -180,6 +240,36 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-08 15:49:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-08 15:53:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-08 15:53:39.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:00:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-08 16:03:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT. Tnx to all",
+        "timestamp": "2026-08-08 16:04:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
