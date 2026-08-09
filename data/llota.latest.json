@@ -7,7 +7,7 @@
     "reference": "LLES-0101",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-09T11:39:34.000Z",
-    "updated_at": "2026-08-09T11:39:46.000Z",
+    "updated_at": "2026-08-09T12:02:00.000Z",
     "reference_name": "Embalse de O Bao",
     "country_name": "España",
     "history": [
@@ -20,6 +20,12 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-09 11:39:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-09 12:02:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -33,7 +39,7 @@
     "reference": "LLES-0101",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-09T11:39:34.000Z",
-    "updated_at": "2026-08-09T11:39:46.000Z",
+    "updated_at": "2026-08-09T12:02:00.000Z",
     "reference_name": "Embalse de O Bao",
     "country_name": "España",
     "history": [
@@ -46,6 +52,12 @@
       {
         "comment": "QRV (3 ops)",
         "timestamp": "2026-08-09 11:39:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Last calls",
+        "timestamp": "2026-08-09 12:02:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -59,7 +71,7 @@
     "reference": "LLES-0101",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-09T11:39:34.000Z",
-    "updated_at": "2026-08-09T11:39:46.000Z",
+    "updated_at": "2026-08-09T12:02:00.000Z",
     "reference_name": "Embalse de O Bao",
     "country_name": "España",
     "history": [
@@ -74,26 +86,12 @@
         "timestamp": "2026-08-09 11:39:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3394,
-    "callsign": "TA1EDG",
-    "frequency": "18.1000",
-    "mode": "FT8",
-    "reference": "LLTR-0152",
-    "spotted_by_app": null,
-    "created_at": "2026-08-09T11:30:53.000Z",
-    "updated_at": "2026-08-09T11:30:53.000Z",
-    "reference_name": "Kayınlı Lake N1",
-    "country_name": "Turkey",
-    "history": [
+      },
       {
-        "comment": "Qrv",
-        "timestamp": "2026-08-09 11:30:53.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
+        "comment": "Last calls",
+        "timestamp": "2026-08-09 12:02:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
