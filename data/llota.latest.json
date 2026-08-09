@@ -84,45 +84,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3410,
-    "callsign": "CD5BMB",
-    "frequency": "7.0970",
-    "mode": "SSB",
-    "reference": "LLCL-0181",
-    "spotted_by_app": null,
-    "created_at": "2026-08-09T20:31:07.000Z",
-    "updated_at": "2026-08-09T20:31:07.000Z",
-    "reference_name": "Laguna Chica",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "73",
-        "timestamp": "2026-08-09 20:31:07.000000",
-        "spotter_callsign": "CA4FTK",
-        "spotter_display_name": "Oscar López"
-      }
-    ]
-  },
-  {
-    "id": 3409,
-    "callsign": "LU8SAM/S",
-    "frequency": "7128.0000",
-    "mode": "SSB",
-    "reference": "LLAR-0092",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-09T20:31:03.000Z",
-    "updated_at": "2026-08-09T20:31:03.000Z",
-    "reference_name": "Dique Los Sauces",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-09 20:31:03.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
   }
 ]
