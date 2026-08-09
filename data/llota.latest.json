@@ -7,7 +7,7 @@
     "reference": "LLUS-0014",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-09T19:21:32.000Z",
-    "updated_at": "2026-08-09T20:33:01.000Z",
+    "updated_at": "2026-08-09T20:46:40.000Z",
     "reference_name": "Lake Champlain",
     "country_name": "Estados Unidos",
     "history": [
@@ -68,6 +68,18 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-09 20:33:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-09 20:38:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-09 20:46:40.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
