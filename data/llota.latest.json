@@ -2,12 +2,12 @@
   {
     "id": 3404,
     "callsign": "SP4VIT",
-    "frequency": "7148.0000",
+    "frequency": "14253.0000",
     "mode": "SSB",
     "reference": "LLPL-0754",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-09T16:10:57.000Z",
-    "updated_at": "2026-08-09T16:10:57.000Z",
+    "updated_at": "2026-08-09T16:27:21.000Z",
     "reference_name": "Jezioro Zimnochy",
     "country_name": "Poland",
     "history": [
@@ -16,38 +16,44 @@
         "timestamp": "2026-08-09 16:10:57.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: LLPL-0754 LLPL-0756",
+        "timestamp": "2026-08-09 16:20:24.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
+      },
+      {
+        "comment": "2-fer: LLPL-0754 LLPL-0756",
+        "timestamp": "2026-08-09 16:21:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: LLPL-0754 LLPL-0756",
+        "timestamp": "2026-08-09 16:27:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3403,
+    "id": 3405,
     "callsign": "CD5BMB",
-    "frequency": "7.1000",
+    "frequency": "7100.0000",
     "mode": "SSB",
     "reference": "LLCL-0186",
     "spotted_by_app": null,
-    "created_at": "2026-08-09T15:14:35.000Z",
-    "updated_at": "2026-08-09T15:44:32.000Z",
+    "created_at": "2026-08-09T16:18:01.000Z",
+    "updated_at": "2026-08-09T16:18:01.000Z",
     "reference_name": "Laguna Lo Galindo",
     "country_name": "Chile",
     "history": [
       {
-        "comment": "73",
-        "timestamp": "2026-08-09 15:14:35.000000",
-        "spotter_callsign": "CA4FTK",
-        "spotter_display_name": "Oscar López"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-09 15:24:41.000000",
-        "spotter_callsign": "CA4FTK",
-        "spotter_display_name": "Oscar López"
-      },
-      {
-        "comment": "llamando",
-        "timestamp": "2026-08-09 15:44:32.000000",
-        "spotter_callsign": "CA4FTK",
-        "spotter_display_name": "Oscar López"
+        "comment": "CQ CQ ! 73",
+        "timestamp": "2026-08-09 16:18:01.000000",
+        "spotter_callsign": "CA3LVK",
+        "spotter_display_name": "Nelson Lopez V."
       }
     ]
   }
