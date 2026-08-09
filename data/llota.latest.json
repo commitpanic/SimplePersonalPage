@@ -1,21 +1,79 @@
 [
   {
-    "id": 3388,
-    "callsign": "TA1EDG",
-    "frequency": "18.1000",
-    "mode": "FT8",
-    "reference": "LLTR-0156",
-    "spotted_by_app": null,
-    "created_at": "2026-08-09T09:40:34.000Z",
-    "updated_at": "2026-08-09T09:40:34.000Z",
-    "reference_name": "Kayınlı Lake N5",
-    "country_name": "Turkey",
+    "id": 3389,
+    "callsign": "EG1NSN",
+    "frequency": "14245.0000",
+    "mode": "SSB",
+    "reference": "LLES-0440",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-09T10:00:09.000Z",
+    "updated_at": "2026-08-09T10:00:22.000Z",
+    "reference_name": "Laguna de O Caneiro",
+    "country_name": "España",
     "history": [
       {
-        "comment": "2fer",
-        "timestamp": "2026-08-09 09:40:34.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-09 10:00:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-09 10:00:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3390,
+    "callsign": "AC2AFE",
+    "frequency": "14245.0000",
+    "mode": "SSB",
+    "reference": "LLES-0440",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-09T10:00:09.000Z",
+    "updated_at": "2026-08-09T10:00:22.000Z",
+    "reference_name": "Laguna de O Caneiro",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-09 10:00:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-09 10:00:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3391,
+    "callsign": "EA1FOX",
+    "frequency": "14245.0000",
+    "mode": "SSB",
+    "reference": "LLES-0440",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-09T10:00:09.000Z",
+    "updated_at": "2026-08-09T10:00:22.000Z",
+    "reference_name": "Laguna de O Caneiro",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-09 10:00:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV (3 ops)",
+        "timestamp": "2026-08-09 10:00:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
