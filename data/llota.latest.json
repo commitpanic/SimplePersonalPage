@@ -1,5 +1,25 @@
 [
   {
+    "id": 3404,
+    "callsign": "SP4VIT",
+    "frequency": "7148.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0754",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-09T16:10:57.000Z",
+    "updated_at": "2026-08-09T16:10:57.000Z",
+    "reference_name": "Jezioro Zimnochy",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "2-fer: LLPL-0754 LLPL-0756",
+        "timestamp": "2026-08-09 16:10:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3403,
     "callsign": "CD5BMB",
     "frequency": "7.1000",
