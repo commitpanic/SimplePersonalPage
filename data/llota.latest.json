@@ -1,19 +1,19 @@
 [
   {
-    "id": 3414,
+    "id": 3415,
     "callsign": "YO3DYL/P",
     "frequency": "14295.0000",
     "mode": "SSB",
     "reference": "LLRO-0207",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-10T04:56:16.000Z",
-    "updated_at": "2026-08-10T04:56:16.000Z",
+    "created_at": "2026-08-10T05:31:59.000Z",
+    "updated_at": "2026-08-10T05:31:59.000Z",
     "reference_name": "Acumularea Râmnicu Vâlcea ",
     "country_name": "Romania",
     "history": [
       {
-        "comment": "QRV 2op",
-        "timestamp": "2026-08-10 04:56:16.000000",
+        "comment": "Qrt ",
+        "timestamp": "2026-08-10 05:31:59.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -27,13 +27,19 @@
     "reference": "LLRO-0207",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-10T04:56:07.000Z",
-    "updated_at": "2026-08-10T04:56:07.000Z",
+    "updated_at": "2026-08-10T05:20:26.000Z",
     "reference_name": "Acumularea Râmnicu Vâlcea ",
     "country_name": "Romania",
     "history": [
       {
         "comment": "QRV 2 operators LLOTA and POTA ",
         "timestamp": "2026-08-10 04:56:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrt",
+        "timestamp": "2026-08-10 05:20:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
