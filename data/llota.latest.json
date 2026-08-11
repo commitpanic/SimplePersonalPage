@@ -1,71 +1,41 @@
 [
   {
-    "id": 3429,
-    "callsign": "SP2MJP/P",
-    "frequency": "7118.0000",
+    "id": 3431,
+    "callsign": "EA2DT/P",
+    "frequency": "7177.0000",
     "mode": "SSB",
-    "reference": "LLPL-0530",
+    "reference": "LLES-0191",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-11T17:45:31.000Z",
-    "updated_at": "2026-08-11T17:45:31.000Z",
-    "reference_name": "Jezioro Łapińskie",
-    "country_name": "Poland",
+    "created_at": "2026-08-11T18:19:13.000Z",
+    "updated_at": "2026-08-11T18:19:13.000Z",
+    "reference_name": "Laguna de Mera",
+    "country_name": "España",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:45:31.000000",
+        "comment": "QRT",
+        "timestamp": "2026-08-11 18:19:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3428,
-    "callsign": "EA2DT/P",
-    "frequency": "7177.0000",
+    "id": 3430,
+    "callsign": "EA3RKM",
+    "frequency": "7.0670",
     "mode": "SSB",
-    "reference": "LLES-0191",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-11T16:53:11.000Z",
-    "updated_at": "2026-08-11T17:42:54.000Z",
-    "reference_name": "Laguna de Mera",
+    "reference": "LLES-0126",
+    "spotted_by_app": null,
+    "created_at": "2026-08-11T18:04:04.000Z",
+    "updated_at": "2026-08-11T18:04:04.000Z",
+    "reference_name": "Embalse de Peñarroya y Lagunas de Ruidera",
     "country_name": "España",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 16:53:11.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:03:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:17:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:19:39.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:32:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-11 17:42:54.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": "qrv",
+        "timestamp": "2026-08-11 18:04:04.000000",
+        "spotter_callsign": "EA4IFN",
+        "spotter_display_name": "Jesus DTT"
       }
     ]
   }
