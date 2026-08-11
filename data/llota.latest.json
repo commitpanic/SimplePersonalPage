@@ -1,13 +1,33 @@
 [
   {
+    "id": 3429,
+    "callsign": "SP2MJP/P",
+    "frequency": "7118.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0530",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-11T17:45:31.000Z",
+    "updated_at": "2026-08-11T17:45:31.000Z",
+    "reference_name": "Jezioro Łapińskie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 17:45:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3428,
     "callsign": "EA2DT/P",
-    "frequency": "18147.0000",
+    "frequency": "7177.0000",
     "mode": "SSB",
     "reference": "LLES-0191",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-11T16:53:11.000Z",
-    "updated_at": "2026-08-11T17:19:39.000Z",
+    "updated_at": "2026-08-11T17:42:54.000Z",
     "reference_name": "Laguna de Mera",
     "country_name": "España",
     "history": [
@@ -32,6 +52,18 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-11 17:19:39.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 17:32:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 17:42:54.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
