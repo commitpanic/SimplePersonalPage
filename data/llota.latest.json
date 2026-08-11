@@ -2,12 +2,12 @@
   {
     "id": 3420,
     "callsign": "W5USN",
-    "frequency": "14331.0000",
+    "frequency": "14.3310",
     "mode": "SSB",
     "reference": "LLUS-0014",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-10T23:49:57.000Z",
-    "updated_at": "2026-08-10T23:49:57.000Z",
+    "updated_at": "2026-08-11T00:22:51.000Z",
     "reference_name": "Lake Champlain",
     "country_name": "Estados Unidos",
     "history": [
@@ -16,6 +16,36 @@
         "timestamp": "2026-08-10 23:49:57.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 00:00:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 00:00:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 00:11:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-11 00:21:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "55 into SC",
+        "timestamp": "2026-08-11 00:22:51.000000",
+        "spotter_callsign": "W4GOG",
+        "spotter_display_name": "Joshua Gosnell"
       }
     ]
   },
@@ -27,13 +57,19 @@
     "reference": "LLUS-0811",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-10T23:45:13.000Z",
-    "updated_at": "2026-08-10T23:45:13.000Z",
+    "updated_at": "2026-08-11T00:05:41.000Z",
     "reference_name": "Lake Arrowhead",
     "country_name": "Estados Unidos",
     "history": [
       {
         "comment": "QRV",
         "timestamp": "2026-08-10 23:45:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-11 00:05:41.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
