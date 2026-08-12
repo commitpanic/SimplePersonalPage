@@ -2,12 +2,12 @@
   {
     "id": 3437,
     "callsign": "EA2DT/P",
-    "frequency": "14300.0000",
+    "frequency": "18135.0000",
     "mode": "SSB",
     "reference": "LLES-0191",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-12T10:29:07.000Z",
-    "updated_at": "2026-08-12T10:55:30.000Z",
+    "updated_at": "2026-08-12T11:08:40.000Z",
     "reference_name": "Laguna de Mera",
     "country_name": "España",
     "history": [
@@ -26,6 +26,18 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-12 10:55:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-12 11:06:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-12 11:08:40.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
