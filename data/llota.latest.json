@@ -1,21 +1,27 @@
 [
   {
-    "id": 3440,
+    "id": 3441,
     "callsign": "EA2DT/P",
-    "frequency": "21298.0000",
+    "frequency": "14.3050",
     "mode": "SSB",
     "reference": "LLES-0191",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-12T15:09:11.000Z",
-    "updated_at": "2026-08-12T15:09:11.000Z",
+    "created_at": "2026-08-12T15:53:23.000Z",
+    "updated_at": "2026-08-12T15:56:44.000Z",
     "reference_name": "Laguna de Mera",
     "country_name": "España",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-12 15:09:11.000000",
+        "timestamp": "2026-08-12 15:53:23.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-12 15:56:44.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
       }
     ]
   }
