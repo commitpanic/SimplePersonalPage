@@ -1,49 +1,31 @@
 [
   {
-    "id": 3458,
-    "callsign": "SP/YO3BEE",
+    "id": 3459,
+    "callsign": "SP8QC/P",
     "frequency": "7161.0000",
     "mode": "SSB",
     "reference": "LLPL-0351",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-14T15:14:42.000Z",
-    "updated_at": "2026-08-14T15:43:10.000Z",
+    "created_at": "2026-08-14T15:21:59.000Z",
+    "updated_at": "2026-08-14T16:00:46.000Z",
     "reference_name": "Zbiornik Oczko",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "QRV 3 operators ",
-        "timestamp": "2026-08-14 15:14:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-14 15:14:53.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-14 15:21:59.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": null,
-        "timestamp": "2026-08-14 15:32:48.000000",
+        "timestamp": "2026-08-14 15:32:42.000000",
         "spotter_callsign": "EA2CPG",
         "spotter_display_name": "Pedro Chico"
       },
       {
-        "comment": "QRV 3 operators ",
-        "timestamp": "2026-08-14 15:41:34.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 operators ",
-        "timestamp": "2026-08-14 15:43:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-14 15:43:10.000000",
+        "comment": "QRT",
+        "timestamp": "2026-08-14 16:00:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -57,7 +39,7 @@
     "reference": "LLPL-0351",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-14T15:14:38.000Z",
-    "updated_at": "2026-08-14T15:43:05.000Z",
+    "updated_at": "2026-08-14T15:59:22.000Z",
     "reference_name": "Zbiornik Oczko",
     "country_name": "Poland",
     "history": [
@@ -84,32 +66,12 @@
         "timestamp": "2026-08-14 15:43:05.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3459,
-    "callsign": "SP8QC/P",
-    "frequency": "14.3020",
-    "mode": "SSB",
-    "reference": "LLPL-0351",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-14T15:21:59.000Z",
-    "updated_at": "2026-08-14T15:32:42.000Z",
-    "reference_name": "Zbiornik Oczko",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-14 15:21:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-14 15:32:42.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
+        "comment": "QRT ",
+        "timestamp": "2026-08-14 15:59:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
