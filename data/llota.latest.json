@@ -2,12 +2,12 @@
   {
     "id": 3456,
     "callsign": "I/F4LBZ/P",
-    "frequency": "7160.0000",
+    "frequency": "7168.0000",
     "mode": "SSB",
     "reference": "LLIT-0002",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-14T13:52:49.000Z",
-    "updated_at": "2026-08-14T14:22:24.000Z",
+    "updated_at": "2026-08-14T14:36:51.000Z",
     "reference_name": "Lago di Braies",
     "country_name": "Italy",
     "history": [
@@ -28,42 +28,10 @@
         "timestamp": "2026-08-14 14:22:24.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3455,
-    "callsign": "SP/YO3DYL",
-    "frequency": "21320.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0593",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-14T13:36:38.000Z",
-    "updated_at": "2026-08-14T14:10:34.000Z",
-    "reference_name": "Zalew Janowski",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV 3 ops",
-        "timestamp": "2026-08-14 13:36:38.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "QRV 3ops",
-        "timestamp": "2026-08-14 13:55:41.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 ops",
-        "timestamp": "2026-08-14 14:05:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT ",
-        "timestamp": "2026-08-14 14:10:34.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-14 14:36:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
