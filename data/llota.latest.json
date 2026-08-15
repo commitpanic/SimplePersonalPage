@@ -18,25 +18,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3472,
-    "callsign": "YO3RAM",
-    "frequency": "14305.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-15T10:04:21.000Z",
-    "updated_at": "2026-08-15T10:04:21.000Z",
-    "reference_name": "Lacul Morii",
-    "country_name": "Romania",
-    "history": [
-      {
-        "comment": "QRT, THX to all, 73",
-        "timestamp": "2026-08-15 10:04:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
   }
 ]
