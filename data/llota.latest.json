@@ -1,13 +1,87 @@
 [
   {
+    "id": 3475,
+    "callsign": "EI3LH",
+    "frequency": "144050.0000",
+    "mode": "CW",
+    "reference": "LLIE-10182",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-15T12:28:28.000Z",
+    "updated_at": "2026-08-15T12:33:54.000Z",
+    "reference_name": "Rogerstown Estuary",
+    "country_name": "Irlanda",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:28:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:28:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:28:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:28:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:28:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:29:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:29:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:30:02.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:30:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-15 12:33:54.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3474,
     "callsign": "SP9SIR",
-    "frequency": "7167.0000",
+    "frequency": "14280.0000",
     "mode": "SSB",
     "reference": "LLPL-0760",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-15T11:38:26.000Z",
-    "updated_at": "2026-08-15T11:56:41.000Z",
+    "updated_at": "2026-08-15T12:30:42.000Z",
     "reference_name": "Jezioro Motława Wielka",
     "country_name": "Poland",
     "history": [
@@ -26,6 +100,18 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-15 11:56:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-15 12:24:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-15 12:30:42.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
