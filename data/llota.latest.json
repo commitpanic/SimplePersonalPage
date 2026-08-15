@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 3479,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0114",
+    "spotted_by_app": null,
+    "created_at": "2026-08-15T14:27:45.000Z",
+    "updated_at": "2026-08-15T14:27:45.000Z",
+    "reference_name": "Purenli Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-15 14:27:45.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "ERDAG OLCER"
+      }
+    ]
+  },
+  {
+    "id": 3478,
+    "callsign": "TA1EDG",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0114",
+    "spotted_by_app": null,
+    "created_at": "2026-08-15T14:27:44.000Z",
+    "updated_at": "2026-08-15T14:27:44.000Z",
+    "reference_name": "Purenli Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-15 14:27:44.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "ERDAG OLCER"
+      }
+    ]
+  }
+]
