@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": 3483,
+    "callsign": "SP/YO3BEE",
+    "frequency": "14296.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0464",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-16T07:08:42.000Z",
+    "updated_at": "2026-08-16T07:09:05.000Z",
+    "reference_name": "Jezioro Brodzkie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV 2 operators & LLOTA",
+        "timestamp": "2026-08-16 07:08:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-16 07:08:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 2 operators & LLOTA ",
+        "timestamp": "2026-08-16 07:09:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3482,
+    "callsign": "SQ9SZ",
+    "frequency": "14.0740",
+    "mode": "SSB",
+    "reference": "LLPL-0518",
+    "spotted_by_app": null,
+    "created_at": "2026-08-16T07:07:38.000Z",
+    "updated_at": "2026-08-16T07:07:38.000Z",
+    "reference_name": "Jezioro Chechelskie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "FT4/FT8 QRP",
+        "timestamp": "2026-08-16 07:07:38.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      }
+    ]
+  }
+]
