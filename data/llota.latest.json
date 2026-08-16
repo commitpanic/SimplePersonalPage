@@ -1,65 +1,33 @@
 [
   {
-    "id": 3483,
-    "callsign": "SP/YO3BEE",
-    "frequency": "14296.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0464",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-16T07:08:42.000Z",
-    "updated_at": "2026-08-16T07:25:05.000Z",
-    "reference_name": "Jezioro Brodzkie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV 2 operators & LLOTA",
-        "timestamp": "2026-08-16 07:08:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-16 07:08:46.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 2 operators & LLOTA ",
-        "timestamp": "2026-08-16 07:09:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT ",
-        "timestamp": "2026-08-16 07:25:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3482,
+    "id": 3484,
     "callsign": "SQ9SZ",
-    "frequency": "7.0740",
+    "frequency": "147153.0000",
     "mode": "SSB",
     "reference": "LLPL-0518",
     "spotted_by_app": null,
-    "created_at": "2026-08-16T07:07:38.000Z",
-    "updated_at": "2026-08-16T07:22:50.000Z",
+    "created_at": "2026-08-16T07:54:22.000Z",
+    "updated_at": "2026-08-16T08:10:05.000Z",
     "reference_name": "Jezioro Chechelskie",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "FT4/FT8 QRP",
-        "timestamp": "2026-08-16 07:07:38.000000",
+        "comment": "",
+        "timestamp": "2026-08-16 07:54:22.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
       },
       {
         "comment": null,
-        "timestamp": "2026-08-16 07:22:50.000000",
-        "spotter_callsign": "SP9MIV",
-        "spotter_display_name": "Maciek"
+        "timestamp": "2026-08-16 08:02:40.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-16 08:10:05.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
       }
     ]
   }
