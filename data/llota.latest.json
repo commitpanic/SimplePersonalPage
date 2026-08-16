@@ -7,7 +7,7 @@
     "reference": "LLPL-0464",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-16T07:08:42.000Z",
-    "updated_at": "2026-08-16T07:09:05.000Z",
+    "updated_at": "2026-08-16T07:25:05.000Z",
     "reference_name": "Jezioro Brodzkie",
     "country_name": "Poland",
     "history": [
@@ -28,18 +28,24 @@
         "timestamp": "2026-08-16 07:09:05.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QRT ",
+        "timestamp": "2026-08-16 07:25:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3482,
     "callsign": "SQ9SZ",
-    "frequency": "14.0740",
+    "frequency": "7.0740",
     "mode": "SSB",
     "reference": "LLPL-0518",
     "spotted_by_app": null,
     "created_at": "2026-08-16T07:07:38.000Z",
-    "updated_at": "2026-08-16T07:07:38.000Z",
+    "updated_at": "2026-08-16T07:22:50.000Z",
     "reference_name": "Jezioro Chechelskie",
     "country_name": "Poland",
     "history": [
@@ -48,6 +54,12 @@
         "timestamp": "2026-08-16 07:07:38.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-16 07:22:50.000000",
+        "spotter_callsign": "SP9MIV",
+        "spotter_display_name": "Maciek"
       }
     ]
   }
