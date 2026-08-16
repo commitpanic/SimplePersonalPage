@@ -2,12 +2,12 @@
   {
     "id": 3485,
     "callsign": "EA7KHJ/P",
-    "frequency": "7180.0000",
+    "frequency": "7.1800",
     "mode": "SSB",
     "reference": "LLES-0341",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-16T10:02:40.000Z",
-    "updated_at": "2026-08-16T10:07:24.000Z",
+    "updated_at": "2026-08-16T10:33:53.000Z",
     "reference_name": "La Laguna de las Yeguas o de Dílar (Sierra Nevada)",
     "country_name": "España",
     "history": [
@@ -22,6 +22,12 @@
         "timestamp": "2026-08-16 10:07:24.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "CQ CQ",
+        "timestamp": "2026-08-16 10:33:53.000000",
+        "spotter_callsign": "EA1JW",
+        "spotter_display_name": "EA1JW Alberto"
       }
     ]
   }
