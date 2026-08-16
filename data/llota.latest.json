@@ -1,5 +1,25 @@
 [
   {
+    "id": 3487,
+    "callsign": "YT3SM",
+    "frequency": "14273.0000",
+    "mode": "SSB",
+    "reference": "LLRS-0026",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-16T13:43:49.000Z",
+    "updated_at": "2026-08-16T13:43:49.000Z",
+    "reference_name": "Rgotsko jezero",
+    "country_name": "Serbia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-16 13:43:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3486,
     "callsign": "K5CB",
     "frequency": "7219.0000",
