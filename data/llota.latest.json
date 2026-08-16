@@ -7,7 +7,7 @@
     "reference": "LLPL-0518",
     "spotted_by_app": null,
     "created_at": "2026-08-16T07:54:22.000Z",
-    "updated_at": "2026-08-16T08:25:21.000Z",
+    "updated_at": "2026-08-16T08:42:49.000Z",
     "reference_name": "Jezioro Chechelskie",
     "country_name": "Poland",
     "history": [
@@ -56,6 +56,12 @@
       {
         "comment": null,
         "timestamp": "2026-08-16 08:25:21.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-16 08:42:49.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
       }
