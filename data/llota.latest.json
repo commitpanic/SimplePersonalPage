@@ -2,18 +2,24 @@
   {
     "id": 3489,
     "callsign": "SP/YO3DYL",
-    "frequency": "7176.0000",
+    "frequency": "14300.0000",
     "mode": "SSB",
     "reference": "LLPL-0194",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-16T18:05:44.000Z",
-    "updated_at": "2026-08-16T18:05:44.000Z",
+    "updated_at": "2026-08-16T18:13:13.000Z",
     "reference_name": "Jezioro Kiełpińskie",
     "country_name": "Poland",
     "history": [
       {
         "comment": "QRV 2ops",
         "timestamp": "2026-08-16 18:05:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 2 ops",
+        "timestamp": "2026-08-16 18:13:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
