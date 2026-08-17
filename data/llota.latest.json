@@ -7,7 +7,7 @@
     "reference": "LLES-0156",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-17T18:14:58.000Z",
-    "updated_at": "2026-08-17T18:33:44.000Z",
+    "updated_at": "2026-08-17T18:44:34.000Z",
     "reference_name": "Balsa de Oteiza de La Solana",
     "country_name": "España",
     "history": [
@@ -20,6 +20,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-17 18:33:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-17 18:44:34.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
