@@ -2,12 +2,12 @@
   {
     "id": 3492,
     "callsign": "SP9SIR",
-    "frequency": "28444.0000",
+    "frequency": "14237.0000",
     "mode": "SSB",
     "reference": "LLPL-0053",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-17T11:49:55.000Z",
-    "updated_at": "2026-08-17T12:49:10.000Z",
+    "updated_at": "2026-08-17T13:05:19.000Z",
     "reference_name": "Jezioro Dargin",
     "country_name": "Poland",
     "history": [
@@ -50,6 +50,12 @@
       {
         "comment": "QSY",
         "timestamp": "2026-08-17 12:49:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-17 13:05:19.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
