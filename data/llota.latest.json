@@ -2,12 +2,12 @@
   {
     "id": 3494,
     "callsign": "SP9SIR",
-    "frequency": "7173.0000",
+    "frequency": "14.2440",
     "mode": "SSB",
     "reference": "LLPL-0053",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-17T15:14:32.000Z",
-    "updated_at": "2026-08-17T15:14:32.000Z",
+    "updated_at": "2026-08-17T15:48:22.000Z",
     "reference_name": "Jezioro Dargin",
     "country_name": "Poland",
     "history": [
@@ -16,6 +16,50 @@
         "timestamp": "2026-08-17 15:14:32.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-17 15:35:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "20MTS?",
+        "timestamp": "2026-08-17 15:38:10.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      },
+      {
+        "comment": "QSY",
+        "timestamp": "2026-08-17 15:46:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "5/9 TNX",
+        "timestamp": "2026-08-17 15:48:22.000000",
+        "spotter_callsign": "EA2EZ",
+        "spotter_display_name": "Vicente martin"
+      }
+    ]
+  },
+  {
+    "id": 3495,
+    "callsign": "LU2AOG/D",
+    "frequency": "7136.0000",
+    "mode": "SSB",
+    "reference": "LLAR-0114",
+    "spotted_by_app": null,
+    "created_at": "2026-08-17T15:43:18.000Z",
+    "updated_at": "2026-08-17T15:43:18.000Z",
+    "reference_name": "Laguna de Lobos (Buenos Aires)",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-17 15:43:18.000000",
+        "spotter_callsign": "LU2AOG",
+        "spotter_display_name": "Ariel Gentile"
       }
     ]
   }
