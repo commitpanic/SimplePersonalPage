@@ -2,12 +2,12 @@
   {
     "id": 3496,
     "callsign": "LU2AOG/D",
-    "frequency": "7136.0000",
+    "frequency": "7.1360",
     "mode": "SSB",
     "reference": "LLAR-0114",
     "spotted_by_app": null,
     "created_at": "2026-08-17T16:35:48.000Z",
-    "updated_at": "2026-08-17T16:35:48.000Z",
+    "updated_at": "2026-08-17T17:05:32.000Z",
     "reference_name": "Laguna de Lobos (Buenos Aires)",
     "country_name": "Argentina",
     "history": [
@@ -16,6 +16,12 @@
         "timestamp": "2026-08-17 16:35:48.000000",
         "spotter_callsign": "LU2DPW",
         "spotter_display_name": "Juan Carlos Amado"
+      },
+      {
+        "comment": "LLAR-0114 Laguna de Lobos, Muchas Gracias Ariel, 59 por Merlo GF05pi",
+        "timestamp": "2026-08-17 17:05:32.000000",
+        "spotter_callsign": "LU3EAR",
+        "spotter_display_name": "LU3EAR"
       }
     ]
   }
