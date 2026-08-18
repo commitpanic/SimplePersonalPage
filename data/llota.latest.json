@@ -2,12 +2,12 @@
   {
     "id": 3500,
     "callsign": "F4ILK/P",
-    "frequency": "7090.0000",
+    "frequency": "7082.0000",
     "mode": "SSB",
     "reference": "LLFR-0089",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-18T06:44:03.000Z",
-    "updated_at": "2026-08-18T07:21:01.000Z",
+    "updated_at": "2026-08-18T07:37:49.000Z",
     "reference_name": "Étang de la brémandière",
     "country_name": "Francia",
     "history": [
@@ -32,6 +32,24 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-18 07:21:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-18 07:31:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-18 07:36:50.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-18 07:37:49.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
