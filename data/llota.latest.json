@@ -1,21 +1,21 @@
 [
   {
-    "id": 3505,
-    "callsign": "TA1EDG",
-    "frequency": "18100.0000",
-    "mode": "FT8",
-    "reference": "LLTR-0171",
-    "spotted_by_app": null,
-    "created_at": "2026-08-18T14:35:30.000Z",
-    "updated_at": "2026-08-18T14:35:30.000Z",
-    "reference_name": "Halk Lake",
-    "country_name": "Turkey",
+    "id": 3506,
+    "callsign": "F4ILK/P",
+    "frequency": "7082.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0089",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-18T15:01:33.000Z",
+    "updated_at": "2026-08-18T15:01:33.000Z",
+    "reference_name": "Étang de la brémandière",
+    "country_name": "Francia",
     "history": [
       {
-        "comment": "Qrv",
-        "timestamp": "2026-08-18 14:35:30.000000",
-        "spotter_callsign": "TA1EDG",
-        "spotter_display_name": "ERDAG OLCER"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-18 15:01:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
