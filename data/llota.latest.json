@@ -7,7 +7,7 @@
     "reference": "LLES-0193",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-19T18:45:33.000Z",
-    "updated_at": "2026-08-19T19:06:31.000Z",
+    "updated_at": "2026-08-19T19:27:38.000Z",
     "reference_name": "Embalse de Santillana",
     "country_name": "España",
     "history": [
@@ -26,6 +26,18 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-19 19:06:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-19 19:27:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-19 19:27:38.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
