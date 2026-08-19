@@ -1,5 +1,25 @@
 [
   {
+    "id": 3512,
+    "callsign": "TA1EDG",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0172",
+    "spotted_by_app": null,
+    "created_at": "2026-08-19T11:59:12.000Z",
+    "updated_at": "2026-08-19T11:59:12.000Z",
+    "reference_name": "Kirkmerdiven Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-19 11:59:12.000000",
+        "spotter_callsign": "TA1EDG",
+        "spotter_display_name": "ERDAG OLCER"
+      }
+    ]
+  },
+  {
     "id": 3511,
     "callsign": "SP9SIR",
     "frequency": "7153.0000",
@@ -14,56 +34,6 @@
       {
         "comment": "QSY",
         "timestamp": "2026-08-19 11:36:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3510,
-    "callsign": "G4NAQ/P",
-    "frequency": "14253.0000",
-    "mode": "SSB",
-    "reference": "LLGB-0023",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-19T10:50:51.000Z",
-    "updated_at": "2026-08-19T11:22:46.000Z",
-    "reference_name": "Meldon Reservoir",
-    "country_name": "England",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-19 10:50:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-19 10:57:43.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-19 11:06:09.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-19 11:06:24.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-19 11:16:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-19 11:22:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
