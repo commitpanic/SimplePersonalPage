@@ -7,7 +7,7 @@
     "reference": "LLGB-0023",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-19T10:50:51.000Z",
-    "updated_at": "2026-08-19T11:06:24.000Z",
+    "updated_at": "2026-08-19T11:22:46.000Z",
     "reference_name": "Meldon Reservoir",
     "country_name": "England",
     "history": [
@@ -34,30 +34,16 @@
         "timestamp": "2026-08-19 11:06:24.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3509,
-    "callsign": "SP9SIR",
-    "frequency": "18142.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0068",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-19T10:32:26.000Z",
-    "updated_at": "2026-08-19T10:48:26.000Z",
-    "reference_name": "Jezioro Nidzkie",
-    "country_name": "Poland",
-    "history": [
+      },
       {
-        "comment": "QSY",
-        "timestamp": "2026-08-19 10:32:26.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-19 11:16:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QSY",
-        "timestamp": "2026-08-19 10:48:26.000000",
+        "comment": "QRT",
+        "timestamp": "2026-08-19 11:22:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
