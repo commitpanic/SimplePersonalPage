@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3530,
+    "callsign": "E75YZ",
+    "frequency": "14.2340",
+    "mode": "FT8",
+    "reference": "LLBA-0026",
+    "spotted_by_app": null,
+    "created_at": "2026-08-20T14:21:40.000Z",
+    "updated_at": "2026-08-20T14:21:40.000Z",
+    "reference_name": "Gradsko umjetno jezero (City Lake) Banja Luka",
+    "country_name": "Bosnia",
+    "history": [
+      {
+        "comment": "test spot",
+        "timestamp": "2026-08-20 14:21:40.000000",
+        "spotter_callsign": "E75YZ",
+        "spotter_display_name": "Daniel Menićanin"
+      }
+    ]
+  }
+]
