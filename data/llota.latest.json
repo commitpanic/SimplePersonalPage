@@ -1,33 +1,13 @@
 [
   {
-    "id": 3534,
-    "callsign": "E75YZ",
-    "frequency": "14.2360",
-    "mode": "FT8",
-    "reference": "LLBA-0026",
-    "spotted_by_app": null,
-    "created_at": "2026-08-20T15:51:09.000Z",
-    "updated_at": "2026-08-20T15:51:09.000Z",
-    "reference_name": "Gradsko umjetno jezero (City Lake) Banja Luka",
-    "country_name": "Bosnia",
-    "history": [
-      {
-        "comment": "test spot",
-        "timestamp": "2026-08-20 15:51:09.000000",
-        "spotter_callsign": "E75YZ",
-        "spotter_display_name": "Daniel Menićanin"
-      }
-    ]
-  },
-  {
     "id": 3533,
     "callsign": "MM7JNT",
-    "frequency": "14244.0000",
+    "frequency": "14250.0000",
     "mode": "SSB",
     "reference": "LLGB-0403",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-20T15:34:53.000Z",
-    "updated_at": "2026-08-20T15:47:52.000Z",
+    "updated_at": "2026-08-20T16:06:11.000Z",
     "reference_name": "Loch Minnemoer",
     "country_name": "Scotland",
     "history": [
@@ -48,6 +28,84 @@
         "timestamp": "2026-08-20 15:47:52.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-20 15:55:16.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-20 15:59:08.000000",
+        "spotter_callsign": "VE9CF",
+        "spotter_display_name": "Stuart Crawford"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-20 16:06:11.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3536,
+    "callsign": "MM7JNT",
+    "frequency": "14244.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0403",
+    "spotted_by_app": null,
+    "created_at": "2026-08-20T16:00:20.000Z",
+    "updated_at": "2026-08-20T16:00:20.000Z",
+    "reference_name": "Loch Minnemoer",
+    "country_name": "Scotland",
+    "history": [
+      {
+        "comment": "[PW] LLGB-0403",
+        "timestamp": "2026-08-20 16:00:20.000000",
+        "spotter_callsign": "VE9CF",
+        "spotter_display_name": "Stuart Crawford"
+      }
+    ]
+  },
+  {
+    "id": 3535,
+    "callsign": "MM7JNT",
+    "frequency": "14244.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0403",
+    "spotted_by_app": null,
+    "created_at": "2026-08-20T16:00:08.000Z",
+    "updated_at": "2026-08-20T16:00:08.000Z",
+    "reference_name": "Loch Minnemoer",
+    "country_name": "Scotland",
+    "history": [
+      {
+        "comment": "67!!!",
+        "timestamp": "2026-08-20 16:00:08.000000",
+        "spotter_callsign": "VE9CF",
+        "spotter_display_name": "Stuart Crawford"
+      }
+    ]
+  },
+  {
+    "id": 3534,
+    "callsign": "E75YZ",
+    "frequency": "14.2360",
+    "mode": "FT8",
+    "reference": "LLBA-0026",
+    "spotted_by_app": null,
+    "created_at": "2026-08-20T15:51:09.000Z",
+    "updated_at": "2026-08-20T15:51:09.000Z",
+    "reference_name": "Gradsko umjetno jezero (City Lake) Banja Luka",
+    "country_name": "Bosnia",
+    "history": [
+      {
+        "comment": "test spot",
+        "timestamp": "2026-08-20 15:51:09.000000",
+        "spotter_callsign": "E75YZ",
+        "spotter_display_name": "Daniel Menićanin"
       }
     ]
   }
