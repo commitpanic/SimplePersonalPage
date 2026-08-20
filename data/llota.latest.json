@@ -1,21 +1,21 @@
 [
   {
-    "id": 3525,
-    "callsign": "TA1EDG",
-    "frequency": "18100.0000",
-    "mode": "FT8",
-    "reference": "LLTR-0180",
+    "id": 3526,
+    "callsign": "SQ9SZ",
+    "frequency": "14.0740",
+    "mode": "SSB",
+    "reference": "LLPL-0218",
     "spotted_by_app": null,
-    "created_at": "2026-08-20T11:14:43.000Z",
-    "updated_at": "2026-08-20T11:14:43.000Z",
-    "reference_name": "Topuzlu Reservoir",
-    "country_name": "Turkey",
+    "created_at": "2026-08-20T11:57:15.000Z",
+    "updated_at": "2026-08-20T11:57:15.000Z",
+    "reference_name": "Jezioro Porajskie",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "Qrv",
-        "timestamp": "2026-08-20 11:14:43.000000",
-        "spotter_callsign": "TA1EDG",
-        "spotter_display_name": "ERDAG OLCER"
+        "comment": "FT4/FT8 QRP",
+        "timestamp": "2026-08-20 11:57:15.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
       }
     ]
   }
