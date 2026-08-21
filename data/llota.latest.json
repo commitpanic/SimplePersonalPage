@@ -7,7 +7,7 @@
     "reference": "LLPL-0777",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-21T07:02:14.000Z",
-    "updated_at": "2026-08-21T07:30:57.000Z",
+    "updated_at": "2026-08-21T08:06:42.000Z",
     "reference_name": "Jezioro Krzycko Wielkie",
     "country_name": "Poland",
     "history": [
@@ -26,6 +26,18 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-21 07:30:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-21 07:59:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Thx qrt",
+        "timestamp": "2026-08-21 08:06:42.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
