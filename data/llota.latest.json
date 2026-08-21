@@ -7,7 +7,7 @@
     "reference": "LLPL-0777",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-21T07:02:14.000Z",
-    "updated_at": "2026-08-21T07:02:14.000Z",
+    "updated_at": "2026-08-21T07:30:57.000Z",
     "reference_name": "Jezioro Krzycko Wielkie",
     "country_name": "Poland",
     "history": [
@@ -16,26 +16,18 @@
         "timestamp": "2026-08-21 07:02:14.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3539,
-    "callsign": "SQ9SZ",
-    "frequency": "7.0740",
-    "mode": "SSB",
-    "reference": "LLPL-0654",
-    "spotted_by_app": null,
-    "created_at": "2026-08-21T07:00:28.000Z",
-    "updated_at": "2026-08-21T07:00:28.000Z",
-    "reference_name": "Jezioro Blachownia",
-    "country_name": "Poland",
-    "history": [
+      },
       {
-        "comment": "FT4/FT8 QRP",
-        "timestamp": "2026-08-21 07:00:28.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-21 07:17:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-21 07:30:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
