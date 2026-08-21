@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 3538,
+    "callsign": "SP3PSL",
+    "frequency": "7.0820",
+    "mode": "SSB",
+    "reference": "LLPL-0777",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-21T05:39:36.000Z",
+    "updated_at": "2026-08-21T05:42:25.000Z",
+    "reference_name": "Jezioro Krzycko Wielkie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-21 05:39:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-21 05:42:25.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tom Wo"
+      }
+    ]
+  }
+]
