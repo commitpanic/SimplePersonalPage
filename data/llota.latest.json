@@ -1,43 +1,19 @@
 [
   {
-    "id": 3540,
-    "callsign": "SP3PSL",
-    "frequency": "7082.0000",
+    "id": 3541,
+    "callsign": "SP9SIR",
+    "frequency": "7173.0000",
     "mode": "SSB",
-    "reference": "LLPL-0777",
+    "reference": "LLPL-0701",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-21T07:02:14.000Z",
-    "updated_at": "2026-08-21T08:06:42.000Z",
-    "reference_name": "Jezioro Krzycko Wielkie",
+    "created_at": "2026-08-21T09:15:57.000Z",
+    "updated_at": "2026-08-21T09:15:57.000Z",
+    "reference_name": "Jezioro Siemianowickie",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-21 07:02:14.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-21 07:17:32.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-21 07:30:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-21 07:59:26.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Thx qrt",
-        "timestamp": "2026-08-21 08:06:42.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-21 09:15:57.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
