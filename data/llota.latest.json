@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3543,
+    "callsign": "EA2WX/P",
+    "frequency": "14053.0000",
+    "mode": "CW",
+    "reference": "LLES-0020",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-21T15:26:08.000Z",
+    "updated_at": "2026-08-21T15:26:08.000Z",
+    "reference_name": "Lagunas de Villafáfila",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-21 15:26:08.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
