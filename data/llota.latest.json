@@ -1,13 +1,33 @@
 [
   {
+    "id": 3552,
+    "callsign": "HB9GUR",
+    "frequency": "7120.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0303",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-22T11:44:59.000Z",
+    "updated_at": "2026-08-22T11:44:59.000Z",
+    "reference_name": "Marais de la Touvière",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 11:44:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3551,
     "callsign": "EI3LH",
-    "frequency": "145500.0000",
-    "mode": "FM",
+    "frequency": "14066.0000",
+    "mode": "CW",
     "reference": "LLIE-10182",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-22T11:34:06.000Z",
-    "updated_at": "2026-08-22T11:39:14.000Z",
+    "updated_at": "2026-08-22T11:42:33.000Z",
     "reference_name": "Rogerstown Estuary",
     "country_name": "Irlanda",
     "history": [
@@ -26,6 +46,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-22 11:39:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 11:42:33.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
