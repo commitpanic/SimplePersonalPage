@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3548,
+    "callsign": "CS7BGZ/P",
+    "frequency": "7140.0000",
+    "mode": "SSB",
+    "reference": "LLPT-0084",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-22T07:25:26.000Z",
+    "updated_at": "2026-08-22T07:25:26.000Z",
+    "reference_name": "Ria Formosa",
+    "country_name": "Portugal",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 07:25:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
