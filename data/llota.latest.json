@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3553,
+    "callsign": "K8BRC/14",
+    "frequency": "14344.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0696",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-22T14:47:57.000Z",
+    "updated_at": "2026-08-22T14:47:57.000Z",
+    "reference_name": "Grass Lake",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "QRV Let's go",
+        "timestamp": "2026-08-22 14:47:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
