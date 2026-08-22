@@ -7,7 +7,7 @@
     "reference": "LLUS-0696",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-22T14:47:57.000Z",
-    "updated_at": "2026-08-22T15:21:20.000Z",
+    "updated_at": "2026-08-22T15:43:18.000Z",
     "reference_name": "Grass Lake",
     "country_name": "Estados Unidos",
     "history": [
@@ -26,6 +26,18 @@
       {
         "comment": "Keep it going",
         "timestamp": "2026-08-22 15:21:20.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Keep it coming!",
+        "timestamp": "2026-08-22 15:39:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT THX ALL!",
+        "timestamp": "2026-08-22 15:43:18.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
