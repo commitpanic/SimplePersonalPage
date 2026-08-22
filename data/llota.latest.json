@@ -1,25 +1,5 @@
 [
   {
-    "id": 3552,
-    "callsign": "HB9GUR",
-    "frequency": "7120.0000",
-    "mode": "SSB",
-    "reference": "LLCH-0303",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-22T11:44:59.000Z",
-    "updated_at": "2026-08-22T11:44:59.000Z",
-    "reference_name": "Marais de la Touvière",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-22 11:44:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3551,
     "callsign": "EI3LH",
     "frequency": "14066.0000",
@@ -27,7 +7,7 @@
     "reference": "LLIE-10182",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-22T11:34:06.000Z",
-    "updated_at": "2026-08-22T11:42:33.000Z",
+    "updated_at": "2026-08-22T12:03:31.000Z",
     "reference_name": "Rogerstown Estuary",
     "country_name": "Irlanda",
     "history": [
@@ -52,6 +32,50 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-22 11:42:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 11:53:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-22 12:02:09.000000",
+        "spotter_callsign": "DL5XL",
+        "spotter_display_name": "Felix Riess"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 12:03:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3552,
+    "callsign": "HB9GUR",
+    "frequency": "7120.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0303",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-22T11:44:59.000Z",
+    "updated_at": "2026-08-22T12:01:38.000Z",
+    "reference_name": "Marais de la Touvière",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 11:44:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-22 12:01:38.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
