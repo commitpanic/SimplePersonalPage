@@ -7,7 +7,7 @@
     "reference": "LLES-0500",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-23T08:00:06.000Z",
-    "updated_at": "2026-08-23T08:10:31.000Z",
+    "updated_at": "2026-08-23T08:31:30.000Z",
     "reference_name": "Pantano de María Cristina",
     "country_name": "España",
     "history": [
@@ -22,6 +22,100 @@
         "timestamp": "2026-08-23 08:10:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:21:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:31:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3564,
+    "callsign": "HB9ISN/P",
+    "frequency": "14206.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0003",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T07:57:10.000Z",
+    "updated_at": "2026-08-23T08:26:31.000Z",
+    "reference_name": "Lake Neuchatel",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:57:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:07:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:12:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:16:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:26:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3563,
+    "callsign": "HB9HWF/P",
+    "frequency": "7154.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0003",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T07:41:52.000Z",
+    "updated_at": "2026-08-23T08:24:56.000Z",
+    "reference_name": "Lake Neuchatel",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:41:52.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:55:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:15:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 08:24:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -33,7 +127,7 @@
     "reference": "LLRO-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-23T07:34:09.000Z",
-    "updated_at": "2026-08-23T08:07:40.000Z",
+    "updated_at": "2026-08-23T08:21:53.000Z",
     "reference_name": "Lacul Morii",
     "country_name": "Romania",
     "history": [
@@ -54,30 +148,10 @@
         "timestamp": "2026-08-23 08:07:40.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3564,
-    "callsign": "HB9ISN/P",
-    "frequency": "14208.0000",
-    "mode": "SSB",
-    "reference": "LLCH-0003",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-23T07:57:10.000Z",
-    "updated_at": "2026-08-23T08:07:31.000Z",
-    "reference_name": "Lake Neuchatel",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:57:10.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 08:07:31.000000",
+        "comment": "QRT TNX ALL 73",
+        "timestamp": "2026-08-23 08:21:53.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -122,64 +196,6 @@
       {
         "comment": "QRT",
         "timestamp": "2026-08-23 08:06:27.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3563,
-    "callsign": "HB9HWF/P",
-    "frequency": "14123.0000",
-    "mode": "SSB",
-    "reference": "LLCH-0003",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-23T07:41:52.000Z",
-    "updated_at": "2026-08-23T07:55:26.000Z",
-    "reference_name": "Lake Neuchatel",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:41:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:55:26.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3560,
-    "callsign": "EA6FM",
-    "frequency": "18120.0000",
-    "mode": "SSB",
-    "reference": "LLES-0108",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-23T07:18:41.000Z",
-    "updated_at": "2026-08-23T07:47:40.000Z",
-    "reference_name": "Ses Salines (Salinas de Ibiza)",
-    "country_name": "Balearic Islands",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:18:41.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:45:19.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:47:40.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
