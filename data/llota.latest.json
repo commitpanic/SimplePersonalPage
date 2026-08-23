@@ -1,19 +1,57 @@
 [
   {
+    "id": 3560,
+    "callsign": "EA6FM",
+    "frequency": "18120.0000",
+    "mode": "SSB",
+    "reference": "LLES-0108",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T07:18:41.000Z",
+    "updated_at": "2026-08-23T07:47:40.000Z",
+    "reference_name": "Ses Salines (Salinas de Ibiza)",
+    "country_name": "Balearic Islands",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:18:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:45:19.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:47:40.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3562,
     "callsign": "YO3RAM",
-    "frequency": "14320.0000",
+    "frequency": "14325.0000",
     "mode": "SSB",
     "reference": "LLRO-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-23T07:34:09.000Z",
-    "updated_at": "2026-08-23T07:34:09.000Z",
+    "updated_at": "2026-08-23T07:44:59.000Z",
     "reference_name": "Lacul Morii",
     "country_name": "Romania",
     "history": [
       {
         "comment": "QRV CQ LLOTA, CQ POTA RO-0038 LLRO-0001",
         "timestamp": "2026-08-23 07:34:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY CQ POTA, CQ LLOTA",
+        "timestamp": "2026-08-23 07:44:59.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -27,7 +65,7 @@
     "reference": "LLES-0355",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-23T07:08:57.000Z",
-    "updated_at": "2026-08-23T07:33:48.000Z",
+    "updated_at": "2026-08-23T07:43:56.000Z",
     "reference_name": "Pantano Urkulu",
     "country_name": "España",
     "history": [
@@ -40,6 +78,38 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-23 07:33:48.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:40:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:43:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3563,
+    "callsign": "HB9HWF/P",
+    "frequency": "7182.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0003",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T07:41:52.000Z",
+    "updated_at": "2026-08-23T07:41:52.000Z",
+    "reference_name": "Lake Neuchatel",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 07:41:52.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -60,26 +130,6 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-23 07:32:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3560,
-    "callsign": "EA6FM",
-    "frequency": "14220.0000",
-    "mode": "SSB",
-    "reference": "LLES-0108",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-23T07:18:41.000Z",
-    "updated_at": "2026-08-23T07:18:41.000Z",
-    "reference_name": "Ses Salines (Salinas de Ibiza)",
-    "country_name": "Balearic Islands",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-23 07:18:41.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
