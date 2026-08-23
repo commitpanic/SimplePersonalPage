@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 3573,
+    "callsign": "EA1FMF",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLES-0630",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T15:29:26.000Z",
+    "updated_at": "2026-08-23T15:29:26.000Z",
+    "reference_name": "marismas de engoa",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-23 15:29:26.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3572,
+    "callsign": "KC0FSH",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLUS-0469",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-23T15:22:42.000Z",
+    "updated_at": "2026-08-23T15:22:42.000Z",
+    "reference_name": "WaterFall Park",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-23 15:22:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
