@@ -1,8 +1,41 @@
 {
-  "updatedAt": "2026-08-23T11:27:13.585Z",
+  "updatedAt": "2026-08-23T12:29:31.962Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-08-23T11:24:00.000Z-SQ7SE-40m-LSB",
+      "datetime": "2026-08-23T11:24:00.000Z",
+      "callsign": "SQ7SE",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO00FV",
+      "lat": 50.895833333333336,
+      "lon": 20.458333333333336
+    },
+    {
+      "id": "2026-08-23T10:49:00.000Z-HB9EAJ/P-20m-USB",
+      "datetime": "2026-08-23T10:49:00.000Z",
+      "callsign": "HB9EAJ/P",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Switzerland",
+      "grid": "JN36XV",
+      "lat": 46.895833333333336,
+      "lon": 7.958333333333333
+    },
+    {
+      "id": "2026-08-23T10:43:00.000Z-OE3BIY-20m-USB",
+      "datetime": "2026-08-23T10:43:00.000Z",
+      "callsign": "OE3BIY",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Austria",
+      "grid": "JN88BD",
+      "lat": 48.145833333333336,
+      "lon": 16.125
+    },
     {
       "id": "2026-08-23T09:39:00.000Z-ER3PV-15m-USB",
       "datetime": "2026-08-23T09:39:00.000Z",
