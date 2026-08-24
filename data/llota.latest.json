@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3577,
+    "callsign": "SQ7SAX/P",
+    "frequency": "7.1280",
+    "mode": "SSB",
+    "reference": "LLPL-0734",
+    "spotted_by_app": null,
+    "created_at": "2026-08-24T16:23:34.000Z",
+    "updated_at": "2026-08-24T16:23:34.000Z",
+    "reference_name": "Jezioro Brdowskie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "Kh02, spff-1450, pl-1413",
+        "timestamp": "2026-08-24 16:23:34.000000",
+        "spotter_callsign": "SQ7SAX",
+        "spotter_display_name": "Piotr Osiewalski"
+      }
+    ]
+  }
+]
