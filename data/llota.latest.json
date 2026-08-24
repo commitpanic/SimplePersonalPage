@@ -1,5 +1,37 @@
 [
   {
+    "id": 3578,
+    "callsign": "EB4GSN",
+    "frequency": "14320.0000",
+    "mode": "SSB",
+    "reference": "LLES-0479",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-24T16:41:25.000Z",
+    "updated_at": "2026-08-24T16:48:10.000Z",
+    "reference_name": "Pantano de Elche ",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-24 16:41:25.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Gracias 73",
+        "timestamp": "2026-08-24 16:43:37.000000",
+        "spotter_callsign": "SP8QC",
+        "spotter_display_name": "Andrzej Jurek"
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-24 16:48:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3577,
     "callsign": "SQ7SAX/P",
     "frequency": "7.1280",
@@ -7,7 +39,7 @@
     "reference": "LLPL-0734",
     "spotted_by_app": null,
     "created_at": "2026-08-24T16:23:34.000Z",
-    "updated_at": "2026-08-24T16:23:34.000Z",
+    "updated_at": "2026-08-24T16:38:28.000Z",
     "reference_name": "Jezioro Brdowskie",
     "country_name": "Poland",
     "history": [
@@ -16,6 +48,12 @@
         "timestamp": "2026-08-24 16:23:34.000000",
         "spotter_callsign": "SQ7SAX",
         "spotter_display_name": "Piotr Osiewalski"
+      },
+      {
+        "comment": "Tnx 73",
+        "timestamp": "2026-08-24 16:38:28.000000",
+        "spotter_callsign": "SP8QC",
+        "spotter_display_name": "Andrzej Jurek"
       }
     ]
   }
