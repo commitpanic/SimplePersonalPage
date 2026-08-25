@@ -7,7 +7,7 @@
     "reference": "LLGB-0345",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-25T16:46:24.000Z",
-    "updated_at": "2026-08-25T18:30:58.000Z",
+    "updated_at": "2026-08-25T18:47:03.000Z",
     "reference_name": "Gorpley Reservoir",
     "country_name": "England",
     "history": [
@@ -62,6 +62,12 @@
       {
         "comment": "QSY ssb",
         "timestamp": "2026-08-25 18:30:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Ssb cq ",
+        "timestamp": "2026-08-25 18:47:03.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
