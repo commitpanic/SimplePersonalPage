@@ -7,7 +7,7 @@
     "reference": "LLUS-0770",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-25T20:24:40.000Z",
-    "updated_at": "2026-08-25T21:08:51.000Z",
+    "updated_at": "2026-08-25T21:14:41.000Z",
     "reference_name": "Newman Lake",
     "country_name": "Estados Unidos",
     "history": [
@@ -38,6 +38,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-25 21:08:51.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrt 73!",
+        "timestamp": "2026-08-25 21:14:41.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
