@@ -2,12 +2,12 @@
   {
     "id": 3595,
     "callsign": "M9PMB",
-    "frequency": "14307.0000",
+    "frequency": "7093.0000",
     "mode": "SSB",
     "reference": "LLGB-0345",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-25T16:46:24.000Z",
-    "updated_at": "2026-08-25T17:13:43.000Z",
+    "updated_at": "2026-08-25T17:29:28.000Z",
     "reference_name": "Gorpley Reservoir",
     "country_name": "England",
     "history": [
@@ -26,6 +26,18 @@
       {
         "comment": "Ssb cq ",
         "timestamp": "2026-08-25 17:13:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Ssb ",
+        "timestamp": "2026-08-25 17:22:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY ssb",
+        "timestamp": "2026-08-25 17:29:28.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
