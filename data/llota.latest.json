@@ -1,13 +1,33 @@
 [
   {
+    "id": 3603,
+    "callsign": "HB9ITZ",
+    "frequency": "14164.0000",
+    "mode": "SSB",
+    "reference": "LLCH-0002",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-26T14:00:42.000Z",
+    "updated_at": "2026-08-26T14:00:42.000Z",
+    "reference_name": "Lake Geneva",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 14:00:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3602,
     "callsign": "SP4VIT",
-    "frequency": "7.1480",
+    "frequency": "7148.0000",
     "mode": "SSB",
     "reference": "LLPL-0713",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-26T13:26:44.000Z",
-    "updated_at": "2026-08-26T13:28:07.000Z",
+    "updated_at": "2026-08-26T13:41:17.000Z",
     "reference_name": "Jezioro Hańcza",
     "country_name": "Poland",
     "history": [
@@ -22,6 +42,18 @@
         "timestamp": "2026-08-26 13:28:07.000000",
         "spotter_callsign": "SP8QC",
         "spotter_display_name": "Andrzej Jurek"
+      },
+      {
+        "comment": "2-fer: LLPL-0713 LLPL-0714",
+        "timestamp": "2026-08-26 13:37:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT 2-fer: LLPL-0713 LLPL-0714",
+        "timestamp": "2026-08-26 13:41:17.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
