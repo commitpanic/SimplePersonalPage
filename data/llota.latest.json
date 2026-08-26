@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 3602,
+    "callsign": "SP4VIT",
+    "frequency": "7.1480",
+    "mode": "SSB",
+    "reference": "LLPL-0713",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-26T13:26:44.000Z",
+    "updated_at": "2026-08-26T13:28:07.000Z",
+    "reference_name": "Jezioro Hańcza",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "2-fer: LLPL-0713 LLPL-0714",
+        "timestamp": "2026-08-26 13:26:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Tnx 73",
+        "timestamp": "2026-08-26 13:28:07.000000",
+        "spotter_callsign": "SP8QC",
+        "spotter_display_name": "Andrzej Jurek"
+      }
+    ]
+  }
+]
