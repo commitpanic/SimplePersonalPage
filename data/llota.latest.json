@@ -1,1 +1,102 @@
-[]
+[
+  {
+    "id": 3610,
+    "callsign": "ZL1BQD",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0751",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-26T22:03:44.000Z",
+    "updated_at": "2026-08-26T22:03:44.000Z",
+    "reference_name": "Lake Te Kirikiri",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 22:03:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3611,
+    "callsign": "ZL1BQD",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0640",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-26T22:03:44.000Z",
+    "updated_at": "2026-08-26T22:03:44.000Z",
+    "reference_name": "Lake Rotokanapanapa",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 22:03:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3608,
+    "callsign": "ZL1BQD",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0750",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-26T22:03:43.000Z",
+    "updated_at": "2026-08-26T22:03:43.000Z",
+    "reference_name": "Lake Te Kiri",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 22:03:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3609,
+    "callsign": "ZL1BQD",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0554",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-26T22:03:43.000Z",
+    "updated_at": "2026-08-26T22:03:43.000Z",
+    "reference_name": "Lake Opouri",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 22:03:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3607,
+    "callsign": "ZL1BQD",
+    "frequency": "7090.0000",
+    "mode": "SSB",
+    "reference": "LLNZ-0629",
+    "spotted_by_app": "ONTHEAIRNZ",
+    "created_at": "2026-08-26T22:03:42.000Z",
+    "updated_at": "2026-08-26T22:03:42.000Z",
+    "reference_name": "Lake Rotoatamaheke",
+    "country_name": "New Zealand",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-26 22:03:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
