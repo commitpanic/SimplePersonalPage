@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3599,
+    "callsign": "SP8RSL",
+    "frequency": "7.1730",
+    "mode": "SSB",
+    "reference": "LLPL-0087",
+    "spotted_by_app": null,
+    "created_at": "2026-08-26T07:52:46.000Z",
+    "updated_at": "2026-08-26T07:52:46.000Z",
+    "reference_name": "Jezioro Klimkowskie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-26 07:52:46.000000",
+        "spotter_callsign": "3Z9VI",
+        "spotter_display_name": "Vikers An"
+      }
+    ]
+  }
+]
