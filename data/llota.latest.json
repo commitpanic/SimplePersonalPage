@@ -1,31 +1,55 @@
 [
   {
-    "id": 3623,
-    "callsign": "DK5CR",
-    "frequency": "14050.0000",
+    "id": 3626,
+    "callsign": "EA2WX/P",
+    "frequency": "7031.0000",
     "mode": "CW",
-    "reference": "LLDE-0053",
+    "reference": "LLES-0020",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-28T13:16:45.000Z",
-    "updated_at": "2026-08-28T13:21:42.000Z",
-    "reference_name": "Schoenungsteich Lemgo",
-    "country_name": "Germany",
+    "created_at": "2026-08-28T16:15:13.000Z",
+    "updated_at": "2026-08-28T17:22:01.000Z",
+    "reference_name": "Lagunas de Villafáfila",
+    "country_name": "España",
     "history": [
       {
-        "comment": "QRV ssb",
-        "timestamp": "2026-08-28 13:16:45.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 16:15:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QSY CW",
-        "timestamp": "2026-08-28 13:19:43.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 16:26:57.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "QSY cw",
-        "timestamp": "2026-08-28 13:21:42.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 16:42:55.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 16:55:02.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 17:05:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 17:15:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-28 17:22:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
