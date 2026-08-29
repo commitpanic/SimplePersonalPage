@@ -7,7 +7,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T13:36:22.000Z",
-    "updated_at": "2026-08-29T14:45:00.000Z",
+    "updated_at": "2026-08-29T14:55:30.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -56,6 +56,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 14:45:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 14:55:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -156,46 +162,6 @@
         "timestamp": "2026-08-29 14:35:07.000000",
         "spotter_callsign": "LU2AOG",
         "spotter_display_name": "Ariel Gentile"
-      }
-    ]
-  },
-  {
-    "id": 3680,
-    "callsign": "PU3ZS",
-    "frequency": "21.2500",
-    "mode": "SSB",
-    "reference": "LLBR-0092",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T14:24:49.000Z",
-    "updated_at": "2026-08-29T14:24:49.000Z",
-    "reference_name": "Lago Guaíba Central",
-    "country_name": "Brasil",
-    "history": [
-      {
-        "comment": "LLBR-0092, Lago Guaíba Central, Porto Alegre BR-RS, GRID GF49jw",
-        "timestamp": "2026-08-29 14:24:49.000000",
-        "spotter_callsign": "PY3ZS",
-        "spotter_display_name": "Sandro Dumke"
-      }
-    ]
-  },
-  {
-    "id": 3679,
-    "callsign": "HB9CPS/P",
-    "frequency": "14061.0000",
-    "mode": "CW",
-    "reference": "LLCH-0042",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T14:17:56.000Z",
-    "updated_at": "2026-08-29T14:17:56.000Z",
-    "reference_name": "Greifensee",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "QRV LLCH-0042",
-        "timestamp": "2026-08-29 14:17:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       }
     ]
   }
