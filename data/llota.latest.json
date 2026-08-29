@@ -1,5 +1,25 @@
 [
   {
+    "id": 3707,
+    "callsign": "CA3AHT",
+    "frequency": "7.1480",
+    "mode": "SSB",
+    "reference": "LLCL-0147",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T21:22:53.000Z",
+    "updated_at": "2026-08-29T21:22:53.000Z",
+    "reference_name": "Embalse Rungue",
+    "country_name": "Chile",
+    "history": [
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 21:22:53.000000",
+        "spotter_callsign": "CA3AHT",
+        "spotter_display_name": "Alonso Bernabe"
+      }
+    ]
+  },
+  {
     "id": 3698,
     "callsign": "CA3BLE",
     "frequency": "7190.0000",
@@ -7,7 +27,7 @@
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:00:44.000Z",
-    "updated_at": "2026-08-29T21:15:21.000Z",
+    "updated_at": "2026-08-29T21:18:47.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -92,6 +112,12 @@
       {
         "comment": "Cq cq",
         "timestamp": "2026-08-29 21:15:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Cq cq",
+        "timestamp": "2026-08-29 21:18:47.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -230,32 +256,6 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 21:05:08.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3703,
-    "callsign": "EA1FMF",
-    "frequency": "7195.0000",
-    "mode": "SSB",
-    "reference": "LLES-0051",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T20:25:30.000Z",
-    "updated_at": "2026-08-29T20:49:36.000Z",
-    "reference_name": "Embalse de Heras",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 20:25:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 20:49:36.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
