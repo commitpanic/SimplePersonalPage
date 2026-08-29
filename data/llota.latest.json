@@ -1,49 +1,5 @@
 [
   {
-    "id": 3671,
-    "callsign": "YO3RAM",
-    "frequency": "14318.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0208",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:31:23.000Z",
-    "updated_at": "2026-08-29T12:40:25.000Z",
-    "reference_name": "Lacul Carol",
-    "country_name": "Romania",
-    "history": [
-      {
-        "comment": "QRV CQ POTA, CQ LLOTA",
-        "timestamp": "2026-08-29 12:31:23.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 12:34:36.000000",
-        "spotter_callsign": "YO3BEE",
-        "spotter_display_name": "Bogdan Andrei Pavel"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 12:34:56.000000",
-        "spotter_callsign": "YO3BEE",
-        "spotter_display_name": "Bogdan Andrei Pavel"
-      },
-      {
-        "comment": "QSY CQPOTA, CQ LLOTA",
-        "timestamp": "2026-08-29 12:35:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY CQ POTA CQ LLOTA",
-        "timestamp": "2026-08-29 12:40:25.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3673,
     "callsign": "N3T",
     "frequency": "7188.0000",
@@ -51,13 +7,19 @@
     "reference": "LLUS-0439",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T12:39:58.000Z",
-    "updated_at": "2026-08-29T12:39:58.000Z",
+    "updated_at": "2026-08-29T12:48:56.000Z",
     "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
     "country_name": "Estados Unidos",
     "history": [
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 12:39:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 12:48:56.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -71,7 +33,7 @@
     "reference": "LLCH-0303",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T11:46:51.000Z",
-    "updated_at": "2026-08-29T12:35:01.000Z",
+    "updated_at": "2026-08-29T12:42:49.000Z",
     "reference_name": "Marais de la Touvière",
     "country_name": "Switzerland",
     "history": [
@@ -114,6 +76,56 @@
       {
         "comment": "Qrv",
         "timestamp": "2026-08-29 12:35:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrt",
+        "timestamp": "2026-08-29 12:42:49.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3671,
+    "callsign": "YO3RAM",
+    "frequency": "14318.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0208",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T12:31:23.000Z",
+    "updated_at": "2026-08-29T12:40:25.000Z",
+    "reference_name": "Lacul Carol",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRV CQ POTA, CQ LLOTA",
+        "timestamp": "2026-08-29 12:31:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-29 12:34:36.000000",
+        "spotter_callsign": "YO3BEE",
+        "spotter_display_name": "Bogdan Andrei Pavel"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-29 12:34:56.000000",
+        "spotter_callsign": "YO3BEE",
+        "spotter_display_name": "Bogdan Andrei Pavel"
+      },
+      {
+        "comment": "QSY CQPOTA, CQ LLOTA",
+        "timestamp": "2026-08-29 12:35:04.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY CQ POTA CQ LLOTA",
+        "timestamp": "2026-08-29 12:40:25.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -160,26 +172,6 @@
       {
         "comment": "QRV 20m",
         "timestamp": "2026-08-29 12:31:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3670,
-    "callsign": "EA3JAQ",
-    "frequency": "7198.0000",
-    "mode": "SSB",
-    "reference": "LLES-0284",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:16:11.000Z",
-    "updated_at": "2026-08-29T12:16:11.000Z",
-    "reference_name": "Llac Petit",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-29 12:16:11.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
