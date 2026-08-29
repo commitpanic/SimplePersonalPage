@@ -1,19 +1,39 @@
 [
   {
-    "id": 3646,
-    "callsign": "ER1SKI/P",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0764",
+    "id": 3649,
+    "callsign": "EB4GSN",
+    "frequency": "7118.0000",
+    "mode": "SSB",
+    "reference": "LLES-0636",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:57:48.000Z",
-    "updated_at": "2026-08-29T08:57:48.000Z",
-    "reference_name": "Lacul Verde",
-    "country_name": "Moldova",
+    "created_at": "2026-08-29T09:17:04.000Z",
+    "updated_at": "2026-08-29T09:17:04.000Z",
+    "reference_name": "Embalse de San Rafael de Navallana",
+    "country_name": "España",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 08:57:48.000000",
+        "timestamp": "2026-08-29 09:17:04.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3648,
+    "callsign": "EA1FMF",
+    "frequency": "14273.0000",
+    "mode": "SSB",
+    "reference": "LLES-0620",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T09:15:46.000Z",
+    "updated_at": "2026-08-29T09:15:46.000Z",
+    "reference_name": "Mina Fontoria",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 09:15:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -22,12 +42,12 @@
   {
     "id": 3645,
     "callsign": "SP4VIT",
-    "frequency": "7196.0000",
+    "frequency": "14238.0000",
     "mode": "SSB",
     "reference": "LLPL-0234",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T08:56:23.000Z",
-    "updated_at": "2026-08-29T08:56:23.000Z",
+    "updated_at": "2026-08-29T09:12:38.000Z",
     "reference_name": "Jezioro Kolno",
     "country_name": "Poland",
     "history": [
@@ -36,70 +56,30 @@
         "timestamp": "2026-08-29 08:56:23.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3644,
-    "callsign": "E75HZ",
-    "frequency": "7.1420",
-    "mode": "SSB",
-    "reference": "LLBA-0008",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T08:53:09.000Z",
-    "updated_at": "2026-08-29T08:53:09.000Z",
-    "reference_name": "Bara \"Gazda Ilje Polje\"",
-    "country_name": "Bosnia",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-29 08:53:09.000000",
-        "spotter_callsign": "E75HZ",
-        "spotter_display_name": "Husein (MIKI) Zolotic"
-      }
-    ]
-  },
-  {
-    "id": 3642,
-    "callsign": "EA4IFN",
-    "frequency": "7121.0000",
-    "mode": "SSB",
-    "reference": "LLES-0321",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:44:12.000Z",
-    "updated_at": "2026-08-29T08:47:09.000Z",
-    "reference_name": "Embalse del Montoro",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 08:44:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 08:47:09.000000",
+        "timestamp": "2026-08-29 09:12:38.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3643,
-    "callsign": "HB9ITZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLCH-0002",
+    "id": 3647,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "7145.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0105",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:46:08.000Z",
-    "updated_at": "2026-08-29T08:46:08.000Z",
-    "reference_name": "Lake Geneva",
-    "country_name": "Switzerland",
+    "created_at": "2026-08-29T09:11:07.000Z",
+    "updated_at": "2026-08-29T09:11:07.000Z",
+    "reference_name": "Lac de laguibe",
+    "country_name": "Francia",
     "history": [
       {
-        "comment": "LLOTA POTA",
-        "timestamp": "2026-08-29 08:46:08.000000",
+        "comment": "QRV 40m atno",
+        "timestamp": "2026-08-29 09:11:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -108,12 +88,12 @@
   {
     "id": 3636,
     "callsign": "HB9ISN/P",
-    "frequency": "7.1570",
+    "frequency": "7157.0000",
     "mode": "SSB",
     "reference": "LLCH-0100",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T07:37:15.000Z",
-    "updated_at": "2026-08-29T08:46:05.000Z",
+    "updated_at": "2026-08-29T09:02:07.000Z",
     "reference_name": "Étang du Bois des Mouilles",
     "country_name": "Switzerland",
     "history": [
@@ -164,58 +144,32 @@
         "timestamp": "2026-08-29 08:46:05.000000",
         "spotter_callsign": "HB9GUR",
         "spotter_display_name": "Philippe Haake"
-      }
-    ]
-  },
-  {
-    "id": 3639,
-    "callsign": "F/EA2CCG/P",
-    "frequency": "14320.0000",
-    "mode": "SSB",
-    "reference": "LLFR-0101",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:09:56.000Z",
-    "updated_at": "2026-08-29T08:37:04.000Z",
-    "reference_name": "etang de beyres ",
-    "country_name": "Francia",
-    "history": [
-      {
-        "comment": "QSY here squi",
-        "timestamp": "2026-08-29 08:09:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY 20",
-        "timestamp": "2026-08-29 08:26:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
         "comment": "QRT",
-        "timestamp": "2026-08-29 08:37:04.000000",
+        "timestamp": "2026-08-29 09:02:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3641,
-    "callsign": "SP3OTZ",
-    "frequency": "7.1916",
-    "mode": "SSB",
-    "reference": "LLPL-0535",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T08:35:47.000Z",
-    "updated_at": "2026-08-29T08:35:47.000Z",
-    "reference_name": "Jezioro Głęboczek Wielki",
-    "country_name": "Poland",
+    "id": 3646,
+    "callsign": "ER1SKI/P",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0764",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T08:57:48.000Z",
+    "updated_at": "2026-08-29T08:57:48.000Z",
+    "reference_name": "Lacul Verde",
+    "country_name": "Moldova",
     "history": [
       {
-        "comment": "",
-        "timestamp": "2026-08-29 08:35:47.000000",
-        "spotter_callsign": "SP3OTZ",
-        "spotter_display_name": "Jacek"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 08:57:48.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
