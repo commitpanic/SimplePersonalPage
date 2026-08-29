@@ -1,5 +1,69 @@
 [
   {
+    "id": 3671,
+    "callsign": "YO3RAM",
+    "frequency": "14318.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0208",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T12:31:23.000Z",
+    "updated_at": "2026-08-29T12:40:25.000Z",
+    "reference_name": "Lacul Carol",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRV CQ POTA, CQ LLOTA",
+        "timestamp": "2026-08-29 12:31:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-29 12:34:36.000000",
+        "spotter_callsign": "YO3BEE",
+        "spotter_display_name": "Bogdan Andrei Pavel"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-29 12:34:56.000000",
+        "spotter_callsign": "YO3BEE",
+        "spotter_display_name": "Bogdan Andrei Pavel"
+      },
+      {
+        "comment": "QSY CQPOTA, CQ LLOTA",
+        "timestamp": "2026-08-29 12:35:04.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY CQ POTA CQ LLOTA",
+        "timestamp": "2026-08-29 12:40:25.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3673,
+    "callsign": "N3T",
+    "frequency": "7188.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0439",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T12:39:58.000Z",
+    "updated_at": "2026-08-29T12:39:58.000Z",
+    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 12:39:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3666,
     "callsign": "HB9GUR",
     "frequency": "14205.0000",
@@ -7,7 +71,7 @@
     "reference": "LLCH-0303",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T11:46:51.000Z",
-    "updated_at": "2026-08-29T12:24:45.000Z",
+    "updated_at": "2026-08-29T12:35:01.000Z",
     "reference_name": "Marais de la Touvière",
     "country_name": "Switzerland",
     "history": [
@@ -46,6 +110,58 @@
         "timestamp": "2026-08-29 12:24:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 12:35:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3672,
+    "callsign": "N3YQL",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLUS-0439",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T12:34:21.000Z",
+    "updated_at": "2026-08-29T12:34:21.000Z",
+    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 12:34:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3669,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "14327.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0103",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T12:15:46.000Z",
+    "updated_at": "2026-08-29T12:31:42.000Z",
+    "reference_name": "etang de Garros",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "59+73!",
+        "timestamp": "2026-08-29 12:15:46.000000",
+        "spotter_callsign": "EA4IWX",
+        "spotter_display_name": "Iñigo Merchan"
+      },
+      {
+        "comment": "QRV 20m",
+        "timestamp": "2026-08-29 12:31:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -64,78 +180,6 @@
       {
         "comment": "QRT",
         "timestamp": "2026-08-29 12:16:11.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3669,
-    "callsign": "F/EA2CCG/P",
-    "frequency": "7160.0000",
-    "mode": "SSB",
-    "reference": "LLFR-0103",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T12:15:46.000Z",
-    "updated_at": "2026-08-29T12:15:46.000Z",
-    "reference_name": "etang de Garros",
-    "country_name": "Francia",
-    "history": [
-      {
-        "comment": "59+73!",
-        "timestamp": "2026-08-29 12:15:46.000000",
-        "spotter_callsign": "EA4IWX",
-        "spotter_display_name": "Iñigo Merchan"
-      }
-    ]
-  },
-  {
-    "id": 3668,
-    "callsign": "YU1FWX",
-    "frequency": "14333.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:02:19.000Z",
-    "updated_at": "2026-08-29T12:02:19.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-29 12:02:19.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3665,
-    "callsign": "ER1SKI/P",
-    "frequency": "14080.0000",
-    "mode": "FT4",
-    "reference": "LLMD-0744",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T11:41:28.000Z",
-    "updated_at": "2026-08-29T12:01:42.000Z",
-    "reference_name": "Lacul Pănășești N1",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "2-fer: LLMD-0744 LLMD-0774",
-        "timestamp": "2026-08-29 11:41:28.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLMD-0744 LLMD-0774",
-        "timestamp": "2026-08-29 11:53:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY 2-fer: LLMD-0744 LLMD-0774",
-        "timestamp": "2026-08-29 12:01:42.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
