@@ -1,5 +1,25 @@
 [
   {
+    "id": 3690,
+    "callsign": "PY3EB",
+    "frequency": "7.1400",
+    "mode": "SSB",
+    "reference": "LLBR-0131",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T16:53:31.000Z",
+    "updated_at": "2026-08-29T16:53:31.000Z",
+    "reference_name": "Guaíba Margem Leste – Ponta da Cuíca",
+    "country_name": "Brasil",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 16:53:31.000000",
+        "spotter_callsign": "PY3EB",
+        "spotter_display_name": "Lauro Alves"
+      }
+    ]
+  },
+  {
     "id": 3689,
     "callsign": "F/EA2CCG/P",
     "frequency": "7134.0000",
