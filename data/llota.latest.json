@@ -144,45 +144,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3658,
-    "callsign": "SP4VIT",
-    "frequency": "7144.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0235",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T10:23:44.000Z",
-    "updated_at": "2026-08-29T10:23:44.000Z",
-    "reference_name": "Jezioro Dręstwo",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 10:23:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3656,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0712",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T10:19:23.000Z",
-    "updated_at": "2026-08-29T10:19:23.000Z",
-    "reference_name": "Lacul Făgureni",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 10:19:23.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
   }
 ]
