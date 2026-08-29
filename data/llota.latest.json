@@ -1,13 +1,65 @@
 [
   {
+    "id": 3677,
+    "callsign": "TA1GRH",
+    "frequency": "14.0740",
+    "mode": "FT8",
+    "reference": "LLTR-0001",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T14:10:12.000Z",
+    "updated_at": "2026-08-29T14:10:12.000Z",
+    "reference_name": "Kucukcekmece Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "OnAir Celebration World Lake Day!",
+        "timestamp": "2026-08-29 14:10:12.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
+      }
+    ]
+  },
+  {
+    "id": 3675,
+    "callsign": "IU1JHT/P",
+    "frequency": "14315.0000",
+    "mode": "SSB",
+    "reference": "LLIT-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T13:36:22.000Z",
+    "updated_at": "2026-08-29T14:09:30.000Z",
+    "reference_name": "Lago di Osiglia",
+    "country_name": "Italy",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 13:36:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 13:59:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 14:09:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3676,
     "callsign": "YT3IN",
-    "frequency": "14.3430",
+    "frequency": "14343.0000",
     "mode": "SSB",
     "reference": "LLRS-0007",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T13:40:36.000Z",
-    "updated_at": "2026-08-29T13:54:45.000Z",
+    "updated_at": "2026-08-29T14:03:29.000Z",
     "reference_name": "Bovansko jezero",
     "country_name": "Serbia",
     "history": [
@@ -40,118 +92,10 @@
         "timestamp": "2026-08-29 13:54:45.000000",
         "spotter_callsign": "EW6GB",
         "spotter_display_name": "Andrei Khatkevich"
-      }
-    ]
-  },
-  {
-    "id": 3675,
-    "callsign": "IU1JHT/P",
-    "frequency": "14315.0000",
-    "mode": "SSB",
-    "reference": "LLIT-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T13:36:22.000Z",
-    "updated_at": "2026-08-29T13:36:22.000Z",
-    "reference_name": "Lago di Osiglia",
-    "country_name": "Italy",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:36:22.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3673,
-    "callsign": "N3T",
-    "frequency": "7188.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0439",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:39:58.000Z",
-    "updated_at": "2026-08-29T13:33:49.000Z",
-    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:39:58.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:48:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:06:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:22:45.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:26:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:26:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:26:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:33:49.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3674,
-    "callsign": "N3YQL",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLUS-0439",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T13:07:43.000Z",
-    "updated_at": "2026-08-29T13:31:01.000Z",
-    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:07:43.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:07:55.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:31:01.000000",
+        "timestamp": "2026-08-29 14:03:29.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
