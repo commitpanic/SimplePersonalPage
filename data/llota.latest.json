@@ -1,5 +1,25 @@
 [
   {
+    "id": 3708,
+    "callsign": "KP4TNI",
+    "frequency": "14328.0000",
+    "mode": "SSB",
+    "reference": "LLPR-0053",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T21:55:16.000Z",
+    "updated_at": "2026-08-29T21:55:16.000Z",
+    "reference_name": "Laguna Coloso",
+    "country_name": "Puerto Rico",
+    "history": [
+      {
+        "comment": "2 ops",
+        "timestamp": "2026-08-29 21:55:16.000000",
+        "spotter_callsign": "KP4TNI",
+        "spotter_display_name": "Alexis Jusino"
+      }
+    ]
+  },
+  {
     "id": 3701,
     "callsign": "CA3LVK",
     "frequency": "7190.0000",
@@ -136,130 +156,6 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 21:29:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3707,
-    "callsign": "CA3AHT",
-    "frequency": "7.1480",
-    "mode": "SSB",
-    "reference": "LLCL-0147",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T21:22:53.000Z",
-    "updated_at": "2026-08-29T21:22:53.000Z",
-    "reference_name": "Embalse Rungue",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 21:22:53.000000",
-        "spotter_callsign": "CA3AHT",
-        "spotter_display_name": "Alonso Bernabe"
-      }
-    ]
-  },
-  {
-    "id": 3698,
-    "callsign": "CA3BLE",
-    "frequency": "7190.0000",
-    "mode": "SSB",
-    "reference": "LLCL-0038",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T19:00:44.000Z",
-    "updated_at": "2026-08-29T21:18:47.000Z",
-    "reference_name": "Laguna de Batuco",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 19:00:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq",
-        "timestamp": "2026-08-29 19:09:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 19:18:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 19:28:45.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 19:41:38.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 19:50:07.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 19:51:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 20:00:29.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 20:16:11.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "59 San Ramón - Santiago. 73s",
-        "timestamp": "2026-08-29 20:17:19.000000",
-        "spotter_callsign": "CE3RIF",
-        "spotter_display_name": "Juan Alejandro Friz Riffo"
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 20:27:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 20:35:35.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "GRACIAS X QSO 73",
-        "timestamp": "2026-08-29 20:46:15.000000",
-        "spotter_callsign": "LU2DPW",
-        "spotter_display_name": "Juan Carlos Amado"
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 21:15:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Cq cq",
-        "timestamp": "2026-08-29 21:18:47.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
