@@ -7,7 +7,7 @@
     "reference": "LLFR-0005",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T04:37:52.000Z",
-    "updated_at": "2026-08-29T04:54:31.000Z",
+    "updated_at": "2026-08-29T05:15:30.000Z",
     "reference_name": "Etang de Joreau",
     "country_name": "Francia",
     "history": [
@@ -28,26 +28,18 @@
         "timestamp": "2026-08-29 04:54:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3629,
-    "callsign": "VK3IRE",
-    "frequency": "7.1350",
-    "mode": "SSB",
-    "reference": "LLAU-1429",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T04:30:52.000Z",
-    "updated_at": "2026-08-29T04:30:52.000Z",
-    "reference_name": "LAKE COLAC",
-    "country_name": "Australia",
-    "history": [
+      },
       {
-        "comment": "Lake Colac, Victoria, Australia",
-        "timestamp": "2026-08-29 04:30:52.000000",
-        "spotter_callsign": "VK3CJN",
-        "spotter_display_name": "Chris"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 05:05:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 05:15:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
