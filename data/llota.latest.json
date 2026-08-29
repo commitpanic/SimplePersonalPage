@@ -1,13 +1,53 @@
 [
   {
+    "id": 3662,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "14320.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0102",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T11:19:23.000Z",
+    "updated_at": "2026-08-29T11:19:23.000Z",
+    "reference_name": "etang du turc",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 11:19:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3661,
+    "callsign": "EI3LH",
+    "frequency": "14055.0000",
+    "mode": "CW",
+    "reference": "LLIE-10182",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T11:19:09.000Z",
+    "updated_at": "2026-08-29T11:19:09.000Z",
+    "reference_name": "Rogerstown Estuary",
+    "country_name": "Irlanda",
+    "history": [
+      {
+        "comment": "QRV new park",
+        "timestamp": "2026-08-29 11:19:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3659,
     "callsign": "EA3JAQ",
-    "frequency": "7160.0000",
+    "frequency": "7198.0000",
     "mode": "SSB",
     "reference": "LLES-0284",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T10:28:32.000Z",
-    "updated_at": "2026-08-29T11:14:07.000Z",
+    "updated_at": "2026-08-29T11:16:19.000Z",
     "reference_name": "Llac Petit",
     "country_name": "España",
     "history": [
@@ -38,6 +78,18 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-29 11:14:07.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 11:15:24.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 11:16:19.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
