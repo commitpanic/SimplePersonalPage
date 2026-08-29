@@ -118,31 +118,5 @@
         "spotter_display_name": "Carlos Bidondo"
       }
     ]
-  },
-  {
-    "id": 3686,
-    "callsign": "LU1HL/H",
-    "frequency": "7.1500",
-    "mode": "SSB",
-    "reference": "LLAR-0163",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T15:09:11.000Z",
-    "updated_at": "2026-08-29T15:12:15.000Z",
-    "reference_name": "dique La quebrada ",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "Cq cq 2 ops LU1HIP/H",
-        "timestamp": "2026-08-29 15:09:11.000000",
-        "spotter_callsign": "CA3LVK",
-        "spotter_display_name": "Nelson Lopez V."
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 15:12:15.000000",
-        "spotter_callsign": "LU4FRN",
-        "spotter_display_name": "Ricardo Nelli"
-      }
-    ]
   }
 ]
