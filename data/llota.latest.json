@@ -1,87 +1,25 @@
 [
   {
-    "id": 3673,
-    "callsign": "N3T",
-    "frequency": "7188.0000",
-    "mode": "SSB",
+    "id": 3674,
+    "callsign": "N3YQL",
+    "frequency": "14074.0000",
+    "mode": "FT8",
     "reference": "LLUS-0439",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:39:58.000Z",
-    "updated_at": "2026-08-29T12:48:56.000Z",
+    "created_at": "2026-08-29T13:07:43.000Z",
+    "updated_at": "2026-08-29T13:07:55.000Z",
     "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
     "country_name": "Estados Unidos",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:39:58.000000",
+        "timestamp": "2026-08-29 13:07:43.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:48:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3666,
-    "callsign": "HB9GUR",
-    "frequency": "14205.0000",
-    "mode": "SSB",
-    "reference": "LLCH-0303",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T11:46:51.000Z",
-    "updated_at": "2026-08-29T12:42:49.000Z",
-    "reference_name": "Marais de la Touvière",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 11:46:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 11:54:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:07:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qsy 20m",
-        "timestamp": "2026-08-29 12:15:54.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:23:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 12:24:45.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 12:35:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrt",
-        "timestamp": "2026-08-29 12:42:49.000000",
+        "timestamp": "2026-08-29 13:07:55.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -95,7 +33,7 @@
     "reference": "LLRO-0208",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T12:31:23.000Z",
-    "updated_at": "2026-08-29T12:40:25.000Z",
+    "updated_at": "2026-08-29T13:06:56.000Z",
     "reference_name": "Lacul Carol",
     "country_name": "Romania",
     "history": [
@@ -128,50 +66,42 @@
         "timestamp": "2026-08-29 12:40:25.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3672,
-    "callsign": "N3YQL",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLUS-0439",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:34:21.000Z",
-    "updated_at": "2026-08-29T12:34:21.000Z",
-    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
-    "country_name": "Estados Unidos",
-    "history": [
+      },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 12:34:21.000000",
+        "comment": "QRT TNX 73",
+        "timestamp": "2026-08-29 13:06:56.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3669,
-    "callsign": "F/EA2CCG/P",
-    "frequency": "14327.0000",
+    "id": 3673,
+    "callsign": "N3T",
+    "frequency": "7188.0000",
     "mode": "SSB",
-    "reference": "LLFR-0103",
+    "reference": "LLUS-0439",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T12:15:46.000Z",
-    "updated_at": "2026-08-29T12:31:42.000Z",
-    "reference_name": "etang de Garros",
-    "country_name": "Francia",
+    "created_at": "2026-08-29T12:39:58.000Z",
+    "updated_at": "2026-08-29T13:06:47.000Z",
+    "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
+    "country_name": "Estados Unidos",
     "history": [
       {
-        "comment": "59+73!",
-        "timestamp": "2026-08-29 12:15:46.000000",
-        "spotter_callsign": "EA4IWX",
-        "spotter_display_name": "Iñigo Merchan"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 12:39:58.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       },
       {
-        "comment": "QRV 20m",
-        "timestamp": "2026-08-29 12:31:42.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 12:48:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 13:06:47.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
