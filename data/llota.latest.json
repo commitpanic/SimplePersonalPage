@@ -1,5 +1,51 @@
 [
   {
+    "id": 3653,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "14320.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0105",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T09:43:35.000Z",
+    "updated_at": "2026-08-29T09:43:35.000Z",
+    "reference_name": "Lac de laguibe",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "QSY 20 m ",
+        "timestamp": "2026-08-29 09:43:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3652,
+    "callsign": "YT3SM",
+    "frequency": "14263.0000",
+    "mode": "SSB",
+    "reference": "LLRS-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T09:30:34.000Z",
+    "updated_at": "2026-08-29T09:42:28.000Z",
+    "reference_name": "Vlasinsko jezero",
+    "country_name": "Serbia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 09:30:34.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 09:42:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3649,
     "callsign": "EB4GSN",
     "frequency": "7116.0000",
@@ -64,26 +110,6 @@
     ]
   },
   {
-    "id": 3652,
-    "callsign": "YT3SM",
-    "frequency": "14263.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T09:30:34.000Z",
-    "updated_at": "2026-08-29T09:30:34.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 09:30:34.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3651,
     "callsign": "ER1SKI/P",
     "frequency": "10136.0000",
@@ -98,72 +124,6 @@
       {
         "comment": "QSY",
         "timestamp": "2026-08-29 09:28:50.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3648,
-    "callsign": "EA1FMF",
-    "frequency": "14273.0000",
-    "mode": "SSB",
-    "reference": "LLES-0620",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T09:15:46.000Z",
-    "updated_at": "2026-08-29T09:15:46.000Z",
-    "reference_name": "Mina Fontoria",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 09:15:46.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3645,
-    "callsign": "SP4VIT",
-    "frequency": "14238.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0234",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:56:23.000Z",
-    "updated_at": "2026-08-29T09:12:38.000Z",
-    "reference_name": "Jezioro Kolno",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 08:56:23.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 09:12:38.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3647,
-    "callsign": "F/EA2CCG/P",
-    "frequency": "7145.0000",
-    "mode": "SSB",
-    "reference": "LLFR-0105",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T09:11:07.000Z",
-    "updated_at": "2026-08-29T09:11:07.000Z",
-    "reference_name": "Lac de laguibe",
-    "country_name": "Francia",
-    "history": [
-      {
-        "comment": "QRV 40m atno",
-        "timestamp": "2026-08-29 09:11:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
