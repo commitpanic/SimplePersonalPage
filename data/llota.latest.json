@@ -2,12 +2,12 @@
   {
     "id": 3701,
     "callsign": "CA3LVK",
-    "frequency": "7100.0000",
+    "frequency": "28465.0000",
     "mode": "SSB",
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:08:11.000Z",
-    "updated_at": "2026-08-29T19:19:44.000Z",
+    "updated_at": "2026-08-29T19:35:57.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -28,6 +28,38 @@
         "timestamp": "2026-08-29 19:19:44.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 19:30:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 19:35:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3702,
+    "callsign": "NP4JJ",
+    "frequency": "7.1960",
+    "mode": "SSB",
+    "reference": "LLPR-0053",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T19:35:42.000Z",
+    "updated_at": "2026-08-29T19:35:42.000Z",
+    "reference_name": "Laguna Coloso",
+    "country_name": "Puerto Rico",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 19:35:42.000000",
+        "spotter_callsign": "NP4JJ",
+        "spotter_display_name": "Julian Ortiz"
       }
     ]
   },
@@ -39,7 +71,7 @@
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:00:44.000Z",
-    "updated_at": "2026-08-29T19:18:05.000Z",
+    "updated_at": "2026-08-29T19:28:45.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -58,6 +90,12 @@
       {
         "comment": "Cq cq",
         "timestamp": "2026-08-29 19:18:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Cq cq",
+        "timestamp": "2026-08-29 19:28:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -86,26 +124,6 @@
         "timestamp": "2026-08-29 19:14:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3699,
-    "callsign": "PY3EB",
-    "frequency": "28447.0000",
-    "mode": "SSB",
-    "reference": "LLBR-0131",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T19:01:46.000Z",
-    "updated_at": "2026-08-29T19:01:46.000Z",
-    "reference_name": "Guaíba Margem Leste – Ponta da Cuíca",
-    "country_name": "Brasil",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-29 19:01:46.000000",
-        "spotter_callsign": "PY3EB",
-        "spotter_display_name": "Lauro Alves"
       }
     ]
   }
