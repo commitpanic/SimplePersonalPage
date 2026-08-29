@@ -1,21 +1,21 @@
 [
   {
-    "id": 3677,
-    "callsign": "TA1GRH",
-    "frequency": "14.0740",
-    "mode": "FT8",
-    "reference": "LLTR-0001",
+    "id": 3680,
+    "callsign": "PU3ZS",
+    "frequency": "21.2500",
+    "mode": "SSB",
+    "reference": "LLBR-0092",
     "spotted_by_app": null,
-    "created_at": "2026-08-29T14:10:12.000Z",
-    "updated_at": "2026-08-29T14:10:12.000Z",
-    "reference_name": "Kucukcekmece Lake",
-    "country_name": "Turkey",
+    "created_at": "2026-08-29T14:24:49.000Z",
+    "updated_at": "2026-08-29T14:24:49.000Z",
+    "reference_name": "Lago Guaíba Central",
+    "country_name": "Brasil",
     "history": [
       {
-        "comment": "OnAir Celebration World Lake Day!",
-        "timestamp": "2026-08-29 14:10:12.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
+        "comment": "LLBR-0092, Lago Guaíba Central, Porto Alegre BR-RS, GRID GF49jw",
+        "timestamp": "2026-08-29 14:24:49.000000",
+        "spotter_callsign": "PY3ZS",
+        "spotter_display_name": "Sandro Dumke"
       }
     ]
   },
@@ -27,7 +27,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T13:36:22.000Z",
-    "updated_at": "2026-08-29T14:09:30.000Z",
+    "updated_at": "2026-08-29T14:24:00.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -46,6 +46,90 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-29 14:09:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "OTTIMO SEGNALE IN SICILY",
+        "timestamp": "2026-08-29 14:16:17.000000",
+        "spotter_callsign": "IT9CAR",
+        "spotter_display_name": "Stefano IT9CAR Filoramo"
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 14:20:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 14:24:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3677,
+    "callsign": "TA1GRH",
+    "frequency": "14.0740",
+    "mode": "FT8",
+    "reference": "LLTR-0001",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T14:10:12.000Z",
+    "updated_at": "2026-08-29T14:18:23.000Z",
+    "reference_name": "Kucukcekmece Lake",
+    "country_name": "Turkey",
+    "history": [
+      {
+        "comment": "OnAir Celebration World Lake Day!",
+        "timestamp": "2026-08-29 14:10:12.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
+      },
+      {
+        "comment": "tnx qso. 73 44",
+        "timestamp": "2026-08-29 14:18:23.000000",
+        "spotter_callsign": "EW6GB",
+        "spotter_display_name": "Andrei Khatkevich"
+      }
+    ]
+  },
+  {
+    "id": 3679,
+    "callsign": "HB9CPS/P",
+    "frequency": "14061.0000",
+    "mode": "CW",
+    "reference": "LLCH-0042",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T14:17:56.000Z",
+    "updated_at": "2026-08-29T14:17:56.000Z",
+    "reference_name": "Greifensee",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "QRV LLCH-0042",
+        "timestamp": "2026-08-29 14:17:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3678,
+    "callsign": "ER1SKI/P",
+    "frequency": "14335.0000",
+    "mode": "SSB",
+    "reference": "LLMD-0369",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T14:16:36.000Z",
+    "updated_at": "2026-08-29T14:16:36.000Z",
+    "reference_name": "Lacul Vorniceni",
+    "country_name": "Moldova",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 14:16:36.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
