@@ -7,7 +7,7 @@
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:08:11.000Z",
-    "updated_at": "2026-08-29T19:09:21.000Z",
+    "updated_at": "2026-08-29T19:19:44.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -22,6 +22,12 @@
         "timestamp": "2026-08-29 19:09:21.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 19:19:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -33,7 +39,7 @@
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:00:44.000Z",
-    "updated_at": "2026-08-29T19:09:01.000Z",
+    "updated_at": "2026-08-29T19:18:05.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -48,6 +54,12 @@
         "timestamp": "2026-08-29 19:09:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Cq cq",
+        "timestamp": "2026-08-29 19:18:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -59,13 +71,19 @@
     "reference": "LLUS-0439",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:07:56.000Z",
-    "updated_at": "2026-08-29T19:07:56.000Z",
+    "updated_at": "2026-08-29T19:14:00.000Z",
     "reference_name": "Pymatuning Reservoir (Pymatuning Lake)",
     "country_name": "Estados Unidos",
     "history": [
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 19:07:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRT",
+        "timestamp": "2026-08-29 19:14:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -88,38 +106,6 @@
         "timestamp": "2026-08-29 19:01:46.000000",
         "spotter_callsign": "PY3EB",
         "spotter_display_name": "Lauro Alves"
-      }
-    ]
-  },
-  {
-    "id": 3697,
-    "callsign": "LU1HLX/H",
-    "frequency": "7.1600",
-    "mode": "SSB",
-    "reference": "LLAR-0068",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T18:29:00.000Z",
-    "updated_at": "2026-08-29T18:46:25.000Z",
-    "reference_name": "Dique El Cajón ",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-29 18:29:00.000000",
-        "spotter_callsign": "LU1HLX",
-        "spotter_display_name": "Leonardo Bautista"
-      },
-      {
-        "comment": "59 por Santiago",
-        "timestamp": "2026-08-29 18:38:37.000000",
-        "spotter_callsign": "CE3KTE",
-        "spotter_display_name": "Víctor Münzenmayer A."
-      },
-      {
-        "comment": "5/9  en  FF85hu.                              laboulaye , Cba.    73 & DXs",
-        "timestamp": "2026-08-29 18:46:25.000000",
-        "spotter_callsign": "LU2HW",
-        "spotter_display_name": "Carlos Bidondo"
       }
     ]
   }
