@@ -1,107 +1,13 @@
 [
   {
-    "id": 3701,
-    "callsign": "CA3LVK",
-    "frequency": "7190.0000",
-    "mode": "SSB",
-    "reference": "LLCL-0038",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T19:08:11.000Z",
-    "updated_at": "2026-08-29T20:36:06.000Z",
-    "reference_name": "Laguna de Batuco",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "Cq cq!",
-        "timestamp": "2026-08-29 19:08:11.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 19:09:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 19:19:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 19:30:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 19:35:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 19:51:55.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 20:02:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "59 San Ramón - Santiago. 73s",
-        "timestamp": "2026-08-29 20:17:42.000000",
-        "spotter_callsign": "CE3RIF",
-        "spotter_display_name": "Juan Alejandro Friz Riffo"
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 20:27:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 20:36:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3704,
-    "callsign": "LW5ECI/D",
-    "frequency": "7196.0000",
-    "mode": "SSB",
-    "reference": "LLAR-0374",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T20:35:49.000Z",
-    "updated_at": "2026-08-29T20:35:49.000Z",
-    "reference_name": "Laguna Verde",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-29 20:35:49.000000",
-        "spotter_callsign": "LU2DPW",
-        "spotter_display_name": "Juan Carlos Amado"
-      }
-    ]
-  },
-  {
     "id": 3698,
     "callsign": "CA3BLE",
-    "frequency": "7190.0000",
+    "frequency": "7.1900",
     "mode": "SSB",
     "reference": "LLCL-0038",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T19:00:44.000Z",
-    "updated_at": "2026-08-29T20:35:35.000Z",
+    "updated_at": "2026-08-29T20:46:15.000Z",
     "reference_name": "Laguna de Batuco",
     "country_name": "Chile",
     "history": [
@@ -176,6 +82,112 @@
         "timestamp": "2026-08-29 20:35:35.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "GRACIAS X QSO 73",
+        "timestamp": "2026-08-29 20:46:15.000000",
+        "spotter_callsign": "LU2DPW",
+        "spotter_display_name": "Juan Carlos Amado"
+      }
+    ]
+  },
+  {
+    "id": 3701,
+    "callsign": "CA3LVK",
+    "frequency": "7.1900",
+    "mode": "SSB",
+    "reference": "LLCL-0038",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T19:08:11.000Z",
+    "updated_at": "2026-08-29T20:45:36.000Z",
+    "reference_name": "Laguna de Batuco",
+    "country_name": "Chile",
+    "history": [
+      {
+        "comment": "Cq cq!",
+        "timestamp": "2026-08-29 19:08:11.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 19:09:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 19:19:44.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 19:30:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 19:35:57.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 19:51:55.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 20:02:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "59 San Ramón - Santiago. 73s",
+        "timestamp": "2026-08-29 20:17:42.000000",
+        "spotter_callsign": "CE3RIF",
+        "spotter_display_name": "Juan Alejandro Friz Riffo"
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 20:27:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrv",
+        "timestamp": "2026-08-29 20:36:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "GRACIAS X QSO 73",
+        "timestamp": "2026-08-29 20:45:36.000000",
+        "spotter_callsign": "LU2DPW",
+        "spotter_display_name": "Juan Carlos Amado"
+      }
+    ]
+  },
+  {
+    "id": 3704,
+    "callsign": "LW5ECI/D",
+    "frequency": "7196.0000",
+    "mode": "SSB",
+    "reference": "LLAR-0374",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T20:35:49.000Z",
+    "updated_at": "2026-08-29T20:35:49.000Z",
+    "reference_name": "Laguna Verde",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 20:35:49.000000",
+        "spotter_callsign": "LU2DPW",
+        "spotter_display_name": "Juan Carlos Amado"
       }
     ]
   },
