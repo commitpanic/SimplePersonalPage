@@ -1,5 +1,75 @@
 [
   {
+    "id": 3695,
+    "callsign": "CA3LVK",
+    "frequency": "7.1000",
+    "mode": "SSB",
+    "reference": "LLCL-0038",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T18:07:59.000Z",
+    "updated_at": "2026-08-29T18:33:17.000Z",
+    "reference_name": "Laguna de Batuco",
+    "country_name": "Chile",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 18:07:59.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 18:15:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 18:26:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 18:29:08.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "59, 73",
+        "timestamp": "2026-08-29 18:31:39.000000",
+        "spotter_callsign": "CA4FTK",
+        "spotter_display_name": "Oscar López"
+      },
+      {
+        "comment": "59+20",
+        "timestamp": "2026-08-29 18:33:17.000000",
+        "spotter_callsign": "CE3KTE",
+        "spotter_display_name": "Víctor Münzenmayer A."
+      }
+    ]
+  },
+  {
+    "id": 3697,
+    "callsign": "LU1HLX/H",
+    "frequency": "7160.0000",
+    "mode": "SSB",
+    "reference": "LLAR-0068",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T18:29:00.000Z",
+    "updated_at": "2026-08-29T18:29:00.000Z",
+    "reference_name": "Dique El Cajón ",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 18:29:00.000000",
+        "spotter_callsign": "LU1HLX",
+        "spotter_display_name": "Leonardo Bautista"
+      }
+    ]
+  },
+  {
     "id": 3696,
     "callsign": "N3T",
     "frequency": "21336.0000",
@@ -16,52 +86,6 @@
         "timestamp": "2026-08-29 18:19:23.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3695,
-    "callsign": "CA3LVK",
-    "frequency": "28433.0000",
-    "mode": "SSB",
-    "reference": "LLCL-0038",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T18:07:59.000Z",
-    "updated_at": "2026-08-29T18:15:30.000Z",
-    "reference_name": "Laguna de Batuco",
-    "country_name": "Chile",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 18:07:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 18:15:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3694,
-    "callsign": "LU6HL/H",
-    "frequency": "7.2000",
-    "mode": "SSB",
-    "reference": "LLAR-0133",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T18:00:47.000Z",
-    "updated_at": "2026-08-29T18:00:47.000Z",
-    "reference_name": "Embalse La Viña",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "73",
-        "timestamp": "2026-08-29 18:00:47.000000",
-        "spotter_callsign": "CA4FTK",
-        "spotter_display_name": "Oscar López"
       }
     ]
   }
