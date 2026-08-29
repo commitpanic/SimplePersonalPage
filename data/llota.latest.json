@@ -1,39 +1,13 @@
 [
   {
-    "id": 3686,
-    "callsign": "LU1HL/H",
-    "frequency": "7.1500",
-    "mode": "SSB",
-    "reference": "LLAR-0163",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T15:09:11.000Z",
-    "updated_at": "2026-08-29T15:12:15.000Z",
-    "reference_name": "dique La quebrada ",
-    "country_name": "Argentina",
-    "history": [
-      {
-        "comment": "Cq cq 2 ops LU1HIP/H",
-        "timestamp": "2026-08-29 15:09:11.000000",
-        "spotter_callsign": "CA3LVK",
-        "spotter_display_name": "Nelson Lopez V."
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 15:12:15.000000",
-        "spotter_callsign": "LU4FRN",
-        "spotter_display_name": "Ricardo Nelli"
-      }
-    ]
-  },
-  {
     "id": 3684,
     "callsign": "DK5CR",
-    "frequency": "7035.0000",
+    "frequency": "7036.0000",
     "mode": "CW",
     "reference": "LLDE-0004",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T15:00:35.000Z",
-    "updated_at": "2026-08-29T15:10:32.000Z",
+    "updated_at": "2026-08-29T15:21:35.000Z",
     "reference_name": "Obersee Bielefeld",
     "country_name": "Germany",
     "history": [
@@ -72,6 +46,70 @@
         "timestamp": "2026-08-29 15:10:32.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QSY cw",
+        "timestamp": "2026-08-29 15:21:04.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Cw",
+        "timestamp": "2026-08-29 15:21:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3687,
+    "callsign": "LU2AOG/D",
+    "frequency": "7.1330",
+    "mode": "SSB",
+    "reference": "LLAR-0030",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T15:15:28.000Z",
+    "updated_at": "2026-08-29T15:19:28.000Z",
+    "reference_name": "Laguna de Monte",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 15:15:28.000000",
+        "spotter_callsign": "LU2AOG",
+        "spotter_display_name": "Ariel Gentile"
+      },
+      {
+        "comment": "5/8  en    FF85hu.                            Laboulaye , Cba  73 & DXs",
+        "timestamp": "2026-08-29 15:19:28.000000",
+        "spotter_callsign": "LU2HW",
+        "spotter_display_name": "Carlos Bidondo"
+      }
+    ]
+  },
+  {
+    "id": 3686,
+    "callsign": "LU1HL/H",
+    "frequency": "7.1500",
+    "mode": "SSB",
+    "reference": "LLAR-0163",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T15:09:11.000Z",
+    "updated_at": "2026-08-29T15:12:15.000Z",
+    "reference_name": "dique La quebrada ",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "Cq cq 2 ops LU1HIP/H",
+        "timestamp": "2026-08-29 15:09:11.000000",
+        "spotter_callsign": "CA3LVK",
+        "spotter_display_name": "Nelson Lopez V."
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-29 15:12:15.000000",
+        "spotter_callsign": "LU4FRN",
+        "spotter_display_name": "Ricardo Nelli"
       }
     ]
   },
