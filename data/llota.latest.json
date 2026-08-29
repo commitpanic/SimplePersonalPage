@@ -1,5 +1,37 @@
 [
   {
+    "id": 3659,
+    "callsign": "EA3JAQ",
+    "frequency": "14303.0000",
+    "mode": "SSB",
+    "reference": "LLES-0284",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T10:28:32.000Z",
+    "updated_at": "2026-08-29T10:48:12.000Z",
+    "reference_name": "Llac Petit",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 10:28:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 10:35:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 10:48:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3657,
     "callsign": "YU1FWX",
     "frequency": "14284.0000",
@@ -20,32 +52,6 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-29 10:38:28.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3659,
-    "callsign": "EA3JAQ",
-    "frequency": "7177.0000",
-    "mode": "SSB",
-    "reference": "LLES-0284",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T10:28:32.000Z",
-    "updated_at": "2026-08-29T10:35:13.000Z",
-    "reference_name": "Llac Petit",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 10:28:32.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 10:35:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -174,50 +180,6 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 10:19:23.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3652,
-    "callsign": "YT3SM",
-    "frequency": "14263.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T09:30:34.000Z",
-    "updated_at": "2026-08-29T10:17:50.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 09:30:34.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 09:42:28.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrv",
-        "timestamp": "2026-08-29 09:59:42.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 10:06:20.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-29 10:17:50.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
