@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3689,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "7134.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0104",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T16:39:14.000Z",
+    "updated_at": "2026-08-29T16:39:14.000Z",
+    "reference_name": "Lac du Bocau Nord",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 16:39:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
