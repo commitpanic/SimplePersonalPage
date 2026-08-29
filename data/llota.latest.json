@@ -7,7 +7,7 @@
     "reference": "LLCH-0100",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T07:37:15.000Z",
-    "updated_at": "2026-08-29T07:47:30.000Z",
+    "updated_at": "2026-08-29T08:19:00.000Z",
     "reference_name": "Étang du Bois des Mouilles",
     "country_name": "Switzerland",
     "history": [
@@ -22,70 +22,22 @@
         "timestamp": "2026-08-29 07:47:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3637,
-    "callsign": "EA2CCG/P",
-    "frequency": "7164.0000",
-    "mode": "SSB",
-    "reference": "LLFR-0101",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T07:45:15.000Z",
-    "updated_at": "2026-08-29T07:45:15.000Z",
-    "reference_name": "etang de beyres ",
-    "country_name": "Francia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 07:45:15.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3634,
-    "callsign": "CS7BHA/P",
-    "frequency": "14.3170",
-    "mode": "SSB",
-    "reference": "LLPT-0084",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T07:19:25.000Z",
-    "updated_at": "2026-08-29T07:39:46.000Z",
-    "reference_name": "Ria Formosa",
-    "country_name": "Portugal",
-    "history": [
-      {
-        "comment": "CQ,cq",
-        "timestamp": "2026-08-29 07:19:25.000000",
-        "spotter_callsign": "CS7BHA",
-        "spotter_display_name": "Helder Chaves"
       },
       {
-        "comment": null,
-        "timestamp": "2026-08-29 07:39:46.000000",
-        "spotter_callsign": "CS7BHA",
-        "spotter_display_name": "Helder Chaves"
-      }
-    ]
-  },
-  {
-    "id": 3635,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0004",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T07:35:33.000Z",
-    "updated_at": "2026-08-29T07:35:33.000Z",
-    "reference_name": "Lacul de acumulare Ghidighici (Marea Chișinăului)",
-    "country_name": "Moldova",
-    "history": [
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 07:58:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 07:35:33.000000",
+        "timestamp": "2026-08-29 08:08:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 08:19:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -99,7 +51,7 @@
     "reference": "LLCH-0002",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T07:10:06.000Z",
-    "updated_at": "2026-08-29T07:34:11.000Z",
+    "updated_at": "2026-08-29T08:14:42.000Z",
     "reference_name": "Lake Geneva",
     "country_name": "Switzerland",
     "history": [
@@ -120,6 +72,78 @@
         "timestamp": "2026-08-29 07:34:11.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "LLOTA POTA",
+        "timestamp": "2026-08-29 08:01:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "LLOTA POTA",
+        "timestamp": "2026-08-29 08:14:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3640,
+    "callsign": "EA1FMF",
+    "frequency": "7105.0000",
+    "mode": "SSB",
+    "reference": "LLES-0620",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T08:11:22.000Z",
+    "updated_at": "2026-08-29T08:11:22.000Z",
+    "reference_name": "Mina Fontoria",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-29 08:11:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3639,
+    "callsign": "F/EA2CCG/P",
+    "frequency": "7176.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0101",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T08:09:56.000Z",
+    "updated_at": "2026-08-29T08:09:56.000Z",
+    "reference_name": "etang de beyres ",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "QSY here squi",
+        "timestamp": "2026-08-29 08:09:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3638,
+    "callsign": "F8GGZ/P",
+    "frequency": "7.0150",
+    "mode": "CW",
+    "reference": "LLFR-0099",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T08:09:37.000Z",
+    "updated_at": "2026-08-29T08:09:37.000Z",
+    "reference_name": "Etang Sauvage",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 08:09:37.000000",
+        "spotter_callsign": "G4NAQ",
+        "spotter_display_name": "Clive Maby"
       }
     ]
   }
