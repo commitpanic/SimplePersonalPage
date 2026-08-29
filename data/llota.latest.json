@@ -1,21 +1,53 @@
 [
   {
-    "id": 3680,
-    "callsign": "PU3ZS",
-    "frequency": "21.2500",
-    "mode": "SSB",
-    "reference": "LLBR-0092",
-    "spotted_by_app": null,
-    "created_at": "2026-08-29T14:24:49.000Z",
-    "updated_at": "2026-08-29T14:24:49.000Z",
-    "reference_name": "Lago Guaíba Central",
-    "country_name": "Brasil",
+    "id": 3677,
+    "callsign": "TA1GRH",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLTR-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T14:10:12.000Z",
+    "updated_at": "2026-08-29T14:36:41.000Z",
+    "reference_name": "Kucukcekmece Lake",
+    "country_name": "Turkey",
     "history": [
       {
-        "comment": "LLBR-0092, Lago Guaíba Central, Porto Alegre BR-RS, GRID GF49jw",
-        "timestamp": "2026-08-29 14:24:49.000000",
-        "spotter_callsign": "PY3ZS",
-        "spotter_display_name": "Sandro Dumke"
+        "comment": "OnAir Celebration World Lake Day!",
+        "timestamp": "2026-08-29 14:10:12.000000",
+        "spotter_callsign": "TA1GRH",
+        "spotter_display_name": "GURHAN  HEKIM"
+      },
+      {
+        "comment": "tnx qso. 73 44",
+        "timestamp": "2026-08-29 14:18:23.000000",
+        "spotter_callsign": "EW6GB",
+        "spotter_display_name": "Andrei Khatkevich"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 14:36:41.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3682,
+    "callsign": "LU2AOG/D",
+    "frequency": "7.1330",
+    "mode": "SSB",
+    "reference": "LLAR-0030",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T14:35:07.000Z",
+    "updated_at": "2026-08-29T14:35:07.000Z",
+    "reference_name": "Laguna de Monte",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 14:35:07.000000",
+        "spotter_callsign": "LU2AOG",
+        "spotter_display_name": "Ariel Gentile"
       }
     ]
   },
@@ -27,7 +59,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T13:36:22.000Z",
-    "updated_at": "2026-08-29T14:24:00.000Z",
+    "updated_at": "2026-08-29T14:34:31.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -66,32 +98,52 @@
         "timestamp": "2026-08-29 14:24:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 14:34:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3677,
-    "callsign": "TA1GRH",
+    "id": 3681,
+    "callsign": "F1LPT/P",
     "frequency": "14.0740",
     "mode": "FT8",
-    "reference": "LLTR-0001",
+    "reference": "LLFR-0040",
     "spotted_by_app": null,
-    "created_at": "2026-08-29T14:10:12.000Z",
-    "updated_at": "2026-08-29T14:18:23.000Z",
-    "reference_name": "Kucukcekmece Lake",
-    "country_name": "Turkey",
+    "created_at": "2026-08-29T14:32:02.000Z",
+    "updated_at": "2026-08-29T14:32:02.000Z",
+    "reference_name": "Etang du fer à Cheval",
+    "country_name": "Francia",
     "history": [
       {
-        "comment": "OnAir Celebration World Lake Day!",
-        "timestamp": "2026-08-29 14:10:12.000000",
-        "spotter_callsign": "TA1GRH",
-        "spotter_display_name": "GURHAN  HEKIM"
-      },
+        "comment": "",
+        "timestamp": "2026-08-29 14:32:02.000000",
+        "spotter_callsign": "F1LPT",
+        "spotter_display_name": "Patrick Skibinski"
+      }
+    ]
+  },
+  {
+    "id": 3680,
+    "callsign": "PU3ZS",
+    "frequency": "21.2500",
+    "mode": "SSB",
+    "reference": "LLBR-0092",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T14:24:49.000Z",
+    "updated_at": "2026-08-29T14:24:49.000Z",
+    "reference_name": "Lago Guaíba Central",
+    "country_name": "Brasil",
+    "history": [
       {
-        "comment": "tnx qso. 73 44",
-        "timestamp": "2026-08-29 14:18:23.000000",
-        "spotter_callsign": "EW6GB",
-        "spotter_display_name": "Andrei Khatkevich"
+        "comment": "LLBR-0092, Lago Guaíba Central, Porto Alegre BR-RS, GRID GF49jw",
+        "timestamp": "2026-08-29 14:24:49.000000",
+        "spotter_callsign": "PY3ZS",
+        "spotter_display_name": "Sandro Dumke"
       }
     ]
   },
@@ -130,56 +182,6 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-29 14:16:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3676,
-    "callsign": "YT3IN",
-    "frequency": "14343.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0007",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T13:40:36.000Z",
-    "updated_at": "2026-08-29T14:03:29.000Z",
-    "reference_name": "Bovansko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:40:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:41:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:44:07.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 13:52:06.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Tnx QSO!",
-        "timestamp": "2026-08-29 13:54:45.000000",
-        "spotter_callsign": "EW6GB",
-        "spotter_display_name": "Andrei Khatkevich"
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 14:03:29.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
