@@ -2,12 +2,12 @@
   {
     "id": 3659,
     "callsign": "EA3JAQ",
-    "frequency": "14303.0000",
+    "frequency": "7160.0000",
     "mode": "SSB",
     "reference": "LLES-0284",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T10:28:32.000Z",
-    "updated_at": "2026-08-29T10:48:12.000Z",
+    "updated_at": "2026-08-29T11:14:07.000Z",
     "reference_name": "Llac Petit",
     "country_name": "España",
     "history": [
@@ -28,118 +28,16 @@
         "timestamp": "2026-08-29 10:48:12.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3657,
-    "callsign": "YU1FWX",
-    "frequency": "14284.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T10:19:47.000Z",
-    "updated_at": "2026-08-29T10:38:28.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
+      },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 10:19:47.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-29 11:11:10.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
         "comment": "QRV",
-        "timestamp": "2026-08-29 10:38:28.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3650,
-    "callsign": "EA4IWX",
-    "frequency": "7194.0000",
-    "mode": "SSB",
-    "reference": "LLES-0193",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T09:23:52.000Z",
-    "updated_at": "2026-08-29T10:34:58.000Z",
-    "reference_name": "Embalse de Santillana",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRV ES-0154 LLES-0193 DME-28082",
-        "timestamp": "2026-08-29 09:23:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "57 con qsb 73",
-        "timestamp": "2026-08-29 09:32:28.000000",
-        "spotter_callsign": "EB1FE",
-        "spotter_display_name": "JOSE"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 09:55:15.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "575 QRM TNX",
-        "timestamp": "2026-08-29 10:03:03.000000",
-        "spotter_callsign": "EA2EZ",
-        "spotter_display_name": "Vicente martin"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-29 10:14:22.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-29 10:34:58.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3655,
-    "callsign": "EA4IFN",
-    "frequency": "14275.0000",
-    "mode": "SSB",
-    "reference": "LLES-0321",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T10:15:57.000Z",
-    "updated_at": "2026-08-29T10:31:41.000Z",
-    "reference_name": "Embalse del Montoro",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-29 10:15:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "qsy",
-        "timestamp": "2026-08-29 10:20:49.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Muchas gracias por el contacto Jesus.73,s",
-        "timestamp": "2026-08-29 10:30:58.000000",
-        "spotter_callsign": "EA3IWI",
-        "spotter_display_name": "Jose Antonio Costa Hernandez"
-      },
-      {
-        "comment": "qrv",
-        "timestamp": "2026-08-29 10:31:41.000000",
+        "timestamp": "2026-08-29 11:14:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
