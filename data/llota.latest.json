@@ -2,12 +2,12 @@
   {
     "id": 3676,
     "callsign": "YT3IN",
-    "frequency": "14305.0000",
+    "frequency": "14.3430",
     "mode": "SSB",
     "reference": "LLRS-0007",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-29T13:40:36.000Z",
-    "updated_at": "2026-08-29T13:44:07.000Z",
+    "updated_at": "2026-08-29T13:54:45.000Z",
     "reference_name": "Bovansko jezero",
     "country_name": "Serbia",
     "history": [
@@ -28,6 +28,18 @@
         "timestamp": "2026-08-29 13:44:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 13:52:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Tnx QSO!",
+        "timestamp": "2026-08-29 13:54:45.000000",
+        "spotter_callsign": "EW6GB",
+        "spotter_display_name": "Andrei Khatkevich"
       }
     ]
   },
