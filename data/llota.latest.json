@@ -1,5 +1,65 @@
 [
   {
+    "id": 3646,
+    "callsign": "ER1SKI/P",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0764",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T08:57:48.000Z",
+    "updated_at": "2026-08-29T08:57:48.000Z",
+    "reference_name": "Lacul Verde",
+    "country_name": "Moldova",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 08:57:48.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3645,
+    "callsign": "SP4VIT",
+    "frequency": "7196.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0234",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-29T08:56:23.000Z",
+    "updated_at": "2026-08-29T08:56:23.000Z",
+    "reference_name": "Jezioro Kolno",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-29 08:56:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3644,
+    "callsign": "E75HZ",
+    "frequency": "7.1420",
+    "mode": "SSB",
+    "reference": "LLBA-0008",
+    "spotted_by_app": null,
+    "created_at": "2026-08-29T08:53:09.000Z",
+    "updated_at": "2026-08-29T08:53:09.000Z",
+    "reference_name": "Bara \"Gazda Ilje Polje\"",
+    "country_name": "Bosnia",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-29 08:53:09.000000",
+        "spotter_callsign": "E75HZ",
+        "spotter_display_name": "Husein (MIKI) Zolotic"
+      }
+    ]
+  },
+  {
     "id": 3642,
     "callsign": "EA4IFN",
     "frequency": "7121.0000",
@@ -156,32 +216,6 @@
         "timestamp": "2026-08-29 08:35:47.000000",
         "spotter_callsign": "SP3OTZ",
         "spotter_display_name": "Jacek"
-      }
-    ]
-  },
-  {
-    "id": 3640,
-    "callsign": "EA1FMF",
-    "frequency": "7105.0000",
-    "mode": "SSB",
-    "reference": "LLES-0620",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-29T08:11:22.000Z",
-    "updated_at": "2026-08-29T08:22:57.000Z",
-    "reference_name": "Mina Fontoria",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-29 08:11:22.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT 40",
-        "timestamp": "2026-08-29 08:22:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       }
     ]
   }
