@@ -1,5 +1,123 @@
 [
   {
+    "id": 3761,
+    "callsign": "E75HZ",
+    "frequency": "14.3040",
+    "mode": "SSB",
+    "reference": "LLBA-0008",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T16:11:39.000Z",
+    "updated_at": "2026-08-30T16:11:39.000Z",
+    "reference_name": "Bara \"Gazda Ilje Polje\"",
+    "country_name": "Bosnia",
+    "history": [
+      {
+        "comment": "Call cq",
+        "timestamp": "2026-08-30 16:11:39.000000",
+        "spotter_callsign": "E75HZ",
+        "spotter_display_name": "Husein (MIKI) Zolotic"
+      }
+    ]
+  },
+  {
+    "id": 3757,
+    "callsign": "SQ9SZ",
+    "frequency": "7074.0000",
+    "mode": "FT8",
+    "reference": "LLPL-0098",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T15:54:17.000Z",
+    "updated_at": "2026-08-30T16:09:45.000Z",
+    "reference_name": "Jezioro Farskie",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "FT4/FT8 QRP",
+        "timestamp": "2026-08-30 15:54:17.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 16:09:45.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      }
+    ]
+  },
+  {
+    "id": 3760,
+    "callsign": "EA7LHS",
+    "frequency": "7167.0000",
+    "mode": "SSB",
+    "reference": "LLES-0603",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T16:00:17.000Z",
+    "updated_at": "2026-08-30T16:06:42.000Z",
+    "reference_name": "Laguna Grande de Archidona",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 16:00:17.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 16:06:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3756,
+    "callsign": "E75HZ",
+    "frequency": "14.3040",
+    "mode": "SSB",
+    "reference": "LLBA-0008",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T15:53:10.000Z",
+    "updated_at": "2026-08-30T15:59:14.000Z",
+    "reference_name": "Bara \"Gazda Ilje Polje\"",
+    "country_name": "Bosnia",
+    "history": [
+      {
+        "comment": "Call cq",
+        "timestamp": "2026-08-30 15:53:10.000000",
+        "spotter_callsign": "E75HZ",
+        "spotter_display_name": "Husein (MIKI) Zolotic"
+      },
+      {
+        "comment": "Call cq",
+        "timestamp": "2026-08-30 15:59:14.000000",
+        "spotter_callsign": "E75HZ",
+        "spotter_display_name": "Husein (MIKI) Zolotic"
+      }
+    ]
+  },
+  {
+    "id": 3759,
+    "callsign": "EA2CCG/P",
+    "frequency": "7.1590",
+    "mode": "SSB",
+    "reference": "LLES-0156",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T15:57:51.000Z",
+    "updated_at": "2026-08-30T15:57:51.000Z",
+    "reference_name": "Balsa de Oteiza de La Solana",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "SSB",
+        "timestamp": "2026-08-30 15:57:51.000000",
+        "spotter_callsign": "EA5UI",
+        "spotter_display_name": "Jose Luis Hernández"
+      }
+    ]
+  },
+  {
     "id": 3758,
     "callsign": "XE1BLA",
     "frequency": "14190.0000",
@@ -16,46 +134,6 @@
         "timestamp": "2026-08-30 15:56:11.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3757,
-    "callsign": "SQ9SZ",
-    "frequency": "14.0740",
-    "mode": "FT8",
-    "reference": "LLPL-0098",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T15:54:17.000Z",
-    "updated_at": "2026-08-30T15:54:17.000Z",
-    "reference_name": "Jezioro Farskie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "FT4/FT8 QRP",
-        "timestamp": "2026-08-30 15:54:17.000000",
-        "spotter_callsign": "SQ9SZ",
-        "spotter_display_name": "Bernard Petrykowski"
-      }
-    ]
-  },
-  {
-    "id": 3756,
-    "callsign": "E75HZ",
-    "frequency": "14.3040",
-    "mode": "SSB",
-    "reference": "LLBA-0008",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T15:53:10.000Z",
-    "updated_at": "2026-08-30T15:53:10.000Z",
-    "reference_name": "Bara \"Gazda Ilje Polje\"",
-    "country_name": "Bosnia",
-    "history": [
-      {
-        "comment": "Call cq",
-        "timestamp": "2026-08-30 15:53:10.000000",
-        "spotter_callsign": "E75HZ",
-        "spotter_display_name": "Husein (MIKI) Zolotic"
       }
     ]
   }
