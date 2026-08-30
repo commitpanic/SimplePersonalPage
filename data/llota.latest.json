@@ -18,37 +18,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3765,
-    "callsign": "EA1FNT",
-    "frequency": "7.1980",
-    "mode": "SSB",
-    "reference": "LLES-0648",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T17:56:02.000Z",
-    "updated_at": "2026-08-30T18:13:38.000Z",
-    "reference_name": "Lagunas de la Espina",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 17:56:02.000000",
-        "spotter_callsign": "EB4GSN",
-        "spotter_display_name": "Juan Maria Fuentes"
-      },
-      {
-        "comment": "Lakes World Day",
-        "timestamp": "2026-08-30 18:11:10.000000",
-        "spotter_callsign": "EB4GSN",
-        "spotter_display_name": "Juan Maria Fuentes"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-30 18:13:38.000000",
-        "spotter_callsign": "EA5FI",
-        "spotter_display_name": "EA5FI KIKE"
-      }
-    ]
   }
 ]
