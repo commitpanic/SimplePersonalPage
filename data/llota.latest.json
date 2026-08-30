@@ -2,12 +2,12 @@
   {
     "id": 3742,
     "callsign": "KE8VRW",
-    "frequency": "21320.0000",
+    "frequency": "14293.0000",
     "mode": "SSB",
     "reference": "LLUS-0145",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:10:52.000Z",
-    "updated_at": "2026-08-30T13:12:44.000Z",
+    "updated_at": "2026-08-30T13:23:38.000Z",
     "reference_name": "North Scott Lake",
     "country_name": "Estados Unidos",
     "history": [
@@ -76,6 +76,68 @@
         "timestamp": "2026-08-30 13:12:44.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Trying 20",
+        "timestamp": "2026-08-30 13:23:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3743,
+    "callsign": "YT3IN",
+    "frequency": "21280.0000",
+    "mode": "SSB",
+    "reference": "LLRS-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:13:21.000Z",
+    "updated_at": "2026-08-30T13:21:09.000Z",
+    "reference_name": "Vlasinsko jezero",
+    "country_name": "Serbia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:13:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:23:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:34:47.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:45:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:55:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 13:20:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 13:21:09.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -87,7 +149,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:28:36.000Z",
-    "updated_at": "2026-08-30T13:10:31.000Z",
+    "updated_at": "2026-08-30T13:21:02.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -118,6 +180,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-30 13:10:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 13:21:02.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -200,70 +268,6 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-30 13:01:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3743,
-    "callsign": "YT3IN",
-    "frequency": "14310.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:13:21.000Z",
-    "updated_at": "2026-08-30T12:55:31.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:13:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:23:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:34:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:45:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:55:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3748,
-    "callsign": "SP8ULA/P",
-    "frequency": "7170.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0750",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:54:51.000Z",
-    "updated_at": "2026-08-30T12:54:51.000Z",
-    "reference_name": "Zbiornik Turza",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 12:54:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
