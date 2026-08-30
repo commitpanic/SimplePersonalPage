@@ -1,27 +1,21 @@
 [
   {
-    "id": 3774,
-    "callsign": "LU4SCM/S",
-    "frequency": "7.1350",
+    "id": 3775,
+    "callsign": "CA2EBM",
+    "frequency": "7134.0000",
     "mode": "SSB",
-    "reference": "LLAR-0092",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T20:35:15.000Z",
-    "updated_at": "2026-08-30T20:42:38.000Z",
-    "reference_name": "Dique Los Sauces",
-    "country_name": "Argentina",
+    "reference": "LLCL-0029",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T21:13:31.000Z",
+    "updated_at": "2026-08-30T21:13:31.000Z",
+    "reference_name": "Lago  Peñuelas",
+    "country_name": "Chile",
     "history": [
       {
-        "comment": "QRV cq cq",
-        "timestamp": "2026-08-30 20:35:15.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Muchas Gracias",
-        "timestamp": "2026-08-30 20:42:38.000000",
-        "spotter_callsign": "LU3EAR",
-        "spotter_display_name": "LU3EAR"
+        "comment": "Cq cq!",
+        "timestamp": "2026-08-30 21:13:31.000000",
+        "spotter_callsign": "CA3LVK",
+        "spotter_display_name": "Nelson Lopez V."
       }
     ]
   }
