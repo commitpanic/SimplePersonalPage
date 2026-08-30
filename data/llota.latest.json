@@ -2,12 +2,12 @@
   {
     "id": 3774,
     "callsign": "LU4SCM/S",
-    "frequency": "7135.0000",
+    "frequency": "7.1350",
     "mode": "SSB",
     "reference": "LLAR-0092",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T20:35:15.000Z",
-    "updated_at": "2026-08-30T20:35:15.000Z",
+    "updated_at": "2026-08-30T20:42:38.000Z",
     "reference_name": "Dique Los Sauces",
     "country_name": "Argentina",
     "history": [
@@ -16,6 +16,12 @@
         "timestamp": "2026-08-30 20:35:15.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "Muchas Gracias",
+        "timestamp": "2026-08-30 20:42:38.000000",
+        "spotter_callsign": "LU3EAR",
+        "spotter_display_name": "LU3EAR"
       }
     ]
   },
@@ -36,26 +42,6 @@
         "timestamp": "2026-08-30 20:20:44.000000",
         "spotter_callsign": "LU3EAR",
         "spotter_display_name": "LU3EAR"
-      }
-    ]
-  },
-  {
-    "id": 3772,
-    "callsign": "XE1BLA",
-    "frequency": "21310.0000",
-    "mode": "SSB",
-    "reference": "LLMX-0005",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T20:12:57.000Z",
-    "updated_at": "2026-08-30T20:12:57.000Z",
-    "reference_name": "Lago de Guadalupe",
-    "country_name": "Mexico",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 20:12:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       }
     ]
   }
