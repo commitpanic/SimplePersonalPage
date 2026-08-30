@@ -1,5 +1,25 @@
 [
   {
+    "id": 3766,
+    "callsign": "EA2CCG/P",
+    "frequency": "14336.0000",
+    "mode": "SSB",
+    "reference": "LLES-0156",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T18:32:06.000Z",
+    "updated_at": "2026-08-30T18:32:06.000Z",
+    "reference_name": "Balsa de Oteiza de La Solana",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 18:32:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3765,
     "callsign": "EA1FNT",
     "frequency": "7.1980",
