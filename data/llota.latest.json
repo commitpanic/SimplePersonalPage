@@ -7,7 +7,7 @@
     "reference": "LLRO-0016",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T08:15:18.000Z",
-    "updated_at": "2026-08-30T09:28:30.000Z",
+    "updated_at": "2026-08-30T09:39:00.000Z",
     "reference_name": "Lacul Plumbuita",
     "country_name": "Romania",
     "history": [
@@ -64,6 +64,58 @@
         "timestamp": "2026-08-30 09:28:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 3 op LLOTA, POTA, HOTA",
+        "timestamp": "2026-08-30 09:39:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3724,
+    "callsign": "ER1SKI/P",
+    "frequency": "10136.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0606",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T09:38:43.000Z",
+    "updated_at": "2026-08-30T09:38:43.000Z",
+    "reference_name": "Lacul Călărași",
+    "country_name": "Moldova",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 09:38:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3723,
+    "callsign": "EA3JAQ",
+    "frequency": "7131.0000",
+    "mode": "SSB",
+    "reference": "LLES-0413",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T09:35:30.000Z",
+    "updated_at": "2026-08-30T09:37:31.000Z",
+    "reference_name": "Pantano de Can Matlló o Lago del Cisne (Llac del Cigne)",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 09:35:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 09:37:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
@@ -75,7 +127,7 @@
     "reference": "LLCH-0045",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T08:15:25.000Z",
-    "updated_at": "2026-08-30T09:17:45.000Z",
+    "updated_at": "2026-08-30T09:33:29.000Z",
     "reference_name": "Lac Brenet",
     "country_name": "Switzerland",
     "history": [
@@ -126,36 +178,10 @@
         "timestamp": "2026-08-30 09:17:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3715,
-    "callsign": "HB9ITZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLCH-0002",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T08:10:27.000Z",
-    "updated_at": "2026-08-30T09:03:04.000Z",
-    "reference_name": "Lake Geneva",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "POTA LLOTA",
-        "timestamp": "2026-08-30 08:10:27.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "POTA LLOTA",
-        "timestamp": "2026-08-30 08:34:43.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-30 09:03:04.000000",
+        "comment": "QRT 2-fer: LLCH-0045 LLCH-0014",
+        "timestamp": "2026-08-30 09:33:29.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
