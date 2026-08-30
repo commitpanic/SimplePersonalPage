@@ -1,13 +1,59 @@
 [
   {
+    "id": 3735,
+    "callsign": "M1AOB/M",
+    "frequency": "7100.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0021",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:54:31.000Z",
+    "updated_at": "2026-08-30T10:54:31.000Z",
+    "reference_name": "Tamar lakes",
+    "country_name": "England",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 10:54:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3731,
+    "callsign": "YO3DYL",
+    "frequency": "14264.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0004",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:42:37.000Z",
+    "updated_at": "2026-08-30T10:53:10.000Z",
+    "reference_name": "Lacul Tei",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRV 3 ops POTA LLOTA and HOTA ",
+        "timestamp": "2026-08-30 10:42:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 3 ops POTA LLOTA and HOTA ",
+        "timestamp": "2026-08-30 10:53:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3729,
     "callsign": "EA1FNT",
-    "frequency": "14247.0000",
+    "frequency": "7125.0000",
     "mode": "SSB",
     "reference": "LLES-0155",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T10:15:52.000Z",
-    "updated_at": "2026-08-30T10:48:14.000Z",
+    "updated_at": "2026-08-30T10:49:54.000Z",
     "reference_name": "Laguna de El Arenero",
     "country_name": "España",
     "history": [
@@ -44,6 +90,44 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-30 10:48:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 10:49:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:49:30.000000",
+        "spotter_callsign": "EA1FNT",
+        "spotter_display_name": "RUBEN"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 10:49:54.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3734,
+    "callsign": "ER1SKI/P",
+    "frequency": "14235.0000",
+    "mode": "SSB",
+    "reference": "LLMD-0796",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:48:42.000Z",
+    "updated_at": "2026-08-30T10:48:42.000Z",
+    "reference_name": "Lacul Agrefish N1",
+    "country_name": "Moldova",
+    "history": [
+      {
+        "comment": "2-fer: LLMD-0796 LLMD-0671",
+        "timestamp": "2026-08-30 10:48:42.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -118,26 +202,6 @@
         "timestamp": "2026-08-30 10:43:08.000000",
         "spotter_callsign": "SP8ME",
         "spotter_display_name": "Tomasz"
-      }
-    ]
-  },
-  {
-    "id": 3731,
-    "callsign": "YO3DYL",
-    "frequency": "14264.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0004",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T10:42:37.000Z",
-    "updated_at": "2026-08-30T10:42:37.000Z",
-    "reference_name": "Lacul Tei",
-    "country_name": "Romania",
-    "history": [
-      {
-        "comment": "QRV 3 ops POTA LLOTA and HOTA ",
-        "timestamp": "2026-08-30 10:42:37.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       }
     ]
   },
@@ -226,44 +290,6 @@
         "timestamp": "2026-08-30 10:41:46.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3726,
-    "callsign": "EA4IFI",
-    "frequency": "7.1480",
-    "mode": "SSB",
-    "reference": "LLES-0357",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T09:43:08.000Z",
-    "updated_at": "2026-08-30T10:27:44.000Z",
-    "reference_name": "Embalse Azután",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 09:43:08.000000",
-        "spotter_callsign": "EA4IFI",
-        "spotter_display_name": "Miguel R G"
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-30 10:07:34.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "WRK",
-        "timestamp": "2026-08-30 10:21:40.000000",
-        "spotter_callsign": "EA4GSH",
-        "spotter_display_name": "MAZINGER"
-      },
-      {
-        "comment": "Gracias por el contacto  5/7  73`s",
-        "timestamp": "2026-08-30 10:27:44.000000",
-        "spotter_callsign": "EA1PZM",
-        "spotter_display_name": "Manuel Mariano Merino Reguera"
       }
     ]
   }
