@@ -1,145 +1,5 @@
 [
   {
-    "id": 3726,
-    "callsign": "EA4IFI",
-    "frequency": "7148.0000",
-    "mode": "SSB",
-    "reference": "LLES-0357",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T09:43:08.000Z",
-    "updated_at": "2026-08-30T09:43:08.000Z",
-    "reference_name": "Embalse Azután",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 09:43:08.000000",
-        "spotter_callsign": "EA4IFI",
-        "spotter_display_name": "Miguel R G"
-      }
-    ]
-  },
-  {
-    "id": 3725,
-    "callsign": "YO3RAM",
-    "frequency": "14265.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0016",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T09:41:57.000Z",
-    "updated_at": "2026-08-30T09:41:57.000Z",
-    "reference_name": "Lacul Plumbuita",
-    "country_name": "Romania",
-    "history": [
-      {
-        "comment": "QRT TNX 73",
-        "timestamp": "2026-08-30 09:41:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3716,
-    "callsign": "YO3DYL",
-    "frequency": "14265.0000",
-    "mode": "SSB",
-    "reference": "LLRO-0016",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T08:15:18.000Z",
-    "updated_at": "2026-08-30T09:41:47.000Z",
-    "reference_name": "Lacul Plumbuita",
-    "country_name": "Romania",
-    "history": [
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 08:15:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 08:25:57.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 08:36:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 08:46:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 08:57:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 09:07:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 09:18:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Tnx P2P and L2L 73/44 de Patrick F1LPT/P",
-        "timestamp": "2026-08-30 09:25:01.000000",
-        "spotter_callsign": "F1LPT",
-        "spotter_display_name": "Patrick Skibinski"
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 09:28:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV 3 op LLOTA, POTA, HOTA",
-        "timestamp": "2026-08-30 09:39:00.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrt",
-        "timestamp": "2026-08-30 09:41:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3724,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0606",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T09:38:43.000Z",
-    "updated_at": "2026-08-30T09:38:43.000Z",
-    "reference_name": "Lacul Călărași",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 09:38:43.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3723,
     "callsign": "EA3JAQ",
     "frequency": "7131.0000",
@@ -147,7 +7,7 @@
     "reference": "LLES-0413",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T09:35:30.000Z",
-    "updated_at": "2026-08-30T09:37:31.000Z",
+    "updated_at": "2026-08-30T10:16:33.000Z",
     "reference_name": "Pantano de Can Matlló o Lago del Cisne (Llac del Cigne)",
     "country_name": "España",
     "history": [
@@ -162,74 +22,116 @@
         "timestamp": "2026-08-30 09:37:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:00:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:01:30.000000",
+        "spotter_callsign": "EA2CPG",
+        "spotter_display_name": "Pedro Chico"
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:05:53.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:16:33.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3717,
-    "callsign": "HB9ISN/P",
-    "frequency": "7128.0000",
+    "id": 3729,
+    "callsign": "EA1FNT",
+    "frequency": "7125.0000",
     "mode": "SSB",
-    "reference": "LLCH-0045",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T08:15:25.000Z",
-    "updated_at": "2026-08-30T09:33:29.000Z",
-    "reference_name": "Lac Brenet",
-    "country_name": "Switzerland",
+    "reference": "LLES-0155",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T10:15:52.000Z",
+    "updated_at": "2026-08-30T10:15:52.000Z",
+    "reference_name": "Laguna de El Arenero",
+    "country_name": "España",
     "history": [
       {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 08:15:25.000000",
+        "comment": "Día Mundial de los Lagos",
+        "timestamp": "2026-08-30 10:15:52.000000",
+        "spotter_callsign": "EB4GSN",
+        "spotter_display_name": "Juan Maria Fuentes"
+      }
+    ]
+  },
+  {
+    "id": 3728,
+    "callsign": "PY3EB",
+    "frequency": "7.1300",
+    "mode": "SSB",
+    "reference": "LLBR-0131",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T10:12:56.000Z",
+    "updated_at": "2026-08-30T10:12:56.000Z",
+    "reference_name": "Guaíba Margem Leste – Ponta da Cuíca",
+    "country_name": "Brasil",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:12:56.000000",
+        "spotter_callsign": "PY3EB",
+        "spotter_display_name": "Lauro Alves"
+      }
+    ]
+  },
+  {
+    "id": 3727,
+    "callsign": "SP8ULA/P",
+    "frequency": "7130.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0749",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:09:57.000Z",
+    "updated_at": "2026-08-30T10:09:57.000Z",
+    "reference_name": "Zalew Niedźwiadek",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:09:57.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3726,
+    "callsign": "EA4IFI",
+    "frequency": "7.1480",
+    "mode": "SSB",
+    "reference": "LLES-0357",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T09:43:08.000Z",
+    "updated_at": "2026-08-30T10:07:34.000Z",
+    "reference_name": "Embalse Azután",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "",
+        "timestamp": "2026-08-30 09:43:08.000000",
+        "spotter_callsign": "EA4IFI",
+        "spotter_display_name": "Miguel R G"
       },
       {
-        "comment": "QRX strong QRM train track 2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 08:26:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 08:31:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 08:31:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 08:54:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 09:05:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 09:14:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY 2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 09:17:45.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT 2-fer: LLCH-0045 LLCH-0014",
-        "timestamp": "2026-08-30 09:33:29.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": null,
+        "timestamp": "2026-08-30 10:07:34.000000",
+        "spotter_callsign": "EA2CPG",
+        "spotter_display_name": "Pedro Chico"
       }
     ]
   }
