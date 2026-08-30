@@ -62,25 +62,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3754,
-    "callsign": "HB9/ON4AEO",
-    "frequency": "7.1560",
-    "mode": "SSB",
-    "reference": "LLCH-0204",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T15:06:49.000Z",
-    "updated_at": "2026-08-30T15:06:49.000Z",
-    "reference_name": "Lac de Montsalvens",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 15:06:49.000000",
-        "spotter_callsign": "YO6CFB",
-        "spotter_display_name": "Laszlo Bako-Szabo"
-      }
-    ]
   }
 ]
