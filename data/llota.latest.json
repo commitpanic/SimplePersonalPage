@@ -7,7 +7,7 @@
     "reference": "LLRO-0016",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T08:15:18.000Z",
-    "updated_at": "2026-08-30T09:18:00.000Z",
+    "updated_at": "2026-08-30T09:28:30.000Z",
     "reference_name": "Lacul Plumbuita",
     "country_name": "Romania",
     "history": [
@@ -50,6 +50,18 @@
       {
         "comment": "QRV 3 op LLOTA, POTA, HOTA",
         "timestamp": "2026-08-30 09:18:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Tnx P2P and L2L 73/44 de Patrick F1LPT/P",
+        "timestamp": "2026-08-30 09:25:01.000000",
+        "spotter_callsign": "F1LPT",
+        "spotter_display_name": "Patrick Skibinski"
+      },
+      {
+        "comment": "QRV 3 op LLOTA, POTA, HOTA",
+        "timestamp": "2026-08-30 09:28:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -144,66 +156,6 @@
       {
         "comment": "QRT",
         "timestamp": "2026-08-30 09:03:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3722,
-    "callsign": "CS7BHA/P",
-    "frequency": "14310.0000",
-    "mode": "SSB",
-    "reference": "LLPT-0084",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T08:54:05.000Z",
-    "updated_at": "2026-08-30T08:54:05.000Z",
-    "reference_name": "Ria Formosa",
-    "country_name": "Portugal",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 08:54:05.000000",
-        "spotter_callsign": "CS7BHA",
-        "spotter_display_name": "Helder Chaves"
-      }
-    ]
-  },
-  {
-    "id": 3721,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0496",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T08:52:22.000Z",
-    "updated_at": "2026-08-30T08:52:22.000Z",
-    "reference_name": "Lacul Corabliu",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 08:52:22.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3720,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0266",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T08:49:07.000Z",
-    "updated_at": "2026-08-30T08:49:07.000Z",
-    "reference_name": "Lacul Pahome",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 08:49:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
