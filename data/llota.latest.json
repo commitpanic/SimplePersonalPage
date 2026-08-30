@@ -1,39 +1,13 @@
 [
   {
-    "id": 3743,
-    "callsign": "YT3IN",
-    "frequency": "14310.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:13:21.000Z",
-    "updated_at": "2026-08-30T12:23:30.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:13:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:23:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
     "id": 3742,
     "callsign": "KE8VRW",
-    "frequency": "14253.0000",
+    "frequency": "7175.0000",
     "mode": "SSB",
     "reference": "LLUS-0145",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:10:52.000Z",
-    "updated_at": "2026-08-30T12:23:18.000Z",
+    "updated_at": "2026-08-30T12:42:34.000Z",
     "reference_name": "North Scott Lake",
     "country_name": "Estados Unidos",
     "history": [
@@ -52,6 +26,102 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-30 12:23:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:33:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Going hunting ",
+        "timestamp": "2026-08-30 12:36:12.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Back on 40",
+        "timestamp": "2026-08-30 12:42:34.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3745,
+    "callsign": "IU1JHT/P",
+    "frequency": "14335.0000",
+    "mode": "SSB",
+    "reference": "LLIT-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:28:36.000Z",
+    "updated_at": "2026-08-30T12:39:01.000Z",
+    "reference_name": "Lago di Osiglia",
+    "country_name": "Italy",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:28:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:39:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3746,
+    "callsign": "W5USN",
+    "frequency": "3810.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:36:18.000Z",
+    "updated_at": "2026-08-30T12:36:18.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 12:36:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3743,
+    "callsign": "YT3IN",
+    "frequency": "14310.0000",
+    "mode": "SSB",
+    "reference": "LLRS-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:13:21.000Z",
+    "updated_at": "2026-08-30T12:34:47.000Z",
+    "reference_name": "Vlasinsko jezero",
+    "country_name": "Serbia",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:13:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:23:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:34:47.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -98,76 +168,6 @@
       {
         "comment": "QRV",
         "timestamp": "2026-08-30 12:17:02.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3738,
-    "callsign": "W5USN",
-    "frequency": "3810.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0014",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T11:36:22.000Z",
-    "updated_at": "2026-08-30T12:06:05.000Z",
-    "reference_name": "Lake Champlain",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 11:36:22.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:03:09.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QSY",
-        "timestamp": "2026-08-30 12:03:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Qrt",
-        "timestamp": "2026-08-30 12:06:05.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3737,
-    "callsign": "SP4VIT",
-    "frequency": "7142.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0803",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T11:35:40.000Z",
-    "updated_at": "2026-08-30T12:01:44.000Z",
-    "reference_name": "Jezioro Dobellus Duży",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "2-fer: LLPL-0803 LLPL-0804",
-        "timestamp": "2026-08-30 11:35:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-30 11:42:42.000000",
-        "spotter_callsign": "SP8ME",
-        "spotter_display_name": "Tomasz"
-      },
-      {
-        "comment": "QRT 2-fer: LLPL-0803 LLPL-0804",
-        "timestamp": "2026-08-30 12:01:44.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
