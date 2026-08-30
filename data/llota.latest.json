@@ -7,7 +7,7 @@
     "reference": "LLRO-0016",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T08:15:18.000Z",
-    "updated_at": "2026-08-30T08:36:00.000Z",
+    "updated_at": "2026-08-30T08:46:30.000Z",
     "reference_name": "Lacul Plumbuita",
     "country_name": "Romania",
     "history": [
@@ -28,6 +28,32 @@
         "timestamp": "2026-08-30 08:36:00.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QRV 3 op LLOTA, POTA, HOTA",
+        "timestamp": "2026-08-30 08:46:30.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3719,
+    "callsign": "F1LPT/P",
+    "frequency": "7193.0000",
+    "mode": "SSB",
+    "reference": "LLFR-0039",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T08:41:43.000Z",
+    "updated_at": "2026-08-30T08:41:43.000Z",
+    "reference_name": "Etang du Moulin",
+    "country_name": "Francia",
+    "history": [
+      {
+        "comment": "+ POTA  FR-0001",
+        "timestamp": "2026-08-30 08:41:43.000000",
+        "spotter_callsign": "F1LPT",
+        "spotter_display_name": "Patrick Skibinski"
       }
     ]
   },
