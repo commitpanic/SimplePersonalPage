@@ -1,5 +1,25 @@
 [
   {
+    "id": 3774,
+    "callsign": "LU4SCM/S",
+    "frequency": "7135.0000",
+    "mode": "SSB",
+    "reference": "LLAR-0092",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T20:35:15.000Z",
+    "updated_at": "2026-08-30T20:35:15.000Z",
+    "reference_name": "Dique Los Sauces",
+    "country_name": "Argentina",
+    "history": [
+      {
+        "comment": "QRV cq cq",
+        "timestamp": "2026-08-30 20:35:15.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3773,
     "callsign": "LW5ECI/A",
     "frequency": "7.0570",
