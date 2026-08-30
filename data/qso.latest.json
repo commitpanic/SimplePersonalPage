@@ -1,8 +1,96 @@
 {
-  "updatedAt": "2026-08-30T16:25:26.980Z",
+  "updatedAt": "2026-08-30T17:21:51.630Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-08-30T17:06:00.000Z-SP8BIM-80m-LSB",
+      "datetime": "2026-08-30T17:06:00.000Z",
+      "callsign": "SP8BIM",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO11GF",
+      "lat": 51.22916666666667,
+      "lon": 22.541666666666668
+    },
+    {
+      "id": "2026-08-30T16:05:00.000Z-K0V-20m-USB",
+      "datetime": "2026-08-30T16:05:00.000Z",
+      "callsign": "K0V",
+      "band": "20m",
+      "mode": "USB",
+      "country": "United States",
+      "grid": "DN84JB",
+      "lat": 44.0625,
+      "lon": -103.20833333333333
+    },
+    {
+      "id": "2026-08-30T15:59:00.000Z-DL5NEG/P-40m-LSB",
+      "datetime": "2026-08-30T15:59:00.000Z",
+      "callsign": "DL5NEG/P",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Germany",
+      "grid": "JN58HW",
+      "lat": 48.9375,
+      "lon": 10.625
+    },
+    {
+      "id": "2026-08-30T15:56:00.000Z-SP4BAU-40m-LSB",
+      "datetime": "2026-08-30T15:56:00.000Z",
+      "callsign": "SP4BAU",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO13LU",
+      "lat": 53.85416666666667,
+      "lon": 22.958333333333336
+    },
+    {
+      "id": "2026-08-30T15:53:00.000Z-SP9AQQ-40m-LSB",
+      "datetime": "2026-08-30T15:53:00.000Z",
+      "callsign": "SP9AQQ",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "JN99XK",
+      "lat": 49.4375,
+      "lon": 19.958333333333336
+    },
+    {
+      "id": "2026-08-30T15:49:00.000Z-DD6FM/P-40m-LSB",
+      "datetime": "2026-08-30T15:49:00.000Z",
+      "callsign": "DD6FM/P",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Germany",
+      "grid": "JN49AE",
+      "lat": 49.1875,
+      "lon": 8.041666666666666
+    },
+    {
+      "id": "2026-08-30T15:37:00.000Z-DL/SQ8NOD-20m-USB",
+      "datetime": "2026-08-30T15:37:00.000Z",
+      "callsign": "DL/SQ8NOD",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Germany",
+      "grid": "JN48XJ",
+      "lat": 48.395833333333336,
+      "lon": 9.958333333333332
+    },
+    {
+      "id": "2026-08-30T15:36:00.000Z-IU2UDF-20m-USB",
+      "datetime": "2026-08-30T15:36:00.000Z",
+      "callsign": "IU2UDF",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Italy",
+      "grid": "JN45MI",
+      "lat": 45.35416666666667,
+      "lon": 9.041666666666666
+    },
     {
       "id": "2026-08-23T11:24:00.000Z-SQ7SE-40m-LSB",
       "datetime": "2026-08-23T11:24:00.000Z",
