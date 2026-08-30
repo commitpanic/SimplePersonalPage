@@ -1,5 +1,25 @@
 [
   {
+    "id": 3776,
+    "callsign": "4A2MAX",
+    "frequency": "14304.0000",
+    "mode": "SSB",
+    "reference": "LLMX-0001",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T21:20:34.000Z",
+    "updated_at": "2026-08-30T21:20:34.000Z",
+    "reference_name": "Zona de preservación ecologica  Bordo Benito Juárez",
+    "country_name": "Mexico",
+    "history": [
+      {
+        "comment": "Cq cq!",
+        "timestamp": "2026-08-30 21:20:34.000000",
+        "spotter_callsign": "CA3LVK",
+        "spotter_display_name": "Nelson Lopez V."
+      }
+    ]
+  },
+  {
     "id": 3775,
     "callsign": "CA2EBM",
     "frequency": "7134.0000",
