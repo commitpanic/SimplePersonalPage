@@ -2,12 +2,12 @@
   {
     "id": 3752,
     "callsign": "SQ9SZ",
-    "frequency": "14074.0000",
-    "mode": "SSB",
+    "frequency": "14.0740",
+    "mode": "FT8",
     "reference": "LLPL-0098",
     "spotted_by_app": null,
     "created_at": "2026-08-30T14:20:28.000Z",
-    "updated_at": "2026-08-30T14:38:44.000Z",
+    "updated_at": "2026-08-30T14:48:05.000Z",
     "reference_name": "Jezioro Farskie",
     "country_name": "Poland",
     "history": [
@@ -22,32 +22,18 @@
         "timestamp": "2026-08-30 14:38:44.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
-      }
-    ]
-  },
-  {
-    "id": 3751,
-    "callsign": "MM7JNT",
-    "frequency": "14252.0000",
-    "mode": "SSB",
-    "reference": "LLGB-0028",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T14:11:13.000Z",
-    "updated_at": "2026-08-30T14:38:21.000Z",
-    "reference_name": "White Loch",
-    "country_name": "Scotland",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 14:11:13.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 14:38:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": null,
+        "timestamp": "2026-08-30 14:47:57.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 14:48:05.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
       }
     ]
   },
@@ -59,7 +45,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:28:36.000Z",
-    "updated_at": "2026-08-30T14:34:01.000Z",
+    "updated_at": "2026-08-30T14:44:31.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -150,6 +136,58 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-30 14:34:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:44:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3753,
+    "callsign": "KG5LRB",
+    "frequency": "14322.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0037",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T14:40:36.000Z",
+    "updated_at": "2026-08-30T14:40:36.000Z",
+    "reference_name": "Kentucky Lake",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:40:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3751,
+    "callsign": "MM7JNT",
+    "frequency": "14252.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0028",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T14:11:13.000Z",
+    "updated_at": "2026-08-30T14:38:21.000Z",
+    "reference_name": "White Loch",
+    "country_name": "Scotland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:11:13.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:38:21.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
