@@ -7,7 +7,7 @@
     "reference": "LLIT-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:28:36.000Z",
-    "updated_at": "2026-08-30T13:52:21.000Z",
+    "updated_at": "2026-08-30T14:13:01.000Z",
     "reference_name": "Lago di Osiglia",
     "country_name": "Italy",
     "history": [
@@ -74,6 +74,38 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-08-30 13:52:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:02:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:13:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3751,
+    "callsign": "MM7JNT",
+    "frequency": "7165.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0028",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T14:11:13.000Z",
+    "updated_at": "2026-08-30T14:11:13.000Z",
+    "reference_name": "White Loch",
+    "country_name": "Scotland",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 14:11:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -248,198 +280,6 @@
       {
         "comment": "QRT",
         "timestamp": "2026-08-30 13:49:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3750,
-    "callsign": "ER1SKI/P",
-    "frequency": "14275.0000",
-    "mode": "SSB",
-    "reference": "LLMD-0272",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T13:33:07.000Z",
-    "updated_at": "2026-08-30T13:39:59.000Z",
-    "reference_name": "Iazul 2 din Valea Flămânda",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "2-fer: LLMD-0272 LLMD-0222",
-        "timestamp": "2026-08-30 13:33:07.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "2-fer: LLMD-0272 LLMD-0222",
-        "timestamp": "2026-08-30 13:39:59.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3742,
-    "callsign": "KE8VRW",
-    "frequency": "14327.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0145",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:10:52.000Z",
-    "updated_at": "2026-08-30T13:36:04.000Z",
-    "reference_name": "North Scott Lake",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:10:52.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Moving to 20",
-        "timestamp": "2026-08-30 12:19:40.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:23:18.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:33:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Going hunting ",
-        "timestamp": "2026-08-30 12:36:12.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Back on 40",
-        "timestamp": "2026-08-30 12:42:34.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "59 in PA",
-        "timestamp": "2026-08-30 12:45:24.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:54:56.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Hunting ",
-        "timestamp": "2026-08-30 12:55:16.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Try 15",
-        "timestamp": "2026-08-30 13:07:09.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Hunting ",
-        "timestamp": "2026-08-30 13:12:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Trying 20",
-        "timestamp": "2026-08-30 13:23:38.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Looking for new frequency ",
-        "timestamp": "2026-08-30 13:27:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 13:30:51.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-30 13:36:04.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3743,
-    "callsign": "YT3IN",
-    "frequency": "21280.0000",
-    "mode": "SSB",
-    "reference": "LLRS-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:13:21.000Z",
-    "updated_at": "2026-08-30T13:34:43.000Z",
-    "reference_name": "Vlasinsko jezero",
-    "country_name": "Serbia",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:13:21.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:23:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:34:47.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:45:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:55:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 13:20:22.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 13:21:09.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 13:34:43.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
