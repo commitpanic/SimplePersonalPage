@@ -2,12 +2,12 @@
   {
     "id": 3729,
     "callsign": "EA1FNT",
-    "frequency": "7.1250",
+    "frequency": "14247.0000",
     "mode": "SSB",
     "reference": "LLES-0155",
-    "spotted_by_app": null,
+    "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T10:15:52.000Z",
-    "updated_at": "2026-08-30T10:33:04.000Z",
+    "updated_at": "2026-08-30T10:48:14.000Z",
     "reference_name": "Laguna de El Arenero",
     "country_name": "España",
     "history": [
@@ -22,18 +22,82 @@
         "timestamp": "2026-08-30 10:33:04.000000",
         "spotter_callsign": "EA4GSH",
         "spotter_display_name": "MAZINGER"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:42:45.000000",
+        "spotter_callsign": "EB4GSN",
+        "spotter_display_name": "Juan Maria Fuentes"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:42:52.000000",
+        "spotter_callsign": "EA1FNT",
+        "spotter_display_name": "RUBEN"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 10:48:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 10:48:14.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3733,
+    "callsign": "SQ8KJC",
+    "frequency": "7161.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0732",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:47:03.000Z",
+    "updated_at": "2026-08-30T10:47:03.000Z",
+    "reference_name": "Zalew w Brzózie Królewskiej",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:47:03.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3732,
+    "callsign": "YO3RAM",
+    "frequency": "14264.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0004",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:43:32.000Z",
+    "updated_at": "2026-08-30T10:43:32.000Z",
+    "reference_name": "Lacul Tei",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "CQ LLOTA, CQ POTA 3 OP",
+        "timestamp": "2026-08-30 10:43:32.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3727,
     "callsign": "SP8ULA/P",
-    "frequency": "7172.0000",
+    "frequency": "7.1720",
     "mode": "SSB",
     "reference": "LLPL-0749",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T10:09:57.000Z",
-    "updated_at": "2026-08-30T10:28:38.000Z",
+    "updated_at": "2026-08-30T10:43:08.000Z",
     "reference_name": "Zalew Niedźwiadek",
     "country_name": "Poland",
     "history": [
@@ -48,18 +112,44 @@
         "timestamp": "2026-08-30 10:28:38.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:43:08.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tomasz"
+      }
+    ]
+  },
+  {
+    "id": 3731,
+    "callsign": "YO3DYL",
+    "frequency": "14264.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0004",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T10:42:37.000Z",
+    "updated_at": "2026-08-30T10:42:37.000Z",
+    "reference_name": "Lacul Tei",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRV 3 ops POTA LLOTA and HOTA ",
+        "timestamp": "2026-08-30 10:42:37.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3730,
     "callsign": "SP8QC/P",
-    "frequency": "7172.0000",
+    "frequency": "7.1720",
     "mode": "SSB",
     "reference": "LLPL-0749",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T10:28:34.000Z",
-    "updated_at": "2026-08-30T10:28:34.000Z",
+    "updated_at": "2026-08-30T10:42:14.000Z",
     "reference_name": "Zalew Niedźwiadek",
     "country_name": "Poland",
     "history": [
@@ -68,44 +158,12 @@
         "timestamp": "2026-08-30 10:28:34.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3726,
-    "callsign": "EA4IFI",
-    "frequency": "7.1480",
-    "mode": "SSB",
-    "reference": "LLES-0357",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T09:43:08.000Z",
-    "updated_at": "2026-08-30T10:27:44.000Z",
-    "reference_name": "Embalse Azután",
-    "country_name": "España",
-    "history": [
-      {
-        "comment": "",
-        "timestamp": "2026-08-30 09:43:08.000000",
-        "spotter_callsign": "EA4IFI",
-        "spotter_display_name": "Miguel R G"
       },
       {
         "comment": null,
-        "timestamp": "2026-08-30 10:07:34.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "WRK",
-        "timestamp": "2026-08-30 10:21:40.000000",
-        "spotter_callsign": "EA4GSH",
-        "spotter_display_name": "MAZINGER"
-      },
-      {
-        "comment": "Gracias por el contacto  5/7  73`s",
-        "timestamp": "2026-08-30 10:27:44.000000",
-        "spotter_callsign": "EA1PZM",
-        "spotter_display_name": "Manuel Mariano Merino Reguera"
+        "timestamp": "2026-08-30 10:42:14.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tomasz"
       }
     ]
   },
@@ -117,7 +175,7 @@
     "reference": "LLES-0413",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T09:35:30.000Z",
-    "updated_at": "2026-08-30T10:21:27.000Z",
+    "updated_at": "2026-08-30T10:41:46.000Z",
     "reference_name": "Pantano de Can Matlló o Lago del Cisne (Llac del Cigne)",
     "country_name": "España",
     "history": [
@@ -162,26 +220,50 @@
         "timestamp": "2026-08-30 10:21:27.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 10:41:46.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3728,
-    "callsign": "PY3EB",
-    "frequency": "7.1300",
+    "id": 3726,
+    "callsign": "EA4IFI",
+    "frequency": "7.1480",
     "mode": "SSB",
-    "reference": "LLBR-0131",
+    "reference": "LLES-0357",
     "spotted_by_app": null,
-    "created_at": "2026-08-30T10:12:56.000Z",
-    "updated_at": "2026-08-30T10:12:56.000Z",
-    "reference_name": "Guaíba Margem Leste – Ponta da Cuíca",
-    "country_name": "Brasil",
+    "created_at": "2026-08-30T09:43:08.000Z",
+    "updated_at": "2026-08-30T10:27:44.000Z",
+    "reference_name": "Embalse Azután",
+    "country_name": "España",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:12:56.000000",
-        "spotter_callsign": "PY3EB",
-        "spotter_display_name": "Lauro Alves"
+        "comment": "",
+        "timestamp": "2026-08-30 09:43:08.000000",
+        "spotter_callsign": "EA4IFI",
+        "spotter_display_name": "Miguel R G"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-08-30 10:07:34.000000",
+        "spotter_callsign": "EA2CPG",
+        "spotter_display_name": "Pedro Chico"
+      },
+      {
+        "comment": "WRK",
+        "timestamp": "2026-08-30 10:21:40.000000",
+        "spotter_callsign": "EA4GSH",
+        "spotter_display_name": "MAZINGER"
+      },
+      {
+        "comment": "Gracias por el contacto  5/7  73`s",
+        "timestamp": "2026-08-30 10:27:44.000000",
+        "spotter_callsign": "EA1PZM",
+        "spotter_display_name": "Manuel Mariano Merino Reguera"
       }
     ]
   }
