@@ -1,13 +1,97 @@
 [
   {
+    "id": 3747,
+    "callsign": "SP8QC/P",
+    "frequency": "7170.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0750",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:53:42.000Z",
+    "updated_at": "2026-08-30T12:53:42.000Z",
+    "reference_name": "Zbiornik Turza",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 12:53:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3746,
+    "callsign": "W5USN",
+    "frequency": "28450.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:36:18.000Z",
+    "updated_at": "2026-08-30T12:52:43.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-30 12:36:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrt",
+        "timestamp": "2026-08-30 12:46:05.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:52:43.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3745,
+    "callsign": "IU1JHT/P",
+    "frequency": "14335.0000",
+    "mode": "SSB",
+    "reference": "LLIT-0001",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T12:28:36.000Z",
+    "updated_at": "2026-08-30T12:49:31.000Z",
+    "reference_name": "Lago di Osiglia",
+    "country_name": "Italy",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:28:36.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:39:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 12:49:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3742,
     "callsign": "KE8VRW",
     "frequency": "7175.0000",
     "mode": "SSB",
     "reference": "LLUS-0145",
-    "spotted_by_app": "HAM2K",
+    "spotted_by_app": "POTACAT",
     "created_at": "2026-08-30T12:10:52.000Z",
-    "updated_at": "2026-08-30T12:42:34.000Z",
+    "updated_at": "2026-08-30T12:45:24.000Z",
     "reference_name": "North Scott Lake",
     "country_name": "Estados Unidos",
     "history": [
@@ -46,50 +130,10 @@
         "timestamp": "2026-08-30 12:42:34.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3745,
-    "callsign": "IU1JHT/P",
-    "frequency": "14335.0000",
-    "mode": "SSB",
-    "reference": "LLIT-0001",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:28:36.000Z",
-    "updated_at": "2026-08-30T12:39:01.000Z",
-    "reference_name": "Lago di Osiglia",
-    "country_name": "Italy",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:28:36.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:39:01.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3746,
-    "callsign": "W5USN",
-    "frequency": "3810.0000",
-    "mode": "SSB",
-    "reference": "LLUS-0014",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:36:18.000Z",
-    "updated_at": "2026-08-30T12:36:18.000Z",
-    "reference_name": "Lake Champlain",
-    "country_name": "Estados Unidos",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 12:36:18.000000",
+        "comment": "59 in PA",
+        "timestamp": "2026-08-30 12:45:24.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -103,7 +147,7 @@
     "reference": "LLRS-0001",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T12:13:21.000Z",
-    "updated_at": "2026-08-30T12:34:47.000Z",
+    "updated_at": "2026-08-30T12:45:01.000Z",
     "reference_name": "Vlasinsko jezero",
     "country_name": "Serbia",
     "history": [
@@ -124,50 +168,10 @@
         "timestamp": "2026-08-30 12:34:47.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3741,
-    "callsign": "ER1SKI/P",
-    "frequency": "14280.0000",
-    "mode": "SSB",
-    "reference": "LLMD-0282",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:06:49.000Z",
-    "updated_at": "2026-08-30T12:18:15.000Z",
-    "reference_name": "Lacul Șipoteni",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:06:49.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-30 12:18:15.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3744,
-    "callsign": "OE/EI2LH",
-    "frequency": "14267.0000",
-    "mode": "USB",
-    "reference": "LLAT-0005",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T12:17:02.000Z",
-    "updated_at": "2026-08-30T12:17:02.000Z",
-    "reference_name": "Wildsee Lake",
-    "country_name": "Austria",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 12:17:02.000000",
+        "timestamp": "2026-08-30 12:45:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
