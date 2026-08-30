@@ -1,83 +1,101 @@
 [
   {
-    "id": 3713,
-    "callsign": "HB9ITZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLCH-0002",
+    "id": 3718,
+    "callsign": "SP3BLZ",
+    "frequency": "7139.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0704",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T06:44:23.000Z",
-    "updated_at": "2026-08-30T07:36:06.000Z",
-    "reference_name": "Lake Geneva",
-    "country_name": "Switzerland",
+    "created_at": "2026-08-30T08:23:13.000Z",
+    "updated_at": "2026-08-30T08:23:13.000Z",
+    "reference_name": "Jezioro Wielicko",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "QRV POTA LLOTA",
-        "timestamp": "2026-08-30 06:44:23.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "LLOTA POTA",
-        "timestamp": "2026-08-30 06:58:44.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "POTA LLOTA",
-        "timestamp": "2026-08-30 07:08:54.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "LLOTA POTA",
-        "timestamp": "2026-08-30 07:36:06.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 08:23:13.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3711,
-    "callsign": "EA1FMF",
-    "frequency": "7130.0000",
+    "id": 3717,
+    "callsign": "HB9ISN/P",
+    "frequency": "14150.0000",
     "mode": "SSB",
-    "reference": "LLES-0033",
+    "reference": "LLCH-0045",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T06:26:01.000Z",
-    "updated_at": "2026-08-30T07:34:48.000Z",
-    "reference_name": "Pozón de la Yesera",
-    "country_name": "España",
+    "created_at": "2026-08-30T08:15:25.000Z",
+    "updated_at": "2026-08-30T08:15:25.000Z",
+    "reference_name": "Lac Brenet",
+    "country_name": "Switzerland",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 06:26:01.000000",
+        "comment": "2-fer: LLCH-0045 LLCH-0014",
+        "timestamp": "2026-08-30 08:15:25.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      },
+      }
+    ]
+  },
+  {
+    "id": 3716,
+    "callsign": "YO3DYL",
+    "frequency": "14265.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0016",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T08:15:18.000Z",
+    "updated_at": "2026-08-30T08:15:18.000Z",
+    "reference_name": "Lacul Plumbuita",
+    "country_name": "Romania",
+    "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 06:27:46.000000",
+        "comment": "QRV 3 op LLOTA, POTA, HOTA",
+        "timestamp": "2026-08-30 08:15:18.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      },
+      }
+    ]
+  },
+  {
+    "id": 3715,
+    "callsign": "HB9ITZ",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLCH-0002",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T08:10:27.000Z",
+    "updated_at": "2026-08-30T08:10:27.000Z",
+    "reference_name": "Lake Geneva",
+    "country_name": "Switzerland",
+    "history": [
       {
-        "comment": null,
-        "timestamp": "2026-08-30 06:45:39.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 07:07:47.000000",
+        "comment": "POTA LLOTA",
+        "timestamp": "2026-08-30 08:10:27.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      },
+      }
+    ]
+  },
+  {
+    "id": 3714,
+    "callsign": "F1LPT/P",
+    "frequency": "7074.0000",
+    "mode": "FT8",
+    "reference": "LLFR-0039",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T08:07:58.000Z",
+    "updated_at": "2026-08-30T08:07:58.000Z",
+    "reference_name": "Etang du Moulin",
+    "country_name": "Francia",
+    "history": [
       {
-        "comment": "QRT",
-        "timestamp": "2026-08-30 07:34:48.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": "",
+        "timestamp": "2026-08-30 08:07:58.000000",
+        "spotter_callsign": "F1LPT",
+        "spotter_display_name": "Patrick Skibinski"
       }
     ]
   }
