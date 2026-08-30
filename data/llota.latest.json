@@ -1,33 +1,93 @@
 [
   {
-    "id": 3736,
-    "callsign": "SP8BBK",
-    "frequency": "7160.0000",
+    "id": 3740,
+    "callsign": "YO3RAM",
+    "frequency": "14264.0000",
     "mode": "SSB",
-    "reference": "LLPL-0365",
-    "spotted_by_app": null,
-    "created_at": "2026-08-30T11:23:17.000Z",
-    "updated_at": "2026-08-30T11:23:17.000Z",
-    "reference_name": "Zalew Ożanna",
+    "reference": "LLRO-0004",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T11:37:10.000Z",
+    "updated_at": "2026-08-30T11:37:10.000Z",
+    "reference_name": "Lacul Tei",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRT TNX 73",
+        "timestamp": "2026-08-30 11:37:10.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3739,
+    "callsign": "YO3DYL",
+    "frequency": "14264.0000",
+    "mode": "SSB",
+    "reference": "LLRO-0004",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T11:37:06.000Z",
+    "updated_at": "2026-08-30T11:37:06.000Z",
+    "reference_name": "Lacul Tei",
+    "country_name": "Romania",
+    "history": [
+      {
+        "comment": "QRT ",
+        "timestamp": "2026-08-30 11:37:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3738,
+    "callsign": "W5USN",
+    "frequency": "1940.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0014",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T11:36:22.000Z",
+    "updated_at": "2026-08-30T11:36:22.000Z",
+    "reference_name": "Lake Champlain",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 11:36:22.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
+    "id": 3737,
+    "callsign": "SP4VIT",
+    "frequency": "7142.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0803",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-30T11:35:40.000Z",
+    "updated_at": "2026-08-30T11:35:40.000Z",
+    "reference_name": "Jezioro Dobellus Duży",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "PL-0214 LZ03",
-        "timestamp": "2026-08-30 11:23:17.000000",
-        "spotter_callsign": "SQ7RF",
-        "spotter_display_name": "Robert Kucharski"
+        "comment": "2-fer: LLPL-0803 LLPL-0804",
+        "timestamp": "2026-08-30 11:35:40.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
   {
     "id": 3735,
     "callsign": "M1AOB/M",
-    "frequency": "7100.0000",
+    "frequency": "14256.0000",
     "mode": "SSB",
     "reference": "LLGB-0021",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-30T10:54:31.000Z",
-    "updated_at": "2026-08-30T11:12:12.000Z",
+    "updated_at": "2026-08-30T11:30:56.000Z",
     "reference_name": "Tamar lakes",
     "country_name": "England",
     "history": [
@@ -48,100 +108,38 @@
         "timestamp": "2026-08-30 11:12:12.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3734,
-    "callsign": "ER1SKI/P",
-    "frequency": "14080.0000",
-    "mode": "FT4",
-    "reference": "LLMD-0796",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T10:48:42.000Z",
-    "updated_at": "2026-08-30T10:59:53.000Z",
-    "reference_name": "Lacul Agrefish N1",
-    "country_name": "Moldova",
-    "history": [
+      },
       {
-        "comment": "2-fer: LLMD-0796 LLMD-0671",
-        "timestamp": "2026-08-30 10:48:42.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-30 11:29:56.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       },
       {
-        "comment": "2-fer: LLMD-0796 LLMD-0671",
-        "timestamp": "2026-08-30 10:59:53.000000",
+        "comment": "Qrv",
+        "timestamp": "2026-08-30 11:30:56.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3723,
-    "callsign": "EA3JAQ",
-    "frequency": "7125.0000",
+    "id": 3736,
+    "callsign": "SP8BBK",
+    "frequency": "7160.0000",
     "mode": "SSB",
-    "reference": "LLES-0413",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-30T09:35:30.000Z",
-    "updated_at": "2026-08-30T10:59:33.000Z",
-    "reference_name": "Pantano de Can Matlló o Lago del Cisne (Llac del Cigne)",
-    "country_name": "España",
+    "reference": "LLPL-0365",
+    "spotted_by_app": null,
+    "created_at": "2026-08-30T11:23:17.000Z",
+    "updated_at": "2026-08-30T11:23:17.000Z",
+    "reference_name": "Zalew Ożanna",
+    "country_name": "Poland",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 09:35:30.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 09:37:31.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:00:14.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-30 10:01:30.000000",
-        "spotter_callsign": "EA2CPG",
-        "spotter_display_name": "Pedro Chico"
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:05:53.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:16:33.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:21:27.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-30 10:41:46.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-30 10:59:33.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": "PL-0214 LZ03",
+        "timestamp": "2026-08-30 11:23:17.000000",
+        "spotter_callsign": "SQ7RF",
+        "spotter_display_name": "Robert Kucharski"
       }
     ]
   }
