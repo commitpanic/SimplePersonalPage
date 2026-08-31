@@ -2,12 +2,12 @@
   {
     "id": 3790,
     "callsign": "ER1SKI/P",
-    "frequency": "14276.0000",
-    "mode": "SSB",
+    "frequency": "14080.0000",
+    "mode": "FT4",
     "reference": "LLMD-0056",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-31T14:51:30.000Z",
-    "updated_at": "2026-08-31T14:54:06.000Z",
+    "updated_at": "2026-08-31T15:06:07.000Z",
     "reference_name": "Lacul Făgădău N1",
     "country_name": "Moldova",
     "history": [
@@ -20,6 +20,12 @@
       {
         "comment": "QSY 2-fer: LLMD-0056 LLMD-0099",
         "timestamp": "2026-08-31 14:54:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "2-fer: LLMD-0056 LLMD-0099",
+        "timestamp": "2026-08-31 15:06:07.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
