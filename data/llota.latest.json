@@ -2,12 +2,12 @@
   {
     "id": 3783,
     "callsign": "ER1SKI/P",
-    "frequency": "14255.0000",
-    "mode": "SSB",
+    "frequency": "14080.0000",
+    "mode": "FT4",
     "reference": "LLMD-0247",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-31T09:28:18.000Z",
-    "updated_at": "2026-08-31T09:28:18.000Z",
+    "updated_at": "2026-08-31T09:50:45.000Z",
     "reference_name": "Lacul Albinețul",
     "country_name": "Moldova",
     "history": [
@@ -16,86 +16,10 @@
         "timestamp": "2026-08-31 09:28:18.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3780,
-    "callsign": "SP5WPM/P",
-    "frequency": "7166.0000",
-    "mode": "SSB",
-    "reference": "LLPL-0197",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T08:19:48.000Z",
-    "updated_at": "2026-08-31T09:21:37.000Z",
-    "reference_name": "Jezioro Zagrzyńskie",
-    "country_name": "Poland",
-    "history": [
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 08:19:48.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
       },
       {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 08:35:25.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": null,
-        "timestamp": "2026-08-31 08:37:50.000000",
-        "spotter_callsign": "SP8ME",
-        "spotter_display_name": "Tomasz"
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 08:56:25.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 09:12:28.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 09:16:50.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRV",
-        "timestamp": "2026-08-31 09:21:37.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3782,
-    "callsign": "HB9ITZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLCH-0300",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T09:11:34.000Z",
-    "updated_at": "2026-08-31T09:14:19.000Z",
-    "reference_name": "Marais des Crêts",
-    "country_name": "Switzerland",
-    "history": [
-      {
-        "comment": "POTA LLOTA",
-        "timestamp": "2026-08-31 09:11:34.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      },
-      {
-        "comment": "QRT",
-        "timestamp": "2026-08-31 09:14:19.000000",
+        "comment": "QSY",
+        "timestamp": "2026-08-31 09:50:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
