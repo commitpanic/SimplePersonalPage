@@ -1,19 +1,19 @@
 [
   {
-    "id": 3788,
+    "id": 3789,
     "callsign": "ER1SKI/P",
-    "frequency": "18104.0000",
-    "mode": "FT4",
-    "reference": "LLMD-0647",
+    "frequency": "18100.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0021",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T12:51:06.000Z",
-    "updated_at": "2026-08-31T12:51:06.000Z",
-    "reference_name": "Lacul Făleștii Noi N1",
+    "created_at": "2026-08-31T13:34:26.000Z",
+    "updated_at": "2026-08-31T13:34:26.000Z",
+    "reference_name": "Iazul din Sărata Nouă N2",
     "country_name": "Moldova",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 12:51:06.000000",
+        "timestamp": "2026-08-31 13:34:26.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
