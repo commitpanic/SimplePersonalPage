@@ -1,33 +1,61 @@
 [
   {
-    "id": 3777,
-    "callsign": "SP3PSL",
-    "frequency": "7.0830",
+    "id": 3780,
+    "callsign": "SP5WPM/P",
+    "frequency": "7175.0000",
     "mode": "SSB",
-    "reference": "LLPL-0775",
+    "reference": "LLPL-0197",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T06:17:28.000Z",
-    "updated_at": "2026-08-31T06:40:10.000Z",
-    "reference_name": "Jezioro Dominickie ",
+    "created_at": "2026-08-31T08:19:48.000Z",
+    "updated_at": "2026-08-31T08:19:48.000Z",
+    "reference_name": "Jezioro Zagrzyńskie",
     "country_name": "Poland",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 06:17:28.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-31 08:19:48.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      },
+      }
+    ]
+  },
+  {
+    "id": 3779,
+    "callsign": "HB9ITZ",
+    "frequency": "14074.0000",
+    "mode": "FT8",
+    "reference": "LLCH-0300",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-31T08:11:38.000Z",
+    "updated_at": "2026-08-31T08:11:38.000Z",
+    "reference_name": "Marais des Crêts",
+    "country_name": "Switzerland",
+    "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 06:25:31.000000",
+        "comment": "POTA LLOTA",
+        "timestamp": "2026-08-31 08:11:38.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      },
+      }
+    ]
+  },
+  {
+    "id": 3778,
+    "callsign": "ER1SKI/P",
+    "frequency": "10136.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0607",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-31T08:08:35.000Z",
+    "updated_at": "2026-08-31T08:08:35.000Z",
+    "reference_name": "Lacul Comsomolist",
+    "country_name": "Moldova",
+    "history": [
       {
-        "comment": null,
-        "timestamp": "2026-08-31 06:40:10.000000",
-        "spotter_callsign": "EA2EZ",
-        "spotter_display_name": "Vicente martin"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-31 08:08:35.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
