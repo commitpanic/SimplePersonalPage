@@ -1,19 +1,19 @@
 [
   {
-    "id": 3787,
+    "id": 3788,
     "callsign": "ER1SKI/P",
     "frequency": "18104.0000",
     "mode": "FT4",
-    "reference": "LLMD-0692",
+    "reference": "LLMD-0647",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T12:18:22.000Z",
-    "updated_at": "2026-08-31T12:18:22.000Z",
-    "reference_name": "Lacul Făleștii Noi N3",
+    "created_at": "2026-08-31T12:51:06.000Z",
+    "updated_at": "2026-08-31T12:51:06.000Z",
+    "reference_name": "Lacul Făleștii Noi N1",
     "country_name": "Moldova",
     "history": [
       {
         "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 12:18:22.000000",
+        "timestamp": "2026-08-31 12:51:06.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
