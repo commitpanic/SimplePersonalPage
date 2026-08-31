@@ -1,13 +1,33 @@
 [
   {
+    "id": 3781,
+    "callsign": "ER1SKI/P",
+    "frequency": "10136.0000",
+    "mode": "FT8",
+    "reference": "LLMD-0096",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-08-31T08:39:21.000Z",
+    "updated_at": "2026-08-31T08:39:21.000Z",
+    "reference_name": "Lacul Călugăr N1",
+    "country_name": "Moldova",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-08-31 08:39:21.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3780,
     "callsign": "SP5WPM/P",
-    "frequency": "7175.0000",
+    "frequency": "7.1750",
     "mode": "SSB",
     "reference": "LLPL-0197",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-31T08:19:48.000Z",
-    "updated_at": "2026-08-31T08:19:48.000Z",
+    "updated_at": "2026-08-31T08:37:50.000Z",
     "reference_name": "Jezioro Zagrzyńskie",
     "country_name": "Poland",
     "history": [
@@ -16,46 +36,18 @@
         "timestamp": "2026-08-31 08:19:48.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3779,
-    "callsign": "HB9ITZ",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLCH-0300",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T08:11:38.000Z",
-    "updated_at": "2026-08-31T08:11:38.000Z",
-    "reference_name": "Marais des Crêts",
-    "country_name": "Switzerland",
-    "history": [
+      },
       {
-        "comment": "POTA LLOTA",
-        "timestamp": "2026-08-31 08:11:38.000000",
+        "comment": "QRV",
+        "timestamp": "2026-08-31 08:35:25.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3778,
-    "callsign": "ER1SKI/P",
-    "frequency": "10136.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0607",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T08:08:35.000Z",
-    "updated_at": "2026-08-31T08:08:35.000Z",
-    "reference_name": "Lacul Comsomolist",
-    "country_name": "Moldova",
-    "history": [
+      },
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 08:08:35.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
+        "comment": null,
+        "timestamp": "2026-08-31 08:37:50.000000",
+        "spotter_callsign": "SP8ME",
+        "spotter_display_name": "Tomasz"
       }
     ]
   }
