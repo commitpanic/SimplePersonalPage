@@ -2,12 +2,12 @@
   {
     "id": 3784,
     "callsign": "SP5WPM/P",
-    "frequency": "7.1700",
+    "frequency": "7170.0000",
     "mode": "SSB",
     "reference": "LLPL-0197",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-08-31T10:13:02.000Z",
-    "updated_at": "2026-08-31T10:19:54.000Z",
+    "updated_at": "2026-08-31T10:33:42.000Z",
     "reference_name": "Jezioro Zagrzyńskie",
     "country_name": "Poland",
     "history": [
@@ -28,6 +28,12 @@
         "timestamp": "2026-08-31 10:19:54.000000",
         "spotter_callsign": "SP8ME",
         "spotter_display_name": "Tomasz"
+      },
+      {
+        "comment": "QRV",
+        "timestamp": "2026-08-31 10:33:42.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   },
