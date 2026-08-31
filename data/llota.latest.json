@@ -36,25 +36,5 @@
         "spotter_display_name": null
       }
     ]
-  },
-  {
-    "id": 3785,
-    "callsign": "ER1SKI/P",
-    "frequency": "14074.0000",
-    "mode": "FT8",
-    "reference": "LLMD-0028",
-    "spotted_by_app": "HAM2K",
-    "created_at": "2026-08-31T10:15:07.000Z",
-    "updated_at": "2026-08-31T10:15:07.000Z",
-    "reference_name": "Lacul Rediul de Jos",
-    "country_name": "Moldova",
-    "history": [
-      {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-08-31 10:15:07.000000",
-        "spotter_callsign": null,
-        "spotter_display_name": null
-      }
-    ]
   }
 ]
