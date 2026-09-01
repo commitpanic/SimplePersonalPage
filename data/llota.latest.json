@@ -1,5 +1,25 @@
 [
   {
+    "id": 3800,
+    "callsign": "HB9ITZ",
+    "frequency": "7074.0000",
+    "mode": "FT8",
+    "reference": "LLCH-0002",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-01T07:41:06.000Z",
+    "updated_at": "2026-09-01T07:41:06.000Z",
+    "reference_name": "Lake Geneva",
+    "country_name": "Switzerland",
+    "history": [
+      {
+        "comment": "QRV POTA LLOTA",
+        "timestamp": "2026-09-01 07:41:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3799,
     "callsign": "SP3PSL",
     "frequency": "7087.0000",
@@ -7,7 +27,7 @@
     "reference": "LLPL-0765",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-09-01T05:57:24.000Z",
-    "updated_at": "2026-09-01T07:08:56.000Z",
+    "updated_at": "2026-09-01T07:29:51.000Z",
     "reference_name": "Jezioro Łoniewskie",
     "country_name": "Poland",
     "history": [
@@ -32,6 +52,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-09-01 07:08:56.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Qrt",
+        "timestamp": "2026-09-01 07:29:51.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
