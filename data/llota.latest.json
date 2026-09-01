@@ -1,39 +1,39 @@
 [
   {
-    "id": 3803,
-    "callsign": "EA2WX/P",
-    "frequency": "14058.0000",
-    "mode": "CW",
-    "reference": "LLES-0523",
+    "id": 3805,
+    "callsign": "OE/EI2LH",
+    "frequency": "14293.0000",
+    "mode": "SSB",
+    "reference": "LLAT-0005",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-09-01T11:45:59.000Z",
-    "updated_at": "2026-09-01T11:45:59.000Z",
-    "reference_name": "Pantano de Valparaíso",
-    "country_name": "España",
+    "created_at": "2026-09-01T12:28:01.000Z",
+    "updated_at": "2026-09-01T12:28:01.000Z",
+    "reference_name": "Wildsee Lake",
+    "country_name": "Austria",
     "history": [
       {
-        "comment": "Auto-spot from field app",
-        "timestamp": "2026-09-01 11:45:59.000000",
+        "comment": "QSY",
+        "timestamp": "2026-09-01 12:28:01.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
     ]
   },
   {
-    "id": 3802,
-    "callsign": "OE/EI2LH",
-    "frequency": "14170.0000",
-    "mode": "SSB",
-    "reference": "LLAT-0005",
+    "id": 3804,
+    "callsign": "EA2WX/P",
+    "frequency": "14058.0000",
+    "mode": "CW",
+    "reference": "LLES-0523",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-09-01T11:44:01.000Z",
-    "updated_at": "2026-09-01T11:44:01.000Z",
-    "reference_name": "Wildsee Lake",
-    "country_name": "Austria",
+    "created_at": "2026-09-01T12:25:16.000Z",
+    "updated_at": "2026-09-01T12:25:16.000Z",
+    "reference_name": "Pantano de Valparaíso",
+    "country_name": "España",
     "history": [
       {
-        "comment": "QRV",
-        "timestamp": "2026-09-01 11:44:01.000000",
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-01 12:25:16.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
