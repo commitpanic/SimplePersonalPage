@@ -1,19 +1,25 @@
 [
   {
-    "id": 3818,
+    "id": 3819,
     "callsign": "HB9ITZ",
-    "frequency": "21074.0000",
+    "frequency": "14074.0000",
     "mode": "FT8",
     "reference": "LLCH-0002",
     "spotted_by_app": "HAM2K",
-    "created_at": "2026-09-02T07:02:32.000Z",
-    "updated_at": "2026-09-02T07:02:32.000Z",
+    "created_at": "2026-09-02T07:38:23.000Z",
+    "updated_at": "2026-09-02T07:39:22.000Z",
     "reference_name": "Lake Geneva",
     "country_name": "Switzerland",
     "history": [
       {
-        "comment": "QRV POTA LLOTA",
-        "timestamp": "2026-09-02 07:02:32.000000",
+        "comment": "POTA LLOTA",
+        "timestamp": "2026-09-02 07:38:23.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "QSY POTA LLOTA",
+        "timestamp": "2026-09-02 07:39:22.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
@@ -27,7 +33,7 @@
     "reference": "LLIT-0006",
     "spotted_by_app": null,
     "created_at": "2026-09-02T06:08:42.000Z",
-    "updated_at": "2026-09-02T07:02:01.000Z",
+    "updated_at": "2026-09-02T07:29:54.000Z",
     "reference_name": "Lago Trasimeno",
     "country_name": "Italy",
     "history": [
@@ -46,6 +52,12 @@
       {
         "comment": "5W",
         "timestamp": "2026-09-02 07:02:01.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      },
+      {
+        "comment": "5W",
+        "timestamp": "2026-09-02 07:29:54.000000",
         "spotter_callsign": "IW0RGX",
         "spotter_display_name": "Massimigliano (Max)"
       }
