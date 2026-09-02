@@ -7,7 +7,7 @@
     "reference": "LLES-0533",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-09-02T17:37:06.000Z",
-    "updated_at": "2026-09-02T17:47:30.000Z",
+    "updated_at": "2026-09-02T17:58:00.000Z",
     "reference_name": "Laguna salada de Pétrola",
     "country_name": "España",
     "history": [
@@ -22,26 +22,12 @@
         "timestamp": "2026-09-02 17:47:30.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
-      }
-    ]
-  },
-  {
-    "id": 3823,
-    "callsign": "SQ7SAX/P",
-    "frequency": "7.1410",
-    "mode": "SSB",
-    "reference": "LLPL-0004",
-    "spotted_by_app": null,
-    "created_at": "2026-09-02T17:21:19.000Z",
-    "updated_at": "2026-09-02T17:21:19.000Z",
-    "reference_name": "Zatoka Pucka Zewnętrzna",
-    "country_name": "Poland",
-    "history": [
+      },
       {
-        "comment": "Spff, pota.",
-        "timestamp": "2026-09-02 17:21:19.000000",
-        "spotter_callsign": "SQ7SAX",
-        "spotter_display_name": "Piotr Osiewalski"
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-02 17:58:00.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
