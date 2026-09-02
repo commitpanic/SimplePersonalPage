@@ -1,5 +1,25 @@
 [
   {
+    "id": 3824,
+    "callsign": "EA5KDS",
+    "frequency": "7161.0000",
+    "mode": "SSB",
+    "reference": "LLES-0533",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-02T17:37:06.000Z",
+    "updated_at": "2026-09-02T17:37:06.000Z",
+    "reference_name": "Laguna salada de Pétrola",
+    "country_name": "España",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-02 17:37:06.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  },
+  {
     "id": 3823,
     "callsign": "SQ7SAX/P",
     "frequency": "7.1410",
