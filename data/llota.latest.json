@@ -2,12 +2,12 @@
   {
     "id": 3829,
     "callsign": "M7JNT",
-    "frequency": "14244.0000",
+    "frequency": "21244.0000",
     "mode": "SSB",
     "reference": "LLGB-0424",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-09-03T10:33:31.000Z",
-    "updated_at": "2026-09-03T10:47:16.000Z",
+    "updated_at": "2026-09-03T11:13:45.000Z",
     "reference_name": "Westport Lake",
     "country_name": "England",
     "history": [
@@ -20,6 +20,24 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-09-03 10:47:16.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Tnx Julien. 73",
+        "timestamp": "2026-09-03 10:54:44.000000",
+        "spotter_callsign": "SP8QC",
+        "spotter_display_name": "Andrzej Jurek"
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-03 11:04:28.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-03 11:13:45.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
