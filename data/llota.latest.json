@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3829,
+    "callsign": "M7JNT",
+    "frequency": "7150.0000",
+    "mode": "SSB",
+    "reference": "LLGB-0424",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-03T10:33:31.000Z",
+    "updated_at": "2026-09-03T10:33:31.000Z",
+    "reference_name": "Westport Lake",
+    "country_name": "England",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-03 10:33:31.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
