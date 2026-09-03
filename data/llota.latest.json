@@ -2,12 +2,12 @@
   {
     "id": 3825,
     "callsign": "IW0RGX",
-    "frequency": "14.2770",
+    "frequency": "14.3070",
     "mode": "SSB",
     "reference": "LLIT-0006",
     "spotted_by_app": null,
     "created_at": "2026-09-03T06:16:14.000Z",
-    "updated_at": "2026-09-03T07:42:57.000Z",
+    "updated_at": "2026-09-03T08:04:22.000Z",
     "reference_name": "Lago Trasimeno",
     "country_name": "Italy",
     "history": [
@@ -44,6 +44,24 @@
       {
         "comment": "5w Pota Llota",
         "timestamp": "2026-09-03 07:42:57.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      },
+      {
+        "comment": "5w Pota Llota",
+        "timestamp": "2026-09-03 07:55:59.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      },
+      {
+        "comment": "5w Pota Llota",
+        "timestamp": "2026-09-03 08:01:55.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      },
+      {
+        "comment": "5w Pota Llota",
+        "timestamp": "2026-09-03 08:04:22.000000",
         "spotter_callsign": "IW0RGX",
         "spotter_display_name": "Massimigliano (Max)"
       }
