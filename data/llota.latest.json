@@ -7,7 +7,7 @@
     "reference": "LLIE-10182",
     "spotted_by_app": "HAM2K",
     "created_at": "2026-09-03T13:17:56.000Z",
-    "updated_at": "2026-09-03T13:28:01.000Z",
+    "updated_at": "2026-09-03T13:38:31.000Z",
     "reference_name": "Rogerstown Estuary",
     "country_name": "Irlanda",
     "history": [
@@ -20,6 +20,12 @@
       {
         "comment": "Auto-spot from field app",
         "timestamp": "2026-09-03 13:28:01.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      },
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-03 13:38:31.000000",
         "spotter_callsign": null,
         "spotter_display_name": null
       }
