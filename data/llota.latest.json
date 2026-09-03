@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "id": 3825,
+    "callsign": "IW0RGX",
+    "frequency": "14.3180",
+    "mode": "SSB",
+    "reference": "LLIT-0006",
+    "spotted_by_app": null,
+    "created_at": "2026-09-03T06:16:14.000Z",
+    "updated_at": "2026-09-03T06:34:59.000Z",
+    "reference_name": "Lago Trasimeno",
+    "country_name": "Italy",
+    "history": [
+      {
+        "comment": "5W Llota e Pota",
+        "timestamp": "2026-09-03 06:16:14.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      },
+      {
+        "comment": "5w Pota Llota",
+        "timestamp": "2026-09-03 06:34:59.000000",
+        "spotter_callsign": "IW0RGX",
+        "spotter_display_name": "Massimigliano (Max)"
+      }
+    ]
+  },
+  {
+    "id": 3826,
+    "callsign": "SP/DC6ST",
+    "frequency": "7190.0000",
+    "mode": "SSB",
+    "reference": "LLPL-0041",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-03T06:33:54.000Z",
+    "updated_at": "2026-09-03T06:33:54.000Z",
+    "reference_name": "Jezioro Oświn",
+    "country_name": "Poland",
+    "history": [
+      {
+        "comment": "QRV 5-fer POTA+LLOTA PL-2772 PL-2770 PL-0468 PL-0473 LLPL-0041 Simon SSB",
+        "timestamp": "2026-09-03 06:33:54.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
