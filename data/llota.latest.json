@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": 3835,
+    "callsign": "W5USN",
+    "frequency": "21300.0000",
+    "mode": "SSB",
+    "reference": "LLUS-0746",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-03T15:51:38.000Z",
+    "updated_at": "2026-09-03T15:51:38.000Z",
+    "reference_name": "Blairs Pond State Fishing Lake",
+    "country_name": "Estados Unidos",
+    "history": [
+      {
+        "comment": "Auto-spot from field app",
+        "timestamp": "2026-09-03 15:51:38.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
+      }
+    ]
+  }
+]
