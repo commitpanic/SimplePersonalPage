@@ -2,12 +2,12 @@
   {
     "id": 3841,
     "callsign": "SQ9SZ",
-    "frequency": "7074.0000",
+    "frequency": "14074.0000",
     "mode": "FT8",
     "reference": "LLPL-0551",
     "spotted_by_app": null,
     "created_at": "2026-09-04T07:53:57.000Z",
-    "updated_at": "2026-09-04T07:53:57.000Z",
+    "updated_at": "2026-09-04T08:06:54.000Z",
     "reference_name": "Rezerwat Łężczak",
     "country_name": "Poland",
     "history": [
@@ -16,26 +16,32 @@
         "timestamp": "2026-09-04 07:53:57.000000",
         "spotter_callsign": "SQ9SZ",
         "spotter_display_name": "Bernard Petrykowski"
+      },
+      {
+        "comment": null,
+        "timestamp": "2026-09-04 08:06:54.000000",
+        "spotter_callsign": "SQ9SZ",
+        "spotter_display_name": "Bernard Petrykowski"
       }
     ]
   },
   {
-    "id": 3840,
-    "callsign": "TA1EDG",
-    "frequency": "18100.0000",
+    "id": 3842,
+    "callsign": "HB9ITZ",
+    "frequency": "14074.0000",
     "mode": "FT8",
-    "reference": "LLTR-0147",
-    "spotted_by_app": null,
-    "created_at": "2026-09-04T07:49:11.000Z",
-    "updated_at": "2026-09-04T07:49:11.000Z",
-    "reference_name": "Karacakoy Lake",
-    "country_name": "Turkey",
+    "reference": "LLCH-0002",
+    "spotted_by_app": "HAM2K",
+    "created_at": "2026-09-04T07:58:18.000Z",
+    "updated_at": "2026-09-04T07:58:18.000Z",
+    "reference_name": "Lake Geneva",
+    "country_name": "Switzerland",
     "history": [
       {
-        "comment": "Qrv",
-        "timestamp": "2026-09-04 07:49:11.000000",
-        "spotter_callsign": "TA1EDG",
-        "spotter_display_name": "ERDAG OLCER"
+        "comment": "QRV POTA LLOTA",
+        "timestamp": "2026-09-04 07:58:18.000000",
+        "spotter_callsign": null,
+        "spotter_display_name": null
       }
     ]
   }
