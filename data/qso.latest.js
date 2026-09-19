@@ -1,8 +1,85 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-09-19T18:28:52.440Z",
+  "updatedAt": "2026-09-19T19:21:54.506Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-09-19T17:36:00.000Z-SQ100PKP-80m-LSB",
+      "datetime": "2026-09-19T17:36:00.000Z",
+      "callsign": "SQ100PKP",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO02MG",
+      "lat": 52.270833333333336,
+      "lon": 21.041666666666668
+    },
+    {
+      "id": "2026-09-19T17:24:00.000Z-SP9CJM-80m-USB",
+      "datetime": "2026-09-19T17:24:00.000Z",
+      "callsign": "SP9CJM",
+      "band": "80m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "KN09EV",
+      "lat": 49.895833333333336,
+      "lon": 20.375
+    },
+    {
+      "id": "2026-09-19T17:22:00.000Z-SP3BLZ-40m-USB",
+      "datetime": "2026-09-19T17:22:00.000Z",
+      "callsign": "SP3BLZ",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "JO72UG",
+      "lat": 52.270833333333336,
+      "lon": 15.708333333333332
+    },
+    {
+      "id": "2026-09-19T15:55:00.000Z-4K3ZX-20m-USB",
+      "datetime": "2026-09-19T15:55:00.000Z",
+      "callsign": "4K3ZX",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Azerbaijan",
+      "grid": "LN30EQ",
+      "lat": 40.6875,
+      "lon": 46.375
+    },
+    {
+      "id": "2026-09-19T15:45:00.000Z-SQ4DX-40m-USB",
+      "datetime": "2026-09-19T15:45:00.000Z",
+      "callsign": "SQ4DX",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "JO93UM",
+      "lat": 53.520833333333336,
+      "lon": 19.708333333333336
+    },
+    {
+      "id": "2026-09-19T15:43:00.000Z-SH6RES-40m-USB",
+      "datetime": "2026-09-19T15:43:00.000Z",
+      "callsign": "SH6RES",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Sweden",
+      "grid": "JO67CM",
+      "lat": 57.520833333333336,
+      "lon": 12.208333333333332
+    },
+    {
+      "id": "2026-09-19T15:41:00.000Z-SP9SIR-40m-USB",
+      "datetime": "2026-09-19T15:41:00.000Z",
+      "callsign": "SP9SIR",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "JO90XA",
+      "lat": 50.020833333333336,
+      "lon": 19.958333333333336
+    },
     {
       "id": "2026-09-13T16:49:00.000Z-SP9CXN-80m-USB",
       "datetime": "2026-09-13T16:49:00.000Z",
