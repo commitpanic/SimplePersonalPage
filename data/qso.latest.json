@@ -1,8 +1,39 @@
 {
-  "updatedAt": "2026-09-19T20:25:48.881Z",
+  "updatedAt": "2026-09-19T21:23:35.161Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-09-19T20:25:00.000Z-OH/DF9TM-40m-LSB",
+      "datetime": "2026-09-19T20:25:00.000Z",
+      "callsign": "OH/DF9TM",
+      "band": "40m",
+      "mode": "LSB",
+      "country": "Finland",
+      "grid": ""
+    },
+    {
+      "id": "2026-09-19T20:22:00.000Z-SQ7SE-80m-LSB",
+      "datetime": "2026-09-19T20:22:00.000Z",
+      "callsign": "SQ7SE",
+      "band": "80m",
+      "mode": "LSB",
+      "country": "Poland",
+      "grid": "KO00FV",
+      "lat": 50.895833333333336,
+      "lon": 20.458333333333336
+    },
+    {
+      "id": "2026-09-19T20:12:00.000Z-VE9FI-20m-USB",
+      "datetime": "2026-09-19T20:12:00.000Z",
+      "callsign": "VE9FI",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Canada",
+      "grid": "FN75CM",
+      "lat": 45.520833333333336,
+      "lon": -65.79166666666666
+    },
     {
       "id": "2026-09-19T17:36:00.000Z-SQ100PKP-80m-LSB",
       "datetime": "2026-09-19T17:36:00.000Z",
