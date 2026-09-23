@@ -7,7 +7,8 @@ Statyczna strona pod GitHub Pages:
 
 ## Struktura
 
-- `index.html` - home
+- `index.html` - strona z oferta KubaBuba (strony wizytowki), `assets/css/offer.css`, `assets/js/offer.js`
+- `mystuff/index.html` - dawna strona glowna (projekty, narzedzia, gry)
 - `ham-map.html` - mapa
 - `gallery.html` - galeria
 - `data/qso.latest.json` - dane mapy

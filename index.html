@@ -1,121 +1,313 @@
 <!doctype html>
-<html lang="en" data-theme="forest">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kuba – software developer and ham radio operator.">
-  <title>Kuba | SP3FCK</title>
+  <title>KubaBuba – strony internetowe wizytówki dla firm</title>
+  <meta name="description" content="KubaBuba – projektuję i tworzę nowoczesne strony wizytówki dla firm. Domena, hosting i opieka po wdrożeniu. Bezpłatna wycena, działam zdalnie na terenie całej Polski.">
+  <link rel="canonical" href="https://kubabuba.pl/">
+  <meta name="theme-color" content="#0f1115">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:url" content="https://kubabuba.pl/">
+  <meta property="og:title" content="KubaBuba – strony internetowe wizytówki">
+  <meta property="og:description" content="Nowoczesne, szybkie strony wizytówki dla firm. Bezpłatna wycena, działam zdalnie na terenie całej Polski.">
+  <meta property="og:image" content="https://kubabuba.pl/assets/images/portfolio/filar.png">
+
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <link rel="stylesheet" href="assets/css/offer.css">
+  <script>(function(){try{var t=localStorage.getItem('kubabuba-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
-  <div class="noise"></div>
 
-  <main class="wrap">
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#top" aria-label="KubaBuba – strona główna">
+        <span class="logo-bracket">&lt;</span>KubaBuba<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Główna nawigacja">
+        <a href="#uslugi">Usługi</a>
+        <a href="#proces">Jak pracuję</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#kontakt" class="nav-cta">Kontakt</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Przełącz motyw jasny/ciemny" title="Przełącz motyw">
+          <i class="fa-solid fa-moon icon-dark"></i>
+          <i class="fa-solid fa-sun icon-light"></i>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
-      <p class="eyebrow">SP3FCK</p>
-      <h1>Hey, I'm <span class="name-highlight">Kuba</span></h1>
-      <p class="bio">Software developer and ham radio operator based in Poland. I build tools, chase DX, and write code that occasionally works on the first try.</p>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="prompt">$</span> strony internetowe dla firm</p>
+          <h1>Strona wizytówka, która <span class="accent">pracuje</span> dla Twojej firmy<span class="cursor" aria-hidden="true">_</span></h1>
+          <p class="lead">Projektuję i tworzę nowoczesne, szybkie strony internetowe dla małych firm i specjalistów. Zajmę się wszystkim – od domeny, przez projekt, po publikację i dalszą opiekę. Ty skupiasz się na swoim biznesie.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#kontakt"><i class="fa-solid fa-paper-plane"></i> Bezpłatna wycena</a>
+            <a class="btn btn-ghost" href="#realizacje">Zobacz realizacje</a>
+          </div>
+          <ul class="hero-badges">
+            <li><i class="fa-solid fa-mobile-screen"></i> Działa na telefonie</li>
+            <li><i class="fa-solid fa-bolt"></i> Szybkie ładowanie</li>
+            <li><i class="fa-solid fa-location-dot"></i> Zdalnie – cała Polska</li>
+          </ul>
+        </div>
 
-      <div class="social-links">
-        <a class="social-link" data-brand="linkedin" href="https://www.linkedin.com/in/jakub-b%C5%82aszyk-487266156/" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-linkedin"></i>
-          LinkedIn
-        </a>
-        <a class="social-link" data-brand="github" href="https://github.com/commitpanic" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-github"></i>
-          GitHub
-        </a>
-        <a class="social-link" data-brand="qrz" href="https://www.qrz.com/db/SP3FCK" target="_blank" rel="noreferrer">
-          <i class="fa-solid fa-tower-broadcast"></i>
-          QRZ.com
-        </a>
-        <a class="social-link" data-brand="youtube" href="https://www.youtube.com/@sp3fck_kuba/shorts" target="_blank" rel="noreferrer">
-          <i class="fa-brands fa-youtube"></i>
-          YouTube
-        </a>
+        <div class="code-window" aria-hidden="true">
+          <div class="code-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="code-title">twoja-firma.pl</span>
+          </div>
+<pre class="code-body"><code><span class="c-k">const</span> <span class="c-v">strona</span> = {
+  <span class="c-p">projekt</span>:    <span class="c-s">"dopasowany do marki"</span>,
+  <span class="c-p">responsywna</span>: <span class="c-b">true</span>,
+  <span class="c-p">domena</span>:     <span class="c-s">"twoja-firma.pl"</span>,
+  <span class="c-p">hosting</span>:    <span class="c-s">"skonfigurowany"</span>,
+  <span class="c-p">opieka</span>:     <span class="c-s">"po wdrożeniu"</span>,
+  <span class="c-p">wycena</span>:     <span class="c-s">"bezpłatna"</span>,
+};
+
+<span class="c-f">publikuj</span>(<span class="c-v">strona</span>); <span class="c-c">// ✔ gotowe</span></code></pre>
+        </div>
       </div>
     </section>
 
-    <section class="projects-section">
-      <h2 class="section-heading">Projects &amp; Tools</h2>
-      <div class="grid-cards">
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
-          <h3>BDDAPP</h3>
-          <p>Application for visualizing BDD diagrams.</p>
-          <a class="btn" href="https://commitpanic.github.io/BDDAPP/" target="_blank" rel="noreferrer">Open</a>
-        </article>
-
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-          <h3>My Ham Map</h3>
-          <p>Map of contacts with date and band filtering.</p>
-          <a class="btn" href="ham-map.html">Go to map</a>
-        </article>
-
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h3>QRZ Page Builder</h3>
-          <p>Build and manage your QRZ.com bio page with a visual editor.</p>
-          <a class="btn" href="qrz-builder/index.html">Open builder</a>
-        </article>
-
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3>Filar</h3>
-          <p>Personal page created for a financial expert.</p>
-          <a class="btn" href="https://commitpanic.github.io/Filar/index.html" target="_blank" rel="noreferrer">Open</a>
-        </article>
+    <!-- USŁUGI -->
+    <section class="section" id="uslugi">
+      <div class="container">
+        <p class="section-tag">// 01. usługi</p>
+        <h2 class="section-title">Czym mogę Ci pomóc</h2>
+        <div class="cards cards-3">
+          <article class="card">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Strona wizytówka</h3>
+            <p>Jedno- lub kilkustronicowa strona, która w przejrzysty sposób przedstawia Twoją firmę, ofertę i dane kontaktowe. Nowoczesny wygląd dopasowany do Twojej branży.</p>
+            <ul class="checklist">
+              <li>Projekt dopasowany do marki</li>
+              <li>Wersja na telefon, tablet i komputer</li>
+              <li>Formularz kontaktowy, mapa, social media</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+            <h3>Domena i hosting</h3>
+            <p>Nie musisz znać się na technicznych szczegółach. Pomogę wybrać i zarejestrować domenę, skonfiguruję hosting i certyfikat SSL.</p>
+            <ul class="checklist">
+              <li>Pomoc w wyborze i zakupie domeny</li>
+              <li>Konfiguracja hostingu i HTTPS</li>
+              <li>Domena zarejestrowana na Ciebie</li>
+            </ul>
+          </article>
+          <article class="card">
+            <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Opieka i aktualizacje</h3>
+            <p>Strona to nie jednorazowy projekt. Po wdrożeniu wprowadzam zmiany w treściach, dodaję nowe sekcje i dbam, żeby wszystko działało.</p>
+            <ul class="checklist">
+              <li>Aktualizacja treści i zdjęć</li>
+              <li>Rozbudowa o nowe podstrony</li>
+              <li>Szybka reakcja na zgłoszenia</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="games-section">
-      <h2 class="section-heading">Procrastination Station</h2>
-      <div class="grid-cards">
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
-          <h3>Snake</h3>
-          <p>The classic. Eat the dot, dodge yourself. Shockingly addictive.</p>
-          <a class="btn" href="games/snake.html">Play</a>
-        </article>
+    <!-- PROCES -->
+    <section class="section section-alt" id="proces">
+      <div class="container">
+        <p class="section-tag">// 02. jak pracuję</p>
+        <h2 class="section-title">Prosto i przejrzyście – krok po kroku</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Rozmowa i wycena</h3>
+            <p>Poznaję Twoją firmę i potrzeby. Otrzymujesz bezpłatną wycenę oraz termin realizacji.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Projekt</h3>
+            <p>Przygotowuję projekt strony. Wspólnie ustalamy wygląd, strukturę i treści.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Realizacja i poprawki</h3>
+            <p>Buduję stronę i pokazuję postępy. Wprowadzam Twoje uwagi, aż efekt będzie w pełni satysfakcjonujący.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">04</span>
+            <h3>Publikacja i opieka</h3>
+            <p>Strona trafia do sieci pod Twoją domeną. Dalej jestem do dyspozycji przy zmianach i rozwoju.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-crosshairs"></i></div>
-          <h3>Aim Trainer</h3>
-          <p>Click the circle. 10 rounds. Find out just how slow your reflexes are.</p>
-          <a class="btn" href="games/aim.html">Play</a>
-        </article>
+    <!-- DLACZEGO JA -->
+    <section class="section" id="dlaczego">
+      <div class="container">
+        <p class="section-tag">// 03. dlaczego ja</p>
+        <h2 class="section-title">Solidnie, terminowo, bez niespodzianek</h2>
+        <div class="cards cards-3 features">
+          <div class="feature">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <h3>Zawodowy programista</h3>
+              <p>Na co dzień zajmuję się tworzeniem oprogramowania. Strony piszę starannie, bez gotowych, ciężkich szablonów.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div>
+              <h3>Ustalony termin</h3>
+              <p>Termin realizacji poznajesz przed startem prac – i jest on dotrzymywany.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-file-invoice"></i>
+            <div>
+              <h3>Jasne warunki</h3>
+              <p>Uczciwa wycena z góry, bez ukrytych kosztów i dopłat „na koniec”.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-key"></i>
+            <div>
+              <h3>Wszystko należy do Ciebie</h3>
+              <p>Domena i strona są Twoją własnością. Nie uzależniam Cię od siebie.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <h3>Szybkość i jakość</h3>
+              <p>Lekkie, szybko ładujące się strony, które dobrze wyglądają na każdym urządzeniu.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-comments"></i>
+            <div>
+              <h3>Bezpośredni kontakt</h3>
+              <p>Rozmawiasz bezpośrednio ze mną – bez pośredników, infolinii i czekania tygodniami.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="card">
-          <div class="card-icon"><i class="fa-solid fa-table-cells-large"></i></div>
-          <h3>Tetris</h3>
-          <p>Drop the blocks, clear the lines, pretend you're productive.</p>
-          <a class="btn" href="games/tetris.html">Play</a>
-        </article>
+    <!-- REALIZACJE -->
+    <section class="section section-alt" id="realizacje">
+      <div class="container">
+        <p class="section-tag">// 04. realizacje</p>
+        <h2 class="section-title">Wybrane projekty</h2>
+        <div class="portfolio">
+          <article class="project">
+            <a class="project-thumb" href="https://finansowykompas.eu" target="_blank" rel="noopener">
+              <img src="assets/images/portfolio/filar.png" alt="Zrzut ekranu strony Filar – Finanse Dopasowane do Ciebie" width="1280" height="800" loading="lazy">
+            </a>
+            <div class="project-body">
+              <p class="project-meta">doradztwo finansowe · strona wizytówka</p>
+              <h3>Filar – Finanse Dopasowane do Ciebie</h3>
+              <p>Strona dla eksperta kredytowego z województwa lubuskiego: prezentacja usług, kalkulatory kredytowe, udogodnienia dostępności i formularz kontaktowy.</p>
+              <a class="btn btn-ghost btn-sm" href="https://finansowykompas.eu" target="_blank" rel="noopener">Zobacz stronę <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+          <article class="project project-next">
+            <div class="project-body">
+              <p class="project-meta">// tu może być Twoja strona</p>
+              <h3>Twoja firma?</h3>
+              <p>Opowiedz mi o swoim biznesie – przygotuję bezpłatną wycenę i propozycję strony.</p>
+              <a class="btn btn-primary btn-sm" href="#kontakt">Porozmawiajmy</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+      <div class="container">
+        <p class="section-tag">// 05. kontakt</p>
+        <h2 class="section-title">Porozmawiajmy o Twojej stronie</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="lead">Każdy projekt wyceniam indywidualnie – <strong>wycena jest bezpłatna i niezobowiązująca</strong>. Napisz kilka słów o swojej firmie, a odezwę się najszybciej, jak to możliwe.</p>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <div><span class="label">Telefon</span><a href="tel:+48665244647">665-244-647</a></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <div><span class="label">E-mail</span><a href="mailto:kuba@kubabuba.pl">kuba@kubabuba.pl</a></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-earth-europe"></i>
+                <div><span class="label">Obszar działania</span><span>Zdalnie – cała Polska</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="field">
+              <label for="cf-name">Imię i nazwisko / firma *</label>
+              <input id="cf-name" name="from_name" type="text" autocomplete="name" required maxlength="120">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-email">E-mail *</label>
+                <input id="cf-email" name="reply_to" type="email" autocomplete="email" required maxlength="160">
+              </div>
+              <div class="field">
+                <label for="cf-phone">Telefon</label>
+                <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-message">Wiadomość *</label>
+              <textarea id="cf-message" name="message" rows="5" required maxlength="4000" placeholder="Czym zajmuje się Twoja firma i jakiej strony potrzebujesz?"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="cf-website">Nie wypełniaj tego pola</label>
+              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="cf-consent" required>
+              <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie. Więcej w <a href="polityka-prywatnosci.html" target="_blank">polityce prywatności</a>. *</span>
+            </label>
+            <button class="btn btn-primary btn-block" type="submit" id="cf-submit">
+              <i class="fa-solid fa-paper-plane"></i> <span>Wyślij wiadomość</span>
+            </button>
+            <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer wrap">
-    <div class="footer-row">
-      <p><span id="year"></span> KUBA - kuba@kubabuba.com</p>
-      <div class="theme-picker">
-        <button class="theme-btn" id="theme-btn" aria-label="Change theme" title="Change theme">
-          <i class="fa-solid fa-palette"></i>
-        </button>
-        <div class="theme-menu" id="theme-menu"></div>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="logo logo-sm"><span class="logo-bracket">&lt;</span>KubaBuba<span class="logo-bracket">/&gt;</span></p>
+      <p>&copy; <span id="year"></span> KubaBuba · <a href="mailto:kuba@kubabuba.pl">kuba@kubabuba.pl</a> · <a href="tel:+48665244647">665-244-647</a> · <a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
     </div>
   </footer>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+  <script src="assets/js/offer.js" defer></script>
 </body>
 </html>

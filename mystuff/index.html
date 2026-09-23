@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuba – software developer and ham radio operator.">
+  <title>Kuba | SP3FCK</title>
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <p class="eyebrow">SP3FCK</p>
+      <h1>Hey, I'm <span class="name-highlight">Kuba</span></h1>
+      <p class="bio">Software developer and ham radio operator based in Poland. I build tools, chase DX, and write code that occasionally works on the first try.</p>
+
+      <div class="social-links">
+        <a class="social-link" data-brand="linkedin" href="https://www.linkedin.com/in/jakub-b%C5%82aszyk-487266156/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+        <a class="social-link" data-brand="github" href="https://github.com/commitpanic" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+        <a class="social-link" data-brand="qrz" href="https://www.qrz.com/db/SP3FCK" target="_blank" rel="noreferrer">
+          <i class="fa-solid fa-tower-broadcast"></i>
+          QRZ.com
+        </a>
+        <a class="social-link" data-brand="youtube" href="https://www.youtube.com/@sp3fck_kuba/shorts" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-youtube"></i>
+          YouTube
+        </a>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <h2 class="section-heading">Projects &amp; Tools</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>BDDAPP</h3>
+          <p>Application for visualizing BDD diagrams.</p>
+          <a class="btn" href="https://commitpanic.github.io/BDDAPP/" target="_blank" rel="noreferrer">Open</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3>My Ham Map</h3>
+          <p>Map of contacts with date and band filtering.</p>
+          <a class="btn" href="../ham-map.html">Go to map</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>QRZ Page Builder</h3>
+          <p>Build and manage your QRZ.com bio page with a visual editor.</p>
+          <a class="btn" href="../qrz-builder/index.html">Open builder</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Filar</h3>
+          <p>Personal page created for a financial expert.</p>
+          <a class="btn" href="https://finansowykompas.eu" target="_blank" rel="noreferrer">Open</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="games-section">
+      <h2 class="section-heading">Procrastination Station</h2>
+      <div class="grid-cards">
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <h3>Snake</h3>
+          <p>The classic. Eat the dot, dodge yourself. Shockingly addictive.</p>
+          <a class="btn" href="../games/snake.html">Play</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-crosshairs"></i></div>
+          <h3>Aim Trainer</h3>
+          <p>Click the circle. 10 rounds. Find out just how slow your reflexes are.</p>
+          <a class="btn" href="../games/aim.html">Play</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+          <h3>Tetris</h3>
+          <p>Drop the blocks, clear the lines, pretend you're productive.</p>
+          <a class="btn" href="../games/tetris.html">Play</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-row">
+      <p><span id="year"></span> KUBA - kuba@kubabuba.pl</p>
+      <div class="theme-picker">
+        <button class="theme-btn" id="theme-btn" aria-label="Change theme" title="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" id="theme-menu"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
