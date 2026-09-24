@@ -83,8 +83,8 @@ p { margin: 0 0 1em; }
 
 /* Neonowe logo */
 .logo { display: inline-flex; align-items: center; }
-.logo-svg { display: block; height: 48px; width: auto; aspect-ratio: 176 / 70; overflow: visible; }
-.logo-sm .logo-svg { height: 36px; }
+.logo-svg { display: block; height: 36px; width: auto; aspect-ratio: 256 / 38; overflow: visible; }
+.logo-sm .logo-svg { height: 28px; }
 .site-header .logo-svg { animation: neon-on 1.6s ease-out 1; }
 @keyframes neon-on {
   0%, 12%, 20%, 34% { opacity: 0.25; }
@@ -399,7 +399,7 @@ p { margin: 0 0 1em; }
   .cards-3, .steps, .field-row { grid-template-columns: 1fr; }
   .code-body { font-size: 0.8rem; padding: 18px; }
   .btn-label { display: none; }
-  .logo-svg { height: 42px; }
+  .logo-svg { height: 30px; }
   .contact-form, .card { padding: 22px; }
 }
 
