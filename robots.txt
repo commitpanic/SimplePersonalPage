@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /qrz/
+Disallow: /data/
+Disallow: /scripts/
+
+Sitemap: https://kubabuba.pl/sitemap.xml
