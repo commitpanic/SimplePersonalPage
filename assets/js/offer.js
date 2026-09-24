@@ -12,10 +12,9 @@ const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
 // ── Motyw jasny / ciemny ──────────────────────────────────────
+// domyślnie ciemny – jasny tylko na żądanie
 function currentTheme() {
-  const set = document.documentElement.getAttribute('data-theme');
-  if (set) return set;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
 }
 
 document.getElementById('theme-toggle')?.addEventListener('click', () => {

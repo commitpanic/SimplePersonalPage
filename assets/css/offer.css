@@ -1,44 +1,7 @@
 /* ── KubaBuba – strona z ofertą ─────────────────────────────── */
 
+/* Domyślnie motyw ciemny; jasny tylko po przełączeniu (data-theme="light") */
 :root {
-  --bg: #f7f8fa;
-  --bg-alt: #eef1f5;
-  --surface: #ffffff;
-  --border: #dde2ea;
-  --text: #161a22;
-  --muted: #5a6474;
-  --accent: #b45309;
-  --accent-strong: #92400e;
-  --accent-soft: rgba(180, 83, 9, 0.1);
-  --on-accent: #ffffff;
-  --code-bg: #0f1115;
-  --code-text: #d7dce5;
-  --shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
-  --radius: 14px;
-  --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1115;
-    --bg-alt: #14171d;
-    --surface: #181c23;
-    --border: #262b35;
-    --text: #e6e9ef;
-    --muted: #97a0b0;
-    --accent: #fbbf24;
-    --accent-strong: #fcd34d;
-    --accent-soft: rgba(251, 191, 36, 0.12);
-    --on-accent: #2a1a02;
-    --code-bg: #0a0c10;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
   --bg: #0f1115;
   --bg-alt: #14171d;
   --surface: #181c23;
@@ -50,8 +13,32 @@
   --accent-soft: rgba(251, 191, 36, 0.12);
   --on-accent: #2a1a02;
   --code-bg: #0a0c10;
+  --code-text: #d7dce5;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --neon-pink: #ff3d7f;
+  --neon-cyan: #3ee6ff;
+  --radius: 14px;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fa;
+  --bg-alt: #eef1f5;
+  --surface: #ffffff;
+  --border: #dde2ea;
+  --text: #161a22;
+  --muted: #5a6474;
+  --accent: #b45309;
+  --accent-strong: #92400e;
+  --accent-soft: rgba(180, 83, 9, 0.1);
+  --on-accent: #ffffff;
+  --code-bg: #0f1115;
+  --shadow: 0 10px 30px rgba(20, 30, 50, 0.08);
+  --neon-pink: #e11d62;
+  --neon-cyan: #0e9fbf;
+  color-scheme: light;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -94,6 +81,16 @@ p { margin: 0 0 1em; }
 .logo-bracket { color: var(--accent); }
 .logo-sm { font-size: 1rem; }
 
+/* Neonowe logo */
+.logo { display: inline-flex; align-items: center; }
+.logo-svg { display: block; height: 48px; width: auto; aspect-ratio: 176 / 70; overflow: visible; }
+.logo-sm .logo-svg { height: 36px; }
+.site-header .logo-svg { animation: neon-on 1.6s ease-out 1; }
+@keyframes neon-on {
+  0%, 12%, 20%, 34% { opacity: 0.25; }
+  8%, 16%, 28%, 100% { opacity: 1; }
+}
+
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
 .nav a:hover { color: var(--text); }
@@ -118,13 +115,10 @@ p { margin: 0 0 1em; }
 }
 .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-.icon-light { display: none; }
-:root[data-theme="dark"] .icon-dark { display: none; }
-:root[data-theme="dark"] .icon-light { display: inline; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-dark { display: none; }
-  :root:not([data-theme="light"]) .icon-light { display: inline; }
-}
+/* ciemny: pokazuj słońce (przełącz na jasny); jasny: księżyc */
+.icon-dark { display: none; }
+:root[data-theme="light"] .icon-dark { display: inline; }
+:root[data-theme="light"] .icon-light { display: none; }
 
 .nav-toggle { display: none; }
 
@@ -147,6 +141,7 @@ p { margin: 0 0 1em; }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 .btn-sm { padding: 9px 16px; font-size: 0.9rem; }
 .btn-block { width: 100%; }
+.btn { white-space: nowrap; }
 .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
 /* ── Hero ───────────────────────────────────────────────────── */
@@ -403,11 +398,13 @@ p { margin: 0 0 1em; }
   .section { padding: 64px 0; }
   .cards-3, .steps, .field-row { grid-template-columns: 1fr; }
   .code-body { font-size: 0.8rem; padding: 18px; }
+  .btn-label { display: none; }
+  .logo-svg { height: 42px; }
   .contact-form, .card { padding: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .cursor { animation: none; }
+  .cursor, .site-header .logo-svg { animation: none; }
   *, *::before, *::after { transition: none !important; }
 }
