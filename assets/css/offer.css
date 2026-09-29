@@ -200,6 +200,7 @@ p { margin: 0 0 1em; }
 
 .cards { display: grid; gap: 22px; }
 .cards-3 { grid-template-columns: repeat(3, 1fr); }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
 
 .card {
   background: var(--surface);
@@ -396,7 +397,7 @@ p { margin: 0 0 1em; }
 
   .hero { padding: 56px 0 64px; }
   .section { padding: 64px 0; }
-  .cards-3, .steps, .field-row { grid-template-columns: 1fr; }
+  .cards-3, .cards-2, .steps, .field-row { grid-template-columns: 1fr; }
   .code-body { font-size: 0.8rem; padding: 18px; }
   .btn-label { display: none; }
   .logo-svg { height: 30px; }
