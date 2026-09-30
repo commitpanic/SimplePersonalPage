@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Palety kolorów | KubaBuba</title>
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="palety.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <p class="eyebrow"><a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> mystuff</a></p>
+      <h1>Palety <span class="name-highlight">kolorów</span></h1>
+      <p class="bio">Gotowe zestawy do omówienia z klientem. Kliknij kolor, aby skopiować HEX. Każda paleta ma 5 ról: tło, powierzchnia, tekst, kolor główny i akcent. Źródło: <a href="palettes.json" class="inline-link">palettes.json</a>.</p>
+    </section>
+
+    <section>
+      <h2 class="section-heading">Zestawy</h2>
+      <div class="palette-grid" id="palette-grid">
+        <p class="palette-error" id="palette-error" hidden></p>
+      </div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <h2 class="section-heading">Własny zestaw</h2>
+      <div class="custom-card">
+        <div class="custom-head">
+          <label class="custom-name">
+            <span>Nazwa</span>
+            <input type="text" id="custom-name" value="Propozycja klienta" maxlength="60">
+          </label>
+          <div class="custom-actions">
+            <button class="btn ghost" type="button" id="custom-reset"><i class="fa-solid fa-rotate-left"></i> Wyczyść</button>
+            <button class="btn ghost" type="button" id="custom-css"><i class="fa-solid fa-code"></i> Kopiuj CSS</button>
+            <button class="btn ghost" type="button" id="custom-json"><i class="fa-solid fa-copy"></i> Kopiuj JSON</button>
+            <button class="btn" type="button" id="custom-download"><i class="fa-solid fa-download"></i> Pobierz .json</button>
+          </div>
+        </div>
+        <div class="custom-body">
+          <div class="custom-pickers" id="custom-pickers"></div>
+          <div class="custom-preview" id="custom-preview"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <div class="footer-row">
+      <p><span id="year"></span> KUBA - kuba@kubabuba.pl</p>
+      <div class="theme-picker">
+        <button class="theme-btn" id="theme-btn" aria-label="Change theme" title="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" id="theme-menu"></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="palety.js" defer></script>
+</body>
+</html>

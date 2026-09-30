@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "roles": {
+    "background": "Tło strony",
+    "surface": "Tło kart, sekcji, stopki",
+    "text": "Główny kolor tekstu i nagłówków",
+    "primary": "Kolor marki – przyciski, linki, akcenty nawigacji",
+    "accent": "Kolor wyróżnień – badge, ikony, CTA drugorzędne"
+  },
+  "palettes": [
+    {
+      "id": "nordic-calm",
+      "name": "Nordycki spokój",
+      "mode": "light",
+      "mood": "Czysto, profesjonalnie, zaufanie",
+      "industries": [
+        "usługi IT",
+        "biuro rachunkowe",
+        "konsulting"
+      ],
+      "colors": {
+        "background": "#F7F9FB",
+        "surface": "#E3EAF2",
+        "text": "#1F2A37",
+        "primary": "#2F5D8A",
+        "accent": "#E07A5F"
+      }
+    },
+    {
+      "id": "forest-green",
+      "name": "Leśna zieleń",
+      "mode": "light",
+      "mood": "Naturalnie, ekologicznie, spokojnie",
+      "industries": [
+        "ogrodnictwo",
+        "agroturystyka",
+        "produkty eko"
+      ],
+      "colors": {
+        "background": "#F6F4EE",
+        "surface": "#E4E9DF",
+        "text": "#22301F",
+        "primary": "#3D6B45",
+        "accent": "#C8963E"
+      }
+    },
+    {
+      "id": "terracotta",
+      "name": "Terakota",
+      "mode": "light",
+      "mood": "Ciepło, rękodzieło, śródziemnomorsko",
+      "industries": [
+        "wnętrza",
+        "ceramika",
+        "restauracja"
+      ],
+      "colors": {
+        "background": "#FBF6F1",
+        "surface": "#F1E3D6",
+        "text": "#3A2A22",
+        "primary": "#B5563B",
+        "accent": "#6B8F71"
+      }
+    },
+    {
+      "id": "sea-breeze",
+      "name": "Morska bryza",
+      "mode": "light",
+      "mood": "Świeżo, zdrowo, przejrzyście",
+      "industries": [
+        "gabinet medyczny",
+        "fizjoterapia",
+        "basen / sport"
+      ],
+      "colors": {
+        "background": "#F4FAFB",
+        "surface": "#D9EEF1",
+        "text": "#0F2F3A",
+        "primary": "#0E7C86",
+        "accent": "#F2A541"
+      }
+    },
+    {
+      "id": "night-navy",
+      "name": "Nocny granat",
+      "mode": "dark",
+      "mood": "Nowocześnie, technologicznie",
+      "industries": [
+        "software house",
+        "start-up",
+        "aplikacje"
+      ],
+      "colors": {
+        "background": "#0F172A",
+        "surface": "#1E293B",
+        "text": "#E2E8F0",
+        "primary": "#6366F1",
+        "accent": "#22D3EE"
+      }
+    },
+    {
+      "id": "powder-rose",
+      "name": "Pudrowy róż",
+      "mode": "light",
+      "mood": "Delikatnie, elegancko, kobieco",
+      "industries": [
+        "salon beauty",
+        "kosmetologia",
+        "ślubne"
+      ],
+      "colors": {
+        "background": "#FFF8F7",
+        "surface": "#F6E1DE",
+        "text": "#3D2B2E",
+        "primary": "#B0606B",
+        "accent": "#7F9C8E"
+      }
+    },
+    {
+      "id": "graphite-lime",
+      "name": "Grafit i limonka",
+      "mode": "dark",
+      "mood": "Dynamicznie, energicznie, odważnie",
+      "industries": [
+        "siłownia",
+        "e-sport",
+        "motoryzacja"
+      ],
+      "colors": {
+        "background": "#121417",
+        "surface": "#1E2227",
+        "text": "#E9ECEF",
+        "primary": "#A3E635",
+        "accent": "#38BDF8"
+      }
+    },
+    {
+      "id": "premium-gold",
+      "name": "Złoto premium",
+      "mode": "light",
+      "mood": "Prestiż, stabilność, klasa",
+      "industries": [
+        "kancelaria",
+        "finanse",
+        "nieruchomości"
+      ],
+      "colors": {
+        "background": "#FAF8F3",
+        "surface": "#EDE7DA",
+        "text": "#1C1C1C",
+        "primary": "#1F3A34",
+        "accent": "#B8924A"
+      }
+    },
+    {
+      "id": "warm-sun",
+      "name": "Ciepłe słońce",
+      "mode": "light",
+      "mood": "Radośnie, rodzinnie, apetycznie",
+      "industries": [
+        "piekarnia",
+        "przedszkole",
+        "catering"
+      ],
+      "colors": {
+        "background": "#FFFBF2",
+        "surface": "#FDEBC8",
+        "text": "#3B2F1E",
+        "primary": "#C2410C",
+        "accent": "#2B9348"
+      }
+    },
+    {
+      "id": "lavender-minimal",
+      "name": "Lawendowy minimalizm",
+      "mode": "light",
+      "mood": "Lekko, kreatywnie, łagodnie",
+      "industries": [
+        "psycholog / coaching",
+        "fotografia",
+        "joga"
+      ],
+      "colors": {
+        "background": "#FAF9FC",
+        "surface": "#ECE8F4",
+        "text": "#2A2638",
+        "primary": "#6D5BA8",
+        "accent": "#E8A87C"
+      }
+    },
+    {
+      "id": "white-grey",
+      "name": "Biało-szary klasyk",
+      "mode": "light",
+      "mood": "Neutralnie, rzeczowo, ponadczasowo",
+      "industries": [
+        "biuro rachunkowe",
+        "doradztwo podatkowe",
+        "ubezpieczenia"
+      ],
+      "colors": {
+        "background": "#FFFFFF",
+        "surface": "#F2F3F5",
+        "text": "#1F2328",
+        "primary": "#3E454E",
+        "accent": "#9AA3AD"
+      }
+    },
+    {
+      "id": "black-gold",
+      "name": "Czerń i złoto",
+      "mode": "dark",
+      "mood": "Luksus, prestiż, ekskluzywnie",
+      "industries": [
+        "kancelaria adwokacka",
+        "notariusz",
+        "nieruchomości premium"
+      ],
+      "colors": {
+        "background": "#0D0D0D",
+        "surface": "#1A1A1A",
+        "text": "#F2EFE8",
+        "primary": "#C9A54C",
+        "accent": "#E6D3A3"
+      }
+    },
+    {
+      "id": "law-navy",
+      "name": "Granat kancelaryjny",
+      "mode": "light",
+      "mood": "Powaga, zaufanie, tradycja",
+      "industries": [
+        "kancelaria radcowska",
+        "biuro rachunkowe",
+        "komornik"
+      ],
+      "colors": {
+        "background": "#F8F7F4",
+        "surface": "#E9E6DF",
+        "text": "#1A2233",
+        "primary": "#1E2F4F",
+        "accent": "#A88A4E"
+      }
+    },
+    {
+      "id": "burgundy-ivory",
+      "name": "Bordo i kość słoniowa",
+      "mode": "light",
+      "mood": "Szlachetnie, klasycznie, z charakterem",
+      "industries": [
+        "kancelaria adwokacka",
+        "winiarnia",
+        "doradztwo majątkowe"
+      ],
+      "colors": {
+        "background": "#FBF8F2",
+        "surface": "#EFE7DA",
+        "text": "#2A1E1E",
+        "primary": "#6E1F2A",
+        "accent": "#B99A62"
+      }
+    },
+    {
+      "id": "bottle-brass",
+      "name": "Butelkowa zieleń i mosiądz",
+      "mode": "dark",
+      "mood": "Stateczność, dyskrecja, klasa",
+      "industries": [
+        "private banking",
+        "kancelaria",
+        "doradca finansowy"
+      ],
+      "colors": {
+        "background": "#10201A",
+        "surface": "#1A2E26",
+        "text": "#EDE8DC",
+        "primary": "#C2A060",
+        "accent": "#7FA392"
+      }
+    },
+    {
+      "id": "graphite-platinum",
+      "name": "Grafit i platyna",
+      "mode": "dark",
+      "mood": "Nowoczesna elegancja, chłodno, precyzyjnie",
+      "industries": [
+        "biegły rewident",
+        "audyt",
+        "konsulting"
+      ],
+      "colors": {
+        "background": "#1C1E21",
+        "surface": "#2A2D31",
+        "text": "#E8E9EB",
+        "primary": "#C7CCD1",
+        "accent": "#8FA3B8"
+      }
+    },
+    {
+      "id": "mono-minimal",
+      "name": "Czarno-biały minimal",
+      "mode": "light",
+      "mood": "Surowo, konkretnie, bez zbędnych ozdobników",
+      "industries": [
+        "architekt",
+        "biuro projektowe",
+        "kancelaria"
+      ],
+      "colors": {
+        "background": "#FFFFFF",
+        "surface": "#F4F4F4",
+        "text": "#111111",
+        "primary": "#111111",
+        "accent": "#8E8E8E"
+      }
+    }
+  ]
+}
