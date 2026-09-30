@@ -605,6 +605,71 @@ a { color: inherit; }
   color: var(--muted);
 }
 
+/* ── Ułatwienia dostępu (wzór: Filar / Stomatologia) ─────── */
+#a11y-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: color-mix(in srgb, var(--primary) 70%, #000);
+  border-radius: 8px 0 0 8px;
+  padding: 6px 4px;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.25);
+}
+
+#a11y-bar button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #F1F5F9;
+  font: 700 13px var(--font-body);
+  line-height: 1;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+#a11y-bar button.a11y-small { font-size: 11px; }
+#a11y-bar button:hover { background: rgba(255, 255, 255, 0.15); }
+#a11y-bar button:focus-visible { outline: 2px solid #fff; outline-offset: -2px; }
+#a11y-bar button.a11y-active { background: var(--accent); color: var(--on-accent); }
+#a11y-bar .a11y-sep { height: 1px; background: rgba(255, 255, 255, 0.15); margin: 2px 4px; }
+
+/* Wysoki kontrast: czarne tło, biały tekst, żółte akcenty */
+body.hc-mode {
+  --background: #000000;
+  --surface: #000000;
+  --text: #FFFFFF;
+  --primary: #FFE066;
+  --accent: #FFE066;
+  --on-primary: #000000;
+  --on-accent: #000000;
+  --muted: #E5E5E5;
+  --line: #777777;
+  --card: #000000;
+  --primary-soft: #1A1A1A;
+  --accent-soft: #1A1A1A;
+}
+
+body.hc-mode .nav { background: #000; }
+body.hc-mode .stats,
+body.hc-mode .cta { background: #000; color: #FFF; border-block: 1px solid var(--line); }
+body.hc-mode .btn-light { background: #FFE066; color: #000; }
+body.hc-mode .photo,
+body.hc-mode .map { background: #111; border: 1px solid var(--line); }
+body.hc-mode .hv-chart span { background: #FFF !important; }
+body.hc-mode .hv-chart span:last-child { background: #FFE066 !important; }
+body.hc-mode .hv-line { background: #555; }
+body.hc-mode .avatar,
+body.hc-mode .logo-mark { background: #FFE066; color: #000; }
+body.hc-mode #a11y-bar { background: #000; border: 1px solid var(--line); border-right: 0; }
+body.hc-mode #a11y-bar button.a11y-active { background: #FFE066; color: #000; }
+
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 1000px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
@@ -650,4 +715,8 @@ a { color: inherit; }
   .hero-btns .btn { flex: 1 1 100%; }
   .stats strong { font-size: 1.6rem; }
   .form { padding: 1.4rem; }
+}
+
+@media (max-width: 768px) {
+  #a11y-bar { display: none !important; }
 }

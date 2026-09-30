@@ -44,6 +44,61 @@ if (custom.length === ROLE_KEYS.length && custom.every(v => /^[0-9a-f]{6}$/i.tes
     .catch(() => { /* zostają kolory domyślne z CSS */ });
 }
 
+// ── Ułatwienia dostępu: rozmiar tekstu i wysoki kontrast ─────
+const store = {
+  get: key => { try { return localStorage.getItem(key); } catch { return null; } },
+  set: (key, val) => { try { localStorage.setItem(key, val); } catch { /* tryb prywatny */ } },
+};
+const SIZE_KEY = 'mockup-a11y-size';
+const HC_KEY = 'mockup-a11y-hc';
+const contrastBtn = document.getElementById('a11y-contrast');
+let currentSize = parseInt(store.get(SIZE_KEY) || '0', 10);
+
+function applySize() {
+  document.documentElement.style.fontSize = currentSize === 0 ? '' : `${100 + currentSize * 10}%`;
+  store.set(SIZE_KEY, currentSize);
+}
+
+function applyContrast(isHC) {
+  document.body.classList.toggle('hc-mode', isHC);
+  contrastBtn.classList.toggle('a11y-active', isHC);
+  contrastBtn.setAttribute('aria-pressed', String(isHC));
+  store.set(HC_KEY, isHC ? '1' : '0');
+}
+
+if (currentSize !== 0) applySize();
+if (store.get(HC_KEY) === '1') applyContrast(true);
+
+document.getElementById('a11y-increase').addEventListener('click', () => {
+  if (currentSize >= 3) return;
+  currentSize++;
+  applySize();
+});
+
+document.getElementById('a11y-decrease').addEventListener('click', () => {
+  if (currentSize <= -1) return;
+  currentSize--;
+  applySize();
+});
+
+document.getElementById('a11y-reset').addEventListener('click', () => {
+  currentSize = 0;
+  applySize();
+});
+
+contrastBtn.addEventListener('click', () => {
+  applyContrast(!document.body.classList.contains('hc-mode'));
+});
+
+// Synchronizacja między makietami w podglądzie (desktop + telefon)
+window.addEventListener('storage', e => {
+  if (e.key === SIZE_KEY) {
+    currentSize = parseInt(e.newValue || '0', 10);
+    document.documentElement.style.fontSize = currentSize === 0 ? '' : `${100 + currentSize * 10}%`;
+  }
+  if (e.key === HC_KEY) applyContrast(e.newValue === '1');
+});
+
 // ── Menu mobilne ──────────────────────────────────────────────
 const burger = document.getElementById('burger');
 const links = document.getElementById('nav-links');
