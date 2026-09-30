@@ -1,0 +1,165 @@
+/* ── Podgląd makiety ─────────────────────────────────────── */
+body.viewer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 2;
+}
+
+.tb-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: auto;
+}
+
+.tb-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.toolbar select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font: 500 0.9rem "Space Grotesk", sans-serif;
+  max-width: 230px;
+}
+
+.tb-icon {
+  all: unset;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.tb-icon:hover,
+.tb-icon:focus-visible {
+  color: var(--accent);
+  border-color: var(--card-hover-border);
+}
+
+.tb-swatches {
+  display: inline-flex;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-left: 0.3rem;
+}
+
+.tb-swatches span {
+  width: 16px;
+  height: 26px;
+}
+
+.seg {
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.seg button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.seg button + button {
+  border-left: 1px solid var(--line);
+}
+
+.seg button:hover {
+  color: var(--text);
+}
+
+.seg button.active {
+  background: var(--accent);
+  color: var(--btn-text);
+}
+
+.seg button.serif {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.frame {
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  background: #fff;
+}
+
+.frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  transform-origin: 0 0;
+  background: #fff;
+}
+
+.frame.device-mobile,
+.frame.device-tablet {
+  border: 10px solid #0b0b0c;
+  border-radius: 34px;
+  box-sizing: content-box;
+}
+
+@media (max-width: 900px) {
+  .seg button span {
+    display: none;
+  }
+
+  .tb-back span {
+    display: none;
+  }
+
+  .tb-swatches {
+    display: none;
+  }
+}

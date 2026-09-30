@@ -159,6 +159,7 @@ function renderPalettes(palettes) {
       <div class="palette-foot">
         ${contrastHtml(p.colors)}
         <div class="palette-actions">
+          <a class="icon-btn icon-btn-main" href="podglad.html?p=${encodeURIComponent(p.id)}" title="Podgląd strony (desktop i telefon)"><i class="fa-solid fa-eye"></i></a>
           <button type="button" class="icon-btn" data-act="css" title="Kopiuj zmienne CSS"><i class="fa-solid fa-code"></i></button>
           <button type="button" class="icon-btn" data-act="json" title="Kopiuj JSON"><i class="fa-solid fa-copy"></i></button>
           <button type="button" class="icon-btn" data-act="edit" title="Edytuj we własnym zestawie"><i class="fa-solid fa-pen"></i></button>
@@ -222,8 +223,11 @@ function save() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(custom)); } catch { /* ignore */ }
 }
 
+const previewLink = document.getElementById('custom-preview-link');
+
 function renderPreview() {
   previewEl.innerHTML = miniSiteHtml(custom.colors, custom.name) + swatchesHtml(custom.colors) + contrastHtml(custom.colors);
+  previewLink.href = `podglad.html?c=${ROLES.map(r => custom.colors[r.key].slice(1)).join(',')}`;
 }
 
 const pickerInputs = {};

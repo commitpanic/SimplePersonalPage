@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Podgląd strony | KubaBuba</title>
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="podglad.css">
+  <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body class="viewer">
+  <header class="toolbar">
+    <a href="./" class="tb-back" title="Wróć do palet"><i class="fa-solid fa-arrow-left"></i><span>Palety</span></a>
+
+    <div class="tb-group">
+      <button type="button" class="tb-icon" id="prev" title="Poprzednia paleta"><i class="fa-solid fa-chevron-left"></i></button>
+      <select id="palette-select" aria-label="Paleta"></select>
+      <button type="button" class="tb-icon" id="next" title="Następna paleta"><i class="fa-solid fa-chevron-right"></i></button>
+      <span class="tb-swatches" id="tb-swatches"></span>
+    </div>
+
+    <div class="tb-group seg" role="group" aria-label="Urządzenie">
+      <button type="button" data-device="desktop" title="Desktop"><i class="fa-solid fa-desktop"></i><span>Desktop</span></button>
+      <button type="button" data-device="tablet" title="Tablet"><i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span></button>
+      <button type="button" data-device="mobile" title="Telefon"><i class="fa-solid fa-mobile-screen"></i><span>Telefon</span></button>
+      <button type="button" data-device="both" title="Desktop + telefon"><i class="fa-solid fa-table-columns"></i><span>Oba</span></button>
+    </div>
+
+    <div class="tb-group seg" role="group" aria-label="Styl">
+      <button type="button" data-font="sans" title="Nowoczesny (bezszeryfowy)">Aa</button>
+      <button type="button" data-font="serif" class="serif" title="Elegancki (szeryfowe nagłówki)">Aa</button>
+    </div>
+
+    <a class="tb-icon" id="open-new" target="_blank" rel="noopener" title="Otwórz makietę w nowej karcie"><i class="fa-solid fa-up-right-from-square"></i></a>
+  </header>
+
+  <main class="stage" id="stage"></main>
+
+  <script src="podglad.js"></script>
+</body>
+</html>
