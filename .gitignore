@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Materiały marketingowe (grafiki FB itp.) – nie publikujemy na stronie
+marketing/
