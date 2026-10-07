@@ -1,0 +1,189 @@
+/* ── Kalkulator wyceny ─────────────────────────────────── */
+.back-link { color: var(--accent); text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+
+.quote-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 1.4rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.quote-form { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+
+.q-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01)), var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.q-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.q-title small, .price-editor summary small { color: var(--muted); font-weight: 400; font-size: 0.8rem; }
+
+.q-num {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 8px;
+  display: inline-grid;
+  place-items: center;
+  background: var(--card-icon-bg);
+  color: var(--accent);
+}
+
+.q-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+
+.q-field { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; min-width: 0; }
+.q-field > span { color: var(--muted); }
+.q-wide { margin-top: 0.8rem; }
+
+.q-field input,
+.q-field select,
+.q-field textarea,
+.extra .qty {
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.q-field textarea { resize: vertical; }
+.q-field input:focus, .q-field select:focus, .q-field textarea:focus, .extra .qty:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.q-check { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; cursor: pointer; align-self: end; padding-bottom: 0.6rem; }
+.q-check em { color: var(--muted); font-style: normal; font-size: 0.8rem; }
+.q-hint { color: var(--muted); font-size: 0.82rem; margin-top: 0.8rem; line-height: 1.5; }
+
+/* Pakiety i opieka */
+.pkg-list { display: flex; flex-direction: column; gap: 0.55rem; }
+.pkg {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.pkg:hover { border-color: var(--card-hover-border); }
+.pkg.active { border-color: var(--accent); background: var(--social-hover-bg); }
+.pkg input { accent-color: var(--accent); }
+.pkg-main { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.pkg-main small { color: var(--muted); font-size: 0.8rem; }
+.pkg-price { font-family: "IBM Plex Mono", monospace; white-space: nowrap; color: var(--accent); }
+
+/* Dodatki */
+.extra-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.5rem; }
+.extra {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.7rem;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.extra.active { border-color: var(--accent); background: var(--social-hover-bg); }
+.extra input[type="checkbox"] { accent-color: var(--accent); width: 1.05rem; height: 1.05rem; grid-row: span 2; }
+.extra .qty { width: 3.6rem; padding: 0.3rem 0.4rem; grid-row: span 2; text-align: center; }
+.extra-name { font-size: 0.9rem; }
+.extra-price { font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; color: var(--muted); }
+
+/* Edytor cennika */
+.price-editor summary { cursor: pointer; font-weight: 600; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.pe-head { font-size: 0.9rem; color: var(--accent); margin: 1.1rem 0 0.6rem; }
+.pe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.6rem; }
+
+/* Podsumowanie */
+.quote-summary { position: sticky; top: 1rem; }
+.sum-card {
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+.sum-title { font-size: 1.05rem; margin-bottom: 0.8rem; }
+.sum-lines { list-style: none; padding: 0; margin: 0 0 0.8rem; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.86rem; }
+.sum-lines li, .sum-row { display: flex; justify-content: space-between; gap: 0.8rem; }
+.sum-lines li span:last-child, .sum-row span:last-child { font-family: "IBM Plex Mono", monospace; white-space: nowrap; }
+.sum-totals { border-top: 1px dashed var(--line); padding-top: 0.7rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.88rem; }
+.sum-total { font-size: 1.15rem; font-weight: 700; color: var(--accent); margin: 0.3rem 0; }
+.sum-muted { color: var(--muted); }
+
+.q-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.q-actions .btn { cursor: pointer; font: inherit; font-size: 0.85rem; }
+.copy-status { color: var(--accent); font-size: 0.8rem; min-height: 1.2em; margin-top: 0.6rem; }
+
+@media (max-width: 860px) {
+  .quote-layout { grid-template-columns: 1fr; }
+  .quote-summary { position: static; }
+}
+
+/* ── Druk / PDF ── */
+.print-doc { display: none; }
+
+@media print {
+  @page { size: A4; margin: 16mm; }
+  body { background: #fff !important; color: #111 !important; }
+  .noise, .screen-only { display: none !important; }
+  .print-doc { display: block; font-family: "Space Grotesk", system-ui, sans-serif; font-size: 11pt; color: #111; }
+  .pd-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #111; padding-bottom: 10px; margin-bottom: 14px; }
+  .pd-brand { font-size: 20pt; font-weight: 700; color: #e11d62; }
+  .pd-sub { color: #555; font-size: 10pt; }
+  .pd-meta { text-align: right; font-size: 10pt; }
+  .pd-client { margin: 0 0 12px; }
+  .pd-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  .pd-table th, .pd-table td { border-bottom: 1px solid #ccc; padding: 6px 4px; text-align: left; vertical-align: top; }
+  .pd-table th { font-size: 9.5pt; text-transform: uppercase; letter-spacing: 0.04em; color: #555; }
+  .pd-table .num { text-align: right; white-space: nowrap; }
+  .pd-table tfoot td { border-bottom: none; }
+  .pd-table tr.grand td { font-weight: 700; font-size: 13pt; border-top: 2px solid #111; padding-top: 8px; }
+  .print-doc h3 { font-size: 11.5pt; margin: 14px 0 6px; }
+  .print-doc ul { margin: 0; padding-left: 18px; }
+  .print-doc li { margin-bottom: 3px; }
+  .pd-foot { margin-top: 24px; padding-top: 8px; border-top: 1px solid #ccc; font-size: 9pt; color: #555; text-align: center; }
+}
+
+/* Kwota dla pozycji wycenianej indywidualnie */
+.custom-price {
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 0.4rem 0.6rem;
+  width: 7.5rem;
+}
+.extra .custom-price { grid-column: 2; margin-top: 0.4rem; }
+
+/* Etykiety w 1 lub 2 liniach – pola zawsze wyrównane do dołu wiersza */
+.q-grid .q-field,
+.pe-grid .q-field { justify-content: space-between; }

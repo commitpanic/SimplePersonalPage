@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pl" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Kalkulator wyceny | KubaBuba</title>
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="wycena.css">
+  <script>(function(){try{var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="wrap screen-only">
+
+    <section class="hero">
+      <p class="eyebrow"><a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> mystuff</a></p>
+      <h1>Kalkulator <span class="name-highlight">wyceny</span></h1>
+      <p class="bio">Szybka wycena strony: wybierz pakiet, dodatki i opiekę, a podsumowanie skopiujesz na WhatsAppa lub wydrukujesz jako PDF dla klienta. Ceny według mojego cennika – zmienisz je w sekcji „Mój cennik”. Pozycje „wycena indywidualna” mają pole na uzgodnioną kwotę.</p>
+    </section>
+
+    <div class="quote-layout">
+      <div class="quote-form">
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">1</span> Klient</h2>
+          <div class="q-grid">
+            <label class="q-field"><span>Nazwa klienta</span><input type="text" id="client" placeholder="np. Klub SP3 / Gabinet XYZ"></label>
+            <label class="q-field"><span>Rodzaj</span>
+              <select id="client-type">
+                <option value="firma">Firma</option>
+                <option value="specjalista">Specjalista / freelancer</option>
+                <option value="organizacja">Organizacja / stowarzyszenie</option>
+                <option value="klub">Klub / grupa pasjonatów</option>
+              </select>
+            </label>
+            <label class="q-field"><span>Data wyceny</span><input type="date" id="date"></label>
+            <label class="q-field"><span>Ważna (dni)</span><input type="number" id="valid" min="1" value="14"></label>
+          </div>
+        </section>
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">2</span> Pakiet</h2>
+          <div class="pkg-list" id="pkg-list"></div>
+        </section>
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">3</span> Dodatki</h2>
+          <div class="extra-list" id="extra-list"></div>
+        </section>
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">4</span> Opieka po wdrożeniu</h2>
+          <div class="pkg-list" id="care-list"></div>
+          <p class="q-hint">Zmiany poza abonamentem: <strong id="hourly-label"></strong></p>
+        </section>
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">5</span> Koszty zewnętrzne <small>(klient płaci dostawcom, nie wliczane do ceny)</small></h2>
+          <div class="q-grid" id="ext-list"></div>
+        </section>
+
+        <section class="q-card">
+          <h2 class="q-title"><span class="q-num">6</span> Warunki</h2>
+          <div class="q-grid">
+            <label class="q-check"><input type="checkbox" id="rush"> <span>Tryb ekspresowy <em id="rush-label"></em></span></label>
+            <label class="q-field"><span>Rabat (%)</span><input type="number" id="discount" min="0" max="100" value="0"></label>
+            <label class="q-field"><span>Zaliczka</span>
+              <select id="deposit"><option value="0">brak</option><option value="30">30%</option><option value="50" selected>50%</option></select>
+            </label>
+            <label class="q-field"><span>VAT</span>
+              <select id="vat"><option value="zw">zwolniony (art. 113)</option><option value="23">23% (ceny netto + VAT)</option></select>
+            </label>
+          </div>
+          <label class="q-field q-wide"><span>Uwagi dla klienta</span><textarea id="notes" rows="3" placeholder="np. teksty i zdjęcia dostarcza klient"></textarea></label>
+        </section>
+
+        <details class="q-card price-editor">
+          <summary><i class="fa-solid fa-sliders"></i> Mój cennik <small>(zapisuje się w tej przeglądarce)</small></summary>
+          <div id="price-editor"></div>
+          <div class="q-actions">
+            <button class="btn ghost" type="button" id="reset-prices"><i class="fa-solid fa-rotate-left"></i> Przywróć domyślne</button>
+          </div>
+          <p class="q-hint">Dla porównania – rynek 2026 (przeglądy cen w Polsce): wizytówka zwykle 2–4 tys. zł netto, landing 0,8–3 tys., strona firmowa 3–8 tys., copywriting 300–800 zł za podstronę, wersja językowa 1,5–3,5 tys. zł.</p>
+        </details>
+      </div>
+
+      <aside class="quote-summary">
+        <div class="sum-card">
+          <h2 class="sum-title">Podsumowanie</h2>
+          <ul class="sum-lines" id="sum-lines"></ul>
+          <div class="sum-totals" id="sum-totals"></div>
+          <div class="q-actions">
+            <button class="btn" type="button" id="copy"><i class="fa-regular fa-copy"></i> Kopiuj tekst</button>
+            <button class="btn ghost" type="button" id="print"><i class="fa-solid fa-print"></i> Drukuj / PDF</button>
+            <button class="btn ghost" type="button" id="reset"><i class="fa-solid fa-eraser"></i> Nowa</button>
+          </div>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Dokument do druku / PDF – wypełniany przez wycena.js -->
+  <article class="print-doc" id="print-doc" aria-hidden="true"></article>
+
+  <script src="wycena.js"></script>
+</body>
+</html>
