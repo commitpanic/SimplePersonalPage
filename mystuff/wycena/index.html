@@ -22,7 +22,7 @@
     <section class="hero">
       <p class="eyebrow"><a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> mystuff</a></p>
       <h1>Kalkulator <span class="name-highlight">wyceny</span></h1>
-      <p class="bio">Szybka wycena strony: wybierz pakiet, dodatki i opiekę, a podsumowanie skopiujesz na WhatsAppa lub wydrukujesz jako PDF dla klienta. Ceny według mojego cennika – zmienisz je w sekcji „Mój cennik”. Pozycje „wycena indywidualna” mają pole na uzgodnioną kwotę.</p>
+      <p class="bio">Szybka wycena strony: wybierz pakiet, dodatki i opiekę, a podsumowanie skopiujesz na WhatsAppa lub otworzysz jako PDF dla klienta. Ceny według mojego cennika – zmienisz je w sekcji „Mój cennik”. Pozycje „wycena indywidualna” mają pole na uzgodnioną kwotę.</p>
     </section>
 
     <div class="quote-layout">
@@ -75,7 +75,7 @@
               <select id="deposit"><option value="0">brak</option><option value="30">30%</option><option value="50" selected>50%</option></select>
             </label>
             <label class="q-field"><span>VAT</span>
-              <select id="vat"><option value="zw">zwolniony (art. 113)</option><option value="23">23% (ceny netto + VAT)</option></select>
+              <select id="vat"><option value="zw">zwolniony (art. 113)</option><option value="23">23% (ceny brutto, VAT w cenie)</option></select>
             </label>
           </div>
           <label class="q-field q-wide"><span>Uwagi dla klienta</span><textarea id="notes" rows="3" placeholder="np. teksty i zdjęcia dostarcza klient"></textarea></label>
@@ -98,18 +98,23 @@
           <div class="sum-totals" id="sum-totals"></div>
           <div class="q-actions">
             <button class="btn" type="button" id="copy"><i class="fa-regular fa-copy"></i> Kopiuj tekst</button>
-            <button class="btn ghost" type="button" id="print"><i class="fa-solid fa-print"></i> Drukuj / PDF</button>
+            <button class="btn ghost" type="button" id="pdf"><i class="fa-solid fa-file-pdf"></i> PDF</button>
             <button class="btn ghost" type="button" id="reset"><i class="fa-solid fa-eraser"></i> Nowa</button>
           </div>
           <p class="copy-status" id="copy-status" aria-live="polite"></p>
+          <button class="income-toggle" type="button" id="income-toggle" aria-expanded="false" aria-controls="income"><i class="fa-solid fa-eye"></i> Mój przychód</button>
+          <div class="income" id="income" hidden>
+            <p class="income-head">Tylko dla mnie – nie trafia do wyceny ani PDF</p>
+            <div id="income-body"></div>
+            <p class="income-hint">Podatek dochodowy wg skali (12% / 32%), bez składek ZUS i zdrowotnej oraz kosztów.</p>
+          </div>
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- Dokument do druku / PDF – wypełniany przez wycena.js -->
-  <article class="print-doc" id="print-doc" aria-hidden="true"></article>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.3/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.3/vfs_fonts.js"></script>
   <script src="wycena.js"></script>
 </body>
 </html>

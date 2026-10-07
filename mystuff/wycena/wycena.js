@@ -179,9 +179,10 @@
     var rush = state.rush ? subtotal * prices.rushPct / 100 : 0;
     var discountPct = Math.min(Math.max(Number(state.discount) || 0, 0), 100);
     var discount = (subtotal + rush) * discountPct / 100;
-    var net = subtotal + rush - discount;
-    var vatAmount = state.vat === "23" ? net * 0.23 : 0;
-    var gross = net + vatAmount;
+    // Ceny w cenniku są kwotami końcowymi dla klienta (przy 23% VAT – brutto, VAT jest „w tym”)
+    var gross = subtotal + rush - discount;
+    var vatAmount = state.vat === "23" ? gross * 23 / 123 : 0;
+    var net = gross - vatAmount;
     var deposit = gross * (Number(state.deposit) || 0) / 100;
     if (state.rush) days = Math.ceil(days * 0.6);
 
@@ -201,7 +202,12 @@
   }
 
   function dateStr(d) { return new Date(d).toLocaleDateString("pl-PL"); }
-  function vatSuffix() { return state.vat === "23" ? " brutto" : " (zw. z VAT)"; }
+  function vatSuffix() { return state.vat === "23" ? " brutto (z VAT)" : " (zw. z VAT)"; }
+  function vatNote() {
+    return state.vat === "23"
+      ? "Podane ceny są cenami brutto – zawierają już podatek VAT 23%."
+      : "Podane ceny są cenami końcowymi – nie dolicza się do nich VAT (sprzedawca zwolniony z VAT na podstawie art. 113 ust. 1 ustawy o VAT).";
+  }
 
   /* ── Podsumowanie ── */
   function renderSummary() {
@@ -214,8 +220,8 @@
     var t = "";
     if (r.rush) t += row("Ekspres +" + prices.rushPct + "%", zl(r.rush));
     if (r.discount) t += row("Rabat −" + r.discountPct + "%", "−" + zl(r.discount));
-    if (state.vat === "23") { t += row("Netto", zl(r.net)); t += row("VAT 23%", zl(r.vatAmount)); }
     t += row("Razem" + vatSuffix(), zl(r.gross) + (r.tbd ? " +" : ""), "sum-total");
+    if (state.vat === "23") t += row("w tym VAT 23%", zl(r.vatAmount), "sum-muted");
     if (r.tbd) t += row("+ pozycje do ustalenia", "", "sum-muted");
     if (r.deposit) t += row("Zaliczka " + state.deposit + "%", zl(r.deposit));
     t += row("Termin", "ok. " + r.days + " dni rob.");
@@ -224,6 +230,20 @@
     if (extSum) t += row("Koszty zewn. / rok", "~" + zl(extSum), "sum-muted");
     $("sum-totals").innerHTML = t;
   }
+  // Tylko dla mnie: ile zostaje po podatku dochodowym (skala 12% / 32%). Nie trafia do tekstu ani PDF.
+  function renderIncome() {
+    var r = compute();
+    var rev = r.net; // przychód = kwota bez VAT
+    var h = row("Przychód (bez VAT)", zl(rev));
+    [12, 32].forEach(function (pct) {
+      var tax = rev * pct / 100;
+      h += row("Podatek " + pct + "%", "−" + zl(tax), "sum-muted");
+      h += row("Zostaje przy " + pct + "%", zl(rev - tax), "income-net");
+    });
+    if (r.care.price) h += row("Opieka rocznie (12 × " + zl(r.care.price) + ")", zl(r.care.price * 12), "sum-muted");
+    $("income-body").innerHTML = h;
+  }
+
   function row(label, value, cls) {
     return '<div class="sum-row' + (cls ? " " + cls : "") + '"><span>' + label + "</span><span>" + value + "</span></div>";
   }
@@ -241,8 +261,9 @@
     out.push("");
     if (r.rush) out.push("Tryb ekspresowy (+" + prices.rushPct + "%): " + zl(r.rush));
     if (r.discount) out.push("Rabat " + r.discountPct + "%: −" + zl(r.discount));
-    if (state.vat === "23") out.push("Netto: " + zl(r.net) + " + VAT 23%: " + zl(r.vatAmount));
     out.push("RAZEM: " + zl(r.gross) + vatSuffix() + (r.tbd ? " + pozycje do ustalenia" : ""));
+    if (state.vat === "23") out.push("w tym VAT 23%: " + zl(r.vatAmount));
+    out.push(vatNote());
     if (r.deposit) out.push("Zaliczka " + state.deposit + "%: " + zl(r.deposit) + ", reszta po publikacji strony");
     out.push("Termin realizacji: ok. " + r.days + " dni roboczych od otrzymania materiałów");
     out.push("");
@@ -259,46 +280,120 @@
     return out.join("\n");
   }
 
-  /* ── Dokument do druku ── */
-  function renderPrintDoc() {
-    var r = compute();
-    var rows = r.lines.map(function (l) {
-      var unit = l.tbd ? "—" : (l.price ? zl(l.price) : "gratis");
-      return "<tr><td>" + esc(l.name) + "</td><td class='num'>" + l.qty + "</td><td class='num'>" + unit + "</td><td class='num'>" + lineValue(l) + "</td></tr>";
-    }).join("");
-    var totals = "";
-    if (r.rush) totals += "<tr><td colspan='3'>Tryb ekspresowy (+" + prices.rushPct + "%)</td><td class='num'>" + zl(r.rush) + "</td></tr>";
-    if (r.discount) totals += "<tr><td colspan='3'>Rabat " + r.discountPct + "%</td><td class='num'>−" + zl(r.discount) + "</td></tr>";
-    if (state.vat === "23") {
-      totals += "<tr><td colspan='3'>Razem netto</td><td class='num'>" + zl(r.net) + "</td></tr>";
-      totals += "<tr><td colspan='3'>VAT 23%</td><td class='num'>" + zl(r.vatAmount) + "</td></tr>";
-    }
-    totals += "<tr class='grand'><td colspan='3'>Razem do zapłaty" + vatSuffix() + (r.tbd ? " + pozycje do ustalenia" : "") + "</td><td class='num'>" + zl(r.gross) + "</td></tr>";
-    var ext = r.ext.filter(function (e) { return e.price > 0; }).map(function (e) {
-      return "<li>" + esc(e.name) + ": ok. " + zl(e.price) + "</li>";
-    }).join("");
+  /* ── Wycena w PDF (pdfmake, czcionka Roboto z polskimi znakami) ── */
+  var PINK = "#e11d62", GREY = "#666666", LINE = "#d0d0d0";
 
-    $("print-doc").innerHTML =
-      "<header class='pd-head'><div><div class='pd-brand'>KubaBuba.pl</div><div class='pd-sub'>Strony internetowe · Jakub Błaszyk</div></div>" +
-      "<div class='pd-meta'><div><strong>Wycena</strong></div><div>Data: " + dateStr(state.date) + "</div><div>Ważna do: " + dateStr(r.validUntil) + "</div></div></header>" +
-      (state.client ? "<p class='pd-client'>Dla: <strong>" + esc(state.client) + "</strong></p>" : "") +
-      "<table class='pd-table'><thead><tr><th>Pozycja</th><th class='num'>Ilość</th><th class='num'>Cena</th><th class='num'>Wartość</th></tr></thead><tbody>" + rows + "</tbody><tfoot>" + totals + "</tfoot></table>" +
-      "<h3>Warunki</h3><ul>" +
-      "<li>Termin realizacji: ok. " + r.days + " dni roboczych od otrzymania materiałów (teksty, zdjęcia, logo).</li>" +
-      (r.deposit ? "<li>Zaliczka " + state.deposit + "% (" + zl(r.deposit) + ") przed rozpoczęciem prac, pozostała kwota po publikacji strony.</li>" : "<li>Płatność po publikacji strony.</li>") +
-      "<li>Wycena obejmuje 2 rundy poprawek w ramach uzgodnionego zakresu.</li>" +
-      "<li>Domena i strona są w całości własnością klienta.</li>" +
-      "<li>Opieka po wdrożeniu: " + esc(r.care.name) + (r.care.price ? " – " + zl(r.care.price) + " miesięcznie" : "") + ". Zmiany poza abonamentem: " + zl(prices.hourly) + "/h.</li>" +
-      (state.vat === "zw" ? "<li>Sprzedawca zwolniony z VAT na podstawie art. 113 ust. 1 ustawy o VAT.</li>" : "") +
-      "</ul>" +
-      (ext ? "<h3>Koszty zewnętrzne (płatne bezpośrednio u dostawców, szacunkowo, rocznie)</h3><ul>" + ext + "</ul>" : "") +
-      (state.notes.trim() ? "<h3>Uwagi</h3><p>" + esc(state.notes.trim()).replace(/\n/g, "<br>") + "</p>" : "") +
-      "<footer class='pd-foot'>Jakub Błaszyk · KubaBuba.pl · 665 244 647 · kuba@kubabuba.pl</footer>";
+  function pdfDefinition() {
+    var r = compute();
+    var cellR = function (text, extra) { return Object.assign({ text: text, alignment: "right", noWrap: true }, extra || {}); };
+
+    var body = [[
+      { text: "POZYCJA", style: "th" },
+      cellR("ILOŚĆ", { style: "th" }),
+      cellR("CENA", { style: "th" }),
+      cellR("WARTOŚĆ", { style: "th" })
+    ]];
+    r.lines.forEach(function (l) {
+      body.push([
+        l.name,
+        cellR(String(l.qty) + (l.unit ? " " + l.unit : "")),
+        cellR(l.tbd ? "—" : (l.price ? zl(l.price) : "gratis")),
+        cellR(lineValue(l))
+      ]);
+    });
+
+    var totals = [];
+    var tRow = function (label, value, bold) {
+      totals.push([{ text: label, colSpan: 3, bold: !!bold }, {}, {}, cellR(value, { bold: !!bold })]);
+    };
+    if (r.rush) tRow("Tryb ekspresowy (+" + prices.rushPct + "%)", zl(r.rush));
+    if (r.discount) tRow("Rabat " + r.discountPct + "%", "−" + zl(r.discount));
+    totals.push([
+      { text: "Razem do zapłaty" + vatSuffix() + (r.tbd ? " + pozycje do ustalenia" : ""), colSpan: 3, bold: true, fontSize: 13 }, {}, {},
+      cellR(zl(r.gross), { bold: true, fontSize: 13, color: PINK })
+    ]);
+    if (state.vat === "23") tRow("w tym VAT 23%", zl(r.vatAmount));
+
+    var terms = [
+      "Termin realizacji: ok. " + r.days + " dni roboczych od otrzymania materiałów (teksty, zdjęcia, logo).",
+      r.deposit ? "Zaliczka " + state.deposit + "% (" + zl(r.deposit) + ") przed rozpoczęciem prac, pozostała kwota po publikacji strony." : "Płatność po publikacji strony.",
+      "Wycena obejmuje 2 rundy poprawek w ramach uzgodnionego zakresu.",
+      "Domena i strona są w całości własnością klienta.",
+      "Opieka po wdrożeniu: " + r.care.name + (r.care.price ? " – " + zl(r.care.price) + " miesięcznie" : "") + ". Zmiany poza abonamentem: " + zl(prices.hourly) + "/h."
+    ];
+    terms.unshift(vatNote());
+    var ext = r.ext.filter(function (e) { return e.price > 0; }).map(function (e) { return e.name + ": ok. " + zl(e.price); });
+
+    var content = [
+      { columns: [
+        [{ text: "KubaBuba.pl", fontSize: 22, bold: true, color: PINK }, { text: "Strony internetowe · Jakub Błaszyk", color: GREY }],
+        { width: "auto", alignment: "right", stack: [
+          { text: "Wycena", bold: true, fontSize: 13 },
+          "Data: " + dateStr(state.date),
+          "Ważna do: " + dateStr(r.validUntil)
+        ] }
+      ] },
+      { canvas: [{ type: "line", x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 1.5 }], margin: [0, 10, 0, 12] }
+    ];
+    if (state.client) content.push({ text: [{ text: "Dla: " }, { text: state.client, bold: true }], margin: [0, 0, 0, 10] });
+    content.push({
+      table: { headerRows: 1, widths: ["*", 60, 75, 85], body: body.concat(totals) },
+      layout: {
+        hLineWidth: function (i, node) { return i === node.table.body.length - totals.length ? 1.5 : (i === 0 || i === node.table.body.length ? 0 : 0.5); },
+        vLineWidth: function () { return 0; },
+        hLineColor: function (i, node) { return i === node.table.body.length - totals.length ? "#111111" : LINE; },
+        paddingLeft: function () { return 6; }, paddingRight: function () { return 6; },
+        paddingTop: function () { return 6; }, paddingBottom: function () { return 6; }
+      },
+      margin: [0, 0, 0, 16]
+    });
+    content.push({ text: "Warunki", style: "h3" }, { ul: terms, margin: [0, 0, 0, 10] });
+    if (ext.length) content.push({ text: "Koszty zewnętrzne (płatne bezpośrednio u dostawców, szacunkowo, rocznie)", style: "h3" }, { ul: ext, margin: [0, 0, 0, 10] });
+    if (state.notes.trim()) content.push({ text: "Uwagi", style: "h3" }, { text: state.notes.trim(), margin: [0, 0, 0, 10] });
+
+    return {
+      pageSize: "A4",
+      pageMargins: [40, 40, 40, 60],
+      info: { title: "Wycena" + (state.client ? " – " + state.client : "") + " – KubaBuba.pl", author: "Jakub Błaszyk" },
+      defaultStyle: { font: "Roboto", fontSize: 10.5, lineHeight: 1.25 },
+      styles: {
+        th: { fontSize: 8.5, bold: true, color: GREY, characterSpacing: 0.5 },
+        h3: { fontSize: 11.5, bold: true, margin: [0, 6, 0, 4] }
+      },
+      content: content,
+      footer: {
+        text: "Jakub Błaszyk · KubaBuba.pl · 665 244 647 · kuba@kubabuba.pl",
+        alignment: "center", fontSize: 8.5, color: GREY, margin: [40, 20, 40, 0]
+      }
+    };
+  }
+
+  function openPdf() {
+    if (!window.pdfMake) { $("copy-status").textContent = "Nie udało się załadować generatora PDF – sprawdź internet."; return; }
+    // Kartę otwieramy od razu w obsłudze kliknięcia, żeby nie zablokowała jej przeglądarka;
+    // gdy mimo to jest zablokowana – PDF zapisuje się jako plik.
+    var win = window.open("", "_blank");
+    var name = "wycena" + (state.client ? "-" + state.client.toLowerCase().replace(/[^a-z0-9ąćęłńóśźż]+/g, "-").replace(/^-|-$/g, "") : "") + ".pdf";
+    pdfMake.createPdf(pdfDefinition()).getBlob().then(function (blob) {
+      var url = URL.createObjectURL(blob);
+      if (win) {
+        win.location.href = url;
+      } else {
+        var a = document.createElement("a");
+        a.href = url; a.download = name;
+        document.body.appendChild(a); a.click(); a.remove();
+        $("copy-status").textContent = "Przeglądarka zablokowała nową kartę – PDF zapisano jako plik.";
+      }
+    }, function () {
+      if (win) win.close();
+      $("copy-status").textContent = "Nie udało się wygenerować PDF.";
+    });
   }
 
   function update() {
     save(DRAFT_KEY, state);
     renderSummary();
+    renderIncome();
   }
 
   /* ── Zdarzenia ── */
@@ -357,8 +452,12 @@
     }
   });
 
-  $("print").addEventListener("click", function () { renderPrintDoc(); window.print(); });
-  window.addEventListener("beforeprint", renderPrintDoc);
+  $("pdf").addEventListener("click", openPdf);
+  $("income-toggle").addEventListener("click", function () {
+    var box = $("income");
+    box.hidden = !box.hidden;
+    this.setAttribute("aria-expanded", String(!box.hidden));
+  });
 
   $("reset").addEventListener("click", function () {
     if (!confirm("Wyczyścić bieżącą wycenę?")) return;

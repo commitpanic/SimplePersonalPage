@@ -145,31 +145,6 @@
   .quote-summary { position: static; }
 }
 
-/* ── Druk / PDF ── */
-.print-doc { display: none; }
-
-@media print {
-  @page { size: A4; margin: 16mm; }
-  body { background: #fff !important; color: #111 !important; }
-  .noise, .screen-only { display: none !important; }
-  .print-doc { display: block; font-family: "Space Grotesk", system-ui, sans-serif; font-size: 11pt; color: #111; }
-  .pd-head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #111; padding-bottom: 10px; margin-bottom: 14px; }
-  .pd-brand { font-size: 20pt; font-weight: 700; color: #e11d62; }
-  .pd-sub { color: #555; font-size: 10pt; }
-  .pd-meta { text-align: right; font-size: 10pt; }
-  .pd-client { margin: 0 0 12px; }
-  .pd-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
-  .pd-table th, .pd-table td { border-bottom: 1px solid #ccc; padding: 6px 4px; text-align: left; vertical-align: top; }
-  .pd-table th { font-size: 9.5pt; text-transform: uppercase; letter-spacing: 0.04em; color: #555; }
-  .pd-table .num { text-align: right; white-space: nowrap; }
-  .pd-table tfoot td { border-bottom: none; }
-  .pd-table tr.grand td { font-weight: 700; font-size: 13pt; border-top: 2px solid #111; padding-top: 8px; }
-  .print-doc h3 { font-size: 11.5pt; margin: 14px 0 6px; }
-  .print-doc ul { margin: 0; padding-left: 18px; }
-  .print-doc li { margin-bottom: 3px; }
-  .pd-foot { margin-top: 24px; padding-top: 8px; border-top: 1px solid #ccc; font-size: 9pt; color: #555; text-align: center; }
-}
-
 /* Kwota dla pozycji wycenianej indywidualnie */
 .custom-price {
   box-sizing: border-box;
@@ -187,3 +162,33 @@
 /* Etykiety w 1 lub 2 liniach – pola zawsze wyrównane do dołu wiersza */
 .q-grid .q-field,
 .pe-grid .q-field { justify-content: space-between; }
+
+/* Mój przychód – tylko na ekranie */
+.income-toggle {
+  margin-top: 0.8rem;
+  width: 100%;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.income-toggle:hover, .income-toggle[aria-expanded="true"] { color: var(--accent); border-color: var(--accent); }
+.income {
+  margin-top: 0.7rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+.income[hidden] { display: none; }
+.income #income-body { display: flex; flex-direction: column; gap: 0.35rem; }
+.income-head { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.income-net { font-weight: 700; color: var(--accent); }
+.income-hint { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
