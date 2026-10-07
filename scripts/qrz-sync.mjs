@@ -97,6 +97,7 @@ function renderQrzStaticPage(payload, staticBasemapSvg = "") {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>SP3FCK | QRZ Map Embed</title>
   <style>
     :root {
