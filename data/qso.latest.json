@@ -1,8 +1,107 @@
 {
-  "updatedAt": "2026-10-11T01:05:57.302Z",
+  "updatedAt": "2026-10-12T01:07:54.457Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-10-11T11:18:00.000Z-TF3W-20m-USB",
+      "datetime": "2026-10-11T11:18:00.000Z",
+      "callsign": "TF3W",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Iceland",
+      "grid": "HP94AD",
+      "lat": 64.14583333333333,
+      "lon": -21.958333333333332
+    },
+    {
+      "id": "2026-10-11T11:17:00.000Z-G5LSI-20m-USB",
+      "datetime": "2026-10-11T11:17:00.000Z",
+      "callsign": "G5LSI",
+      "band": "20m",
+      "mode": "USB",
+      "country": "England",
+      "grid": "IO84WE",
+      "lat": 54.1875,
+      "lon": -2.1250000000000004
+    },
+    {
+      "id": "2026-10-11T11:14:00.000Z-SP8BBK-40m-USB",
+      "datetime": "2026-10-11T11:14:00.000Z",
+      "callsign": "SP8BBK",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "KO00VF",
+      "lat": 50.22916666666667,
+      "lon": 21.791666666666668
+    },
+    {
+      "id": "2026-10-11T11:13:00.000Z-SP4VIT-40m-USB",
+      "datetime": "2026-10-11T11:13:00.000Z",
+      "callsign": "SP4VIT",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "JO93XQ",
+      "lat": 53.6875,
+      "lon": 19.958333333333336
+    },
+    {
+      "id": "2026-10-11T11:11:00.000Z-EA5JZU-20m-USB",
+      "datetime": "2026-10-11T11:11:00.000Z",
+      "callsign": "EA5JZU",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Spain",
+      "grid": "IM86QS",
+      "lat": 36.770833333333336,
+      "lon": -2.6250000000000004
+    },
+    {
+      "id": "2026-10-11T11:02:00.000Z-SQ3BMJ-20m-USB",
+      "datetime": "2026-10-11T11:02:00.000Z",
+      "callsign": "SQ3BMJ",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "JO72VF",
+      "lat": 52.22916666666667,
+      "lon": 15.791666666666666
+    },
+    {
+      "id": "2026-10-11T10:59:00.000Z-OE4ENU-20m-USB",
+      "datetime": "2026-10-11T10:59:00.000Z",
+      "callsign": "OE4ENU",
+      "band": "20m",
+      "mode": "USB",
+      "country": "Austria",
+      "grid": "JN87GS",
+      "lat": 47.770833333333336,
+      "lon": 16.541666666666668
+    },
+    {
+      "id": "2026-10-11T10:58:00.000Z-SP5WDN-40m-USB",
+      "datetime": "2026-10-11T10:58:00.000Z",
+      "callsign": "SP5WDN",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Poland",
+      "grid": "KN19GF",
+      "lat": 49.22916666666667,
+      "lon": 22.541666666666668
+    },
+    {
+      "id": "2026-10-11T10:57:00.000Z-DL4DBM-40m-USB",
+      "datetime": "2026-10-11T10:57:00.000Z",
+      "callsign": "DL4DBM",
+      "band": "40m",
+      "mode": "USB",
+      "country": "Germany",
+      "grid": "JO31QI",
+      "lat": 51.35416666666667,
+      "lon": 7.375
+    },
     {
       "id": "2026-09-20T12:01:00.000Z-PD3MR/P-40m-USB",
       "datetime": "2026-09-20T12:01:00.000Z",
