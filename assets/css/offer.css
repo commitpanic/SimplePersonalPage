@@ -266,7 +266,7 @@ p { margin: 0 0 1em; }
 .feature p { color: var(--muted); margin: 0; font-size: 0.95rem; }
 
 /* Portfolio */
-.portfolio { display: grid; grid-template-columns: 2fr 1fr; gap: 22px; }
+.portfolio { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .project {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -283,6 +283,7 @@ p { margin: 0 0 1em; }
 .project-body p { color: var(--muted); }
 .project-meta { font-family: var(--mono); font-size: 0.82rem; color: var(--accent) !important; margin-bottom: 8px; }
 .project-next {
+  grid-column: 1 / -1;
   border-style: dashed;
   justify-content: center;
   background: transparent;
