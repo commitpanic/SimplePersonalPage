@@ -282,8 +282,9 @@ p { margin: 0 0 1em; }
 .project-body { padding: 24px 26px 28px; }
 .project-body p { color: var(--muted); }
 .project-meta { font-family: var(--mono); font-size: 0.82rem; color: var(--accent) !important; margin-bottom: 8px; }
+/* Spans the full row only when it would otherwise sit alone in the left column. */
+.project-next:nth-child(odd) { grid-column: 1 / -1; }
 .project-next {
-  grid-column: 1 / -1;
   border-style: dashed;
   justify-content: center;
   background: transparent;
