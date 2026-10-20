@@ -26,7 +26,7 @@
       { id: "poczta", name: "E-mail w domenie – konfiguracja lub przekierowanie", price: 100, days: 0 },
       { id: "migracja", name: "Przeniesienie treści ze starej strony", price: 100, days: 1 },
       { id: "rodo", name: "Polityka prywatności", price: 50, days: 0 },
-      { id: "social", name: "Grafiki do social media (zestaw 5 szt.)", price: 150, days: 1 }
+      { id: "social", name: "Grafiki do social media (zestaw 5 szt.)", price: 100, days: 1 }
     ],
     care: [
       { id: "brak", name: "Bez abonamentu", desc: "zmiany rozliczane godzinowo", price: 0 },
