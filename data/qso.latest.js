@@ -1,8 +1,19 @@
 window.__HAM_MAP_QSO_DATA__ = {
-  "updatedAt": "2026-10-20T00:51:39.936Z",
+  "updatedAt": "2026-10-21T00:51:30.105Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
+    {
+      "id": "2026-10-19T15:55:00.000Z-YU1JW-20m-SSB",
+      "datetime": "2026-10-19T15:55:00.000Z",
+      "callsign": "YU1JW",
+      "band": "20m",
+      "mode": "SSB",
+      "country": "Serbia",
+      "grid": "JN93vs",
+      "lat": 43.770833333333336,
+      "lon": 19.791666666666668
+    },
     {
       "id": "2026-10-11T11:18:00.000Z-TF3W-20m-USB",
       "datetime": "2026-10-11T11:18:00.000Z",
