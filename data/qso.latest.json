@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T16:34:02.233Z",
+  "updatedAt": "2026-10-25T16:38:23.330Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
@@ -492,9 +492,9 @@
       "band": "20m",
       "mode": "USB",
       "country": "England",
-      "grid": "AA00AA",
-      "lat": -89.97916666666667,
-      "lon": -179.95833333333334
+      "grid": "IO92ma",
+      "lat": 52.020833333333336,
+      "lon": -0.9583333333333334
     },
     {
       "id": "2026-10-25T09:37:00.000Z-RW4W-10m-USB",
