@@ -1483,10 +1483,13 @@ function focusZone(kindKey, zone) {
 
 let jsPdfPromise = null;
 
+let exportBusy = false;
+
 async function exportMap(format) {
-  if (!mapState.ctx) {
+  if (!mapState.ctx || exportBusy) {
     return;
   }
+  exportBusy = true;
   const label = format.toUpperCase();
   setStatus(`Preparing ${label}...`);
   try {
@@ -1507,12 +1510,14 @@ async function exportMap(format) {
       pdf.setFillColor(11, 18, 24);
       pdf.rect(0, 0, pageW, pageH, "F");
       pdf.addImage(poster.toDataURL("image/jpeg", 0.92), "JPEG", (pageW - w) / 2, (pageH - h) / 2, w, h);
-      pdf.save(`${fileName}.pdf`);
+      downloadBlob(pdf.output("blob"), `${fileName}.pdf`);
     }
-    setStatus(`${label} saved.`);
+    setStatus(`${label} ready: ${fileName}.${format}`);
   } catch (error) {
     console.error(error);
-    setStatus(`Could not create ${label}.`);
+    setStatus(`Could not create ${label}: ${error.message || error}`);
+  } finally {
+    exportBusy = false;
   }
 }
 
@@ -1658,14 +1663,25 @@ function loadJsPdf() {
 }
 
 function downloadBlob(blob, fileName) {
+  if (!blob) {
+    throw new Error("empty file");
+  }
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
-  link.href = url;
-  link.download = fileName;
-  document.body.append(link);
-  link.click();
-  link.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  if ("download" in link) {
+    link.href = url;
+    link.download = fileName;
+    link.rel = "noopener";
+    link.style.display = "none";
+    document.body.append(link);
+    link.click();
+    link.remove();
+  } else {
+    // In-app browsers without the download attribute: show the file so it can be saved by hand.
+    window.open(url, "_blank");
+  }
+  // Keep the URL alive long enough for slow "Save as" dialogs.
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
 }
 
 function subsolarPoint(date) {

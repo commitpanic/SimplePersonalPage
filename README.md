@@ -43,7 +43,6 @@ Sekrety repo do ustawienia:
 - `QRZ_API_KEY` - API Access Key do Twojego logbooka (z panelu QRZ)
 - `QRZ_FETCH_OPTIONS` - opcjonalnie, np. `MAX:500,TYPE:ADIF` albo `MAX:500,TYPE:ADIF,MODSINCE:2026-01-01`
 - `QRZ_AGENT` - opcjonalny user-agent klienta
-- `QRZ_STATIC_BASEMAP_FILE` - opcjonalna sciezka SVG tla mapy (domyslnie `assets/maps/world-basemap.svg`)
 
 Endpoint API:
 
@@ -54,7 +53,7 @@ https://logbook.qrz.com/api
 Uwaga:
 - klucz API znajdziesz na stronie integracji API po zalogowaniu do QRZ,
 - skrypt wykonuje `ACTION=FETCH` i normalizuje wynik ADIF do `data/qso.latest.json`.
-- jezeli plik `assets/maps/world-basemap.svg` nie istnieje, sync wygeneruje go automatycznie z Natural Earth i potem bedzie tylko dogrywal punkty/linie QSO.
+- statyczna strona dla QRZ (`ham-map-qrz.html`, bez JavaScriptu) jest generowana przez `scripts/qrz-static-page.mjs`: mapa w stylu widoku Flat ze strefami CQ oraz statystyki DXCC/WAZ/ITU. Mozna ja przebudowac lokalnie z `data/qso.latest.json` bez API: `npm install --no-save d3-geo@3 topojson-client@3`, potem `node scripts/qrz-static-page.mjs`.
 - w razie potrzeby skrypt nadal obsluguje tryb legacy XML (login + haslo), ale rekomendowany jest API key.
 
 ## Ręczne odswiezanie danych
