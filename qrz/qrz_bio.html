@@ -30,8 +30,8 @@
 .map-hover-link:hover { border-bottom-color: var(--primary); }
 .header-hover-link:hover { color: var(--primary) !important; }
 .radio-icon { font-size: 4rem; color: var(--primary); }
-@keyframes pulse  { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1);} }
-.radio-icon i{animation:pulse 2s infinite;}
+@keyframes glow   { 0%,100%{text-shadow:0 0 5px var(--primary);} 50%{text-shadow:0 0 20px var(--primary),0 0 40px var(--primary);} }
+.radio-icon i{animation:glow 2s infinite;}
 
 /* ── Main Content ───────────────────────────────────────── */
 .main-content { background: var(--bg); padding-top: 20px; overflow: hidden; }
@@ -187,18 +187,14 @@
             </div>
             <div style="margin-left:auto;margin-right:15px;"><img src="https://static.qrz.com/k/sp3fck/Logo_PZK_h_40_96dpi_.png" alt="Logo" style="height:80px;width:auto;border-radius:8px;"></div>
             <div class="radio-icon">
-                <i class="fas fa-broadcast-tower"></i>
+                <i class="fas fa-signal"></i>
             </div>
         </div>
         <div>
-                    <i class="fa-solid fa-bahai" style="margin-left: 8px; color: #d75b3c;"></i>
-                    <a href="https://kubabuba.pl/mystuff/" target="_blank" rel="noopener noreferrer"
+                    <i class="fas fa-link" style="margin-left: 8px; color: #179b0d;"></i>
+                    <a href="https://www.sp3pld.e7.pl/" target="_blank" rel="noopener noreferrer"
                       class="header-hover-link"
-                      style="color:var(--text);text-decoration:none;font-size:1rem;">kubabuba.pl/mystuff - my page</a>
-                    <i class="fa-brands fa-discord" style="margin-left: 8px; color: #584eef;"></i>
-                    <a href="https://discord.com/invite/Xvn57vA6FC" target="_blank" rel="noopener noreferrer"
-                      class="header-hover-link"
-                      style="color:var(--text);text-decoration:none;font-size:1rem;">You can find me on Discord - Radio W Plecaku</a></div>
+                      style="color:var(--text);text-decoration:none;font-size:1rem;">SP3PLD</a></div>
     </div>
 </header>
 
@@ -209,11 +205,7 @@
         <!-- Text Section: Welcome to my QRZ Page! -->
         <section class="welcome-section2">
             <h2>Welcome to my QRZ Page!</h2>
-            <div class="bio-text"><p data-start="37" data-end="348">Greetings fellow hams! I'm a passionate amateur radio operator from Poland, operating under the callsign SP3FCK. I got my license in May 2025 and since then I have been actively exploring the world of ham radio. I enjoy many aspects of this wonderful hobby, from HF DXing to Parks on the Air (POTA) activations.</p><p data-start="350" data-end="491">I'm constantly learning and experimenting with antenna construction and design, always looking to improve my station and expand my knowledge.</p><p data-start="493" data-end="642">Professionally, I’m a software developer, and in my free time I enjoy creating tools and software that can be useful for the amateur radio community - you can visit my site kubabuba.pl/mystuff.</p><p data-start="644" data-end="731">I truly enjoy every new QSO and the opportunity to meet people from all over the world.</p><p>
-
-
-
-</p><p data-start="733" data-end="902" data-is-last-node="" data-is-only-node="">Feel free to browse through my station details, check out my recent POTA activities, and explore my ham radio awards gallery below. 73 and hope to work you on the bands!</p></div>
+            <div class="bio-text"><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Greetings fellow hams! I'm a passionate amateur radio operator from Poland, operating under the callsign SP3FCK. I got my license in May 2025 and since then I have been actively exploring the world of ham radio. I enjoy many aspects of this wonderful hobby, from HF DXing to Parks on the Air (POTA) activations.</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">I'm a proud member of the SP3PLD amateur radio club and of PZK (Polski Związek Krótkofalowców – the Polish Amateur Radio Union).</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">I'm constantly learning and experimenting with antenna construction and design, always looking to improve my station and expand my knowledge.</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">I truly enjoy every new QSO and the opportunity to meet people from all over the world.</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Feel free to browse through my station details, check out my recent POTA activities, and explore my ham radio awards gallery below. 73 and hope to work you on the bands!<br>------------------------------------------<br></span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Witajcie! Jestem krótkofalowcem z Polski i nadaję pod znakiem SP3FCK. Licencję zdobyłem w maju 2025 roku i od tego czasu z pasją poznaję świat krótkofalarstwa. Lubię wiele jego odmian, od łączności DX na pasmach KF po aktywacje w programie Parks on the Air (POTA).</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Jestem członkiem klubu krótkofalowców SP3PLD oraz Polskiego Związku Krótkofalowców (PZK).</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Wciąż się uczę i eksperymentuję z budową i projektowaniem anten, cały czas szukając sposobów na ulepszenie stacji i poszerzenie wiedzy.</span></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Cieszy mnie każde nowe QSO i każda okazja, żeby poznać ludzi z całego świata.</span></p><p data-start="37" data-end="348"></p><p data-start="37" data-end="348"><span style="font-size: 14.4px;">Zachęcam do obejrzenia informacji o mojej stacji, ostatnich aktywacji POTA i galerii dyplomów poniżej. 73 i do usłyszenia na pasmach!</span></p></div>
         </section>
 
 
@@ -232,7 +224,7 @@
                 </div>
                 <div class="station-item">
                     <h3>Antennas</h3>
-                    <p>80m-40m-20m-15m Inverted V Dipol, 10m Hex Loop,40m-20m-15m-10m Vertical by SP3BKR,20m -&gt; 10m telescopic V dipole, 40m dipole</p>
+                    <p>80m-40m-20m-15m Inverted V Dipol, 10m Hex Loop,40m-20m-15m-10m Vertical by SP3BKR</p>
                 </div>
                 <div class="station-item">
                     <h3>2m/70cm Home Station</h3>
@@ -244,7 +236,7 @@
                 </div>
                 <div class="station-item">
                     <h3>Portable Antenna</h3>
-                    <p>End Fed Antenna HF8022 Hallo Field Day</p>
+                    <p>End Fed Antenna HF8022 Hallo Field Day, 40m dipole, 20m -&gt; 10m telescopic V dipole</p>
                 </div>
             </div>
         </section>
@@ -259,7 +251,7 @@
                 <div class="embed-frame-wrap">
                     <iframe src="https://kubabuba.pl/ham-map-qrz.html"
                             title="Ham Map"
-                            style="width:100%;height:1071px;border:0;"
+                            style="width:100%;height:1585px;border:0;"
                             loading="lazy"></iframe>
                 </div>
             </div>
@@ -557,48 +549,48 @@
 
 <style>
 /* Gallery CSS — auto-generated by qrz-builder */
-        #gl-43-s1:checked ~ .gallery-slides .gslide-1,
-        #gl-43-s2:checked ~ .gallery-slides .gslide-2,
-        #gl-43-s3:checked ~ .gallery-slides .gslide-3,
-        #gl-43-s4:checked ~ .gallery-slides .gslide-4,
-        #gl-43-s5:checked ~ .gallery-slides .gslide-5,
-        #gl-43-s6:checked ~ .gallery-slides .gslide-6,
-        #gl-43-s7:checked ~ .gallery-slides .gslide-7,
-        #gl-43-s8:checked ~ .gallery-slides .gslide-8,
-        #gl-43-s9:checked ~ .gallery-slides .gslide-9,
-        #gl-43-s10:checked ~ .gallery-slides .gslide-10,
-        #gl-43-s11:checked ~ .gallery-slides .gslide-11,
-        #gl-43-s12:checked ~ .gallery-slides .gslide-12,
-        #gl-43-s13:checked ~ .gallery-slides .gslide-13,
-        #gl-43-s14:checked ~ .gallery-slides .gslide-14,
-        #gl-43-s15:checked ~ .gallery-slides .gslide-15,
-        #gl-43-s16:checked ~ .gallery-slides .gslide-16,
-        #gl-43-s17:checked ~ .gallery-slides .gslide-17,
-        #gl-43-s18:checked ~ .gallery-slides .gslide-18,
-        #gl-43-s19:checked ~ .gallery-slides .gslide-19,
-        #gl-43-s20:checked ~ .gallery-slides .gslide-20,
-        #gl-43-s21:checked ~ .gallery-slides .gslide-21 { opacity:1; transform:translateX(0); }
-        #gl-43-s1:checked ~ .gallery-navigation .gnav-1,
-        #gl-43-s2:checked ~ .gallery-navigation .gnav-2,
-        #gl-43-s3:checked ~ .gallery-navigation .gnav-3,
-        #gl-43-s4:checked ~ .gallery-navigation .gnav-4,
-        #gl-43-s5:checked ~ .gallery-navigation .gnav-5,
-        #gl-43-s6:checked ~ .gallery-navigation .gnav-6,
-        #gl-43-s7:checked ~ .gallery-navigation .gnav-7,
-        #gl-43-s8:checked ~ .gallery-navigation .gnav-8,
-        #gl-43-s9:checked ~ .gallery-navigation .gnav-9,
-        #gl-43-s10:checked ~ .gallery-navigation .gnav-10,
-        #gl-43-s11:checked ~ .gallery-navigation .gnav-11,
-        #gl-43-s12:checked ~ .gallery-navigation .gnav-12,
-        #gl-43-s13:checked ~ .gallery-navigation .gnav-13,
-        #gl-43-s14:checked ~ .gallery-navigation .gnav-14,
-        #gl-43-s15:checked ~ .gallery-navigation .gnav-15,
-        #gl-43-s16:checked ~ .gallery-navigation .gnav-16,
-        #gl-43-s17:checked ~ .gallery-navigation .gnav-17,
-        #gl-43-s18:checked ~ .gallery-navigation .gnav-18,
-        #gl-43-s19:checked ~ .gallery-navigation .gnav-19,
-        #gl-43-s20:checked ~ .gallery-navigation .gnav-20,
-        #gl-43-s21:checked ~ .gallery-navigation .gnav-21 { display:flex; }
+        #gl-14-s1:checked ~ .gallery-slides .gslide-1,
+        #gl-14-s2:checked ~ .gallery-slides .gslide-2,
+        #gl-14-s3:checked ~ .gallery-slides .gslide-3,
+        #gl-14-s4:checked ~ .gallery-slides .gslide-4,
+        #gl-14-s5:checked ~ .gallery-slides .gslide-5,
+        #gl-14-s6:checked ~ .gallery-slides .gslide-6,
+        #gl-14-s7:checked ~ .gallery-slides .gslide-7,
+        #gl-14-s8:checked ~ .gallery-slides .gslide-8,
+        #gl-14-s9:checked ~ .gallery-slides .gslide-9,
+        #gl-14-s10:checked ~ .gallery-slides .gslide-10,
+        #gl-14-s11:checked ~ .gallery-slides .gslide-11,
+        #gl-14-s12:checked ~ .gallery-slides .gslide-12,
+        #gl-14-s13:checked ~ .gallery-slides .gslide-13,
+        #gl-14-s14:checked ~ .gallery-slides .gslide-14,
+        #gl-14-s15:checked ~ .gallery-slides .gslide-15,
+        #gl-14-s16:checked ~ .gallery-slides .gslide-16,
+        #gl-14-s17:checked ~ .gallery-slides .gslide-17,
+        #gl-14-s18:checked ~ .gallery-slides .gslide-18,
+        #gl-14-s19:checked ~ .gallery-slides .gslide-19,
+        #gl-14-s20:checked ~ .gallery-slides .gslide-20,
+        #gl-14-s21:checked ~ .gallery-slides .gslide-21 { opacity:1; transform:translateX(0); }
+        #gl-14-s1:checked ~ .gallery-navigation .gnav-1,
+        #gl-14-s2:checked ~ .gallery-navigation .gnav-2,
+        #gl-14-s3:checked ~ .gallery-navigation .gnav-3,
+        #gl-14-s4:checked ~ .gallery-navigation .gnav-4,
+        #gl-14-s5:checked ~ .gallery-navigation .gnav-5,
+        #gl-14-s6:checked ~ .gallery-navigation .gnav-6,
+        #gl-14-s7:checked ~ .gallery-navigation .gnav-7,
+        #gl-14-s8:checked ~ .gallery-navigation .gnav-8,
+        #gl-14-s9:checked ~ .gallery-navigation .gnav-9,
+        #gl-14-s10:checked ~ .gallery-navigation .gnav-10,
+        #gl-14-s11:checked ~ .gallery-navigation .gnav-11,
+        #gl-14-s12:checked ~ .gallery-navigation .gnav-12,
+        #gl-14-s13:checked ~ .gallery-navigation .gnav-13,
+        #gl-14-s14:checked ~ .gallery-navigation .gnav-14,
+        #gl-14-s15:checked ~ .gallery-navigation .gnav-15,
+        #gl-14-s16:checked ~ .gallery-navigation .gnav-16,
+        #gl-14-s17:checked ~ .gallery-navigation .gnav-17,
+        #gl-14-s18:checked ~ .gallery-navigation .gnav-18,
+        #gl-14-s19:checked ~ .gallery-navigation .gnav-19,
+        #gl-14-s20:checked ~ .gallery-navigation .gnav-20,
+        #gl-14-s21:checked ~ .gallery-navigation .gnav-21 { display:flex; }
 </style>
         <!-- Ham Awards Gallery Section -->
         <section class="awards-section">
@@ -607,27 +599,27 @@
             </div>
             <div class="gallery-container">
                 <div class="gallery-wrapper" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.24);">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s1" checked style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s2" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s3" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s4" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s5" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s6" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s7" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s8" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s9" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s10" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s11" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s12" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s13" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s14" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s15" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s16" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s17" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s18" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s19" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s20" style="display:none;">
-                    <input type="radio" name="gl-43-slide" id="gl-43-s21" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s1" checked style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s2" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s3" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s4" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s5" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s6" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s7" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s8" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s9" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s10" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s11" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s12" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s13" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s14" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s15" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s16" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s17" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s18" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s19" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s20" style="display:none;">
+                    <input type="radio" name="gl-14-slide" id="gl-14-s21" style="display:none;">
                     <div class="gallery-slides">
 
                         <div class="slide gslide-1">
@@ -864,129 +856,129 @@
                     <div class="gallery-navigation">
 
                         <div class="gallery-nav-set gnav-1">
-                            <label for="gl-43-s21" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s21" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">1 / 21</div>
-                            <label for="gl-43-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-2">
-                            <label for="gl-43-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">2 / 21</div>
-                            <label for="gl-43-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-3">
-                            <label for="gl-43-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">3 / 21</div>
-                            <label for="gl-43-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-4">
-                            <label for="gl-43-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">4 / 21</div>
-                            <label for="gl-43-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-5">
-                            <label for="gl-43-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">5 / 21</div>
-                            <label for="gl-43-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-6">
-                            <label for="gl-43-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">6 / 21</div>
-                            <label for="gl-43-s7" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s7" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-7">
-                            <label for="gl-43-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">7 / 21</div>
-                            <label for="gl-43-s8" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s8" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-8">
-                            <label for="gl-43-s7" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s7" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">8 / 21</div>
-                            <label for="gl-43-s9" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s9" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-9">
-                            <label for="gl-43-s8" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s8" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">9 / 21</div>
-                            <label for="gl-43-s10" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s10" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-10">
-                            <label for="gl-43-s9" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s9" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">10 / 21</div>
-                            <label for="gl-43-s11" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s11" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-11">
-                            <label for="gl-43-s10" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s10" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">11 / 21</div>
-                            <label for="gl-43-s12" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s12" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-12">
-                            <label for="gl-43-s11" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s11" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">12 / 21</div>
-                            <label for="gl-43-s13" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s13" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-13">
-                            <label for="gl-43-s12" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s12" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">13 / 21</div>
-                            <label for="gl-43-s14" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s14" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-14">
-                            <label for="gl-43-s13" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s13" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">14 / 21</div>
-                            <label for="gl-43-s15" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s15" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-15">
-                            <label for="gl-43-s14" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s14" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">15 / 21</div>
-                            <label for="gl-43-s16" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s16" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-16">
-                            <label for="gl-43-s15" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s15" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">16 / 21</div>
-                            <label for="gl-43-s17" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s17" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-17">
-                            <label for="gl-43-s16" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s16" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">17 / 21</div>
-                            <label for="gl-43-s18" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s18" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-18">
-                            <label for="gl-43-s17" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s17" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">18 / 21</div>
-                            <label for="gl-43-s19" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s19" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-19">
-                            <label for="gl-43-s18" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s18" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">19 / 21</div>
-                            <label for="gl-43-s20" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s20" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-20">
-                            <label for="gl-43-s19" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s19" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">20 / 21</div>
-                            <label for="gl-43-s21" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s21" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-21">
-                            <label for="gl-43-s20" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-14-s20" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">21 / 21</div>
-                            <label for="gl-43-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-14-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
                     </div>
                 </div>
@@ -995,18 +987,18 @@
 
 <style>
 /* Gallery CSS — auto-generated by qrz-builder */
-        #gl-44-s1:checked ~ .gallery-slides .gslide-1,
-        #gl-44-s2:checked ~ .gallery-slides .gslide-2,
-        #gl-44-s3:checked ~ .gallery-slides .gslide-3,
-        #gl-44-s4:checked ~ .gallery-slides .gslide-4,
-        #gl-44-s5:checked ~ .gallery-slides .gslide-5,
-        #gl-44-s6:checked ~ .gallery-slides .gslide-6 { opacity:1; transform:translateX(0); }
-        #gl-44-s1:checked ~ .gallery-navigation .gnav-1,
-        #gl-44-s2:checked ~ .gallery-navigation .gnav-2,
-        #gl-44-s3:checked ~ .gallery-navigation .gnav-3,
-        #gl-44-s4:checked ~ .gallery-navigation .gnav-4,
-        #gl-44-s5:checked ~ .gallery-navigation .gnav-5,
-        #gl-44-s6:checked ~ .gallery-navigation .gnav-6 { display:flex; }
+        #gl-15-s1:checked ~ .gallery-slides .gslide-1,
+        #gl-15-s2:checked ~ .gallery-slides .gslide-2,
+        #gl-15-s3:checked ~ .gallery-slides .gslide-3,
+        #gl-15-s4:checked ~ .gallery-slides .gslide-4,
+        #gl-15-s5:checked ~ .gallery-slides .gslide-5,
+        #gl-15-s6:checked ~ .gallery-slides .gslide-6 { opacity:1; transform:translateX(0); }
+        #gl-15-s1:checked ~ .gallery-navigation .gnav-1,
+        #gl-15-s2:checked ~ .gallery-navigation .gnav-2,
+        #gl-15-s3:checked ~ .gallery-navigation .gnav-3,
+        #gl-15-s4:checked ~ .gallery-navigation .gnav-4,
+        #gl-15-s5:checked ~ .gallery-navigation .gnav-5,
+        #gl-15-s6:checked ~ .gallery-navigation .gnav-6 { display:flex; }
 </style>
         <!-- Ham Awards Gallery Section -->
         <section class="awards-section">
@@ -1014,77 +1006,77 @@
                 <h2><i class="fa-solid fa-screwdriver-wrench" style="color:#be954e;"></i> Ham Equipment Gallery</h2>
             </div>
             <div class="gallery-container">
-                <div class="gallery-wrapper" style="background:rgba(58,132,31,0.12);border:1px solid rgba(58,132,31,0.24);">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s1" checked style="display:none;">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s2" style="display:none;">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s3" style="display:none;">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s4" style="display:none;">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s5" style="display:none;">
-                    <input type="radio" name="gl-44-slide" id="gl-44-s6" style="display:none;">
+                <div class="gallery-wrapper" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.24);">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s1" checked style="display:none;">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s2" style="display:none;">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s3" style="display:none;">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s4" style="display:none;">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s5" style="display:none;">
+                    <input type="radio" name="gl-15-slide" id="gl-15-s6" style="display:none;">
                     <div class="gallery-slides">
 
                         <div class="slide gslide-1">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_1115_JPEG.jpg" alt="Hex Loop" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_1115_JPEG.jpg" alt="Hex Loop" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>Hex Loop 10m - self made</h3>
                                     <p>Own design, mostly 3d printed, 10m hex loop antenna.</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2025</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2025</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide gslide-2">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_1070_JPEG.jpg" alt="10m-&gt;20m dipole/vertical" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_1070_JPEG.jpg" alt="10m-&gt;20m dipole/vertical" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>10m-&gt;20m dipole/vertical</h3>
                                     <p>10m-&gt;20m dipole/vertical, based on telescopic whips (each 5,6m length max). On photo with xiegu g90.</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2026</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2026</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide gslide-3">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_0727_JPEG.jpg" alt="XieguG90" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_0727_JPEG.jpg" alt="XieguG90" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>Xiegu G90</h3>
                                     <p>My Xiegu G90 during some Pota Activation</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2026</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2026</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide gslide-4">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_0693_JPEG.jpg" alt="RadioShack" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_0693_JPEG.jpg" alt="RadioShack" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>Radio Shack</h3>
                                     <p>Yaesu FT-710 in my radio shack, some night operation in progress.</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2026</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2026</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide gslide-5">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_1116_JPEG.jpg" alt="Vartical" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_1116_JPEG.jpg" alt="Vartical" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>4 band vertical antenna</h3>
                                     <p>4 band 1/4 wavelength vertical antenna, during spring CQ WPX SSB contest</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2026</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2026</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide gslide-6">
                             <div class="award-card">
-                                <img src="https://static.qrz.com/k/sp3fck/IMG_0634_JPEG.jpg" alt="CQWPX26_shack" style="border-bottom:3px solid #3a841f;background:#000000;">
+                                <img src="https://static.qrz.com/k/sp3fck/IMG_0634_JPEG.jpg" alt="CQWPX26_shack" style="border-bottom:3px solid rgb(58, 132, 31);background:rgb(0, 0, 0);">
                                 <div class="award-info">
                                     <h3>Contest station - CQ WPX 2026</h3>
                                     <p>My radio shack setup during CQ WPX 2026 contest - firsts moments with Yaesu ft-710</p>
-                                    <span class="award-date" style="background:#3a841f;">Year: 2026</span>
+                                    <span class="award-date" style="background:rgb(58, 132, 31);">Year: 2026</span>
                                 </div>
                             </div>
                         </div>
@@ -1092,39 +1084,39 @@
                     <div class="gallery-navigation">
 
                         <div class="gallery-nav-set gnav-1">
-                            <label for="gl-44-s6" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">1 / 6</div>
-                            <label for="gl-44-s2" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-2">
-                            <label for="gl-44-s1" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">2 / 6</div>
-                            <label for="gl-44-s3" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-3">
-                            <label for="gl-44-s2" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s2" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">3 / 6</div>
-                            <label for="gl-44-s4" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-4">
-                            <label for="gl-44-s3" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s3" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">4 / 6</div>
-                            <label for="gl-44-s5" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-5">
-                            <label for="gl-44-s4" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s4" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">5 / 6</div>
-                            <label for="gl-44-s6" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s6" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
 
                         <div class="gallery-nav-set gnav-6">
-                            <label for="gl-44-s5" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-left"></i></label>
+                            <label for="gl-15-s5" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-left"></i></label>
                             <div class="slide-counter">6 / 6</div>
-                            <label for="gl-44-s1" class="gallery-arrow" style="background:rgba(58,132,31,0.82);"><i class="fas fa-chevron-right"></i></label>
+                            <label for="gl-15-s1" class="gallery-arrow" style="background:rgba(59,130,246,0.82);"><i class="fas fa-chevron-right"></i></label>
                         </div>
                     </div>
                 </div>
@@ -1163,6 +1155,10 @@
                         <a href="https://radiodyplom.pl/" class="quick-link-btn" style="background:#4c76d6;" target="_blank" rel="noopener noreferrer">
                             RadioDyplom.pl - best SES manager
                         </a>
+
+                        <a href="https://www.sp3pld.e7.pl/" class="quick-link-btn" style="background:#0c6e13;" target="_blank" rel="noopener noreferrer">
+                            SP3PLD amateur radio club
+                        </a>
                 </div>
             </div>
         </section>
@@ -1182,26 +1178,6 @@
                     <p class="propagation-credit">
                         <a href="https://www.hamqsl.com/solar.html" target="_blank" rel="noopener noreferrer">
                             HF Propagation by N0NBH
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Propagation Section -->
-        <section class="propagation-section">
-            <div class="propagation-header">
-                <h2><i class="fa-regular fa-font-awesome" style="color:#be954e;"></i>Visitors</h2>
-            </div>
-            <div class="propagation-widget">
-                <div class="propagation-banner">
-                    <a href="https://info.flagcounter.com/WIzJ" target="_blank" rel="noopener noreferrer">
-                        <img src="https://s01.flagcounter.com/count2/WIzJ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_100/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Visitors" class="propagation-img">
-                    </a>
-                    <p class="propagation-credit">
-                        <a href="https://info.flagcounter.com/WIzJ" target="_blank" rel="noopener noreferrer">
-                            Flag Counter
                         </a>
                     </p>
                 </div>
