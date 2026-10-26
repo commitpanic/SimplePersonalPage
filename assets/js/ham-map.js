@@ -3,6 +3,7 @@ const DATA_URL = "data/qso.latest.json";
 const WORLD_110M_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json";
 const WORLD_50M_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json";
 const VIEW_STORAGE_KEY = "sp3fck-hammap-view";
+const JSPDF_URL = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 const EARTH_RADIUS_KM = 6371;
 
 const CONTINENTS = {
@@ -34,6 +35,7 @@ const BAND_COLORS = {
   "70cm": "#c9c9c9",
   "23cm": "#a8a8a8"
 };
+const HF_MIN_METERS = 10;
 const PHONE_MODES = new Set(["SSB", "USB", "LSB", "AM", "FM", "DV", "C4FM", "DSTAR", "DMR", "DIGITALVOICE"]);
 
 // QRZ country names that do not match the ARRL entity names after normalization.
@@ -79,6 +81,12 @@ const fromEl = document.getElementById("dateFrom");
 const toEl = document.getElementById("dateTo");
 const bandEl = document.getElementById("bandFilter");
 const modeGroupEl = document.getElementById("modeGroupFilter");
+const hfOnlyEl = document.getElementById("hfOnlyFilter");
+const dxccFilterEl = document.getElementById("dxccFilter");
+const continentFilterEl = document.getElementById("continentFilter");
+const cqFilterEl = document.getElementById("cqFilter");
+const ituFilterEl = document.getElementById("ituFilter");
+const instantFilterEls = [bandEl, modeGroupEl, hfOnlyEl, dxccFilterEl, continentFilterEl, cqFilterEl, ituFilterEl];
 const applyBtn = document.getElementById("applyFilters");
 const clearBtn = document.getElementById("clearFilters");
 const refreshBtn = document.getElementById("refreshData");
@@ -148,6 +156,7 @@ const missingState = { tab: "dxcc", band: "any", cont: "all" };
 const mapState = createMapState();
 
 applyBtn?.addEventListener("click", applyFilters);
+instantFilterEls.forEach((el) => el?.addEventListener("change", applyFilters));
 clearBtn?.addEventListener("click", () => {
   fromEl.value = "";
   toEl.value = "";
@@ -155,6 +164,14 @@ clearBtn?.addEventListener("click", () => {
   if (modeGroupEl) {
     modeGroupEl.value = "all";
   }
+  if (hfOnlyEl) {
+    hfOnlyEl.checked = false;
+  }
+  [dxccFilterEl, continentFilterEl, cqFilterEl, ituFilterEl].forEach((el) => {
+    if (el) {
+      el.value = "all";
+    }
+  });
   if (tableSearchEl) {
     tableSearchEl.value = "";
   }
@@ -252,6 +269,8 @@ function applyPayload(payload, replaceInlineCache) {
     .map((band) => `<option value="${escapeHtml(band)}">${escapeHtml(band)}</option>`)
     .join("")}`;
 
+  hydrateLocationFilters();
+
   setText("statUpdated", payload.updatedAt
     ? new Date(payload.updatedAt).toLocaleString("en-GB")
     : "none");
@@ -259,6 +278,56 @@ function applyPayload(payload, replaceInlineCache) {
   if (replaceInlineCache) {
     window.__HAM_MAP_QSO_DATA__ = payload;
   }
+}
+
+function hydrateLocationFilters() {
+  const entities = new Map();
+  const continents = new Map();
+  const cqZones = new Map();
+  const ituZones = new Map();
+  const bump = (map, key, value) => {
+    const rec = map.get(key) || { value, count: 0 };
+    rec.count += 1;
+    map.set(key, rec);
+  };
+  allQsos.forEach((qso) => {
+    if (qso.entity) {
+      bump(entities, qso.entity.code, qso.entity);
+    }
+    if (qso.continent) {
+      bump(continents, qso.continent, qso.continent);
+    }
+    if (qso.cqZone) {
+      bump(cqZones, qso.cqZone, qso.cqZone);
+    }
+    if (qso.ituZone) {
+      bump(ituZones, qso.ituZone, qso.ituZone);
+    }
+  });
+
+  fillSelect(dxccFilterEl, [...entities.entries()]
+    .sort((a, b) => a[1].value.name.localeCompare(b[1].value.name))
+    .map(([code, rec]) => [code, `${rec.value.name} (${rec.value.prefix}) · ${rec.count}`]));
+  fillSelect(continentFilterEl, CONTINENT_ORDER
+    .filter((cont) => continents.has(cont))
+    .map((cont) => [cont, `${CONTINENTS[cont]} · ${continents.get(cont).count}`]));
+  fillSelect(cqFilterEl, [...cqZones.keys()]
+    .sort((a, b) => a - b)
+    .map((zone) => [zone, `${zone} · ${ZONE_KINDS.cq.byZone.get(zone)?.properties.name || ""} · ${cqZones.get(zone).count}`]));
+  fillSelect(ituFilterEl, [...ituZones.keys()]
+    .sort((a, b) => a - b)
+    .map((zone) => [zone, `${zone} · ${ituZones.get(zone).count} QSO`]));
+}
+
+function fillSelect(selectEl, options) {
+  if (!selectEl) {
+    return;
+  }
+  const previous = selectEl.value;
+  selectEl.innerHTML = `<option value="all">All</option>${options
+    .map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`)
+    .join("")}`;
+  selectEl.value = options.some(([value]) => String(value) === previous) ? previous : "all";
 }
 
 function enrichQso(qso) {
@@ -332,9 +401,29 @@ function applyFilters() {
   const toDate = toEl.value ? new Date(`${toEl.value}T23:59:59Z`) : null;
   const selectedBand = bandEl.value || "all";
   const selectedModeGroup = modeGroupEl?.value || "all";
+  const hfOnly = Boolean(hfOnlyEl?.checked);
+  const selectedDxcc = dxccFilterEl?.value || "all";
+  const selectedContinent = continentFilterEl?.value || "all";
+  const selectedCq = cqFilterEl?.value || "all";
+  const selectedItu = ituFilterEl?.value || "all";
 
   filteredMainQsos = allQsos.filter((qso) => {
     if (selectedBand !== "all" && qso.band !== selectedBand) {
+      return false;
+    }
+    if (hfOnly && !isHfBand(qso.band)) {
+      return false;
+    }
+    if (selectedDxcc !== "all" && String(qso.entity?.code) !== selectedDxcc) {
+      return false;
+    }
+    if (selectedContinent !== "all" && qso.continent !== selectedContinent) {
+      return false;
+    }
+    if (selectedCq !== "all" && String(qso.cqZone) !== selectedCq) {
+      return false;
+    }
+    if (selectedItu !== "all" && String(qso.ituZone) !== selectedItu) {
       return false;
     }
     if (selectedModeGroup !== "all" && qso.modeGroup !== selectedModeGroup) {
@@ -562,7 +651,8 @@ function hydrateAwardControls(stats) {
       .join(""));
   }
   if (missingBandEl) {
-    const bands = sortBands(new Set(allQsos.map((qso) => qso.band).filter(Boolean)));
+    const bands = sortBands(new Set(allQsos.map((qso) => qso.band).filter(Boolean)))
+      .filter((band) => !hfOnlyEl?.checked || isHfBand(band));
     if (!bands.includes(missingState.band)) {
       missingState.band = "any";
     }
@@ -872,6 +962,8 @@ function initializeMap() {
     });
   });
   document.getElementById("resetView")?.addEventListener("click", resetMapView);
+  document.getElementById("exportPng")?.addEventListener("click", () => exportMap("png"));
+  document.getElementById("exportPdf")?.addEventListener("click", () => exportMap("pdf"));
 
   new ResizeObserver(() => resizeMap()).observe(mapEl);
   resizeMap();
@@ -1387,6 +1479,195 @@ function focusZone(kindKey, zone) {
   setTimeout(scheduleMapRender, 5100);
 }
 
+/* ── Export ─────────────────────────────────────── */
+
+let jsPdfPromise = null;
+
+async function exportMap(format) {
+  if (!mapState.ctx) {
+    return;
+  }
+  const label = format.toUpperCase();
+  setStatus(`Preparing ${label}...`);
+  try {
+    const poster = renderPoster();
+    const fileName = `sp3fck-ham-map-${new Date().toISOString().slice(0, 10)}`;
+    if (format === "png") {
+      const blob = await new Promise((resolve) => poster.toBlob(resolve, "image/png"));
+      downloadBlob(blob, `${fileName}.png`);
+    } else {
+      const { jsPDF } = await loadJsPdf();
+      const pdf = new jsPDF({ orientation: poster.width >= poster.height ? "landscape" : "portrait", unit: "mm", format: "a4" });
+      const pageW = pdf.internal.pageSize.getWidth();
+      const pageH = pdf.internal.pageSize.getHeight();
+      const margin = 8;
+      const fit = Math.min((pageW - margin * 2) / poster.width, (pageH - margin * 2) / poster.height);
+      const w = poster.width * fit;
+      const h = poster.height * fit;
+      pdf.setFillColor(11, 18, 24);
+      pdf.rect(0, 0, pageW, pageH, "F");
+      pdf.addImage(poster.toDataURL("image/jpeg", 0.92), "JPEG", (pageW - w) / 2, (pageH - h) / 2, w, h);
+      pdf.save(`${fileName}.pdf`);
+    }
+    setStatus(`${label} saved.`);
+  } catch (error) {
+    console.error(error);
+    setStatus(`Could not create ${label}.`);
+  }
+}
+
+function renderPoster() {
+  const { canvas, width, height } = mapState;
+  const scale = Math.max(2, window.devicePixelRatio || 1);
+  const header = 64;
+  const footer = 76;
+  const previousInteracting = mapState.interacting;
+
+  // Redraw the map at export resolution, with full-detail coastlines.
+  mapState.dpr = scale;
+  mapState.interacting = false;
+  canvas.width = Math.round(width * scale);
+  canvas.height = Math.round(height * scale);
+  drawMap();
+
+  const poster = document.createElement("canvas");
+  poster.width = Math.round(width * scale);
+  poster.height = Math.round((height + header + footer) * scale);
+  const ctx = poster.getContext("2d");
+  ctx.scale(scale, scale);
+  ctx.fillStyle = "#0b1218";
+  ctx.fillRect(0, 0, width, height + header + footer);
+  ctx.drawImage(canvas, 0, header, width, height);
+
+  const pad = 18;
+  ctx.textBaseline = "alphabetic";
+  ctx.textAlign = "left";
+  ctx.fillStyle = "#e6edf3";
+  ctx.font = '700 22px "Space Grotesk", sans-serif';
+  ctx.fillText(`SP3FCK · ${HOME_LOCATOR}`, pad, 32);
+  ctx.fillStyle = "#9db0c1";
+  ctx.font = '400 12px "IBM Plex Mono", monospace';
+  ctx.fillText(fitText(ctx, filterSummary(), width - pad * 2), pad, 52);
+  ctx.textAlign = "right";
+  const view = document.querySelector("[data-projection].active")?.textContent || "";
+  ctx.fillText(`${view} view · ${new Date().toLocaleDateString("en-GB")}`, width - pad, 32);
+
+  const stats = currentStats;
+  if (stats) {
+    const wac = WAC_CONTINENTS.filter((cont) => stats.continents.has(cont)).length;
+    const line = [
+      `${stats.qsos.length} QSO`,
+      `DXCC ${stats.dxcc.size}/${DXCC.length}`,
+      `WAZ ${stats.cq.size}/40`,
+      `ITU ${stats.itu.size}/90`,
+      `WAC ${wac}/6`,
+      stats.longest ? `longest ${Math.round(stats.longest.distanceKm).toLocaleString("en-GB")} km (${stats.longest.callsign})` : null
+    ].filter(Boolean).join("  ·  ");
+    ctx.textAlign = "left";
+    ctx.fillStyle = "#e6edf3";
+    ctx.font = '600 14px "Space Grotesk", sans-serif';
+    ctx.fillText(fitText(ctx, line, width - pad * 2), pad, height + header + 28);
+
+    ctx.font = '400 11px "IBM Plex Mono", monospace';
+    let x = pad;
+    const y = height + header + 54;
+    for (const band of stats.bands) {
+      const textWidth = ctx.measureText(band).width;
+      if (x + textWidth + 20 > width - pad) {
+        break;
+      }
+      ctx.beginPath();
+      ctx.arc(x + 4, y - 4, 4, 0, Math.PI * 2);
+      ctx.fillStyle = bandColor(band);
+      ctx.fill();
+      ctx.fillStyle = "#9db0c1";
+      ctx.fillText(band, x + 12, y);
+      x += textWidth + 26;
+    }
+  }
+
+  mapState.interacting = previousInteracting;
+  resizeMap();
+  return poster;
+}
+
+function filterSummary() {
+  const selected = (el) => (el && el.value !== "all" ? el.options[el.selectedIndex].text.split(" · ")[0] : null);
+  const parts = [];
+  if (fromEl.value || toEl.value) {
+    parts.push(`${fromEl.value || "start"} – ${toEl.value || "today"}`);
+  }
+  const band = selected(bandEl);
+  const modeGroup = selected(modeGroupEl);
+  const entity = selected(dxccFilterEl);
+  const continent = selected(continentFilterEl);
+  const cq = selected(cqFilterEl);
+  const itu = selected(ituFilterEl);
+  if (band) {
+    parts.push(band);
+  }
+  if (hfOnlyEl?.checked) {
+    parts.push("HF only");
+  }
+  if (modeGroup) {
+    parts.push(modeGroup);
+  }
+  if (entity) {
+    parts.push(entity);
+  }
+  if (continent) {
+    parts.push(continent);
+  }
+  if (cq) {
+    parts.push(`CQ ${cq}`);
+  }
+  if (itu) {
+    parts.push(`ITU ${itu}`);
+  }
+  return parts.length ? `Filters: ${parts.join(" · ")}` : "All contacts";
+}
+
+function fitText(ctx, text, maxWidth) {
+  if (ctx.measureText(text).width <= maxWidth) {
+    return text;
+  }
+  let cut = text;
+  while (cut.length > 1 && ctx.measureText(`${cut}…`).width > maxWidth) {
+    cut = cut.slice(0, -1);
+  }
+  return `${cut}…`;
+}
+
+function loadJsPdf() {
+  if (window.jspdf) {
+    return Promise.resolve(window.jspdf);
+  }
+  if (!jsPdfPromise) {
+    jsPdfPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = JSPDF_URL;
+      script.onload = () => resolve(window.jspdf);
+      script.onerror = () => {
+        jsPdfPromise = null;
+        reject(new Error("jsPDF failed to load"));
+      };
+      document.head.append(script);
+    });
+  }
+  return jsPdfPromise;
+}
+
+function downloadBlob(blob, fileName) {
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 function subsolarPoint(date) {
   const rad = Math.PI / 180;
   const days = (date.getTime() - Date.UTC(2000, 0, 1, 12)) / 864e5;
@@ -1541,6 +1822,10 @@ function bandMeters(band) {
   const value = Number(match[1]);
   const unit = match[2].toLowerCase();
   return unit === "m" ? value : unit === "cm" ? value / 100 : value / 1000;
+}
+
+function isHfBand(band) {
+  return bandMeters(band) >= HF_MIN_METERS;
 }
 
 function sortBands(bands) {

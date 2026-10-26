@@ -38,7 +38,36 @@
           </select>
         </div>
 
+        <div>
+          <label for="dxccFilter">Country (DXCC)</label>
+          <select id="dxccFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="continentFilter">Continent</label>
+          <select id="continentFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="cqFilter">CQ zone</label>
+          <select id="cqFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="ituFilter">ITU zone</label>
+          <select id="ituFilter">
+            <option value="all">All</option>
+          </select>
+        </div>
+
         <div class="actions">
+          <label class="chip" title="Hide VHF/UHF bands (6m, 2m, 70cm and up)"><input id="hfOnlyFilter" type="checkbox"> HF only (160m-10m)</label>
           <button id="applyFilters" class="btn">Apply filters</button>
           <button id="clearFilters" class="btn ghost">Reset</button>
           <button id="refreshData" class="btn ghost">Refresh data</button>

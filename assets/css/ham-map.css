@@ -38,7 +38,9 @@
 
 .panel input,
 .panel select {
+  box-sizing: border-box;
   width: 100%;
+  min-width: 0;
   background: #0d1319;
   border: 1px solid var(--line);
   color: var(--text);
@@ -237,7 +239,7 @@ body.embed-mode .table-panel {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  flex: 1;
+  flex: 1 1 360px;
 }
 
 .chip {
@@ -691,7 +693,7 @@ body.embed-mode .credits {
 
 @media (max-width: 960px) {
   .filter-panel .filter-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .stats-grid {
@@ -726,4 +728,16 @@ body.embed-mode .credits {
   .cont-qso {
     display: none;
   }
+}
+
+@media (max-width: 560px) {
+  .filter-panel .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
