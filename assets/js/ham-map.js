@@ -334,8 +334,11 @@ function fillSelect(selectEl, options) {
 function enrichQso(qso) {
   const point = resolvePoint(qso);
   const entity = resolveEntity(qso);
-  const cqZone = validZone(qso.cqz, 40) || zoneFromLocation("cq", entity?.cq, point);
-  const ituZone = validZone(qso.ituz, 90) || zoneFromLocation("itu", entity?.itu, point);
+  const cqZone = trustedLogZone("cq", qso.cqz, entity?.cq, point) || zoneFromLocation("cq", entity?.cq, point);
+  const ituZone = trustedLogZone("itu", qso.ituz, entity?.itu, point) || zoneFromLocation("itu", entity?.itu, point);
+  const logCq = validZone(qso.cqz, 40);
+  const logItu = validZone(qso.ituz, 90);
+  const zoneCorrected = (logCq && logCq !== cqZone) || (logItu && logItu !== ituZone);
   const continent = CONTINENTS[qso.cont] ? qso.cont : entity?.cont || "";
   const distanceKm = point ? d3.geoDistance(homeCoords, [point.lon, point.lat]) * EARTH_RADIUS_KM : null;
 
@@ -347,6 +350,7 @@ function enrichQso(qso) {
     ituZone,
     continent,
     modeGroup: modeGroupOf(qso.mode),
+    zoneCorrected: Boolean(zoneCorrected),
     distanceKm
   };
 }
@@ -474,6 +478,7 @@ function computeStats(qsos) {
     modes: new Map(),
     calls: new Set(),
     unmatched: new Map(),
+    zoneCorrected: [],
     longest: null,
     hasConfirmData: false
   };
@@ -487,6 +492,9 @@ function computeStats(qsos) {
     }
     if (typeof qso.confirmed === "boolean") {
       stats.hasConfirmData = true;
+    }
+    if (qso.zoneCorrected) {
+      stats.zoneCorrected.push(qso);
     }
 
     if (qso.entity) {
@@ -581,9 +589,15 @@ function renderStats(stats) {
   const noteEl = document.getElementById("statsNote");
   if (noteEl) {
     const unmatched = [...stats.unmatched.entries()];
-    noteEl.textContent = unmatched.length
-      ? `Not matched to a DXCC entity: ${unmatched.map(([name, count]) => `${name} (${count})`).join(", ")}.`
-      : "";
+    const corrected = stats.zoneCorrected;
+    noteEl.textContent = [
+      unmatched.length
+        ? `Not matched to a DXCC entity: ${unmatched.map(([name, count]) => `${name} (${count})`).join(", ")}.`
+        : "",
+      corrected.length
+        ? `Log CQ/ITU zone ignored for ${corrected.length} QSO because it does not fit the DXCC entity (zone taken from the locator): ${corrected.slice(0, 12).map((qso) => qso.callsign).join(", ")}${corrected.length > 12 ? ", …" : ""}.`
+        : ""
+    ].filter(Boolean).join(" ");
   }
 }
 
@@ -1824,6 +1838,21 @@ function shortPrefix(prefixes) {
     return list.join(", ");
   }
   return `${list.slice(0, 3).join(", ")}…`;
+}
+
+// Log zones come from the other station's QRZ profile and are sometimes wrong
+// (e.g. a Spanish station logged in CQ 31). Keep one only if the DXCC entity allows it
+// or the locator really lies in that zone (the ARRL lists miss a few, e.g. IG9 in ITU 37).
+function trustedLogZone(kind, value, entityZones, point) {
+  const zone = validZone(value, ZONE_KINDS[kind].max);
+  if (!zone) {
+    return null;
+  }
+  if (!Array.isArray(entityZones) || !entityZones.length || entityZones.includes(zone)) {
+    return zone;
+  }
+  const feature = ZONE_KINDS[kind].byZone.get(zone);
+  return point && feature && d3.geoContains(feature, [point.lon, point.lat]) ? zone : null;
 }
 
 function validZone(value, max) {

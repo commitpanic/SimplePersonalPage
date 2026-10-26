@@ -129,8 +129,8 @@ function enrichQso(qso, reference, homeCoords) {
     point,
     entity,
     dxccKey: entity ? entity.code : countryKey || null,
-    cqZone: validZone(qso.cqz, 40) || zoneFromLocation(reference, "cq", entity?.cq, point),
-    ituZone: validZone(qso.ituz, 90) || zoneFromLocation(reference, "itu", entity?.itu, point),
+    cqZone: trustedLogZone(reference, "cq", qso.cqz, entity?.cq, point) || zoneFromLocation(reference, "cq", entity?.cq, point),
+    ituZone: trustedLogZone(reference, "itu", qso.ituz, entity?.itu, point) || zoneFromLocation(reference, "itu", entity?.itu, point),
     distanceKm: point ? geoDistance(homeCoords, [point.lon, point.lat]) * EARTH_RADIUS_KM : null
   };
 }
@@ -487,6 +487,20 @@ function normalizeName(value) {
     .replace(/\bst\.?\s/g, "saint ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+}
+
+// Same rule as assets/js/ham-map.js: keep a log zone only if the DXCC entity allows it
+// or the locator really lies in that zone.
+function trustedLogZone(reference, kind, value, entityZones, point) {
+  const zone = validZone(value, reference.zones[kind].max);
+  if (!zone) {
+    return null;
+  }
+  if (!Array.isArray(entityZones) || !entityZones.length || entityZones.includes(zone)) {
+    return zone;
+  }
+  const feature = reference.zones[kind].byZone.get(zone);
+  return point && feature && geoContains(feature, [point.lon, point.lat]) ? zone : null;
 }
 
 function validZone(value, max) {
