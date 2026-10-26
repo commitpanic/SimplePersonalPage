@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/ham-map.css">
   <script>(function(){var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
@@ -45,6 +44,16 @@
           </select>
         </div>
 
+        <div>
+          <label for="modeGroupFilter">Mode group</label>
+          <select id="modeGroupFilter">
+            <option value="all">All (Mixed)</option>
+            <option value="phone">Phone</option>
+            <option value="cw">CW</option>
+            <option value="digital">Digital</option>
+          </select>
+        </div>
+
         <div class="actions">
           <button id="applyFilters" class="btn">Apply filters</button>
           <button id="clearFilters" class="btn ghost">Reset</button>
@@ -52,13 +61,34 @@
         </div>
       </div>
 
-      <p class="hint">Data is refreshed by GitHub Actions every hour. This button fetches the latest JSON file.</p>
+      <p class="hint">Data is refreshed by GitHub Actions every day. This button fetches the latest JSON file. Filters apply to the map and to every statistic below.</p>
 
       <div id="status" class="status">Loading data...</div>
     </section>
 
     <section class="map-panel">
-      <div id="map" aria-label="Contacts map"></div>
+      <div class="map-toolbar">
+        <div class="segmented" role="group" aria-label="Map projection">
+          <button type="button" data-projection="globe" class="active">Globe</button>
+          <button type="button" data-projection="azimuthal">Azimuthal</button>
+          <button type="button" data-projection="flat">Flat</button>
+        </div>
+        <div class="layer-toggles" role="group" aria-label="Map layers">
+          <label class="chip"><input type="checkbox" data-layer="cq"> CQ zones</label>
+          <label class="chip"><input type="checkbox" data-layer="itu"> ITU zones</label>
+          <label class="chip"><input type="checkbox" data-layer="shade" checked> Shade worked zones</label>
+          <label class="chip"><input type="checkbox" data-layer="lines" checked> Paths</label>
+          <label class="chip"><input type="checkbox" data-layer="points" checked> Contacts</label>
+          <label class="chip"><input type="checkbox" data-layer="night"> Grayline</label>
+          <label class="chip"><input type="checkbox" data-layer="graticule" checked> Grid</label>
+        </div>
+        <button type="button" id="resetView" class="btn ghost small">Reset view</button>
+      </div>
+      <div id="map" class="globe-map" aria-label="Contacts map">
+        <div id="mapTooltip" class="map-tooltip" hidden></div>
+        <div id="mapLegend" class="map-legend"></div>
+      </div>
+      <p class="hint map-hint">Drag to rotate, scroll or pinch to zoom, hover a dot for contact details. Azimuthal view is centred on JO72SG, so every path is a straight beam heading.</p>
     </section>
 
     <section class="panel stats-panel">
@@ -69,8 +99,32 @@
           <p class="stat-value" id="statQso">0</p>
         </article>
         <article class="stat-card">
-          <p class="stat-label">Countries</p>
-          <p class="stat-value" id="statCountries">0</p>
+          <p class="stat-label">Unique callsigns</p>
+          <p class="stat-value" id="statCalls">0</p>
+        </article>
+        <article class="stat-card accent">
+          <p class="stat-label">DXCC worked</p>
+          <p class="stat-value" id="statDxcc">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">DXCC confirmed</p>
+          <p class="stat-value" id="statDxccConfirmed">-</p>
+        </article>
+        <article class="stat-card accent">
+          <p class="stat-label">WAZ (CQ zones)</p>
+          <p class="stat-value" id="statWaz">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">ITU zones</p>
+          <p class="stat-value" id="statItu">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">Continents (WAC)</p>
+          <p class="stat-value" id="statCont">0</p>
+        </article>
+        <article class="stat-card">
+          <p class="stat-label">DXCC band slots</p>
+          <p class="stat-value" id="statBandSlots">0</p>
         </article>
         <article class="stat-card">
           <p class="stat-label">Top band</p>
@@ -80,11 +134,91 @@
           <p class="stat-label">Top mode</p>
           <p class="stat-value" id="statTopMode">-</p>
         </article>
-        <article class="stat-card wide">
+        <article class="stat-card">
+          <p class="stat-label">Longest QSO</p>
+          <p class="stat-value" id="statLongest">-</p>
+        </article>
+        <article class="stat-card">
           <p class="stat-label">Last update</p>
           <p class="stat-value" id="statUpdated">-</p>
         </article>
       </div>
+      <p class="hint" id="statsNote"></p>
+    </section>
+
+    <div class="stats-row">
+      <section class="panel">
+        <h2>DXCC by continent</h2>
+        <div id="continentBars" class="continent-bars"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Per band</h2>
+        <div class="table-wrap">
+          <table class="matrix band-summary">
+            <thead>
+              <tr>
+                <th scope="col">Band</th>
+                <th scope="col" class="num">QSO</th>
+                <th scope="col" class="num">DXCC</th>
+                <th scope="col" class="num">WAZ</th>
+                <th scope="col" class="num">ITU</th>
+                <th scope="col" class="bar-col">DXCC</th>
+              </tr>
+            </thead>
+            <tbody id="bandSummaryBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>DXCC by band</h2>
+        <div class="panel-controls">
+          <input id="dxccSearch" type="search" placeholder="Search entity or prefix" aria-label="Search DXCC entity">
+          <select id="dxccContinent" aria-label="Continent">
+            <option value="all">All continents</option>
+          </select>
+          <select id="dxccSort" aria-label="Sort">
+            <option value="name">Sort: name</option>
+            <option value="qso">Sort: QSO count</option>
+            <option value="bands">Sort: bands worked</option>
+            <option value="prefix">Sort: prefix</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap matrix-wrap">
+        <table class="matrix" id="dxccMatrix"></table>
+      </div>
+      <p class="hint">Numbers are QSO counts per band. A ringed cell is confirmed (LoTW, QSL card or QRZ), shown once the log sync provides confirmation data.</p>
+    </section>
+
+    <section class="panel">
+      <h2>WAZ by band (CQ zones)</h2>
+      <div class="table-wrap matrix-wrap">
+        <table class="matrix" id="wazMatrix"></table>
+      </div>
+      <p class="hint">Dimmed rows are zones not worked yet with the current filters.</p>
+    </section>
+
+    <section class="panel missing-panel">
+      <div class="panel-head">
+        <h2>Still needed</h2>
+        <div class="panel-controls">
+          <div class="segmented" id="missingTabs" role="group" aria-label="Award">
+            <button type="button" data-tab="dxcc" class="active">DXCC</button>
+            <button type="button" data-tab="cq">WAZ</button>
+            <button type="button" data-tab="itu">ITU</button>
+          </div>
+          <select id="missingBand" aria-label="Band">
+            <option value="any">Any band</option>
+          </select>
+        </div>
+      </div>
+      <div class="chips" id="missingContinents" role="group" aria-label="Continent"></div>
+      <p class="missing-summary" id="missingSummary"></p>
+      <div id="missingList" class="missing-list"></div>
     </section>
 
     <section class="panel table-panel">
@@ -122,7 +256,10 @@
               <th scope="col">Band</th>
               <th scope="col">Mode</th>
               <th scope="col">Country</th>
+              <th scope="col">CQ</th>
+              <th scope="col">ITU</th>
               <th scope="col">Grid</th>
+              <th scope="col">km</th>
             </tr>
           </thead>
           <tbody id="qsoTableBody"></tbody>
@@ -139,9 +276,15 @@
       </div>
       <p id="iframeCopyStatus" class="status"></p>
     </section>
+
+    <p class="hint credits">Zone boundaries: <a href="https://github.com/HB9HIL/hamradio-zones-geojson">HB9HIL/hamradio-zones-geojson</a> (MIT). DXCC list: <a href="https://github.com/k0swe/dxcc-json">k0swe/dxcc-json</a> (Apache-2.0). Coastlines: Natural Earth via <a href="https://github.com/topojson/world-atlas">world-atlas</a>.</p>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="data/dxcc-entities.js"></script>
+  <script src="data/cq-zones.js"></script>
+  <script src="data/itu-zones.js"></script>
   <script src="data/qso.latest.js"></script>
   <script src="assets/js/ham-map.js" defer></script>
 </body>

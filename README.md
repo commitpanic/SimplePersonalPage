@@ -12,6 +12,7 @@ Statyczna strona pod GitHub Pages:
 - `ham-map.html` - mapa
 - `gallery.html` - galeria
 - `data/qso.latest.json` - dane mapy
+- `data/dxcc-entities.js`, `data/cq-zones.js`, `data/itu-zones.js` - dane referencyjne mapy (lista DXCC, granice stref CQ/ITU); generowane jednorazowo przez `scripts/build-ham-reference.mjs`
 - `data/gallery.config.json` - konfiguracja galerii
 - `.github/workflows/qrz-sync.yml` - synchronizacja QRZ co godzine
 

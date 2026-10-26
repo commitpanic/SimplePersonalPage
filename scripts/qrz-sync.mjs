@@ -67,7 +67,8 @@ function renderQrzStaticPage(payload, staticBasemapSvg = "") {
   const height = 620;
   const homePoint = maidenheadToLatLon(payload.homeLocator || HOME_LOCATOR);
   const qsos = Array.isArray(payload.qsos) ? payload.qsos : [];
-  const countries = new Set(qsos.map((qso) => qso.country).filter(Boolean));
+  const dxccWorked = new Set(qsos.map((qso) => qso.dxcc || qso.country).filter(Boolean));
+  const zonesWorked = new Set(qsos.map((qso) => qso.cqz).filter(Boolean));
   const topBand = topEntry(qsos.map((qso) => qso.band || "unknown"));
   const topMode = topEntry(qsos.map((qso) => qso.mode || "unknown"));
   const visibleQsos = qsos.filter((qso) => Number.isFinite(qso.lat) && Number.isFinite(qso.lon));
@@ -133,7 +134,7 @@ function renderQrzStaticPage(payload, staticBasemapSvg = "") {
     .title { display: flex; justify-content: space-between; gap: 12px; align-items: end; }
     .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
     .subtitle { margin-top: 6px; color: var(--muted); }
-    .stats { display: grid; grid-template-columns: repeat(4, minmax(120px,1fr)); gap: 10px; }
+    .stats { display: grid; grid-template-columns: repeat(5, minmax(120px,1fr)); gap: 10px; }
     .card { background: #0d1319; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
     .card .label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
     .card .value { margin-top: 6px; font-weight: 700; font-size: 18px; }
@@ -160,7 +161,8 @@ function renderQrzStaticPage(payload, staticBasemapSvg = "") {
 
     <section class="stats">
       <article class="card"><p class="label">QSO</p><p class="value">${qsos.length}</p></article>
-      <article class="card"><p class="label">Countries</p><p class="value">${countries.size}</p></article>
+      <article class="card"><p class="label">DXCC</p><p class="value">${dxccWorked.size}</p></article>
+      <article class="card"><p class="label">WAZ (CQ zones)</p><p class="value">${zonesWorked.size ? `${zonesWorked.size}/40` : "-"}</p></article>
       <article class="card"><p class="label">Top band</p><p class="value">${escapeHtml(topBand)}</p></article>
       <article class="card"><p class="label">Top mode</p><p class="value">${escapeHtml(topMode)}</p></article>
     </section>
@@ -638,6 +640,11 @@ function normalizeQso(item) {
   }
 
   const datetime = normalizeDateTime(item);
+  const dxcc = pickNumber(item, ["dxcc"]);
+  const cqz = pickNumber(item, ["cqz", "cq_zone"]);
+  const ituz = pickNumber(item, ["ituz", "itu_zone"]);
+  const cont = pick(item, ["cont", "continent"]).toUpperCase();
+  const confirmed = isConfirmed(item);
 
   return {
     id: `${datetime || "unknown"}-${callsign}-${band || "na"}-${mode || "na"}`,
@@ -648,8 +655,18 @@ function normalizeQso(item) {
     country,
     grid,
     lat,
-    lon
+    lon,
+    dxcc,
+    cqz,
+    ituz,
+    cont: cont || undefined,
+    confirmed
   };
+}
+
+function isConfirmed(item) {
+  const yes = (keys) => pick(item, keys).toUpperCase() === "Y";
+  return yes(["lotw_qsl_rcvd"]) || yes(["qsl_rcvd"]) || pick(item, ["app_qrzlog_status"]).toUpperCase() === "C";
 }
 
 function normalizeDateTime(item) {
