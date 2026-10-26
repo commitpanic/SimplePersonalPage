@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T11:21:08.702Z",
+  "updatedAt": "2026-10-26T18:18:57.986Z",
   "source": "qrz-logbook-api",
   "homeLocator": "JO72SG",
   "qsos": [
@@ -1519,7 +1519,7 @@
       "cqz": 20,
       "ituz": 39,
       "cont": "AS",
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": "2026-10-25T05:54:00.000Z-IG9ITO-20m-USB",
@@ -3205,7 +3205,7 @@
       "cqz": 20,
       "ituz": 39,
       "cont": "AS",
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": "2026-10-24T02:55:00.000Z-IB9T-40m-USB",
