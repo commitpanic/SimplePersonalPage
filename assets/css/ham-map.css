@@ -126,7 +126,18 @@
   font-size: 0.92rem;
 }
 
+.qso-table-wrap {
+  overflow: auto;
+}
+
+.qso-table td {
+  white-space: nowrap;
+}
+
 .qso-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background: #0d1319;
   color: var(--muted);
   text-transform: uppercase;

@@ -3,6 +3,7 @@ const DATA_URL = "data/qso.latest.json";
 const WORLD_110M_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json";
 const WORLD_50M_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-50m.json";
 const VIEW_STORAGE_KEY = "sp3fck-hammap-view";
+const TABLE_VISIBLE_ROWS = 30;
 const JSPDF_URL = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 const EARTH_RADIUS_KM = 6371;
 
@@ -1778,6 +1779,17 @@ function renderTable(qsos) {
       </tr>
     `;
   }).join("");
+  limitTableHeight();
+}
+
+function limitTableHeight() {
+  const wrap = tableBodyEl?.closest(".qso-table-wrap");
+  const head = wrap?.querySelector("thead");
+  const row = tableBodyEl?.rows[0];
+  if (!wrap || !head || !row) {
+    return;
+  }
+  wrap.style.maxHeight = `${Math.ceil(head.offsetHeight + row.offsetHeight * TABLE_VISIBLE_ROWS) + 2}px`;
 }
 
 /* ── Helpers ────────────────────────────────────── */
