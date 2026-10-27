@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pl" data-theme="forest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Brief klienta | KubaBuba</title>
+  <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../wycena/wycena.css">
+  <link rel="stylesheet" href="brief.css">
+  <script>(function(){try{var t=localStorage.getItem('sp3fck-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="wrap">
+
+    <section class="hero">
+      <p class="eyebrow"><a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> mystuff</a></p>
+      <h1>Brief <span class="name-highlight">klienta</span></h1>
+      <p class="bio">Formularz na pierwszą rozmowę z klientem – według szablonu briefu strony wizytówki. Wypełniaj na bieżąco (zapisuje się w tej przeglądarce), a potem otwórz PDF albo pobierz <code>data.md</code> do folderu klienta. Pola z gwiazdką są niezbędne do startu prac.</p>
+    </section>
+
+    <div class="quote-layout">
+      <form class="quote-form" id="brief-form" autocomplete="off" onsubmit="return false"></form>
+
+      <aside class="quote-summary">
+        <div class="sum-card">
+          <h2 class="sum-title">Postęp</h2>
+          <div class="brief-progress"><span id="progress-bar"></span></div>
+          <p class="sum-row"><span>Pola wymagane</span><span id="progress-text"></span></p>
+          <p class="sum-muted brief-missing-head" id="missing-head"></p>
+          <ul class="brief-missing" id="missing"></ul>
+          <label class="q-check brief-blank"><input type="checkbox" id="pdf-blank" checked> <span>Puste pola w PDF <em>(do wydruku i ręcznego uzupełnienia)</em></span></label>
+          <div class="q-actions">
+            <button class="btn" type="button" id="pdf"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+            <button class="btn ghost" type="button" id="md"><i class="fa-solid fa-file-arrow-down"></i> data.md</button>
+            <button class="btn ghost" type="button" id="copy"><i class="fa-regular fa-copy"></i> Kopiuj tekst</button>
+            <button class="btn ghost" type="button" id="reset"><i class="fa-solid fa-eraser"></i> Nowy</button>
+          </div>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.3/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.3/vfs_fonts.js"></script>
+  <script src="brief.js"></script>
+</body>
+</html>
